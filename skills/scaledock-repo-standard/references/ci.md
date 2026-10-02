@@ -23,7 +23,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   Next builds run with `--concurrency=1`. A job that runs `next build` restores `.next/cache` with `actions/cache`, keyed on the lockfile and the app's sources, so the Turbopack build cache survives between runs. Affected runs on PRs combine `--affected` with the job's `--filter`. A reusable `workflow_call`, so `release.yml` runs the same gate on the release commit.
 
 - **`security.yml`:** zizmor on workflow changes, and `dependency-review-action` on PRs.
-- **`database.yml`:** on `supabase/**` changes, start the stack, run pgTAP and lint the SQL.
+- **`database.yml`:** on `supabase/**` changes, start the stack (native processes, no Docker service), run `supabase db schema declarative sync --no-apply --strict-coverage` and fail if it errors or leaves a new file in `supabase/migrations/` (schema files and migrations have drifted), then run pgTAP and lint the SQL.
 - **`powersync.yml`** (Offline: yes): on `packages/sync/powersync/**` changes, validate the sync config against the local stack.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md).
 - **`eas-build.yml`** (with Expo): a reusable `workflow_call` plus `workflow_dispatch` with a `profile` input.

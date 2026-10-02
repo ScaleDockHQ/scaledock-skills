@@ -15,6 +15,7 @@ Applies to product repos, and to library repos that run a docs site.
 - **URLs:**
   - `NEXT_PUBLIC_SITE_URL=https://localhost`.
   - Supabase stays at `http://127.0.0.1:54321`. Its `site_url` is the Portless app, and the redirect list includes every Portless callback (app, Scalar) and the CLI loopback.
+  - The Supabase stack runs without Docker, one per directory (see [`data-permissions.md`](data-permissions.md)), so each worktree or agent sandbox starts its own. Read its URLs and keys from `supabase status`, as `pnpm env:local` does; never assume Docker or a stack shared with another checkout.
   - `allowedDevOrigins` includes the Portless hosts.
 - **Google OAuth (`dev:oauth`):**
   - A separate proxy on `localtest.me`: `PORTLESS_STATE_DIR` in a temp dir, `PORTLESS_PORT=1355`, `portless proxy start --tld me`.

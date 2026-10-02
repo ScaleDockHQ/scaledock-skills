@@ -14,10 +14,11 @@ The `scaledock-mcp-server` skill builds on this reference, and the `mcp-authoriz
   - Never offer the HTTP+SSE transport; it is deprecated.
   - The MCP app's tsconfig lists `types: ["node"]`, which the server package needs.
   - DNS-rebinding protection uses `allowedHosts` for the production, preview and Portless hosts. `resource-origin.ts` resolves the public origin from `x-forwarded-proto` and the host.
-- **Auth.**
-  - `requireBearerAuth` (or `verifyBearerToken`) with a verifier backed by `@supabase/server`.
-  - Serve Protected Resource Metadata at `/.well-known/oauth-protected-resource` and `/.well-known/oauth-protected-resource/mcp` through `resourceMetadataResponse`, with `authorization_servers`, `scopes_supported`, and `resource_documentation` pointing at the docs MCP page.
-  - A 401 returns `unauthorizedResponse(request, { resourceMetadataUrl })`. The handler receives `authInfo`, and tools read it from `ctx.http.authInfo`.
+- **Auth.** `@supabase/server` owns the resource server, so there is no hand-written verifier or metadata route.
+  - Wrap the MCP handler as `withOAuthProtectedResource({ resourceServer, authorizationServer }, withSupabase({ auth: "user" }, handleMcp))`. Use this nested form; the `pipeline` form from `@supabase/middleware` is alpha. Check the installed `@supabase/server` docs for option names and the paths it serves.
+  - `withOAuthProtectedResource` serves the Protected Resource Metadata and adds the `WWW-Authenticate: Bearer resource_metadata=…` challenge to every 401. `resourceServer` is the public MCP URL from `resource-origin.ts`. Make sure `/.well-known/oauth-protected-resource` and `/.well-known/oauth-protected-resource/mcp` resolve to that metadata, and that it lists `scopes_supported` and `resource_documentation` pointing at the docs MCP page.
+  - `withSupabase({ auth: "user" })` verifies the access token over JWKS and hands the handler the claims and an RLS-scoped client. It accepts product session tokens and OAuth access tokens; only OAuth tokens carry `client_id`. Map them into `authInfo`, and tools read it from `ctx.http.authInfo`.
+  - The consent screen and the OAuth server settings are in [`auth.md`](auth.md).
 - **Server factory per request.** `new McpServer({ name, version })`, with `version` from `package.json`. `instructions` is one paragraph: what the tools cover, how tenancy works, and how to pick an organization.
 - **Tools come from the contract.**
   - `packages/contract/src/mcp.ts` lists the curated subset. Each tool has a `snake_case` name, a title, a description, Valibot input and output, and annotations (`readOnlyHint`, `destructiveHint`, `idempotentHint`, `openWorldHint`).
@@ -48,7 +49,7 @@ The `scaledock-mcp-server` skill builds on this reference, and the `mcp-authoriz
 
 - **Tests.** Run `app.fetch` in-process with `@modelcontextprotocol/client` and cover:
   - `tools/list` for each role
-  - a 401 with the Protected Resource Metadata header
+  - a 401 with the Protected Resource Metadata header, and the metadata document itself
   - a scope or permission denial
   - structured output
   - the approval path

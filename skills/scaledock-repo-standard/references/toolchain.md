@@ -96,5 +96,5 @@ Also:
 - **Offline:** `sync:start`, `sync:stop`, `sync:reset`, `sync:logs`.
 - **Releases:** `changeset`, `version-packages`, `release`.
 - **Env:** `env:pull`, `env:pull:production`, `env:local`.
-- **Database:** `supabase:start`, `supabase:stop`, `supabase:reset`, `supabase:diff`, `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
+- **Database:** `supabase:start`, `supabase:stop`, `supabase:reset`, `supabase:diff` (`supabase db schema declarative sync`), `supabase:pull` (`supabase config pull`), `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
 - **Other:** `openapi:generate`, `prepare`.
