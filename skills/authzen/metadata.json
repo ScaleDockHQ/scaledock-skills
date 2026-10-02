@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenID AuthZEN Authorization API 1.0 Final for Policy Enforcement Points that call a Policy Decision Point and for PDPs that implement it: the subject, resource, action and context information model, the Access Evaluation and Access Evaluations APIs, the Search APIs with pagination, PDP metadata at /.well-known/authzen-configuration, the HTTPS JSON binding, errors and security considerations. The working group's certification scenario and interop vectors are pinned to a repository commit. References are split into the information model, evaluation APIs, search APIs, metadata and transport, and conformance.",
+  "sources": [
+    {
+      "title": "Authorization API 1.0",
+      "url": "https://openid.net/specs/authorization-api-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (published 11 January 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AuthZEN Authorization API 1.0 Certification Scenario",
+      "url": "https://raw.githubusercontent.com/openid/authzen/b304f68cb206e8be3dfde093142005296582c509/certification/authorization-api-1_0-scenario.md",
+      "status": "Working group draft",
+      "revision": "commit b304f68 (1 October 2026); draft posture: build when targeting certification, otherwise track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AuthZEN interop scenarios and test vectors",
+      "url": "https://github.com/openid/authzen/tree/b304f68cb206e8be3dfde093142005296582c509/interop",
+      "status": "Working group repository, non-normative",
+      "revision": "commit b304f68 (1 October 2026)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

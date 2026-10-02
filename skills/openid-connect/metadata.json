@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenID Connect for relying parties, resource servers that consume OIDC identity, and OpenID Providers, pinned to Core 1.0 errata set 2 and the companion OpenID Foundation Final specifications for discovery, registration, logout, prompt=create, response modes and Identity Assurance. The Key Binding Implementer's Draft and the IPSIE SL1 profile draft are included at track posture. References are split into ID token validation, the authentication request, discovery and registration, logout and sessions, and extensions and drafts.",
+  "sources": [
+    {
+      "title": "OpenID Connect Core 1.0 incorporating errata set 2",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "status": "Final",
+      "revision": "1.0 errata set 2 (15 December 2023)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Discovery 1.0 incorporating errata set 2",
+      "url": "https://openid.net/specs/openid-connect-discovery-1_0.html",
+      "status": "Final",
+      "revision": "1.0 errata set 2 (15 December 2023)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2",
+      "url": "https://openid.net/specs/openid-connect-registration-1_0.html",
+      "status": "Final",
+      "revision": "1.0 errata set 2 (15 December 2023)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect RP-Initiated Logout 1.0",
+      "url": "https://openid.net/specs/openid-connect-rpinitiated-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (12 September 2022)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Session Management 1.0",
+      "url": "https://openid.net/specs/openid-connect-session-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (12 September 2022)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Front-Channel Logout 1.0",
+      "url": "https://openid.net/specs/openid-connect-frontchannel-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (12 September 2022)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Back-Channel Logout 1.0 incorporating errata set 1",
+      "url": "https://openid.net/specs/openid-connect-backchannel-1_0.html",
+      "status": "Final",
+      "revision": "1.0 errata set 1 (15 December 2023)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Initiating User Registration via OpenID Connect 1.0",
+      "url": "https://openid.net/specs/openid-connect-prompt-create-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (2 December 2022)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Core Error Code unmet_authentication_requirements",
+      "url": "https://openid.net/specs/openid-connect-unmet-authentication-requirements-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (June 2019)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Relying Party Metadata Choices 1.0",
+      "url": "https://openid.net/specs/openid-connect-rp-metadata-choices-1_0-final.html",
+      "status": "Final",
+      "revision": "1.0 (25 March 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth 2.0 Form Post Response Mode",
+      "url": "https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (27 April 2015)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth 2.0 Multiple Response Type Encoding Practices",
+      "url": "https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (25 February 2014)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect for Identity Assurance 1.0 incorporating errata set 1",
+      "url": "https://openid.net/specs/openid-connect-4-identity-assurance-1_0-errata1.html",
+      "status": "Final",
+      "revision": "1.0 errata set 1 (1 July 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Key Binding 1.0",
+      "url": "https://openid.net/specs/openid-connect-key-binding-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document draft 03, 8 September 2026); draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IPSIE SL1 OpenID Connect Profile",
+      "url": "https://openid.github.io/ipsie-openid-sl1/draft-openid-ipsie-sl1-profile.html",
+      "status": "Draft",
+      "revision": "editor's draft draft-openid-ipsie-sl1-profile-latest (29 September 2026, after -01); draft posture: track",
+      "checked": "2026-10-02"
+    }
+  ]
+}

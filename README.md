@@ -46,6 +46,9 @@ Neutral skills, one per specification. Each pins the sources it was written from
 
 | Skill                                           | Description                                                                                                                            |
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP access evaluation, batch evaluation, search and PDP metadata.                                |
+| [`openid-connect`](skills/openid-connect)       | OpenID Connect: validate ID tokens and run login, logout, discovery and dynamic client registration.                                   |
+| [`openid-federation`](skills/openid-federation) | OpenID Federation: build and validate trust chains, entity statements, metadata policy and trust marks.                                |
 | [`gnap`](skills/gnap)                           | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                         |
 | [`jwt`](skills/jwt)                             | JWT and JOSE: verify and issue JWS, JWE and JWK safely, following RFC 8725 and current algorithm guidance.                             |
 | [`oauth`](skills/oauth)                         | OAuth 2.1 and its RFCs: resource servers, clients and authorization servers, with PKCE, DPoP, metadata, token exchange and RAR.        |
