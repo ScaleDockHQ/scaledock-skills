@@ -54,7 +54,7 @@ One branch and one PR per chat or plan.
 | A skill's description          | Its row in the `README.md` skills table                                        |
 | A spec skill's source          | `metadata.json` `sources` and `## Sources` in `SKILL.md`, with a new `checked` |
 | A dependency or action version | The catalog in `pnpm-workspace.yaml`, and the pre-release pins list below      |
-| A workflow                     | Keep `.github/zizmor.yml` passing; pin third-party actions to a SHA            |
+| A workflow                     | Keep `.github/zizmor.yml` passing; use each action's latest release tag        |
 
 ## Hard rules
 
