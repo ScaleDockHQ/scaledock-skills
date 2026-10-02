@@ -57,6 +57,9 @@ Neutral skills, one per specification. Each pins the sources it was written from
 | [`openapi-arazzo`](skills/openapi-arazzo)       | Arazzo 1.1: describe and run multi-step workflows over OpenAPI and AsyncAPI operations.                                                           |
 | [`openapi-overlay`](skills/openapi-overlay)     | OpenAPI Overlay 1.2: apply repeatable JSONPath changes to OpenAPI documents without editing them.                                                 |
 | [`typespec`](skills/typespec)                   | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2.                                                                           |
+| [`fapi`](skills/fapi)                           | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, plus FAPI 1.0, JARM and CIBA.                        |
+| [`openid4vc`](skills/openid4vc)                 | OpenID4VCI, OpenID4VP and HAIP: issue and verify verifiable credentials over OAuth.                                                               |
+| [`shared-signals`](skills/shared-signals)       | Shared Signals (SSF, CAEP, RISC): send and receive security events between identity providers, apps and services.                                 |
 | [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP access evaluation, batch evaluation, search and PDP metadata.                                           |
 | [`openid-connect`](skills/openid-connect)       | OpenID Connect: validate ID tokens and run login, logout, discovery and dynamic client registration.                                              |
 | [`openid-federation`](skills/openid-federation) | OpenID Federation: build and validate trust chains, entity statements, metadata policy and trust marks.                                           |

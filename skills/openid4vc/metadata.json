@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenID for Verifiable Credential Issuance 1.0, OpenID for Verifiable Presentations 1.0 and the OpenID4VC High Assurance Interoperability Profile 1.0 (all Final), with DCQL, the W3C Digital Credentials API integration, the SD-JWT VC, ISO mdoc and W3C VCDM format profiles, and OpenID conformance testing. SKILL.md holds the invariants and workflow; references/ splits issuance, presentation, DCQL, the DC API, formats, HAIP and certification.",
+  "sources": [
+    {
+      "title": "OpenID for Verifiable Credential Issuance 1.0",
+      "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-final.html",
+      "status": "Final",
+      "revision": "published 16 September 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID for Verifiable Presentations 1.0",
+      "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0-final.html",
+      "status": "Final",
+      "revision": "published 9 July 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID4VC High Assurance Interoperability Profile 1.0",
+      "url": "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-final.html",
+      "status": "Final",
+      "revision": "published 24 December 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Security and Trust in OpenID for Verifiable Credentials Ecosystems",
+      "url": "https://openid.github.io/OpenID4VC_SecTrust/draft-oid4vc-security-and-trust.html",
+      "status": "WG draft",
+      "revision": "draft-oid4vc-security-and-trust-latest (14 March 2024)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Digital Credentials",
+      "url": "https://www.w3.org/TR/digital-credentials/",
+      "status": "W3C Working Draft",
+      "revision": "4 September 2026",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "DCP WG specifications",
+      "url": "https://openid.net/wg/digital-credentials-protocols/specifications/",
+      "status": "Index",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Conformance testing for OpenID for Verifiable Presentations",
+      "url": "https://openid.net/certification/conformance-testing-for-openid-for-verifiable-presentations/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Conformance testing for OpenID for Verifiable Credential Issuance",
+      "url": "https://openid.net/certification/conformance-testing-for-openid-for-verifiable-credential-issuance/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    }
+  ]
+}

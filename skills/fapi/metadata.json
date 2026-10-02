@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenID FAPI 2.0 Security Profile, Message Signing and Attacker Model (all Final), with FAPI 1.0 Baseline and Advanced as legacy, JARM, and the FAPI-CIBA and Grant Management Implementer's Drafts. SKILL.md holds the invariants and workflow; references/ splits the rules by authorization server, client, resource server, cryptography, message signing, FAPI 1.0, drafts, attacker model and certification.",
+  "sources": [
+    {
+      "title": "FAPI 2.0 Security Profile",
+      "url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "status": "Final",
+      "revision": "published 22 February 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI 2.0 Message Signing",
+      "url": "https://openid.net/specs/fapi-message-signing-2_0-final.html",
+      "status": "Final",
+      "revision": "published 25 September 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI 2.0 Attacker Model",
+      "url": "https://openid.net/specs/fapi-attacker-model-2_0-final.html",
+      "status": "Final",
+      "revision": "published 22 February 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI 1.0 Part 1: Baseline",
+      "url": "https://openid.net/specs/openid-financial-api-part-1-1_0.html",
+      "status": "Final",
+      "revision": "12 March 2021",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI 1.0 Part 2: Advanced",
+      "url": "https://openid.net/specs/openid-financial-api-part-2-1_0.html",
+      "status": "Final",
+      "revision": "12 March 2021",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)",
+      "url": "https://openid.net/specs/oauth-v2-jarm-final.html",
+      "status": "Final",
+      "revision": "published 9 November 2022",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JARM incorporating errata set 1",
+      "url": "https://openid.net/specs/oauth-v2-jarm.html",
+      "status": "Final with errata set 1",
+      "revision": "17 August 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI: Client Initiated Backchannel Authentication Profile",
+      "url": "https://openid.net/specs/openid-financial-api-ciba-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document labelled Draft-02, 15 August 2019)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Grant Management for OAuth 2.0",
+      "url": "https://openid.net/specs/oauth-v2-grant-management-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document labelled oauth-v2-grant-management-03, 9 May 2023)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9864: Fully-Specified Algorithms for JOSE and COSE",
+      "url": "https://www.rfc-editor.org/rfc/rfc9864.txt",
+      "status": "RFC",
+      "revision": "RFC 9864, October 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9126: OAuth 2.0 Pushed Authorization Requests",
+      "url": "https://www.rfc-editor.org/rfc/rfc9126.txt",
+      "status": "RFC",
+      "revision": "RFC 9126, September 2021",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9207: OAuth 2.0 Authorization Server Issuer Identification",
+      "url": "https://www.rfc-editor.org/rfc/rfc9207.txt",
+      "status": "RFC",
+      "revision": "RFC 9207, March 2022",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9449.txt",
+      "status": "RFC",
+      "revision": "RFC 9449, September 2023",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8705: OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc8705.txt",
+      "status": "RFC",
+      "revision": "RFC 8705, February 2020",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7523: JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants",
+      "url": "https://www.rfc-editor.org/rfc/rfc7523.txt",
+      "status": "RFC",
+      "revision": "RFC 7523, May 2015",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 6750: OAuth 2.0 Bearer Token Usage",
+      "url": "https://www.rfc-editor.org/rfc/rfc6750.txt",
+      "status": "RFC",
+      "revision": "RFC 6750, October 2012",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Certification",
+      "url": "https://openid.net/certification/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI WG specifications",
+      "url": "https://openid.net/wg/fapi/specifications/",
+      "status": "Index",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Conformance Testing for FAPI OPs",
+      "url": "https://openid.net/certification/certification-fapi_op_testing/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI RP certification submission",
+      "url": "https://openid.net/certification/fapi_rp_submission/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Conformance Testing for FAPI-CIBA OPs",
+      "url": "https://openid.net/certification/fapi_ciba_op_testing/",
+      "status": "Published",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    }
+  ]
+}
