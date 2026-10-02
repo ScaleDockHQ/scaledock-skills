@@ -46,6 +46,11 @@ Neutral skills, one per specification. Each pins the sources it was written from
 
 | Skill                                           | Description                                                                                                                            |
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [`asyncapi`](skills/asyncapi)                   | AsyncAPI 3.1: describe event-driven APIs with servers, channels, operations, messages and protocol bindings.                           |
+| [`openapi`](skills/openapi)                     | OpenAPI 3.2: write, validate and upgrade API descriptions, including security schemes and the extension registries.                    |
+| [`openapi-arazzo`](skills/openapi-arazzo)       | Arazzo 1.1: describe and run multi-step workflows over OpenAPI and AsyncAPI operations.                                                |
+| [`openapi-overlay`](skills/openapi-overlay)     | OpenAPI Overlay 1.2: apply repeatable JSONPath changes to OpenAPI documents without editing them.                                      |
+| [`typespec`](skills/typespec)                   | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2.                                                                |
 | [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP access evaluation, batch evaluation, search and PDP metadata.                                |
 | [`openid-connect`](skills/openid-connect)       | OpenID Connect: validate ID tokens and run login, logout, discovery and dynamic client registration.                                   |
 | [`openid-federation`](skills/openid-federation) | OpenID Federation: build and validate trust chains, entity statements, metadata policy and trust marks.                                |

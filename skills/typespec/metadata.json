@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers TypeSpec 1.x from Microsoft for design-first HTTP APIs: language basics, @typespec/http routes, parameters, bodies, status codes, files, visibility and authentication, the @typespec/openapi3 emitter with its openapi-versions option (3.0.0, 3.1.0 and 3.2.0, default 3.0.0) and other options, the TypeSpec to OpenAPI mapping and @typespec/openapi decorators, API versioning with @typespec/versioning, tsp-openapi3 conversion, and project configuration and CLI. Pinned to compiler, http, openapi and openapi3 1.16.0 and versioning 0.86.0. SKILL.md holds the invariants and workflow; references split out project setup, language, HTTP, the emitter and versioning.",
+  "sources": [
+    {
+      "title": "TypeSpec documentation",
+      "url": "https://typespec.io/docs/",
+      "status": "Living documentation",
+      "revision": "latest release (1.16.0), as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Language basics overview",
+      "url": "https://typespec.io/docs/language-basics/overview/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Getting started with TypeSpec for REST APIs",
+      "url": "https://typespec.io/docs/getting-started/getting-started-rest/01-setup-basic-syntax/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CLI usage",
+      "url": "https://typespec.io/docs/handbook/cli/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Configuration",
+      "url": "https://typespec.io/docs/handbook/configuration/configuration/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP Operations",
+      "url": "https://typespec.io/docs/libraries/http/operations/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP Authentication",
+      "url": "https://typespec.io/docs/libraries/http/authentication/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP decorators reference",
+      "url": "https://typespec.io/docs/libraries/http/reference/decorators/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/http 1.16.0 auth.tsp",
+      "url": "https://unpkg.com/@typespec/http@1.16.0/lib/auth.tsp",
+      "status": "Released",
+      "revision": "1.16.0 (2026-09-09)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenAPI v3 emitter guide",
+      "url": "https://typespec.io/docs/emitters/openapi3/openapi/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 emitter options",
+      "url": "https://typespec.io/docs/emitters/openapi3/reference/emitter/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 1.16.0 README",
+      "url": "https://unpkg.com/@typespec/openapi3@1.16.0/README.md",
+      "status": "Released",
+      "revision": "1.16.0 (2026-09-09)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 1.16.0 package.json",
+      "url": "https://unpkg.com/@typespec/openapi3@1.16.0/package.json",
+      "status": "Released",
+      "revision": "1.16.0 (2026-09-09)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 1.16.0 emitter options schema",
+      "url": "https://unpkg.com/@typespec/openapi3@1.16.0/dist/src/lib.js",
+      "status": "Released",
+      "revision": "1.16.0 (2026-09-09)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 1.16.0 emitter source",
+      "url": "https://unpkg.com/@typespec/openapi3@1.16.0/dist/src/openapi.js",
+      "status": "Released",
+      "revision": "1.16.0 (2026-09-09)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi3 changelog",
+      "url": "https://raw.githubusercontent.com/microsoft/typespec/843c089f3050f46e7428d51401298825570ed3a5/packages/openapi3/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "commit 843c089 (2026-10-02), entries through 1.16.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/compiler changelog",
+      "url": "https://raw.githubusercontent.com/microsoft/typespec/843c089f3050f46e7428d51401298825570ed3a5/packages/compiler/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "commit 843c089 (2026-10-02), entries through 1.16.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenAPI3 to TypeSpec",
+      "url": "https://typespec.io/docs/emitters/openapi3/cli/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/openapi decorators",
+      "url": "https://typespec.io/docs/libraries/openapi/reference/decorators/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Versioning guide",
+      "url": "https://typespec.io/docs/libraries/versioning/guide/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Versioning decorators reference",
+      "url": "https://typespec.io/docs/libraries/versioning/reference/decorators/",
+      "status": "Living documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@typespec/versioning 0.86.0 package",
+      "url": "https://unpkg.com/@typespec/versioning@0.86.0/package.json",
+      "status": "Released",
+      "revision": "0.86.0 (2026-09-09), pre-1.0, draft posture: build",
+      "checked": "2026-10-02"
+    }
+  ]
+}

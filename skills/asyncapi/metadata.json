@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the AsyncAPI Specification 3.1.0 from the AsyncAPI Initiative: describing message-driven applications with servers, channels, operations, messages, replies, protocol bindings, security schemes, multi-format schemas, correlation IDs and traits; migrating 2.x documents to 3.x; and validating against the official AsyncAPI JSON Schemas plus the rules they cannot express. SKILL.md holds the invariants and workflow; references split out objects, bindings and security, migration, validation and examples.",
+  "sources": [
+    {
+      "title": "AsyncAPI Specification 3.1.0",
+      "url": "https://www.asyncapi.com/docs/reference/specification/v3.1.0",
+      "status": "Released",
+      "revision": "3.1.0 (2026-01-31)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AsyncAPI Specification 3.1.0 source text",
+      "url": "https://raw.githubusercontent.com/asyncapi/spec/v3.1.0/spec/asyncapi.md",
+      "status": "Released",
+      "revision": "tag v3.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AsyncAPI 3.1.0 release",
+      "url": "https://github.com/asyncapi/spec/releases/tag/v3.1.0",
+      "status": "Released",
+      "revision": "v3.1.0 (2026-01-31)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Migrating to v3",
+      "url": "https://www.asyncapi.com/docs/migration/migrating-to-v3",
+      "status": "AsyncAPI guide (non-normative)",
+      "revision": "page as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AsyncAPI 3.1.0 JSON Schema",
+      "url": "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/schemas/3.1.0.json",
+      "status": "Official schema",
+      "revision": "spec-json-schemas v6.11.1 (2026-01-30)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AsyncAPI 3.0.0 JSON Schema",
+      "url": "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/schemas/3.0.0.json",
+      "status": "Official schema",
+      "revision": "spec-json-schemas v6.11.1 (2026-01-30)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "spec-json-schemas README",
+      "url": "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/README.md",
+      "status": "Repository guide",
+      "revision": "v6.11.1",
+      "checked": "2026-10-02"
+    }
+  ]
+}
