@@ -2,6 +2,8 @@
 
 The Hono shell, oRPC with Scalar, the request context, crons, webhooks and workflows.
 
+Applies to product repos with the `api` surface. Expo apps send every command through it with the contract client.
+
 - **Shell.** A Hono app in `src/app.ts`:
   - `secureHeaders` and a request ID.
   - A CORS allow list. In production it is same-origin through the Services rewrites.

@@ -2,7 +2,9 @@
 
 How every surface calls models: one client, AI Gateway, `packages/ai`, validation, UI, long runs and telemetry.
 
-- **One client.** The AI SDK is the only LLM client. Never import OpenAI, Anthropic or Google SDKs directly, and never add `@ai-sdk/<provider>` packages unless I ask.
+Applies to product repos with AI features. Expo apps never call models directly; they go through `apps/api`.
+
+- **One client.** The AI SDK is the only LLM client. Never import OpenAI, Anthropic or Google SDKs directly, and never add `@ai-sdk/<provider>` packages unless the user asks.
 - **AI Gateway for every model call.** Use plain `"provider/model"` strings, authenticated by `VERCEL_OIDC_TOKEN`. Never `AI_GATEWAY_API_KEY` or provider keys. Fallbacks go through gateway provider options, and default models live in `platform_settings`.
 - **`packages/ai`** owns models, prompts, tools and evals. Features never build prompts inline.
 - **Validation.** Structured output and tool inputs use Valibot (Standard Schema). Model output is validated before it becomes a row.

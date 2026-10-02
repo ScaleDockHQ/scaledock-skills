@@ -2,6 +2,8 @@
 
 CLI kinds, stack, layout, behavior, build, product CLI auth, and tests. Pick the kind from the inputs.
 
+Applies when CLI kind is not `none`: `product` in product repos, `library` in library repos, `tooling` in any repo.
+
 | Kind      | Location                                              | Published                                                 | Talks to                             |
 | --------- | ----------------------------------------------------- | --------------------------------------------------------- | ------------------------------------ |
 | `product` | `apps/cli`, bin `{{app}}`                             | npm with trusted publishing, in the product `fixed` group | The API, through the contract client |

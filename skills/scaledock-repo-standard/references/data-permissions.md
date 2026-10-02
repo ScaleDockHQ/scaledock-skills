@@ -2,9 +2,18 @@
 
 URL tenancy, guards, tenant tables, Supabase, better-supabase, the audit log, and PermDock. Auth across surfaces is in [`auth.md`](auth.md).
 
+Applies to product repos with Database or Roles and permissions set to yes. Offline sync on Expo is in [`offline-sync.md`](offline-sync.md).
+
+## Which package owns what
+
+- **`@supabase/server`** verifies bearer tokens over JWKS and builds the request context: `createRequestSupabaseContext(request, { env, auth: "user" })`. Nothing else verifies tokens.
+- **`@supabase/ssr`** owns web session cookies, and only the proxy refreshes them.
+- **better-supabase** wraps those contexts with the generated types and `Result` repositories through its framework subpaths. Apps import the subpath, not `@supabase/server` directly.
+- **`packages/supabase`** re-exports the typed clients and holds the one `createAdminContext()` (`server` subpath), the only place `sb_secret_` is read.
+
 ## Multi-tenant (default: yes)
 
-- **URL tenancy:** `app/[locale]/(app)/[orgSlug]/...`. No organization cookie and no organization header.
+- **URL tenancy:** `app/[locale]/(app)/[orgSlug]/...`. No organization cookie and no organization header. Expo apps keep the selected organization in app state and pass its ID to every read and command; RLS still decides access.
 - **Proxy.** `proxy.ts` handles session refresh, auth redirects and locale only. It skips the refresh on prefetch requests.
 - **Guards.** `requireOrganizationAccess({ orgSlug, permission })` runs in Suspense islands. Unknown slugs call `notFound()`. System routes live outside `[orgSlug]` under a system permission scope.
 - **Tables.**

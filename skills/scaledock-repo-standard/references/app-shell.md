@@ -2,6 +2,8 @@
 
 The auth pages, the app shell, the top bar, the page templates, and the standard multi-tenant screens. The component stack they use is in [`ui.md`](ui.md).
 
+Applies to a Next.js `app`. An Expo app keeps the same screens, page templates and interaction contracts, built from the native components in [`expo.md`](expo.md).
+
 Build these from blocks: the ReUI MCP first (`search`, `compose_page`), then shadcn `login-02` (split auth page) and `sidebar-07` (sidebar with an organization switcher and a user footer).
 
 ## File map (`apps/app`)

@@ -1,6 +1,8 @@
 # GitHub Actions and Dependabot
 
-Action pinning, the shared setup action, the workflows, and Dependabot.
+Action pinning, the shared setup action, the workflows, EAS builds, and Dependabot.
+
+Applies to every repo kind. Each workflow below runs only the gates the repo has.
 
 - **Pinning.** Every action runs its latest release.
   - GitHub-owned actions (`actions/*`, `github/*`) use their latest major tag.
@@ -12,17 +14,24 @@ Action pinning, the shared setup action, the workflows, and Dependabot.
   - Minimal permissions plus `id-token: write`, cancelling concurrency and `CI: true`.
   - A `pr-title` job runs commitlint on the PR title.
   - Calls `verify.yml` (affected-only on PRs), then e2e.
-- **`verify.yml`:** a `fail-fast: false` matrix of:
+- **`verify.yml`:** a `fail-fast: false` matrix with one job per `pnpm verify` gate, and nothing else, so local and CI results agree:
   - format, lint, knip, typecheck, test and boundaries
-  - `pnpm audit --audit-level high`
-  - OpenAPI drift, `docs:drift` and the i18n catalogs
-  - the doctors
+  - `audit:high`
+  - `openapi:check`, `i18n:check` and `docs:drift`
+  - `doctor`
 
-  Next builds run with `--concurrency=1`.
+  Next builds run with `--concurrency=1`. A reusable `workflow_call`, so `release.yml` runs the same gate on the release commit.
 
 - **`security.yml`:** zizmor on workflow changes, and `dependency-review-action` on PRs.
 - **`database.yml`:** on `supabase/**` changes, start the stack, run pgTAP and lint the SQL.
+- **`powersync.yml`** (Offline: yes): on `packages/sync/powersync/**` changes, validate the sync config against the local stack.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md).
+- **`eas-build.yml`** (with Expo): a reusable `workflow_call` plus `workflow_dispatch` with a `profile` input.
+  - `expo/expo-github-action`, pinned to a SHA, with `eas-version` from the latest release and the `EXPO_TOKEN` secret.
+  - Runs `eas build --profile <profile> --platform all --non-interactive --no-wait`. CI only queues the build; EAS reports failures on its own.
+  - `production` runs only from a release tag on `main` and adds `--auto-submit`. `development` builds can run from any branch on dispatch.
+  - Concurrency is grouped per profile.
+  - Native folders are generated on the EAS worker; CI never commits `ios/` or `android/`.
 - **`dependabot.yml`:**
   - npm (limit 10) and github-actions (limit 5).
   - Weekly on Monday, one grouped PR per ecosystem, `cooldown.default-days: 2`.

@@ -2,6 +2,8 @@
 
 The Vercel-first order, the needs table, platform defaults, the Vercel project with Services, `turbo.json`, and Remote Cache.
 
+Applies to product repos, and to library repos that deploy a docs site. Tooling repos skip it.
+
 ## Vercel first
 
 When Supabase (database, auth, RLS-bound files, realtime) does not cover a need, pick in this order:
@@ -37,7 +39,7 @@ Record any exception in an ADR.
 ## Platform defaults
 
 - Fluid Compute on Node.js; never `runtime = "edge"`.
-- Function region `fra1` unless I say otherwise.
+- Function region `fra1` unless the user names another.
 - Only `apps/api` starts workflows. Each service sets its own `WORKFLOW_QUEUE_NAMESPACE`.
 - An `apps/api` without workflows runs its Hono app through `@hono/node-server` `getRequestListener(app.fetch)` in `server.ts`. An `apps/api` with workflows hosts the same Hono app on Nitro with the `workflow/nitro` module, because the Workflow SDK needs a build integration.
 
@@ -50,7 +52,7 @@ One project with Services.
   - `/api`.
   - `/mcp`, plus both `/.well-known/oauth-protected-resource` paths.
   - `/docs`.
-  - `/app`.
+  - `/app` and `/app/(.*)`. A universal Expo app is a Node service whose `server.mts` serves the `expo export --platform web` output and `expo-server` SSR; never add a catch-all rewrite to it. A native-only `apps/mobile` has no service.
 - **`git.deploymentEnabled`:** deny `*`, `**` and `changeset-release/**`. Allow `main`, and `develop` once it exists.
 - **`crons`** for `apps/api`.
 - **Config file:** `vercel.json` with `$schema` until `@vercel/config` types `services` and per-service rewrites, then `vercel.ts`.
@@ -89,12 +91,29 @@ Check the keys against the installed docs:
     ],
   },
   "tasks": {
-    /* transit, build, lint, lint:root, typecheck, test, dev and dev:portless (persistent, uncached) */
+    "transit": { "dependsOn": ["^transit"] },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "!.next/dev/**",
+        ".source/**",
+        "dist/**",
+      ],
+    },
+    "lint": { "dependsOn": ["transit"] },
+    "//#lint:root": {},
+    "typecheck": { "dependsOn": ["transit"] },
+    "test": { "dependsOn": ["transit"] },
+    "dev": { "cache": false, "persistent": true },
+    "dev:portless": { "cache": false, "persistent": true },
   },
 }
 ```
 
-- **Outputs:** `.next/**` (minus cache and dev), `.source/**` and `dist/**`.
+- **`transit`** is a no-op script (`"transit": "true"`) in every package. Tasks that read source from dependencies depend on it, so they rerun when a dependency changes without waiting for its build.
+- **Workspace `turbo.json` files** extend `//` with `"extends": ["//"]`, add their `tags`, and list per-task `env` keys and `inputs` exclusions. Expo apps exclude `ios/**`, `android/**` and `assets/**` from `lint`, `typecheck` and `test` inputs, and add `test:components`.
 - **Boundaries:** every workspace has `boundaries` tags.
 
 ## Remote Cache

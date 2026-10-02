@@ -2,6 +2,8 @@
 
 Branching, the one-branch-one-PR agent workflow, commitlint, lefthook, Changesets, and `release.yml`.
 
+Applies to every repo kind. Repos that publish nothing and deploy nothing skip Changesets and `release.yml`.
+
 ## Branches
 
 - `main` is production.
@@ -31,8 +33,8 @@ This applies to agents and people alike.
    - Never open a second PR.
    - Never stack PRs.
    - Never split a plan into one PR per todo.
-6. **New work, new branch.** Start a new branch and PR only when I start a new chat or plan, or ask for a separate PR.
-7. **Never merge without being asked.** Don't merge the PR unless I ask. Never push to `main` or directly to the working branch.
+6. **New work, new branch.** Start a new branch and PR only when the user starts a new chat or plan, or asks for a separate PR.
+7. **Never merge without being asked.** Don't merge the PR unless the user asks. Never push to `main` or directly to the working branch.
 
 Bot PRs (Dependabot, the Changesets version PR) are the only other PRs.
 
@@ -126,7 +128,7 @@ Never release-please. `.changeset/config.json`:
 ```
 
 - Libraries set `privatePackages` to `false` and `false`.
-- Apps share one `fixed` group, together with a product CLI. A library CLI joins its library's group.
+- Apps share one `fixed` group, together with a product CLI and any Expo app. A library CLI joins its library's group. An Expo app's `app.config.ts` reads `version` from its `package.json`, so the store version follows the group.
 - Each PR carries its own changesets.
 - `pnpm version-packages` runs three steps:
   1. `changeset version`.
@@ -142,4 +144,5 @@ Runs on push to `main`:
 1. Run `check`, `build` and `test`.
 2. `changesets/action` opens the `chore: version packages` PR.
 3. Merging that PR runs `changeset tag`, or `changeset publish` with npm trusted publishing (OIDC and provenance, gated by the `NPM_PUBLISH` variable), and creates GitHub Releases.
-4. `main` merges back into `develop`.
+4. With Expo, a new release tag calls `eas-build.yml` with the `production` profile (see [`ci.md`](ci.md)).
+5. `main` merges back into `develop`.

@@ -2,6 +2,8 @@
 
 The shared Next config every web surface spreads, and the app architecture rules. The installed `nextjs-app-architecture` skill is the source of truth for architecture.
 
+Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `marketing` always.
+
 ## `createNextConfig()`
 
 `packages/next-config` exports `createNextConfig()`, and every Next app spreads it. Check each flag against the installed docs:

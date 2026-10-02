@@ -2,6 +2,8 @@
 
 AGENTS.md, rules, the "When you change X, also update Y" table, the other AI files, and the writing rules.
 
+Applies to every repo kind. A repo whose AGENTS.md holds every rule within the size limit skips `.agents/rules`, and keeps only the table rows it has.
+
 ## `AGENTS.md`
 
 At most 12 KB, including the Turbo block. The Turbo block stays last and is committed as written. Sections:
@@ -45,6 +47,16 @@ At least these rows:
 | Package version          | `server.json`                                                                                                  |
 | Dependency bump          | catalog, the "Pre-release pins" list, a note on the absorbed API changes, an ADR if a one-library line changes |
 | User-visible change      | a changeset                                                                                                    |
+
+With Expo, add these rows and extend the matching rows above:
+
+| Change                       | Also update                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Native module or plugin      | `app.config.ts` plugins, `expo prebuild` for the platform, a dev-client rebuild, the app config test |
+| Domain table (Offline: yes)  | the PowerSync publication, a sync stream, the `packages/sync` schema, the `.native.ts` hook twin     |
+| Expo i18n key                | every `translations/<locale>.json` catalog                                                           |
+| Env key read by an EAS build | the matching EAS environment                                                                         |
+| Shared primitive             | both platform twins (`.tsx` and `.web.tsx`) and the gallery screen                                   |
 
 ## Other files
 

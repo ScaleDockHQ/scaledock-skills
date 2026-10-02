@@ -1,8 +1,8 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Create, upgrade or align ScaleDock repos against one standard: the latest Node that Vercel supports, latest pnpm and native TypeScript, a strict Turborepo workspace, Next.js surfaces, Supabase with better-supabase, PermDock, an oRPC contract shared by the API, MCP and CLI, Fumadocs, and Vercel-first infrastructure. Upgrade and align modes audit into a gap table first; every version is looked up at run time. SKILL.md holds the inputs, ground rules, workflow and final checklist, and each area of the standard lives in its own reference so the agent loads only what the selected surfaces need.",
+  "abstract": "Create, upgrade or align ScaleDock product, library and tooling repos against one standard: the latest Node that Vercel supports, latest pnpm and native TypeScript, a strict Turborepo workspace, Next.js surfaces or a universal Expo app, an optional native-only Expo mobile app with PowerSync for offline data, Supabase with better-supabase, PermDock, an oRPC contract shared by the API, MCP and CLI, Fumadocs, and Vercel-first infrastructure. Upgrade and align modes fill a gap table from a fixed checklist with a fixed status vocabulary, and every run ends with a report template; every version is looked up at run time. SKILL.md holds the inputs, ground rules, workflow and final checklist, and each area of the standard lives in its own reference so the agent loads only what the repo kind and selected surfaces need.",
   "references": [
     "https://vercel.com/docs/functions/runtimes/node-js/node-js-versions",
     "https://pnpm.io/settings",
@@ -12,6 +12,11 @@
     "https://supabase.com/docs/guides/auth/oauth-server",
     "https://orpc.dev/docs/getting-started",
     "https://fumadocs.dev/docs",
-    "https://github.com/aurorascharff/nextjs-app-architecture-skill"
+    "https://github.com/aurorascharff/nextjs-app-architecture-skill",
+    "https://docs.expo.dev",
+    "https://docs.expo.dev/build/introduction/",
+    "https://docs.expo.dev/router/introduction/",
+    "https://docs.uniwind.dev",
+    "https://docs.powersync.com/client-sdk-references/react-native-and-expo"
   ]
 }

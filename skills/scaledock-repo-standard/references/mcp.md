@@ -2,6 +2,8 @@
 
 The MCP SDK, transport, auth, tools from the contract, PermDock, resources, errors, the registry manifest, the docs MCP, and tests.
 
+Applies to repos with the `mcp` surface, and the docs MCP to every repo with a docs site.
+
 - **Packages.** `@modelcontextprotocol/server` and `@modelcontextprotocol/client`, latest major. Never the legacy `@modelcontextprotocol/sdk` package, `mcp-handler`, `orpc-mcp`, or a hand-written JSON-RPC switch. A library whose bundle budget rules out the SDK records an ADR.
 - **Transport.**
   - `createMcpHandler(factory)` is mounted in the Hono shell: `app.all("/mcp", (c) => handler.fetch(c.req.raw, { authInfo }))`.

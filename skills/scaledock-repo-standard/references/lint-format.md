@@ -2,11 +2,13 @@
 
 The `ox-config` package, the oxlint presets and pinned rules, the JS plugins, the `anti-slop` plugin, and oxfmt.
 
+Applies to every repo kind with JS or TS code. A repo without workspaces keeps the same config in root files instead of a package.
+
 ## `packages/ox-config`
 
 It exports:
 
-- The presets `core`, `react`, `node`, `library`, `test` and `playwright`.
+- The presets `core`, `react`, `node`, `library`, `test` and `playwright`, plus `react-native` and `expo` with Expo.
 - `ignores`, the `oxfmt` config and the local `anti-slop` plugin.
 
 The root `oxlint.config.ts` covers root tooling. Each workspace extends only the presets it needs.
@@ -24,7 +26,14 @@ The root `oxlint.config.ts` covers root tooling. Each workspace extends only the
 
 ## `react` preset
 
-`react`, `jsx-a11y` with every rule at error, the react-doctor effect rules, and `@shadcn/lint`.
+`react`, `jsx-a11y` with every rule at error, the react-doctor effect rules, and `@shadcn/lint` (Next.js `app` only).
+
+## `react-native` and `expo` presets
+
+- `react-native` extends `react` and turns on the react-doctor `rn-*` rules (`rn-prefer-pressable`, `rn-prefer-expo-image`, raw text outside `<Text>`).
+- It bans with `no-restricted-imports`: `TouchableOpacity` and the other `Touchable*` components, `StyleSheet.create`, core `Image`, JS stack and tab navigators, and JS bottom-sheet libraries.
+- `expo` extends `react-native` for Expo apps. It allows `process.env.EXPO_OS` and `EXPO_PUBLIC_*` reads only in `env.ts` and platform-branching modules, and forbids importing `@/app/*` from features.
+- Uniwind generates its types before `lint` and `typecheck` (`uniwind generate-artifacts`), so class names are checked.
 
 ## JS plugins
 
