@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+  "oxc.fmt.configPath": ".oxfmtrc.json",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "pnpm-lock.yaml": true
+  }
+}

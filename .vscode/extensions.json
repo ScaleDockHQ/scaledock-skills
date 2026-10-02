@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "oxc.oxc-vscode",
+    "EditorConfig.EditorConfig",
+    "vivaxy.vscode-conventional-commits",
+    "github.vscode-pull-request-github"
+  ],
+  "unwantedRecommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "biomejs.biome"
+  ]
+}
