@@ -1,0 +1,212 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers AG-UI, the Agent-User Interaction Protocol, at specification 1.0 with its JSON Schema, cross-checked against repository commit e60019d and @ag-ui/core 1.0.0. SKILL.md holds the invariants and workflow for producers, consumers and middleware; references cover the event model and its eight families, the HTTP + SSE and HTTP + Protobuf bindings, frontend tools and interrupts for human-in-the-loop, and the processing model, version negotiation and SDKs.",
+  "sources": [
+    {
+      "title": "AG-UI Specification 1.0",
+      "url": "https://docs.ag-ui.com/spec/1.0",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "The Event Model",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Run Input",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/run-input",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Metadata",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/metadata",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Capabilities",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/capabilities",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Event Streams",
+      "url": "https://docs.ag-ui.com/spec/1.0/events",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Runs and Steps",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/lifecycle",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Text Messages",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/text-messages",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Tool Calls",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/tool-calls",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Reasoning",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/reasoning",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "State",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/state",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Activity",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/activity",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Subagents",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/subagents",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Raw and Custom Events",
+      "url": "https://docs.ag-ui.com/spec/1.0/events/passthrough",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Schema files",
+      "url": "https://docs.ag-ui.com/spec/1.0/schema-files",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Streaming Messages",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/patterns/streaming",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Snapshots and Deltas",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/patterns/snapshots",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Interrupts and Resume",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/patterns/interrupt-resume",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Transports",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/transports",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP + Server-Sent Events",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/transports/http-sse",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP + Protobuf",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/transports/http-protobuf",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Processing Model",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/processing",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Versioning and Compatibility",
+      "url": "https://docs.ag-ui.com/spec/1.0/basic/versioning",
+      "status": "Released",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Key Changes",
+      "url": "https://docs.ag-ui.com/spec/1.0/changelog",
+      "status": "Released (informative)",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AG-UI 1.0 JSON Schema",
+      "url": "https://docs.ag-ui.com/spec/1.0/schema.json",
+      "status": "Released",
+      "revision": "1.0 ($id https://ag-ui.com/spec/1.0/schema.json, JSON Schema 2020-12)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Migrating to 1.0",
+      "url": "https://docs.ag-ui.com/migrating-to-1-0",
+      "status": "Documentation",
+      "revision": "1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP, A2A, and AG-UI",
+      "url": "https://docs.ag-ui.com/agentic-protocols",
+      "status": "Documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AG-UI repository README",
+      "url": "https://raw.githubusercontent.com/ag-ui-protocol/ag-ui/e60019d258cf43ecc5ad19e8d374f1c31cbf2b94/README.md",
+      "status": "MIT-licensed repository",
+      "revision": "commit e60019d (main, 2026-10-02, tag release/2026-10-02)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@ag-ui/core on the npm registry",
+      "url": "https://registry.npmjs.org/@ag-ui/core",
+      "status": "Published package",
+      "revision": "1.0.0 (2026-09-17), latest 1.0.1 (2026-09-29)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

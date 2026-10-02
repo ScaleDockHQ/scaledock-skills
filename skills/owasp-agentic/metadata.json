@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Turns the OWASP Top 10 for Agentic Applications 2026 (ASI01 to ASI10, Version 2026, December 2025) into a review workflow for AI agents and multi-agent systems. SKILL.md holds the least-agency invariants and the review workflow; references summarise each entry with its mitigations, give a checklist grouped by tool use, identity and privilege, human-in-the-loop and least agency, and map entries to the Agentic AI Threats and Mitigations taxonomy v1.1 and the LLM Top 10.",
+  "sources": [
+    {
+      "title": "OWASP Top 10 for Agentic Applications for 2026 (resource page)",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+      "status": "Published",
+      "revision": "Version 2026 (9 December 2025)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OWASP Top 10 for Agentic Applications 2026 (PDF)",
+      "url": "https://genai.owasp.org/download/52117/?tmstv=1765059207",
+      "status": "Published",
+      "revision": "Version 2026 (December 2025)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OWASP Top 10 for Agentic Applications: release announcement",
+      "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "status": "Published",
+      "revision": "9 December 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Agentic AI: Threats and Mitigations (resource page)",
+      "url": "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+      "status": "Published",
+      "revision": "first released 17 February 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Agentic AI: Threats and Mitigations (PDF)",
+      "url": "https://genai.owasp.org/download/45674/?tmstv=1739819891",
+      "status": "Published",
+      "revision": "Version 1.1 (December 2025)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OWASP Top 10 for LLM Applications 2025",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OWASP GenAI LLM Top 10 2026 (resource page)",
+      "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "status": "Published",
+      "revision": "2026 edition (3 August 2026)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

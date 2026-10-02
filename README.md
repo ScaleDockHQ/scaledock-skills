@@ -46,6 +46,12 @@ Neutral skills, one per specification. Each pins the sources it was written from
 
 | Skill                                           | Description                                                                                                                                       |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`a2a`](skills/a2a)                             | A2A 1.0: publish Agent Cards and talk agent to agent over the JSON-RPC, gRPC and HTTP+JSON bindings.                                              |
+| [`ag-ui`](skills/ag-ui)                         | AG-UI 1.0: stream agent runs to user-facing apps with typed events, shared state and human-in-the-loop interrupts.                                |
+| [`ap2`](skills/ap2)                             | AP2 v0.2: authorize AI agent payments with signed Checkout and Payment Mandates.                                                                  |
+| [`owasp-agentic`](skills/owasp-agentic)         | OWASP Top 10 for Agentic Applications 2026: review AI agent apps against ASI01 to ASI10.                                                          |
+| [`web-bot-auth`](skills/web-bot-auth)           | Web Bot Auth: sign and verify bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures.                                               |
+| [`webmcp`](skills/webmcp)                       | WebMCP: expose web page tools to AI agents through `document.modelContext`.                                                                       |
 | [`asyncapi`](skills/asyncapi)                   | AsyncAPI 3.1: describe event-driven APIs with servers, channels, operations, messages and protocol bindings.                                      |
 | [`openapi`](skills/openapi)                     | OpenAPI 3.2: write, validate and upgrade API descriptions, including security schemes and the extension registries.                               |
 | [`openapi-arazzo`](skills/openapi-arazzo)       | Arazzo 1.1: describe and run multi-step workflows over OpenAPI and AsyncAPI operations.                                                           |

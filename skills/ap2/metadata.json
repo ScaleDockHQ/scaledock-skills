@@ -1,0 +1,184 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Agent Payments Protocol (AP2) at v0.2 (repository tag v0.2.0): the Agent Authorization model, open and closed Checkout and Payment Mandates as SD-JWT verifiable digital credentials, constraints, receipts, the five roles, Human Present and Human Not Present flows, and verification and dispute rules. References also cover AP2 with UCP, A2A and MCP, the superseded v0.1 Intent, Cart and Payment Mandates, and a comparison with the Visa Trusted Agent Protocol and the Agentic Commerce Protocol.",
+  "sources": [
+    {
+      "title": "Agent Payments Protocol (AP2) home",
+      "url": "https://ap2-protocol.org/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Agentic Payment Protocol (v0.2) specification",
+      "url": "https://ap2-protocol.org/ap2/specification/",
+      "status": "Released",
+      "revision": "v0.2 (identical to tag v0.2.0 and main e1ea56d)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Checkout Mandate",
+      "url": "https://ap2-protocol.org/ap2/checkout_mandate/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Payment Mandate",
+      "url": "https://ap2-protocol.org/ap2/payment_mandate/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Agent Authorization Framework",
+      "url": "https://ap2-protocol.org/ap2/agent_authorization/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Flow Examples",
+      "url": "https://ap2-protocol.org/ap2/flows/",
+      "status": "Released",
+      "revision": "v0.2 (non-normative)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Security and Privacy Considerations",
+      "url": "https://ap2-protocol.org/ap2/security_and_privacy_considerations/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Implementation Considerations",
+      "url": "https://ap2-protocol.org/ap2/implementation_considerations/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Executive Summary",
+      "url": "https://ap2-protocol.org/overview/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Glossary",
+      "url": "https://ap2-protocol.org/glossary/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAQ",
+      "url": "https://ap2-protocol.org/faq/",
+      "status": "Released",
+      "revision": "v0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AP2 v0.2.0 release",
+      "url": "https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0",
+      "status": "Released",
+      "revision": "v0.2.0 (2026-04-28, commit b4587ac)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AP2 v0.1 specification",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.1.0/docs/specification.md",
+      "status": "Released (superseded by v0.2)",
+      "revision": "v0.1.0 (2025-09-16)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "A2A Extension for AP2 (v0.1)",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.1.0/docs/a2a-extension.md",
+      "status": "v0.1-alpha (superseded)",
+      "revision": "tag v0.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AP2, A2A, and MCP (v0.1)",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.1.0/docs/topics/ap2-a2a-and-mcp.md",
+      "status": "Released (superseded by v0.2)",
+      "revision": "tag v0.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AP2 sample merchant Agent Card",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.2.0/code/samples/python/src/roles/merchant_agent/agent.json",
+      "status": "Sample code (non-normative)",
+      "revision": "tag v0.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "UCP and AP2",
+      "url": "https://ucp.dev/documentation/ucp-and-ap2/",
+      "status": "Documentation",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Visa Trusted Agent Protocol overview",
+      "url": "https://developer.visa.com/capabilities/trusted-agent-protocol",
+      "status": "In development and deployment (per Visa)",
+      "revision": "unversioned page",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Visa Trusted Agent Protocol merchant specifications",
+      "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications",
+      "status": "In development and deployment (per Visa)",
+      "revision": "unversioned page",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Visa Trusted Agent Protocol sample repository README",
+      "url": "https://raw.githubusercontent.com/visa/trusted-agent-protocol/16d59bdf3f8a542bc538d0962edbb80ea30a02af/README.md",
+      "status": "Sample implementation",
+      "revision": "commit 16d59bd (2025-10-28)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Agentic Commerce Protocol README",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/README.md",
+      "status": "Beta",
+      "revision": "latest stable 2026-04-17, commit 7fdd78d",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "ACP changelog 2026-04-17",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2026-04-17.md",
+      "status": "Released",
+      "revision": "API version 2026-04-17",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "ACP RFC: Agentic Checkout",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.agentic_checkout.md",
+      "status": "Draft",
+      "revision": "Version 2026-01-16 (commit 7fdd78d)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "ACP RFC: Delegate Payment",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.delegate_payment.md",
+      "status": "Draft",
+      "revision": "Version 2025-09-29 (commit 7fdd78d)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "ACP MCP transport binding",
+      "url": "https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/docs/mcp-binding.md",
+      "status": "Repository document",
+      "revision": "commit 7fdd78d",
+      "checked": "2026-10-02"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Bot Auth, the IETF webbotauth working group's profile of RFC 9421 HTTP Message Signatures for bots and AI agents, pinned to draft-ietf-webbotauth-httpsig-protocol-00. SKILL.md holds the invariants and workflow; references cover RFC 9421 essentials, the signer role with Signature-Agent and the key directory, and the verifier role with key resolution, caching, SSRF limits and outcomes.",
+  "sources": [
+    {
+      "title": "RFC 9421: HTTP Message Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421",
+      "status": "RFC (Standards Track)",
+      "revision": "RFC 9421 (February 2024)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-ietf-webbotauth-httpsig-protocol-00: HTTP Message Signatures for automated traffic",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-webbotauth-httpsig-protocol-00.txt",
+      "status": "WG draft (IETF webbotauth WG)",
+      "revision": "-00 (1 September 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-ietf-webbotauth-httpsig-protocol datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/",
+      "status": "WG Document",
+      "revision": "latest revision -00",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-meunier-webbotauth-httpsig-protocol",
+      "url": "https://datatracker.ietf.org/doc/draft-meunier-webbotauth-httpsig-protocol/",
+      "status": "Replaced (by draft-ietf-webbotauth-httpsig-protocol)",
+      "revision": "-02 (2026-08-18)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-meunier-http-message-signatures-directory",
+      "url": "https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/",
+      "status": "Replaced (by draft-meunier-webbotauth-httpsig-directory, later merged into the protocol draft)",
+      "revision": "-05 (2026-03-02)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Web Bot Auth (webbotauth) working group charter",
+      "url": "https://datatracker.ietf.org/wg/webbotauth/about/",
+      "status": "Active",
+      "revision": "charter as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7638: JSON Web Key (JWK) Thumbprint",
+      "url": "https://www.rfc-editor.org/rfc/rfc7638",
+      "status": "RFC (Standards Track)",
+      "revision": "RFC 7638 (September 2015)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8037: CFRG ECDH and Signatures in JOSE",
+      "url": "https://www.rfc-editor.org/rfc/rfc8037",
+      "status": "RFC (Standards Track)",
+      "revision": "RFC 8037 (January 2017)",
+      "checked": "2026-10-02"
+    }
+  ]
+}
