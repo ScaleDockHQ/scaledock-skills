@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "singleQuote": false,
+  "semi": true,
+  "trailingComma": "all",
+  "sortImports": {
+    "groups": [
+      "type",
+      "builtin",
+      "external",
+      ["internal", "subpath"],
+      ["parent", "sibling", "index"],
+      "unknown"
+    ],
+    "internalPattern": ["@/", "@scaledock/"]
+  },
+  "sortPackageJson": { "sortScripts": true },
+  "ignorePatterns": [".agents/", "skills-lock.json", "pnpm-lock.yaml"]
+}
