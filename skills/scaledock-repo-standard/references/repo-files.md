@@ -35,7 +35,7 @@ Workflows and Dependabot are in [`ci.md`](ci.md).
   - Tailwind `classFunctions: ["cn", "cva", "tv"]`.
   - Excludes for generated output.
 - **`extensions.json`:**
-  - Recommended: `oxc.oxc-vscode`, `typescriptteam.native-preview`, `bradlc.vscode-tailwindcss`, `EditorConfig.EditorConfig`, `vivaxy.vscode-conventional-commits`, `github.vscode-pull-request-github`, and `expo.vscode-expo-tools` with Expo.
+  - Recommended: `oxc.oxc-vscode`, `typescriptteam.native-preview` (published as "TypeScript 7"), `bradlc.vscode-tailwindcss`, `EditorConfig.EditorConfig`, `vivaxy.vscode-conventional-commits`, `github.vscode-pull-request-github`, and `expo.vscode-expo-tools` with Expo.
   - Unwanted: eslint, prettier and biome.
 - **`tasks.json`:** install, verify, `dev:portless` and the Supabase tasks.
 - **`launch.json`:** `dev:portless` per app, a `serverReadyAction` matching `Ready in [0-9]+ms`, and `postDebugTask: dev:cleanup`. With Expo, one Expo Tools attach configuration for the dev client.
