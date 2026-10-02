@@ -1,0 +1,142 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers CloudEvents 1.0.2, the CNCF specification for describing event data in a common way: the required and optional context attributes, the type system, extension attributes with the Distributed Tracing and Partitioning extensions, the JSON, Avro and Protobuf event formats with the JSON Schema, the HTTP, Kafka, AMQP, MQTT and NATS protocol bindings, and the HTTP webhook delivery spec. It also records the status of the Subscriptions and xRegistry Pagination working drafts, and that no Discovery specification is published. SKILL.md holds the invariants and workflow; references split out attributes, formats, bindings and drafts.",
+  "sources": [
+    {
+      "title": "CloudEvents specification repository and README",
+      "url": "https://github.com/cloudevents/spec",
+      "status": "CNCF graduated project",
+      "revision": "main branch (documents table and project status)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents v1.0.2 release",
+      "url": "https://github.com/cloudevents/spec/releases/tag/ce@v1.0.2",
+      "status": "Released",
+      "revision": "ce@v1.0.2 (2022-02-06)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents - Version 1.0.2",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v1.0.2/cloudevents/spec.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JSON Event Format for CloudEvents",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v1.0.2/cloudevents/formats/json-format.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents JSON Schema",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v1.0.2/cloudevents/formats/cloudevents.json",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Avro Event Format for CloudEvents",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v1.0.2/cloudevents/formats/avro-format.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Protobuf Event Format for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/protobuf-format.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP Protocol Binding for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/http-protocol-binding.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HTTP 1.1 Web Hooks for Event Delivery",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/http-webhook.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Kafka Protocol Binding for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/kafka-protocol-binding.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AMQP Protocol Binding for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/amqp-protocol-binding.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MQTT Protocol Binding for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/mqtt-protocol-binding.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "NATS Protocol Binding for CloudEvents",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/nats-protocol-binding.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents Extension Attributes (documented extensions)",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/documented-extensions.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Distributed Tracing extension",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/extensions/distributed-tracing.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Partitioning extension",
+      "url": "https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/extensions/partitioning.md",
+      "status": "Released",
+      "revision": "1.0.2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents Subscriptions API",
+      "url": "https://github.com/cloudevents/spec/blob/main/subscriptions/spec.md",
+      "status": "working draft",
+      "revision": "Version 0.1-wip (main branch), Draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "xRegistry specification repository",
+      "url": "https://github.com/xregistry/spec",
+      "status": "release candidate",
+      "revision": "v1.0-rc4 (core and registries)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "xRegistry Pagination",
+      "url": "https://github.com/xregistry/spec/blob/main/pagination/spec.md",
+      "status": "working draft",
+      "revision": "Version 0.1-wip (main branch), Draft posture: track",
+      "checked": "2026-10-02"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenTelemetry semantic conventions for generative AI, pinned to commit b31e9e8 of the semantic-conventions-genai repository (schema URL gen-ai-dev/1.42.0-dev, built on semantic conventions 1.44.0), all at Development status: inference, embeddings, retrieval, tool, agent, workflow and MCP spans; gen_ai.* attributes and well-known values; opt-in content capture; client, server, agent and token metrics; GenAI events; and the OTEL_SEMCONV_STABILITY_OPT_IN transition. SKILL.md holds the invariants and workflow; references split out spans, attributes, events and metrics, and versioning.",
+  "sources": [
+    {
+      "title": "Semantic conventions for generative AI systems",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/README.md",
+      "status": "Development",
+      "revision": "commit b31e9e8 (2026-09-30), Draft posture: build",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Registry manifest",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/model/manifest.yaml",
+      "status": "development",
+      "revision": "schema gen-ai-dev/1.42.0-dev on semantic conventions 1.44.0 at commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Generative client AI spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-spans.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "GenAI agent and framework spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-agent-spans.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Generative AI events",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-events.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Generative AI exceptions",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-exceptions.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Generative AI metrics",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-metrics.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Generative AI inference token metrics",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/gen-ai-token-metrics.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Model Context Protocol semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/mcp.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Gen AI attribute registry",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/registry/attributes/gen-ai.md",
+      "status": "Development",
+      "revision": "commit b31e9e8",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "GenAI semantic conventions on opentelemetry.io",
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "status": "Moved",
+      "revision": "page as served on 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "GenAI README with the opt-in transition plan",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.41.1/docs/gen-ai/README.md",
+      "status": "Development",
+      "revision": "semantic conventions v1.41.1",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Semantic conventions v1.44.0 release",
+      "url": "https://github.com/open-telemetry/semantic-conventions/releases/tag/v1.44.0",
+      "status": "Released",
+      "revision": "v1.44.0 (2026-08-04)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Open Cybersecurity Schema Framework at version 1.9.0, the version the OCSF schema server reports: categories, classes and activities, base attributes, the metadata object, profiles, extensions, unmapped data and validation against schema.ocsf.io, with a focus on mapping application audit logs. SKILL.md holds the invariants and workflow; references split out classes and activity IDs, attributes and objects, profiles and extensions, and validation with example events that pass the 1.9.0 validator.",
+  "sources": [
+    {
+      "title": "OCSF Schema 1.9.0 release",
+      "url": "https://github.com/ocsf/ocsf-schema/releases/tag/1.9.0",
+      "status": "Released",
+      "revision": "1.9.0 (published 2026-08-03)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF schema server: current version",
+      "url": "https://schema.ocsf.io/api/version",
+      "status": "schema server API",
+      "revision": "1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF 1.9.0 categories",
+      "url": "https://schema.ocsf.io/api/1.9.0/categories",
+      "status": "schema server API",
+      "revision": "1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF 1.9.0 Authentication class",
+      "url": "https://schema.ocsf.io/api/1.9.0/classes/authentication",
+      "status": "schema server API",
+      "revision": "1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF 1.9.0 metadata object",
+      "url": "https://schema.ocsf.io/api/1.9.0/objects/metadata",
+      "status": "schema server API",
+      "revision": "1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF 1.9.0 profiles",
+      "url": "https://schema.ocsf.io/api/1.9.0/profiles",
+      "status": "schema server API",
+      "revision": "1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF Schema API (OpenAPI)",
+      "url": "https://schema.ocsf.io/doc/swagger.json",
+      "status": "schema server API description",
+      "revision": "served alongside 1.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Understanding the Open Cybersecurity Schema Framework",
+      "url": "https://raw.githubusercontent.com/ocsf/ocsf-docs/main/overview/understanding-ocsf.md",
+      "status": "white paper",
+      "revision": "main branch",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OCSF extensions registry",
+      "url": "https://raw.githubusercontent.com/ocsf/ocsf-schema/main/extensions.md",
+      "status": "registry",
+      "revision": "main branch",
+      "checked": "2026-10-02"
+    }
+  ]
+}
