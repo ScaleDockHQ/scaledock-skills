@@ -71,7 +71,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 **Delivery:**
 
 - [`references/git-workflow.md`](references/git-workflow.md): branches, the agent workflow, commitlint, lefthook, Changesets, releases.
-- [`references/ci.md`](references/ci.md): GitHub Actions, EAS builds and Dependabot.
+- [`references/ci.md`](references/ci.md): GitHub Actions on release tags, EAS builds and Dependabot.
 - [`references/tests.md`](references/tests.md): Vitest, jest-expo, Playwright, pgTAP, test rules.
 - [`references/agent-files.md`](references/agent-files.md): AGENTS.md, rules, the "also update" table, writing rules.
 - [`references/repo-files.md`](references/repo-files.md): README, standard files, `.github`, VS Code.

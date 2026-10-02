@@ -1,13 +1,13 @@
 # GitHub Actions and Dependabot
 
-Action pinning, the shared setup action, the workflows, EAS builds, and Dependabot.
+Action versions, the shared setup action, the workflows, EAS builds, and Dependabot.
 
 Applies to every repo kind. Each workflow below runs only the gates the repo has.
 
-- **Pinning.** Every action runs its latest release.
-  - GitHub-owned actions (`actions/*`, `github/*`) use their latest major tag.
-  - Third-party actions are pinned to the commit SHA of their latest release, with a `# vX.Y.Z` comment.
-  - Dependabot keeps both current.
+- **Versions.** Every action targets its latest release by tag, never by commit SHA.
+  - Use the latest major tag (`@vN`) when the action publishes one, otherwise its latest release tag (`@vX.Y.Z`).
+  - zizmor's `unpinned-uses` rule is set to `"*": ref-pin` in `.github/zizmor.yml`, so tags pass and branch refs fail.
+  - Dependabot keeps the tags current.
 - **`.github/actions/setup`:** Remote Cache OIDC, then `pnpm/setup` with the Node major from `.node-version`, caching and `require-lockfile`.
 - **`ci.yml`:**
   - Runs on PRs and on pushes to the working branch and `main`.
@@ -27,7 +27,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 - **`powersync.yml`** (Offline: yes): on `packages/sync/powersync/**` changes, validate the sync config against the local stack.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md).
 - **`eas-build.yml`** (with Expo): a reusable `workflow_call` plus `workflow_dispatch` with a `profile` input.
-  - `expo/expo-github-action`, pinned to a SHA, with `eas-version` from the latest release and the `EXPO_TOKEN` secret.
+  - `expo/expo-github-action` on its latest major tag, with `eas-version` from the latest release and the `EXPO_TOKEN` secret.
   - Runs `eas build --profile <profile> --platform all --non-interactive --no-wait`. CI only queues the build; EAS reports failures on its own.
   - `production` runs only from a release tag on `main` and adds `--auto-submit`. `development` builds can run from any branch on dispatch.
   - Concurrency is grouped per profile.
