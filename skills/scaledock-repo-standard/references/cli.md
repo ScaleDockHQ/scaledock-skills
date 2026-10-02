@@ -2,11 +2,11 @@
 
 CLI kinds, stack, layout, behavior, build, product CLI auth, and tests. Pick the kind from the inputs.
 
-| Kind | Location | Published | Talks to |
-| --- | --- | --- | --- |
-| `product` | `apps/cli`, bin `{{app}}` | npm with trusted publishing, in the product `fixed` group | The API, through the contract client |
-| `library` | `packages/cli`, name `@{{SCOPE}}/cli`, bin `{{lib}}` | npm, in a Changesets `fixed` group with the library | Local files and processes |
-| `tooling` | `scripts/*.ts`; a private `apps/cli` only with an ADR | Never | The repo |
+| Kind      | Location                                              | Published                                                 | Talks to                             |
+| --------- | ----------------------------------------------------- | --------------------------------------------------------- | ------------------------------------ |
+| `product` | `apps/cli`, bin `{{app}}`                             | npm with trusted publishing, in the product `fixed` group | The API, through the contract client |
+| `library` | `packages/cli`, name `@{{SCOPE}}/cli`, bin `{{lib}}`  | npm, in a Changesets `fixed` group with the library       | Local files and processes            |
+| `tooling` | `scripts/*.ts`; a private `apps/cli` only with an ADR | Never                                                     | The repo                             |
 
 ## Stack (latest of each)
 

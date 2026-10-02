@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Repo standard
@@ -66,8 +66,8 @@ Run these steps in order. Each step names the references to load and the check i
    - **New:** sketch the tree from the selected surfaces and packages.
    - **Upgrade:** compare this repo against every reference below and write the gap table.
    - **Align:** do the upgrade audit for each repo and merge the results into one table, one column per repo.
-   -> [`references/architecture.md`](references/architecture.md) for the target tree; every other reference for its rows.
-   ✓ The gap table lists every standard item as done, gap or kept (with its ADR), plus every dependency that is behind latest.
+     -> [`references/architecture.md`](references/architecture.md) for the target tree; every other reference for its rows.
+     ✓ The gap table lists every standard item as done, gap or kept (with its ADR), plus every dependency that is behind latest.
 3. **Foundation.** Install the skills, set up the toolchain, workspace, TypeScript, Knip, lint and format, and lay out the folders and boundaries.
    -> [`references/skills.md`](references/skills.md), [`references/toolchain.md`](references/toolchain.md), [`references/lint-format.md`](references/lint-format.md), [`references/architecture.md`](references/architecture.md).
    ✓ `pnpm install` passes under the strict workspace settings, every workspace has a boundary tag, and `pnpm check` runs.
@@ -79,7 +79,7 @@ Run these steps in order. Each step names the references to load and the check i
    - Data and identity: [`references/data-permissions.md`](references/data-permissions.md), [`references/auth.md`](references/auth.md).
    - Programmatic: [`references/api.md`](references/api.md), [`references/mcp.md`](references/mcp.md), [`references/cli.md`](references/cli.md).
    - Docs and AI: [`references/docs-site.md`](references/docs-site.md), [`references/ai.md`](references/ai.md).
-   ✓ Apps stay thin adapters over `services`, every procedure is contract first, and every surface acts as the signed-in user.
+     ✓ Apps stay thin adapters over `services`, every procedure is contract first, and every surface acts as the signed-in user.
 6. **Repo hygiene.** Write the AI files, repo files, VS Code settings, CI, Dependabot and tests.
    -> [`references/agent-files.md`](references/agent-files.md), [`references/repo-files.md`](references/repo-files.md), [`references/ci.md`](references/ci.md), [`references/tests.md`](references/tests.md).
    ✓ AGENTS.md is at most 12 KB and lists the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.

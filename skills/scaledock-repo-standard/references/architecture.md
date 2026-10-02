@@ -51,22 +51,23 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
 - **Valibot everywhere** (env, domain, contract, forms, MCP tool schemas, AI output, CLI config). No Zod in our code; a dependency's own Zod is fine.
 - **One library per concern**, enforced with `no-restricted-imports`:
 
-  | Concern | Library |
-  | --- | --- |
-  | Schemas | Valibot (`@valibot/to-json-schema` for JSON Schema) |
-  | Typed results | better-result |
-  | Remote data | RSC first, TanStack Query in client islands |
-  | Forms | TanStack Form with Standard Schema |
-  | URL state | nuqs |
-  | Cross-screen UI state | TanStack Store |
-  | Dates | date-fns |
-  | Icons | Hugeicons (unless I name another set) |
-  | Email | react-email |
-  | LLMs | AI SDK |
-  | MCP | `@modelcontextprotocol/server` and `/client`, latest major |
-  | CLI | citty, @clack/prompts, c12, tinyexec (latest of each) |
+  | Concern               | Library                                                    |
+  | --------------------- | ---------------------------------------------------------- |
+  | Schemas               | Valibot (`@valibot/to-json-schema` for JSON Schema)        |
+  | Typed results         | better-result                                              |
+  | Remote data           | RSC first, TanStack Query in client islands                |
+  | Forms                 | TanStack Form with Standard Schema                         |
+  | URL state             | nuqs                                                       |
+  | Cross-screen UI state | TanStack Store                                             |
+  | Dates                 | date-fns                                                   |
+  | Icons                 | Hugeicons (unless I name another set)                      |
+  | Email                 | react-email                                                |
+  | LLMs                  | AI SDK                                                     |
+  | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major |
+  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)      |
 
   Never add `@radix-ui/*` or vaul.
+
 - **Env.** Each app has one `env.ts` (t3-env with Valibot), the only file that reads `process.env`. Read `NEXT_PUBLIC_*` literally. Derive every public URL from `NEXT_PUBLIC_SITE_URL`.
 - **Standard services**, each behind one wrapper so features never import a vendor SDK:
   - Sentry behind `lib/monitoring` (`@sentry/nextjs`, or Sentry's Hono or Node SDK in services).

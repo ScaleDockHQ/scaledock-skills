@@ -49,7 +49,23 @@ const config = {
   extends: ["@commitlint/config-conventional"],
   ignores: [(message) => BOT_HEADER.test(message.split("\n", 1)[0] ?? "")],
   rules: {
-    "type-enum": [2, "always", ["feat", "fix", "docs", "chore", "ci", "refactor", "test", "perf", "style", "build", "revert"]],
+    "type-enum": [
+      2,
+      "always",
+      [
+        "feat",
+        "fix",
+        "docs",
+        "chore",
+        "ci",
+        "refactor",
+        "test",
+        "perf",
+        "style",
+        "build",
+        "revert",
+      ],
+    ],
     "subject-case": [2, "never", ["pascal-case", "start-case", "upper-case"]],
     "header-max-length": [2, "always", 72],
   },
@@ -94,7 +110,10 @@ Never release-please. `.changeset/config.json`:
 ```json
 {
   "$schema": "https://unpkg.com/@changesets/config/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "{{GITHUB_OWNER}}/{{REPO_NAME}}" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "{{GITHUB_OWNER}}/{{REPO_NAME}}" }
+  ],
   "commit": false,
   "baseBranch": "main",
   "access": "public",

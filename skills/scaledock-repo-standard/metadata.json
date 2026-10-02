@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "organization": "ScaleDock",
   "date": "October 2026",
   "abstract": "Create, upgrade or align ScaleDock repos against one standard: the latest Node that Vercel supports, latest pnpm and native TypeScript, a strict Turborepo workspace, Next.js surfaces, Supabase with better-supabase, PermDock, an oRPC contract shared by the API, MCP and CLI, Fumadocs, and Vercel-first infrastructure. Upgrade and align modes audit into a gap table first; every version is looked up at run time. SKILL.md holds the inputs, ground rules, workflow and final checklist, and each area of the standard lives in its own reference so the agent loads only what the selected surfaces need.",

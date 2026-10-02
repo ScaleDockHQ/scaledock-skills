@@ -39,7 +39,7 @@ skills/scaledock-<topic>/
   assets/         # optional templates and static files
 ```
 
-`skills/` holds the skills this repo publishes. `template/skill/` is the starting point; it sits one level deeper than `template/` so the `skills` CLI does not offer it in the install picker. `.agents/skills/` holds skills installed *into* this repo for local development (managed by `npx skills` and tracked in `skills-lock.json`); don't put published skills there.
+`skills/` holds the skills this repo publishes. `template/skill/` is the starting point; it sits one level deeper than `template/` so the `skills` CLI does not offer it in the install picker. `.agents/skills/` holds skills installed _into_ this repo for local development (managed by `npx skills` and tracked in `skills-lock.json`); don't put published skills there.
 
 ## Updating a skill
 

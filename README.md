@@ -27,8 +27,8 @@ Every skill name starts with `scaledock-`, so it never collides with a skill fro
 
 ## Skills
 
-| Skill | Description |
-| ----- | ----------- |
+| Skill                                                       | Description                                                                                                                                                                                                      |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`scaledock-repo-standard`](skills/scaledock-repo-standard) | Create a new repo, or upgrade or align existing ones, to the ScaleDock standard: latest Node on Vercel, pnpm, TypeScript, Next.js, Supabase with better-supabase, PermDock, oRPC, MCP, CLI, Fumadocs and Vercel. |
 
 ## Contributing
