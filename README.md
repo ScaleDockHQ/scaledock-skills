@@ -4,25 +4,32 @@ Agent skills we use across ScaleDock projects. Each skill is a folder with a `SK
 
 ## Install
 
-Install all skills into the current project:
-
 ```bash
 npx skills add ScaleDockHQ/scaledock-skills
 ```
 
-Install a single skill:
+The CLI lists every skill in this repo and asks which ones to install (space to toggle). To skip the picker:
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills@<skill-name>
+# See what's available
+npx skills add ScaleDockHQ/scaledock-skills --list
+
+# Install one or more skills by name
+npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-repo-standard
+
+# Same thing, shorter
+npx skills add ScaleDockHQ/scaledock-skills@scaledock-repo-standard
 ```
 
 Add `-g` to install globally (user level) instead of per project. Run `npx skills update` to pull the latest versions.
+
+Every skill name starts with `scaledock-`, so it never collides with a skill from another publisher in your `.agents/skills` folder.
 
 ## Skills
 
 | Skill | Description |
 | ----- | ----------- |
-| _None yet_ | |
+| [`scaledock-repo-standard`](skills/scaledock-repo-standard) | Create a new repo, or upgrade or align existing ones, to the ScaleDock standard: latest Node on Vercel, pnpm, TypeScript, Next.js, Supabase with better-supabase, PermDock, oRPC, MCP, CLI, Fumadocs and Vercel. |
 
 ## Contributing
 

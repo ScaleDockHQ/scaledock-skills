@@ -5,15 +5,19 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SKILLS_DIR = join(ROOT, "skills");
-const KEBAB_CASE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const ROOT_README = join(ROOT, "README.md");
+const SKILL_NAME = /^scaledock-[a-z0-9]+(-[a-z0-9]+)*$/;
+const TEMPLATE_NAME = "scaledock-my-skill";
 const MAX_DESCRIPTION_LENGTH = 1024;
+const MARKDOWN_LINK = /\[[^\]]*\]\(([^)\s]+)\)/g;
 
 function stripQuotes(value) {
   const match = value.match(/^(["'])(.*)\1$/);
   return match ? match[2] : value;
 }
 
-// Handles flat `key: value` pairs plus `>` / `|` block scalars; nested YAML is not supported.
+// Handles flat `key: value` pairs, `>` / `|` block scalars, and one level of
+// nested `key:` maps (for `metadata`); deeper YAML is not supported.
 function parseFrontmatter(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---(\r?\n|$)/);
   if (!match) return null;
@@ -34,6 +38,13 @@ function parseFrontmatter(content) {
       fields[key] = block
         .filter(Boolean)
         .join(value.startsWith(">") ? " " : "\n");
+    } else if (value === "") {
+      const nested = {};
+      while (i + 1 < lines.length && /^\s+\S/.test(lines[i + 1])) {
+        const child = lines[++i].trim().match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+        if (child) nested[child[1]] = stripQuotes(child[2].trim());
+      }
+      fields[key] = nested;
     } else {
       fields[key] = stripQuotes(value);
     }
@@ -41,9 +52,21 @@ function parseFrontmatter(content) {
   return fields;
 }
 
-function validateSkill(folder) {
+function brokenRelativeLinks(file) {
+  if (!existsSync(file)) return [];
+  const broken = [];
+  for (const [, target] of readFileSync(file, "utf8").matchAll(MARKDOWN_LINK)) {
+    if (/^([a-z]+:|#)/i.test(target)) continue;
+    const path = target.split("#")[0];
+    if (!existsSync(join(dirname(file), path))) broken.push(target);
+  }
+  return broken;
+}
+
+function validateSkill(folder, rootReadme) {
   const errors = [];
-  const skillFile = join(SKILLS_DIR, folder, "SKILL.md");
+  const skillDir = join(SKILLS_DIR, folder);
+  const skillFile = join(skillDir, "SKILL.md");
 
   if (!existsSync(skillFile)) {
     return ["missing SKILL.md"];
@@ -54,15 +77,23 @@ function validateSkill(folder) {
     return ["SKILL.md has no frontmatter block (expected --- ... --- at the top)"];
   }
 
-  const { name, description } = fields;
-  if (!name) {
+  const { name, description, metadata } = fields;
+  if (typeof name !== "string" || !name) {
     errors.push("frontmatter is missing `name`");
   } else {
-    if (!KEBAB_CASE.test(name)) errors.push(`name "${name}" is not kebab-case`);
+    if (!SKILL_NAME.test(name)) {
+      errors.push(`name "${name}" must be kebab-case and start with "scaledock-"`);
+    }
     if (name !== folder) errors.push(`name "${name}" does not match folder "${folder}"`);
+    if (name === TEMPLATE_NAME) {
+      errors.push(`name "${name}" is the template placeholder; rename the skill`);
+    }
+    if (!rootReadme.includes(`\`${name}\``)) {
+      errors.push(`README.md skills table does not list \`${name}\``);
+    }
   }
 
-  if (!description) {
+  if (typeof description !== "string" || !description) {
     errors.push("frontmatter is missing `description`");
   } else if (description.length > MAX_DESCRIPTION_LENGTH) {
     errors.push(
@@ -70,8 +101,33 @@ function validateSkill(folder) {
     );
   }
 
+  const metadataFile = join(skillDir, "metadata.json");
+  if (existsSync(metadataFile)) {
+    let json;
+    try {
+      json = JSON.parse(readFileSync(metadataFile, "utf8"));
+    } catch (error) {
+      errors.push(`metadata.json is not valid JSON: ${error.message}`);
+    }
+    const frontmatterVersion =
+      typeof metadata === "object" ? metadata.version : undefined;
+    if (json && json.version !== frontmatterVersion) {
+      errors.push(
+        `metadata.json version "${json.version}" does not match SKILL.md metadata.version "${frontmatterVersion}"`,
+      );
+    }
+  }
+
+  for (const file of ["SKILL.md", "README.md"]) {
+    for (const target of brokenRelativeLinks(join(skillDir, file))) {
+      errors.push(`${file} links to missing file "${target}"`);
+    }
+  }
+
   return errors;
 }
+
+const rootReadme = existsSync(ROOT_README) ? readFileSync(ROOT_README, "utf8") : "";
 
 const folders = existsSync(SKILLS_DIR)
   ? readdirSync(SKILLS_DIR, { withFileTypes: true })
@@ -82,7 +138,7 @@ const folders = existsSync(SKILLS_DIR)
 
 let failed = 0;
 for (const folder of folders) {
-  const errors = validateSkill(folder);
+  const errors = validateSkill(folder, rootReadme);
   const label = relative(ROOT, join(SKILLS_DIR, folder));
   if (errors.length === 0) {
     console.log(`ok    ${label}`);

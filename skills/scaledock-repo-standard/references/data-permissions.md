@@ -1,0 +1,45 @@
+# Multi-tenancy, data and permissions
+
+URL tenancy, guards, tenant tables, Supabase, better-supabase, the audit log, and PermDock. Auth across surfaces is in [`auth.md`](auth.md).
+
+## Multi-tenant (default: yes)
+
+- **URL tenancy:** `app/[locale]/(app)/[orgSlug]/...`. No organization cookie and no organization header.
+- **Proxy.** `proxy.ts` handles session refresh, auth redirects and locale only. It skips the refresh on prefetch requests.
+- **Guards.** `requireOrganizationAccess({ orgSlug, permission })` runs in Suspense islands. Unknown slugs call `notFound()`. System routes live outside `[orgSlug]` under a system permission scope.
+- **Tables.**
+  - Every tenant table has `organization_id` and an `*_organization_idx` index.
+  - RLS uses `organization_id in (select public.org_ids_with_permission('key'))`.
+  - Cache tags are scoped by `organizationId`.
+- **Roles** are tenant-scoped in PermDock. JWT claims stay compact and are hints only.
+- **Lifecycle:** create, switch, delete, invite and transfer ownership. An optional portal lives at `/{orgSlug}/portal`.
+
+## Supabase
+
+- Provisioned through the Marketplace.
+- Declarative, numbered `supabase/schemas/*.sql` files listed in `[db.migrations] schema_paths`. Migrations come from `supabase db diff` and are reviewed.
+- `[remotes.main]` and `[remotes.develop]`. The GitHub integration applies migrations; never `db push` from CI.
+- ES256 signing key from `pnpm supabase:signing-key`, gitignored.
+- RLS on every table, with pgTAP tests.
+- Regenerate the types for `public` and `graphql_public` together.
+
+## better-supabase
+
+- `pnpm db:gen` writes `database.types.ts` and the typed schema.
+- Repositories return a `Result`, never throw, and run as the caller.
+- Use the framework subpaths (`/next`, `/hono`, `/orpc`, `/mcp`, `/query`, `/server`, `/env`, `/storage`, `/realtime`).
+- `better-supabase doctor` runs in `verify`.
+
+## Audit log
+
+- `audit_events`, with organization RLS.
+- An `audit_row_change()` trigger on every domain table, listing ignored and redacted columns.
+- A pgTAP case per table.
+
+## PermDock
+
+- `packages/policy` holds `definePermissions`, `resource` and `definePolicy`.
+- One frozen instance per request through `permdock/next`, `/hono`, `/orpc` or `/mcp`. The UI uses `permdock/react`.
+- Memberships come from the verified subject.
+- `permdock rls generate`, `permdock collect --check` and `permdock doctor` run in `verify`.
+- Never add a permission without its feature.

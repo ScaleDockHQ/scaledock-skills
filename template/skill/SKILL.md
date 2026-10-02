@@ -1,27 +1,43 @@
 ---
-name: my-skill-name
-description: One or two sentences on what this skill does and when an agent should use it. Mention the trigger phrases or situations (e.g. "Use when working on X, or when the user asks to Y").
+name: scaledock-my-skill
+description: Start with what the skill does, because the install picker shows only the first 57 characters. Then say when an agent should use it, with the trigger phrases or situations (for example "Use when working on X, or when the user asks to Y").
+license: MIT
+metadata:
+  author: ScaleDockHQ
+  version: "1.0.0"
 ---
 
-# My Skill Name
+# My skill
 
-Short summary of the skill's purpose.
+One or two sentences on the outcome this skill produces.
 
-## When to use
+**Follow the workflow below step by step.** Load the reference a step names when you reach that step. Take framework mechanics (API signatures, config options) from the installed or linked docs; don't restate or improvise them.
 
-- Situation or request that should trigger this skill
-- Another situation
+## Inputs (fill in, or ask before starting)
 
-## Instructions
+- Input one: {{INPUT_ONE}}
+- Input two: {{INPUT_TWO}}
 
-1. Step one
-2. Step two
-3. Step three
+## Invariants
 
-Move longer reference material into `references/`, helper scripts into `scripts/`, and templates or static files into `assets/`, and link to them from here.
+The rules every change must satisfy. The workflow produces them, and the final check verifies them.
 
-## Examples
+1. **First invariant.** Why it matters.
+2. **Second invariant.** Why it matters.
 
-```
-Example input or command
-```
+## Workflow
+
+1. **First step.** What to do.
+   -> [`references/topic.md`](references/topic.md) (create it in `references/`)
+   ✓ What is true when this step is done.
+2. **Second step.** What to do.
+   ✓ What is true when this step is done.
+
+## Verify before done
+
+- [ ] A check that can be confirmed by reading the diff.
+- [ ] Another check.
+
+## Reference index
+
+- **`references/topic.md`**: what it covers and when to load it.
