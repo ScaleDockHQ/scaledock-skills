@@ -64,11 +64,12 @@ Status is one of:
 
 Open the reference only to judge its rows.
 
-- **Toolchain** ([`toolchain.md`](toolchain.md)): Node major in `.node-version`, `.nvmrc`, `engines` and `devEngines`; pnpm pinned exactly; the `pnpm-workspace.yaml` settings; the catalog and `catalogMode: strict`; tsconfig presets; Knip; the exact root script names; `verify` covering every CI gate.
+- **Toolchain** ([`toolchain.md`](toolchain.md)): Node major in `.node-version`, `.nvmrc`, `engines` and `devEngines`; pnpm pinned exactly; the `pnpm-workspace.yaml` settings; the catalog and `catalogMode: strict`; no workspace key the installed pnpm rejects; stable native TypeScript with no `@typescript/native-preview` or `@typescript/typescript6`; tsconfig presets without `baseUrl`; Knip; the exact root script names; `verify` covering every CI gate.
 - **Dependencies:** one `behind` row per dependency, action and SDK that is behind latest.
-- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`, both committed and not gitignored.
+- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`, both committed and not gitignored; retired Next.js knowledge skills removed.
 - **Architecture** ([`architecture.md`](architecture.md)): the folder tree, boundary tags, contract first, Problem Details, one library per concern, `env.ts`, standard services, code rules.
-- **Lint and format** ([`lint-format.md`](lint-format.md)): `ox-config`, presets, pinned rules, anti-slop, oxfmt.
+- **Dates** ([`architecture.md`](architecture.md)): `Temporal` through `packages/domain/src/temporal.ts`; any date-fns, dayjs, luxon or moment dependency is a `gap`.
+- **Lint and format** ([`lint-format.md`](lint-format.md)): `ox-config`, presets and categories, every tsgolint rule on or documented off, pinned rules, anti-slop, oxfmt.
 - **Platform** ([`vercel.md`](vercel.md), [`local-dev-env.md`](local-dev-env.md)): the needs table, Services and rewrites, `turbo.json`, Remote Cache, Portless, env files and sources.
 - **Web** ([`nextjs.md`](nextjs.md), [`i18n.md`](i18n.md), [`ui.md`](ui.md), [`app-shell.md`](app-shell.md)): `createNextConfig()`, the architecture rules, i18n, the component stack, the shell and screens.
 - **Expo** ([`expo.md`](expo.md), [`offline-sync.md`](offline-sync.md)): the shape, app config and variants, EAS, native UI, Uniwind, auth, push, universal web, PowerSync.
@@ -77,4 +78,4 @@ Open the reference only to judge its rows.
 - **Programmatic** ([`api.md`](api.md), [`mcp.md`](mcp.md), [`cli.md`](cli.md)): the Hono shell, OpenAPI snapshot, MCP SDK and tools, CLI kind and behavior.
 - **Docs and AI** ([`docs-site.md`](docs-site.md), [`ai.md`](ai.md)): Fumadocs formats and pages, AI Gateway.
 - **Delivery** ([`git-workflow.md`](git-workflow.md), [`ci.md`](ci.md), [`tests.md`](tests.md)): branches and protection, commitlint, lefthook, Changesets, `release.yml`, workflows, action pinning, Dependabot, test runners.
-- **Repo files** ([`agent-files.md`](agent-files.md), [`repo-files.md`](repo-files.md)): AGENTS.md, rules, `CLAUDE.md`, ADRs, README, root files, `.github`, VS Code.
+- **Repo files** ([`agent-files.md`](agent-files.md), [`repo-files.md`](repo-files.md)): AGENTS.md and its managed blocks, rules, `CLAUDE.md`, the MCP config servers, ADRs, README, root files, `.github`, VS Code.
