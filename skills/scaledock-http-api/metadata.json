@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Build or review a ScaleDock HTTP API on Hono and oRPC whose contract, OpenAPI document, errors and limits follow OpenAPI 3.2, OpenAPI Overlay, RFC 9457, the RateLimit header fields and Standard Schema, with PermDock guarding every procedure and writing the document's security. It installs the matching spec skills and defers to them on format details; references/stack.md maps each requirement onto the ScaleDock stack.",
+  "references": [
+    "https://spec.openapis.org/oas/latest.html",
+    "https://www.rfc-editor.org/rfc/rfc9457.html",
+    "https://permdock.dev/docs/cli/openapi",
+    "https://permdock.dev/docs/adapters/orpc",
+    "https://orpc.dev/docs/openapi/getting-started",
+    "https://github.com/ScaleDockHQ/PermDock"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Give AI agents least-privilege, auditable access in a ScaleDock product: PermDock decides every tool call, delegation and human approval across the AI SDK, Claude Agent SDK, OpenAI Agents SDK, Eve, MCP, A2A, WebMCP, AG-UI and AP2, Web Bot Auth fills the actor for HTTP bots, and decisions are recorded through OpenTelemetry GenAI spans and OCSF for EU AI Act record-keeping. It installs the matching spec skills and defers to them on protocol details; references/stack.md maps each one onto PermDock.",
+  "references": [
+    "https://genai.owasp.org/",
+    "https://a2a-protocol.org/latest/specification/",
+    "https://github.com/webmachinelearning/webmcp",
+    "https://docs.ag-ui.com/",
+    "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+    "https://permdock.dev/docs/security/owasp-agentic",
+    "https://github.com/ScaleDockHQ/PermDock"
+  ]
+}

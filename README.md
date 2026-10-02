@@ -30,9 +30,22 @@ ScaleDock skills start with `scaledock-`, so they never collide with a skill fro
 
 ## Skills
 
-| Skill                                                       | Description                                                                                                                                                                                                                                                                 |
-| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`scaledock-repo-standard`](skills/scaledock-repo-standard) | Create a new product, library or tooling repo, or upgrade or align existing ones, to the ScaleDock standard: latest Node on Vercel, pnpm, TypeScript, Next.js or Expo (iOS, Android and web), Supabase with better-supabase, PermDock, oRPC, MCP, CLI, Fumadocs and Vercel. |
+### ScaleDock skills
+
+| Skill                                                                   | Description                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`scaledock-repo-standard`](skills/scaledock-repo-standard)             | Create a new product, library or tooling repo, or upgrade or align existing ones, to the ScaleDock standard: latest Node on Vercel, pnpm, TypeScript, Next.js or Expo (iOS, Android and web), Supabase with better-supabase, PermDock, oRPC, MCP, CLI, Fumadocs and Vercel. |
+| [`scaledock-http-api`](skills/scaledock-http-api)                       | Build or review an HTTP API on Hono and oRPC that follows OpenAPI 3.2, Overlay, Problem Details, RateLimit headers and Standard Schema, with PermDock guarding every procedure and writing the OpenAPI security.                                                            |
+| [`scaledock-mcp-server`](skills/scaledock-mcp-server)                   | Build or harden an MCP server that follows the MCP authorization spec, OAuth 2.1, JWT verification and Problem Details, with PermDock deciding every tool call.                                                                                                             |
+| [`scaledock-agent-permissions`](skills/scaledock-agent-permissions)     | Give AI agents least-privilege, auditable access across A2A, WebMCP, AG-UI, AP2 and Web Bot Auth, with PermDock deciding delegation and approvals, and OpenTelemetry GenAI, OCSF and EU AI Act record-keeping.                                                              |
+| [`scaledock-enterprise-identity`](skills/scaledock-enterprise-identity) | Add SSO, SCIM provisioning, Shared Signals revocation, FAPI 2.0 and SPIFFE workload identity, with PermDock turning directory groups and roles into permissions.                                                                                                            |
+
+### Spec skills
+
+Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section.
+
+| Skill | Description |
+| ----- | ----------- |
 
 ## Development
 
