@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "Month YYYY",
+  "abstract": "Two or three sentences on which specification the skill covers, which revision it pins, and how its references are split.",
+  "sources": [
+    {
+      "title": "Spec title",
+      "url": "https://example.org/spec",
+      "status": "RFC | Final | Implementer's Draft | WG draft | Released | ...",
+      "revision": "RFC number, version, draft revision or date",
+      "checked": "YYYY-MM-DD"
+    }
+  ]
+}

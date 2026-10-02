@@ -12,14 +12,20 @@ This also installs the git hooks: oxfmt formats staged files, commitlint checks 
 
 ## Naming
 
-Every skill is named `scaledock-<topic>`, and its folder has the same name. Installed skills from every publisher share flat folders such as `.agents/skills/<name>`, so an unprefixed name like `repo-standard` could overwrite, or be overwritten by, someone else's skill. `pnpm validate` rejects names without the prefix.
+There are two kinds of skill, and the folder always has the same name as the skill. See [ADR 0003](docs/decisions/0003-spec-skills-without-prefix.md).
+
+- **Opinionated skills** are named `scaledock-<topic>`. Installed skills from every publisher share flat folders such as `.agents/skills/<name>`, so an unprefixed name like `repo-standard` could overwrite, or be overwritten by, someone else's skill.
+- **Spec skills** describe an open specification and are named after it, without a prefix: `openapi`, `scim`, `a2a`. They set `metadata.kind: standard`, pin their sources, and stay neutral: no ScaleDock, no PermDock. The only allowed mentions are `author: ScaleDockHQ` and the install source `ScaleDockHQ/scaledock-skills`.
+
+`pnpm validate` rejects an unprefixed name unless the skill is a spec skill.
 
 ## Adding a skill
 
 1. Copy the template into a new folder under `skills/`:
 
    ```bash
-   cp -r template/skill skills/scaledock-<topic>
+   cp -r template/skill skills/scaledock-<topic>     # opinionated skill
+   cp -r template/standard-skill skills/<spec-name>  # spec skill
    ```
 
 2. Edit `skills/scaledock-<topic>/SKILL.md`:
@@ -40,20 +46,37 @@ Every skill is named `scaledock-<topic>`, and its folder has the same name. Inst
 ## Layout
 
 ```
-skills/scaledock-<topic>/
+skills/<name>/
   SKILL.md        # required: frontmatter + workflow, always loaded
   README.md       # overview, install command, rules, reference list
-  metadata.json   # version, organization, date, abstract, references
+  metadata.json   # version, organization, date, abstract, references (sources for spec skills)
   references/     # topic docs the agent loads on demand
   scripts/        # optional helper scripts the agent can run
   assets/         # optional templates and static files
 ```
 
-`skills/` holds the skills this repo publishes. `template/skill/` is the starting point; it sits one level deeper than `template/` so the `skills` CLI does not offer it in the install picker. `.agents/skills/` holds skills installed _into_ this repo for local development (managed by `pnpm dlx skills` and tracked in `skills-lock.json`); don't put published skills there.
+`skills/` holds the skills this repo publishes. `template/skill/` and `template/standard-skill/` are the starting points; they sit one level deeper than `template/` so the `skills` CLI does not offer them in the install picker. `.agents/skills/` holds skills installed _into_ this repo for local development (managed by `pnpm dlx skills` and tracked in `skills-lock.json`); don't put published skills there.
 
 ## Updating a skill
 
 Bump the version in `SKILL.md` (`metadata.version`) and `metadata.json` together, following semver: patch for wording fixes, minor for new guidance, major when the skill's workflow or invariants change. The validator fails when the two versions differ.
+
+## Spec skill sources
+
+A spec skill writes every rule from a source it has read, never from memory, and cites the section it comes from. Its sources live in two places that must agree:
+
+- `metadata.json` `sources`: one entry per document, with `title`, `url`, `status` (the publishing body's maturity term, such as `RFC`, `Final`, `Implementer's Draft`, `WG draft`, `Released`), `revision` (the RFC number, version, draft revision or date you pinned), and `checked` (`YYYY-MM-DD`).
+- The `## Sources` section of `SKILL.md`: every source URL, with the same status and revision.
+
+For an unfinished specification, the skill also records its draft posture: **build** (implement the pinned revision's current shape), **name** (reserve identifiers only) or **track** (follow, nothing depends on it).
+
+## Refreshing a spec skill
+
+1. Run `pnpm sources:check` to list dead links and sources whose `checked` date is more than 90 days old.
+2. For each skill you refresh, re-read every source in its `## Sources` section. Check the publishing body's index (IETF datatracker, OpenID Foundation specifications, OpenAPI Initiative, W3C, the protocol's own site) for a newer revision, a status change, a rename or a replacement.
+3. Update the content that changed, the `status` and `revision` pins in both places, and every `checked` date you re-read.
+4. Bump the version: patch when only pins or dates change, minor for new guidance, major when invariants change.
+5. Run `pnpm verify`.
 
 ## Testing a skill locally
 
@@ -66,5 +89,5 @@ pnpm dlx skills add . --list
 Install from your working copy into another project to try it out:
 
 ```bash
-pnpm dlx skills add /path/to/scaledock-skills --skill scaledock-<topic>
+pnpm dlx skills add /path/to/scaledock-skills --skill <name>
 ```

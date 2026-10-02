@@ -6,10 +6,19 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SKILLS_DIR = join(ROOT, "skills");
 const ROOT_README = join(ROOT, "README.md");
-const SKILL_NAME = /^scaledock-[a-z0-9]+(-[a-z0-9]+)*$/;
-const TEMPLATE_NAME = "scaledock-my-skill";
+const KEBAB_NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const PREFIX = "scaledock-";
+const TEMPLATE_NAMES = new Set(["scaledock-my-skill", "my-spec"]);
 const MAX_DESCRIPTION_LENGTH = 1024;
 const MARKDOWN_LINK = /\[[^\]]*\]\(([^)\s]+)\)/g;
+const SOURCE_FIELDS = ["title", "url", "status", "revision", "checked"];
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+// Spec skills stay neutral; only the author field and the install source may name us.
+const ALLOWED_MENTIONS = [
+  /^\s*author:\s*ScaleDockHQ\s*$/gm,
+  /ScaleDockHQ\/scaledock-skills/g,
+];
+const FORBIDDEN_MENTION = /permdock|scaledock/i;
 
 function stripQuotes(value) {
   const match = value.match(/^(["'])(.*)\1$/);
@@ -63,6 +72,67 @@ function brokenRelativeLinks(file) {
   return broken;
 }
 
+function markdownFiles(dir) {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return markdownFiles(path);
+    return entry.name.endsWith(".md") ? [path] : [];
+  });
+}
+
+function sourcesSection(content) {
+  const match = content.match(/^## Sources\s*$([\s\S]*?)(?=^## |(?![\s\S]))/m);
+  return match ? match[1] : null;
+}
+
+function validateSources(skillDir, skillContent, json) {
+  const errors = [];
+  if (json.kind !== "standard") {
+    errors.push('metadata.json `kind` must be "standard" for a spec skill');
+  }
+  if (!Array.isArray(json.sources) || json.sources.length === 0) {
+    errors.push("metadata.json needs a non-empty `sources` array");
+    return errors;
+  }
+  const section = sourcesSection(skillContent);
+  if (section === null) errors.push("SKILL.md has no `## Sources` section");
+  json.sources.forEach((source, index) => {
+    const missing = SOURCE_FIELDS.filter(
+      (field) => typeof source?.[field] !== "string" || !source[field],
+    );
+    if (missing.length > 0) {
+      errors.push(`sources[${index}] is missing ${missing.join(", ")}`);
+      return;
+    }
+    if (!/^https?:\/\//.test(source.url)) {
+      errors.push(`sources[${index}] url "${source.url}" is not http(s)`);
+    }
+    if (!ISO_DATE.test(source.checked)) {
+      errors.push(
+        `sources[${index}] checked "${source.checked}" is not YYYY-MM-DD`,
+      );
+    }
+    if (section !== null && !section.includes(source.url)) {
+      errors.push(`SKILL.md ## Sources does not list ${source.url}`);
+    }
+  });
+
+  for (const file of [
+    join(skillDir, "SKILL.md"),
+    ...markdownFiles(join(skillDir, "references")),
+  ]) {
+    let text = readFileSync(file, "utf8");
+    for (const allowed of ALLOWED_MENTIONS) text = text.replace(allowed, "");
+    if (FORBIDDEN_MENTION.test(text)) {
+      errors.push(
+        `${relative(skillDir, file)} mentions ScaleDock or PermDock; spec skills stay neutral`,
+      );
+    }
+  }
+  return errors;
+}
+
 function validateSkill(folder, rootReadme) {
   const errors = [];
   const skillDir = join(SKILLS_DIR, folder);
@@ -72,7 +142,8 @@ function validateSkill(folder, rootReadme) {
     return ["missing SKILL.md"];
   }
 
-  const fields = parseFrontmatter(readFileSync(skillFile, "utf8"));
+  const skillContent = readFileSync(skillFile, "utf8");
+  const fields = parseFrontmatter(skillContent);
   if (!fields) {
     return [
       "SKILL.md has no frontmatter block (expected --- ... --- at the top)",
@@ -80,17 +151,25 @@ function validateSkill(folder, rootReadme) {
   }
 
   const { name, description, metadata } = fields;
+  const isStandard =
+    typeof metadata === "object" && metadata.kind === "standard";
   if (typeof name !== "string" || !name) {
     errors.push("frontmatter is missing `name`");
   } else {
-    if (!SKILL_NAME.test(name)) {
+    if (!KEBAB_NAME.test(name)) {
+      errors.push(`name "${name}" must be kebab-case`);
+    } else if (isStandard && name.startsWith(PREFIX)) {
       errors.push(
-        `name "${name}" must be kebab-case and start with "scaledock-"`,
+        `name "${name}" is a spec skill; name it after the spec without "${PREFIX}"`,
+      );
+    } else if (!isStandard && !name.startsWith(PREFIX)) {
+      errors.push(
+        `name "${name}" must start with "${PREFIX}", or set metadata.kind: standard for a spec skill`,
       );
     }
     if (name !== folder)
       errors.push(`name "${name}" does not match folder "${folder}"`);
-    if (name === TEMPLATE_NAME) {
+    if (TEMPLATE_NAMES.has(name)) {
       errors.push(
         `name "${name}" is the template placeholder; rename the skill`,
       );
@@ -123,6 +202,15 @@ function validateSkill(folder, rootReadme) {
         `metadata.json version "${json.version}" does not match SKILL.md metadata.version "${frontmatterVersion}"`,
       );
     }
+    if (json && isStandard) {
+      errors.push(...validateSources(skillDir, skillContent, json));
+    } else if (json && json.kind === "standard") {
+      errors.push(
+        'metadata.json has kind "standard" but SKILL.md metadata.kind does not',
+      );
+    }
+  } else if (isStandard) {
+    errors.push("spec skills need a metadata.json with `sources`");
   }
 
   for (const file of ["SKILL.md", "README.md"]) {
