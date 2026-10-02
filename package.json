@@ -1,0 +1,14 @@
+{
+  "name": "scaledock-skills",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Agent skills used across ScaleDock projects",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-skills.mjs"
+  }
+}
