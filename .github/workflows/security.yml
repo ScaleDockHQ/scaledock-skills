@@ -26,7 +26,8 @@ jobs:
           annotations: true
 
   dependency-review:
-    if: github.event_name == 'pull_request'
+    # Private repos need GitHub Advanced Security for dependency review.
+    if: github.event_name == 'pull_request' && github.event.repository.visibility == 'public'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
