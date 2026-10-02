@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OAuth 2.0 (RFC 6749, RFC 6750) as tightened by the RFC 9700 Security BCP and the OAuth 2.1 draft (-16, build posture), with the extensions a resource server, client or authorization server needs: PKCE, DPoP, mTLS-bound tokens, Rich Authorization Requests, token exchange, resource indicators, AS and protected resource metadata, the iss parameter, step-up, dynamic client registration, introspection, revocation and the device grant. Drafts for Client ID Metadata Documents, identity chaining, transaction tokens and RAR remediation are pinned with a posture. SKILL.md holds the invariants and workflow; references split out the resource server, sender constraint, clients, the authorization server, delegation and drafts.",
+  "sources": [
+    {
+      "title": "RFC 6749: The OAuth 2.0 Authorization Framework",
+      "url": "https://www.rfc-editor.org/rfc/rfc6749",
+      "status": "RFC (Proposed Standard, updated by RFC 8252, RFC 8996 and RFC 9700)",
+      "revision": "RFC 6749",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 6750: Bearer Token Usage",
+      "url": "https://www.rfc-editor.org/rfc/rfc6750",
+      "status": "RFC (Proposed Standard, updated by RFC 8996 and RFC 9700)",
+      "revision": "RFC 6750",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "The OAuth 2.1 Authorization Framework",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-v2-1-16 (2026-09-03)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9700: Best Current Practice for OAuth 2.0 Security",
+      "url": "https://www.rfc-editor.org/rfc/rfc9700",
+      "status": "RFC (Best Current Practice)",
+      "revision": "RFC 9700",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7636: Proof Key for Code Exchange",
+      "url": "https://www.rfc-editor.org/rfc/rfc7636",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7636",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9449: Demonstrating Proof of Possession (DPoP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9449",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9449",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8705: Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc8705",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8705",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9396: Rich Authorization Requests",
+      "url": "https://www.rfc-editor.org/rfc/rfc9396",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9396",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8693: Token Exchange",
+      "url": "https://www.rfc-editor.org/rfc/rfc8693",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8693",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8707: Resource Indicators for OAuth 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc8707",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8707",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8414: Authorization Server Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc8414",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8414",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9728: Protected Resource Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc9728",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9728",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9207: Authorization Server Issuer Identification",
+      "url": "https://www.rfc-editor.org/rfc/rfc9207",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9207",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9470: Step Up Authentication Challenge Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9470",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9470",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7591: Dynamic Client Registration Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc7591",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7591",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7592: Dynamic Client Registration Management Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc7592",
+      "status": "RFC (Experimental)",
+      "revision": "RFC 7592",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth Client ID Metadata Document",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-02",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-client-id-metadata-document-02 (2026-07-06)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7662: Token Introspection",
+      "url": "https://www.rfc-editor.org/rfc/rfc7662",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7662",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7009: Token Revocation",
+      "url": "https://www.rfc-editor.org/rfc/rfc7009",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7009",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8628: Device Authorization Grant",
+      "url": "https://www.rfc-editor.org/rfc/rfc8628",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8628",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9068: JWT Profile for OAuth 2.0 Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9068",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9068",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Transaction Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-transaction-tokens-11",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-transaction-tokens-11 (2026-08-21; WG consensus, waiting for write-up)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth Identity and Authorization Chaining Across Domains",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-identity-chaining-17",
+      "status": "RFC Editor queue",
+      "revision": "draft-ietf-oauth-identity-chaining-17 (2026-08-21; intended Proposed Standard)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth 2.0 RAR Metadata and Error Remediation",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rar-metadata-remediation-00",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-rar-metadata-remediation-00 (2026-08-23)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

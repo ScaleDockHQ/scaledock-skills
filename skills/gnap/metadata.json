@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Grant Negotiation and Authorization Protocol: RFC 9635 core (grant requests, the access rights array, interaction and its hash, continuation, token management, key proofing and discovery) and RFC 9767 resource server connections (token model, token formats, RS-facing discovery, introspection, resource registration and derived tokens), with the relationship to OAuth Rich Authorization Requests (RFC 9396). SKILL.md holds the invariants and workflow; references split out the grant flow, access rights with the RAR comparison, and resource servers.",
+  "sources": [
+    {
+      "title": "RFC 9635: Grant Negotiation and Authorization Protocol (GNAP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9635",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9635",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9767: GNAP Resource Server Connections",
+      "url": "https://www.rfc-editor.org/rfc/rfc9767",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9767",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9396: OAuth 2.0 Rich Authorization Requests",
+      "url": "https://www.rfc-editor.org/rfc/rfc9396",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9396",
+      "checked": "2026-10-02"
+    }
+  ]
+}

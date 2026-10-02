@@ -46,6 +46,9 @@ Neutral skills, one per specification. Each pins the sources it was written from
 
 | Skill                                           | Description                                                                                                                            |
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [`gnap`](skills/gnap)                           | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                         |
+| [`jwt`](skills/jwt)                             | JWT and JOSE: verify and issue JWS, JWE and JWK safely, following RFC 8725 and current algorithm guidance.                             |
+| [`oauth`](skills/oauth)                         | OAuth 2.1 and its RFCs: resource servers, clients and authorization servers, with PKCE, DPoP, metadata, token exchange and RAR.        |
 | [`openid`](skills/openid)                       | Every OpenID Foundation spec, maturity level and errata set, routed to the right family reference or dedicated skill.                  |
 | [`problem-details`](skills/problem-details)     | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json`, plus the `WWW-Authenticate` challenge for 401 and 403. |
 | [`ratelimit-headers`](skills/ratelimit-headers) | IETF RateLimit and RateLimit-Policy headers, `Retry-After` and 429 handling for HTTP API quotas.                                       |
