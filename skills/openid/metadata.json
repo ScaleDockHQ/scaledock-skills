@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "An index of every OpenID Foundation specification listed on openid.net/developers/specs and the working group specification pages as of 2026-10-02: Final Specifications, Implementer's Drafts, Drafts, errata, inactive and obsolete documents, archived working groups and community groups. SKILL.md routes a task to the right family and states the maturity, IPR and certification rules that apply across families. One reference file per working group or family records each specification's exact title, URL, maturity, date and errata, and points to the dedicated skill where one exists.",
+  "sources": [
+    {
+      "title": "Explore All Specifications",
+      "url": "https://openid.net/developers/specs/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AB/Connect Working Group – Specifications",
+      "url": "https://openid.net/wg/connect/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "AuthZEN – Specifications",
+      "url": "https://openid.net/wg/authzen/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Digital Credentials Protocols (DCP) Working Group – Specifications",
+      "url": "https://openid.net/wg/digital-credentials-protocols/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Digital Credentials Harmonized Presentation Working Group – Specifications",
+      "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "eKYC & IDA Working Group – Specifications",
+      "url": "https://openid.net/wg/ekyc-ida/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FAPI Working Group – Specifications",
+      "url": "https://openid.net/wg/fapi/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "iGov Working Group – Specifications",
+      "url": "https://openid.net/wg/igov/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IPSIE – Specifications",
+      "url": "https://openid.net/wg/ipsie/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MODRNA Working Group – Specifications",
+      "url": "https://openid.net/wg/modrna/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "R&E Working Group – Specifications",
+      "url": "https://openid.net/wg/rande/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Shared Signals Working Group – Specifications",
+      "url": "https://openid.net/wg/sharedsignals/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "EAP Working Group – Specifications",
+      "url": "https://openid.net/wg/eap/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FastFed Working Group – Specifications",
+      "url": "https://openid.net/wg/fastfed/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "HEART Working Group – Specifications",
+      "url": "https://openid.net/wg/heart/specifications/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Archived Groups",
+      "url": "https://openid.net/wg/archived-groups/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Community Groups",
+      "url": "https://openid.net/cg/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Developing an OpenID Standard",
+      "url": "https://openid.net/foundation/developing-openid-standards/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Foundation Contribution Agreements",
+      "url": "https://openid.net/intellectual-property/openid-foundation-contribution-agreements/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Certification",
+      "url": "https://openid.net/certification/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "How to Certify Your Implementation",
+      "url": "https://openid.net/certification/how-to-certify-your-implementation/",
+      "status": "Index",
+      "revision": "as of 2026-10-02",
+      "checked": "2026-10-02"
+    }
+  ]
+}

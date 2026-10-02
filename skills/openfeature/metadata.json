@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenFeature specification v0.9.0: the evaluation API with provider mutator, domains and clients, typed and detailed flag evaluation, evaluation details, reasons and error codes, the dynamic-context and static-context paradigms, evaluation context with the targeting key and merge order, transaction context propagation, hooks with stages, ordering, hints and data, providers with resolution details, lifecycle, status and events, tracking, and the Appendix D telemetry mapping. Summarizes the OpenFeature Remote Evaluation Protocol at OpenAPI 0.4.0 (Draft posture: track). Records section statuses and CNCF Incubating status.",
+  "sources": [
+    {
+      "title": "OpenFeature specification v0.9.0 release",
+      "url": "https://github.com/open-feature/spec/releases/tag/v0.9.0",
+      "status": "Released",
+      "revision": "v0.9.0 (2026-07-29)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenFeature specification introduction",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/README.md",
+      "status": "Released",
+      "revision": "v0.9.0 (conformance and document statuses)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Flag Evaluation API",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/01-flag-evaluation.md",
+      "status": "Stable",
+      "revision": "v0.9.0 (1.3, 1.4, 1.6 and 1.7.2 Hardening; 1.8 Experimental)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Providers",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/02-providers.md",
+      "status": "Stable",
+      "revision": "v0.9.0 (2.4, 2.5, 2.6 and 2.8 Hardening; 2.7 Experimental)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Evaluation Context",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/03-evaluation-context.md",
+      "status": "Hardening",
+      "revision": "v0.9.0 (3.3 Experimental)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Hooks",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/04-hooks.md",
+      "status": "Hardening",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Events",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/05-events.md",
+      "status": "Hardening",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Tracking",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/06-tracking.md",
+      "status": "Experimental",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Types and Data Structures",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/types.md",
+      "status": "Released",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Glossary",
+      "url": "https://github.com/open-feature/spec/blob/v0.9.0/specification/glossary.md",
+      "status": "Released",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Appendix D: Observability",
+      "url": "https://raw.githubusercontent.com/open-feature/spec/v0.9.0/specification/appendix-d-observability.md",
+      "status": "Experimental (no status badge)",
+      "revision": "v0.9.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenFeature Remote Evaluation Protocol repository",
+      "url": "https://github.com/open-feature/protocol",
+      "status": "No release",
+      "revision": "commit 98c4e0d (2026-09-30), Draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OFREP OpenAPI document",
+      "url": "https://github.com/open-feature/protocol/blob/98c4e0d/service/openapi.yaml",
+      "status": "No release",
+      "revision": "OpenAPI info.version 0.4.0 at commit 98c4e0d, Draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenFeature at CNCF",
+      "url": "https://www.cncf.io/projects/openfeature/",
+      "status": "Incubating",
+      "revision": "accepted June 17 2022 and Incubating since November 21 2023",
+      "checked": "2026-10-02"
+    }
+  ]
+}

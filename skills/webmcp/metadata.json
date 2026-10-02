@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebMCP, the W3C Web Machine Learning Community Group draft for registering page tools with AI agents through document.modelContext, pinned to the Draft Community Group Report of 30 September 2026 (commit d61d0e6) with a build posture. SKILL.md holds the invariants and workflow; references cover the API (WebIDL, registration, execution, discovery, events) and security and privacy (Permissions-Policy, cross-origin exposure, annotations, the draft's risk list).",
+  "sources": [
+    {
+      "title": "WebMCP (published report)",
+      "url": "https://webmachinelearning.github.io/webmcp/",
+      "status": "Draft Community Group Report",
+      "revision": "30 September 2026",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "WebMCP spec source, index.bs",
+      "url": "https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/index.bs",
+      "status": "Draft Community Group Report",
+      "revision": "commit d61d0e6d297ddb6bff3510b1330dbb215c6ef43c (2026-09-30)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "WebMCP explainer, README.md",
+      "url": "https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/README.md",
+      "status": "Explainer (non-normative)",
+      "revision": "commit d61d0e6 (2026-09-30)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "WebMCP implementation status",
+      "url": "https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/implementation-status.md",
+      "status": "Informative",
+      "revision": "commit d61d0e6 (2026-09-30)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "WebMCP pull request #184: Move the modelContext getter to Document",
+      "url": "https://github.com/webmachinelearning/webmcp/pull/184",
+      "status": "Merged change",
+      "revision": "commit c7b5c7023f6e6a1c7a2495946136eb19b3109ae6 (2026-05-27)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Chrome for Developers: WebMCP",
+      "url": "https://developer.chrome.com/docs/ai/webmcp",
+      "status": "Origin trial documentation",
+      "revision": "last updated 2026-10-01",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Chrome for Developers: WebMCP Imperative API",
+      "url": "https://developer.chrome.com/docs/ai/webmcp/imperative-api",
+      "status": "Origin trial documentation",
+      "revision": "last updated 2026-09-21",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Chrome for Developers: WebMCP tool security",
+      "url": "https://developer.chrome.com/docs/ai/webmcp/secure-tools",
+      "status": "Origin trial documentation",
+      "revision": "last updated 2026-09-01",
+      "checked": "2026-10-02"
+    }
+  ]
+}

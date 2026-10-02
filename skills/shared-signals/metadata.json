@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenID Shared Signals Framework 1.0, CAEP 1.0 and RISC 1.0 (all Final), the CAEP Interoperability Profile (Implementer's Draft 1, with the working-group draft tracked), the IETF SET, push, poll and subject identifier RFCs, and OpenID Connect Back-Channel Logout as a related revocation input. SKILL.md holds the invariants and workflow; references/ splits SETs and subjects, event types, transmitter, receiver, the interoperability profile with conformance testing, and back-channel logout.",
+  "sources": [
+    {
+      "title": "OpenID Shared Signals Framework Specification 1.0",
+      "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
+      "status": "Final",
+      "revision": "published 29 August 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Continuous Access Evaluation Profile 1.0",
+      "url": "https://openid.net/specs/openid-caep-1_0-final.html",
+      "status": "Final",
+      "revision": "published 29 August 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID RISC Profile Specification 1.0",
+      "url": "https://openid.net/specs/openid-risc-1_0-final.html",
+      "status": "Final",
+      "revision": "published 29 August 2025",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CAEP Interoperability Profile",
+      "url": "https://openid.net/specs/openid-caep-interoperability-profile-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document labelled draft 00, 25 June 2024)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "CAEP Interoperability Profile, working-group draft",
+      "url": "https://openid.github.io/sharedsignals/openid-caep-interoperability-profile-1_0.html",
+      "status": "WG draft",
+      "revision": "draft 01, 1 September 2026",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8417: Security Event Token (SET)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8417.txt",
+      "status": "RFC",
+      "revision": "RFC 8417, July 2018",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8935: Push-Based SET Delivery Using HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8935.txt",
+      "status": "RFC",
+      "revision": "RFC 8935, November 2020",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8936: Poll-Based SET Delivery Using HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8936.txt",
+      "status": "RFC",
+      "revision": "RFC 8936, November 2020",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9493: Subject Identifiers for Security Event Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9493.txt",
+      "status": "RFC",
+      "revision": "RFC 9493, December 2023",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Back-Channel Logout 1.0",
+      "url": "https://openid.net/specs/openid-connect-backchannel-1_0.html",
+      "status": "Final",
+      "revision": "1.0 incorporating errata set 1, 15 December 2023",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Shared Signals WG specifications",
+      "url": "https://openid.net/wg/sharedsignals/specifications/",
+      "status": "Index",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Shared Signals conformance testing",
+      "url": "https://openid.net/certification/ssf_testing/",
+      "status": "Published (tests in alpha)",
+      "revision": "page as read 2026-10-02",
+      "checked": "2026-10-02"
+    }
+  ]
+}

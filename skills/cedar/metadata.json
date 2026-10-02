@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Cedar policy language at version 4.5, as implemented by SDK v4.13.0: policy structure with effect, scope and conditions, annotations, operators, policy templates, the Cedar and JSON schema formats, entity and context JSON, PARC authorization requests, the authorization algorithm (default deny, forbid overrides permit, skip on error), validation checks and their limits, and security practices. SKILL.md holds the invariants and workflow; references split out policies, schemas and entities, and evaluation and validation.",
+  "sources": [
+    {
+      "title": "Cedar Policy Language Reference Guide",
+      "url": "https://docs.cedarpolicy.com/",
+      "status": "reference for Version 4.5",
+      "revision": "docs commit 3a37098 (2026-09-25)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar document history",
+      "url": "https://docs.cedarpolicy.com/other/doc-history.html",
+      "status": "language version table",
+      "revision": "4.5 (SDK 4.10.0 to 4.13.0; April 23, 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar v4.13.0 release",
+      "url": "https://github.com/cedar-policy/cedar/releases/tag/v4.13.0",
+      "status": "Released",
+      "revision": "v4.13.0 (2026-09-15)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar repository",
+      "url": "https://github.com/cedar-policy/cedar",
+      "status": "Apache-2.0",
+      "revision": "main branch",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Basic policy construction",
+      "url": "https://docs.cedarpolicy.com/policies/syntax-policy.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Operators and functions",
+      "url": "https://docs.cedarpolicy.com/policies/syntax-operators.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Policy templates",
+      "url": "https://docs.cedarpolicy.com/policies/templates.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JSON policy format",
+      "url": "https://docs.cedarpolicy.com/policies/json-format.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "How Cedar authorization works",
+      "url": "https://docs.cedarpolicy.com/auth/authorization.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Entities and context syntax",
+      "url": "https://docs.cedarpolicy.com/auth/entities-syntax.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar schema",
+      "url": "https://docs.cedarpolicy.com/schema/schema.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar schema format",
+      "url": "https://docs.cedarpolicy.com/schema/human-readable-schema.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JSON schema format",
+      "url": "https://docs.cedarpolicy.com/schema/json-schema.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Policy validation against schema",
+      "url": "https://docs.cedarpolicy.com/policies/validation.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Cedar security",
+      "url": "https://docs.cedarpolicy.com/other/security.html",
+      "status": "reference",
+      "revision": "language 4.5",
+      "checked": "2026-10-02"
+    }
+  ]
+}

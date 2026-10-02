@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenAPI Overlay Specification 1.2.0, with compatibility for 1.1.0: the Overlay, Info, Components, Action, Reusable Action and Reusable Action Reference Objects, the update, copy and remove semantics and recursive merge rules, RFC 9535 JSONPath targets, upgrading from 1.1, validation against the Overlay JSON Schemas (the 1.2 schema is still unpublished and pinned to a work-in-progress commit), and safe application in pipelines. The 1.3 milestone is tracked only. SKILL.md holds the invariants and workflow; references split out objects, recipes, versions and safety.",
+  "sources": [
+    {
+      "title": "Overlay Specification v1.2.0",
+      "url": "https://spec.openapis.org/overlay/v1.2.0.html",
+      "status": "Released",
+      "revision": "1.2.0 (2026-09-22)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay 1.2.0 release",
+      "url": "https://github.com/OAI/Overlay-Specification/releases/tag/1.2.0",
+      "status": "Released",
+      "revision": "1.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay Specification v1.1.0",
+      "url": "https://spec.openapis.org/overlay/v1.1.0.html",
+      "status": "Released",
+      "revision": "1.1.0 (2026-01-14)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay versions and schema iterations",
+      "url": "https://spec.openapis.org/overlay/",
+      "status": "OAI index",
+      "revision": "latest v1.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay 1.1 JSON Schema",
+      "url": "https://spec.openapis.org/overlay/1.1/schema/2026-04-01",
+      "status": "Published schema",
+      "revision": "iteration 2026-04-01",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay 1.2 JSON Schema, work in progress",
+      "url": "https://raw.githubusercontent.com/OAI/Overlay-Specification/5f387a745a5d275ff07c58fd040ced3142e74580/src/schemas/validation/schema.yaml",
+      "status": "Unpublished work-in-progress schema on the v1.2-dev branch",
+      "revision": "commit 5f387a7 (2026-09-22)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Publish Overlay schema iterations (spec.openapis.org pull request 141)",
+      "url": "https://github.com/OAI/spec.openapis.org/pull/141",
+      "status": "Open pull request",
+      "revision": "state on 2026-09-29",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay: upgrading between versions 1.1 and 1.2",
+      "url": "https://learn.openapis.org/upgrading/overlay-v1.1-to-v1.2.html",
+      "status": "OAI guide (non-normative)",
+      "revision": "page as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay Specification milestones",
+      "url": "https://github.com/OAI/Overlay-Specification/milestones",
+      "status": "Planning (Release 1.3 has three open issues and no specification text)",
+      "revision": "as listed; draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9535: JSONPath: Query Expressions for JSON",
+      "url": "https://www.rfc-editor.org/rfc/rfc9535",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9535",
+      "checked": "2026-10-02"
+    }
+  ]
+}

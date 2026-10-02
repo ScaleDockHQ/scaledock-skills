@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenAPI Specification 3.2 (pinned at 3.2.1) with compatibility for 3.1: document structure, paths, operations, parameters, streaming media types, tags, security schemes and requirements, the 3.1 to 3.2 upgrade and the registered x-oai fallbacks, the OAI Extension and Namespace registries, and validation against the official OAS JSON Schemas. It tracks the 3.3 development line and the Security Profiles proposal without building on them. SKILL.md holds the invariants and workflow; references split out versions, objects, security, registries, validation and drafts.",
+  "sources": [
+    {
+      "title": "OpenAPI Specification v3.2.1",
+      "url": "https://spec.openapis.org/oas/v3.2.1.html",
+      "status": "Released",
+      "revision": "3.2.1 (2026-09-10)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS 3.2.0 release notes",
+      "url": "https://github.com/OAI/OpenAPI-Specification/releases/tag/3.2.0",
+      "status": "Released",
+      "revision": "3.2.0 (2025-09-19)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenAPI Specification v3.1.2",
+      "url": "https://spec.openapis.org/oas/v3.1.2.html",
+      "status": "Released",
+      "revision": "3.1.2 (2025-09-19)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Upgrading from OpenAPI 3.1 to 3.2",
+      "url": "https://learn.openapis.org/upgrading/v3.1-to-v3.2.html",
+      "status": "OAI guide (non-normative)",
+      "revision": "page as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenAPI Specification versions and schema iterations",
+      "url": "https://spec.openapis.org/oas/",
+      "status": "OAI index",
+      "revision": "latest v3.2.1",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS 3.2 JSON Schema",
+      "url": "https://spec.openapis.org/oas/3.2/schema/2026-08-30",
+      "status": "Published schema",
+      "revision": "iteration 2026-08-30",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS 3.2 JSON Schema with Schema Object validation",
+      "url": "https://spec.openapis.org/oas/3.2/schema-base/2026-08-30",
+      "status": "Published schema",
+      "revision": "iteration 2026-08-30",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS 3.1 JSON Schema",
+      "url": "https://spec.openapis.org/oas/3.1/schema/2026-08-03",
+      "status": "Published schema",
+      "revision": "iteration 2026-08-03",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS 3.1 JSON Schema with Schema Object validation",
+      "url": "https://spec.openapis.org/oas/3.1/schema-base/2026-08-03",
+      "status": "Published schema",
+      "revision": "iteration 2026-08-03",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAS v3.3-dev branch text",
+      "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/aa2f6c0975ef85e24fd05ab2d7b8b57b04f108c4/src/oas.md",
+      "status": "In development",
+      "revision": "commit aa2f6c0 (2026-09-24); draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Proposal: Supporting Loose-Coupling in Security Schemes and Security Requirements Objects (Security Profiles)",
+      "url": "https://github.com/OAI/sig-security/discussions/50",
+      "status": "Proposal under discussion (moved from OpenAPI-Specification discussion #5304)",
+      "revision": "expanded design notes 2026-05-05; draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenAPI Initiative newsletter, June 2026",
+      "url": "https://www.openapis.org/blog/2026/06/09/openapi-initiative-newsletter-june-2026",
+      "status": "OAI announcement",
+      "revision": "2026-06-09",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAI registries",
+      "url": "https://spec.openapis.org/registry/",
+      "status": "Living registries",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Extension Registry",
+      "url": "https://spec.openapis.org/registry/extension/",
+      "status": "Living registry",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Namespace Registry",
+      "url": "https://spec.openapis.org/registry/namespace/",
+      "status": "Living registry",
+      "revision": "as published",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Registry contribution guide",
+      "url": "https://raw.githubusercontent.com/OAI/spec.openapis.org/main/CONTRIBUTING.md",
+      "status": "OAI repository guide",
+      "revision": "main branch",
+      "checked": "2026-10-02"
+    }
+  ]
+}

@@ -43,4 +43,10 @@ Applies to product repos. Library repos follow the exception below, and tooling 
 - **Database:** `supabase/agent-skills` supabase and supabase-postgres-best-practices; `supabase/server` supabase-server; the better-supabase skills (`npx skills add ScaleDockHQ/better-supabase`).
 - **Permissions:** `npx skills add ScaleDockHQ/PermDock`.
 - **API, MCP and CLI:** `middleapi/orpc` orpc, orpc-contract, orpc-openapi; `anthropics/skills` mcp-builder.
+- **Standards** (`ScaleDockHQ/scaledock-skills`), per surface:
+  - `api`: scaledock-http-api, openapi, openapi-overlay, problem-details, ratelimit-headers, standard-schema.
+  - `mcp`: scaledock-mcp-server, mcp-authorization, oauth, jwt, problem-details.
+  - Agents (AI SDK or another agent runtime): scaledock-agent-permissions, owasp-agentic, opentelemetry-genai, plus a2a, webmcp, ag-ui or ap2 for the surfaces the product has.
+  - Enterprise SSO or SCIM: scaledock-enterprise-identity, openid-connect, scim, shared-signals.
+  - Any other open spec the repo implements: install its spec skill by name (`pnpm dlx skills add ScaleDockHQ/scaledock-skills --list`).
 - **Email:** `resend/react-email` react-email.

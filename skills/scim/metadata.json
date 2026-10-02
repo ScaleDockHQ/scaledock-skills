@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SCIM 2.0 for both service providers and clients: the RFC 7643 core schema (attribute characteristics, common attributes, User, Group, Enterprise User extension, schema definitions), the RFC 7644 protocol (endpoints, create, query, filters, sorting, PUT, PATCH, DELETE, Bulk, /Me, errors, ETags, discovery, multi-tenancy and security), RFC 9865 cursor pagination, RFC 9967 security events and asynchronous requests, RFC 7523 JWT client authentication, and the draft IPSIE AL and FastFed SCIM profiles. SKILL.md holds the invariants and workflow; references split out schema, protocol, pagination, discovery, security, profiles and events.",
+  "sources": [
+    {
+      "title": "RFC 7642: SCIM Definitions, Overview, Concepts, and Requirements",
+      "url": "https://www.rfc-editor.org/rfc/rfc7642",
+      "status": "RFC (Informational)",
+      "revision": "RFC 7642",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7643: SCIM Core Schema",
+      "url": "https://www.rfc-editor.org/rfc/rfc7643",
+      "status": "RFC (Proposed Standard, updated by RFC 9865 and RFC 9967)",
+      "revision": "RFC 7643",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7644: SCIM Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc7644",
+      "status": "RFC (Proposed Standard, updated by RFC 9865 and RFC 9967)",
+      "revision": "RFC 7644",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9865: Cursor-Based Pagination of SCIM Resources",
+      "url": "https://www.rfc-editor.org/rfc/rfc9865",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9865",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9967: SCIM Profile for Security Event Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9967",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9967",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7523: JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants",
+      "url": "https://www.rfc-editor.org/rfc/rfc7523",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7523",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IPSIE AL SCIM 2.0 Profile",
+      "url": "https://openid.github.io/ipsie-scim-al/draft-openid-ipsie-al-scim-profile.html",
+      "status": "Editor's draft (IPSIE Working Group)",
+      "revision": "Draft 00, editor's copy at commit 1a9985f (2026-09-08); Draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IPSIE AL SCIM profile repository",
+      "url": "https://github.com/openid/ipsie-scim-al",
+      "status": "Editor's draft source",
+      "revision": "main at 1a9985f (2026-09-08)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FastFed Enterprise SCIM Profile 1.0",
+      "url": "https://openid.net/specs/fastfed-scim-1_0-03.html",
+      "status": "Implementer's Draft (archived working group)",
+      "revision": "draft 03, identical to ID1, 2020-10-07; Draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "FastFed working group specifications",
+      "url": "https://openid.net/wg/fastfed/specifications/",
+      "status": "Working group page (archived)",
+      "revision": "lists draft 03 as the most recent",
+      "checked": "2026-10-02"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Arazzo Specification 1.1.0 from the OpenAPI Initiative: describing multi-step workflows over OpenAPI, AsyncAPI and other Arazzo documents with source descriptions, workflows, steps, parameters, success criteria, success and failure actions, components and runtime expressions, including AsyncAPI v3 send and receive steps, execution order and security for executors, and validation against the official Arazzo JSON Schemas. The 1.2 development line (WSDL sources) is tracked only. SKILL.md holds the invariants and workflow; references split out objects, expressions, AsyncAPI steps, execution, versions and examples.",
+  "sources": [
+    {
+      "title": "Arazzo Specification v1.1.0",
+      "url": "https://spec.openapis.org/arazzo/v1.1.0.html",
+      "status": "Released",
+      "revision": "1.1.0 (2026-05-17)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Arazzo 1.1.0 release notes",
+      "url": "https://github.com/OAI/Arazzo-Specification/releases/tag/1.1.0",
+      "status": "Released",
+      "revision": "1.1.0 (tagged 2026-05-18)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Arazzo versions and schema iterations",
+      "url": "https://spec.openapis.org/arazzo/",
+      "status": "OAI index",
+      "revision": "latest v1.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Arazzo 1.1 JSON Schema",
+      "url": "https://spec.openapis.org/arazzo/1.1/schema/2026-04-15",
+      "status": "Published schema",
+      "revision": "iteration 2026-04-15",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Arazzo 1.0 JSON Schema",
+      "url": "https://spec.openapis.org/arazzo/1.0/schema/2025-10-15",
+      "status": "Published schema",
+      "revision": "iteration 2025-10-15",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Arazzo v1.2-dev branch text",
+      "url": "https://raw.githubusercontent.com/OAI/Arazzo-Specification/6e089558f8a4eebe81162010b3d46842c8fb9892/src/arazzo.md",
+      "status": "In development",
+      "revision": "commit 6e08955 (2026-09-30); draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9535: JSONPath: Query Expressions for JSON",
+      "url": "https://www.rfc-editor.org/rfc/rfc9535",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9535",
+      "checked": "2026-10-02"
+    }
+  ]
+}

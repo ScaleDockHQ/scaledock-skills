@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenID Federation for Trust Anchors, Intermediates, Leaves, Trust Mark Issuers and resolvers, pinned to OpenID Federation 1.0 Final and its 1.1 split into Federation 1.1 and Federation for OpenID Connect 1.1, both Final. The Subordinate Events Endpoint and Extended Subordinate Listing Implementer's Drafts are included at track posture. References are split into entity statements, trust chains, metadata policy, trust marks, endpoints and client registration.",
+  "sources": [
+    {
+      "title": "OpenID Federation 1.0",
+      "url": "https://openid.net/specs/openid-federation-1_0-final.html",
+      "status": "Final",
+      "revision": "1.0 (17 February 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Federation 1.1",
+      "url": "https://openid.net/specs/openid-federation-1_1.html",
+      "status": "Final",
+      "revision": "1.1 (5 May 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Federation for OpenID Connect 1.1",
+      "url": "https://openid.net/specs/openid-federation-connect-1_1.html",
+      "status": "Final",
+      "revision": "1.1 (5 May 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Relying Party Metadata Choices 1.0",
+      "url": "https://openid.net/specs/openid-connect-rp-metadata-choices-1_0-final.html",
+      "status": "Final",
+      "revision": "1.0 (25 March 2026)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Federation Subordinate Events Endpoint 1.0",
+      "url": "https://openid.net/specs/openid-federation-subordinate-events-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document draft 01, 3 July 2026); draft posture: track",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Federation Extended Subordinate Listing 1.0",
+      "url": "https://openid.net/specs/openid-federation-extended-listing-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (document draft 03, 2 July 2026); draft posture: track",
+      "checked": "2026-10-02"
+    }
+  ]
+}

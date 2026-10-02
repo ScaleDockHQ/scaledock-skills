@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Standard Schema v1 and Standard JSON Schema v1 as published in @standard-schema/spec 1.1.0: the ~standard property, StandardTypedV1, StandardSchemaV1 with its validate result shape, and StandardJSONSchemaV1 with its targets. SKILL.md holds the invariants and workflow; references split out the full interfaces, consuming, implementing, JSON Schema generation, and the implementer tables as listed on standardschema.dev.",
+  "sources": [
+    {
+      "title": "Standard Schema specification",
+      "url": "https://standardschema.dev/schema",
+      "status": "Released",
+      "revision": "v1, @standard-schema/spec 1.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Standard JSON Schema specification",
+      "url": "https://standardschema.dev/json-schema",
+      "status": "Released",
+      "revision": "v1, @standard-schema/spec 1.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Standard Schema project overview",
+      "url": "https://standardschema.dev/",
+      "status": "Released",
+      "revision": "@standard-schema/spec 1.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@standard-schema/spec source at tag v1.1.0",
+      "url": "https://github.com/standard-schema/standard-schema/tree/v1.1.0/packages/spec",
+      "status": "Released",
+      "revision": "tag v1.1.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "@standard-schema/spec on the npm registry",
+      "url": "https://registry.npmjs.org/@standard-schema/spec",
+      "status": "Released",
+      "revision": "1.1.0 (latest dist-tag, published 2025-12-15)",
+      "checked": "2026-10-02"
+    }
+  ]
+}

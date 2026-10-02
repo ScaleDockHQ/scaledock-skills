@@ -1,0 +1,149 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JOSE and JWT issuing and verification: RFC 7515 to RFC 7519, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices with its rfc8725bis update (-10, build posture), RFC 9864 fully specified algorithms, the none and RSA1_5 deprecation draft (-06, build posture), RFC 9068 JWT access tokens with roles, groups and entitlements, RFC 7638 thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. SKILL.md holds the invariants and workflow; references split out the verification checklist, algorithms and keys, and access tokens with the claims registry.",
+  "sources": [
+    {
+      "title": "RFC 7515: JSON Web Signature (JWS)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7515",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7515",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7516: JSON Web Encryption (JWE)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7516",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7516",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7517: JSON Web Key (JWK)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7517",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7517",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7518: JSON Web Algorithms (JWA)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7518",
+      "status": "RFC (Proposed Standard, updated by RFC 9864)",
+      "revision": "RFC 7518",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7519: JSON Web Token (JWT)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7519",
+      "status": "RFC (Proposed Standard, updated by RFC 7797 and RFC 8725)",
+      "revision": "RFC 7519",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8037: CFRG Elliptic Curve Diffie-Hellman (ECDH) and Signatures in JOSE",
+      "url": "https://www.rfc-editor.org/rfc/rfc8037",
+      "status": "RFC (Proposed Standard, updated by RFC 9864)",
+      "revision": "RFC 8037",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8725: JSON Web Token Best Current Practices",
+      "url": "https://www.rfc-editor.org/rfc/rfc8725",
+      "status": "RFC (Best Current Practice)",
+      "revision": "RFC 8725",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JSON Web Token Best Current Practices (rfc8725bis)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc8725bis-10",
+      "status": "RFC Editor queue",
+      "revision": "draft-ietf-oauth-rfc8725bis-10 (2026-08-31; intended Best Current Practice, obsoletes RFC 8725; RFC Editor state Blocked)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9864: Fully-Specified Algorithms for JOSE and COSE",
+      "url": "https://www.rfc-editor.org/rfc/rfc9864",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9864",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "JOSE: Deprecate 'none' and 'RSA1_5'",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-jose-deprecate-none-rsa15-06",
+      "status": "WG draft",
+      "revision": "draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25; in IETF Last Call, intended Proposed Standard)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9068: JWT Profile for OAuth 2.0 Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9068",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9068",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7643: SCIM Core Schema",
+      "url": "https://www.rfc-editor.org/rfc/rfc7643",
+      "status": "RFC (Proposed Standard, updated by RFC 9865 and RFC 9967)",
+      "revision": "RFC 7643",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7638: JSON Web Key (JWK) Thumbprint",
+      "url": "https://www.rfc-editor.org/rfc/rfc7638",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7638",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7800: Proof-of-Possession Key Semantics for JWTs",
+      "url": "https://www.rfc-editor.org/rfc/rfc7800",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7800",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9449",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9449",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8705: OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc8705",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8705",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8414: OAuth 2.0 Authorization Server Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc8414",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8414",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 6750: OAuth 2.0 Bearer Token Usage",
+      "url": "https://www.rfc-editor.org/rfc/rfc6750",
+      "status": "RFC (Proposed Standard, updated by RFC 8996 and RFC 9700)",
+      "revision": "RFC 6750",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IANA JSON Object Signing and Encryption (JOSE) registries",
+      "url": "https://www.iana.org/assignments/jose/jose.xhtml",
+      "status": "IANA registry",
+      "revision": "last updated 2026-09-29",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IANA JSON Web Token (JWT) registries",
+      "url": "https://www.iana.org/assignments/jwt/jwt.xhtml",
+      "status": "IANA registry",
+      "revision": "last updated 2026-07-20",
+      "checked": "2026-10-02"
+    }
+  ]
+}

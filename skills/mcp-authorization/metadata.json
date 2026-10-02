@@ -1,0 +1,198 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Model Context Protocol authorization specification at revision 2026-07-28: MCP servers as OAuth 2.1 resource servers with RFC 9728 Protected Resource Metadata and WWW-Authenticate challenges, authorization server discovery through RFC 8414 and OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents, pre-registration and deprecated Dynamic Client Registration, PKCE, RFC 9207 iss validation, scope step-up with client-side accumulation, the Stable Enterprise-Managed Authorization extension (ID-JAG), the security best practices, and the TypeScript SDK v2 helpers. SKILL.md holds the invariants and workflow; references split out the resource server, the client flow, enterprise-managed authorization, security, and the TypeScript SDK.",
+  "sources": [
+    {
+      "title": "MCP Versioning",
+      "url": "https://modelcontextprotocol.io/specification/versioning",
+      "status": "Specification page",
+      "revision": "lists 2026-07-28 as Current",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Authorization",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Authorization Server Discovery",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/authorization-server-discovery",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Client Registration",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Authorization Security Considerations",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Key Changes",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Deprecated Features",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/deprecated",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP Security Best Practices",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+      "status": "Documentation",
+      "revision": "2026-07-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "SEP-2350: Clarify client-side scope accumulation in step-up authorization",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2350",
+      "status": "SEP, Final",
+      "revision": "merged 2026-03-28",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Enterprise-Managed Authorization",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/ext-auth/main/specification/stable/enterprise-managed-authorization.mdx",
+      "status": "Stable extension",
+      "revision": "main at e5eef54 (2026-06-18)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "MCP TypeScript SDK v2 documentation",
+      "url": "https://ts.sdk.modelcontextprotocol.io/v2/",
+      "status": "Released",
+      "revision": "v2 (packages 2.2.0, 2026-09-28)",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "TypeScript SDK: Authorization (server)",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/docs/serving/authorization.md",
+      "status": "Released",
+      "revision": "v2.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "TypeScript SDK: OAuth (client)",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/docs/clients/oauth.md",
+      "status": "Released",
+      "revision": "v2.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "TypeScript SDK: Machine authentication",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/docs/clients/machine-auth.md",
+      "status": "Released",
+      "revision": "v2.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "TypeScript SDK: client auth source",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/packages/client/src/client/auth.ts",
+      "status": "Released",
+      "revision": "v2.2.0",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "The OAuth 2.1 Authorization Framework",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-13",
+      "status": "Internet-Draft (WG document)",
+      "revision": "draft-ietf-oauth-v2-1-13 as pinned by MCP (latest is -16); Draft posture: build at -13",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OAuth Client ID Metadata Document",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-00",
+      "status": "Internet-Draft (WG document)",
+      "revision": "draft-ietf-oauth-client-id-metadata-document-00 as pinned by MCP (latest is -02); Draft posture: build at -00",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "Identity Assertion JWT Authorization Grant",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-identity-assertion-authz-grant-04",
+      "status": "Internet-Draft (WG document)",
+      "revision": "draft-ietf-oauth-identity-assertion-authz-grant-04 (latest); Draft posture: build at -04 through the Stable extension",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9728: OAuth 2.0 Protected Resource Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc9728",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9728",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8414: OAuth 2.0 Authorization Server Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc8414",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8414",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Discovery 1.0",
+      "url": "https://openid.net/specs/openid-connect-discovery-1_0.html",
+      "status": "Final",
+      "revision": "incorporating errata set 2",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8707: Resource Indicators for OAuth 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc8707",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8707",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9207: OAuth 2.0 Authorization Server Issuer Identification",
+      "url": "https://www.rfc-editor.org/rfc/rfc9207",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9207",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 6750: OAuth 2.0 Bearer Token Usage",
+      "url": "https://www.rfc-editor.org/rfc/rfc6750",
+      "status": "RFC (Proposed Standard, updated by RFC 8996 and RFC 9700)",
+      "revision": "RFC 6750",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7591: OAuth 2.0 Dynamic Client Registration Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc7591",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7591",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 8693: OAuth 2.0 Token Exchange",
+      "url": "https://www.rfc-editor.org/rfc/rfc8693",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8693",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7523: JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants",
+      "url": "https://www.rfc-editor.org/rfc/rfc7523",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7523",
+      "checked": "2026-10-02"
+    }
+  ]
+}
