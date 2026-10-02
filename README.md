@@ -27,9 +27,25 @@ Every skill name starts with `scaledock-`, so it never collides with a skill fro
 
 ## Skills
 
-| Skill | Description |
-| ----- | ----------- |
+| Skill                                                       | Description                                                                                                                                                                                                      |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`scaledock-repo-standard`](skills/scaledock-repo-standard) | Create a new repo, or upgrade or align existing ones, to the ScaleDock standard: latest Node on Vercel, pnpm, TypeScript, Next.js, Supabase with better-supabase, PermDock, oRPC, MCP, CLI, Fumadocs and Vercel. |
+
+## Development
+
+You need the Node major in `.node-version` and the pnpm version pinned in `package.json`.
+
+```bash
+pnpm install
+pnpm verify
+```
+
+| Script                      | What it does                                                        |
+| --------------------------- | ------------------------------------------------------------------- |
+| `pnpm validate`             | Checks every skill's frontmatter, versions, links and README entry. |
+| `pnpm format`               | Formats the repo with oxfmt.                                        |
+| `pnpm format:check`         | Fails when a file isn't formatted.                                  |
+| `pnpm check`, `pnpm verify` | Runs `format:check` and `validate`. CI runs `pnpm verify`.          |
 
 ## Contributing
 

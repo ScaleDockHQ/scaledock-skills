@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security issue
+    url: https://github.com/ScaleDockHQ/scaledock-skills/security/advisories/new
+    about: Report security issues privately. Never open a public issue for them.

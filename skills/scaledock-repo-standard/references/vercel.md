@@ -13,26 +13,26 @@ When Supabase (database, auth, RLS-bound files, realtime) does not cover a need,
 
 Record any exception in an ADR.
 
-| Need | Use |
-| --- | --- |
-| LLM calls, embeddings, images | AI SDK through Vercel AI Gateway |
-| Durable jobs, long-running agents | Workflow SDK (`DurableAgent`) |
-| Schedules | Vercel Cron Jobs to `apps/api` routes, verified with a `CRON_SECRET` of at least 32 characters |
-| Fan-out, event streaming | Vercel Queues |
-| Untrusted or generated code | Vercel Sandbox |
-| Public or private assets not tied to RLS | Vercel Blob; RLS-bound files stay in Supabase Storage |
-| Config and kill switches | Edge Config |
-| Feature flags | Flags SDK with Edge Config |
-| Cross-invocation function cache | Runtime Cache (`getCache` from `@vercel/functions`) |
-| Work after the response | `after()` in Next, `waitUntil` elsewhere |
-| Bot protection | BotID on sign-in, sign-up and public forms |
-| Rate limits and WAF | Vercel Firewall (`@vercel/firewall` in code) |
-| Analytics, Core Web Vitals | Web Analytics, Speed Insights |
-| Logs, traces | Vercel Observability, `@vercel/otel`, Sentry through the Marketplace |
-| Gradual rollouts | Rolling Releases |
-| Chat bots | Chat SDK, with the platform app created through Vercel Connect |
-| New agent products | Propose eve first; do not install it without asking |
-| Agents on deployments and logs | Vercel MCP server in `.mcp.json` |
+| Need                                     | Use                                                                                            |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| LLM calls, embeddings, images            | AI SDK through Vercel AI Gateway                                                               |
+| Durable jobs, long-running agents        | Workflow SDK (`DurableAgent`)                                                                  |
+| Schedules                                | Vercel Cron Jobs to `apps/api` routes, verified with a `CRON_SECRET` of at least 32 characters |
+| Fan-out, event streaming                 | Vercel Queues                                                                                  |
+| Untrusted or generated code              | Vercel Sandbox                                                                                 |
+| Public or private assets not tied to RLS | Vercel Blob; RLS-bound files stay in Supabase Storage                                          |
+| Config and kill switches                 | Edge Config                                                                                    |
+| Feature flags                            | Flags SDK with Edge Config                                                                     |
+| Cross-invocation function cache          | Runtime Cache (`getCache` from `@vercel/functions`)                                            |
+| Work after the response                  | `after()` in Next, `waitUntil` elsewhere                                                       |
+| Bot protection                           | BotID on sign-in, sign-up and public forms                                                     |
+| Rate limits and WAF                      | Vercel Firewall (`@vercel/firewall` in code)                                                   |
+| Analytics, Core Web Vitals               | Web Analytics, Speed Insights                                                                  |
+| Logs, traces                             | Vercel Observability, `@vercel/otel`, Sentry through the Marketplace                           |
+| Gradual rollouts                         | Rolling Releases                                                                               |
+| Chat bots                                | Chat SDK, with the platform app created through Vercel Connect                                 |
+| New agent products                       | Propose eve first; do not install it without asking                                            |
+| Agents on deployments and logs           | Vercel MCP server in `.mcp.json`                                                               |
 
 ## Platform defaults
 
@@ -67,17 +67,30 @@ Check the keys against the installed docs:
     "globalConfiguration": true,
     "affectedUsingTaskInputs": true,
     "errorsOnlyShowHash": true,
-    "longerSignatureKey": true
+    "longerSignatureKey": true,
   },
   "global": {
     "envMode": "strict",
     "cacheMaxAge": "14d",
     "remoteCache": { "enabled": true, "signature": true },
     "env": ["CI", "NODE_ENV"],
-    "passThroughEnv": ["SUPABASE_*", "VERCEL_*", "PORTLESS*", "REUI_LICENSE_KEY", "GITHUB_ACTIONS", "TURBO_REMOTE_CACHE_SIGNATURE_KEY"],
-    "inputs": ["packages/typescript-config/**", "packages/ox-config/**", "pnpm-workspace.yaml"]
+    "passThroughEnv": [
+      "SUPABASE_*",
+      "VERCEL_*",
+      "PORTLESS*",
+      "REUI_LICENSE_KEY",
+      "GITHUB_ACTIONS",
+      "TURBO_REMOTE_CACHE_SIGNATURE_KEY",
+    ],
+    "inputs": [
+      "packages/typescript-config/**",
+      "packages/ox-config/**",
+      "pnpm-workspace.yaml",
+    ],
   },
-  "tasks": { /* transit, build, lint, lint:root, typecheck, test, dev and dev:portless (persistent, uncached) */ }
+  "tasks": {
+    /* transit, build, lint, lint:root, typecheck, test, dev and dev:portless (persistent, uncached) */
+  },
 }
 ```
 

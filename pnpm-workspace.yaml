@@ -1,0 +1,19 @@
+catalog:
+  "@commitlint/cli": 21.2.3
+  "@commitlint/config-conventional": 21.2.3
+  "@commitlint/types": 21.2.3
+  # 2.1.15 has no provenance (fails trustPolicy); 2.1.16 is under minimumReleaseAge.
+  lefthook: 2.1.14
+  oxfmt: 0.71.0
+catalogMode: strict
+nodeLinker: isolated
+saveExact: true
+savePrefix: ""
+strictPeerDependencies: true
+strictDepBuilds: true
+engineStrict: true
+minimumReleaseAge: 1440
+trustPolicy: no-downgrade
+allowBuilds:
+  # lefthook's postinstall downloads its platform binary.
+  lefthook: true

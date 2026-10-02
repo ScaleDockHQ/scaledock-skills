@@ -34,11 +34,11 @@ Portless URLs and scripts, Google OAuth locally, agent rules for local dev, env 
 
 **Files.** They follow Next's own precedence: `.env.development.local` beats `.env.local`.
 
-| File | Written by | Holds |
-| --- | --- | --- |
-| `.env.local` | `pnpm env:pull` (`vercel env pull --environment=development`) | Hosted development keys |
-| `.env.development.local` | `pnpm env:local` (from `supabase status`, plus the local OAuth clients) | Local stack overrides |
-| `.env.production.local` | `pnpm env:pull:production` | Production keys, only for debugging builds |
+| File                     | Written by                                                              | Holds                                      |
+| ------------------------ | ----------------------------------------------------------------------- | ------------------------------------------ |
+| `.env.local`             | `pnpm env:pull` (`vercel env pull --environment=development`)           | Hosted development keys                    |
+| `.env.development.local` | `pnpm env:local` (from `supabase status`, plus the local OAuth clients) | Local stack overrides                      |
+| `.env.production.local`  | `pnpm env:pull:production`                                              | Production keys, only for debugging builds |
 
 - Root scripts load `dotenv -e .env.development.local -e .env.local --`; the first file wins. `dev:hosted` loads only `.env.local`.
 - Adding a key updates the t3-env schema, all three Vercel environments, `turbo.json` and `.env.example`.

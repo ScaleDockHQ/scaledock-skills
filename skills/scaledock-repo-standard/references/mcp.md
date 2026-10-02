@@ -28,7 +28,10 @@ The MCP SDK, transport, auth, tools from the contract, PermDock, resources, erro
 
   ```ts
   const handler = createMcpHandler(() => {
-    const mcp = new McpServer({ name: "{{app}}-docs", version }, { instructions: "..." });
+    const mcp = new McpServer(
+      { name: "{{app}}-docs", version },
+      { instructions: "..." },
+    );
     registerSourceTools(mcp, source, docsLlms); // fumadocs-core/mcp
     registerSearchTool(mcp, docsSearch);
     return mcp;

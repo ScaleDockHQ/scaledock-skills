@@ -74,7 +74,9 @@ function validateSkill(folder, rootReadme) {
 
   const fields = parseFrontmatter(readFileSync(skillFile, "utf8"));
   if (!fields) {
-    return ["SKILL.md has no frontmatter block (expected --- ... --- at the top)"];
+    return [
+      "SKILL.md has no frontmatter block (expected --- ... --- at the top)",
+    ];
   }
 
   const { name, description, metadata } = fields;
@@ -82,11 +84,16 @@ function validateSkill(folder, rootReadme) {
     errors.push("frontmatter is missing `name`");
   } else {
     if (!SKILL_NAME.test(name)) {
-      errors.push(`name "${name}" must be kebab-case and start with "scaledock-"`);
+      errors.push(
+        `name "${name}" must be kebab-case and start with "scaledock-"`,
+      );
     }
-    if (name !== folder) errors.push(`name "${name}" does not match folder "${folder}"`);
+    if (name !== folder)
+      errors.push(`name "${name}" does not match folder "${folder}"`);
     if (name === TEMPLATE_NAME) {
-      errors.push(`name "${name}" is the template placeholder; rename the skill`);
+      errors.push(
+        `name "${name}" is the template placeholder; rename the skill`,
+      );
     }
     if (!rootReadme.includes(`\`${name}\``)) {
       errors.push(`README.md skills table does not list \`${name}\``);
@@ -127,7 +134,9 @@ function validateSkill(folder, rootReadme) {
   return errors;
 }
 
-const rootReadme = existsSync(ROOT_README) ? readFileSync(ROOT_README, "utf8") : "";
+const rootReadme = existsSync(ROOT_README)
+  ? readFileSync(ROOT_README, "utf8")
+  : "";
 
 const folders = existsSync(SKILLS_DIR)
   ? readdirSync(SKILLS_DIR, { withFileTypes: true })

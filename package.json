@@ -3,12 +3,38 @@
   "version": "0.0.0",
   "private": true,
   "description": "Agent skills used across ScaleDock projects",
-  "type": "module",
   "license": "MIT",
-  "engines": {
-    "node": ">=20"
-  },
+  "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-skills.mjs"
-  }
+    "check": "pnpm format:check && pnpm validate",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepare": "node scripts/prepare.ts",
+    "validate": "node scripts/validate-skills.mjs",
+    "verify": "pnpm check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/types": "catalog:",
+    "lefthook": "catalog:",
+    "oxfmt": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.8.1",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.x",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": "24.x",
+    "pnpm": "12.8.1"
+  },
+  "packageManager": "pnpm@12.8.1"
 }

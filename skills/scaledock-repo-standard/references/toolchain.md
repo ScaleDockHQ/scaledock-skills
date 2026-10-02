@@ -30,7 +30,13 @@ trustPolicy: no-downgrade
 publicHoistPattern: ["@typescript/*"]
 allowBuilds: { lefthook: true, supabase: true, esbuild: true } # each entry reviewed and commented
 nodeOptions: "${NODE_OPTIONS:- } --disable-warning=MODULE_TYPELESS_PACKAGE_JSON"
-overrides: { typescript: "catalog:", react: "catalog:", react-dom: "catalog:", next: "catalog:" }
+overrides:
+  {
+    typescript: "catalog:",
+    react: "catalog:",
+    react-dom: "catalog:",
+    next: "catalog:",
+  }
 ```
 
 Every workspace dependency is `catalog:` or `workspace:*`. Every override, `minimumReleaseAgeExclude` entry, `allowBuilds` entry and patch has a comment explaining why.

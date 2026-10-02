@@ -19,6 +19,7 @@ Action pinning, the shared setup action, the workflows, and Dependabot.
   - the doctors
 
   Next builds run with `--concurrency=1`.
+
 - **`security.yml`:** zizmor on workflow changes, and `dependency-review-action` on PRs.
 - **`database.yml`:** on `supabase/**` changes, start the stack, run pgTAP and lint the SQL.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md).
