@@ -42,7 +42,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 **Foundation:**
 
-- [`references/skills.md`](references/skills.md): agent skills to install.
+- [`references/skills.md`](references/skills.md): agent skills to install and commit.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
 - [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern, env, code rules.
 - [`references/lint-format.md`](references/lint-format.md): oxlint presets, anti-slop, oxfmt.

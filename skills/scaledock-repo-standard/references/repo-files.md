@@ -15,7 +15,7 @@ Applies to every repo kind. Keep only the README first-run steps and VS Code tas
 
 - `LICENSE` (MIT), `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `.editorconfig`.
 - `.gitattributes`: `* text=auto eol=lf`, binary types marked, and `linguist-generated` on the lockfile and generated types.
-- `.gitignore`: build output, `.turbo`, `.next`, `.source`, `.vercel`, every `.env*` except `!.env.example`, Supabase local state, `signing_key.json` and `.claude/settings.local.json`. With Expo, also `.expo`, `dist`, and the generated `ios/` and `android/` folders.
+- `.gitignore`: build output, `.turbo`, `.next`, `.source`, `.vercel`, every `.env*` except `!.env.example`, Supabase local state, `signing_key.json` and `.claude/settings.local.json`. With Expo, also `.expo`, `dist`, and the generated `ios/` and `android/` folders. Never `.agents/`, `.claude/skills`, `.cursor/skills` or `skills-lock.json`; those are committed (see [`skills.md`](skills.md)).
 - `.vercelignore` (never `.git`) and `.cursorignore`.
 - `.env.example` with keys only.
 
