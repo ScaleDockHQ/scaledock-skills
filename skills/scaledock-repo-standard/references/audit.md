@@ -73,7 +73,12 @@ Open the reference only to judge its rows.
 - **Platform** ([`vercel.md`](vercel.md), [`local-dev-env.md`](local-dev-env.md)): the needs table, Services and rewrites, `turbo.json`, Remote Cache, Portless, env files and sources.
 - **Web** ([`nextjs.md`](nextjs.md), [`i18n.md`](i18n.md), [`ui.md`](ui.md), [`app-shell.md`](app-shell.md)): `createNextConfig()`, the architecture rules, i18n, the component stack, the shell and screens.
 - **Expo** ([`expo.md`](expo.md), [`offline-sync.md`](offline-sync.md)): the shape, app config and variants, EAS, native UI, Uniwind, auth, push, universal web, PowerSync.
-- **Data and identity** ([`data-permissions.md`](data-permissions.md), [`auth.md`](auth.md)): tenancy, Supabase, RLS and pgTAP, the audit log, PermDock, the OAuth server, keys and clients.
+- **Data and identity** ([`data-permissions.md`](data-permissions.md), [`auth.md`](auth.md)): tenancy, Supabase, RLS and pgTAP, the audit log, PermDock, the OAuth server, the consent route, keys and clients.
+- **Supabase project** ([`data-permissions.md`](data-permissions.md)): `[experimental] stack = true`; `[experimental.pgdelta] enabled = true` with no `schema_paths`; `supabase:diff` running `db schema declarative sync` in scripts and CI; no `config.toml` drift after `pnpm supabase:pull`. To move an existing repo onto `pg-delta`:
+  1. Create a baseline with `supabase db pull` if the repo has no migrations.
+  2. Enable `pg-delta`, remove `schema_paths`, and export the schema with `supabase db schema declarative generate --linked --overwrite`.
+  3. Replace `supabase db diff` in scripts and CI, and drop any `supabase stop` before diffing.
+  4. Run `pnpm supabase:diff`; it must report no changes before the first new migration.
 - **Data conventions** ([`data-conventions.md`](data-conventions.md)): `timestamptz` and UTC on the wire, `date` and IANA zones, integer money with a currency, basis points, UUID versus integer IDs and UUIDv7, naming and `created_at`/`updated_at`, standard codes, indexed foreign keys with `on delete`, keyset pagination, the deletion policy.
 - **Programmatic** ([`api.md`](api.md), [`mcp.md`](mcp.md), [`cli.md`](cli.md)): the Hono shell, OpenAPI snapshot, MCP SDK and tools, CLI kind and behavior.
 - **Docs and AI** ([`docs-site.md`](docs-site.md), [`ai.md`](ai.md)): Fumadocs formats and pages, AI Gateway.
