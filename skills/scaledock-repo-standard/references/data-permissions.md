@@ -1,6 +1,6 @@
 # Multi-tenancy, data and permissions
 
-URL tenancy, guards, tenant tables, Supabase, better-supabase, the audit log, and PermDock. Auth across surfaces is in [`auth.md`](auth.md).
+URL tenancy, guards, tenant tables, Supabase, better-supabase, the audit log, and PermDock. Auth across surfaces is in [`auth.md`](auth.md), and column types, IDs and naming are in [`data-conventions.md`](data-conventions.md).
 
 Applies to product repos with Database or Roles and permissions set to yes. Offline sync on Expo is in [`offline-sync.md`](offline-sync.md).
 

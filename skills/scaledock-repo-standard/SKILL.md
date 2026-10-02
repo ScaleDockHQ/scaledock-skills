@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Repo standard
@@ -68,7 +68,7 @@ Run these steps in order. Each step names the references to load and the check i
 5. **Surfaces.** Build or upgrade only the selected ones.
    - Web (Next.js): [`references/nextjs.md`](references/nextjs.md), [`references/i18n.md`](references/i18n.md), [`references/ui.md`](references/ui.md), [`references/app-shell.md`](references/app-shell.md).
    - Expo (`mobile`, or `app` on Expo): [`references/expo.md`](references/expo.md), [`references/i18n.md`](references/i18n.md), and [`references/offline-sync.md`](references/offline-sync.md) when Offline is yes.
-   - Data and identity: [`references/data-permissions.md`](references/data-permissions.md), [`references/auth.md`](references/auth.md).
+   - Data and identity: [`references/data-permissions.md`](references/data-permissions.md), [`references/data-conventions.md`](references/data-conventions.md), [`references/auth.md`](references/auth.md).
    - Programmatic: [`references/api.md`](references/api.md), [`references/mcp.md`](references/mcp.md), [`references/cli.md`](references/cli.md).
    - Docs and AI: [`references/docs-site.md`](references/docs-site.md), [`references/ai.md`](references/ai.md).
      ✓ Apps stay thin adapters over `services`, every procedure is contract first, and every surface acts as the signed-in user.
@@ -93,6 +93,8 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] [api] Every procedure lives in `packages/contract` with `openapi()` meta, and the committed OpenAPI snapshot matches.
 - [ ] [api, mcp, cli] Errors are RFC 9457 Problem Details on every surface.
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
+- [ ] [Database] Timestamps are `timestamptz`, money is integer minor units plus a currency, and public IDs are UUIDs (v7 when the Postgres major provides it).
+- [ ] [Database] Every foreign key is indexed and has an explicit `on delete`.
 - [ ] [Database] The only keys in use are `sb_publishable_` and `sb_secret_`, and `sb_secret_` appears only in `createAdminContext()`.
 - [ ] [Expo] `expo-doctor` passes, `ios/` and `android/` are gitignored, and each `APP_VARIANT` has its own name, bundle ID and scheme.
 - [ ] [Offline] Every synced table is in the PowerSync publication and a sync stream, and web never opens a PowerSync database.
@@ -106,7 +108,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
-- **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
+- **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
 - **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
 - **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK through AI Gateway).
 - **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).

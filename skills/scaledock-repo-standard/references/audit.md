@@ -31,6 +31,7 @@ Resolve these from the inputs before you write any file.
 | `expo.md`             | selected             | no                         | no                                                        |
 | `offline-sync.md`     | selected             | no                         | no                                                        |
 | `data-permissions.md` | selected             | no                         | no                                                        |
+| `data-conventions.md` | selected             | no                         | no                                                        |
 | `auth.md`             | selected             | no                         | no                                                        |
 | `api.md`              | selected             | no                         | no                                                        |
 | `mcp.md`              | selected             | selected                   | no                                                        |
@@ -72,6 +73,7 @@ Open the reference only to judge its rows.
 - **Web** ([`nextjs.md`](nextjs.md), [`i18n.md`](i18n.md), [`ui.md`](ui.md), [`app-shell.md`](app-shell.md)): `createNextConfig()`, the architecture rules, i18n, the component stack, the shell and screens.
 - **Expo** ([`expo.md`](expo.md), [`offline-sync.md`](offline-sync.md)): the shape, app config and variants, EAS, native UI, Uniwind, auth, push, universal web, PowerSync.
 - **Data and identity** ([`data-permissions.md`](data-permissions.md), [`auth.md`](auth.md)): tenancy, Supabase, RLS and pgTAP, the audit log, PermDock, the OAuth server, keys and clients.
+- **Data conventions** ([`data-conventions.md`](data-conventions.md)): `timestamptz` and UTC on the wire, `date` and IANA zones, integer money with a currency, basis points, UUID versus integer IDs and UUIDv7, naming and `created_at`/`updated_at`, standard codes, indexed foreign keys with `on delete`, keyset pagination, the deletion policy.
 - **Programmatic** ([`api.md`](api.md), [`mcp.md`](mcp.md), [`cli.md`](cli.md)): the Hono shell, OpenAPI snapshot, MCP SDK and tools, CLI kind and behavior.
 - **Docs and AI** ([`docs-site.md`](docs-site.md), [`ai.md`](ai.md)): Fumadocs formats and pages, AI Gateway.
 - **Delivery** ([`git-workflow.md`](git-workflow.md), [`ci.md`](ci.md), [`tests.md`](tests.md)): branches and protection, commitlint, lefthook, Changesets, `release.yml`, workflows, action pinning, Dependabot, test runners.

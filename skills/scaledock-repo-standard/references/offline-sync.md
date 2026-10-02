@@ -31,6 +31,7 @@ Per-file exports, no barrel:
 - One stream per access path, scoped by organization through the same permission lookups RLS uses.
 - Use `IN (SELECT ...)` or `INNER JOIN`, never `EXISTS`, which the service dialect does not support.
 - Never `OR` a direct `col = auth.user_id()` with an `IN (SELECT ...)` in one stream: the two branches become different bucket kinds, and a row selected by both syncs twice and fails the checksum. Route the own-row branch through a lookup too.
+- Every synced table has a UUID `id` the client generates, so offline inserts need no round trip (see [`data-conventions.md`](data-conventions.md)).
 - The Supabase publication lists every synced table. Adding a domain table that native reads means updating the publication, the stream, `schema` and the native hook twin (see [`agent-files.md`](agent-files.md)).
 - A schema test checks that every synced table is in the publication, the PowerSync schema and a stream, and that the streams avoid the patterns above.
 
