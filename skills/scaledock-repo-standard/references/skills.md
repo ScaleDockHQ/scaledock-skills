@@ -2,6 +2,8 @@
 
 Which agent skills every repo installs, where they live, and when a repo must not vendor them.
 
+Applies to product repos. Library repos follow the exception below, and tooling repos install `find-skills` only.
+
 ## Location
 
 - Skills live in `.agents/skills`, are symlinked from `.claude/skills` and `.cursor/skills`, and are pinned in `skills-lock.json`. Install with `pnpm dlx skills add <owner/repo> --skill <name> -y`; if a name moved, use find-skills.
@@ -30,6 +32,11 @@ Which agent skills every repo installs, where they live, and when a repo must no
   - `vercel-labs/vercel-plugin`: next-cache-components
   - `vercel-labs/agent-skills`: vercel-react-best-practices, vercel-composition-patterns, web-design-guidelines
   - `pproenca/dot-skills`: nuqs
+- **Expo:**
+  - `expo/skills`: expo-overview, expo-project-structure, expo-router, expo-ui, expo-native-ui, expo-design-system, expo-animation, expo-data-fetching, expo-dev-client, expo-dom, expo-examples, expo-upgrade
+  - `software-mansion/argent`: the argent simulator, device, debugger, profiler and QA-flow skills
+  - `uni-stack/uniwind`: uniwind
+  - `vercel-labs/agent-skills`: vercel-react-native-skills
 - **UI:** `shadcn/ui` shadcn; ReUI (ReUI MCP `get_agent_skill`); `emilkowalski/skills` emil-design-eng.
 - **AI:** `vercel/ai` ai-sdk; `vercel/ai-elements` ai-elements; `vercel/workflow` workflow; `vercel/chat` chat-sdk (only with a bot).
 - **Database:** `supabase/agent-skills` supabase and supabase-postgres-best-practices; `supabase/server` supabase-server; the better-supabase skills (`npx skills add ScaleDockHQ/better-supabase`).

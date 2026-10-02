@@ -2,6 +2,8 @@
 
 The component stack, ReUI Pro, lint rules, `DESIGN.md`, and the responsive and accessibility baseline. The shell and screens built on top are in [`app-shell.md`](app-shell.md).
 
+Applies to a Next.js `app`. Expo UI is in [`expo.md`](expo.md); the `DESIGN.md`, responsive and accessibility rules here apply to it too.
+
 - **shadcn** on Base UI (a `base-*` style) with Tailwind v4 and CSS-first tokens. Components live in `packages/ui`. Every `components.json` aliases `@{{SCOPE}}/ui` and sets `iconLibrary: "hugeicons"`.
 - **ReUI Pro:**
   - Register the `@reui` registry with the `REUI_LICENSE_KEY` header, and add the ReUI MCP to `.cursor/mcp.json` and `.mcp.json`.

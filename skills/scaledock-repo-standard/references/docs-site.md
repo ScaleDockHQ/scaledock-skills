@@ -2,6 +2,8 @@
 
 The docs app setup, the formats it serves, agent features, the API reference, required pages, SEO, content rules and drift checks.
 
+Applies to product repos with the `docs` surface and to every library repo. Docs always run on Next.js, including when `app` is on Expo.
+
 - **Setup:** Fumadocs on Next.js with Base UI, served at `/docs` through Services. `fumadocs-ui` is installed as `npm:@fumadocs/base-ui`, at the same version as `fumadocs-core`.
 - **Formats:**
   - `/llms.txt` and `/llms-full.txt`.

@@ -1,6 +1,8 @@
 # Local dev with Portless, env and secrets
 
-Portless URLs and scripts, Google OAuth locally, agent rules for local dev, env sources in order of preference, and the env files.
+Portless URLs and scripts, Google OAuth locally, agent rules for local dev, the Expo dev loop, env sources in order of preference, and the env files.
+
+Applies to product repos, and to library repos that run a docs site.
 
 ## Portless
 
@@ -20,8 +22,17 @@ Portless URLs and scripts, Google OAuth locally, agent rules for local dev, env 
   - `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_SUPABASE_URL` point at those hosts.
 - **Agents:**
   - Use only Portless URLs, with `agent-browser`.
-  - Reuse my running `dev:portless`. Never restart it without asking.
+  - Reuse the user's running `dev:portless`. Never restart it without asking.
   - Write these rules into `.agents/rules/local-dev-portless-agent-browser.mdc` and `AGENTS.md`.
+
+## Expo
+
+- **Web.** A universal Expo app's `dev:portless` is `portless run --force --name app expo start --web`, served under its base path at `https://app.localhost/app`.
+- **Native.** Build the dev client once with `pnpm --filter <app> ios` or `android` (`expo run:*`), then run `pnpm dev` and press `i` or `a`. Rebuild only after adding a native module.
+  - The native app reaches the local stack through Metro's host, never through a hard-coded `localhost`.
+  - The developer's shell profile owns the native toolchain (`JAVA_HOME`, `ANDROID_HOME`, CocoaPods from Homebrew, ccache, Watchman). Never add repo scripts that wrap the toolchain, boot emulators, start Metro or launch the dev client.
+  - After Metro, Babel or linker changes, start once with `expo start --clear`.
+- **Agents** drive simulators and devices through the argent skills, and never run `native:prepare` as a routine step.
 
 ## Env and secrets
 
@@ -41,5 +52,6 @@ Portless URLs and scripts, Google OAuth locally, agent rules for local dev, env 
 | `.env.production.local`  | `pnpm env:pull:production`                                              | Production keys, only for debugging builds |
 
 - Root scripts load `dotenv -e .env.development.local -e .env.local --`; the first file wins. `dev:hosted` loads only `.env.local`.
-- Adding a key updates the t3-env schema, all three Vercel environments, `turbo.json` and `.env.example`.
+- Adding a key updates the t3-env schema, all three Vercel environments, `turbo.json` and `.env.example`. A key an EAS build reads also goes into the matching EAS environment.
+- Expo apps load the root `.env*` files from `app.config.ts` before Metro runs, so `EXPO_PUBLIC_*` inlining sees the same values. Never keep a second `.env` in the app folder.
 - Secrets never go in `NEXT_PUBLIC_*` variables or in git.
