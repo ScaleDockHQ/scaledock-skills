@@ -4,7 +4,7 @@ description: Build or harden a ScaleDock MCP server that follows the MCP authori
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # ScaleDock MCP server
@@ -43,9 +43,9 @@ npx skills add ScaleDockHQ/PermDock
 
 1. **Set the inputs and read the docs.** Read the installed `@modelcontextprotocol/server` docs, the `permdock/mcp` page through the PermDock docs MCP (`https://permdock.dev/mcp`), and the `mcp-authorization` skill's Invariants.
    ✓ You can name the spec revision the SDK serves and the PermDock options you will set.
-2. **Resource server.** Serve Protected Resource Metadata, return 401 with the `resource_metadata` challenge, and verify every bearer token (signature, issuer, expiry, audience) as `mcp-authorization` and `jwt` require. With Supabase, the verifier is `@supabase/server`.
+2. **Resource server.** Serve Protected Resource Metadata, return 401 with the `resource_metadata` challenge, and verify every bearer token (signature, issuer, expiry, audience) as `mcp-authorization` and `jwt` require. With Supabase, wrap the handler in `withOAuthProtectedResource` and `withSupabase({ auth: "user" })` from `@supabase/server` (the nested form), and serve the OAuth Consent block at `/oauth/consent` in the app.
    -> [`references/stack.md`](references/stack.md) (how each requirement maps to the ScaleDock stack)
-   ✓ An unauthenticated request gets 401 with the metadata URL, and a token for another resource is rejected.
+   ✓ An unauthenticated request gets 401 with the metadata URL, a token for another resource is rejected, and a signed-out user reaching `/oauth/consent` signs in and returns to the consent screen.
 3. **Permissions.** Define one permission per tool in `permissions.ts`, grant them in `policy.ts`, and register tools with `protectServer`. Follow `wire-permdock` from `ScaleDockHQ/PermDock`.
    ✓ `tools/list` differs per role, and a call without a grant returns a Problem Details denial.
 4. **Approvals and step-up.** Put `approval` on every destructive grant and configure a durable approval store. When a tool needs a scope the token lacks, return the scope challenge that `mcp-authorization` describes.
@@ -59,6 +59,7 @@ npx skills add ScaleDockHQ/PermDock
 
 - [ ] Every item in the `mcp-authorization` Verify list passes.
 - [ ] Every tool has exactly one permission, and an unmapped tool is not listed.
+- [ ] `/oauth/consent` is reachable signed out and returns to the consent screen after sign-in.
 - [ ] The subject comes from `authInfo`; no tool reads a user, tenant or actor id from its arguments.
 - [ ] Every destructive tool returns `approval-required` without an approval.
 - [ ] Every denial is a Problem Details object with a stable `type`.

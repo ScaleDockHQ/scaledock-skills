@@ -15,6 +15,7 @@ Then ask your agent to "add an MCP server to this repo", "protect these MCP tool
 ## Rules
 
 - The spec skills decide protocol details; this skill maps them onto the ScaleDock stack.
+- With Supabase, `@supabase/server` (`withOAuthProtectedResource` and `withSupabase`) is the resource server, and the app serves the OAuth Consent block.
 - Every tool call is a PermDock decision, and authorization comes from the user, not from scopes.
 - The subject comes from the verified token, never from tool arguments.
 - Destructive tools need a human approval.
