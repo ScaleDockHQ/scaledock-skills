@@ -1,8 +1,18 @@
 # Contributing
 
+## Setup
+
+You need the Node major in `.node-version` and the pnpm version in `package.json`. pnpm downloads the right Node for you through `devEngines.runtime`.
+
+```bash
+pnpm install
+```
+
+This also installs the git hooks: oxfmt formats staged files, commitlint checks the commit message, and `pnpm verify` runs before every push. Commit messages and PR titles are conventional commit headers of at most 72 characters, such as `feat: add scaledock-auth skill`.
+
 ## Naming
 
-Every skill is named `scaledock-<topic>`, and its folder has the same name. Installed skills from every publisher share flat folders such as `.agents/skills/<name>`, so an unprefixed name like `repo-standard` could overwrite, or be overwritten by, someone else's skill. `npm run validate` rejects names without the prefix.
+Every skill is named `scaledock-<topic>`, and its folder has the same name. Installed skills from every publisher share flat folders such as `.agents/skills/<name>`, so an unprefixed name like `repo-standard` could overwrite, or be overwritten by, someone else's skill. `pnpm validate` rejects names without the prefix.
 
 ## Adding a skill
 
@@ -22,7 +32,7 @@ Every skill is named `scaledock-<topic>`, and its folder has the same name. Inst
 5. Validate:
 
    ```bash
-   npm run validate
+   pnpm validate
    ```
 
 6. Add the skill to the table in [README.md](README.md). The validator fails until it is listed.
@@ -39,7 +49,7 @@ skills/scaledock-<topic>/
   assets/         # optional templates and static files
 ```
 
-`skills/` holds the skills this repo publishes. `template/skill/` is the starting point; it sits one level deeper than `template/` so the `skills` CLI does not offer it in the install picker. `.agents/skills/` holds skills installed _into_ this repo for local development (managed by `npx skills` and tracked in `skills-lock.json`); don't put published skills there.
+`skills/` holds the skills this repo publishes. `template/skill/` is the starting point; it sits one level deeper than `template/` so the `skills` CLI does not offer it in the install picker. `.agents/skills/` holds skills installed _into_ this repo for local development (managed by `pnpm dlx skills` and tracked in `skills-lock.json`); don't put published skills there.
 
 ## Updating a skill
 
@@ -50,11 +60,11 @@ Bump the version in `SKILL.md` (`metadata.version`) and `metadata.json` together
 List what the picker would show, without installing anything:
 
 ```bash
-npx skills add . --list
+pnpm dlx skills add . --list
 ```
 
 Install from your working copy into another project to try it out:
 
 ```bash
-npx skills add /path/to/scaledock-skills --skill scaledock-<topic>
+pnpm dlx skills add /path/to/scaledock-skills --skill scaledock-<topic>
 ```
