@@ -57,27 +57,32 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
 - **Valibot everywhere** (env, domain, contract, forms, MCP tool schemas, AI output, CLI config). No Zod in our code; a dependency's own Zod is fine.
 - **One library per concern**, enforced with `no-restricted-imports`:
 
-  | Concern               | Library                                                       | On Expo                   |
-  | --------------------- | ------------------------------------------------------------- | ------------------------- |
-  | Schemas               | Valibot (`@valibot/to-json-schema` for JSON Schema)           | Same                      |
-  | Typed results         | better-result                                                 | Same                      |
-  | Remote data           | RSC first, TanStack Query in client islands                   | TanStack Query            |
-  | Forms                 | TanStack Form with Standard Schema                            | Same                      |
-  | URL state             | nuqs                                                          | Expo Router search params |
-  | Cross-screen UI state | TanStack Store                                                | Same                      |
-  | Dates                 | date-fns, `@date-fns/tz` (UTC rules in `data-conventions.md`) | Same                      |
-  | Icons                 | Hugeicons (unless the user names another set)                 | `expo-symbols`            |
-  | Styling               | Tailwind v4                                                   | Uniwind                   |
-  | Lists                 | ReUI `data-grid`                                              | Legend List               |
-  | Native controls       | n/a                                                           | `@expo/ui`                |
-  | Copy                  | next-intl                                                     | i18next                   |
-  | Offline data          | n/a                                                           | PowerSync                 |
-  | Email                 | react-email                                                   | n/a                       |
-  | LLMs                  | AI SDK                                                        | Same, through `apps/api`  |
-  | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major    | n/a                       |
-  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)         | n/a                       |
+  | Concern               | Library                                                                       | On Expo                   |
+  | --------------------- | ----------------------------------------------------------------------------- | ------------------------- |
+  | Schemas               | Valibot (`@valibot/to-json-schema` for JSON Schema)                           | Same                      |
+  | Typed results         | better-result                                                                 | Same                      |
+  | Remote data           | RSC first, TanStack Query in client islands                                   | TanStack Query            |
+  | Forms                 | TanStack Form with Standard Schema                                            | Same                      |
+  | URL state             | nuqs                                                                          | Expo Router search params |
+  | Cross-screen UI state | TanStack Store                                                                | Same                      |
+  | Dates                 | `Temporal` from `@{{SCOPE}}/domain/temporal` (rules in `data-conventions.md`) | Same                      |
+  | Icons                 | Hugeicons (unless the user names another set)                                 | `expo-symbols`            |
+  | Styling               | Tailwind v4                                                                   | Uniwind                   |
+  | Lists                 | ReUI `data-grid`                                                              | Legend List               |
+  | Native controls       | n/a                                                                           | `@expo/ui`                |
+  | Copy                  | next-intl                                                                     | i18next                   |
+  | Offline data          | n/a                                                                           | PowerSync                 |
+  | Email                 | react-email                                                                   | n/a                       |
+  | LLMs                  | AI SDK                                                                        | Same, through `apps/api`  |
+  | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major                    | n/a                       |
+  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)                         | n/a                       |
 
   Never add `@radix-ui/*` or vaul. On Expo, never add JS stacks, JS tab bars, JS bottom sheets or `TouchableOpacity`.
+
+- **Temporal.** `Temporal` is the only date library; never date-fns, dayjs, luxon or moment.
+  - `packages/domain/src/temporal.ts` is the one module that imports `temporal-polyfill`, and it re-exports `Temporal`. Every other file imports `Temporal` from there, never from the polyfill or the global.
+  - Node 26, Chromium and Firefox ship it natively, but Safari, Hermes and Vercel's current Node do not. When all runtimes the repo targets ship it, `temporal.ts` re-exports the global and the polyfill is removed, a one-file change.
+  - Expo imports the same module, so Hermes gets the polyfill too.
 
 - **Env.** Each app has one `env.ts` (t3-env with Valibot), the only file that reads `process.env`. Read `NEXT_PUBLIC_*` and `EXPO_PUBLIC_*` literally. Derive every public URL from `NEXT_PUBLIC_SITE_URL`.
 - **Standard services**, each behind one wrapper so features never import a vendor SDK:
@@ -87,3 +92,5 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
   - Resend through `packages/email`.
   - Stripe per organization: price IDs in the database, webhooks verified in `apps/api`, operational settings in `platform_settings`.
 - **Code rules.** Imports at the top. Exhaustive `switch` with a `never` default. Only erasable syntax. Every `as T` has a `SAFETY:` comment; prefer a guard or a schema parse. Comments state constraints only.
+  - No `Date` in `domain`, `contract` or `services`. A `Date` appears only where a third-party API demands one, converted from or to `Temporal` on that line, with a comment naming the API.
+  - No hand-written `useMemo`, `useCallback` or `memo`; the React Compiler memoizes.
