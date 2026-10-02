@@ -58,6 +58,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web.
 - [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native.
 - [`references/data-permissions.md`](references/data-permissions.md): multi-tenancy, Supabase, better-supabase, audit log, PermDock.
+- [`references/data-conventions.md`](references/data-conventions.md): UTC timestamps, integer money, UUID and integer IDs, naming, standard codes, pagination, deletion.
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface.
 - [`references/api.md`](references/api.md): Hono, oRPC, Scalar.
 - [`references/mcp.md`](references/mcp.md): MCP server, tools from the contract, docs MCP.

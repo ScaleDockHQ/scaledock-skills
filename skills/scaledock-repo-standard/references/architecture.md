@@ -57,25 +57,25 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
 - **Valibot everywhere** (env, domain, contract, forms, MCP tool schemas, AI output, CLI config). No Zod in our code; a dependency's own Zod is fine.
 - **One library per concern**, enforced with `no-restricted-imports`:
 
-  | Concern               | Library                                                    | On Expo                   |
-  | --------------------- | ---------------------------------------------------------- | ------------------------- |
-  | Schemas               | Valibot (`@valibot/to-json-schema` for JSON Schema)        | Same                      |
-  | Typed results         | better-result                                              | Same                      |
-  | Remote data           | RSC first, TanStack Query in client islands                | TanStack Query            |
-  | Forms                 | TanStack Form with Standard Schema                         | Same                      |
-  | URL state             | nuqs                                                       | Expo Router search params |
-  | Cross-screen UI state | TanStack Store                                             | Same                      |
-  | Dates                 | date-fns                                                   | Same                      |
-  | Icons                 | Hugeicons (unless the user names another set)              | `expo-symbols`            |
-  | Styling               | Tailwind v4                                                | Uniwind                   |
-  | Lists                 | ReUI `data-grid`                                           | Legend List               |
-  | Native controls       | n/a                                                        | `@expo/ui`                |
-  | Copy                  | next-intl                                                  | i18next                   |
-  | Offline data          | n/a                                                        | PowerSync                 |
-  | Email                 | react-email                                                | n/a                       |
-  | LLMs                  | AI SDK                                                     | Same, through `apps/api`  |
-  | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major | n/a                       |
-  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)      | n/a                       |
+  | Concern               | Library                                                       | On Expo                   |
+  | --------------------- | ------------------------------------------------------------- | ------------------------- |
+  | Schemas               | Valibot (`@valibot/to-json-schema` for JSON Schema)           | Same                      |
+  | Typed results         | better-result                                                 | Same                      |
+  | Remote data           | RSC first, TanStack Query in client islands                   | TanStack Query            |
+  | Forms                 | TanStack Form with Standard Schema                            | Same                      |
+  | URL state             | nuqs                                                          | Expo Router search params |
+  | Cross-screen UI state | TanStack Store                                                | Same                      |
+  | Dates                 | date-fns, `@date-fns/tz` (UTC rules in `data-conventions.md`) | Same                      |
+  | Icons                 | Hugeicons (unless the user names another set)                 | `expo-symbols`            |
+  | Styling               | Tailwind v4                                                   | Uniwind                   |
+  | Lists                 | ReUI `data-grid`                                              | Legend List               |
+  | Native controls       | n/a                                                           | `@expo/ui`                |
+  | Copy                  | next-intl                                                     | i18next                   |
+  | Offline data          | n/a                                                           | PowerSync                 |
+  | Email                 | react-email                                                   | n/a                       |
+  | LLMs                  | AI SDK                                                        | Same, through `apps/api`  |
+  | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major    | n/a                       |
+  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)         | n/a                       |
 
   Never add `@radix-ui/*` or vaul. On Expo, never add JS stacks, JS tab bars, JS bottom sheets or `TouchableOpacity`.
 
