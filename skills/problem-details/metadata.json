@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 9457 Problem Details for HTTP APIs, which obsoletes RFC 7807: the application/problem+json object, its five members, extension members, defining problem types and the IANA HTTP Problem Types registry, plus the WWW-Authenticate challenge that pairs with 401 and 403 under RFC 9110, RFC 6750 and RFC 9470. SKILL.md holds the invariants and workflow; references split out the members and registry, authentication challenges, producer and consumer examples, and security considerations.",
+  "sources": [
+    {
+      "title": "RFC 9457: Problem Details for HTTP APIs",
+      "url": "https://www.rfc-editor.org/rfc/rfc9457",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9457",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 7807: Problem Details for HTTP APIs",
+      "url": "https://www.rfc-editor.org/rfc/rfc7807",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9457)",
+      "revision": "RFC 7807",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "IANA HTTP Problem Types registry",
+      "url": "https://www.iana.org/assignments/http-problem-types",
+      "status": "IANA registry",
+      "revision": "last updated 2026-06-26",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9110: HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "status": "RFC (Internet Standard, STD 97)",
+      "revision": "RFC 9110",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 6750: OAuth 2.0 Bearer Token Usage",
+      "url": "https://www.rfc-editor.org/rfc/rfc6750",
+      "status": "RFC (Proposed Standard, updated by RFC 8996 and RFC 9700)",
+      "revision": "RFC 6750",
+      "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9470: OAuth 2.0 Step Up Authentication Challenge Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9470",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9470",
+      "checked": "2026-10-02"
+    }
+  ]
+}

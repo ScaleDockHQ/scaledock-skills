@@ -44,8 +44,11 @@ ScaleDock skills start with `scaledock-`, so they never collide with a skill fro
 
 Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section.
 
-| Skill | Description |
-| ----- | ----------- |
+| Skill                                           | Description                                                                                                                            |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [`problem-details`](skills/problem-details)     | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json`, plus the `WWW-Authenticate` challenge for 401 and 403. |
+| [`ratelimit-headers`](skills/ratelimit-headers) | IETF RateLimit and RateLimit-Policy headers, `Retry-After` and 429 handling for HTTP API quotas.                                       |
+| [`standard-schema`](skills/standard-schema)     | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                          |
 
 ## Development
 
