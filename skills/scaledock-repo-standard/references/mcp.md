@@ -4,6 +4,8 @@ The MCP SDK, transport, auth, tools from the contract, PermDock, resources, erro
 
 Applies to repos with the `mcp` surface, and the docs MCP to every repo with a docs site.
 
+The `scaledock-mcp-server` skill builds on this reference, and the `mcp-authorization`, `oauth`, `jwt` and `problem-details` spec skills own the protocol rules (see [`skills.md`](skills.md)). When this page and a spec skill disagree on a protocol detail, the spec skill wins.
+
 - **Packages.** `@modelcontextprotocol/server` and `@modelcontextprotocol/client`, latest major. Never the legacy `@modelcontextprotocol/sdk` package, `mcp-handler`, `orpc-mcp`, or a hand-written JSON-RPC switch. A library whose bundle budget rules out the SDK records an ADR.
 - **Transport.**
   - `createMcpHandler(factory)` is mounted in the Hono shell: `app.all("/mcp", (c) => handler.fetch(c.req.raw, { authInfo }))`.

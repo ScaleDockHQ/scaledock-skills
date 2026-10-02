@@ -4,6 +4,8 @@ The Hono shell, oRPC with Scalar, the request context, crons, webhooks and workf
 
 Applies to product repos with the `api` surface. Expo apps send every command through it with the contract client.
 
+The `scaledock-http-api` skill builds on this reference, and the `openapi`, `openapi-overlay`, `problem-details`, `ratelimit-headers` and `standard-schema` spec skills own the format rules (see [`skills.md`](skills.md)). PermDock's `permdock openapi emit` writes the document's security schemes and per-operation `security`.
+
 - **Shell.** A Hono app in `src/app.ts`:
   - `secureHeaders` and a request ID.
   - A CORS allow list. In production it is same-origin through the Services rewrites.

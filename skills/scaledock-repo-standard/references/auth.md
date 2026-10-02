@@ -4,6 +4,8 @@ How each surface signs the user in and verifies them. Supabase Auth is the only 
 
 Applies to product repos with Database set to yes.
 
+The `oauth`, `jwt`, `openid-connect` and `mcp-authorization` spec skills own the protocol rules behind this table. For enterprise SSO, SCIM provisioning and Shared Signals revocation, use the `scaledock-enterprise-identity` skill (see [`skills.md`](skills.md)).
+
 | Surface        | How the user signs in                                                                                                            | What the server receives                                                               | Verified by                                                                                    |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | App (web)      | Email and password, Google PKCE                                                                                                  | Session cookies (`@supabase/ssr`), refreshed only in the proxy                         | `getClaims()` in guards                                                                        |
