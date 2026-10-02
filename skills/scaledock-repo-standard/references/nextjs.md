@@ -16,32 +16,36 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
   poweredByHeader: false,
   cacheComponents: true,
   partialPrefetching: true,
+  agentRules: true, // the default; keeps the managed AGENTS.md block current
   serverExternalPackages: [/* native or heavy server-only deps */],
   compiler: { removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false },
   experimental: {
-    // App Shells: enabled by cacheComponents plus these three
-    varyParams: true, optimisticRouting: true, cachedNavigations: true,
+    // only while the installed version still lists them
+    varyParams: true, optimisticRouting: true,
     prefetchInlining: true,
     useOffline: true,
     globalNotFound: true,
     appNewScrollHandler: true,
     requestInsights: true, // dev-only spans for /_next/mcp audits
     authInterrupts: true, typedEnv: true,
-    taint: true, blockingSSR: true, // both opt into react@experimental
+    taint: true, blockingSSR: true, // both opt into react@experimental; taint also covers process.env
     turbopackRustReactCompiler: true,
-    turbopackFileSystemCacheForBuild: process.env.GITHUB_ACTIONS !== "true",
-    useTypeScriptCli: true, // native TypeScript compiler
+    serverComponentsHmrCancellation: true, // dev only
     optimizePackageImports: [/* icon packages */],
     webVitalsAttribution: ["CLS", "LCP"],
     exposeTestingApiInProductionBuild: process.env.EXPOSE_TESTING_API === "1",
   },
-  typescript: { ignoreBuildErrors: true }, // `pnpm typecheck` is the gate with the native compiler
+  typescript: { ignoreBuildErrors: true }, // `pnpm typecheck` is the gate
   headers: documentSecurityHeaderRules, // no nonce CSP: it forces dynamic rendering and breaks PPR shells
 }
 ```
 
 - Do not set `experimental.instantInsights`: instant validation already defaults to `"warning"`. Opt a route out only with `export const instant = false` and a comment saying why.
-- Keep `gestureTransition` and `transitionIndicator` off; they break back and forward. Use `<ViewTransition>` and `transitionTypes`, and respect reduced motion.
+- Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Keep `.next/cache/**` out of Turbo outputs; Vercel and the CI cache restore it.
+- Do not set `useTypeScriptCli`: `next build` type-checks with the project-local TypeScript.
+- Do not set `supportsImmutableAssets`. The Vercel adapter turns immutable static assets on; the option exists only to opt out while debugging an adapter.
+- Measured opt-ins, never blanket: `experimental.generateComponentChunks`, `turbopackSharedRuntime` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
+- Keep `gestureTransition` and `transitionIndicator` off; they break back and forward. Use `<ViewTransition>` and `addTransitionType` (both stable), and respect reduced motion.
 
 ## Architecture (`nextjs-app-architecture`, latest)
 
@@ -53,7 +57,7 @@ The installed skill is the source of truth. Where it differs from this list, fol
   - When a client component needs server data, split it into an async server half and a client leaf that receives plain props.
 - **Suspense.**
   - The page owns `<Suspense>`, and the feature owns its skeleton, exported from the same file at the end (`CustomerList` and `CustomerListSkeleton`).
-  - Independent fetches get sibling boundaries, and each section that can fail on its own gets its own error boundary.
+  - Independent fetches get sibling boundaries, and each section that can fail on its own gets a `catchError` boundary from `next/error` whose fallback offers `retry()`. It re-renders the failed Server Components and leaves `notFound()` and `redirect()` alone.
   - Prefer page boundaries over `loading.tsx`. Keep `loading.tsx` only as the fallback for cold hard navigations, reusing the feature skeleton.
   - Never `fallback={null}` for visible UI (gates that render nothing are fine). Layouts never `await` an auth gate. Never add a `template.tsx`.
 - **Feature folders** (`features/<domain>/`):
@@ -86,5 +90,12 @@ The installed skill is the source of truth. Where it differs from this list, fol
   - Default `Link` prefetch for ordinary routes.
   - `IntentPrefetchLink` (hover, focus or touch) for unbounded lists.
   - `prefetch={true}` only for a bounded, tested set.
-- **Routing details.** Route aliases are `redirects()` in `next.config`. Omit `export const runtime`.
+- **Routing details.** Route aliases are `redirects()` in `next.config`. Omit `export const runtime`. Read root-level params such as `[locale]` with `next/root-params` instead of passing them down.
+- **React.** `<Activity>` keeps hidden UI mounted with its state (side panels, inactive tabs). Fragment refs replace wrapper `div`s that exist only to hold a ref. The React Compiler memoizes, so code never adds `useMemo`, `useCallback` or `memo` by hand.
 - **Tests.** `@next/playwright` `instant()` covers key navigations. A route-table test asserts every route ships a prerendered shell.
+
+## Agent loop
+
+- Before running `next build`, ask the dev server's `/_next/mcp` endpoint (`get_compilation_issues`, `compile_route`). It answers in seconds and covers the same errors.
+- Verify every UI edit with the `next-dev-loop` skill and `agent-browser` with `--enable react-devtools`.
+- Error IDs link to `nextjs.org/docs/messages/<id>`, and those pages are written for agents. Read the page before guessing a fix.
