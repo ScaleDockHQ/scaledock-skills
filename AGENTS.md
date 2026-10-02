@@ -21,7 +21,7 @@ The package manager is pnpm, pinned in `package.json`. Node is the major in `.no
 - `template/skill/`: the starting point for new skills.
 - `scripts/`: the validator and the `prepare` hook installer.
 - `docs/decisions/`: ADRs.
-- `.agents/skills/` and `skills-lock.json`: skills installed into this repo for local use.
+- `.agents/skills/` and `skills-lock.json`: skills installed into this repo. They are committed so every contributor gets them; never gitignore them.
 
 ## Invariants
 

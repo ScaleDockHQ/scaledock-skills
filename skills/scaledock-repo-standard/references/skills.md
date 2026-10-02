@@ -7,6 +7,7 @@ Applies to product repos. Library repos follow the exception below, and tooling 
 ## Location
 
 - Skills live in `.agents/skills`, are symlinked from `.claude/skills` and `.cursor/skills`, and are pinned in `skills-lock.json`. Install with `pnpm dlx skills add <owner/repo> --skill <name> -y`; if a name moved, use find-skills.
+- Commit `.agents/`, the `.claude/skills` and `.cursor/skills` symlinks, and `skills-lock.json`, so every teammate, cloud agent and CI run gets the same skills from a clone. Never add them to `.gitignore`; a skill installed only on one machine is missing for everyone else.
 - `.cursorignore` excludes bulky skill assets.
 - **Library repos** (they ship their own consumer skills) never vendor third-party skills in `.agents/skills`, `.claude/skills` or `skills/`, because those are `npx skills add` discovery roots. Their maintainers install third-party skills at user level.
 

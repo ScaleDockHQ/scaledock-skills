@@ -66,7 +66,7 @@ Open the reference only to judge its rows.
 
 - **Toolchain** ([`toolchain.md`](toolchain.md)): Node major in `.node-version`, `.nvmrc`, `engines` and `devEngines`; pnpm pinned exactly; the `pnpm-workspace.yaml` settings; the catalog and `catalogMode: strict`; tsconfig presets; Knip; the exact root script names; `verify` covering every CI gate.
 - **Dependencies:** one `behind` row per dependency, action and SDK that is behind latest.
-- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`.
+- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`, both committed and not gitignored.
 - **Architecture** ([`architecture.md`](architecture.md)): the folder tree, boundary tags, contract first, Problem Details, one library per concern, `env.ts`, standard services, code rules.
 - **Lint and format** ([`lint-format.md`](lint-format.md)): `ox-config`, presets, pinned rules, anti-slop, oxfmt.
 - **Platform** ([`vercel.md`](vercel.md), [`local-dev-env.md`](local-dev-env.md)): the needs table, Services and rewrites, `turbo.json`, Remote Cache, Portless, env files and sources.

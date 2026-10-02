@@ -58,4 +58,4 @@ The same file in every repo. Check the option names against the installed docs.
 - `sortImports` with type imports first and an `internalPattern` for `@/` and `@{{SCOPE}}/`.
 - `sortPackageJson` with sorted scripts.
 - Tailwind class sorting for `cn`, `cva` and `tv`.
-- Agent folders and generated files are ignored.
+- oxfmt ignores agent folders and generated files, so vendored skills stay byte-identical to upstream. This is a formatter ignore only; they are still committed.
