@@ -10,6 +10,7 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 - **`@supabase/ssr`** owns web session cookies, and only the proxy refreshes them.
 - **better-supabase** wraps those contexts with the generated types and `Result` repositories through its framework subpaths. Apps import the subpath, not `@supabase/server` directly.
 - **`packages/supabase`** re-exports the typed clients and holds the one `createAdminContext()` (`server` subpath), the only place `sb_secret_` is read.
+- **`@supabase/supabase-js`** follows better-supabase's peer range. The next major is published on the `next` tag; adopt it only once that peer range allows it, and record a `blocked` row until then.
 
 ## Multi-tenant (default: yes)
 

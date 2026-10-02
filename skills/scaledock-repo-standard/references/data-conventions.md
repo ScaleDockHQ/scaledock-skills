@@ -7,14 +7,16 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 ## Timestamps
 
 - Columns are always `timestamptz`, never `timestamp`. The database, the Vercel functions and CI run in UTC.
-- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`).
-- Convert to the user's time zone only at display, through the next-intl or i18next formatters, or date-fns with `@date-fns/tz`. Never store local time.
+- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`). The domain schema transforms them to `Temporal.Instant`.
+- Convert to the user's time zone only at display: `instant.toZonedDateTimeISO(zone)`, formatted through the next-intl or i18next formatters, which use `Intl`. Never store local time.
+- Durations are `Temporal.Duration`, sent as ISO 8601 durations (`PT15M`).
 
 ## Calendar dates and time zones
 
-- A calendar day (a birthday, a due date) is a `date`, sent as `YYYY-MM-DD` (Valibot `isoDate`). Never use a midnight timestamp for a day.
-- User and organization time zones are IANA names (`Europe/Amsterdam`), never offsets.
-- A recurring local time stores the local time plus the IANA zone, never a precomputed UTC instant.
+- A calendar day (a birthday, a due date) is a `date`, sent as `YYYY-MM-DD` (Valibot `isoDate`), and parsed to `Temporal.PlainDate`. Never use a midnight timestamp for a day.
+- User and organization time zones are IANA names (`Europe/Amsterdam`), never offsets. Zone math goes through `Temporal.ZonedDateTime`, so daylight-saving changes are handled.
+- A recurring local time stores the local time plus the IANA zone (`Temporal.PlainTime` and the zone name), never a precomputed UTC instant.
+- Compare with `Temporal.Instant.compare` and `Temporal.PlainDate.compare`, never with `<` or `getTime()`.
 
 ## Money
 

@@ -20,6 +20,7 @@ Applies to product repos with the `mobile` surface or with Framework `expo`.
 - Every Expo package and `react-native` is at the version the installed SDK bundles. `expo install --check` and `expo-doctor` must pass.
 - `expo.install.exclude` in the app's `package.json` lists only packages deliberately ahead of the SDK, each with the reason in a catalog comment.
 - New Architecture, Hermes and the React Compiler stay on. Never add `useMemo`, `useCallback` or `React.memo` by hand.
+- Hermes has no `Temporal`, so Expo code imports it from `@{{SCOPE}}/domain/temporal` like every other workspace (see [`architecture.md`](architecture.md)).
 
 ## App config
 

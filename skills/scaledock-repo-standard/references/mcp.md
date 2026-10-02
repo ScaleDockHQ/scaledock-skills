@@ -7,7 +7,10 @@ Applies to repos with the `mcp` surface, and the docs MCP to every repo with a d
 - **Packages.** `@modelcontextprotocol/server` and `@modelcontextprotocol/client`, latest major. Never the legacy `@modelcontextprotocol/sdk` package, `mcp-handler`, `orpc-mcp`, or a hand-written JSON-RPC switch. A library whose bundle budget rules out the SDK records an ADR.
 - **Transport.**
   - `createMcpHandler(factory)` is mounted in the Hono shell: `app.all("/mcp", (c) => handler.fetch(c.req.raw, { authInfo }))`.
-  - It serves the latest MCP spec revision and falls back for clients on older revisions; check the installed SDK docs for which revisions it supports. No session store.
+  - It serves the latest MCP spec revision, whose core is stateless: there is no initialize handshake, and every request carries its own envelope. Keep `legacy: "stateless"` so clients on the 2025 revisions still connect; check the installed SDK docs for which revisions it supports. No session store.
+  - Handlers read the caller and protocol details from `ctx.mcpReq.envelope`, never from module state.
+  - Never offer the HTTP+SSE transport; it is deprecated.
+  - The MCP app's tsconfig lists `types: ["node"]`, which the server package needs.
   - DNS-rebinding protection uses `allowedHosts` for the production, preview and Portless hosts. `resource-origin.ts` resolves the public origin from `x-forwarded-proto` and the host.
 - **Auth.**
   - `requireBearerAuth` (or `verifyBearerToken`) with a verifier backed by `@supabase/server`.

@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.1"
+  version: "1.3.0"
 ---
 
 # Repo standard
@@ -42,7 +42,7 @@ Resolve the placeholders listed in [`references/audit.md`](references/audit.md) 
    - **Exceptions.** Stay on the current major only when the pre-release fails `minimumReleaseAge` or breaks a peer with no compatible release. Record the blocker in the gap table.
    - **Tracking.** List every pre-release pin under "Pre-release pins" in AGENTS.md (package, version, why), and move it to stable when the major ships.
    - Pin exactly in the catalog. Never bypass `minimumReleaseAge`; use the newest release that passes, and add a commented exclude only when a fix needs it.
-3. **Read installed docs before configuring.** Read `node_modules/next/dist/docs`, `node_modules/turbo/docs`, the Expo, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
+3. **Read installed docs before configuring.** For Next.js, ask the running dev server's `/_next/mcp` first, then read the bundled `node_modules/next/dist/docs`. Read `node_modules/turbo/docs`, the Expo, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
 4. **Done means `pnpm verify` passes.** Report with [`assets/report.md`](assets/report.md).
 5. **One branch and one PR for this whole run.** Follow the agent workflow in [`references/git-workflow.md`](references/git-workflow.md).
 
@@ -86,9 +86,13 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] `pnpm verify` passes locally (rule 4).
 - [ ] Every dependency is `catalog:` or `workspace:*` at the latest release that passes `minimumReleaseAge`; every override, exclude, `allowBuilds` entry and patch has a comment.
 - [ ] Every pre-release pin is in AGENTS.md (rule 2).
+- [ ] `pnpm-workspace.yaml` has no key the installed pnpm rejects, and TypeScript is the stable native compiler with no preview package.
 - [ ] Every deviation has an ADR in `docs/decisions/` and a line in the AGENTS.md "Deviations" list.
 - [ ] [workspaces] Every workspace has a Turbo boundary tag, apps never import each other, and `pnpm boundaries` passes.
 - [ ] No Zod in our code, no `@radix-ui/*` or vaul, and each concern uses its one library.
+- [ ] Dates use `Temporal` through the one `temporal.ts` module; no other date library is installed.
+- [ ] Every tsgolint type-aware rule is on, or listed as off with a reason.
+- [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
 - [ ] [api] Every procedure lives in `packages/contract` with `openapi()` meta, and the committed OpenAPI snapshot matches.
 - [ ] [api, mcp, cli] Errors are RFC 9457 Problem Details on every surface.
@@ -108,7 +112,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
-- **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
+- **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps and Temporal, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
 - **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
 - **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK through AI Gateway).
 - **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).

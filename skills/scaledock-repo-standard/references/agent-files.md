@@ -6,7 +6,7 @@ Applies to every repo kind. A repo whose AGENTS.md holds every rule within the s
 
 ## `AGENTS.md`
 
-At most 12 KB, including the Turbo block. The Turbo block stays last and is committed as written. Sections:
+At most 12 KB, not counting the managed blocks. Tools write those blocks between their own markers: Next.js (`<!-- BEGIN:nextjs-agent-rules -->`, written by `next dev`) and Turborepo. They stay at the end, are committed as written, and are never edited by hand. Because `CLAUDE.md` holds only `@AGENTS.md`, Next.js writes its block into AGENTS.md and leaves `CLAUDE.md` alone. Sections:
 
 - What the repo is
 - Commands
@@ -46,6 +46,8 @@ At least these rows:
 | UI primitive             | `DESIGN.md`                                                                                                    |
 | Package version          | `server.json`                                                                                                  |
 | Dependency bump          | catalog, the "Pre-release pins" list, a note on the absorbed API changes, an ADR if a one-library line changes |
+| `typescript` bump        | `oxlint-tsgolint` in the same commit                                                                           |
+| Next.js bump             | run `next dev` once and commit the refreshed managed AGENTS.md block                                           |
 | User-visible change      | a changeset                                                                                                    |
 
 With Expo, add these rows and extend the matching rows above:
@@ -64,7 +66,7 @@ With Expo, add these rows and extend the matching rows above:
 - `PRODUCT.md`: the promise, users, scope, voice, and what we never claim.
 - `DESIGN.md`: tokens, shell, templates and overlays.
 - `docs/decisions/`: the ADRs.
-- MCP config in `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: the product MCP, the docs MCP, the Vercel MCP, shadcn and ReUI.
+- MCP config in `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: the product MCP, the docs MCP, the Vercel MCP, shadcn, ReUI, and `next-devtools-mcp` with Next.js.
 
 ## Writing
 

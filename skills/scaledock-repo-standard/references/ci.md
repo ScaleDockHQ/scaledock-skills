@@ -20,7 +20,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - `openapi:check`, `i18n:check` and `docs:drift`
   - `doctor`
 
-  Next builds run with `--concurrency=1`. A reusable `workflow_call`, so `release.yml` runs the same gate on the release commit.
+  Next builds run with `--concurrency=1`. A job that runs `next build` restores `.next/cache` with `actions/cache`, keyed on the lockfile and the app's sources, so the Turbopack build cache survives between runs. Affected runs on PRs combine `--affected` with the job's `--filter`. A reusable `workflow_call`, so `release.yml` runs the same gate on the release commit.
 
 - **`security.yml`:** zizmor on workflow changes, and `dependency-review-action` on PRs.
 - **`database.yml`:** on `supabase/**` changes, start the stack, run pgTAP and lint the SQL.

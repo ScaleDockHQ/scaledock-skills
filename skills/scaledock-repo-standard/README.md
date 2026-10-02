@@ -26,7 +26,9 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - **Audit first.** Upgrade and align modes fill a gap table from a fixed checklist before changing anything. Deliberate deviations live in ADRs and are kept, never changed silently.
 - **Always the latest.** The skill names no versions. Every runtime, package, SDK, action and spec is looked up at run time, and new majors in pre-release are adopted early and tracked in AGENTS.md.
-- **Read installed docs first.** Flag and option names are checked against the installed versions before configuring.
+- **Read installed docs first.** Flag and option names are checked against the installed versions before configuring, starting with the Next.js dev server's `/_next/mcp` and bundled docs.
+- **Strict and typed.** The stable native TypeScript compiler, every type-aware oxlint rule at error, Valibot for every schema, and `Temporal` as the one date library.
+- **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
 - **Done means `pnpm verify` passes.** The run ends with a report of what changed, the deviations kept, the pre-release pins, and the manual steps left.
 - **One branch and one PR per run.** Small conventional commits, one PR, never merged without being asked.
 
@@ -44,21 +46,21 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - [`references/skills.md`](references/skills.md): agent skills to install and commit.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
-- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern, env, code rules.
+- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules.
 - [`references/lint-format.md`](references/lint-format.md): oxlint presets, anti-slop, oxfmt.
 - [`references/vercel.md`](references/vercel.md): Vercel first, Services, Turborepo, Remote Cache.
 - [`references/local-dev-env.md`](references/local-dev-env.md): Portless, the native dev loop, env and secrets.
 
 **Surfaces:**
 
-- [`references/nextjs.md`](references/nextjs.md): shared Next config and app architecture.
+- [`references/nextjs.md`](references/nextjs.md): shared Next config, app architecture, and the agent loop.
 - [`references/i18n.md`](references/i18n.md): next-intl with root params, and i18next on Expo.
 - [`references/ui.md`](references/ui.md): shadcn, ReUI Pro, responsive rules.
 - [`references/app-shell.md`](references/app-shell.md): auth pages, shell, page templates, standard screens.
 - [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web.
 - [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native.
 - [`references/data-permissions.md`](references/data-permissions.md): multi-tenancy, Supabase, better-supabase, audit log, PermDock.
-- [`references/data-conventions.md`](references/data-conventions.md): UTC timestamps, integer money, UUID and integer IDs, naming, standard codes, pagination, deletion.
+- [`references/data-conventions.md`](references/data-conventions.md): UTC timestamps and Temporal types, integer money, UUID and integer IDs, naming, standard codes, pagination, deletion.
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface.
 - [`references/api.md`](references/api.md): Hono, oRPC, Scalar.
 - [`references/mcp.md`](references/mcp.md): MCP server, tools from the contract, docs MCP.
