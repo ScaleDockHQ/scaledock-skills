@@ -18,7 +18,7 @@ Resolve these from the inputs before you write any file.
 
 | Reference             | `product`            | `library`                  | `tooling`                                                 |
 | --------------------- | -------------------- | -------------------------- | --------------------------------------------------------- |
-| `skills.md`           | yes                  | user-level only            | `find-skills` only                                        |
+| `skills.md`           | yes                  | `find-skills` and stack    | `find-skills` only                                        |
 | `toolchain.md`        | yes                  | yes                        | yes, minus workspace tsconfig and Knip without TypeScript |
 | `architecture.md`     | yes                  | `packages/` and code rules | no                                                        |
 | `lint-format.md`      | yes                  | yes                        | only for JS or TS code                                    |
@@ -66,7 +66,7 @@ Open the reference only to judge its rows.
 
 - **Toolchain** ([`toolchain.md`](toolchain.md)): Node major in `.node-version`, `.nvmrc`, `engines` and `devEngines`; pnpm pinned exactly; the `pnpm-workspace.yaml` settings; the catalog and `catalogMode: strict`; no workspace key the installed pnpm rejects; stable native TypeScript with no `@typescript/native-preview` or `@typescript/typescript6`; tsconfig presets without `baseUrl`; Knip; the exact root script names; `verify` covering every CI gate.
 - **Dependencies:** one `behind` row per dependency, action and SDK that is behind latest.
-- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`, both committed and not gitignored; retired Next.js knowledge skills removed.
+- **Skills** ([`skills.md`](skills.md)): the installed set and `skills-lock.json`, both committed and not gitignored; every installed skill tracked in the lock; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own; retired Next.js knowledge skills removed.
 - **Architecture** ([`architecture.md`](architecture.md)): the folder tree, boundary tags, contract first, Problem Details, one library per concern, `env.ts`, standard services, code rules.
 - **Dates** ([`architecture.md`](architecture.md)): `Temporal` through `packages/domain/src/temporal.ts`; any date-fns, dayjs, luxon or moment dependency is a `gap`.
 - **Lint and format** ([`lint-format.md`](lint-format.md)): `ox-config`, presets and categories, every tsgolint rule on or documented off, pinned rules, anti-slop, oxfmt.

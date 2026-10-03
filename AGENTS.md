@@ -31,7 +31,7 @@ The package manager is pnpm, pinned in `package.json`. Node is the major in `.no
 3. `SKILL.md` stays concise: inputs, invariants, workflow, verify checklist and reference index. Long material goes in `references/`, `scripts/` or `assets/`.
 4. `metadata.version` in `SKILL.md` and `version` in `metadata.json` are bumped together, following semver.
 5. Start new skills with `cp -r template/skill skills/scaledock-<topic>` or `cp -r template/standard-skill skills/<spec-name>`.
-6. Do not edit `.agents/skills/` or `skills-lock.json` by hand. Manage them with `pnpm dlx skills`.
+6. Do not edit `.agents/skills/` or `skills-lock.json` by hand. Manage them with `pnpm dlx skills`; the lock is what keeps installed skills out of `npx skills add ScaleDockHQ/scaledock-skills`.
 7. Spec skills are neutral: no ScaleDock or PermDock beyond `author` and the install source. Every rule comes from a listed source, and every source is pinned in `metadata.json` `sources` and the `## Sources` section.
 8. Skills point to other skills by name and install command, never by relative link.
 
@@ -67,7 +67,6 @@ One branch and one PR per chat or plan.
 Deliberate differences from `scaledock-repo-standard`, each with an ADR:
 
 - Only the toolchain, formatting, git hooks, CI and repo-file parts of the standard apply. App surfaces, Turborepo, TypeScript, Knip, oxlint, Changesets and Vercel do not. See [ADR 0001](docs/decisions/0001-standard-scope-for-skills-repo.md).
-- `find-skills` stays vendored in `.agents/skills/` even though this repo publishes skills. See [ADR 0002](docs/decisions/0002-vendored-find-skills.md).
 
 ## Pre-release pins
 

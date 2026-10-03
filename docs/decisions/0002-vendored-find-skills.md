@@ -1,7 +1,9 @@
 # 0002. Keep find-skills vendored in .agents/skills
 
-- Status: accepted
+- Status: superseded by `scaledock-repo-standard` 1.6.0
 - Date: 2026-10-02
+
+> Superseded on 2026-10-03. The standard now requires every repo kind, including repos that publish skills, to commit installed skills and manage them only with `pnpm dlx skills`, so committing `find-skills` is no longer a deviation. The reasoning below was also wrong: skills CLI 1.7.0 does not hide `.agents/skills` because `skills/` is found first. It hides installed skills because `skills-lock.json` tracks them. A hand-copied skill missing from the lock is offered to consumers even when `skills/` exists.
 
 ## Context
 

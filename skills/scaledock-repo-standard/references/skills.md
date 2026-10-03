@@ -1,15 +1,16 @@
 # Skills
 
-Which agent skills every repo installs, where they live, and when a repo must not vendor them.
+Which agent skills every repo installs, where they live, and how they are committed and kept current.
 
-Applies to product repos. Library repos follow the exception below, and tooling repos install `find-skills` only.
+Location applies to every repo kind. The install list applies to product repos; library repos install `find-skills` and the entries that match their stack, and tooling repos install `find-skills` only.
 
 ## Location
 
 - Skills live in `.agents/skills`, are symlinked from `.claude/skills` and `.cursor/skills`, and are pinned in `skills-lock.json`. Install with `pnpm dlx skills add <owner/repo> --skill <name> -y`; if a name moved, use find-skills.
 - Commit `.agents/`, the `.claude/skills` and `.cursor/skills` symlinks, and `skills-lock.json`, so every teammate, cloud agent and CI run gets the same skills from a clone. Never add them to `.gitignore`; a skill installed only on one machine is missing for everyone else.
+- Manage skills only with the CLI: `pnpm dlx skills add` to install, `pnpm dlx skills update -p -y` to update, `pnpm dlx skills remove` to remove. Never copy, edit or delete skill folders by hand, so `skills-lock.json` lists every installed skill.
 - `.cursorignore` excludes bulky skill assets.
-- **Library repos** (they ship their own consumer skills) never vendor third-party skills in `.agents/skills`, `.claude/skills` or `skills/`, because those are `npx skills add` discovery roots. Their maintainers install third-party skills at user level.
+- **Repos that publish skills** (library repos and skills repos) commit installed skills the same way. `npx skills add <repo>` skips any skill in `.agents/skills`, `.claude/skills` or another agent folder that the repo's `skills-lock.json` tracks, so consumers are never offered them. A hand-copied skill is not in the lock and is offered, so the CLI-only rule is what keeps these repos safe. Never put a third-party skill in `skills/` or at the repo root; those hold the repo's own skills. After any skill change, run `pnpm dlx skills add . --list` and check that it lists only the repo's own skills.
 
 ## Install
 
