@@ -30,7 +30,7 @@ packages/
   ox-config/   ONE package: oxlint presets, oxfmt config, ignores, anti-slop plugin
   typescript-config/  base.json, library.json, react-library.json, next.json, expo.json (with Expo)
   cli/         library CLI (@{{SCOPE}}/cli), when CLI kind is "library"
-tests/         e2e (Playwright + axe + @next/playwright), integration, fixtures
+tests/         integration, fixtures, optional e2e (Playwright + axe + @next/playwright)
 supabase/      config.toml, schemas/, migrations/, seeds/, tests/ (pgTAP)
 scripts/       repo scripts (TypeScript run directly by Node)
 docs/agents/   "things agents get wrong" topic files

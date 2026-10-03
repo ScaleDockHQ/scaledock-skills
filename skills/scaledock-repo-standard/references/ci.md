@@ -13,7 +13,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - Runs on PRs and on pushes to the working branch and `main`.
   - Minimal permissions plus `id-token: write`, cancelling concurrency and `CI: true`.
   - A `pr-title` job runs commitlint on the PR title.
-  - Calls `verify.yml` (affected-only on PRs), then e2e.
+  - Calls `verify.yml` (affected-only on PRs), then e2e if the repo has it.
 - **`verify.yml`:** a `fail-fast: false` matrix with one job per `pnpm verify` gate, and nothing else, so local and CI results agree:
   - format, lint, knip, typecheck, test and boundaries
   - `audit:high`

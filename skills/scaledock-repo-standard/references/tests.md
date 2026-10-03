@@ -4,6 +4,7 @@ The test runners per layer, and the rules every test follows.
 
 Applies to every repo kind that has code.
 
+- **Focus:** unit and integration tests (Vitest, pgTAP, the in-process MCP and CLI tests) are the required layers. e2e and UI tests are slow to run and rarely catch what those layers miss, so they are not required.
 - **Vitest** for unit, integration and `expectTypeOf` tests, run from a root `vitest.config.ts` with projects:
   - `test.projects` references each workspace's `vitest.config.ts`. A referenced config may declare its own nested projects, for example `unit` and `integration`.
   - Inline projects inherit the root config and share one Vite server, so shared options live once in the root. Set `extends: false` only for a project that must not inherit, with a comment saying why.
@@ -16,7 +17,9 @@ Applies to every repo kind that has code.
   - Native-only modules (`@expo/ui`, keyboard-controller, Sentry) are mocked in `tests/components/mocks/` through `moduleNameMapper`, never with `jest.mock` in a test.
   - Pure logic in Expo apps still runs on Vitest.
 - **App config test** (with Expo): asserts the `app.config.ts` variants, plugin options, `ios`/`android` scripts and any native patch, so a config regression fails before a native build.
-- **Playwright** with `@axe-core/playwright` at mobile and desktop viewports, and `@next/playwright` `instant()` for Next apps. A universal Expo app runs Playwright against its exported web build.
+- **Playwright** (optional): add it only for a few critical journeys that lower layers cannot cover, such as sign-in or checkout across the real stack, and keep it out of `pnpm verify`.
+  - When present, it runs with `@axe-core/playwright` at mobile and desktop viewports, and `@next/playwright` `instant()` for Next apps.
+  - A universal Expo app runs Playwright against its exported web build.
 - **pgTAP** for RLS, grants and the audit triggers.
 - **In-process tests** for MCP and the CLI (see [`mcp.md`](mcp.md) and [`cli.md`](cli.md)). An OpenAPI snapshot test for the API.
 - **Rules:**

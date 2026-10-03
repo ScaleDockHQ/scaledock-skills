@@ -30,6 +30,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Strict and typed.** The stable native TypeScript compiler, every type-aware oxlint rule at error, Valibot for every schema, and `Temporal` as the one date library.
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
+- **Unit and integration first.** Tests focus on the unit and integration layers. e2e and UI tests are slow and add little, so they are an opt-in for a few critical journeys.
 - **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
 - **Done means `pnpm verify` passes.** The run ends with a report of what changed, the deviations kept, the pre-release pins, and the manual steps left.
 - **One branch and one PR per run.** Small conventional commits, one PR, never merged without being asked, and never merged before the required checks pass.
@@ -75,7 +76,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - [`references/git-workflow.md`](references/git-workflow.md): branches, the agent workflow, commitlint, lefthook, Changesets, releases.
 - [`references/ci.md`](references/ci.md): GitHub Actions on release tags, EAS builds and Dependabot.
-- [`references/tests.md`](references/tests.md): Vitest, jest-expo, Playwright, pgTAP, test rules.
+- [`references/tests.md`](references/tests.md): Vitest, jest-expo, pgTAP, optional Playwright, test rules.
 - [`references/agent-files.md`](references/agent-files.md): AGENTS.md, rules, the "also update" table, writing rules.
 - [`references/repo-files.md`](references/repo-files.md): README, standard files, `.github`, VS Code.
 
