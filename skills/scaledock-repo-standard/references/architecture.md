@@ -1,8 +1,8 @@
 # Architecture
 
-The folder tree, Turbo boundaries, contract first, errors, one library per concern, env, standard services, and code rules.
+The folder tree, Turbo boundaries, contract first, errors, one library per concern, env, standard services, code rules, and naming and layout.
 
-Applies to product repos. Library repos apply the `packages/` layout, boundaries and code rules; tooling repos skip it.
+Applies to product repos. Library repos apply the `packages/` layout, boundaries, code rules and naming. Tooling repos apply only the naming rules.
 
 ## Folder structure
 
@@ -92,5 +92,31 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
   - Resend through `packages/email`.
   - Stripe per organization: price IDs in the database, webhooks verified in `apps/api`, operational settings in `platform_settings`.
 - **Code rules.** Imports at the top. Exhaustive `switch` with a `never` default. Only erasable syntax. Every `as T` has a `SAFETY:` comment; prefer a guard or a schema parse. Comments state constraints only.
+  - **Lazy imports.** A dynamic `import()` is allowed only for a measured startup cost (a CLI command, a client panel) or an optional peer. It carries a comment that names the reason. An optional peer's import catches the missing-module error and falls back, or fails with a message that names the package to install.
   - No `Date` in `domain`, `contract` or `services`. A `Date` appears only where a third-party API demands one, converted from or to `Temporal` on that line, with a comment naming the API.
   - No hand-written `useMemo`, `useCallback` or `memo`; the React Compiler memoizes.
+
+## Naming and layout
+
+Applies to every repo kind. Database names are in [`data-conventions.md`](data-conventions.md).
+
+- **One name per concept** across every adapter, example and doc.
+  - The declarative definition has one name, and every runtime instance an adapter creates has one short name (better-supabase: `betterSupabase` and `bs`).
+  - Never let near-mirror names sit side by side (`sb` next to `bs`), and never name an instance after its framework (`next`, `browser`, `server`, `mcp`).
+- **Same operation, same method name** in every adapter. A Next adapter's `server()` next to a server adapter's `context()` for the same operation is a bug, and so is `handle` in one adapter and `handler` in another.
+- **Factories and types.**
+  - `define*` returns a declarative value, and `create*` returns a runtime instance.
+  - Every adapter factory returns `<Prefix><Thing>`, with one prefix for the library.
+  - Options types are `<Thing>Options`, with no verb prefix (`DefineSupabaseOptions` and `CreateQueriesOptions` are drift).
+  - A `./client` subpath exports `createClient`, not a name after the platform such as `createBrowser`.
+- **Acronyms are written as words:** `toOrpcError`, `OpenApi`, `McpServer`.
+- **Objects keyed by user data** (tables, query keys) put their own members behind a `$` prefix (`$key`, `$tableName`), so a table named `key` cannot collide with them. A name is never both a property and a method.
+- **Generic propagation.** Every adapter factory carries every type parameter of the definition. A type test per adapter proves that a refinement on the definition, such as `.claims(schema)`, reaches the handler (`auth.claims`).
+- **Server and client layout.**
+  - One folder per concern: `lib/supabase/index.ts`, `server.ts` and `client.ts`, matching Supabase's Next.js guide. Never `.server.ts` or `.client.ts` suffixes.
+  - A Next `server.ts` starts with `import "server-only"`.
+  - Generators never write a path that two adapters would both claim. Hono and oRPC create `bs` in their entry file, and each edge function gets its own `server.ts`.
+- **Enforcement.**
+  - `docs:drift` fails on old instance names, old file paths, and API members that are not in `api/exports.json` (or the repo's exported API list).
+  - It walks files with `fs.glob`, excludes `node_modules` and `.next`, and skips the Naming page.
+  - A breaking rename ships a docs "Naming" page and a changeset, each ending in a table from the old name to the new one.

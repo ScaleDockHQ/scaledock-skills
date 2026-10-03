@@ -9,6 +9,8 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 - **`@supabase/server`** verifies bearer tokens over JWKS and builds the request context: `createRequestSupabaseContext(request, { env, auth: "user" })`. Nothing else verifies tokens.
 - **`@supabase/ssr`** owns web session cookies, and only the proxy refreshes them.
 - **better-supabase** wraps those contexts with the generated types and `Result` repositories through its framework subpaths. Apps import the subpath, not `@supabase/server` directly.
+  - The definition is named `betterSupabase`, and every runtime instance an adapter creates is named `bs`, in code and docs alike. Adapter factories return `Better<Thing>` (`BetterNext`, `BetterClient`, `BetterPostgres`), and the `./client` subpath exports `createClient`.
+  - Each app keeps its instances in `lib/supabase/` as described in the naming rules in [`architecture.md`](architecture.md).
 - **`packages/supabase`** re-exports the typed clients and holds the one `createAdminContext()` (`server` subpath), the only place `sb_secret_` is read.
 - **`@supabase/supabase-js`** follows better-supabase's peer range. The next major is published on the `next` tag; adopt it only once that peer range allows it, and record a `blocked` row until then.
 
