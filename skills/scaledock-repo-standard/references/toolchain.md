@@ -89,7 +89,10 @@ Also:
 - **Quality:**
   - `build`, `format`, `format:check`, `lint`, `lint:root`, `typecheck`, `typecheck:tooling`, `knip`, `boundaries`, `audit:high`, `docs:drift`, `openapi:check`, `i18n:check`, `doctor`, `check:publish` (libraries only), and `analyze` (`next analyze`, with Next apps; not part of `verify`).
   - `check` is `format:check`, `lint` and `typecheck`: the fast gate.
-  - `verify` is `check`, `knip`, `test`, `boundaries`, `audit:high`, `openapi:check`, `i18n:check`, `docs:drift` and `doctor`, skipping the scripts the repo does not have. It runs every gate CI runs, so a green `verify` means a green CI.
+  - `verify` covers `check`, `knip`, `test`, `boundaries`, `audit:high`, `openapi:check`, `i18n:check`, `docs:drift` and `doctor`, plus `check:prose`, `gen:check`, `typecheck:matrix`, `typecheck:perf` and `size` where the repo has them. It runs every gate CI runs, so a green `verify` means a green CI.
+  - In a Turbo workspace, `verify` is never a serial `&&` chain. Every check is a Turbo task with `inputs`, so `verify` is one cached, parallel `turbo run <tasks>` plus the few steps that only run at the root (`format:check`, `lint:root`, `boundaries`).
+  - No check runs twice. A check that `verify` runs as its own task is never also called from inside `test` or another task.
+  - A repo without workspaces or Turbo (a small tooling repo) keeps `verify` as one script that calls its few checks.
   - `doctor` runs every installed doctor: `better-supabase doctor`, `permdock doctor`, and `expo-doctor` with Expo.
 - **Tests:** `test`, `test:e2e`, `test:integration`, and `test:components` with Expo.
 - **Expo:** `ios`, `android` (`expo run:*`), `native:prepare` (`expo prebuild --clean --no-install`, never part of the daily loop).
