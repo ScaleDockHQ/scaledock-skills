@@ -28,4 +28,4 @@ Applies to a Next.js `app`. Expo UI is in [`expo.md`](expo.md); the `DESIGN.md`,
   - Touch targets `min-h-11`, hover styles behind `@media (hover: hover)`, `dvh` units and safe-area insets.
   - Light and dark themes, and reduced motion.
   - The latest published WCAG version at level AA.
-  - e2e tests run at mobile and desktop viewports.
+  - When the repo has e2e tests, they run at mobile and desktop viewports.

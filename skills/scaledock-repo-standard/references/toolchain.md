@@ -94,7 +94,7 @@ Also:
   - No check runs twice. A check that `verify` runs as its own task is never also called from inside `test` or another task.
   - A repo without workspaces or Turbo (a small tooling repo) keeps `verify` as one script that calls its few checks.
   - `doctor` runs every installed doctor: `better-supabase doctor`, `permdock doctor`, and `expo-doctor` with Expo.
-- **Tests:** `test`, `test:e2e`, `test:integration`, and `test:components` with Expo.
+- **Tests:** `test`, `test:integration`, `test:components` with Expo, and `test:e2e` when the repo has e2e tests.
 - **Expo:** `ios`, `android` (`expo run:*`), `native:prepare` (`expo prebuild --clean --no-install`, never part of the daily loop).
 - **Offline:** `sync:start`, `sync:stop`, `sync:reset`, `sync:logs`.
 - **Releases:** `changeset`, `version-packages`, `release`.
