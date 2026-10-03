@@ -35,6 +35,7 @@ This applies to agents and people alike.
    - Never split a plan into one PR per todo.
 6. **New work, new branch.** Start a new branch and PR only when the user starts a new chat or plan, or asks for a separate PR.
 7. **Never merge without being asked.** Don't merge the PR unless the user asks. Never push to `main` or directly to the working branch.
+   - Even when the user asks to merge, wait until the required checks pass, and confirm that the base branch has required status checks at all (`gh api repos/{owner}/{repo}/branches/<branch>/protection`). With none configured, a PR merges at once and CI first fails on `main`. Report that as a gap instead of merging.
 
 Bot PRs (Dependabot, the Changesets version PR) are the only other PRs.
 

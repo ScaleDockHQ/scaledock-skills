@@ -28,11 +28,8 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
     appNewScrollHandler: true,
     requestInsights: true, // dev-only spans for /_next/mcp audits
     authInterrupts: true, typedEnv: true,
-    taint: true, blockingSSR: true, // both opt into react@experimental; taint also covers process.env
     turbopackRustReactCompiler: true,
     serverComponentsHmrCancellation: true, // dev only
-    optimizePackageImports: [/* icon packages */],
-    webVitalsAttribution: ["CLS", "LCP"],
     exposeTestingApiInProductionBuild: process.env.EXPOSE_TESTING_API === "1",
   },
   typescript: { ignoreBuildErrors: true }, // `pnpm typecheck` is the gate
@@ -44,7 +41,12 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
 - Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Keep `.next/cache/**` out of Turbo outputs; Vercel and the CI cache restore it.
 - Do not set `useTypeScriptCli`: `next build` type-checks with the project-local TypeScript.
 - Do not set `supportsImmutableAssets`. The Vercel adapter turns immutable static assets on; the option exists only to opt out while debugging an adapter.
-- Measured opt-ins, never blanket: `experimental.generateComponentChunks`, `turbopackSharedRuntime` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
+- Measured opt-ins, never in the default block:
+  - `experimental.generateComponentChunks`, `turbopackSharedRuntime` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
+  - `experimental.taint` and `blockingSSR`. Both pull in `react@experimental`, so turn one on only when code calls the API (`taintUniqueValue`, `taintObjectReference`), with a `next analyze` comparison in the commit.
+  - `webVitalsAttribution`, only while someone reads the attribution data.
+  - `optimizePackageImports`, only for a package that is not already in the Next default list. Most icon packages are in it.
+- **Markdown negotiation** (`Accept: text/markdown`) goes through `rewrites().beforeFiles` with a `has` condition on the `accept` header, and a `headers()` rule that sets `Vary: Accept` on the same paths. A `proxy.ts` is the fallback when a rewrite cannot express the rule, and it always exports a `matcher`. A proxy without a matcher runs on every request, including static assets, and is a gap.
 - Keep `gestureTransition` and `transitionIndicator` off; they break back and forward. Use `<ViewTransition>` and `addTransitionType` (both stable), and respect reduced motion.
 
 ## Architecture (`nextjs-app-architecture`, latest)

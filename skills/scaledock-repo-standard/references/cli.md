@@ -1,6 +1,6 @@
 # CLI
 
-CLI kinds, stack, layout, behavior, build, product CLI auth, and tests. Pick the kind from the inputs.
+CLI kinds, stack, layout, behavior, performance, build, product CLI auth, and tests. Pick the kind from the inputs.
 
 Applies when CLI kind is not `none`: `product` in product repos, `library` in library repos, `tooling` in any repo.
 
@@ -37,6 +37,17 @@ bin/{{bin}}.js      checked-in shim: import "../dist/bin.js"
 - **Exit codes:** `0` for success, `1` for failure (including drift found by `--check`), `2` for a usage error.
 - **Prompts** run only when stdin and stdout are TTYs, `CI` is unset, and neither `--json` nor `--yes` is passed. Otherwise a missing value exits with `2` and names the flag to pass.
 - **Secrets** are never arguments. Use a hidden prompt or `--<name>-stdin`.
+- **Deterministic output.** Sort with a code-point comparison (`a < b ? -1 : a > b ? 1 : 0`), never `localeCompare`, so output does not change with the machine's locale.
+
+## Performance
+
+- **Startup budget.** `--help` takes close to the time of `--version`.
+  - The root `--help` prints a static usage table instead of resolving every subcommand.
+  - The prompter, config loaders, typegen and fuzzy matching load inside the command that needs them, through the lazy-import rule in [`architecture.md`](architecture.md).
+  - Measure with `time {{bin}} --help` and `time {{bin}} --version`, and put both numbers in the commit.
+- **Optional heavy peers** load only when the input needs them. For example, load the Supabase config loader only when `config.toml` contains `env(`, and parse it with `smol-toml` otherwise. The import has the fallback and comment the lazy-import rule requires.
+- **Databases.** Independent queries run in parallel through a small pool. Every connection sets `connectionTimeoutMillis` and `statement_timeout`. Ctrl-C aborts in-flight work through an `AbortController` and closes the pool.
+- **On-disk caches** live under `node_modules/.cache/{{bin}}`, keyed by a cheap fingerprint such as file sizes and modification times, or a hash of the config.
 
 ## Build
 

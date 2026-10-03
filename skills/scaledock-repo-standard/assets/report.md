@@ -23,6 +23,13 @@ One line per ADR: number, title, and why it stays.
 
 One line per pin: package, version, why, and what moves it to stable.
 
+## Baselines
+
+One row per baseline from `references/performance.md`: what was measured, the value before the run, the value after it, and the commit that moved it.
+
+| Baseline | Before | After | Commit |
+| -------- | ------ | ----- | ------ |
+
 ## Verify
 
 The `pnpm verify` result, and any check that cannot run locally.

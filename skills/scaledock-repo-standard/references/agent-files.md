@@ -1,6 +1,6 @@
 # AI files
 
-AGENTS.md, rules, the "When you change X, also update Y" table, the other AI files, and the writing rules.
+AGENTS.md, the seed topic files, rules, the "When you change X, also update Y" table, the other AI files, and the writing rules.
 
 Applies to every repo kind. A repo whose AGENTS.md holds every rule within the size limit skips `.agents/rules`, and keeps only the table rows it has.
 
@@ -21,6 +21,14 @@ At most 12 KB, not counting the managed blocks. Tools write those blocks between
 - A rules table, and links to `docs/agents/*.md`
 
 Anything longer moves into a rule or a topic file. A correction needed twice goes into a topic file.
+
+## Seed topic files
+
+Every repo starts `docs/agents/` with at least these notes:
+
+- **`formatting.md`:**
+  - A formatter reflow after a rename can move the line that an `oxlint-disable-next-line` or `@ts-expect-error` directive must sit above. Put the directive directly above the exact property or expression line it covers, and check it again after `pnpm format`.
+  - Revert unrelated regenerated output, such as a version header that a generator rewrote, instead of committing it.
 
 ## Rules
 
@@ -49,6 +57,9 @@ At least these rows:
 | `typescript` bump        | `oxlint-tsgolint` in the same commit                                                                           |
 | Next.js bump             | run `next dev` once and commit the refreshed managed AGENTS.md block                                           |
 | User-visible change      | a changeset                                                                                                    |
+| File move                | Knip entries, the `docs:drift` paths                                                                           |
+| Rename                   | the docs Naming page, the `docs:drift` naming test, the changeset's old-to-new table                           |
+| Perf-sensitive change    | the bundle, type and CLI-startup baselines, with before and after numbers in the commit                        |
 
 With Expo, add these rows and extend the matching rows above:
 
