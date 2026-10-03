@@ -17,6 +17,9 @@ Applies to a Next.js `app`. Expo UI is in [`expo.md`](expo.md); the `DESIGN.md`,
   - component ownership: `packages/ui`, then `components/`, then `features/`
   - the overlay table, the shell, and the page templates
   - a "Reject these" list
+- **Server first:**
+  - Static sections (an FAQ, a feature grid, a pricing table) stay Server Components, with no `"use client"`.
+  - Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so tailwind-merge, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md`.
 - **Create and edit** happen on routes. Dialogs are only for destructive confirmation or short tasks.
 - **Responsive:**
   - From 360px up, with the same routes on every device.
