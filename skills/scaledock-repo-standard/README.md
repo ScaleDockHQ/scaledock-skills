@@ -28,9 +28,11 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Always the latest.** The skill names no versions. Every runtime, package, SDK, action and spec is looked up at run time, and new majors in pre-release are adopted early and tracked in AGENTS.md.
 - **Read installed docs first.** Flag and option names are checked against the installed versions before configuring, starting with the Next.js dev server's `/_next/mcp` and bundled docs.
 - **Strict and typed.** The stable native TypeScript compiler, every type-aware oxlint rule at error, Valibot for every schema, and `Temporal` as the one date library.
+- **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
+- **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
 - **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
 - **Done means `pnpm verify` passes.** The run ends with a report of what changed, the deviations kept, the pre-release pins, and the manual steps left.
-- **One branch and one PR per run.** Small conventional commits, one PR, never merged without being asked.
+- **One branch and one PR per run.** Small conventional commits, one PR, never merged without being asked, and never merged before the required checks pass.
 
 ## References
 
@@ -46,7 +48,8 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - [`references/skills.md`](references/skills.md): agent skills to install, commit and manage through `skills-lock.json`, in every repo kind.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
-- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules.
+- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters.
+- [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
 - [`references/lint-format.md`](references/lint-format.md): oxlint presets, anti-slop, oxfmt.
 - [`references/vercel.md`](references/vercel.md): Vercel first, Services, Turborepo, Remote Cache.
 - [`references/local-dev-env.md`](references/local-dev-env.md): Portless, the native dev loop, env and secrets.
@@ -64,7 +67,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface, and the OAuth Consent block.
 - [`references/api.md`](references/api.md): Hono, oRPC, Scalar.
 - [`references/mcp.md`](references/mcp.md): MCP server, tools from the contract, docs MCP.
-- [`references/cli.md`](references/cli.md): product, library and tooling CLIs.
+- [`references/cli.md`](references/cli.md): product, library and tooling CLIs, and their startup budget.
 - [`references/docs-site.md`](references/docs-site.md): Fumadocs for people and agents.
 - [`references/ai.md`](references/ai.md): AI SDK through AI Gateway.
 

@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.6.0"
+  version: "1.7.0"
 ---
 
 # Repo standard
@@ -57,8 +57,8 @@ Run these steps in order. Each step names the references to load and the check i
    - **New:** sketch the tree from the selected surfaces and packages.
    - **Upgrade:** walk the `audit.md` checklist row by row, opening a row's reference only to judge that row.
    - **Align:** audit each repo the same way, one column per repo.
-     -> [`references/audit.md`](references/audit.md), [`references/architecture.md`](references/architecture.md) for the target tree.
-     ✓ Every row has an `audit.md` status, and every dependency behind latest is listed.
+     -> [`references/audit.md`](references/audit.md), [`references/architecture.md`](references/architecture.md) for the target tree, and the Baselines section of [`references/performance.md`](references/performance.md) when the repo ships code.
+     ✓ Every row has an `audit.md` status, every dependency behind latest is listed, and the starting baselines are recorded.
 3. **Foundation.** Install the skills, set up the toolchain, workspace, TypeScript, Knip, lint and format, and lay out the folders and boundaries.
    -> [`references/skills.md`](references/skills.md), [`references/toolchain.md`](references/toolchain.md), [`references/lint-format.md`](references/lint-format.md), [`references/architecture.md`](references/architecture.md).
    ✓ `pnpm install` passes under the strict workspace settings, every workspace has a boundary tag, and `pnpm check` runs.
@@ -71,19 +71,24 @@ Run these steps in order. Each step names the references to load and the check i
    - Data and identity: [`references/data-permissions.md`](references/data-permissions.md), [`references/data-conventions.md`](references/data-conventions.md), [`references/auth.md`](references/auth.md).
    - Programmatic: [`references/api.md`](references/api.md), [`references/mcp.md`](references/mcp.md), [`references/cli.md`](references/cli.md).
    - Docs and AI: [`references/docs-site.md`](references/docs-site.md), [`references/ai.md`](references/ai.md).
-     ✓ Apps stay thin adapters over `services`, every procedure is contract first, and every surface acts as the signed-in user.
+   - Performance, for every kind that ships code: [`references/performance.md`](references/performance.md).
+     ✓ Apps stay thin adapters over `services`, every procedure is contract first, every surface acts as the signed-in user, and names follow the naming rules.
 6. **Repo hygiene.** Write the AI files, repo files, VS Code settings, CI, Dependabot and tests.
    -> [`references/agent-files.md`](references/agent-files.md), [`references/repo-files.md`](references/repo-files.md), [`references/ci.md`](references/ci.md), [`references/tests.md`](references/tests.md).
    ✓ AGENTS.md is at most 12 KB and lists the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.
 7. **Verify and finish.** Run `pnpm install`, `pnpm format` and `pnpm verify`; fix code, not tests. Add a changeset, push, mark the one PR ready, and put the report in its body.
-   -> [`assets/report.md`](assets/report.md), [`references/git-workflow.md`](references/git-workflow.md) (Changesets, PR), the checklist below.
-   ✓ `pnpm verify` passes and the report is complete.
+   -> [`assets/report.md`](assets/report.md), [`references/git-workflow.md`](references/git-workflow.md) (Changesets, PR), the Baselines section of [`references/performance.md`](references/performance.md), the checklist below.
+   ✓ `pnpm verify` passes, the final baselines are recorded, and the report is complete.
 
 ## Verify before done
 
 The tag in brackets names the input that switches an item on; untagged items always apply.
 
 - [ ] `pnpm verify` passes locally (rule 4).
+- [ ] [Turbo] `verify` is one cached, parallel `turbo run` of tasks with `inputs`, and no check runs twice.
+- [ ] Coverage `autoUpdate` is off in CI, and thresholds come from the test set CI runs.
+- [ ] The naming rules hold, and the `docs:drift` naming check passes.
+- [ ] The baselines from before and after the run are in the report.
 - [ ] Every dependency is `catalog:` or `workspace:*` at the latest release that passes `minimumReleaseAge`; every override, exclude, `allowBuilds` entry and patch has a comment.
 - [ ] Every pre-release pin is in AGENTS.md (rule 2).
 - [ ] `pnpm-workspace.yaml` has no key the installed pnpm rejects, and TypeScript is the stable native compiler with no preview package.
@@ -95,6 +100,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
+- [ ] [docs, web] Agent routes send `Cache-Control`, no `proxy.ts` lacks a `matcher`, and no experimental flag or twoslash is installed without a use.
 - [ ] [api] Every procedure lives in `packages/contract` with `openapi()` meta, and the committed OpenAPI snapshot matches.
 - [ ] [api, mcp, cli] Errors are RFC 9457 Problem Details on every surface.
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
@@ -109,7 +115,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 ## Reference index
 
 - **Run:** [`audit.md`](references/audit.md) (placeholders, repo kinds, gap checklist), [`report.md`](assets/report.md) (final report, manual steps), [`adr-template.md`](assets/adr-template.md).
-- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env), [`lint-format.md`](references/lint-format.md) (oxlint, anti-slop, oxfmt).
+- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (oxlint, anti-slop, oxfmt).
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
