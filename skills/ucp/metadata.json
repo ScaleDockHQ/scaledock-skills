@@ -1,0 +1,203 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Universal Commerce Protocol (UCP) for agentic commerce with five version lines: UCP 2026-08-25 (current, release branch at 3a541e13), UCP 2026-04-08 (supported, still receiving backports), UCP 2026-01-23 and UCP 2026-01-11 (legacy, upgrade from), and the UCP draft on ucp.dev (preview, posture track). It teaches business and platform profiles, reverse-domain naming and schema authority binding, version selection and exact-version capability negotiation, the REST, MCP, A2A and Embedded transports, the checkout lifecycle with fulfillment and discount, payment handlers, credentials, AP2 mandates and 3DS authentication, identity linking over OAuth 2.0, orders with signed webhooks, and RFC 9421 message signatures. References cover version lines and upgrades, discovery and negotiation, checkout, payments, and identity and orders.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "UCP draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "ucp.dev/draft, main at b0d92c2d (2026-10-05)"
+    },
+    {
+      "id": "2026-08-25",
+      "label": "UCP 2026-08-25",
+      "status": "current",
+      "revision": "Release 2026-08-25 (tag v2026-08-25, release/2026-08-25 at 3a541e13)"
+    },
+    {
+      "id": "2026-04-08",
+      "label": "UCP 2026-04-08",
+      "status": "supported",
+      "revision": "Release 2026-04-08 (published 2026-04-09, release/2026-04-08 at f021fcb2)"
+    },
+    {
+      "id": "2026-01-23",
+      "label": "UCP 2026-01-23",
+      "status": "legacy",
+      "revision": "Release 2026-01-23 (tag v2026-01-23)"
+    },
+    {
+      "id": "2026-01-11",
+      "label": "UCP 2026-01-11",
+      "status": "legacy",
+      "revision": "Release 2026-01-11 (tag v2026-01-11)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UCP Specification Overview (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/overview/",
+      "status": "Released",
+      "revision": "Release 2026-08-25, release/2026-08-25 at 3a541e13",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Checkout Capability (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/checkout/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Checkout REST Binding (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/checkout/rest/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Checkout MCP Binding (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/checkout/mcp/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Checkout A2A Binding (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/checkout/a2a/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Embedded Protocol (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/embedded-protocol/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Fulfillment Extension (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/extensions/fulfillment/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Discount Extension (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/extensions/discount/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Order Capability (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/shopping/order/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Identity Linking Capability (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/common/identity-linking/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Payment Handler Specification Guide (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/payment/guide/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP AP2 Mandates Extension (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/payment/extensions/ap2-mandates/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Payment Authentication Extension (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/payment/extensions/authentication/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Message Signatures (2026-08-25)",
+      "url": "https://ucp.dev/2026-08-25/specification/signatures/",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Versioning (release branch policy)",
+      "url": "https://github.com/Universal-Commerce-Protocol/ucp/blob/release/2026-08-25/docs/versioning.md",
+      "status": "Released",
+      "revision": "Release 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP release v2026-08-25",
+      "url": "https://github.com/Universal-Commerce-Protocol/ucp/releases/tag/v2026-08-25",
+      "status": "Released",
+      "revision": "Release notes, published 2026-08-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP release v2026-04-08",
+      "url": "https://github.com/Universal-Commerce-Protocol/ucp/releases/tag/v2026-04-08",
+      "status": "Released",
+      "revision": "Release notes, published 2026-04-09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Specification Overview (2026-04-08)",
+      "url": "https://ucp.dev/2026-04-08/specification/overview/",
+      "status": "Released",
+      "revision": "Release 2026-04-08, release/2026-04-08 at f021fcb2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Specification Overview (2026-01-23)",
+      "url": "https://ucp.dev/2026-01-23/specification/overview/",
+      "status": "Released",
+      "revision": "Release 2026-01-23",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Specification Overview (2026-01-11)",
+      "url": "https://ucp.dev/2026-01-11/specification/overview/",
+      "status": "Released",
+      "revision": "Release 2026-01-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Specification Overview (draft)",
+      "url": "https://ucp.dev/draft/specification/overview/",
+      "status": "Draft",
+      "revision": "main at b0d92c2d (2026-10-05)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP Lodging Booking Capability (draft)",
+      "url": "https://ucp.dev/draft/specification/lodging/booking/",
+      "status": "Draft",
+      "revision": "main at b0d92c2d (2026-10-05)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UCP published versions index",
+      "url": "https://ucp.dev/versions.json",
+      "status": "Site index",
+      "revision": "draft, 2026-08-25 (latest), 2026-04-08, 2026-01-23, 2026-01-11",
+      "checked": "2026-10-05"
+    }
+  ]
+}
