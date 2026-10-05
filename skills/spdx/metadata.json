@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the SPDX (System Package Data Exchange) specification from the Linux Foundation: the SPDX 3.0.1 RDF-based model with its profiles (Core, Software, Security, Licensing with SimpleLicensing and ExpandedLicensing, Dataset, AI, Build, Lite, Extension), Elements, Relationships, SpdxDocument, CreationInfo and the JSON-LD serialization; the SPDX 2.3 document structure (creation information, packages, files, snippets, other licensing information, relationships, annotations) with the 2.3.1 maintenance corrections; SPDX license expressions, LicenseRef- and AdditionRef- identifiers and SPDX-License-Identifier tags; the SPDX License List 3.29.0; and SBOMs that cover the NTIA 2021 and CISA 2026 minimum elements as SPDX maps them. Version lines: 3.0.1 is current, 2.3 is supported, 2.2 (ISO/IEC 5962:2021) and 2.1 and earlier are legacy, 3.1-RC1 is tracked as a preview, and the License List is its own family. SKILL.md holds the invariants and workflow; references split out the version lines and the 2.3 to 3.0 upgrade, the SPDX 3 model, SPDX 2.3 documents, license expressions, and SBOM minimum elements.",
+  "versions": [
+    {
+      "id": "3.1-preview",
+      "label": "SPDX 3.1",
+      "status": "preview",
+      "posture": "track",
+      "revision": "3.1-RC1 (spec v3.1-RC1 and model 3.1-rc1, 2026-01-24)"
+    },
+    {
+      "id": "3.0",
+      "label": "SPDX 3.0",
+      "status": "current",
+      "revision": "3.0.1 (spec 2024-12-17, model 2024-12-10)"
+    },
+    {
+      "id": "2.3",
+      "label": "SPDX 2.3",
+      "status": "supported",
+      "revision": "2.3 (2022-11-03); 2.3.1 maintenance text published at /v2.3.1/ (tag v2.3.1, changelog dated 2026-10-30, no GitHub release yet)"
+    },
+    {
+      "id": "2.2",
+      "label": "SPDX 2.2",
+      "status": "legacy",
+      "revision": "2.2.2 (2022-04-27); 2.2.1 is ISO/IEC 5962:2021"
+    },
+    {
+      "id": "2.1-and-earlier",
+      "label": "SPDX 2.1 and earlier",
+      "status": "legacy",
+      "revision": "2.1 (2016-10-04), 2.0 (2015-05-12), 1.x (2011-2013)"
+    },
+    {
+      "id": "license-list-3",
+      "label": "SPDX License List 3.29",
+      "status": "current",
+      "family": "license-list",
+      "revision": "3.29.0 (2026-09-16)",
+      "reference": "references/license-expressions.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SPDX Specification 3.0.1",
+      "url": "https://spdx.github.io/spdx-spec/v3.0.1/",
+      "status": "Released",
+      "revision": "3.0.1 (2024-12-17)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX 3 model repository (spdx-3-model) releases",
+      "url": "https://github.com/spdx/spdx-3-model/releases",
+      "status": "Released (3.0.1); pre-release (3.1-rc1)",
+      "revision": "3.0.1 (2024-12-10); 3.1-rc1 (2026-01-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX 3.0.1 JSON-LD context",
+      "url": "https://spdx.org/rdf/3.0.1/spdx-context.jsonld",
+      "status": "Released",
+      "revision": "3.0.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX Specification 2.3",
+      "url": "https://spdx.github.io/spdx-spec/v2.3/",
+      "status": "Released (URL now redirects to v2.3.1)",
+      "revision": "2.3 (2022-11-03), tag v2.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX Specification 2.3.1",
+      "url": "https://spdx.github.io/spdx-spec/v2.3.1/",
+      "status": "Maintenance release text published; no GitHub release yet",
+      "revision": "tag v2.3.1 (2026-10-05), changelog dated 2026-10-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX specifications index",
+      "url": "https://spdx.dev/use/specifications/",
+      "status": "Publisher index",
+      "revision": "lists 3.0 as current and 2.3, 2.2, 2.1, 2.0, 1.2, 1.1, 1.0 as previous; names ISO/IEC 5962:2021",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "spdx/spdx-spec releases",
+      "url": "https://github.com/spdx/spdx-spec/releases",
+      "status": "Release index",
+      "revision": "latest release 3.0.1 (2024-12-17); latest pre-release v3.1-RC1 (2026-01-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX Specification 3.1-RC1",
+      "url": "https://spdx.github.io/spdx-spec/v3.1-RC1/",
+      "status": "Release candidate",
+      "revision": "3.1-RC1 (2026-01-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Differences from previous editions (SPDX 3.0 and 2.3)",
+      "url": "https://github.com/spdx/using/blob/main/docs/diffs-from-previous-editions.md",
+      "status": "Informative (moved out of the spec in 3.0.1)",
+      "revision": "main branch",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Getting started writing SPDX 3",
+      "url": "https://github.com/spdx/using/blob/main/docs/getting-started.md",
+      "status": "Informative (moved out of the spec in 3.0.1)",
+      "revision": "main branch, tagged v3.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SPDX License List",
+      "url": "https://spdx.org/licenses/",
+      "status": "Released",
+      "revision": "3.29.0 (2026-09-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "spdx/license-list-data releases",
+      "url": "https://github.com/spdx/license-list-data/releases",
+      "status": "Released",
+      "revision": "v3.29.0 (2026-09-16)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
