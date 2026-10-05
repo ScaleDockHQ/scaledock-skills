@@ -1,10 +1,12 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Make a ScaleDock product enterprise-ready: OpenID Connect SSO, SCIM 2.0 provisioning, Shared Signals and Back-Channel Logout revocation, FAPI 2.0 when required, and SPIFFE workload identity, with PermDock turning directory groups and roles into permissions and invalidating access immediately. It installs the matching spec skills and defers to them on protocol details; references/stack.md maps each spec onto the ScaleDock stack.",
+  "abstract": "Make a ScaleDock product enterprise-ready: OpenID Connect and SAML 2.0 SSO, WebAuthn passkeys, SCIM 2.0 provisioning, Shared Signals and Back-Channel Logout revocation, NIST SP 800-63-4 assurance levels, CIBA and FAPI 2.0 when required, and SPIFFE or WIMSE workload identity, with PermDock turning directory groups and roles into permissions and invalidating access immediately. It installs the matching spec skills and defers to them on protocol details; references/stack.md maps each spec onto the ScaleDock stack.",
   "references": [
     "https://openid.net/developers/specs/",
+    "https://docs.oasis-open.org/security/saml/v2.0/",
+    "https://www.w3.org/TR/webauthn-3/",
     "https://www.rfc-editor.org/rfc/rfc7644.html",
     "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
     "https://permdock.dev/docs/adapters/scim",
