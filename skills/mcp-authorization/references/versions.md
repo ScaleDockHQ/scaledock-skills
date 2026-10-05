@@ -16,6 +16,8 @@ MCP versions are date strings, the last date backwards-incompatible changes were
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows.
 
+Authorization extensions in `modelcontextprotocol/ext-auth` are versioned independently of the core revisions (Authorization, MCP Authorization Extensions), so they are not version lines here. Each extension reference pins its own commit and status: Enterprise-Managed Authorization is Stable, and OAuth Client Credentials is Draft (Protocol Revision: draft).
+
 Revision 2024-11-05, the one before 2025-03-26, had no authorization specification: the 2025-03-26 Key Changes page lists the OAuth 2.1 based authorization framework as new (2025-03-26 Key Changes, Major changes). A 2024-11-05 server has no authorization to upgrade; add the 2026-07-28 rules from scratch.
 
 ## Which version to use

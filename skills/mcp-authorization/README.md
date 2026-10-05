@@ -18,6 +18,7 @@ Then ask your agent to "add OAuth authorization to our MCP server" or "review ou
 - Client ID Metadata Documents, pre-registration, deprecated Dynamic Client Registration, and binding credentials to an issuer.
 - PKCE with `S256`, the `resource` parameter, RFC 9207 `iss` validation, and step-up with scope accumulation.
 - The Stable Enterprise-Managed Authorization extension (ID-JAG through RFC 8693 and RFC 7523).
+- The Draft OAuth Client Credentials extension for machine-to-machine clients: when to use it, discovery, JWT assertion or client secret authentication, and how it differs from the authorization code flow.
 - The MCP security best practices: confused deputy, SSRF, session handles, URL validation, mix-up, localhost redirects and scope minimization.
 - What the MCP TypeScript SDK v2 provides, and what it leaves to the app.
 - What changed in each revision's authorization rules, and checklists to upgrade between them.
@@ -43,6 +44,7 @@ The skill was written from these sources, pinned in `metadata.json`:
 - MCP Authorization and Key Changes for [2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization), [2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization) and [2025-03-26](https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization): Final.
 - [MCP Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices): 2026-07-28.
 - [Enterprise-Managed Authorization](https://raw.githubusercontent.com/modelcontextprotocol/ext-auth/main/specification/stable/enterprise-managed-authorization.mdx): Stable, main at e5eef54.
+- [OAuth Client Credentials Extension](https://raw.githubusercontent.com/modelcontextprotocol/ext-auth/main/specification/draft/oauth-client-credentials.mdx): Draft, main at fb374c7, with its [MCP docs page](https://modelcontextprotocol.io/extensions/auth/oauth-client-credentials) and [SEP-1046](https://modelcontextprotocol.io/seps/1046-support-oauth-client-credentials-flow-in-authoriza).
 - [MCP TypeScript SDK v2](https://ts.sdk.modelcontextprotocol.io/v2/): v2.2.0.
 - OAuth 2.1 draft -13, Client ID Metadata Document draft -00 and Identity Assertion JWT Authorization Grant draft -04, as pinned by MCP.
 - RFC 9728, RFC 8414, RFC 8707, RFC 9207, RFC 6750, RFC 7591, RFC 8693, RFC 7523 and OpenID Connect Discovery 1.0.
