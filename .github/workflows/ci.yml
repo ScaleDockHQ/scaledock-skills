@@ -4,6 +4,9 @@ on:
   pull_request:
   push:
     branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -37,3 +40,19 @@ jobs:
           persist-credentials: false
       - uses: $/.github/actions/setup
       - run: pnpm verify
+
+  spec-indexes:
+    name: sources and version lines
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: $/.github/actions/setup
+      - name: Check spec sources
+        run: pnpm sources:check
+      - name: Check version lines
+        run: pnpm versions:check
