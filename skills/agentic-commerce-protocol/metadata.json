@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Agentic Commerce Protocol (ACP) at API version 2026-04-17, pinned to repository commit 7fdd78d: Agentic Checkout sessions (create, update, retrieve, complete, cancel, status, line items, fulfillment, totals, messages, capability negotiation, payment handlers, 3DS), Delegate Payment vault tokens with one-time allowances, order webhooks signed with Merchant-Signature, the flat error model, mandatory idempotency, API-Version negotiation, request signing headers, discovery and the MCP binding. Agentic Checkout and Delegate Payment share one date-based version, so there is one line: 2026-04-17 is current, 2026-01-30, 2026-01-16, 2025-12-12 and 2025-09-29 are legacy with upgrade checklists, and spec/unreleased is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions, checkout, delegate payment, security and headers, and webhooks and errors.",
+  "versions": [
+    {
+      "id": "unreleased-preview",
+      "label": "ACP unreleased",
+      "status": "preview",
+      "posture": "track",
+      "revision": "spec/unreleased at 7fdd78d (2026-07-17)"
+    },
+    {
+      "id": "2026-04-17",
+      "label": "ACP 2026-04-17",
+      "status": "current",
+      "revision": "spec/2026-04-17 at 7fdd78d (released 2026-04-17)"
+    },
+    {
+      "id": "2026-01-30",
+      "label": "ACP 2026-01-30",
+      "status": "legacy",
+      "revision": "spec/2026-01-30 (released 2026-01-30; deprecated by 2026-04-17)"
+    },
+    {
+      "id": "2026-01-16",
+      "label": "ACP 2026-01-16",
+      "status": "legacy",
+      "revision": "spec/2026-01-16 (released 2026-01-16; superseded by 2026-01-30)"
+    },
+    {
+      "id": "2025-12-12",
+      "label": "ACP 2025-12-12",
+      "status": "legacy",
+      "revision": "spec/2025-12-12 (released 2025-12-12; deprecated by 2026-01-30)"
+    },
+    {
+      "id": "2025-09-29",
+      "label": "ACP 2025-09-29",
+      "status": "legacy",
+      "revision": "spec/2025-09-29 (released 2025-09-29; deprecated by 2025-12-12)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Agentic Commerce Protocol repository",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol",
+      "status": "Beta",
+      "revision": "main at 7fdd78d (2026-07-17); no tags or releases",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP 2026-04-17 specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-04-17",
+      "status": "Released (latest stable)",
+      "revision": "2026-04-17 at 7fdd78d (OpenAPI 3.1, JSON Schema, OpenRPC)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP changelog 2026-04-17",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2026-04-17.md",
+      "status": "Released",
+      "revision": "2026-04-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP 2026-01-30 specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-01-30",
+      "status": "Deprecated",
+      "revision": "2026-01-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP changelog 2026-01-30",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2026-01-30.md",
+      "status": "Released",
+      "revision": "2026-01-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP 2026-01-16 specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2026-01-16",
+      "status": "Superseded",
+      "revision": "2026-01-16",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP changelog 2026-01-16",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2026-01-16.md",
+      "status": "Released",
+      "revision": "2026-01-16",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP 2025-12-12 specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2025-12-12",
+      "status": "Deprecated",
+      "revision": "2025-12-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP changelog 2025-12-12",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2025-12-12.md",
+      "status": "Released",
+      "revision": "2025-12-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP 2025-09-29 specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/2025-09-29",
+      "status": "Deprecated",
+      "revision": "2025-09-29",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP changelog 2025-09-29",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/2025-09-29.md",
+      "status": "Released",
+      "revision": "2025-09-29",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP unreleased specification",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/spec/unreleased",
+      "status": "Unreleased",
+      "revision": "at 7fdd78d (2026-07-17); posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ACP unreleased changelog entries",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/7fdd78df677a94dce04c770644b0fbbb1401272b/changelog/unreleased",
+      "status": "Unreleased",
+      "revision": "at 7fdd78d; posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Agentic Checkout",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.agentic_checkout.md",
+      "status": "Draft",
+      "revision": "header 2026-01-16 (living document, includes the 2026-04-17 idempotency rules)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Delegate Payment",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.delegate_payment.md",
+      "status": "Draft",
+      "revision": "header 2025-09-29 (living document)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Capability Negotiation",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.capability_negotiation.md",
+      "status": "Proposal",
+      "revision": "header 2026-01-16",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Payment Handlers",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.payment_handlers.md",
+      "status": "Draft",
+      "revision": "header 2026-01-22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Extensions",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.extensions.md",
+      "status": "Draft",
+      "revision": "header 2026-01-27",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Discovery",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.discovery.md",
+      "status": "Proposal",
+      "revision": "released in 2026-04-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Enhanced Order Support",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.orders.md",
+      "status": "Draft",
+      "revision": "header 2026-02-05, change log to 2026-04-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC: Cart",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.cart.md",
+      "status": "Proposal",
+      "revision": "released in 2026-04-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Transport Binding for Agentic Checkout",
+      "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/blob/7fdd78df677a94dce04c770644b0fbbb1401272b/docs/mcp-binding.md",
+      "status": "Released in 2026-04-17",
+      "revision": "at 7fdd78d",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "agenticcommerce.dev",
+      "url": "https://www.agenticcommerce.dev",
+      "status": "Project site",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "agenticcommerce.dev: Checkout lifecycle",
+      "url": "https://www.agenticcommerce.dev/docs/concepts/lifecycle",
+      "status": "Documentation",
+      "revision": "describes the 2025-09-29 status set",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "agenticcommerce.dev: Security",
+      "url": "https://www.agenticcommerce.dev/docs/concepts/security",
+      "status": "Documentation",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "agenticcommerce.dev: Changelog",
+      "url": "https://www.agenticcommerce.dev/docs/changelog",
+      "status": "Documentation",
+      "revision": "lists releases to 2026-01-30 only",
+      "checked": "2026-10-05"
+    }
+  ]
+}
