@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the ECMAScript Temporal API (TC39), pinned to the Stage 4 Draft of July 27, 2026 with a build posture: Temporal finished stage 4 in March 2026 and is expected in ECMAScript 2027, but is not yet merged into the ECMA-262 draft. It lists three version lines: Temporal (ECMAScript 2027) as current, and as legacy lines ECMAScript Date and the Temporal pre-reduction polyfill API from before the June 2024 scope reduction, each with upgrade steps. SKILL.md holds the invariants and workflow; references cover versions and upgrades, the types and conversions, time zones, DST disambiguation and calendars, arithmetic and rounding, and RFC 9557 and RFC 3339 parsing, Intl formatting and Date migration.",
+  "versions": [
+    {
+      "id": "es2027",
+      "label": "Temporal (ECMAScript 2027)",
+      "status": "current",
+      "posture": "build",
+      "revision": "Stage 4 Draft of July 27, 2026 (proposal-temporal commit e8cc03f); expected publication 2027, not yet merged into ECMA-262 (pull request #3966 open)"
+    },
+    {
+      "id": "pre-2024-polyfill",
+      "label": "Temporal pre-reduction polyfill API",
+      "status": "legacy",
+      "revision": "Stage 3 API before the June 2024 scope reduction, for example @js-temporal/polyfill before 0.5.0"
+    },
+    {
+      "id": "date",
+      "label": "ECMAScript Date",
+      "status": "legacy",
+      "revision": "ECMA-262 § 21.4 Date Objects, ECMAScript 2026 and the ECMAScript 2027 draft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Temporal proposal specification",
+      "url": "https://tc39.es/proposal-temporal/",
+      "status": "Stage 4 Draft",
+      "revision": "July 27, 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Temporal documentation",
+      "url": "https://tc39.es/proposal-temporal/docs/",
+      "status": "Proposal documentation",
+      "revision": "main branch at commit e8cc03f (2026-07-27)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Temporal cookbook",
+      "url": "https://tc39.es/proposal-temporal/docs/cookbook.html",
+      "status": "Proposal documentation",
+      "revision": "main branch at commit e8cc03f (2026-07-27)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "tc39/proposal-temporal",
+      "url": "https://github.com/tc39/proposal-temporal",
+      "status": "Stage 4",
+      "revision": "README at commit e8cc03f (2026-07-27)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "TC39 finished proposals",
+      "url": "https://github.com/tc39/proposals/blob/main/finished-proposals.md",
+      "status": "Finished (stage 4), expected publication year 2027",
+      "revision": "commit ee92ecf (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-262 draft",
+      "url": "https://tc39.es/ecma262/",
+      "status": "Draft ECMAScript 2027",
+      "revision": "October 3, 2026 (does not yet contain Temporal)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMAScript 2026 Language Specification",
+      "url": "https://tc39.es/ecma262/2026/",
+      "status": "Ecma Standard",
+      "revision": "ECMAScript 2026, seventeenth edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ecma262 pull request #3966: Temporal stage 4, round 2",
+      "url": "https://github.com/tc39/ecma262/pull/3966",
+      "status": "Open pull request",
+      "revision": "updated 2026-09-24",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Temporal proposal polyfill changelog",
+      "url": "https://raw.githubusercontent.com/tc39/proposal-temporal/main/polyfill/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "up to 0.9.0, main branch at commit e8cc03f",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "@js-temporal/polyfill changelog",
+      "url": "https://raw.githubusercontent.com/js-temporal/temporal-polyfill/main/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "0.5.0 (TC39 changes from May 2023 to March 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "TC39 meeting notes, 12 June 2024",
+      "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2024-06/june-12.md",
+      "status": "Meeting notes",
+      "revision": "Temporal stage 3 update and scope reduction",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9557: Date and Time on the Internet: Timestamps with Additional Information",
+      "url": "https://www.rfc-editor.org/rfc/rfc9557",
+      "status": "Proposed Standard",
+      "revision": "April 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 3339: Date and Time on the Internet: Timestamps",
+      "url": "https://www.rfc-editor.org/rfc/rfc3339",
+      "status": "Proposed Standard",
+      "revision": "July 2002, updated by RFC 9557",
+      "checked": "2026-10-05"
+    }
+  ]
+}
