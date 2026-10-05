@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the C2PA Technical Specification (Content Credentials) at version 2.4: the C2PA Manifest Store in JUMBF and external application/c2pa stores, standard, update and compressed manifests, claim v2, assertions (actions with digitalSourceType for AI-generated content, AI Disclosure, ingredient v3, data, box, BMFF and collection hash bindings, soft bindings and watermarks, thumbnails, metadata, time-stamp and certificate status), COSE claim signatures with X.509 certificates, RFC 3161 time-stamps and OCSP stapling, validator trust configuration with the C2PA Trust List and TSA Trust List, the Well-Formed, Valid and Trusted states and the validation algorithm with its status codes, the Conformance Program v0.2 additional requirements, and the C2PA guidance for AI and ML. Version lines: 2.4 is current, 2.3 and 2.2 are supported, 2.1, 2.0 and 1.4 (standing for 1.0 to 1.4, claim v1) are legacy, with upgrade checklists; no draft is published. SKILL.md holds the invariants and workflow; references split out the version lines, manifests and claims, assertions, signing and trust, and validation.",
+  "versions": [
+    {
+      "id": "2.4",
+      "label": "C2PA 2.4",
+      "status": "current",
+      "revision": "2.4 (April 2026)"
+    },
+    {
+      "id": "2.3",
+      "label": "C2PA 2.3",
+      "status": "supported",
+      "revision": "2.3 (December 2025)"
+    },
+    {
+      "id": "2.2",
+      "label": "C2PA 2.2",
+      "status": "supported",
+      "revision": "2.2 (May 2025)"
+    },
+    {
+      "id": "2.1",
+      "label": "C2PA 2.1",
+      "status": "legacy",
+      "revision": "2.1 (September 2024)"
+    },
+    {
+      "id": "2.0",
+      "label": "C2PA 2.0",
+      "status": "legacy",
+      "revision": "2.0 (January 2024)"
+    },
+    {
+      "id": "1.4",
+      "label": "C2PA 1.4",
+      "status": "legacy",
+      "revision": "1.4 (November 2023); stands for 1.0 to 1.4"
+    }
+  ],
+  "sources": [
+    {
+      "title": "C2PA Specifications index",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.4/index.html",
+      "status": "Published",
+      "revision": "lists 2.4 as the newest version (c2pa.org/specifications redirects here)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 2.4",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "2.4 (April 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 2.3",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.3/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "2.3 (December 2025; GitHub release 2026-01-11)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 2.2",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "2.2 (May 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 2.1",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.1/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "2.1 (September 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 2.0",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "2.0 (January 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Technical Specification 1.4",
+      "url": "https://spec.c2pa.org/specifications/specifications/1.4/specs/C2PA_Specification.html",
+      "status": "Published",
+      "revision": "1.4 (November 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Guidance for Artificial Intelligence and Machine Learning",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.4/ai-ml/ai_ml.html",
+      "status": "Informative document",
+      "revision": "2.4 site build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "c2pa-org/specifications",
+      "url": "https://github.com/c2pa-org/specifications",
+      "status": "Source repository",
+      "revision": "latest release 2.3, no branch for a later version",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Conformance",
+      "url": "https://c2pa.org/conformance/",
+      "status": "Program page",
+      "revision": "Interim Trust List frozen 2026-01-01 and retired",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Conformance Program",
+      "url": "https://github.com/c2pa-org/conformance-public/blob/main/docs/v0.2/C2PA%20Conformance%20Program.md",
+      "status": "v0.2",
+      "revision": "released 2026-07-31 (accepts spec 2.2 and 2.4)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Additional Conformance Requirements Against the Content Credentials Specification",
+      "url": "https://github.com/c2pa-org/conformance-public/blob/main/docs/v0.2/Additional%20Conformance%20Requirements%20Against%20the%20Content%20Credentials%20Specification.md",
+      "status": "v0.2",
+      "revision": "2026-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "C2PA Trust List and TSA Trust List",
+      "url": "https://github.com/c2pa-org/conformance-public/tree/main/trust-list",
+      "status": "Published lists",
+      "revision": "issued 2026-08-05, next update 2027-08-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
