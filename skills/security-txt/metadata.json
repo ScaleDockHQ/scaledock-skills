@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 9116 security.txt: the /.well-known/security.txt file served over HTTPS as text/plain; charset=utf-8, every field in the IANA security.txt Fields registry (including CSAF and Bug-Bounty), OpenPGP cleartext signing with Canonical, the ABNF and parsing limits, and the section 5 security considerations. It lists two version lines: RFC 9116 (current, with its errata) and draft-foudil-securitytxt -00 to -12 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions and upgrades, fields, serving and signing, and parsing and security.",
+  "versions": [
+    {
+      "id": "rfc9116",
+      "label": "RFC 9116",
+      "status": "current",
+      "revision": "RFC 9116 (April 2022), errata 6946 verified"
+    },
+    {
+      "id": "draft-foudil-securitytxt",
+      "label": "draft-foudil-securitytxt",
+      "status": "legacy",
+      "revision": "-00 to -12 (2017-09-10 to 2021-05-24)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9116: A File Format to Aid in Security Vulnerability Disclosure",
+      "url": "https://www.rfc-editor.org/rfc/rfc9116.html",
+      "status": "RFC (Informational)",
+      "revision": "RFC 9116 (April 2022)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9116 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc9116",
+      "status": "RFC Editor errata",
+      "revision": "6946 verified; 7264 and 7743 reported",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA security.txt Fields registry",
+      "url": "https://www.iana.org/assignments/security-txt-fields/",
+      "status": "IANA registry",
+      "revision": "last updated 2026-03-07",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "securitytxt.org",
+      "url": "https://securitytxt.org",
+      "status": "Project website",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-foudil-securitytxt",
+      "url": "https://datatracker.ietf.org/doc/draft-foudil-securitytxt/",
+      "status": "Internet-Draft (became RFC 9116)",
+      "revision": "-00 to -12 (2017-09-10 to 2021-05-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Product Security Fields for security.txt",
+      "url": "https://datatracker.ietf.org/doc/draft-bruhns-securitytxt-product-security/",
+      "status": "Internet-Draft (individual submission)",
+      "revision": "draft-bruhns-securitytxt-product-security-00 (2026-09-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9580: OpenPGP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9580",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9580, obsoletes RFC 4880",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 3339: Date and Time on the Internet: Timestamps",
+      "url": "https://www.rfc-editor.org/rfc/rfc3339",
+      "status": "RFC (Proposed Standard, updated by RFC 9557)",
+      "revision": "RFC 3339",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9110: HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "status": "RFC (Internet Standard, STD 97)",
+      "revision": "RFC 9110, obsoletes RFC 7230 and RFC 7231",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Common Security Advisory Framework Version 2.0",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html",
+      "status": "OASIS Standard",
+      "revision": "CSAF 2.0, requirement 8",
+      "checked": "2026-10-05"
+    }
+  ]
+}
