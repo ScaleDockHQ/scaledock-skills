@@ -1,0 +1,320 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenFGA, the CNCF relationship-based access control system inspired by Zanzibar: the modeling language in DSL and JSON (types, relations, direct relationship type restrictions, usersets, type-bound public access, or, and, but not, from tupleset rewrites, nesting), conditions with CEL expressions, contextual tuples, modular models with fga.mod and extend type, relationship tuples and the API (Write, Read, ReadChanges, Check, BatchCheck, Expand, ListObjects, StreamedListObjects, ListUsers, authorization model ids, consistency preferences), .fga.yaml tests with the CLI, and modeling patterns for roles, groups, hierarchies, public access, custom roles and blocklists. Version lines: schema 1.1 is current, schema 1.0 is legacy, schema 1.2 (modular models) is current in its own family, and OpenFGA server v1.21 is current in the server family; pinned to openfga.dev at fb53597, openfga/api at c0650ce and openfga/language at f558baa. SKILL.md holds the invariants and workflow; references split out versions, the modeling language, conditions and modules, tuples and the API, and testing and patterns.",
+  "versions": [
+    {
+      "id": "schema-1.1",
+      "label": "OpenFGA schema 1.1",
+      "status": "current",
+      "revision": "schema 1.1 (openfga/language main at f558baa)",
+      "reference": "references/modeling-language.md"
+    },
+    {
+      "id": "schema-1.0",
+      "label": "OpenFGA schema 1.0",
+      "status": "legacy",
+      "revision": "deprecated in server v0.3.0, disabled by default since v0.4.0"
+    },
+    {
+      "id": "schema-1.2",
+      "label": "OpenFGA schema 1.2 (modular models)",
+      "status": "current",
+      "family": "modular",
+      "revision": "fga.mod schema '1.2', enabled by default since server v1.5.3",
+      "reference": "references/conditions-and-modules.md"
+    },
+    {
+      "id": "server-1.21",
+      "label": "OpenFGA server v1.21",
+      "status": "current",
+      "family": "server",
+      "revision": "v1.21.0 (2026-09-20)",
+      "reference": "references/tuples-and-api.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenFGA Configuration Language",
+      "url": "https://openfga.dev/docs/configuration-language",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA Concepts",
+      "url": "https://openfga.dev/docs/concepts",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA Modeling Guides",
+      "url": "https://openfga.dev/docs/modeling/",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Get Started with Modeling",
+      "url": "https://openfga.dev/docs/modeling/getting-started",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Conditions",
+      "url": "https://openfga.dev/docs/modeling/conditions",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Modular Models",
+      "url": "https://openfga.dev/docs/modeling/modular-models",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Testing Models",
+      "url": "https://openfga.dev/docs/modeling/testing",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Store File Format",
+      "url": "https://openfga.dev/docs/modeling/store-file-format",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "User Groups",
+      "url": "https://openfga.dev/docs/modeling/user-groups",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Roles and Permissions",
+      "url": "https://openfga.dev/docs/modeling/roles-and-permissions",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Parent-Child Objects",
+      "url": "https://openfga.dev/docs/modeling/parent-child",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Public Access",
+      "url": "https://openfga.dev/docs/modeling/public-access",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Multiple Restrictions",
+      "url": "https://openfga.dev/docs/modeling/multiple-restrictions",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Custom Roles",
+      "url": "https://openfga.dev/docs/modeling/custom-roles",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Blocklists",
+      "url": "https://openfga.dev/docs/modeling/blocklists",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Usersets",
+      "url": "https://openfga.dev/docs/modeling/building-blocks/usersets",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Model Migrations",
+      "url": "https://openfga.dev/docs/modeling/migrating/migrating-models",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Relationship Queries",
+      "url": "https://openfga.dev/docs/interacting/relationship-queries",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Contextual Tuples",
+      "url": "https://openfga.dev/docs/interacting/contextual-tuples",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Query Consistency Modes",
+      "url": "https://openfga.dev/docs/interacting/consistency",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Update Relationship Tuples",
+      "url": "https://openfga.dev/docs/getting-started/update-tuples",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Immutable Authorization Models",
+      "url": "https://openfga.dev/docs/getting-started/immutable-models",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Managing Tuples and Invoking API Best Practices",
+      "url": "https://openfga.dev/docs/getting-started/tuples-api-best-practices",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA CLI",
+      "url": "https://openfga.dev/docs/getting-started/cli",
+      "status": "Documentation",
+      "revision": "openfga.dev main at fb53597 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA API",
+      "url": "https://openfga.dev/api/service",
+      "status": "API reference",
+      "revision": "rendered from openfga/api main",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/api: openfga_service.proto",
+      "url": "https://github.com/openfga/api/blob/c0650ce/openfga/v1/openfga_service.proto",
+      "status": "API definition",
+      "revision": "main at c0650ce (2026-09-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/api: openfga.proto",
+      "url": "https://github.com/openfga/api/blob/c0650ce/openfga/v1/openfga.proto",
+      "status": "API definition",
+      "revision": "main at c0650ce (2026-09-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/api: authzmodel.proto",
+      "url": "https://github.com/openfga/api/blob/c0650ce/openfga/v1/authzmodel.proto",
+      "status": "API definition",
+      "revision": "main at c0650ce (2026-09-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/api: openfga_service_consistency.proto",
+      "url": "https://github.com/openfga/api/blob/c0650ce/openfga/v1/openfga_service_consistency.proto",
+      "status": "API definition",
+      "revision": "main at c0650ce (2026-09-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: OpenFGAParser.g4",
+      "url": "https://github.com/openfga/language/blob/f558baa/OpenFGAParser.g4",
+      "status": "ANTLR grammar",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: OpenFGALexer.g4",
+      "url": "https://github.com/openfga/language/blob/f558baa/OpenFGALexer.g4",
+      "status": "ANTLR grammar",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: README",
+      "url": "https://github.com/openfga/language/blob/f558baa/README.md",
+      "status": "Language tooling",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: validate-dsl.ts",
+      "url": "https://github.com/openfga/language/blob/f558baa/pkg/js/validator/validate-dsl.ts",
+      "status": "Language tooling",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: schema_version.ts",
+      "url": "https://github.com/openfga/language/blob/f558baa/pkg/js/util/schema_version.ts",
+      "status": "Language tooling",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: mod-to-json.go",
+      "url": "https://github.com/openfga/language/blob/f558baa/pkg/go/transformer/mod-to-json.go",
+      "status": "Language tooling",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language: module-to-model.go",
+      "url": "https://github.com/openfga/language/blob/f558baa/pkg/go/transformer/module-to-model.go",
+      "status": "Language tooling",
+      "revision": "main at f558baa (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/language release pkg/go/v0.3.2",
+      "url": "https://github.com/openfga/language/releases/tag/pkg/go/v0.3.2",
+      "status": "Released",
+      "revision": "pkg/go/v0.3.2 (2026-10-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA v1.21.0",
+      "url": "https://github.com/openfga/openfga/releases/tag/v1.21.0",
+      "status": "Released",
+      "revision": "v1.21.0 (2026-09-20), latest",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenFGA CHANGELOG",
+      "url": "https://github.com/openfga/openfga/blob/main/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "through v1.21.0 and Unreleased",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openfga/openfga PR #3313: dynamic conditions (experimental)",
+      "url": "https://github.com/openfga/openfga/pull/3313",
+      "status": "Merged, experimental",
+      "revision": "merged 2026-09-20, flag inline_expressions",
+      "checked": "2026-10-05"
+    }
+  ]
+}
