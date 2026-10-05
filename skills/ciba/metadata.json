@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenID Connect Client-Initiated Backchannel Authentication (CIBA) Core 1.0, Final of 1 September 2021, as the current line: discovery and registration metadata, the backchannel authentication request and signed request objects, user codes, the auth_req_id acknowledgement, poll, ping and push delivery, the CIBA grant, errors, and push-mode ID Token bindings. Implementer's Drafts 1 and 2 and the 2017 MODRNA draft are legacy lines with upgrade paths, and the CIBA Core 1.0 errata set 1 draft (draft 06, 23 January 2025) is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions, the backchannel request, delivery modes, and security with a FAPI-CIBA summary.",
+  "versions": [
+    {
+      "id": "errata1-preview",
+      "label": "CIBA Core 1.0 errata set 1 draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft 06 incorporating errata set 1 (2025-01-23)"
+    },
+    {
+      "id": "1.0",
+      "label": "CIBA Core 1.0",
+      "status": "current",
+      "revision": "Final (2021-09-01)"
+    },
+    {
+      "id": "id2",
+      "label": "CIBA Core Implementer's Draft 2",
+      "status": "legacy",
+      "revision": "draft-03 (2020-01-22)"
+    },
+    {
+      "id": "id1",
+      "label": "CIBA Core Implementer's Draft 1",
+      "status": "legacy",
+      "revision": "draft-02 (2019-01-16)"
+    },
+    {
+      "id": "modrna-id1",
+      "label": "MODRNA CIBA 1.0 Implementer's Draft 1",
+      "status": "legacy",
+      "revision": "Implementer's Draft 1 (2017-03-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenID Connect Client-Initiated Backchannel Authentication Flow - Core 1.0",
+      "url": "https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0.html",
+      "status": "Final",
+      "revision": "1 September 2021",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CIBA Core 1.0 - draft 06 incorporating errata set 1",
+      "url": "https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0-06.html",
+      "status": "Draft (proposed errata)",
+      "revision": "draft 06, 23 January 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CIBA Core 1.0 draft-04",
+      "url": "https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0-04.html",
+      "status": "Draft",
+      "revision": "draft-04, 4 June 2021",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CIBA Core 1.0 Implementer's Draft 2",
+      "url": "https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "draft-03, 22 January 2020",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CIBA Core 1.0 Implementer's Draft 1",
+      "url": "https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "draft-02, 16 January 2019",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Connect MODRNA Client initiated Backchannel Authentication Flow 1.0",
+      "url": "https://openid.net/specs/openid-connect-modrna-client-initiated-backchannel-authentication-1_0.html",
+      "status": "Implementer's Draft (replaced by CIBA Core)",
+      "revision": "Implementer's Draft 1, 6 March 2017",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Specifications",
+      "url": "https://openid.net/developers/specs/",
+      "status": "Index page",
+      "revision": "as read 2026-10-05; no CIBA entry under Errata Corrections",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MODRNA Working Group",
+      "url": "https://openid.net/wg/mobile/",
+      "status": "Working group page",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MODRNA Working Group Specifications",
+      "url": "https://openid.net/wg/modrna/specifications/",
+      "status": "Index page",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "FAPI: Client Initiated Backchannel Authentication Profile",
+      "url": "https://openid.net/specs/openid-financial-api-ciba-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (labelled Draft-02, 15 August 2019)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "FAPI Client Initiated Backchannel Authentication Profile (working copy)",
+      "url": "https://openid.bitbucket.io/fapi/fapi-ciba.html",
+      "status": "Draft",
+      "revision": "26 June 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 6749: The OAuth 2.0 Authorization Framework",
+      "url": "https://www.rfc-editor.org/rfc/rfc6749",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 6749",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8414: OAuth 2.0 Authorization Server Metadata",
+      "url": "https://www.rfc-editor.org/rfc/rfc8414",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8414",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8628: OAuth 2.0 Device Authorization Grant",
+      "url": "https://www.rfc-editor.org/rfc/rfc8628",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8628",
+      "checked": "2026-10-05"
+    }
+  ]
+}
