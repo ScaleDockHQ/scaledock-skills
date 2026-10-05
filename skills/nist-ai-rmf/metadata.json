@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the NIST AI Risk Management Framework, AI RMF 1.0 (NIST AI 100-1, January 2023): framing AI risk and risk tolerance, the seven trustworthy AI characteristics, the GOVERN, MAP, MEASURE and MANAGE functions with all 72 categories and subcategories, use-case, temporal and cross-sectoral profiles, and the AI RMF Playbook's suggested actions as published. The genai-profile family covers NIST AI 600-1 (July 2024): the 12 generative AI risks and the 213 suggested actions it maps to 49 subcategories, plus its primary considerations on governance, pre-deployment testing, structured public feedback, content provenance and incident disclosure. Both lines are current; the announced AI RMF revision, the critical infrastructure profile, the Cyber AI Profile and the SP 800-53 AI control overlays are tracked as watch items because none has final text. SKILL.md holds the invariants and workflow; references split out versions, GOVERN and MAP, trustworthiness with MEASURE and MANAGE, the Generative AI Profile, and building a profile with control mapping. Not legal advice.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "AI RMF 1.0",
+      "status": "current",
+      "revision": "NIST AI 100-1, January 2023 (released 2023-01-26)"
+    },
+    {
+      "id": "600-1",
+      "label": "NIST AI 600-1 Generative AI Profile",
+      "status": "current",
+      "revision": "NIST AI 600-1, July 2024 (released 2024-07-26)",
+      "family": "genai-profile",
+      "reference": "references/genai-profile.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NIST AI 100-1: Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "status": "Final",
+      "revision": "AI RMF 1.0, January 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": "Final",
+      "revision": "July 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "status": "Web page",
+      "revision": "states AI RMF 1.0 is being revised; critical infrastructure profile concept note of 2026-04-07",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST AI Resource Center (AIRC)",
+      "url": "https://airc.nist.gov/",
+      "status": "Web page",
+      "revision": "notes AI RMF 1.0 is being revised and the Playbook will follow",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST AI RMF Playbook",
+      "url": "https://airc.nist.gov/airmf-resources/playbook/",
+      "status": "Companion resource",
+      "revision": "online Playbook for AI RMF 1.0; 72 subcategories",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST AI RMF Playbook (PDF)",
+      "url": "https://airc.nist.gov/docs/AI_RMF_Playbook.pdf",
+      "status": "Companion resource",
+      "revision": "142 pages, PDF dated 2024-08-02",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Concept Note: AI RMF Profile on Trustworthy AI in Critical Infrastructure",
+      "url": "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure",
+      "status": "Concept note (watch item)",
+      "revision": "released 2026-04-07, page updated 2026-07-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST IR 8596: Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile)",
+      "url": "https://csrc.nist.gov/pubs/ir/8596/iprd",
+      "status": "Initial Preliminary Draft (watch item)",
+      "revision": "2025-12-16, comments closed 2026-01-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-53 Control Overlays for Securing AI Systems (COSAiS)",
+      "url": "https://csrc.nist.gov/projects/cosais",
+      "status": "Project page (watch item)",
+      "revision": "concept paper 2025-08-14; predictive AI annotated outline 2026-01-08",
+      "checked": "2026-10-05"
+    }
+  ]
+}
