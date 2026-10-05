@@ -1,0 +1,381 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Model Context Protocol base protocol and server and client features at revision 2026-07-28: JSON-RPC messages, error codes and per-request _meta, stateless versioning with server/discover, stdio and Streamable HTTP with standard and x-mcp-header headers, multi round-trip requests, subscriptions, cancellation and progress, tools, resources, prompts, completion, pagination, caching hints, deprecated logging, sampling and roots, elicitation, and the security best practices, plus the Tasks and Skills extensions and the MCP Registry server.json format. Version lines: 2026-07-28 is current, 2025-11-25 and 2025-06-18 are supported, 2025-03-26 and 2024-11-05 are legacy, and the draft is tracked as a preview; the Tasks extension 2026-07-28, the Skills extension (stable) and server.json 2025-12-11 are separate families. SKILL.md holds the invariants and workflow; references split out the version lines and upgrades, lifecycle and transports, server features, client features, extensions and the registry, and security.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "MCP draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "specification/draft as of 2026-10-05 (editorial differences from 2026-07-28 only; changelog empty)"
+    },
+    {
+      "id": "2026-07-28",
+      "label": "MCP 2026-07-28",
+      "status": "current",
+      "revision": "2026-07-28 (Current)",
+      "reference": "references/lifecycle-and-transports.md"
+    },
+    {
+      "id": "2025-11-25",
+      "label": "MCP 2025-11-25",
+      "status": "supported",
+      "revision": "2025-11-25 (Final)"
+    },
+    {
+      "id": "2025-06-18",
+      "label": "MCP 2025-06-18",
+      "status": "supported",
+      "revision": "2025-06-18 (Final)"
+    },
+    {
+      "id": "2025-03-26",
+      "label": "MCP 2025-03-26",
+      "status": "legacy",
+      "revision": "2025-03-26 (Final)"
+    },
+    {
+      "id": "2024-11-05",
+      "label": "MCP 2024-11-05",
+      "status": "legacy",
+      "revision": "2024-11-05 (Final)"
+    },
+    {
+      "id": "tasks-2026-07-28",
+      "label": "MCP Tasks extension 2026-07-28",
+      "status": "current",
+      "family": "tasks",
+      "revision": "ext-tasks specification/2026-07-28 (Stable), main at 5246bc3, release v0.2.2",
+      "reference": "references/extensions-and-registry.md"
+    },
+    {
+      "id": "skills-stable",
+      "label": "Skills over MCP extension (stable)",
+      "status": "current",
+      "family": "skills",
+      "revision": "ext-skills specification/stable, SEP-2640 (Final), main at 167da6c",
+      "reference": "references/extensions-and-registry.md"
+    },
+    {
+      "id": "server-json-2025-12-11",
+      "label": "server.json 2025-12-11",
+      "status": "current",
+      "family": "registry",
+      "revision": "server.json schema 2025-12-11, registry release v1.8.1 (2026-08-06)",
+      "reference": "references/extensions-and-registry.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MCP Versioning",
+      "url": "https://modelcontextprotocol.io/specification/versioning",
+      "status": "Specification page",
+      "revision": "lists 2026-07-28 as Current",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Specification 2026-07-28 (overview and architecture)",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "status": "Current",
+      "revision": "2026-07-28; modelcontextprotocol main at 75db1e9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Base Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Versioning and Compatibility",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/versioning",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Discovery (server/discover)",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/discover",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Transports",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP stdio transport",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Streamable HTTP transport",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Message Patterns",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Multi Round-Trip Requests",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/mrtr",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Subscriptions",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/subscriptions",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Cancellation",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/cancellation",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Progress",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/progress",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Tools",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Resources",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/resources",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Prompts",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/prompts",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Completion",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/completion",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Logging",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/logging",
+      "status": "Current (feature Deprecated)",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Pagination",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/pagination",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Caching",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/utilities/caching",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Sampling",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/client/sampling",
+      "status": "Current (feature Deprecated)",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Elicitation",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/client/elicitation",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Roots",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/client/roots",
+      "status": "Current (feature Deprecated)",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes 2026-07-28",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Deprecated Features",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/deprecated",
+      "status": "Current",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP schema 2026-07-28 (schema.ts)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2026-07-28/schema.ts",
+      "status": "Current",
+      "revision": "main at 75db1e9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Specification (draft)",
+      "url": "https://modelcontextprotocol.io/specification/draft",
+      "status": "Draft",
+      "revision": "main at 75db1e9; schema LATEST_PROTOCOL_VERSION still 2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes (draft)",
+      "url": "https://modelcontextprotocol.io/specification/draft/changelog",
+      "status": "Draft",
+      "revision": "empty as of main at 75db1e9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Specification 2025-11-25",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes 2025-11-25",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/changelog",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Lifecycle 2025-11-25",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/lifecycle",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Transports 2025-11-25",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/transports",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes 2025-06-18",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/changelog",
+      "status": "Final",
+      "revision": "2025-06-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes 2025-03-26",
+      "url": "https://modelcontextprotocol.io/specification/2025-03-26/changelog",
+      "status": "Final",
+      "revision": "2025-03-26",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Specification 2024-11-05",
+      "url": "https://modelcontextprotocol.io/specification/2024-11-05",
+      "status": "Final",
+      "revision": "2024-11-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Security Best Practices",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+      "status": "Documentation for the Current revision",
+      "revision": "2026-07-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Extensions Overview",
+      "url": "https://modelcontextprotocol.io/extensions/overview",
+      "status": "Documentation page",
+      "revision": "main at 75db1e9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Tasks extension specification 2026-07-28",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/ext-tasks/main/specification/2026-07-28/tasks.md",
+      "status": "Stable",
+      "revision": "main at 5246bc3, release v0.2.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Skills over MCP extension specification",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/ext-skills/main/specification/stable/skills.mdx",
+      "status": "Final (SEP-2640)",
+      "revision": "stable, main at 167da6c",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Registry release v1.8.1",
+      "url": "https://github.com/modelcontextprotocol/registry/releases/tag/v1.8.1",
+      "status": "Released",
+      "revision": "v1.8.1 (2026-08-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "server.json schema 2025-12-11",
+      "url": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+      "status": "Released",
+      "revision": "2025-12-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "server.json format reference",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/registry/v1.8.1/docs/reference/server-json/generic-server-json.md",
+      "status": "Released",
+      "revision": "registry v1.8.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "server.json CHANGELOG",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/registry/v1.8.1/docs/reference/server-json/CHANGELOG.md",
+      "status": "Released",
+      "revision": "registry v1.8.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Official MCP Registry requirements",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/registry/v1.8.1/docs/reference/server-json/official-registry-requirements.md",
+      "status": "Released",
+      "revision": "registry v1.8.1",
+      "checked": "2026-10-05"
+    }
+  ]
+}
