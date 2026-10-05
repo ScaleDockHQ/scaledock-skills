@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the /llms.txt proposal by Jeremy Howard (Answer.AI, llmstxt.org): the file at /llms.txt or any subpath and its path scope, the structure (optional BOM, required H1, blockquote summary, heading-free details, H2 file lists of [name](url): notes items), the Optional section convention, markdown page versions (page.html.md, page.md, index.html.md, index.md), discovery through rel=alternate type=text/markdown and rel=describedby links or Link headers (RFC 8288), the reference parser and llms_txt2ctx, the Lighthouse audit, and how agents consume the file. It states plainly that llms.txt is a proposal, not a standard or a crawler permission mechanism. Version lines: llms.txt v2 (August 2026) is current with posture build, and llms.txt v1 (2024) is legacy with upgrade steps. SKILL.md holds the invariants and workflow; references split out versions, format, authoring and markdown pages, and validation.",
+  "versions": [
+    {
+      "id": "v2",
+      "label": "llms.txt v2",
+      "status": "current",
+      "posture": "build",
+      "revision": "v2, date-modified 2026-08-10; AnswerDotAI/llms-txt commit 3700a0a (2026-09-24)"
+    },
+    {
+      "id": "v1",
+      "label": "llms.txt v1",
+      "status": "legacy",
+      "revision": "v1, date 2024-09-03; last v1 text at commit ab0d61d (2026-06-09)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The /llms.txt file, v2 (llmstxt.org)",
+      "url": "https://llmstxt.org/",
+      "status": "Proposal (informal, open for community input)",
+      "revision": "v2, date-modified 2026-08-10",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "llms.txt proposal source, nbs/index.qmd",
+      "url": "https://github.com/AnswerDotAI/llms-txt/blob/main/nbs/index.qmd",
+      "status": "Proposal source",
+      "revision": "commit 3700a0a (2026-09-24); text last changed in 6e55a65 (2026-08-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Changes, nbs/changes.qmd",
+      "url": "https://github.com/AnswerDotAI/llms-txt/blob/main/nbs/changes.qmd",
+      "status": "Proposal change log",
+      "revision": "v2 (August 2026), commit 3700a0a",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "The /llms.txt file, v1 text",
+      "url": "https://github.com/AnswerDotAI/llms-txt/blob/ab0d61d935207ccf8b87c3c76868205f4d90407c/nbs/index.qmd",
+      "status": "Proposal, superseded by v2",
+      "revision": "date 2024-09-03, commit ab0d61d (2026-06-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "llmstxt.org/llms.txt",
+      "url": "https://llmstxt.org/llms.txt",
+      "status": "Example file published by the proposal site",
+      "revision": "served 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AnswerDotAI/llms-txt repository",
+      "url": "https://github.com/AnswerDotAI/llms-txt",
+      "status": "Repository",
+      "revision": "commit 3700a0a, release 0.0.7 (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Python module & CLI (llms_txt2ctx)",
+      "url": "https://llmstxt.org/intro.html.md",
+      "status": "Tool documentation",
+      "revision": "llms-txt 0.0.7",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "llms_txt package source (core.py, miniparse.py)",
+      "url": "https://github.com/AnswerDotAI/llms-txt/tree/main/llms_txt",
+      "status": "Reference implementation",
+      "revision": "commit 3700a0a",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Parser tests, tests/test-parse.py",
+      "url": "https://github.com/AnswerDotAI/llms-txt/blob/main/tests/test-parse.py",
+      "status": "Reference tests",
+      "revision": "commit 3700a0a",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Lighthouse llms.txt audit",
+      "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt",
+      "status": "Tool documentation",
+      "revision": "last updated 2026-05-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8288: Web Linking",
+      "url": "https://www.rfc-editor.org/rfc/rfc8288",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8288",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA Link Relations registry",
+      "url": "https://www.iana.org/assignments/link-relations/",
+      "status": "IANA registry",
+      "revision": "last updated 2026-06-12",
+      "checked": "2026-10-05"
+    }
+  ]
+}
