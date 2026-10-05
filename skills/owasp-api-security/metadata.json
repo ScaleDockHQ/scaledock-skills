@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Turns the OWASP API Security Top 10 2023 (API1:2023 to API10:2023, stable release June 2023) into a review workflow for HTTP, GraphQL and RPC APIs. The 2023 edition is current and the 2019 edition is legacy; no newer edition or release candidate exists, so there is no preview. SKILL.md holds the authorization, authentication, resource-limit, outbound-request and inventory invariants and the review workflow; references cover the version lines with the full 2019 to 2023 mapping, each risk with its rating, vulnerability test, scenarios and prevention, and a checklist that maps HTTP, GraphQL and RPC onto the Top 10's terms.",
+  "versions": [
+    {
+      "id": "2023",
+      "label": "OWASP API Security Top 10 2023",
+      "status": "current",
+      "revision": "2023 edition, stable release 5 June 2023"
+    },
+    {
+      "id": "2019",
+      "label": "OWASP API Security Top 10 2019",
+      "status": "legacy",
+      "revision": "2019 edition, stable release 26 December 2019"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP API Security Top 10 2023 (cover)",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x00-header/",
+      "status": "stable release",
+      "revision": "2023 edition (5 June 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 API Security Risks – 2023 (list)",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2023 Release Notes",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x04-release-notes/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2023 API Security Risks (risk rating)",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0x10-api-security-risks/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2023 Methodology and Data",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xd0-about-data/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API1:2023 Broken Object Level Authorization",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API2:2023 Broken Authentication",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa2-broken-authentication/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API3:2023 Broken Object Property Level Authorization",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API4:2023 Unrestricted Resource Consumption",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API5:2023 Broken Function Level Authorization",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API6:2023 Unrestricted Access to Sensitive Business Flows",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API7:2023 Server Side Request Forgery",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa7-server-side-request-forgery/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API8:2023 Security Misconfiguration",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa8-security-misconfiguration/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API9:2023 Improper Inventory Management",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa9-improper-inventory-management/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "API10:2023 Unsafe Consumption of APIs",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xaa-unsafe-consumption-of-apis/",
+      "status": "stable release",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP API Security Top 10 2019 (cover)",
+      "url": "https://owasp.org/API-Security/editions/2019/en/0x00-header/",
+      "status": "stable release, superseded by 2023",
+      "revision": "2019 edition (26 December 2019)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 API Security Risks – 2019 (list)",
+      "url": "https://owasp.org/API-Security/editions/2019/en/0x11-t10/",
+      "status": "stable release, superseded by 2023",
+      "revision": "2019 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP API Security Project (project page)",
+      "url": "https://owasp.org/www-project-api-security/",
+      "status": "OWASP documentation project, level 3",
+      "revision": "redirects to owasp.org/projects/api-security, which returned 404; read from its source repository",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP/www-project-api-security (project page source, news and roadmap)",
+      "url": "https://github.com/OWASP/www-project-api-security",
+      "status": "project page source",
+      "revision": "latest commit 10 December 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP/API-Security (repository)",
+      "url": "https://github.com/OWASP/API-Security",
+      "status": "source of the published editions",
+      "revision": "master at 33cea37 (21 September 2026), VERSION 2.7.0",
+      "checked": "2026-10-05"
+    }
+  ]
+}
