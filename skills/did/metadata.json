@@ -1,0 +1,125 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "W3C Decentralized Identifiers: DID and DID URL syntax, DID documents, representations and media types, resolution and dereferencing, DID methods and their evaluation, and security and privacy. Targets the DID 1.0 Recommendation (19 July 2022), previews DID 1.1 (Candidate Recommendation Snapshot, 5 March 2026, posture build), and covers DID Resolution 1.0 (Candidate Recommendation Draft, 1 October 2026) as its own family. References are split into versions, syntax and URLs, DID documents, resolution, methods (including the DID Extensions notes, the DID Method Rubric and did:web), and security and privacy.",
+  "versions": [
+    {
+      "id": "1.1-preview",
+      "label": "DID 1.1",
+      "status": "preview",
+      "posture": "build",
+      "revision": "Candidate Recommendation Snapshot CR-did-1.1-20260305 (5 March 2026); editor's draft commit a2bb463 (27 August 2026)"
+    },
+    {
+      "id": "1.0",
+      "label": "DID 1.0",
+      "status": "current",
+      "revision": "W3C Recommendation REC-did-core-20220719 (19 July 2022)",
+      "reference": "references/did-documents.md"
+    },
+    {
+      "id": "resolution-1.0",
+      "label": "DID Resolution 1.0",
+      "status": "current",
+      "posture": "build",
+      "family": "resolution",
+      "revision": "Candidate Recommendation Draft CRD-did-resolution-1.0-20261001 (1 October 2026); sections 5, 6, 8 and 10 at risk",
+      "reference": "references/resolution.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Decentralized Identifiers (DIDs) v1.0",
+      "url": "https://www.w3.org/TR/2022/REC-did-core-20220719/",
+      "status": "W3C Recommendation",
+      "revision": "REC-did-core-20220719 (19 July 2022)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Decentralized Identifiers (DIDs) v1.1",
+      "url": "https://www.w3.org/TR/2026/CR-did-1.1-20260305/",
+      "status": "W3C Candidate Recommendation Snapshot",
+      "revision": "CR-did-1.1-20260305 (5 March 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Decentralized Identifiers (DIDs) v1.1, editor's draft",
+      "url": "https://w3c.github.io/did/",
+      "status": "Editor's Draft",
+      "revision": "commit a2bb463 (27 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Decentralized Identifier Resolution (DID Resolution) v1",
+      "url": "https://www.w3.org/TR/2026/CRD-did-resolution-1.0-20261001/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "CRD-did-resolution-1.0-20261001 (1 October 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DID Resolution, editor's draft",
+      "url": "https://w3c.github.io/did-resolution/",
+      "status": "Editor's Draft",
+      "revision": "commit a5f3d89 (1 October 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Controlled Identifiers v1.0",
+      "url": "https://www.w3.org/TR/2025/REC-cid-1.0-20250515/",
+      "status": "W3C Recommendation",
+      "revision": "REC-cid-1.0-20250515 (15 May 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Decentralized Identifier Extensions",
+      "url": "https://www.w3.org/TR/2025/NOTE-did-extensions-20251211/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-did-extensions-20251211 (11 December 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DID Document Property Extensions",
+      "url": "https://www.w3.org/TR/2025/NOTE-did-extensions-properties-20251211/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-did-extensions-properties-20251211 (11 December 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DID Method Extensions",
+      "url": "https://www.w3.org/TR/2026/NOTE-did-extensions-methods-20261001/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-did-extensions-methods-20261001 (1 October 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DID Resolution Extensions",
+      "url": "https://www.w3.org/TR/2024/NOTE-did-extensions-resolution-20241119/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-did-extensions-resolution-20241119 (19 November 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DID Method Rubric",
+      "url": "https://www.w3.org/TR/2026/NOTE-did-rubric-20260922/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-did-rubric-20260922 (22 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "did:web Method Specification",
+      "url": "https://w3c-ccg.github.io/did-method-web/",
+      "status": "W3C Credentials Community Group unofficial draft",
+      "revision": "commit ea423c1 (8 May 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA Media Types registry",
+      "url": "https://www.iana.org/assignments/media-types/media-types.txt",
+      "status": "IANA registry",
+      "revision": "last updated 2026-09-24",
+      "checked": "2026-10-05"
+    }
+  ]
+}
