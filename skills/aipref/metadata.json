@@ -1,0 +1,181 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the IETF AI Preferences (aipref) working group drafts: the vocabulary for AI usage preferences (draft-ietf-aipref-vocab-08, categories train-ai, ai-use and search, serialized as a Structured Fields Dictionary) and its attachment to HTTP content (draft-ietf-aipref-attach-05, the Content-Usage header field and the robots.txt Content-Usage rule that updates RFC 9309). Both are working group drafts with no RFC, so each is the current line of its own family with a build posture; earlier revisions with breaking label or syntax changes are legacy lines with upgrade checklists. SKILL.md holds the invariants and workflow; references split out versions and upgrades, the vocabulary and serialization, the attachment mechanisms for publishers, and the processing, combining and limits for crawlers and agents.",
+  "versions": [
+    {
+      "id": "vocab-08",
+      "label": "draft-ietf-aipref-vocab-08",
+      "status": "current",
+      "posture": "build",
+      "family": "vocab",
+      "revision": "draft-ietf-aipref-vocab-08 (2026-09-14)"
+    },
+    {
+      "id": "vocab-05",
+      "label": "draft-ietf-aipref-vocab-05 to -07",
+      "status": "legacy",
+      "family": "vocab",
+      "revision": "draft-ietf-aipref-vocab-05 (2025-12-01), -06 (2026-04-28) and -07 (2026-08-19)"
+    },
+    {
+      "id": "vocab-03",
+      "label": "draft-ietf-aipref-vocab-03 to -04",
+      "status": "legacy",
+      "family": "vocab",
+      "revision": "draft-ietf-aipref-vocab-03 (2025-09-05) and -04 (2025-10-28)"
+    },
+    {
+      "id": "vocab-02",
+      "label": "draft-ietf-aipref-vocab-02",
+      "status": "legacy",
+      "family": "vocab",
+      "revision": "draft-ietf-aipref-vocab-02 (2025-07-21)"
+    },
+    {
+      "id": "vocab-01",
+      "label": "draft-ietf-aipref-vocab-00 to -01",
+      "status": "legacy",
+      "family": "vocab",
+      "revision": "draft-ietf-aipref-vocab-00 (2025-05-01) and -01 (2025-06-19)"
+    },
+    {
+      "id": "attach-05",
+      "label": "draft-ietf-aipref-attach-05",
+      "status": "current",
+      "posture": "build",
+      "family": "attach",
+      "revision": "draft-ietf-aipref-attach-05 (2026-08-19)"
+    },
+    {
+      "id": "attach-00",
+      "label": "draft-ietf-aipref-attach-00",
+      "status": "legacy",
+      "family": "attach",
+      "revision": "draft-ietf-aipref-attach-00 (2025-06-16)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "draft-ietf-aipref-vocab-08: A Vocabulary For Expressing AI Usage Preferences",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-08.txt",
+      "status": "WG draft (IETF aipref WG), intended Proposed Standard",
+      "revision": "-08 (14 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/",
+      "status": "WG Document, active, no RFC",
+      "revision": "latest revision -08",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-attach-05: Associating AI Usage Preferences with Content in HTTP",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-attach-05.txt",
+      "status": "WG draft (IETF aipref WG), intended Proposed Standard, updates RFC 9309 if approved",
+      "revision": "-05 (19 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-attach datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/",
+      "status": "WG Document, active, no RFC",
+      "revision": "latest revision -05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AI Preferences (aipref) working group charter",
+      "url": "https://datatracker.ietf.org/wg/aipref/about/",
+      "status": "Active",
+      "revision": "charter-ietf-aipref-01",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-07",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-07.txt",
+      "status": "WG draft, superseded",
+      "revision": "-07 (19 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-05",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.txt",
+      "status": "WG draft, superseded",
+      "revision": "-05 (1 December 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-04",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-04.txt",
+      "status": "WG draft, superseded",
+      "revision": "-04 (28 October 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-03",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-03.txt",
+      "status": "WG draft, superseded",
+      "revision": "-03 (5 September 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-02",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-02.txt",
+      "status": "WG draft, superseded",
+      "revision": "-02 (21 July 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-01",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-01.txt",
+      "status": "WG draft, superseded",
+      "revision": "-01 (19 June 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-vocab-00",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-00.txt",
+      "status": "WG draft, superseded",
+      "revision": "-00 (1 May 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-attach-04",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-attach-04.txt",
+      "status": "WG draft, superseded",
+      "revision": "-04 (28 October 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-aipref-attach-00",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-aipref-attach-00.txt",
+      "status": "WG draft, superseded",
+      "revision": "-00 (16 June 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9309: Robots Exclusion Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9309 (September 2022)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9651: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9651",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9651 (September 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA HTTP Field Name registry",
+      "url": "https://www.iana.org/assignments/http-fields",
+      "status": "IANA registry",
+      "revision": "last updated 2026-08-28, no Content-Usage entry yet",
+      "checked": "2026-10-05"
+    }
+  ]
+}
