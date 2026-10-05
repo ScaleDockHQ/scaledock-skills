@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the IETF WIMSE (Workload Identity in Multi-System Environments) working group drafts for service-to-service authentication: the architecture (draft-ietf-wimse-arch-08), the Workload Identifier and wimse URI scheme (identifier-03), the Workload Identity Token and Workload Identity Certificate (workload-creds-02), the Workload Proof Token (wpt-02), the RFC 9421 HTTP Message Signatures profile (http-signature-07), mutual TLS (mutual-tls-02), Workload Identity Practices (workload-identity-practices-07, with the IESG) and the AI Identity Management System (aims-00). None is an RFC. Each draft is its own version family whose current line is its latest revision with a draft posture; the replaced draft-ietf-wimse-s2s-protocol-07, the Workload-Proof-Token header of wpt-01 and the @request-target profile of http-signature-06 are legacy lines with upgrade checklists. SKILL.md holds the invariants and workflow; references split out versions, architecture and identifiers, WIT and WPT, HTTP signatures and mTLS, and practices with AIMS, and relate each to SPIFFE and OAuth.",
+  "versions": [
+    {
+      "id": "arch-08",
+      "label": "draft-ietf-wimse-arch-08",
+      "status": "current",
+      "posture": "name",
+      "family": "arch",
+      "revision": "draft-ietf-wimse-arch-08 (2026-07-06), WG Document, Informational",
+      "reference": "references/architecture-and-identifiers.md"
+    },
+    {
+      "id": "identifier-03",
+      "label": "draft-ietf-wimse-identifier-03",
+      "status": "current",
+      "posture": "build",
+      "family": "identifier",
+      "revision": "draft-ietf-wimse-identifier-03 (2026-07-06), WG Document, Standards Track",
+      "reference": "references/architecture-and-identifiers.md"
+    },
+    {
+      "id": "creds-02",
+      "label": "draft-ietf-wimse-workload-creds-02",
+      "status": "current",
+      "posture": "build",
+      "family": "creds",
+      "revision": "draft-ietf-wimse-workload-creds-02 (2026-07-02), WG Document, Standards Track",
+      "reference": "references/tokens.md"
+    },
+    {
+      "id": "s2s-07",
+      "label": "draft-ietf-wimse-s2s-protocol-07",
+      "status": "legacy",
+      "family": "creds",
+      "revision": "draft-ietf-wimse-s2s-protocol-00 to -07 (to 2025-10-16), Replaced by workload-creds, wpt, http-signature and mutual-tls"
+    },
+    {
+      "id": "wpt-02",
+      "label": "draft-ietf-wimse-wpt-02",
+      "status": "current",
+      "posture": "build",
+      "family": "wpt",
+      "revision": "draft-ietf-wimse-wpt-02 (2026-08-27), WG Document, Standards Track",
+      "reference": "references/tokens.md"
+    },
+    {
+      "id": "wpt-01",
+      "label": "draft-ietf-wimse-wpt-01 and earlier",
+      "status": "legacy",
+      "family": "wpt",
+      "revision": "draft-ietf-wimse-wpt-00 to -01 (to 2026-03-02): Workload-Proof-Token header field and ath claim"
+    },
+    {
+      "id": "httpsig-07",
+      "label": "draft-ietf-wimse-http-signature-07",
+      "status": "current",
+      "posture": "build",
+      "family": "httpsig",
+      "revision": "draft-ietf-wimse-http-signature-07 (2026-09-20), WG Document, Standards Track",
+      "reference": "references/http-signature-and-mtls.md"
+    },
+    {
+      "id": "httpsig-06",
+      "label": "draft-ietf-wimse-http-signature-06 and earlier",
+      "status": "legacy",
+      "family": "httpsig",
+      "revision": "draft-ietf-wimse-http-signature-00 to -06 (to 2026-08-04): @request-target coverage and label-based selection"
+    },
+    {
+      "id": "mtls-02",
+      "label": "draft-ietf-wimse-mutual-tls-02",
+      "status": "current",
+      "posture": "build",
+      "family": "mtls",
+      "revision": "draft-ietf-wimse-mutual-tls-02 (2026-07-06), WG Document, Standards Track",
+      "reference": "references/http-signature-and-mtls.md"
+    },
+    {
+      "id": "practices-07",
+      "label": "draft-ietf-wimse-workload-identity-practices-07",
+      "status": "current",
+      "posture": "build",
+      "family": "practices",
+      "revision": "draft-ietf-wimse-workload-identity-practices-07 (2026-09-22), Submitted to IESG for Publication (AD Evaluation), Informational",
+      "reference": "references/practices.md"
+    },
+    {
+      "id": "aims-00",
+      "label": "draft-ietf-wimse-aims-00",
+      "status": "current",
+      "posture": "track",
+      "family": "aims",
+      "revision": "draft-ietf-wimse-aims-00 (2026-09-15), WG Document, Informational",
+      "reference": "references/practices.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Workload Identity in Multi System Environments (wimse) working group charter",
+      "url": "https://datatracker.ietf.org/wg/wimse/about/",
+      "status": "Active working group",
+      "revision": "charter as published, with milestones",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "wimse working group documents",
+      "url": "https://datatracker.ietf.org/wg/wimse/documents/",
+      "status": "Datatracker index",
+      "revision": "7 active WG drafts and 1 with the IESG; no RFCs",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-arch-08: Workload Identity in a Multi System Environment (WIMSE) Architecture",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-arch-08.txt",
+      "status": "WG draft (Informational)",
+      "revision": "-08 (6 July 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-identifier-03: Workload Identifier",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-identifier-03.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-03 (6 July 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-workload-creds-02: WIMSE Workload Credentials",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-workload-creds-02.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-02 (2 July 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-wpt-02: WIMSE Workload Proof Token",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-wpt-02.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-02 (27 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-http-signature-07: WIMSE Workload-to-Workload Authentication with HTTP Signatures",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-http-signature-07.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-07 (20 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-mutual-tls-02: Workload Authentication Using Mutual TLS",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-mutual-tls-02.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-02 (6 July 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-workload-identity-practices-07: Workload Identity Practices",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-workload-identity-practices-07.txt",
+      "status": "WG draft (Informational), submitted to IESG",
+      "revision": "-07 (22 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-workload-identity-practices datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-workload-identity-practices/",
+      "status": "Submitted to IESG for Publication; IESG state AD Evaluation::AD Followup",
+      "revision": "latest revision -07; replaces draft-ietf-wimse-workload-identity-bcp",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-aims-00: AI Identity Management System",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-aims-00.txt",
+      "status": "WG draft (Informational)",
+      "revision": "-00 (15 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-aims datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-aims/",
+      "status": "WG Document",
+      "revision": "latest revision -00; replaces draft-klrc-aiagent-auth",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-s2s-protocol datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-wimse-s2s-protocol/",
+      "status": "Replaced (Dead WG Document) by workload-creds, wpt, http-signature and mutual-tls",
+      "revision": "latest revision -07 (2025-10-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-s2s-protocol-07: WIMSE Workload-to-Workload Authentication",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-s2s-protocol-07.txt",
+      "status": "Replaced WG draft",
+      "revision": "-07 (16 October 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-wpt-01: WIMSE Workload Proof Token",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-wpt-01.txt",
+      "status": "Superseded WG draft revision",
+      "revision": "-01 (2 March 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-http-signature-06: WIMSE Workload-to-Workload Authentication with HTTP Signatures",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-http-signature-06.txt",
+      "status": "Superseded WG draft revision",
+      "revision": "-06 (4 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9421: HTTP Message Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421",
+      "status": "RFC (Standards Track)",
+      "revision": "RFC 9421 (February 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8705: OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc8705",
+      "status": "RFC (Standards Track)",
+      "revision": "RFC 8705 (February 2020)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
