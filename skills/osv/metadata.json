@@ -1,0 +1,196 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenSSF OSV (Open Source Vulnerability) schema at release 1.9.1: every record field (schema_version, id, modified, published, withdrawn, aliases, upstream, related, summary, details, severity with CVSS_V2, CVSS_V3, CVSS_V4 and Ubuntu types and the source attribution, references and credits), affected packages with ecosystem, name, purl and the wildcard name, SEMVER, ECOSYSTEM and GIT ranges with introduced, fixed, last_affected and limit events, the IsVulnerable evaluation algorithm, the defined ecosystems and their suffixes, the database id prefixes, JSON Schema validation, and publishing to and consuming from OSV.dev (API and data dumps). Version lines: 1.9 is current, 1.7 to 1.8, 1.2 to 1.6 and 1.0 are legacy with upgrade checklists, and the unreleased main branch is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions, fields, affected and ranges, ecosystems and ids, and publishing and consuming.",
+  "versions": [
+    {
+      "id": "main-preview",
+      "label": "OSV schema main (unreleased)",
+      "status": "preview",
+      "posture": "track",
+      "revision": "main at 2780d2a (2026-10-01); docs/schema.md only, validation/schema.json unchanged from v1.9.1"
+    },
+    {
+      "id": "1.9",
+      "label": "OSV schema 1.9",
+      "status": "current",
+      "revision": "1.9.1 (2026-09-24)"
+    },
+    {
+      "id": "1.7-1.8",
+      "label": "OSV schema 1.7 to 1.8",
+      "status": "legacy",
+      "revision": "1.7.0 (2025-03-05) to 1.8.0 (2026-07-09)"
+    },
+    {
+      "id": "1.2-1.6",
+      "label": "OSV schema 1.2 to 1.6",
+      "status": "legacy",
+      "revision": "1.2.0 (2022-01-19) to 1.6.7 (2024-09-16)"
+    },
+    {
+      "id": "1.0",
+      "label": "OSV schema 1.0",
+      "status": "legacy",
+      "revision": "1.0.0 (2021-09-08)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OSV schema specification (rendered)",
+      "url": "https://ossf.github.io/osv-schema/",
+      "status": "Released (stable)",
+      "revision": "Version 1.9.1 (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at v1.9.1",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.1/docs/schema.md",
+      "status": "Released",
+      "revision": "tag v1.9.1 (8e3305d)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV JSON Schema validation/schema.json at v1.9.1",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.1/validation/schema.json",
+      "status": "Released",
+      "revision": "tag v1.9.1, JSON Schema 2020-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV JSON Schema validation/README.md",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.1/validation/README.md",
+      "status": "Released",
+      "revision": "tag v1.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema CHANGELOG",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.1/CHANGELOG.md",
+      "status": "Released",
+      "revision": "through 1.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema RELEASING.md",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.1/RELEASING.md",
+      "status": "Released",
+      "revision": "tag v1.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema releases",
+      "url": "https://github.com/ossf/osv-schema/releases",
+      "status": "GitHub releases",
+      "revision": "latest v1.9.1 (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md on main",
+      "url": "https://github.com/ossf/osv-schema/blob/main/docs/schema.md",
+      "status": "Unreleased",
+      "revision": "main at 2780d2a (2026-10-01); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at v1.9.0",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.9.0/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag v1.9.0 (2026-08-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at v1.8.0",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.8.0/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag v1.8.0 (2026-07-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at v1.7.0",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.7.0/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag v1.7.0 (2025-03-05)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at v1.6.7",
+      "url": "https://github.com/ossf/osv-schema/blob/v1.6.7/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag v1.6.7 (2024-09-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at 1.2.0",
+      "url": "https://github.com/ossf/osv-schema/blob/1.2.0/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag 1.2.0 (2022-01-19)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at 1.1.0",
+      "url": "https://github.com/ossf/osv-schema/blob/1.1.0/docs/schema.md",
+      "status": "Tag (no release or changelog entry)",
+      "revision": "tag 1.1.0 (2021-12-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV schema docs/schema.md at 1.0.0",
+      "url": "https://github.com/ossf/osv-schema/blob/1.0.0/docs/schema.md",
+      "status": "Released (superseded)",
+      "revision": "tag 1.0.0 (2021-09-08)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev API documentation",
+      "url": "https://google.github.io/osv.dev/api/",
+      "status": "Documentation",
+      "revision": "API 1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev POST /v1/query",
+      "url": "https://google.github.io/osv.dev/post-v1-query/",
+      "status": "Documentation",
+      "revision": "API 1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev POST /v1/querybatch",
+      "url": "https://google.github.io/osv.dev/post-v1-querybatch/",
+      "status": "Documentation",
+      "revision": "API 1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev GET /v1/vulns/{id}",
+      "url": "https://google.github.io/osv.dev/get-v1-vulns/",
+      "status": "Documentation",
+      "revision": "API 1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev data sources and data dumps",
+      "url": "https://google.github.io/osv.dev/data/",
+      "status": "Documentation",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSV.dev contributing a new data source",
+      "url": "https://google.github.io/osv.dev/data/new",
+      "status": "Documentation",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Properties of a High Quality OSV Record",
+      "url": "https://google.github.io/osv.dev/data_quality.html",
+      "status": "Documentation",
+      "revision": "1.0.0",
+      "checked": "2026-10-05"
+    }
+  ]
+}
