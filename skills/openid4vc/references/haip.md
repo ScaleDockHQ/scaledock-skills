@@ -99,7 +99,7 @@ All flows:
 - [ ] `cnf` follows SD-JWT VC and includes `jwk` when the configuration requires holder binding.
 - [ ] `status`, if present, holds a `status_list` (Token Status List). The Status List Token has its key in `x5c`, without the trust anchor, and not self-signed.
 - [ ] Each credential has its own unique, unpredictable status list index.
-- [ ] Issuers sign with a certificate and chain in `x5c` (SD-JWT VC §3.5), without the trust anchor and not self-signed. All parties support this key resolution (§6.1.1).
+- [ ] Issuers sign with a certificate and chain in `x5c` (SD-JWT VC §3.5 as HAIP cites it, § 2.5 in draft -19), without the trust anchor and not self-signed. All parties support this key resolution (§6.1.1).
 - [ ] Holder-bound credentials are always presented with a KB-JWT (§6.1.1.1).
 
 ## Algorithms (§7, §8, §10.2)
@@ -114,6 +114,8 @@ All flows:
 ## Pre-final dependencies (§9.4)
 
 HAIP pins SD-JWT VC draft -13 and Token Status List draft -14. Implementations keep using those versions, even after the final RFCs appear, until a HAIP profile or new version says otherwise. These versions override those named in OpenID4VCI and OpenID4VP.
+
+As read on 2026-10-05, neither has become an RFC: SD-JWT VC is at draft -19 (waiting for AD go-ahead) and Token Status List at draft -21 (in the RFC Editor queue). SD-JWT itself is RFC 9901. The base rules of all three are in [`formats.md`](formats.md).
 
 ## Conformance (§10.1)
 

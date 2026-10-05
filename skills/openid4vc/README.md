@@ -16,7 +16,7 @@ Then ask your agent to "add an OpenID4VP verifier that requests an SD-JWT VC ove
 - OpenID4VP: requests, client identifier prefixes, response modes, response encryption, errors and VP token validation, with TypeScript.
 - DCQL queries, claims path pointers and selection rules.
 - OpenID4VP over the W3C Digital Credentials API.
-- SD-JWT VC, ISO mdoc and W3C VCDM parameters as the OpenID specifications define them.
+- SD-JWT VC, ISO mdoc and W3C VCDM parameters as the OpenID specifications define them, plus the SD-JWT, SD-JWT VC and Token Status List rules underneath `dc+sd-jwt`: key binding, issuer keys and status checks.
 - HAIP 1.0 as a checklist, and the OpenID conformance test plans.
 - Upgrades from the Implementer's Drafts, including OpenID4VCI draft 13 and the OpenID4VP ID2 version used by ISO 18013-7 Annex B.
 
@@ -46,6 +46,8 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [OpenID4VP 1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0-final.html): Final, 9 July 2025.
 - [HAIP 1.0](https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-final.html): Final, 24 December 2025.
 - [W3C Digital Credentials](https://www.w3.org/TR/digital-credentials/): Working Draft, 4 September 2026.
+- [RFC 9901 (SD-JWT)](https://www.rfc-editor.org/rfc/rfc9901.html): RFC, November 2025.
+- [SD-JWT VC draft -19](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/19/) and [Token Status List draft -21](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/21/): IETF OAuth WG drafts, 31 August 2026 and 21 June 2026. HAIP pins their -13 and -14 revisions.
 - [OpenID4VCI ID1 (draft 13)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) and [ID2 (draft 15)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID2.html): Implementer's Drafts, 8 February 2024 and 19 December 2024.
 - [OpenID4VP ID2 (draft 18)](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html) and [ID3 (draft 23)](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html): Implementer's Drafts, 21 April 2023 and 2 December 2024.
 - [HAIP ID1 (draft 03)](https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-ID1.html): Implementer's Draft, 7 February 2025.
