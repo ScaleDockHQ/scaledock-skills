@@ -1,6 +1,6 @@
 # Versions and upgrades
 
-Read this when choosing which OAuth line to build to, reading an OAuth 1.0 integration, upgrading an OAuth 2.0 deployment to the OAuth 2.1 rules, or deciding how far to rely on the OAuth 2.1 draft. Sources: RFC 6749, RFC 6750, RFC 9700, `draft-ietf-oauth-v2-1-16` and RFC 5849, listed in [Sources](../SKILL.md#sources). Other drafts this skill uses (Client ID Metadata Documents, identity chaining, transaction tokens, RAR remediation) are extensions, not version lines; they are in [`drafts.md`](drafts.md).
+Read this when choosing which OAuth line to build to, reading an OAuth 1.0 integration, upgrading an OAuth 2.0 deployment to the OAuth 2.1 rules, or deciding how far to rely on the OAuth 2.1 draft. Sources: RFC 6749, RFC 6750, RFC 9700, `draft-ietf-oauth-v2-1-16` and RFC 5849, listed in [Sources](../SKILL.md#sources). Other drafts this skill uses (Client ID Metadata Documents, identity chaining, rfc7523bis, attestation-based client authentication, first-party apps, transaction tokens, RAR remediation, the Security BCP update, refresh token expiration, SPIFFE client authentication, deferred token responses) are extensions, not version lines; they are in [`drafts.md`](drafts.md). The browser-based apps BCP (RFC 10017) and the cross-device flows BCP (RFC 10027) apply to OAuth 2.0 and 2.1 alike.
 
 ## Version lines
 

@@ -67,7 +67,7 @@ Send `resource` with the absolute URI of the target resource, without a fragment
 - Send access tokens only in the `Authorization` header. OAuth 2.1 says clients MUST NOT put them in the query (draft -16 § 5.1).
 - Prefer sender-constrained tokens (RFC 9700 § 2.2.1). See [sender-constraint.md](sender-constraint.md).
 - Refresh tokens issued to public clients are either sender-constrained or rotated on each use (RFC 9700 § 2.2.2). Expect the old refresh token to stop working after rotation.
-- Authenticate confidential clients with asymmetric methods such as mTLS or `private_key_jwt` where possible (RFC 9700 § 2.5).
+- Authenticate confidential clients with asymmetric methods such as mTLS or `private_key_jwt` where possible (RFC 9700 § 2.5). Set the `aud` of a client assertion to the AS's issuer identifier alone, never the token endpoint URL (rfc7523bis draft -11 § 4; see [drafts.md](drafts.md)).
 
 ## React to challenges
 
@@ -84,6 +84,18 @@ Send `resource` with the absolute URI of the target resource, without a fragment
 2. Show the user the `user_code` and `verification_uri`.
 3. Poll the token endpoint with `grant_type=urn:ietf:params:oauth:grant-type:device_code` and the `device_code` (§ 3.4). Wait `interval` seconds between polls, or 5 seconds if none was given.
 4. Handle errors (§ 3.5): on `authorization_pending` keep polling; on `slow_down` add 5 seconds to the interval for all later polls; stop on `access_denied`, `expired_token` or any other error.
+
+Before choosing it, apply RFC 10027 (BCP for cross-device flows): perform a risk assessment, avoid cross-device flows when the risks cannot be mitigated, and pick mitigations, preferably including proximity (RFC 10027 § 2). Use the device grant only when FIDO2/WebAuthn cross-device authentication and CIBA are not viable, not for sensitive or high-value resources, and never when the user is on the same device (RFC 10027 § 6.2.1.5, § 6.2.4). See [authorization-server.md](authorization-server.md#cross-device-flows-rfc-10027) for the mitigations.
+
+## Browser-based applications (RFC 10017)
+
+RFC 10017 (BCP for OAuth 2.0 in browser-based applications) ranks three architectures:
+
+- **Backend for Frontend (BFF)**: strongly recommended for business and sensitive applications and anything handling personal data (§ 6.1.4.3). The BFF MUST be a confidential client using the authorization code grant (§ 6.1.3.1). Its session cookies MUST be `Secure` and `HttpOnly`, SHOULD be `SameSite=Strict` with path `/` and no `Domain`, and SHOULD use the `__Host-Http-` prefix (§ 6.1.3.2). It MUST defend against CSRF, for example by requiring a static custom request header so CORS preflights apply (§ 6.1.3.3), and MUST proxy only to an allow-list of resource servers (§ 6.1.3.6).
+- **Token-mediating backend**: a confidential client that hands access tokens to the frontend (§ 6.2). Consider it only when a full BFF is not possible (§ 6.2.4.4), and do not hand over a cached token with more scopes than the frontend asked for (§ 6.2.2.3).
+- **Browser-based OAuth client**: a public client in JavaScript, not recommended for business or sensitive applications (§ 6.3.4.3). It MUST use PKCE and MUST prevent CSRF on its redirect URI (§ 6.3.2.1, § 6.3.2.2), uses only exact registered redirect URIs (§ 6.3.3.2.1), and MUST verify both origins of any `postMessage` (§ 6.3.3.3).
+
+Do not use the implicit grant: browser-based clients MUST use the authorization code grant (§ 7.2), and the password grant MUST NOT be used (§ 7.3). Do not store tokens in cookies written by JavaScript (§ 8.1), and a service worker that isolates tokens MUST NOT keep them in storage shared with the page (§ 8.2).
 
 ## Registration
 

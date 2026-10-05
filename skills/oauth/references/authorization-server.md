@@ -17,7 +17,7 @@ What an authorization server (AS) enforces and publishes. Section numbers refer 
 
 ## Token endpoint
 
-- Authenticate confidential clients. Asymmetric methods such as mTLS or `private_key_jwt` are RECOMMENDED (RFC 9700 § 2.5).
+- Authenticate confidential clients. Asymmetric methods such as mTLS or `private_key_jwt` are RECOMMENDED (RFC 9700 § 2.5). Accept a client authentication JWT only when its `aud` is your issuer identifier as the sole value (rfc7523bis draft -11 § 4; see [drafts.md](drafts.md)).
 - Return the RFC 6749 § 5.2 errors: `invalid_request`, `invalid_client`, `invalid_grant`, `unauthorized_client`, `unsupported_grant_type`, `invalid_scope`. Add `invalid_target` for a refused `resource` (RFC 8707 § 2) and `invalid_authorization_details` for bad RAR input (RFC 9396 § 5).
 - **Audience.** Restrict every access token to the resources it is for. Honor `resource` (RFC 8707 § 2) and limit scope and authorization details to what the resource needs (RFC 9700 § 2.3).
 - **Sender constraint.** Issue DPoP- or mTLS-bound tokens where clients support them (RFC 9700 § 2.2.1). Refresh tokens for public clients MUST be sender-constrained or rotated on every use (RFC 9700 § 2.2.2).
@@ -56,6 +56,22 @@ What an authorization server (AS) enforces and publishes. Section numbers refer 
 - Answer polls with `authorization_pending`, `slow_down`, `access_denied` or `expired_token` (§ 3.5).
 - Limit attempts at the verification page so short user codes cannot be guessed (§ 5.1).
 - Remote phishing is the main risk: tell users what they are approving and show which device asked (§ 5.4).
+
+## Cross-device flows (RFC 10027)
+
+RFC 10027 (BCP for the security of cross-device flows) applies to the device grant, CIBA, and other flows where the user links two devices over an unauthenticated channel (§ 2).
+
+- Implementers MUST perform a risk assessment and MUST select mitigations from § 6.1; they SHOULD avoid cross-device flows whose risks cannot be mitigated, and SHOULD include proximity where possible (§ 2).
+- Protocol choice (§ 6.2.4): FIDO2/WebAuthn cross-device authentication with the authorization code grant and PKCE gives the best protection; CIBA is the alternative when the AS can reach the user; the device grant is RECOMMENDED only with additional mitigations.
+- Cross-device protocols SHOULD NOT be used when both steps happen on the same device (§ 5).
+- Practical mitigations (§ 6.1): establish proximity, short-lived and one-time user or QR codes, unique codes, limited scopes, short-lived and sender-constrained tokens, rate limits, trusted devices or networks, and a consent screen that states who asked and why, with "decline" as the default or equally prominent (§ 6.1.14).
+
+## Browser-based clients (RFC 10017)
+
+- Support and enforce PKCE for browser-based public clients (§ 6.3.2.1). Do not issue access tokens from the authorization endpoint (§ 7.2).
+- Refresh tokens issued to them: rotate them on each use or sender-constrain them; set a maximum lifetime or an idle expiry; and never extend a rotated token past the original token's lifetime (§ 6.3.2.3). Link them to the user's session at the AS, so logout invalidates them (§ 6.3.2.3).
+- MUST NOT require a shared client secret from a browser-based app; if one is configured, treat the client as public anyway (§ 6.3.3.1).
+- Send CORS headers on the token endpoint and resource servers that the app calls directly (§ 6.3.3.4).
 
 ## Dynamic client registration
 
