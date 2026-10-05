@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the MCP Apps extension (SEP-1865, io.modelcontextprotocol/ui) at its Stable 2026-01-26 specification, pinned at ext-apps v2.0.3: ui:// HTML resources with the text/html;profile=mcp-app MIME type and _meta.ui CSP, permissions, domain and border metadata; tool linkage through _meta.ui.resourceUri and visibility; capability negotiation and text fallback; the postMessage JSON-RPC bridge with ui/initialize, host context and capabilities, tool input and result notifications, view requests, display modes, theming and teardown; the web sandbox proxy, CSP construction and security considerations; and the @modelcontextprotocol/ext-apps SDK. Version lines: 2026-01-26 is current, the pre-stable SEP-1865 drafts are legacy with an upgrade path, and the draft is a preview with posture name. SKILL.md holds the invariants and workflow; references split out the version lines, UI resources, the host bridge, security and sandboxing, and the SDK.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "MCP Apps draft",
+      "status": "preview",
+      "posture": "name",
+      "revision": "specification/draft at ext-apps 82221c0 (last spec change c55a3a2, 2026-07-22)"
+    },
+    {
+      "id": "2026-01-26",
+      "label": "MCP Apps 2026-01-26",
+      "status": "current",
+      "revision": "Stable (2026-01-26), specification/2026-01-26 at ext-apps v2.0.3"
+    },
+    {
+      "id": "pre-stable",
+      "label": "MCP Apps pre-stable drafts",
+      "status": "legacy",
+      "revision": "specification/draft from 2025-11-21 (d0dbea3) to v0.4.2 (2026-01-26)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MCP Apps specification 2026-01-26",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/specification/2026-01-26/apps.mdx",
+      "status": "Stable",
+      "revision": "2026-01-26, ext-apps v2.0.3 at commit 82221c0 (identical to main)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps specification draft",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/draft/apps.mdx",
+      "status": "Draft",
+      "revision": "main at 82221c0, last spec change c55a3a2 (2026-07-22); Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps specification commit history",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/commits/main/specification",
+      "status": "Commit log",
+      "revision": "d0dbea3 (2025-11-21) to c55a3a2 (2026-07-22)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps pre-stable draft at v0.4.2",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v0.4.2/specification/draft/apps.mdx",
+      "status": "Draft",
+      "revision": "v0.4.2 (2026-01-26)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps draft at bd5a34b",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/bd5a34b/specification/draft/apps.mdx",
+      "status": "Draft",
+      "revision": "commit bd5a34b (2025-11-21), text/vnd.mcp.ui+html",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps draft at c65006a",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/c65006a/specification/draft/apps.mdx",
+      "status": "Draft",
+      "revision": "commit c65006a (2025-11-21), text/html+mcp",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps README",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/README.md",
+      "status": "Released",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps release v2.0.3",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/releases/tag/v2.0.3",
+      "status": "Released",
+      "revision": "v2.0.3 (2026-09-25)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps release notes (0.2.2 and 0.3.0)",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/RELEASES.md",
+      "status": "Released",
+      "revision": "RELEASES.md at v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Migrating from ext-apps 1.x to 2.x",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/docs/migrate-to-2.md",
+      "status": "Documentation",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSP and CORS",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/docs/csp-cors.md",
+      "status": "Documentation",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps SDK source: spec.types.ts",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/src/spec.types.ts",
+      "status": "Released",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps SDK source: constants.ts",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/src/constants.ts",
+      "status": "Released",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps SDK source: server helpers",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/blob/v2.0.3/src/server/index.ts",
+      "status": "Released",
+      "revision": "v2.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ext-apps SDK source: App, AppBridge and PostMessageTransport",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/tree/v2.0.3/src",
+      "status": "Released",
+      "revision": "v2.0.3 (app.ts, app-bridge.ts, message-transport.ts, styles.ts)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps overview",
+      "url": "https://modelcontextprotocol.io/extensions/apps/overview",
+      "status": "Documentation page",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Extensions Overview",
+      "url": "https://modelcontextprotocol.io/extensions/overview",
+      "status": "Documentation page",
+      "revision": "as published 2026-10-05 (negotiation shown for MCP 2026-07-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SEP-1865: MCP Apps",
+      "url": "https://modelcontextprotocol.io/seps/1865-mcp-apps-interactive-user-interfaces-for-mcp",
+      "status": "SEP, Final",
+      "revision": "Extensions Track, created 2025-11-21",
+      "checked": "2026-10-05"
+    }
+  ]
+}
