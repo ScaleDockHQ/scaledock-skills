@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the two in-toto specifications: the in-toto Attestation Framework (Statement, ResourceDescriptor, DigestSet, DSSE Envelope, Bundle, parsing rules, the vetted predicate catalog and the validation model) and the in-toto specification for supply chain layouts, steps, inspections, artifact rules, link metadata, sublayouts and final product verification. Each is its own family: Attestation Framework v1.2 (v1.2.0) is current and v0.1 legacy; the in-toto specification v1.0 (1.0.0) is current and v0.9 legacy; the draft ITE-10 and ITE-11 layout extensions are tracked as previews. DSSE v1.0.2 is pinned as a dependency. SKILL.md holds the invariants and workflow; references split out versions and upgrades, the Statement and Envelope, predicates, layouts and links, and verification.",
+  "versions": [
+    {
+      "id": "attestation-v1",
+      "label": "in-toto Attestation Framework v1.2",
+      "status": "current",
+      "family": "attestation",
+      "revision": "v1.2.0 (2026-03-18)",
+      "reference": "references/statement-and-envelope.md"
+    },
+    {
+      "id": "attestation-v0.1",
+      "label": "in-toto Attestation Framework v0.1",
+      "status": "legacy",
+      "family": "attestation",
+      "revision": "v0.1.0 (spec/v0.1.0 in the v1.2.0 tree)"
+    },
+    {
+      "id": "ite-10-preview",
+      "label": "ITE-10 layouts for attestations",
+      "status": "preview",
+      "posture": "track",
+      "revision": "Draft, created 2023-01-07 (ITE master as of 2026-10-05)"
+    },
+    {
+      "id": "ite-11-preview",
+      "label": "ITE-11 attribute rules",
+      "status": "preview",
+      "posture": "track",
+      "revision": "Draft, created 2023-01-07 (ITE master as of 2026-10-05)"
+    },
+    {
+      "id": "spec-v1.0",
+      "label": "in-toto specification v1.0",
+      "status": "current",
+      "revision": "1.0.0 (2023-06-02), tag v1.0",
+      "reference": "references/layouts-and-links.md"
+    },
+    {
+      "id": "spec-v0.9",
+      "label": "in-toto specification v0.9",
+      "status": "legacy",
+      "revision": "0.9 (2017-04-11), tag v0.9"
+    }
+  ],
+  "sources": [
+    {
+      "title": "in-toto Attestation Framework specification v1.2.0",
+      "url": "https://github.com/in-toto/attestation/tree/v1.2.0/spec",
+      "status": "Tagged release",
+      "revision": "v1.2.0 (2026-03-18), spec version v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation Framework releases",
+      "url": "https://github.com/in-toto/attestation/releases",
+      "status": "Release list",
+      "revision": "latest v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation v1 changelog",
+      "url": "https://github.com/in-toto/attestation/blob/v1.2.0/spec/v1/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation v1.1.2 Envelope",
+      "url": "https://github.com/in-toto/attestation/blob/v1.1.2/spec/v1/envelope.md",
+      "status": "Tagged release",
+      "revision": "v1.1.2 (2025-06-14)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation predicates",
+      "url": "https://github.com/in-toto/attestation/tree/v1.2.0/spec/predicates",
+      "status": "Vetted predicate catalog",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation validation model",
+      "url": "https://github.com/in-toto/attestation/blob/v1.2.0/docs/validation.md",
+      "status": "Documentation",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation new predicate guidelines",
+      "url": "https://github.com/in-toto/attestation/blob/v1.2.0/docs/new_predicate_guidelines.md",
+      "status": "Documentation",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation v0.1.0",
+      "url": "https://github.com/in-toto/attestation/tree/v1.2.0/spec/v0.1.0",
+      "status": "Legacy specification",
+      "revision": "v0.1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto specification v1.0",
+      "url": "https://github.com/in-toto/specification/blob/v1.0/in-toto-spec.md",
+      "status": "Stable",
+      "revision": "1.0.0 (2023-06-02), tag v1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto specification, master",
+      "url": "https://github.com/in-toto/specification/blob/master/in-toto-spec.md",
+      "status": "Living document",
+      "revision": "still Version 1.0.0; last commit 2026-07-24",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto specification v0.9",
+      "url": "https://github.com/in-toto/specification/blob/v0.9/in-toto-spec.md",
+      "status": "Legacy",
+      "revision": "0.9 (2017-04-11), tag v0.9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Enhancements (ITE) index",
+      "url": "https://github.com/in-toto/ITE",
+      "status": "Index",
+      "revision": "master, last commit 2025-02-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ITE-5: Disassociate signature envelope specification from in-toto",
+      "url": "https://github.com/in-toto/ITE/blob/master/ITE/5/README.adoc",
+      "status": "Accepted",
+      "revision": "created 2020-09-28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ITE-6: Enabling contextual in-toto attestations",
+      "url": "https://github.com/in-toto/ITE/blob/master/ITE/6/README.adoc",
+      "status": "Accepted",
+      "revision": "created 2020-10-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ITE-10: Supporting Contextual in-toto Attestations in Layouts",
+      "url": "https://github.com/in-toto/ITE/blob/master/ITE/10/README.adoc",
+      "status": "Draft",
+      "revision": "created 2023-01-07",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ITE-11: Verifying Attributes in in-toto Attestations",
+      "url": "https://github.com/in-toto/ITE/blob/master/ITE/11/README.adoc",
+      "status": "Draft",
+      "revision": "created 2023-01-07",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DSSE protocol v1.0.2",
+      "url": "https://github.com/secure-systems-lab/dsse/blob/v1.0.2/protocol.md",
+      "status": "Released",
+      "revision": "1.0.2 (2024-05-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "DSSE envelope v1.0.2",
+      "url": "https://github.com/secure-systems-lab/dsse/blob/v1.0.2/envelope.md",
+      "status": "Released",
+      "revision": "1.0.2 (2024-05-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto website",
+      "url": "https://in-toto.io/",
+      "status": "Project site",
+      "revision": "CNCF graduated project",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Specifications page",
+      "url": "https://in-toto.io/docs/specs/",
+      "status": "Project site",
+      "revision": "lists in-toto Stable (v1.0) and the Attestation Framework",
+      "checked": "2026-10-05"
+    }
+  ]
+}
