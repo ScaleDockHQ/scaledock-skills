@@ -42,7 +42,7 @@ ScaleDock skills start with `scaledock-`, so they never collide with a skill fro
 
 ### Spec skills
 
-Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section.
+Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section. Each covers every major version line of its specification: the current default, older lines that are still supported, legacy lines to upgrade from, and a `-preview` line for drafts of the next version. Its `references/versions.md` says which line to use and how to upgrade between them.
 
 | Skill                                               | Description                                                                                                                                       |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

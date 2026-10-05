@@ -3,7 +3,28 @@
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "Month YYYY",
-  "abstract": "Two or three sentences on which specification the skill covers, which revision it pins, and how its references are split.",
+  "abstract": "Two or three sentences on which specification the skill covers, which version lines it supports and which revision each pins, and how its references are split.",
+  "versions": [
+    {
+      "id": "2.0-preview",
+      "label": "My Spec 2.0",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft revision, commit or date"
+    },
+    {
+      "id": "1.1",
+      "label": "My Spec 1.1",
+      "status": "current",
+      "revision": "1.1.0 (YYYY-MM-DD)"
+    },
+    {
+      "id": "1.0",
+      "label": "My Spec 1.0",
+      "status": "legacy",
+      "revision": "1.0.0 (YYYY-MM-DD)"
+    }
+  ],
   "sources": [
     {
       "title": "Spec title",

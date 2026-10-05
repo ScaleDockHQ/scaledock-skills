@@ -13,6 +13,10 @@ const MAX_DESCRIPTION_LENGTH = 1024;
 const MARKDOWN_LINK = /\[[^\]]*\]\(([^)\s]+)\)/g;
 const SOURCE_FIELDS = ["title", "url", "status", "revision", "checked"];
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const VERSION_FIELDS = ["id", "label", "status", "revision"];
+const VERSION_STATUSES = new Set(["current", "supported", "legacy", "preview"]);
+const POSTURES = new Set(["build", "name", "track"]);
+const PREVIEW_SUFFIX = "-preview";
 // Spec skills stay neutral; only the author field and the install source may name us.
 const ALLOWED_MENTIONS = [
   /^\s*author:\s*ScaleDockHQ\s*$/gm,
@@ -133,6 +137,80 @@ function validateSources(skillDir, skillContent, json) {
   return errors;
 }
 
+function validateVersions(skillDir, skillContent, json) {
+  const errors = [];
+  if (!Array.isArray(json.versions) || json.versions.length === 0) {
+    return ["metadata.json needs a non-empty `versions` array"];
+  }
+  const hubFile = join(skillDir, "references", "versions.md");
+  const hub = existsSync(hubFile) ? readFileSync(hubFile, "utf8") : null;
+  if (hub === null) errors.push("references/versions.md is missing");
+
+  const ids = new Set();
+  const currentByFamily = new Map();
+  json.versions.forEach((version, index) => {
+    const missing = VERSION_FIELDS.filter(
+      (field) => typeof version?.[field] !== "string" || !version[field],
+    );
+    if (missing.length > 0) {
+      errors.push(`versions[${index}] is missing ${missing.join(", ")}`);
+      return;
+    }
+    const { id, label, status, posture, family, reference } = version;
+    if (ids.has(id)) errors.push(`versions id "${id}" is listed twice`);
+    ids.add(id);
+    if (!VERSION_STATUSES.has(status)) {
+      errors.push(
+        `versions "${id}" status "${status}" must be one of ${[...VERSION_STATUSES].join(", ")}`,
+      );
+    }
+    if (posture !== undefined && !POSTURES.has(posture)) {
+      errors.push(
+        `versions "${id}" posture "${posture}" must be one of ${[...POSTURES].join(", ")}`,
+      );
+    }
+    if (status === "preview") {
+      if (!id.endsWith(PREVIEW_SUFFIX)) {
+        errors.push(
+          `versions "${id}" is a preview; its id must end in "${PREVIEW_SUFFIX}"`,
+        );
+      }
+      if (posture === undefined) {
+        errors.push(`versions "${id}" is a preview and needs a posture`);
+      }
+    } else if (id.endsWith(PREVIEW_SUFFIX)) {
+      errors.push(
+        `versions "${id}" ends in "${PREVIEW_SUFFIX}" but its status is "${status}"`,
+      );
+    }
+    if (status === "current") {
+      const key = family ?? "";
+      currentByFamily.set(key, (currentByFamily.get(key) ?? 0) + 1);
+    }
+    if (hub !== null && !hub.includes(id)) {
+      errors.push(`references/versions.md does not mention version "${id}"`);
+    }
+    if (!skillContent.includes(label)) {
+      errors.push(`SKILL.md does not mention version label "${label}"`);
+    }
+    if (reference !== undefined && !existsSync(join(skillDir, reference))) {
+      errors.push(`versions "${id}" reference "${reference}" does not exist`);
+    }
+  });
+
+  const families = new Set(
+    json.versions.map((version) => version?.family ?? ""),
+  );
+  for (const family of families) {
+    const count = currentByFamily.get(family) ?? 0;
+    if (count !== 1) {
+      const name = family ? `family "${family}"` : "the skill";
+      errors.push(`${name} has ${count} current versions; expected exactly 1`);
+    }
+  }
+  return errors;
+}
+
 function validateSkill(folder, rootReadme) {
   const errors = [];
   const skillDir = join(SKILLS_DIR, folder);
@@ -204,6 +282,7 @@ function validateSkill(folder, rootReadme) {
     }
     if (json && isStandard) {
       errors.push(...validateSources(skillDir, skillContent, json));
+      errors.push(...validateVersions(skillDir, skillContent, json));
     } else if (json && json.kind === "standard") {
       errors.push(
         'metadata.json has kind "standard" but SKILL.md metadata.kind does not',
