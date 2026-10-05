@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers W3C Trace Context and W3C Baggage: the traceparent header (version, trace-id, parent-id, trace-flags, invalid values and higher-version parsing), the tracestate header (keys, values, limits, truncation and mutation), the baggage header (grammar, percent-encoding, properties, limits and mutation), the processing model for tracers, proxies and message buses, and the privacy and security considerations. Version lines: Trace Context Level 1 (W3C Recommendation, 23 November 2021) is current; Trace Context Level 2 (Candidate Recommendation Draft, 28 March 2024) is a preview with posture build, adding the random trace-id flag; W3C Baggage (Candidate Recommendation Snapshot, 30 May 2024) is current in its own family. SKILL.md holds the invariants and workflow; references split out the version lines, traceparent, tracestate, baggage, and the processing model with privacy and security.",
+  "versions": [
+    {
+      "id": "level-2-preview",
+      "label": "Trace Context Level 2",
+      "status": "preview",
+      "posture": "build",
+      "revision": "Candidate Recommendation Draft, 28 March 2024",
+      "family": "trace-context",
+      "reference": "references/traceparent.md"
+    },
+    {
+      "id": "level-1",
+      "label": "Trace Context Level 1",
+      "status": "current",
+      "revision": "W3C Recommendation, 23 November 2021",
+      "family": "trace-context",
+      "reference": "references/traceparent.md"
+    },
+    {
+      "id": "baggage",
+      "label": "W3C Baggage",
+      "status": "current",
+      "posture": "build",
+      "revision": "Candidate Recommendation Snapshot, 30 May 2024",
+      "family": "baggage",
+      "reference": "references/baggage.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trace Context (latest version)",
+      "url": "https://www.w3.org/TR/trace-context/",
+      "status": "W3C Recommendation",
+      "revision": "Level 1, 23 November 2021 (same document as /TR/trace-context-1/)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace Context Level 1",
+      "url": "https://www.w3.org/TR/trace-context-1/",
+      "status": "W3C Recommendation",
+      "revision": "REC-trace-context-1-20211123 (23 November 2021)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace Context Level 2",
+      "url": "https://www.w3.org/TR/trace-context-2/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "CRD-trace-context-2-20240328 (28 March 2024); Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Propagation format for distributed context: Baggage",
+      "url": "https://www.w3.org/TR/baggage/",
+      "status": "W3C Candidate Recommendation Snapshot",
+      "revision": "CR-baggage-20240530 (30 May 2024); posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace Context editor's draft",
+      "url": "https://w3c.github.io/trace-context/",
+      "status": "Editor's Draft",
+      "revision": "w3c/trace-context commit acab820 (2026-06-29); response-side additions tracked, not emitted",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Baggage editor's draft",
+      "url": "https://w3c.github.io/baggage/",
+      "status": "Editor's Draft",
+      "revision": "w3c/baggage commit bfe9a3b (2026-06-30)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace Context Protocols Registry",
+      "url": "https://www.w3.org/TR/trace-context-protocols-registry/",
+      "status": "W3C Working Group Note",
+      "revision": "NOTE-trace-context-protocols-registry-20191119 (19 November 2019); listed binary, AMQP and MQTT drafts are discontinued",
+      "checked": "2026-10-05"
+    }
+  ]
+}
