@@ -1,0 +1,181 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JSON Schema Core and Validation at 2020-12 (draft-bhutton-json-schema-01 and draft-bhutton-json-schema-validation-01, 16 June 2022): dialects with $schema and $vocabulary, $id, $anchor, $ref, $dynamicRef and $defs, the applicator and unevaluated vocabularies, the validation, content and meta-data keywords, format as annotation or assertion, the flag, basic, detailed and verbose output formats, and bundling into Compound Schema Documents. Version lines: 2020-12 is current, 2019-09 is supported, draft-07, draft-06 and draft-04 are legacy with upgrade checklists between each, and two previews are tracked: the IETF jsonschema WG draft draft-ietf-jsonschema-json-schema-03 and the unreleased JSON Schema v1/2026 work in json-schema-org/json-schema-spec. SKILL.md holds the invariants and workflow; references split out the version lines, core and references, validation keywords, composition and unevaluated keywords, and format and output.",
+  "versions": [
+    {
+      "id": "v1-2026-preview",
+      "label": "JSON Schema v1/2026 (work in progress)",
+      "status": "preview",
+      "posture": "track",
+      "revision": "json-schema-org/json-schema-spec main at 4f56a99 (2026-09-04); no release, https://json-schema.org/v1/2026 returns 404"
+    },
+    {
+      "id": "ietf-preview",
+      "label": "IETF draft-ietf-jsonschema-json-schema-03",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-jsonschema-json-schema-03 (2026-08-26), WG Document, still uses 2020-12 URIs"
+    },
+    {
+      "id": "2020-12",
+      "label": "JSON Schema 2020-12",
+      "status": "current",
+      "revision": "draft-bhutton-json-schema-01 and draft-bhutton-json-schema-validation-01 (2022-06-16)"
+    },
+    {
+      "id": "2019-09",
+      "label": "JSON Schema 2019-09",
+      "status": "supported",
+      "revision": "draft-handrews-json-schema-02 and draft-handrews-json-schema-validation-02 (2019-09-17)"
+    },
+    {
+      "id": "draft-07",
+      "label": "JSON Schema draft-07",
+      "status": "legacy",
+      "revision": "draft-handrews-json-schema-01 and draft-handrews-json-schema-validation-01 (2018-03-19)"
+    },
+    {
+      "id": "draft-06",
+      "label": "JSON Schema draft-06",
+      "status": "legacy",
+      "revision": "draft-wright-json-schema-01 and draft-wright-json-schema-validation-01 (2017-04-21)"
+    },
+    {
+      "id": "draft-04",
+      "label": "JSON Schema draft-04",
+      "status": "legacy",
+      "revision": "draft-zyp-json-schema-04 and draft-fge-json-schema-validation-00 (2013-01-31)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JSON Schema Specification page",
+      "url": "https://json-schema.org/specification",
+      "status": "Index",
+      "revision": "names 2020-12 as current and 2019-09 as previous",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Schema Core 2020-12",
+      "url": "https://json-schema.org/draft/2020-12/json-schema-core",
+      "status": "Released",
+      "revision": "draft-bhutton-json-schema-01 (2022-06-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Schema Validation 2020-12",
+      "url": "https://json-schema.org/draft/2020-12/json-schema-validation",
+      "status": "Released",
+      "revision": "draft-bhutton-json-schema-validation-01 (2022-06-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2020-12 meta-schema",
+      "url": "https://json-schema.org/draft/2020-12/schema",
+      "status": "Released",
+      "revision": "2020-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2020-12 Release Notes",
+      "url": "https://json-schema.org/draft/2020-12/release-notes",
+      "status": "Release notes",
+      "revision": "2020-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2019-09 Release Notes",
+      "url": "https://json-schema.org/draft/2019-09/release-notes",
+      "status": "Release notes",
+      "revision": "2019-09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2019-09 meta-schema",
+      "url": "https://json-schema.org/draft/2019-09/schema",
+      "status": "Released",
+      "revision": "2019-09 (2019-09-17)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Draft-07 Release Notes",
+      "url": "https://json-schema.org/draft-07/json-schema-release-notes",
+      "status": "Release notes",
+      "revision": "draft-07",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Schema Core draft-07",
+      "url": "https://json-schema.org/draft-07/draft-handrews-json-schema-01.html",
+      "status": "Released",
+      "revision": "draft-handrews-json-schema-01 (2018-03-19)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Draft-06 Release Notes",
+      "url": "https://json-schema.org/draft-06/json-schema-release-notes",
+      "status": "Release notes",
+      "revision": "draft-04 to draft-06 migration",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Schema Core draft-04",
+      "url": "https://json-schema.org/draft-04/draft-zyp-json-schema-04.html",
+      "status": "Released",
+      "revision": "draft-zyp-json-schema-04 (2013-01-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Schema Validation draft-04",
+      "url": "https://json-schema.org/draft-04/draft-fge-json-schema-validation-00.html",
+      "status": "Released",
+      "revision": "draft-fge-json-schema-validation-00 (2013-01-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Specification Links",
+      "url": "https://json-schema.org/specification-links",
+      "status": "Index",
+      "revision": "all drafts with IETF names and dates",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-jsonschema-json-schema (datatracker)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-jsonschema-json-schema/",
+      "status": "WG draft",
+      "revision": "-03 (2026-08-26), I-D Exists, WG Document, intended Proposed Standard",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-jsonschema-json-schema datatracker API",
+      "url": "https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-jsonschema-json-schema/",
+      "status": "WG draft",
+      "revision": "rev 03, expires 2027-02-27",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-jsonschema-json-schema-03 text",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-jsonschema-json-schema-03.txt",
+      "status": "WG draft",
+      "revision": "-03 (2026-08-26)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "json-schema-org/json-schema-spec",
+      "url": "https://github.com/json-schema-org/json-schema-spec",
+      "status": "Work in progress",
+      "revision": "main at 4f56a99 (2026-09-04), no release",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenAPI Specification 3.1.1",
+      "url": "https://spec.openapis.org/oas/v3.1.1.html",
+      "status": "Released",
+      "revision": "3.1.1",
+      "checked": "2026-10-05"
+    }
+  ]
+}
