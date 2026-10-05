@@ -1,6 +1,6 @@
 # Credential formats in OpenID4VCI and OpenID4VP
 
-OpenID4VCI 1.0 and OpenID4VP 1.0 are format-agnostic. Appendix A of OpenID4VCI and Appendix B of OpenID4VP define profiles for three families. This file covers only what those appendices say. The credential formats themselves are defined elsewhere: IETF SD-JWT VC (a draft; HAIP pins draft -13), ISO/IEC 18013-5 and 23220, and the W3C VC Data Model.
+OpenID4VCI 1.0 and OpenID4VP 1.0 are format-agnostic. Appendix A of OpenID4VCI and Appendix B of OpenID4VP define profiles for three families. This file covers what those appendices say, plus the base rules of the IETF documents under `dc+sd-jwt` that every SD-JWT VC issuer, wallet and verifier needs. The credential formats themselves are defined elsewhere: SD-JWT (RFC 9901), IETF SD-JWT VC (an Internet-Draft, latest -19; HAIP pins -13), IETF Token Status List (an Internet-Draft in the RFC Editor queue, latest -21; HAIP pins -14), ISO/IEC 18013-5 and 23220, and the W3C VC Data Model.
 
 ## Identifiers
 
@@ -37,6 +37,22 @@ OpenID4VCI 1.0 and OpenID4VP 1.0 are format-agnostic. Appendix A of OpenID4VCI a
 ```
 
 - **SD-JWT VCLD** (B.3.7): an SD-JWT VC with an optional `ld` claim holding a compact JSON-LD object, such as a W3C VCDM document. `vct`, `iss`, `exp`, `nbf` and `status` are used instead of their VCDM counterparts. It may be used wherever SD-JWT VC is mentioned.
+
+### Base rules from SD-JWT, SD-JWT VC and Token Status List
+
+Section numbers below are RFC 9901, SD-JWT VC draft -19 and Token Status List draft -21. When HAIP is in scope, check them against the revisions HAIP pins (SD-JWT VC -13, Token Status List -14; HAIP § 9.4), which number sections differently.
+
+- **Header and type** (SD-JWT VC § 2.2.1, § 2.2.2): the issuer-signed JWT has `typ` `dc+sd-jwt` and a REQUIRED `vct`, a collision-resistant name for the credential type.
+- **Never selectively disclosable** (SD-JWT VC § 2.2.2.3): `iss`, `nbf`, `exp`, `cnf`, `vct`, `vct#integrity`, `aka_vcts` and `status` stay in the issuer-signed payload. `sub` and `iat` may be disclosures. A credential with no disclosable claims has no `_sd` claim and no disclosures (§ 2.2.2.5).
+- **Issuer key** (SD-JWT VC § 2.4, § 2.5): verify per RFC 9901 § 7, with the issuer key found through a mechanism the verifier's policy allows for that issuer: JWT VC Issuer Metadata when `iss` is an `https` URL, or the `x5c` chain, whose end-entity subject is then the issuer. Reject the credential if the key cannot be tied to the issuer.
+- **Key Binding JWT** (RFC 9901 § 4.3, § 4.3.1): `typ` `kb+jwt`, an `alg` other than `none`, and `iat`, `aud`, `nonce` and `sd_hash`. `sd_hash` is the base64url hash, with the `_sd_alg` algorithm, of `<Issuer-signed JWT>~<Disclosure 1>~...~<Disclosure N>~` as presented. The verifier checks it with the key in the credential's `cnf` (SD-JWT VC § 2.4).
+- **Status** (SD-JWT VC § 2.2.2.3, § 2.4; Token Status List § 6.2): `status.status_list` holds `idx` (a non-negative integer) and `uri`. The Status List Token for an SD-JWT VC is a JWT. Check status when present; accepting or rejecting on it is verifier policy.
+- **Status List Token** (Token Status List § 5.1, § 8.1): `typ` `statuslist+jwt`, served at `uri` as `application/statuslist+jwt`, with REQUIRED `sub` (equal to the referencing `uri`), `iat` and `status_list` (`bits`, `lst`), and RECOMMENDED `exp` and `ttl`.
+- **Status validation** (Token Status List § 8.3, § 7.1):
+  1. Validate the credential itself first; an expired credential stays expired even if its status is `0x00` VALID, and an invalid one needs no status fetch.
+  2. Validate the Status List Token's signature and claims, check `sub` against `uri`, reject it when expired, and refresh a cached copy after `ttl`.
+  3. Decompress `lst` with ZLIB and read the `bits`-wide value at `idx`. An out-of-bounds index means the credential MUST be rejected.
+  4. `0x00` is VALID, `0x01` INVALID (revoked) and `0x02` SUSPENDED; `0x03` and `0x0C` to `0x0F` are application specific.
 
 ## ISO mdoc (`mso_mdoc`)
 

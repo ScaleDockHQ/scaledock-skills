@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OpenID for Verifiable Credential Issuance 1.0, OpenID for Verifiable Presentations 1.0 and the OpenID4VC High Assurance Interoperability Profile 1.0 (all Final, each the current line of its own version family), with DCQL, the W3C Digital Credentials API integration, the SD-JWT VC, ISO mdoc and W3C VCDM format profiles, and OpenID conformance testing. The Implementer's Drafts (OpenID4VCI ID1 and ID2, OpenID4VP ID2 and ID3, HAIP ID1) are legacy lines with upgrade steps, and the 1.1 editor's drafts of all three are tracked as previews. SKILL.md holds the invariants and workflow; references/ splits versions, issuance, presentation, DCQL, the DC API, formats, HAIP and certification.",
+  "abstract": "Covers OpenID for Verifiable Credential Issuance 1.0, OpenID for Verifiable Presentations 1.0 and the OpenID4VC High Assurance Interoperability Profile 1.0 (all Final, each the current line of its own version family), with DCQL, the W3C Digital Credentials API integration, the SD-JWT VC, ISO mdoc and W3C VCDM format profiles, the base rules of SD-JWT (RFC 9901), SD-JWT VC and Token Status List, and OpenID conformance testing. The Implementer's Drafts (OpenID4VCI ID1 and ID2, OpenID4VP ID2 and ID3, HAIP ID1) are legacy lines with upgrade steps, and the 1.1 editor's drafts of all three are tracked as previews. SKILL.md holds the invariants and workflow; references/ splits versions, issuance, presentation, DCQL, the DC API, formats, HAIP and certification.",
   "versions": [
     {
       "id": "vci-1.1-preview",
@@ -201,6 +201,27 @@
       "status": "W3C Working Draft",
       "revision": "4 September 2026",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 9901: Selective Disclosure for JSON Web Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9901.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9901 (November 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT-based Verifiable Digital Credentials (SD-JWT VC)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/19/",
+      "status": "WG draft (IETF OAuth)",
+      "revision": "draft-ietf-oauth-sd-jwt-vc-19 (31 August 2026); draft posture: build; HAIP pins -13",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (TSL)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/21/",
+      "status": "WG draft (IETF OAuth), in the RFC Editor queue",
+      "revision": "draft-ietf-oauth-status-list-21 (21 June 2026); draft posture: build; HAIP pins -14",
+      "checked": "2026-10-05"
     },
     {
       "title": "DCP WG specifications",

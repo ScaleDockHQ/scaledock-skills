@@ -4,7 +4,7 @@ description: "OpenID4VC: issue and verify verifiable credentials over OAuth. Use
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -80,6 +80,7 @@ OpenID for Verifiable Credentials is the OpenID Foundation's family of protocols
 - [ ] The verifier checks integrity, holder binding, audience, nonce, query criteria and its own policy for every presentation, then the set as a whole.
 - [ ] `direct_post` responses use a response code; encrypted responses use the request's key and an allowed `enc`.
 - [ ] Over the DC API, signed requests carry `expected_origins`, and responses are bound to `origin:<origin>`.
+- [ ] SD-JWT VC presentations carry a `kb+jwt` KB-JWT with a correct `sd_hash`, verified with the key in `cnf`, and a `status` reference is checked against a `statuslist+jwt` token before the credential is accepted.
 - [ ] If HAIP is in scope, the matching conformance test plans finish with no failures.
 - [ ] Nothing from a 1.1 editor's draft or an Implementer's Draft is emitted.
 
@@ -90,7 +91,7 @@ OpenID for Verifiable Credentials is the OpenID Foundation's family of protocols
 - **`references/presentation.md`**: OpenID4VP requests, client identifier prefixes, response modes, encryption, errors, validation and security checks, with TypeScript.
 - **`references/dcql.md`**: the Digital Credentials Query Language, claims path pointers and selection rules, with examples.
 - **`references/dc-api.md`**: OpenID4VP over the W3C Digital Credentials API, with a browser example.
-- **`references/formats.md`**: SD-JWT VC, ISO mdoc and W3C VCDM parameters in OpenID4VCI and OpenID4VP.
+- **`references/formats.md`**: SD-JWT VC, ISO mdoc and W3C VCDM parameters in OpenID4VCI and OpenID4VP, and the SD-JWT, SD-JWT VC and Token Status List base rules.
 - **`references/haip.md`**: the HAIP 1.0 requirements as a checklist.
 - **`references/certification.md`**: OpenID conformance test plans for OpenID4VP and OpenID4VCI.
 
@@ -102,6 +103,10 @@ OpenID for Verifiable Credentials is the OpenID Foundation's family of protocols
 - `openid-federation` for the `openid_federation` client identifier prefix and trust chains: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-federation`.
 - `openid-connect` for SIOPv2-style `vp_token id_token` responses and OpenID Connect basics: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect`.
 - `openid` for an overview of OpenID Foundation specifications: `npx skills add ScaleDockHQ/scaledock-skills --skill openid`.
+- `sd-jwt` for RFC 9901 SD-JWT, SD-JWT VC and Token Status List in depth: disclosures, Key Binding JWTs, type metadata and status checks behind `dc+sd-jwt`: `npx skills add ScaleDockHQ/scaledock-skills --skill sd-jwt`.
+- `vc-data-model` for the W3C Verifiable Credentials Data Model 2.0 behind `jwt_vc_json`, `jwt_vc_json-ld` and `ldp_vc`, with VC JOSE COSE, Data Integrity and Bitstring Status List: `npx skills add ScaleDockHQ/scaledock-skills --skill vc-data-model`.
+- `did` for W3C DIDs, DID documents and resolution behind `did:<method>` binding methods and the `decentralized_identifier:` client identifier prefix: `npx skills add ScaleDockHQ/scaledock-skills --skill did`.
+- `eudi-wallet` for the EU Digital Identity Wallet ARF, which profiles OpenID4VCI, OpenID4VP and HAIP for PID and attestation issuers, wallets and relying parties: `npx skills add ScaleDockHQ/scaledock-skills --skill eudi-wallet`.
 
 ## Sources
 
@@ -123,6 +128,9 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [OpenID4VC High Assurance Interoperability Profile 1.1 - Editor's draft](https://openid.github.io/OpenID4VC-HAIP/openid4vc-high-assurance-interoperability-profile-1_1-wg-draft.html): Editor's draft, 1.1 -01 (24 September 2026), checked 2026-10-05. Draft posture: track.
 - [Security and Trust in OpenID for Verifiable Credentials Ecosystems](https://openid.github.io/OpenID4VC_SecTrust/draft-oid4vc-security-and-trust.html): WG draft, draft-oid4vc-security-and-trust-latest (14 March 2024), checked 2026-10-02. Draft posture: track, because it is an unfinished, non-normative analysis.
 - [Digital Credentials](https://www.w3.org/TR/digital-credentials/): W3C Working Draft, 4 September 2026, checked 2026-10-02. Draft posture: build, because OpenID4VP Appendix A and HAIP §5.2 depend on it.
+- [RFC 9901: Selective Disclosure for JSON Web Tokens](https://www.rfc-editor.org/rfc/rfc9901.html): RFC (Proposed Standard), RFC 9901 (November 2025), checked 2026-10-05.
+- [SD-JWT-based Verifiable Digital Credentials (SD-JWT VC)](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/19/): WG draft (IETF OAuth), draft-ietf-oauth-sd-jwt-vc-19 (31 August 2026), checked 2026-10-05. Draft posture: build; HAIP pins -13.
+- [Token Status List (TSL)](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/21/): WG draft (IETF OAuth), in the RFC Editor queue, draft-ietf-oauth-status-list-21 (21 June 2026), checked 2026-10-05. Draft posture: build; HAIP pins -14.
 - [DCP WG specifications](https://openid.net/wg/digital-credentials-protocols/specifications/): Index, page as read 2026-10-02, checked 2026-10-02.
 - [Conformance testing for OpenID for Verifiable Presentations](https://openid.net/certification/conformance-testing-for-openid-for-verifiable-presentations/): Published, page as read 2026-10-02, checked 2026-10-02.
 - [Conformance testing for OpenID for Verifiable Credential Issuance](https://openid.net/certification/conformance-testing-for-openid-for-verifiable-credential-issuance/): Published, page as read 2026-10-02, checked 2026-10-02.
