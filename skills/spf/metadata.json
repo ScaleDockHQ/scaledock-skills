@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 7208 Sender Policy Framework (SPF) version 1: the v=spf1 DNS TXT record, its mechanisms, qualifiers, modifiers and macros, the check_host() evaluation of the MAIL FROM and HELO identities, the seven results, the DNS lookup and void lookup limits, record size, flattening and forwarding, and recording results with Received-SPF, Authentication-Results (RFC 8601) and the RFC 7372 status codes. It lists two version lines: RFC 7208 (current, updated by RFC 7372, RFC 8553 and RFC 8616) and RFC 4408 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions and upgrades, record syntax, evaluation and results, and limits and pitfalls.",
+  "versions": [
+    {
+      "id": "rfc7208",
+      "label": "RFC 7208",
+      "status": "current",
+      "revision": "RFC 7208 (April 2014)"
+    },
+    {
+      "id": "rfc4408",
+      "label": "RFC 4408",
+      "status": "legacy",
+      "revision": "RFC 4408 (April 2006)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 7208: Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
+      "url": "https://www.rfc-editor.org/rfc/rfc7208",
+      "status": "RFC (Proposed Standard, updated by RFC 7372, RFC 8553 and RFC 8616)",
+      "revision": "RFC 7208",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7208 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc7208",
+      "status": "RFC Editor errata list",
+      "revision": "2 verified, 10 reported, 2 held for document update, 3 rejected",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 4408: Sender Policy Framework (SPF) for Authorizing Use of Domains in E-Mail, Version 1",
+      "url": "https://www.rfc-editor.org/rfc/rfc4408",
+      "status": "RFC (Experimental, obsoleted by RFC 7208)",
+      "revision": "RFC 4408",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7372: Email Authentication Status Codes",
+      "url": "https://www.rfc-editor.org/rfc/rfc7372",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 7372",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8553: DNS AttrLeaf Changes: Fixing Specifications That Use Underscored Node Names",
+      "url": "https://www.rfc-editor.org/rfc/rfc8553",
+      "status": "RFC (Best Current Practice, BCP 222)",
+      "revision": "RFC 8553",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8616: Email Authentication for Internationalized Mail",
+      "url": "https://www.rfc-editor.org/rfc/rfc8616",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8616",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8601: Message Header Field for Indicating Message Authentication Status",
+      "url": "https://www.rfc-editor.org/rfc/rfc8601",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8601",
+      "checked": "2026-10-05"
+    }
+  ]
+}
