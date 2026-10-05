@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C Verifiable Credentials Data Model v2.0 (Recommendation, 15 May 2025) with its companion Recommendations, each the current line of its own family: Securing Verifiable Credentials using JOSE and COSE, Verifiable Credential Data Integrity 1.0 with the EdDSA and ECDSA cryptosuites (and the BBS cryptosuite, still a Candidate Recommendation Draft), and Bitstring Status List v1.0. VC Data Model 1.1 is a legacy line with upgrade steps; the VC Data Model 2.1, Data Integrity 1.1 and Bitstring Status List 1.1 Working Drafts are tracked as previews. SKILL.md holds the invariants and workflow; references/ splits versions, the data model and JSON-LD processing, securing mechanisms, status lists, and verification, validation, security and privacy.",
+  "versions": [
+    {
+      "id": "2.1-preview",
+      "label": "VC Data Model 2.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "data-model",
+      "revision": "W3C Working Draft, 30 September 2026 (First Public Working Draft 9 April 2026)"
+    },
+    {
+      "id": "2.0",
+      "label": "VC Data Model 2.0",
+      "status": "current",
+      "family": "data-model",
+      "revision": "W3C Recommendation, 15 May 2025 (REC-vc-data-model-2.0-20250515)",
+      "reference": "references/data-model.md"
+    },
+    {
+      "id": "1.1",
+      "label": "VC Data Model 1.1",
+      "status": "legacy",
+      "family": "data-model",
+      "revision": "W3C Recommendation, 3 March 2022 (REC-vc-data-model-20220303)"
+    },
+    {
+      "id": "jose-cose-1.0",
+      "label": "VC JOSE COSE",
+      "status": "current",
+      "family": "securing",
+      "revision": "W3C Recommendation, 15 May 2025 (REC-vc-jose-cose-20250515)",
+      "reference": "references/securing.md"
+    },
+    {
+      "id": "di-1.1-preview",
+      "label": "VC Data Integrity 1.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "data-integrity",
+      "revision": "W3C Working Draft, 30 September 2026 (First Public Working Draft 16 April 2026)"
+    },
+    {
+      "id": "di-1.0",
+      "label": "VC Data Integrity 1.0",
+      "status": "current",
+      "family": "data-integrity",
+      "revision": "W3C Recommendation, 15 May 2025 (REC-vc-data-integrity-20250515), with the EdDSA and ECDSA Cryptosuites v1.0 Recommendations of the same date; BBS Cryptosuites v1.0 is a Candidate Recommendation Draft (10 September 2026)",
+      "reference": "references/securing.md"
+    },
+    {
+      "id": "bsl-1.1-preview",
+      "label": "Bitstring Status List 1.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "status",
+      "revision": "W3C First Public Working Draft, 24 September 2026"
+    },
+    {
+      "id": "bsl-1.0",
+      "label": "Bitstring Status List 1.0",
+      "status": "current",
+      "family": "status",
+      "revision": "W3C Recommendation, 15 May 2025 (REC-vc-bitstring-status-list-20250515)",
+      "reference": "references/status-lists.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Verifiable Credentials Data Model v2.0",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-data-model-2.0-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Securing Verifiable Credentials using JOSE and COSE",
+      "url": "https://www.w3.org/TR/vc-jose-cose/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-jose-cose-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Verifiable Credential Data Integrity 1.0",
+      "url": "https://www.w3.org/TR/vc-data-integrity/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-data-integrity-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Data Integrity EdDSA Cryptosuites v1.0",
+      "url": "https://www.w3.org/TR/vc-di-eddsa/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-di-eddsa-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Data Integrity ECDSA Cryptosuites v1.0",
+      "url": "https://www.w3.org/TR/vc-di-ecdsa/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-di-ecdsa-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Data Integrity BBS Cryptosuites v1.0",
+      "url": "https://www.w3.org/TR/vc-di-bbs/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "10 September 2026, https://www.w3.org/TR/2026/CRD-vc-di-bbs-20260910/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Bitstring Status List v1.0",
+      "url": "https://www.w3.org/TR/vc-bitstring-status-list/",
+      "status": "W3C Recommendation",
+      "revision": "15 May 2025, https://www.w3.org/TR/2025/REC-vc-bitstring-status-list-20250515/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Verifiable Credentials Data Model v1.1",
+      "url": "https://www.w3.org/TR/vc-data-model-1.1/",
+      "status": "W3C Recommendation (superseded by v2.0)",
+      "revision": "3 March 2022, https://www.w3.org/TR/2022/REC-vc-data-model-20220303/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Verifiable Credentials Overview",
+      "url": "https://www.w3.org/TR/vc-overview/",
+      "status": "W3C Group Note",
+      "revision": "30 July 2026, https://www.w3.org/TR/2026/NOTE-vc-overview-1.0-20260730/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Verifiable Credentials Data Model v2.1",
+      "url": "https://www.w3.org/TR/vc-data-model-2.1/",
+      "status": "W3C Working Draft",
+      "revision": "30 September 2026, https://www.w3.org/TR/2026/WD-vc-data-model-2.1-20260930/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Verifiable Credential Data Integrity 1.1",
+      "url": "https://www.w3.org/TR/vc-data-integrity-1.1/",
+      "status": "W3C Working Draft",
+      "revision": "30 September 2026, https://www.w3.org/TR/2026/WD-vc-data-integrity-1.1-20260930/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Bitstring Status List v1.1",
+      "url": "https://www.w3.org/TR/vc-bitstring-status-list-1.1/",
+      "status": "W3C First Public Working Draft",
+      "revision": "24 September 2026, https://www.w3.org/TR/2026/WD-vc-bitstring-status-list-1.1-20260924/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Data Integrity EdDSA Cryptosuites v1.1",
+      "url": "https://www.w3.org/TR/vc-di-eddsa-1.1/",
+      "status": "W3C First Public Working Draft",
+      "revision": "16 April 2026, https://www.w3.org/TR/2026/WD-vc-di-eddsa-1.1-20260416/",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Data Integrity ECDSA Cryptosuites v1.1",
+      "url": "https://www.w3.org/TR/vc-di-ecdsa-1.1/",
+      "status": "W3C Working Draft",
+      "revision": "16 September 2026, https://www.w3.org/TR/2026/WD-vc-di-ecdsa-1.1-20260916/",
+      "checked": "2026-10-05"
+    }
+  ]
+}
