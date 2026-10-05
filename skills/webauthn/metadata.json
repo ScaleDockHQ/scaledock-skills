@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C Web Authentication (WebAuthn) specification for relying parties at Level 3 (W3C Recommendation, 25 August 2026): creation and request options, challenge handling, RP ID and origin validation including topOrigin and related origins, user presence and user verification, discoverable credentials and conditional mediation, the credential record, the section 7.1 registration and section 7.2 authentication verification steps, attestation conveyance, types and formats, signature counters, backup eligibility and backup state flags, JSON serialization, signal methods, and the credProps, prf, largeBlob and appid extensions, citing FIDO CTAP 2.3 only where WebAuthn defers to it. Version lines: Level 3 is current, Level 2 is supported, Level 1 is legacy, and the Level 4 First Public Working Draft is tracked as a preview, with upgrade checklists. SKILL.md holds the invariants and workflow; references split out the version lines, registration, authentication, attestation, passkeys and flags, and extensions and JSON.",
+  "versions": [
+    {
+      "id": "level-4-preview",
+      "label": "WebAuthn Level 4",
+      "status": "preview",
+      "posture": "track",
+      "revision": "First Public Working Draft, 15 September 2026 (WD-webauthn-4-20260915)"
+    },
+    {
+      "id": "level-3",
+      "label": "WebAuthn Level 3",
+      "status": "current",
+      "revision": "W3C Recommendation, 25 August 2026 (REC-webauthn-3-20260825)"
+    },
+    {
+      "id": "level-2",
+      "label": "WebAuthn Level 2",
+      "status": "supported",
+      "revision": "W3C Recommendation, 8 April 2021 (REC-webauthn-2-20210408)"
+    },
+    {
+      "id": "level-1",
+      "label": "WebAuthn Level 1",
+      "status": "legacy",
+      "revision": "W3C Recommendation, 4 March 2019 (REC-webauthn-1-20190304)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
+      "url": "https://www.w3.org/TR/webauthn-3/",
+      "status": "W3C Recommendation",
+      "revision": "25 August 2026 (REC-webauthn-3-20260825)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Authentication: An API for accessing Public Key Credentials - Level 2",
+      "url": "https://www.w3.org/TR/webauthn-2/",
+      "status": "W3C Recommendation",
+      "revision": "8 April 2021 (REC-webauthn-2-20210408)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+      "url": "https://www.w3.org/TR/webauthn-1/",
+      "status": "W3C Recommendation",
+      "revision": "4 March 2019 (REC-webauthn-1-20190304)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Authentication: An API for accessing Public Key Credentials - Level 4",
+      "url": "https://www.w3.org/TR/webauthn-4/",
+      "status": "W3C First Public Working Draft",
+      "revision": "15 September 2026 (WD-webauthn-4-20260915); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Authentication editor's draft",
+      "url": "https://w3c.github.io/webauthn/",
+      "status": "Editor's Draft",
+      "revision": "as of 2026-10-05; Level 4 content under a Level 3 header; Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Client to Authenticator Protocol (CTAP) 2.3",
+      "url": "https://fidoalliance.org/specs/fido-v2.3-ps-20260226/fido-client-to-authenticator-protocol-v2.3-ps-20260226.html",
+      "status": "FIDO Alliance Proposed Standard",
+      "revision": "26 February 2026, the [FIDO-CTAP] version cited by WebAuthn Level 3; dependency only",
+      "checked": "2026-10-05"
+    }
+  ]
+}
