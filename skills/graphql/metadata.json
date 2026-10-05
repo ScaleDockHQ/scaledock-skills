@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the GraphQL specification from the GraphQL Foundation, pinned to the September 2025 edition: the language (documents, operations, selection sets, fields, arguments, aliases, fragments, variables, directives, descriptions, schema coordinates), the type system (scalars, objects, interfaces, unions, enums, input objects with @oneOf, lists, non-null, @deprecated, @specifiedBy), introspection, validation, execution with value completion and null propagation, and the data, errors and extensions response. It also covers the GraphQL over HTTP Stage 2 draft as a separate family with a build posture. It lists six lines: September 2025 (current), October 2021 (supported), June 2018 and October 2016 and earlier (legacy), the working draft (preview, track), and the GraphQL over HTTP draft (current, build). SKILL.md holds the invariants and workflow; references split out versions and upgrades, language and types, validation and execution, introspection and errors, and GraphQL over HTTP.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "GraphQL working draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "spec.graphql.org/draft, Mon, Sep 28, 2026 (main at 3f1ef84)",
+      "family": "graphql"
+    },
+    {
+      "id": "september2025",
+      "label": "GraphQL September 2025",
+      "status": "current",
+      "revision": "September 2025 edition (released 2025-09-03, tag September2025)",
+      "family": "graphql",
+      "reference": "references/language-and-types.md"
+    },
+    {
+      "id": "october2021",
+      "label": "GraphQL October 2021",
+      "status": "supported",
+      "revision": "October 2021 edition (released 2021-10-26, tag October2021)",
+      "family": "graphql"
+    },
+    {
+      "id": "june2018",
+      "label": "GraphQL June 2018",
+      "status": "legacy",
+      "revision": "June 2018 edition (released 2018-06-10, tag June2018)",
+      "family": "graphql"
+    },
+    {
+      "id": "october2016",
+      "label": "GraphQL October 2016 and earlier",
+      "status": "legacy",
+      "revision": "October 2016, April 2016, October 2015 and July 2015 working drafts",
+      "family": "graphql"
+    },
+    {
+      "id": "graphql-over-http-draft",
+      "label": "GraphQL over HTTP draft",
+      "status": "current",
+      "posture": "build",
+      "revision": "Stage 2 (Draft), Current Working Draft built from main (e287465, 2026-09-28); no tagged release",
+      "family": "graphql-over-http",
+      "reference": "references/graphql-over-http.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GraphQL Specification Versions (index)",
+      "url": "https://spec.graphql.org/",
+      "status": "GraphQL Foundation index",
+      "revision": "lists the Working Draft (Mon, Sep 28, 2026) and September 2025 as Latest Release",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GraphQL, September 2025 Edition",
+      "url": "https://spec.graphql.org/September2025/",
+      "status": "Released (Latest Release)",
+      "revision": "September 2025 edition (2025-09-03)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GraphQL, October 2021 Edition",
+      "url": "https://spec.graphql.org/October2021/",
+      "status": "Released (previous edition)",
+      "revision": "October 2021 edition (2021-10-26)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GraphQL, June 2018 Edition",
+      "url": "https://spec.graphql.org/June2018/",
+      "status": "Released (previous edition)",
+      "revision": "June 2018 edition (2018-06-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GraphQL, Current Working Draft",
+      "url": "https://spec.graphql.org/draft/",
+      "status": "Working Draft (prerelease)",
+      "revision": "Mon, Sep 28, 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "graphql/graphql-spec releases",
+      "url": "https://github.com/graphql/graphql-spec/releases",
+      "status": "GitHub release notes",
+      "revision": "September2025, October2021, June2018, October2016, April2016, October2015, July2015",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "September 2025 changelog",
+      "url": "https://github.com/graphql/graphql-spec/blob/main/changelogs/September2025.md",
+      "status": "Non-normative changelog",
+      "revision": "October2021..f29fbcd",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "October 2021 changelog",
+      "url": "https://github.com/graphql/graphql-spec/blob/main/changelogs/October2021.md",
+      "status": "Non-normative changelog",
+      "revision": "June2018..October2021",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GraphQL over HTTP, Current Working Draft",
+      "url": "https://graphql.github.io/graphql-over-http/draft/",
+      "status": "Stage 2: Draft",
+      "revision": "Current Working Draft (main at e287465, 2026-09-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "graphql/graphql-over-http repository (README and ROADMAP)",
+      "url": "https://github.com/graphql/graphql-over-http",
+      "status": "Stage 2: Draft, no releases or tags",
+      "revision": "main at e287465 (2026-09-28)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
