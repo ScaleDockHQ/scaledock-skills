@@ -1,0 +1,236 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers W3C WAI-ARIA 1.2 (Recommendation 2023-06-06) for authors and reviewers of accessible web components: role categories and abstract roles, required owned elements, context roles and required states, supported and prohibited attributes, hiding and live regions; accessible name and description computation per AccName; the ARIA in HTML author requirements and the rules of ARIA use; and the APG keyboard and focus patterns for modal dialog, alert dialog, menu button, menu and menubar, combobox, listbox, tabs, disclosure, grid, tree view and alerts. Version lines: WAI-ARIA 1.2 is current, 1.1 and 1.0 are legacy upgrade input, and the 1.3 Working Draft is a preview with posture name; AccName 1.1 is the current AccName Recommendation and AccName 1.2 a preview with posture build; ARIA in HTML (Recommendation 2026-08-11) is current. SKILL.md holds the invariants and workflow; references split out the version lines, roles, states and properties, accessible names, ARIA in HTML, and the APG patterns.",
+  "versions": [
+    {
+      "id": "1.3-preview",
+      "label": "WAI-ARIA 1.3",
+      "status": "preview",
+      "posture": "name",
+      "revision": "W3C Working Draft 2026-06-04; editor's draft 2026-10-02"
+    },
+    {
+      "id": "1.2",
+      "label": "WAI-ARIA 1.2",
+      "status": "current",
+      "revision": "W3C Recommendation 2023-06-06"
+    },
+    {
+      "id": "1.1",
+      "label": "WAI-ARIA 1.1",
+      "status": "legacy",
+      "revision": "W3C Recommendation 2017-12-14"
+    },
+    {
+      "id": "1.0",
+      "label": "WAI-ARIA 1.0",
+      "status": "legacy",
+      "revision": "W3C Recommendation 2014-03-20"
+    },
+    {
+      "id": "accname-1.2-preview",
+      "label": "AccName 1.2",
+      "status": "preview",
+      "posture": "build",
+      "revision": "W3C Working Draft 2026-10-02 (cited normatively by WAI-ARIA 1.2)",
+      "family": "accname",
+      "reference": "references/accessible-names.md"
+    },
+    {
+      "id": "accname-1.1",
+      "label": "AccName 1.1",
+      "status": "current",
+      "revision": "W3C Recommendation 2018-12-18",
+      "family": "accname",
+      "reference": "references/accessible-names.md"
+    },
+    {
+      "id": "html-aria",
+      "label": "ARIA in HTML",
+      "status": "current",
+      "revision": "W3C Recommendation 2026-08-11",
+      "family": "html-aria",
+      "reference": "references/aria-in-html.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+      "url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "status": "W3C Recommendation",
+      "revision": "2023-06-06",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
+      "url": "https://www.w3.org/TR/wai-aria-1.1/",
+      "status": "W3C Recommendation",
+      "revision": "2017-12-14",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.0",
+      "url": "https://www.w3.org/TR/wai-aria-1.0/",
+      "status": "W3C Recommendation",
+      "revision": "2014-03-20",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WAI-ARIA 1.0 Roles",
+      "url": "https://www.w3.org/TR/wai-aria-1.0/roles",
+      "status": "W3C Recommendation",
+      "revision": "2014-03-20",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.3",
+      "url": "https://www.w3.org/TR/wai-aria-1.3/",
+      "status": "W3C Working Draft",
+      "revision": "2026-06-04; Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WAI-ARIA editor's draft",
+      "url": "https://w3c.github.io/aria/",
+      "status": "W3C Editor's Draft",
+      "revision": "2026-10-02; Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Accessible Name and Description Computation 1.2",
+      "url": "https://www.w3.org/TR/accname-1.2/",
+      "status": "W3C Working Draft",
+      "revision": "2026-10-02; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Accessible Name and Description Computation 1.1",
+      "url": "https://www.w3.org/TR/accname-1.1/",
+      "status": "W3C Recommendation",
+      "revision": "2018-12-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARIA in HTML",
+      "url": "https://www.w3.org/TR/html-aria/",
+      "status": "W3C Recommendation",
+      "revision": "2026-08-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Using ARIA",
+      "url": "https://www.w3.org/TR/using-aria/",
+      "status": "W3C Discontinued Draft",
+      "revision": "2026-02-24 (informative)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARIA Authoring Practices Guide",
+      "url": "https://www.w3.org/WAI/ARIA/apg/",
+      "status": "W3C WAI resource",
+      "revision": "published site as read 2026-10-05 (w3c/aria-practices main at 0f765e4, 2026-09-30)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Patterns",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Dialog (Modal) Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Alert Dialog Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Menu Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Menu and Menubar Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Combobox Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Listbox Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Tabs Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Disclosure (Show/Hide) Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Grid Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/grid/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Tree View Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Alert Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/alert/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Developing a Keyboard Interface",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "APG Providing Accessible Names and Descriptions",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+      "status": "W3C WAI resource",
+      "revision": "as read 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
