@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DomainKeys Identified Mail (RFC 6376, STD 76) as updated by RFC 8301 (no rsa-sha1, RSA keys of at least 1024 bits, 2048 recommended), RFC 8463 (Ed25519-SHA256), RFC 8553 and RFC 8616: the DKIM-Signature header field and its tags, simple and relaxed canonicalization, header selection and oversigning, the l= body length risk, _domainkey key records, selectors, rotation and revocation, and verification results. It lists three version lines: RFC 6376 (current), RFC 4871 with RFC 5672 (legacy, upgraded from) and the IETF DKIM2 drafts (preview, track). SKILL.md holds the invariants and workflow; references split out versions and upgrades, signature tags and signing, canonicalization, keys and DNS, and verification.",
+  "versions": [
+    {
+      "id": "dkim2-preview",
+      "label": "DKIM2",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-dkim-dkim2-spec-06 (2026-08-28)"
+    },
+    {
+      "id": "rfc6376",
+      "label": "RFC 6376",
+      "status": "current",
+      "revision": "RFC 6376 (September 2011), updated by RFC 8301, RFC 8463, RFC 8553 and RFC 8616"
+    },
+    {
+      "id": "rfc4871",
+      "label": "RFC 4871",
+      "status": "legacy",
+      "revision": "RFC 4871 (May 2007), updated by RFC 5672 (August 2009)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6376: DomainKeys Identified Mail (DKIM) Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc6376",
+      "status": "RFC (Internet Standard, STD 76; updated by RFC 8301, RFC 8463, RFC 8553 and RFC 8616)",
+      "revision": "RFC 6376",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 6376 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc6376",
+      "status": "RFC Editor errata",
+      "revision": "9 verified, 4 reported",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8301: Cryptographic Algorithm and Key Usage Update to DKIM",
+      "url": "https://www.rfc-editor.org/rfc/rfc8301",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8301",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8463: A New Cryptographic Signature Method for DKIM",
+      "url": "https://www.rfc-editor.org/rfc/rfc8463",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8463",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8616: Email Authentication for Internationalized Mail",
+      "url": "https://www.rfc-editor.org/rfc/rfc8616",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8616",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8553: DNS AttrLeaf Changes",
+      "url": "https://www.rfc-editor.org/rfc/rfc8553",
+      "status": "RFC (Best Current Practice, BCP 222)",
+      "revision": "RFC 8553",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 4871: DomainKeys Identified Mail (DKIM) Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc4871",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 6376)",
+      "revision": "RFC 4871",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 5672: RFC 4871 DKIM Signatures, Update",
+      "url": "https://www.rfc-editor.org/rfc/rfc5672",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 6376)",
+      "revision": "RFC 5672",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA DomainKeys Identified Mail (DKIM) Parameters",
+      "url": "https://www.iana.org/assignments/dkim-parameters/",
+      "status": "IANA registry",
+      "revision": "last updated 2018-07-06",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-dkim-dkim2-spec: DomainKeys Identified Mail Signatures v2 (DKIM2)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-dkim-dkim2-spec/",
+      "status": "WG draft (WG Document)",
+      "revision": "draft-ietf-dkim-dkim2-spec-06 (2026-08-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8617: The Authenticated Received Chain (ARC) Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc8617",
+      "status": "RFC (Experimental)",
+      "revision": "RFC 8617",
+      "checked": "2026-10-05"
+    }
+  ]
+}
