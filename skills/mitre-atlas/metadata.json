@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers MITRE ATLAS, the knowledge base of adversary tactics and techniques against AI-enabled systems, at content release 2026.09 in ATLAS YAML format 6.0.0: the 16-tactic matrix, 120 techniques and 88 sub-techniques with maturity and platforms, 40 mitigations, 73 case studies, typed relationships, the link to MITRE ATT&CK, the agentic techniques, and the STIX, Navigator and Excel outputs. Version lines: content 2026.09 is current and content 2026.06 and 2021.10 are legacy (split at the bulk ID retirements of 2026.07 and the tactic renumbering of 2021.12); format 6.0.0 is current and the deprecated legacy YAML format is legacy, with upgrade steps for each. SKILL.md holds the invariants and workflow; references split out versions and upgrades, tactics and techniques, mitigations, the data format, and threat modeling, red teaming and detection mapping.",
+  "versions": [
+    {
+      "id": "2026.09",
+      "label": "ATLAS 2026.09",
+      "status": "current",
+      "family": "content",
+      "revision": "content 2026.09, released 2026-09-15 (tag v2026.09)"
+    },
+    {
+      "id": "2026.06",
+      "label": "ATLAS 2026.06",
+      "status": "legacy",
+      "family": "content",
+      "revision": "content 2021.12 to 2026.06 (semver 2.2.1 to 5.6.1)"
+    },
+    {
+      "id": "2021.10",
+      "label": "ATLAS 2021.10",
+      "status": "legacy",
+      "family": "content",
+      "revision": "content 2021.05 to 2021.10 (semver 2.0.0 to 2.2.0)"
+    },
+    {
+      "id": "format-6",
+      "label": "ATLAS YAML format 6.0.0",
+      "status": "current",
+      "family": "format",
+      "revision": "format 6.0.0 (since content 2026.05)",
+      "reference": "references/data-format.md"
+    },
+    {
+      "id": "format-legacy",
+      "label": "ATLAS legacy YAML format",
+      "status": "legacy",
+      "family": "format",
+      "revision": "formats 2.0.0 to 5.6.0; dist/ATLAS.yaml frozen at 5.6.0"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MITRE ATLAS website",
+      "url": "https://atlas.mitre.org/",
+      "status": "released",
+      "revision": "Data v2026.09 (Website v5.4.1)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS Matrix page",
+      "url": "https://atlas.mitre.org/matrices/ATLAS-matrix",
+      "status": "released",
+      "revision": "Data v2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS Mitigations page",
+      "url": "https://atlas.mitre.org/mitigations",
+      "status": "released",
+      "revision": "Data v2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS technique page AML.T0051",
+      "url": "https://atlas.mitre.org/techniques/AML.T0051",
+      "status": "released",
+      "revision": "Data v2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS General Information page",
+      "url": "https://atlas.mitre.org/resources/info",
+      "status": "released",
+      "revision": "Data v2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "mitre-atlas/atlas-data README",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/README.md",
+      "status": "released",
+      "revision": "tag v2026.09 (commit 3259f38)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS release v2026.09",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
+      "status": "released",
+      "revision": "latest release 2026-09-15 (not a pre-release)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS-2026.09.yaml (format 6.0.0)",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml",
+      "status": "released",
+      "revision": "content 2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS Data CHANGELOG",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/CHANGELOG.md",
+      "status": "released",
+      "revision": "1.0.0 to 2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS release manifest",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/manifest.yaml",
+      "status": "released",
+      "revision": "2021.05 to 2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS format 6.0.0 schema (atlas/schemas.py)",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/atlas/schemas.py",
+      "status": "released",
+      "revision": "format 6.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS enums (atlas/enums.py)",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/atlas/enums.py",
+      "status": "released",
+      "revision": "format 6.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ATLAS to STIX tool (tools/atlas_to_stix.py)",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/tools/atlas_to_stix.py",
+      "status": "released",
+      "revision": "tag v2026.09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Deprecated ATLAS.yaml (legacy format)",
+      "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/ATLAS.yaml",
+      "status": "deprecated",
+      "revision": "5.6.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "mitre-atlas/atlas-navigator-data",
+      "url": "https://github.com/mitre-atlas/atlas-navigator-data",
+      "status": "deprecated",
+      "revision": "last pushed 2026-06-24 (outputs moved to atlas-data releases)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
