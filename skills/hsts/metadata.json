@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 6797 HTTP Strict Transport Security (HSTS): the Strict-Transport-Security header and its max-age and includeSubDomains directives, server processing over HTTPS and HTTP, user agent processing (noting, matching, upgrading and enforcing), max-age=0 removal, staged rollout, and the security considerations. It lists one version line, RFC 6797 (current), and treats the hstspreload.org submission rules (including the non-RFC preload token) and RFC 9460 HTTPS DNS records as dependency sources without version lines. SKILL.md holds the invariants and workflow; references split out versions, the header and server processing, user agent processing, deployment and preloading, and security.",
+  "versions": [
+    {
+      "id": "rfc6797",
+      "label": "RFC 6797",
+      "status": "current",
+      "revision": "RFC 6797 (November 2012)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6797: HTTP Strict Transport Security (HSTS)",
+      "url": "https://www.rfc-editor.org/rfc/rfc6797.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 6797",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 6797 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc6797",
+      "status": "RFC Editor errata list",
+      "revision": "5 reports, all rejected (latest 2024-12-02)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HSTS Preload List Submission",
+      "url": "https://hstspreload.org/",
+      "status": "Web page",
+      "revision": "undated; requirements for domains submitted on or after 2017-10-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9460: Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9460.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9460",
+      "checked": "2026-10-05"
+    }
+  ]
+}
