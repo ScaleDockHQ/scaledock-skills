@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the AGENTS.md open format published at agents.md and stewarded by the Agentic AI Foundation under the Linux Foundation: what the file is, root and nested placement, precedence (closest file wins, user prompts override), what to put in it, how it complements README.md, and migrating from tool-specific instruction files as each tool's own documentation describes. The format is unversioned, so its single line, site-2026-03-10 (current), is pinned to commit 342016eb22df of the agentsmd/agents.md site source. SKILL.md holds the invariants and workflow; references split out versions, format and placement, the writing and review guide, and migration.",
+  "versions": [
+    {
+      "id": "site-2026-03-10",
+      "label": "AGENTS.md site 2026-03-10",
+      "status": "current",
+      "revision": "commit 342016eb22df of agentsmd/agents.md components/ (2026-03-10), read at main d001185d792e (2026-09-10)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "AGENTS.md",
+      "url": "https://agents.md/",
+      "status": "Published (unversioned)",
+      "revision": "format text commit 342016eb22df (2026-03-10); main d001185d792e (2026-09-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "agentsmd/agents.md on GitHub",
+      "url": "https://github.com/agentsmd/agents.md",
+      "status": "Format and site repository (MIT), no tags or releases",
+      "revision": "main at d001185d792e (2026-09-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AGENTS.md Technical Charter",
+      "url": "https://github.com/agentsmd/agents.md/blob/main/Technical_Charter.pdf",
+      "status": "Adopted charter, AGENTS.md a Series of LF Projects, LLC",
+      "revision": "adopted 2025-12-08",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Linux Foundation Announces the Formation of the Agentic AI Foundation (AAIF)",
+      "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
+      "status": "Press release",
+      "revision": "2025-12-09",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AAIF projects",
+      "url": "https://aaif.io/projects/",
+      "status": "Foundation project list",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Custom instructions with AGENTS.md (Codex)",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "status": "Tool documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Adding repository custom instructions for GitHub Copilot",
+      "url": "https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions",
+      "status": "Tool documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "How Claude remembers your project (Claude Code)",
+      "url": "https://code.claude.com/docs/en/memory",
+      "status": "Tool documentation",
+      "revision": "covers v2.1.277 to v2.1.283",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Rules (Cursor)",
+      "url": "https://cursor.com/docs/context/rules",
+      "status": "Tool documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Provide context with GEMINI.md files (Gemini CLI)",
+      "url": "https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/gemini-md.md",
+      "status": "Tool documentation",
+      "revision": "commit 93844dfa10f6 (2026-06-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Specifying coding conventions (Aider)",
+      "url": "https://aider.chat/docs/usage/conventions.html",
+      "status": "Tool documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    }
+  ]
+}
