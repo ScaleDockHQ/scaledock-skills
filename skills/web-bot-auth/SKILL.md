@@ -1,10 +1,10 @@
 ---
 name: web-bot-auth
-description: "Web Bot Auth: sign and verify bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures, following the IETF webbotauth working group draft. Use when a crawler, AI agent or other automated client must prove its identity to websites, or when a website, CDN or reverse proxy must verify such requests: Signature, Signature-Input and the Signature-Agent header, tag=web-bot-auth, created, expires and keyid (JWK SHA-256 thumbprint), covered components such as @authority, the key directory at /.well-known/http-message-signatures-directory (application/http-message-signatures-directory+json, a JWKS), jwks_uri and cimd discovery types, key rotation, directory response signatures, verifier outcomes, replay and SSRF limits. Triggers: web bot auth, webbotauth, bot authentication, signed agents, verified bots, crawler identity, agent identity over HTTP, HTTP message signatures, RFC 9421, draft-ietf-webbotauth-httpsig-protocol, draft-meunier-webbotauth-httpsig-protocol."
+description: "Web Bot Auth: sign and verify bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures, following draft-ietf-webbotauth-00 (build posture), with upgrades from the draft-meunier individual drafts. Use when a crawler, AI agent or other automated client must prove its identity to websites, or when a website, CDN or reverse proxy must verify such requests: Signature, Signature-Input and the Signature-Agent header, tag=web-bot-auth, created, expires and keyid (JWK SHA-256 thumbprint), covered components such as @authority, the key directory at /.well-known/http-message-signatures-directory (application/http-message-signatures-directory+json, a JWKS), jwks_uri and cimd discovery types, key rotation, directory response signatures, verifier outcomes, replay and SSRF limits. Triggers: web bot auth, webbotauth, bot authentication, signed agents, verified bots, crawler identity, HTTP message signatures, RFC 9421, draft-ietf-webbotauth-httpsig-protocol, draft-meunier-webbotauth-httpsig-protocol."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -21,6 +21,7 @@ Draft posture: **build**, pinned to `draft-ietf-webbotauth-httpsig-protocol-00` 
 - Role: signer (Agent), verifier (Origin or a fronting proxy), directory operator, or several.
 - Discovery type the signer publishes: `directory` (default, well-known URI on an origin), `jwks_uri` or `cimd` (§ 5.5).
 - Algorithms: which RFC 9421 algorithms to sign with or accept, for example `ed25519` (RFC 9421 § 3.3, § 6.2.2).
+- Target version: draft-ietf-webbotauth-00 (default, posture build: implement it). The draft-meunier individual drafts are legacy: read them and upgrade from them, never build new signers on them; verifiers may still accept the legacy bare-String `Signature-Agent` (§ 5.2.1). No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned draft in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources), check the datatracker page of the working group draft for a newer revision or a replacement, check the webbotauth working group page for new documents, and update the pins.
 
@@ -38,21 +39,27 @@ Draft posture: **build**, pinned to `draft-ietf-webbotauth-httpsig-protocol-00` 
 
 ## Workflow
 
-1. **Signer: generate and publish keys.** Create an asymmetric key pair per agent, publish the public key as a JWKS at the chosen discovery URL, and plan rotation.
+1. **Pick the version.** Use draft-ietf-webbotauth-00. If an existing signer or verifier cites a `draft-meunier-*` draft, sends a bare-String or `data:` `Signature-Agent`, or looks keys up by `keyid` alone, plan the upgrade (step 7).
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target is recorded as `draft-ietf-webbotauth-httpsig-protocol-00`.
+2. **Signer: generate and publish keys.** Create an asymmetric key pair per agent, publish the public key as a JWKS at the chosen discovery URL, and plan rotation.
    -> [`references/signer-and-directory.md`](references/signer-and-directory.md)
    ✓ The directory answers 200 over HTTPS with a JWKS whose `kid` values, if present, equal the thumbprints (§ 5.5), and with the directory media type at the well-known URI.
-2. **Signer: sign each request.** Build the covered components and parameters, compute the RFC 9421 signature base, sign, and send `Signature`, `Signature-Input` and `Signature-Agent`.
+3. **Signer: sign each request.** Build the covered components and parameters, compute the RFC 9421 signature base, sign, and send `Signature`, `Signature-Input` and `Signature-Agent`.
    -> [`references/signer-and-directory.md`](references/signer-and-directory.md), [`references/http-message-signatures.md`](references/http-message-signatures.md)
    ✓ The request verifies against the published key with the RFC 9421 algorithm, and the signature is generated per request with bounded `created` and `expires` (§ 6.9).
-3. **Verifier: parse and select signatures.** Parse the three fields, select signatures with `tag="web-bot-auth"`, and check covered components and freshness.
+4. **Verifier: parse and select signatures.** Parse the three fields, select signatures with `tag="web-bot-auth"`, and check covered components and freshness.
    -> [`references/verifier.md`](references/verifier.md)
    ✓ Malformed fields get 400 or are ignored by policy (§ 5.4); signatures without the tag can be discarded.
-4. **Verifier: resolve keys.** Resolve the `Signature-Agent` member covered by the signature with bounded, cached, SSRF-safe fetches.
+5. **Verifier: resolve keys.** Resolve the `Signature-Agent` member covered by the signature with bounded, cached, SSRF-safe fetches.
    -> [`references/verifier.md`](references/verifier.md)
    ✓ Fetches have size, key count, timeout and address limits (§ 6.7); cache respects HTTP caching (Appendix C.4).
-5. **Verifier: decide.** Verify, classify as verified, invalid or unverified, and apply local policy.
+6. **Verifier: decide.** Verify, classify as verified, invalid or unverified, and apply local policy.
    -> [`references/verifier.md`](references/verifier.md)
    ✓ Unverified requests stay in the existing bot-management path and never become trusted (Appendix C.1, C.9).
+7. **Upgrade** (only when asked). Follow the checklist from the individual drafts: dictionary `Signature-Agent` on every request with `https` values, typed discovery, (URL, key) lookup, no redirects.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ Requests verify against the current draft's rules with the same keys and directory URL as before.
 
 ## Verify before done
 
@@ -66,9 +73,10 @@ Draft posture: **build**, pinned to `draft-ietf-webbotauth-httpsig-protocol-00` 
 
 ## Reference index
 
-- **`references/http-message-signatures.md`**: RFC 9421 essentials: components, signature parameters, the signature base, the verification algorithm, algorithms, `Accept-Signature`, replay. Load for steps 2 to 5.
-- **`references/signer-and-directory.md`**: the Web Bot Auth signing profile, `Signature-Agent`, multiple signatures, the directory format, discovery types, rotation and directory response signatures. Load for steps 1 and 2.
-- **`references/verifier.md`**: the verification profile, key resolution, trust model, caching, SSRF limits, outcomes, proxies and privacy. Load for steps 3 to 5.
+- **`references/versions.md`**: the working group draft and the individual drafts it replaced, what changed, and the upgrade checklist. Load for steps 1 and 7.
+- **`references/http-message-signatures.md`**: RFC 9421 essentials: components, signature parameters, the signature base, the verification algorithm, algorithms, `Accept-Signature`, replay. Load for steps 3 to 6.
+- **`references/signer-and-directory.md`**: the Web Bot Auth signing profile, `Signature-Agent`, multiple signatures, the directory format, discovery types, rotation and directory response signatures. Load for steps 2 and 3.
+- **`references/verifier.md`**: the verification profile, key resolution, trust model, caching, SSRF limits, outcomes, proxies and privacy. Load for steps 4 to 6.
 
 ## Related skills
 
@@ -80,10 +88,13 @@ Draft posture: **build**, pinned to `draft-ietf-webbotauth-httpsig-protocol-00` 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [RFC 9421: HTTP Message Signatures](https://www.rfc-editor.org/rfc/rfc9421): RFC (Standards Track), RFC 9421 (February 2024), checked 2026-10-02.
-- [draft-ietf-webbotauth-httpsig-protocol-00: HTTP Message Signatures for automated traffic](https://www.ietf.org/archive/id/draft-ietf-webbotauth-httpsig-protocol-00.txt): WG draft (IETF webbotauth WG), revision -00 (1 September 2026), checked 2026-10-02. Draft posture: build.
-- [draft-ietf-webbotauth-httpsig-protocol datatracker page](https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/): WG Document, latest revision -00, checked 2026-10-02.
-- [draft-meunier-webbotauth-httpsig-protocol](https://datatracker.ietf.org/doc/draft-meunier-webbotauth-httpsig-protocol/): Replaced individual draft (replaced by the WG draft), last revision -02 (2026-08-18), checked 2026-10-02. Draft posture: track.
-- [draft-meunier-http-message-signatures-directory](https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/): Replaced individual draft (merged into the protocol draft), last revision -05 (2026-03-02), checked 2026-10-02. Draft posture: track.
+- [draft-ietf-webbotauth-httpsig-protocol-00: HTTP Message Signatures for automated traffic](https://www.ietf.org/archive/id/draft-ietf-webbotauth-httpsig-protocol-00.txt): WG draft (IETF webbotauth WG), revision -00 (1 September 2026), checked 2026-10-05. Draft posture: build.
+- [draft-ietf-webbotauth-httpsig-protocol datatracker page](https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/): WG Document, latest revision -00, checked 2026-10-05.
+- [draft-meunier-webbotauth-httpsig-protocol](https://datatracker.ietf.org/doc/draft-meunier-webbotauth-httpsig-protocol/): Replaced individual draft (replaced by the WG draft), last revision -02 (2026-08-18), checked 2026-10-05. Draft posture: track.
+- [draft-meunier-http-message-signatures-directory](https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/): Replaced individual draft (merged into the protocol draft), last revision -05 (2026-03-02), checked 2026-10-05. Draft posture: track.
+- [draft-meunier-webbotauth-httpsig-protocol-02](https://www.ietf.org/archive/id/draft-meunier-webbotauth-httpsig-protocol-02.txt): Replaced individual draft, -02 (2026-08-18), checked 2026-10-05.
+- [draft-meunier-web-bot-auth-architecture-05](https://www.ietf.org/archive/id/draft-meunier-web-bot-auth-architecture-05.txt): Replaced individual draft (renamed to draft-meunier-webbotauth-httpsig-protocol), -05 (2026-03-02), checked 2026-10-05.
+- [draft-meunier-http-message-signatures-directory-05](https://www.ietf.org/archive/id/draft-meunier-http-message-signatures-directory-05.txt): Replaced individual draft, -05 (2026-03-02), checked 2026-10-05.
 - [Web Bot Auth (webbotauth) working group charter](https://datatracker.ietf.org/wg/webbotauth/about/): Active IETF working group, charter as published, checked 2026-10-02.
 - [RFC 7638: JSON Web Key (JWK) Thumbprint](https://www.rfc-editor.org/rfc/rfc7638): RFC (Standards Track), RFC 7638 (September 2015), checked 2026-10-02.
 - [RFC 8037: CFRG ECDH and Signatures in JOSE](https://www.rfc-editor.org/rfc/rfc8037): RFC (Standards Track), RFC 8037 (January 2017), checked 2026-10-02.

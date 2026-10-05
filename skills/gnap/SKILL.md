@@ -1,10 +1,10 @@
 ---
 name: gnap
-description: "GNAP (RFC 9635): request, issue and verify access tokens. Covers the Grant Negotiation and Authorization Protocol core: grant requests, the access rights array, interaction start and finish modes with the interaction hash, continuation, token rotation and revocation, key binding with httpsig, mtls, jwsd and jws proofs, and RS-first discovery. Also covers RFC 9767 GNAP resource server connections: the token model, token formats, /.well-known/gnap-as-rs discovery, introspection, resource registration and derived tokens, and how the access array relates to OAuth Rich Authorization Requests (authorization_details, RFC 9396). Use when building a GNAP client, authorization server or resource server, validating key-bound GNAP tokens, writing WWW-Authenticate: GNAP challenges, designing access types, or comparing GNAP with OAuth 2.0."
+description: "GNAP (RFC 9635): request, issue and verify access tokens. Covers the Grant Negotiation and Authorization Protocol core: grant requests, the access rights array, interaction start and finish modes with the interaction hash, continuation, token rotation and revocation, key binding with httpsig, mtls, jwsd and jws proofs, and RS-first discovery. Also covers RFC 9767 GNAP resource server connections: the token model, token formats, /.well-known/gnap-as-rs discovery, introspection, resource registration and derived tokens, and how the access array relates to OAuth Rich Authorization Requests (authorization_details, RFC 9396). Use when building a GNAP client, authorization server or resource server, validating key-bound GNAP tokens, writing WWW-Authenticate: GNAP challenges, designing access types, or comparing GNAP with OAuth 2.0. RFC 9635 is the only version line; pre-RFC drafts are upgraded to it, and no preview exists."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -19,6 +19,7 @@ The Grant Negotiation and Authorization Protocol (GNAP, RFC 9635) is an IETF pro
 - Role: client instance, authorization server, resource server, or an RS that derives tokens for another RS.
 - Coupling: whether the AS and RS share storage, or the RS uses RFC 9767 discovery, introspection and registration.
 - Proofing method: `httpsig`, `mtls`, `jwsd` or `jws`.
+- Target version: RFC 9635 (current, the only line), with RFC 9767 for resource server connections. Code written against a pre-RFC `draft-ietf-gnap-core-protocol` revision is upgraded to it. No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revisions in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the RFC Editor for errata or updating RFCs, and update the pins.
 
@@ -39,8 +40,9 @@ The Grant Negotiation and Authorization Protocol (GNAP, RFC 9635) is an IETF pro
 
 ## Workflow
 
-1. **Fix roles and coupling.** Decide who signs what, with which proofing method, and whether the RS validates self-contained tokens or introspects.
-   ✓ Each party has a key and a proofing method, and the RS's validation path is chosen.
+1. **Pick the version and fix roles and coupling.** Target RFC 9635 and RFC 9767. Decide who signs what, with which proofing method, and whether the RS validates self-contained tokens or introspects. For code built on a pre-RFC draft, run the upgrade checklist first.
+   -> [references/versions.md](references/versions.md)
+   ✓ The target is RFC 9635, every wire value comes from its registries, each party has a key and a proofing method, and the RS's validation path is chosen.
 2. **Design the access types.** Define each `type`, its fields and their cross-product meaning, plus any reference strings.
    -> [references/access-rights.md](references/access-rights.md)
    ✓ Every type is a URI or otherwise collision-free, and the same definition serves RAR if OAuth is also in use.
@@ -59,6 +61,9 @@ The Grant Negotiation and Authorization Protocol (GNAP, RFC 9635) is an IETF pro
 7. **Connect the RS to the AS** if they are loosely coupled: discovery, signed introspection, resource registration and derived tokens.
    -> [references/resource-servers.md](references/resource-servers.md)
    ✓ The RS reads `/.well-known/gnap-as-rs`, signs introspection with its own key, and derives downstream tokens instead of forwarding the client's token.
+8. **Upgrade** (only when asked). Move a pre-RFC draft implementation to RFC 9635 and RFC 9767 with the checklist.
+   -> [references/versions.md](references/versions.md)
+   ✓ Every wire value is in an RFC 9635 or RFC 9767 registry, and the same client instance gets the same access as before.
 
 ## Verify before done
 
@@ -71,6 +76,7 @@ The Grant Negotiation and Authorization Protocol (GNAP, RFC 9635) is an IETF pro
 
 ## Reference index
 
+- **`references/versions.md`**: the RFC 9635 line, the pre-RFC drafts, what RFC 9635 fixed, the draft-to-RFC upgrade checklist, and why no preview is listed. Load for step 1.
 - **`references/grant-flow.md`**: the grant request, client keys and proofing methods, interaction and its hash, the grant response and errors, continuation, token use and management, and discovery.
 - **`references/access-rights.md`**: the `access` array, reference strings, granted versus requested rights, and the comparison with RAR `authorization_details`.
 - **`references/resource-servers.md`**: the RFC 9767 token model with JWT and introspection names, token formats, RS-facing discovery, introspection, resource registration, derived tokens and RS validation.
@@ -87,3 +93,4 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [RFC 9635: Grant Negotiation and Authorization Protocol (GNAP)](https://www.rfc-editor.org/rfc/rfc9635): RFC (Proposed Standard), RFC 9635, checked 2026-10-02.
 - [RFC 9767: GNAP Resource Server Connections](https://www.rfc-editor.org/rfc/rfc9767): RFC (Proposed Standard), RFC 9767, checked 2026-10-02.
 - [RFC 9396: OAuth 2.0 Rich Authorization Requests](https://www.rfc-editor.org/rfc/rfc9396): RFC (Proposed Standard), RFC 9396, checked 2026-10-02.
+- [draft-ietf-gnap-core-protocol history](https://datatracker.ietf.org/doc/draft-ietf-gnap-core-protocol/history/): Datatracker page (became RFC 9635), last draft draft-ietf-gnap-core-protocol-20 (2024-03-19), checked 2026-10-05.

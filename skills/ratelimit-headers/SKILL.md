@@ -1,10 +1,10 @@
 ---
 name: ratelimit-headers
-description: "RateLimit headers: advertise HTTP API quotas, handle 429 with the IETF RateLimit and RateLimit-Policy header fields (draft-ietf-httpapi-ratelimit-headers), Retry-After (RFC 9110) and 429 Too Many Requests (RFC 6585). Use when adding rate limiting or quota headers to an API, returning or handling a 429, writing a client that backs off or paces itself, replacing X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset, or choosing the quota-exceeded problem type for a throttled response. Triggers: rate limit headers, RateLimit-Policy, quota policy, throttling, backoff, Retry-After, Too Many Requests, partition key, Structured Fields (RFC 9651)."
+description: "RateLimit headers: advertise HTTP API quotas, handle 429 with the IETF RateLimit and RateLimit-Policy header fields (draft-11 of draft-ietf-httpapi-ratelimit-headers), Retry-After (RFC 9110) and 429 Too Many Requests (RFC 6585). Use when adding rate limiting or quota headers to an API, returning or handling a 429, writing a client that backs off or paces itself, upgrading from X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset or from older drafts (RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset, or a limit/remaining/reset RateLimit dictionary), or choosing the quota-exceeded problem type for a throttled response. Triggers: rate limit headers, RateLimit-Policy, quota policy, throttling, backoff, Retry-After, Too Many Requests, partition key, Structured Fields (RFC 9651)."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,6 +20,7 @@ Draft posture: build (`draft-ietf-httpapi-ratelimit-headers-11`, 23 May 2026). I
 
 - Role: server (emits the fields), client (reads them), or intermediary (gateway or proxy that passes or rewrites them).
 - Quota policies: for each one, a name, the quota, the window in seconds, the unit (requests, content bytes or concurrent requests) and how clients are partitioned.
+- Target version: draft-11 (default, posture build: implement and emit it). draft-07, draft-06 and earlier, and X-RateLimit headers are legacy: read them and upgrade from them, never emit them in new work. No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned draft revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the [datatracker page](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) for a newer revision or an RFC number, and update the pins. The pinned revision expires on 24 November 2026.
 
@@ -37,21 +38,27 @@ Draft posture: build (`draft-ietf-httpapi-ratelimit-headers-11`, 23 May 2026). I
 
 ## Workflow
 
-1. **Model the quota policies.** Name each policy and set `q`, `w`, `qu` and `pk`. Prefix any service-specific parameter with a vendor identifier (§ 3.1, § 4.1). Decide how partition keys are derived and document it (§ 6.1).
+1. **Pick the version.** Use draft-11. If the server or client already uses `X-RateLimit-*`, `RateLimit-Limit` or a `limit=` dictionary, identify its line and plan the upgrade (step 7).
+   -> [`references/versions.md`](references/versions.md)
+   ✓ Every field the work emits is a draft-11 `RateLimit-Policy` or `RateLimit` field, or `Retry-After`.
+2. **Model the quota policies.** Name each policy and set `q`, `w`, `qu` and `pk`. Prefix any service-specific parameter with a vendor identifier (§ 3.1, § 4.1). Decide how partition keys are derived and document it (§ 6.1).
    -> [`references/fields.md`](references/fields.md)
    ✓ Every policy has an ASCII name, an Integer `q`, and a window in whole seconds; partition keys contain no sensitive data.
-2. **Emit the fields.** Send `RateLimit-Policy` where policies are stable and `RateLimit` with the current `r` and `t` (§ 3, § 4). Sending them on every response is optional (§ 6.2), and they are independent of the status code (§ 6).
+3. **Emit the fields.** Send `RateLimit-Policy` where policies are stable and `RateLimit` with the current `r` and `t` (§ 3, § 4). Sending them on every response is optional (§ 6.2), and they are independent of the status code (§ 6).
    -> [`references/fields.md`](references/fields.md), [`references/examples.md`](references/examples.md)
    ✓ Serialized values parse as Structured Fields Lists, and `r` and `t` never reveal more capacity than intended.
-3. **Answer throttled requests.** Return 429 (or 503 for reduced capacity) with `Retry-After`, the RateLimit fields, and a problem details body using the draft's problem types (§ 5).
+4. **Answer throttled requests.** Return 429 (or 503 for reduced capacity) with `Retry-After`, the RateLimit fields, and a problem details body using the draft's problem types (§ 5).
    -> [`references/examples.md`](references/examples.md)
    ✓ `Retry-After` is not earlier than the end of the effective window, and the body explains the condition (RFC 6585 § 4).
-4. **Implement the client.** Parse both fields, ignore malformed ones, honor `Retry-After` first, and pace requests so the available quota is not exceeded within the effective window (§ 7).
+5. **Implement the client.** Parse both fields, ignore malformed ones, honor `Retry-After` first, and pace requests so the available quota is not exceeded within the effective window (§ 7).
    -> [`references/behavior.md`](references/behavior.md)
    ✓ The client survives missing, malformed and implausible values, and ignores fields on cached responses (§ 7.3, § 8.5.1).
-5. **Check intermediaries, caching and security.** Make sure gateways only tighten the advertised policy, and review the security and privacy considerations.
+6. **Check intermediaries, caching and security.** Make sure gateways only tighten the advertised policy, and review the security and privacy considerations.
    -> [`references/behavior.md`](references/behavior.md)
    ✓ No intermediary makes the policy more permissive or strips the fields (§ 7.2), and reset times carry jitter (§ 8.5).
+7. **Upgrade** (only when asked). Follow the checklist for the source line: name each policy, move the limit into `q`, the remaining count into `r` and the reset into `t` as delay-seconds.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The new fields parse as RFC 9651 Lists, and clients back off at the same points as before.
 
 ## Verify before done
 
@@ -64,9 +71,10 @@ Draft posture: build (`draft-ietf-httpapi-ratelimit-headers-11`, 23 May 2026). I
 
 ## Reference index
 
-- **`references/fields.md`**: syntax of both fields, every parameter, Structured Fields serialization rules, and how they map onto the legacy `X-RateLimit-*` headers. Load for steps 1 and 2.
-- **`references/behavior.md`**: server, client and intermediary rules, caching, and the security and privacy considerations. Load for steps 4 and 5.
-- **`references/examples.md`**: full HTTP exchanges, the draft's problem types, and framework-neutral TypeScript for serializing and parsing. Load for steps 2 and 3.
+- **`references/versions.md`**: draft-11 and the legacy lines with their status, what changed between the header designs, and upgrade checklists from each. Load for steps 1 and 7.
+- **`references/fields.md`**: syntax of both fields, every parameter, Structured Fields serialization rules, and how they map onto the legacy `X-RateLimit-*` headers. Load for steps 2 and 3.
+- **`references/behavior.md`**: server, client and intermediary rules, caching, and the security and privacy considerations. Load for steps 5 and 6.
+- **`references/examples.md`**: full HTTP exchanges, the draft's problem types, and framework-neutral TypeScript for serializing and parsing. Load for steps 3 and 4.
 
 ## Related skills
 
@@ -78,7 +86,13 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 
 Draft posture: build, pinned to `draft-ietf-httpapi-ratelimit-headers-11`.
 
-- [RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-11)](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-11): WG draft (IETF HTTPAPI), revision 11 of 23 May 2026, checked 2026-10-02.
+- [RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-11)](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-11): WG draft (IETF HTTPAPI), revision 11 of 23 May 2026, checked 2026-10-05.
+- [Datatracker: draft-ietf-httpapi-ratelimit-headers](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/): WG draft (IETF HTTPAPI), active, no RFC; revision 11 latest, history back to draft-polli-ratelimit-headers-00, checked 2026-10-05.
+- [draft-ietf-httpapi-ratelimit-headers-08](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-08): WG draft (IETF HTTPAPI), superseded, revision 08 of 7 October 2024, checked 2026-10-05.
+- [draft-ietf-httpapi-ratelimit-headers-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-07): WG draft (IETF HTTPAPI), superseded, revision 07 of 24 June 2023, checked 2026-10-05.
+- [draft-ietf-httpapi-ratelimit-headers-06](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-06): WG draft (IETF HTTPAPI), superseded, revision 06 of 22 December 2022, checked 2026-10-05.
+- [draft-ietf-httpapi-ratelimit-headers-00](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-00): WG draft (IETF HTTPAPI), superseded, revision 00 of 18 December 2020, checked 2026-10-05.
+- [draft-polli-ratelimit-headers-00](https://datatracker.ietf.org/doc/html/draft-polli-ratelimit-headers-00): Individual draft, replaced by draft-ietf-httpapi-ratelimit-headers, revision 00 of 5 September 2019, checked 2026-10-05.
 - [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110): RFC (Internet Standard, STD 97), RFC 9110, checked 2026-10-02.
 - [RFC 6585: Additional HTTP Status Codes](https://www.rfc-editor.org/rfc/rfc6585): RFC (Proposed Standard), RFC 6585, checked 2026-10-02.
 - [RFC 9651: Structured Field Values for HTTP](https://www.rfc-editor.org/rfc/rfc9651): RFC (Proposed Standard), RFC 9651, checked 2026-10-02.

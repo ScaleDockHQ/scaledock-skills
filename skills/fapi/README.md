@@ -20,6 +20,15 @@ Then ask your agent to "make this authorization server FAPI 2.0 compliant" or "r
 - The FAPI 2.0 Attacker Model and security considerations.
 - OpenID conformance suite setup for FAPI servers, clients and CIBA.
 
+## Versions
+
+| Line     | Status                |
+| -------- | --------------------- |
+| FAPI 2.0 | current               |
+| FAPI 1.0 | legacy (upgrade from) |
+
+No preview is listed: no draft of a FAPI line after 2.0 exists. `references/versions.md` says which line to use and how to upgrade from FAPI 1.0.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:

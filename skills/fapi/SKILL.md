@@ -4,7 +4,7 @@ description: "FAPI 2.0: high-security OAuth profile for financial-grade APIs. Us
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -17,7 +17,8 @@ FAPI is the OpenID Foundation's family of high-security OAuth 2.0 profiles. FAPI
 ## Inputs (fill in, or ask before starting)
 
 - Role: authorization server (AS), client, or resource server (RS). Many reviews cover all three.
-- Profile: FAPI 2.0 Security Profile alone, or with FAPI 2.0 Message Signing. Legacy FAPI 1.0 only when an existing ecosystem requires it; the FAPI WG strongly recommends FAPI 2.0 for new ecosystems (FAPI WG specifications page).
+- Target version: FAPI 2.0 (current, the default). FAPI 1.0 is legacy: read it and migrate from it, and build it only when a named ecosystem still mandates it; the FAPI WG strongly recommends FAPI 2.0 for new ecosystems (FAPI WG specifications page). No preview is listed. See [`references/versions.md`](references/versions.md).
+- Profile: FAPI 2.0 Security Profile alone, or with FAPI 2.0 Message Signing.
 - Options: sender-constraining with DPoP or mTLS; client authentication with `private_key_jwt` or mTLS; whether OpenID Connect is used; any ecosystem profile on top (it may add rules but shall not remove mandatory behaviour, FAPI 2.0 SP §5.1.2).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the FAPI WG specifications page for a newer revision, and update the pins.
@@ -40,8 +41,9 @@ These come from the FAPI 2.0 Security Profile (SP) unless another document is na
 
 ## Workflow
 
-1. **Pin the profile and options.** Record the profile, sender-constraining method, client authentication method and any ecosystem profile from the inputs.
-   ✓ Every option is named, and nothing in the ecosystem profile removes a FAPI 2.0 requirement.
+1. **Pick the version, profile and options.** Use FAPI 2.0 unless a named ecosystem mandates FAPI 1.0. Record the profile, sender-constraining method, client authentication method and any ecosystem profile from the inputs.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target version and every option are named, and nothing in the ecosystem profile removes a FAPI 2.0 requirement.
 2. **Configure the authorization server.** Metadata, PAR, PKCE, the authorization and token endpoints, lifetimes, clock tolerance and refresh tokens.
    -> [`references/authorization-server.md`](references/authorization-server.md)
    ✓ Every AS row in the checklist holds, and a request without PAR is rejected.
@@ -57,9 +59,9 @@ These come from the FAPI 2.0 Security Profile (SP) unless another document is na
 6. **Add Message Signing if required.** Signed request objects, JARM, signed introspection and ID token verification.
    -> [`references/message-signing.md`](references/message-signing.md)
    ✓ Each chosen option is implemented on both sides.
-7. **Handle legacy FAPI 1.0 or migration.** Use only when an ecosystem still mandates FAPI 1.0.
-   -> [`references/fapi-1.md`](references/fapi-1.md)
-   ✓ The FAPI 1.0 to 2.0 differences are listed for the deployment.
+7. **Upgrade from FAPI 1.0** (only when the deployment is on FAPI 1.0). Follow the 1.0 to 2.0 upgrade steps, which use the migration checklist in `fapi-1.md`.
+   -> [`references/versions.md`](references/versions.md), [`references/fapi-1.md`](references/fapi-1.md)
+   ✓ Every FAPI 1.0 to 2.0 difference is resolved for the deployment, and the FAPI 2.0 test plans pass.
 8. **Apply drafts only when asked.** FAPI-CIBA for decoupled flows and Grant Management for grant lifecycle APIs.
    -> [`references/ciba-and-grant-management.md`](references/ciba-and-grant-management.md)
    ✓ Draft features are labelled with the pinned revision.
@@ -83,6 +85,7 @@ These come from the FAPI 2.0 Security Profile (SP) unless another document is na
 
 ## Reference index
 
+- **`references/versions.md`**: the FAPI 2.0 and FAPI 1.0 lines with their status, which one to use, what changed, the 1.0 to 2.0 upgrade steps, and why no preview is listed.
 - **`references/authorization-server.md`**: AS requirements, metadata, PAR, PKCE, lifetimes, clock skew and refresh tokens.
 - **`references/client.md`**: client requirements and request examples for PAR, `private_key_jwt` and DPoP.
 - **`references/resource-server.md`**: RS validation steps and a framework-neutral TypeScript check.
@@ -106,7 +109,7 @@ These come from the FAPI 2.0 Security Profile (SP) unless another document is na
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [FAPI 2.0 Security Profile](https://openid.net/specs/fapi-security-profile-2_0-final.html): Final, published 22 February 2025, checked 2026-10-02.
+- [FAPI 2.0 Security Profile](https://openid.net/specs/fapi-security-profile-2_0-final.html): Final, published 22 February 2025, checked 2026-10-05.
 - [FAPI 2.0 Message Signing](https://openid.net/specs/fapi-message-signing-2_0-final.html): Final, published 25 September 2025, checked 2026-10-02.
 - [FAPI 2.0 Attacker Model](https://openid.net/specs/fapi-attacker-model-2_0-final.html): Final, published 22 February 2025, checked 2026-10-02.
 - [FAPI 1.0 Part 1: Baseline](https://openid.net/specs/openid-financial-api-part-1-1_0.html): Final, 12 March 2021, checked 2026-10-02.
@@ -123,7 +126,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [RFC 7523: JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants](https://www.rfc-editor.org/rfc/rfc7523.txt): RFC, May 2015, checked 2026-10-02.
 - [RFC 6750: OAuth 2.0 Bearer Token Usage](https://www.rfc-editor.org/rfc/rfc6750.txt): RFC, October 2012, checked 2026-10-02.
 - [OpenID Certification](https://openid.net/certification/): Published, page as read 2026-10-02, checked 2026-10-02.
-- [FAPI WG specifications](https://openid.net/wg/fapi/specifications/): Index, page as read 2026-10-02, checked 2026-10-02.
+- [FAPI WG specifications](https://openid.net/wg/fapi/specifications/): Index, page as read 2026-10-05, checked 2026-10-05.
 - [Conformance Testing for FAPI OPs](https://openid.net/certification/certification-fapi_op_testing/): Published, page as read 2026-10-02, checked 2026-10-02.
 - [FAPI RP certification submission](https://openid.net/certification/fapi_rp_submission/): Published, page as read 2026-10-02, checked 2026-10-02.
 - [Conformance Testing for FAPI-CIBA OPs](https://openid.net/certification/fapi_ciba_op_testing/): Published, page as read 2026-10-02, checked 2026-10-02.

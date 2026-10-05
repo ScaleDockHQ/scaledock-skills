@@ -1,10 +1,10 @@
 ---
 name: oauth
-description: "OAuth 2.1: secure resource servers, clients and ASes. Covers RFC 6749, RFC 6750 bearer tokens, the OAuth 2.1 draft, the RFC 9700 Security BCP, PKCE (RFC 7636), DPoP (RFC 9449), mTLS-bound tokens (RFC 8705), Rich Authorization Requests (RFC 9396), token exchange (RFC 8693), resource indicators (RFC 8707), AS metadata (RFC 8414), protected resource metadata (RFC 9728), the iss parameter (RFC 9207), step-up (RFC 9470), dynamic client registration (RFC 7591/7592), Client ID Metadata Documents, introspection (RFC 7662), revocation (RFC 7009) and the device grant (RFC 8628), plus transaction tokens, identity chaining and RAR remediation drafts. Use when protecting an API with access tokens, validating tokens, writing WWW-Authenticate challenges, adding PKCE, DPoP or mTLS, publishing /.well-known metadata, building an authorization server or OAuth client, delegating with token exchange or authorization_details, or reviewing an OAuth design against current best practice."
+description: "OAuth 2.0 and 2.1: secure resource servers, clients and ASes. Covers OAuth 2.0 (RFC 6749, RFC 6750, current), the OAuth 2.1 draft (build preview), the RFC 9700 BCP, PKCE (RFC 7636), DPoP (RFC 9449), mTLS-bound tokens (RFC 8705), Rich Authorization Requests (RFC 9396), token exchange (RFC 8693), resource indicators (RFC 8707), AS metadata (RFC 8414), protected resource metadata (RFC 9728), the iss parameter (RFC 9207), step-up (RFC 9470), dynamic registration (RFC 7591/7592), Client ID Metadata Documents, introspection (RFC 7662), revocation (RFC 7009) and the device grant (RFC 8628), plus transaction tokens, identity chaining and RAR remediation drafts. Use when protecting an API with access tokens, validating tokens, writing WWW-Authenticate challenges, adding PKCE, DPoP or mTLS, publishing /.well-known metadata, building an authorization server or OAuth client, delegating with token exchange or authorization_details, reviewing an OAuth design against current best practice, or upgrading 2.0 to 2.1."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ OAuth 2.0 (RFC 6749) and its IETF extensions let a client obtain an access token
 
 - Role: resource server, client, authorization server, or a service that does more than one (for example an RS that exchanges tokens to call another RS).
 - Token format and binding: JWT access tokens or opaque tokens with introspection; bearer, DPoP-bound or mTLS-bound.
+- Target version: OAuth 2.0 (current, the default: RFC 6749 and RFC 6750 as updated by RFC 9700). OAuth 2.1 is a preview (posture: build, `draft-ietf-oauth-v2-1-16`): apply its rules, because RFC 9700 already requires most of them, but cite it as a draft. OAuth 1.0 (RFC 5849) is legacy: read it only to replace it with OAuth 2.0, never author it. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revisions in [Sources](#sources), unless the user names another. Drafts apply only at the posture recorded there.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the IETF datatracker for a newer draft revision or a published RFC, and update the pins.
 
@@ -38,8 +39,9 @@ OAuth 2.0 (RFC 6749) and its IETF extensions let a client obtain an access token
 
 ## Workflow
 
-1. **Fix the role and the token model.** Write down who issues tokens, who validates them, the token format, and whether tokens are bound.
-   ✓ Every party in the design has a role, and the RS knows whether it reads JWTs or calls introspection.
+1. **Pick the version, then fix the role and the token model.** Target OAuth 2.0 with the OAuth 2.1 rules applied. Write down who issues tokens, who validates them, the token format, and whether tokens are bound.
+   -> [references/versions.md](references/versions.md)
+   ✓ The target is OAuth 2.0 with RFC 9700 and the OAuth 2.1 draft named by revision, every party in the design has a role, and the RS knows whether it reads JWTs or calls introspection.
 2. **Validate tokens at the resource server.** Read the token from the header, validate it as a JWT or through introspection, then check audience, scope and authorization details for the exact operation.
    -> [references/resource-server.md](references/resource-server.md)
    ✓ A token for another audience, an expired token and a token without the needed scope are each refused.
@@ -63,6 +65,9 @@ OAuth 2.0 (RFC 6749) and its IETF extensions let a client obtain an access token
 9. **Apply drafts only at their posture.**
    -> [references/drafts.md](references/drafts.md)
    ✓ Each draft feature in use names its pinned revision.
+10. **Upgrade** (only when asked). Move an OAuth 2.0 deployment to the OAuth 2.1 rules with the checklist, or replace an OAuth 1.0 integration with OAuth 2.0.
+    -> [references/versions.md](references/versions.md)
+    ✓ The AS refuses requests without PKCE, `plain` challenges, `response_type=token` and the password grant, and existing clients keep the same scopes and audiences.
 
 ## Verify before done
 
@@ -77,6 +82,7 @@ OAuth 2.0 (RFC 6749) and its IETF extensions let a client obtain an access token
 
 ## Reference index
 
+- **`references/versions.md`**: OAuth 2.0, the OAuth 2.1 preview and legacy OAuth 1.0, what each changed with the RFC 9700 section behind it, the 2.0 to 2.1 checklist and replacing 1.0. Load for steps 1 and 10.
 - **`references/resource-server.md`**: reading and validating tokens, introspection, authorization details, `act`, challenges, RFC 9728 metadata, and a TypeScript example with `jose`.
 - **`references/sender-constraint.md`**: DPoP proofs, the RFC 9449 § 4.3 checks, nonces and replay, and mTLS certificate-bound tokens.
 - **`references/clients.md`**: discovery, authorization code with PKCE, `iss`, resource indicators, challenge handling, the device grant and registration.
@@ -97,7 +103,8 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 
 - [RFC 6749: The OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/rfc/rfc6749): RFC (Proposed Standard, updated by RFC 8252, RFC 8996 and RFC 9700), RFC 6749, checked 2026-10-02.
 - [RFC 6750: Bearer Token Usage](https://www.rfc-editor.org/rfc/rfc6750): RFC (Proposed Standard, updated by RFC 8996 and RFC 9700), RFC 6750, checked 2026-10-02.
-- [The OAuth 2.1 Authorization Framework](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16): WG draft, draft-ietf-oauth-v2-1-16 (2026-09-03), checked 2026-10-02. Draft posture: build, pinned to -16.
+- [The OAuth 2.1 Authorization Framework](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16): WG draft, draft-ietf-oauth-v2-1-16 (2026-09-03), checked 2026-10-05. Draft posture: build, pinned to -16.
+- [RFC 5849: The OAuth 1.0 Protocol](https://www.rfc-editor.org/rfc/rfc5849): RFC (Informational, obsoleted by RFC 6749), RFC 5849, checked 2026-10-05.
 - [RFC 9700: Best Current Practice for OAuth 2.0 Security](https://www.rfc-editor.org/rfc/rfc9700): RFC (Best Current Practice), RFC 9700, checked 2026-10-02.
 - [RFC 7636: Proof Key for Code Exchange](https://www.rfc-editor.org/rfc/rfc7636): RFC (Proposed Standard), RFC 7636, checked 2026-10-02.
 - [RFC 9449: Demonstrating Proof of Possession (DPoP)](https://www.rfc-editor.org/rfc/rfc9449): RFC (Proposed Standard), RFC 9449, checked 2026-10-02.

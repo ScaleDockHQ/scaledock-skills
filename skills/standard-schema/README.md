@@ -18,6 +18,14 @@ Then ask your agent to "accept any Standard Schema validator in this function" o
 - Generating JSON Schema for the `draft-2020-12`, `draft-07` and `openapi-3.0` targets.
 - Which libraries implement each spec, and from which version.
 
+## Versions
+
+| Line               | Status  |
+| ------------------ | ------- |
+| Standard Schema v1 | current |
+
+v1 is the only line; packages 1.0.0 and 1.1.0 both publish it, and no preview exists. `references/versions.md` covers the upgrade from 1.0.0.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:
@@ -26,6 +34,8 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [Standard JSON Schema specification](https://standardschema.dev/json-schema): Released, v1 in `@standard-schema/spec` 1.1.0.
 - [Project overview](https://standardschema.dev/): Released, 1.1.0.
 - [Source at tag v1.1.0](https://github.com/standard-schema/standard-schema/tree/v1.1.0/packages/spec): tag v1.1.0.
+- [Source at tag v1.0.0](https://github.com/standard-schema/standard-schema/tree/v1.0.0/packages/spec): tag v1.0.0.
+- [v1.1.0 release](https://github.com/standard-schema/standard-schema/releases/tag/v1.1.0): adds Standard JSON Schema.
 - [npm registry entry](https://registry.npmjs.org/@standard-schema/spec): 1.1.0, published 2025-12-15.
 
 ## License

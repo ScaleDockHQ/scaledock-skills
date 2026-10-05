@@ -32,7 +32,7 @@ The package manager is pnpm, pinned in `package.json`. Node is the major in `.no
 4. `metadata.version` in `SKILL.md` and `version` in `metadata.json` are bumped together, following semver.
 5. Start new skills with `cp -r template/skill skills/scaledock-<topic>` or `cp -r template/standard-skill skills/<spec-name>`.
 6. Do not edit `.agents/skills/` or `skills-lock.json` by hand. Manage them with `pnpm dlx skills`; the lock is what keeps installed skills out of `npx skills add ScaleDockHQ/scaledock-skills`.
-7. Spec skills are neutral: no ScaleDock or PermDock beyond `author` and the install source. Every rule comes from a listed source, and every source is pinned in `metadata.json` `sources` and the `## Sources` section.
+7. Spec skills are neutral: no ScaleDock or PermDock beyond `author` and the install source. Every rule comes from a listed source, and every source is pinned in `metadata.json` `sources` and the `## Sources` section. Every major version line is listed in `metadata.json` `versions` (current, supported, legacy or `-preview`) and explained in `references/versions.md` ([ADR 0004](docs/decisions/0004-spec-skill-version-lines.md)).
 8. Skills point to other skills by name and install command, never by relative link.
 
 ## Agent workflow
@@ -47,14 +47,15 @@ One branch and one PR per chat or plan.
 
 ## When you change X, also update Y
 
-| Change                         | Also update                                                                    |
-| ------------------------------ | ------------------------------------------------------------------------------ |
-| A skill's content              | Its `metadata.version` and `metadata.json` version, and its `README.md`        |
-| A new skill                    | The matching skills table in `README.md`                                       |
-| A skill's description          | Its row in the `README.md` skills table                                        |
-| A spec skill's source          | `metadata.json` `sources` and `## Sources` in `SKILL.md`, with a new `checked` |
-| A dependency or action version | The catalog in `pnpm-workspace.yaml`, and the pre-release pins list below      |
-| A workflow                     | Keep `.github/zizmor.yml` passing; use each action's latest release tag        |
+| Change                         | Also update                                                                     |
+| ------------------------------ | ------------------------------------------------------------------------------- |
+| A skill's content              | Its `metadata.version` and `metadata.json` version, and its `README.md`         |
+| A new skill                    | The matching skills table in `README.md`                                        |
+| A skill's description          | Its row in the `README.md` skills table                                         |
+| A spec skill's source          | `metadata.json` `sources` and `## Sources` in `SKILL.md`, with a new `checked`  |
+| A spec's version line          | `metadata.json` `versions`, `references/versions.md`, description, both READMEs |
+| A dependency or action version | The catalog in `pnpm-workspace.yaml`, and the pre-release pins list below       |
+| A workflow                     | Keep `.github/zizmor.yml` passing; use each action's latest release tag         |
 
 ## Hard rules
 

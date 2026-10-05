@@ -68,15 +68,32 @@ A spec skill writes every rule from a source it has read, never from memory, and
 - `metadata.json` `sources`: one entry per document, with `title`, `url`, `status` (the publishing body's maturity term, such as `RFC`, `Final`, `Implementer's Draft`, `WG draft`, `Released`), `revision` (the RFC number, version, draft revision or date you pinned), and `checked` (`YYYY-MM-DD`).
 - The `## Sources` section of `SKILL.md`: every source URL, with the same status and revision.
 
-For an unfinished specification, the skill also records its draft posture: **build** (implement the pinned revision's current shape), **name** (reserve identifiers only) or **track** (follow, nothing depends on it).
+For an unfinished specification, the skill also records its draft posture: **build** (implement the pinned revision's current shape), **name** (reserve identifiers only) or **track** (follow, nothing depends on it). The posture lives on the version line in `metadata.json` `versions` and in the `## Sources` entry.
+
+## Spec versions
+
+A spec skill covers every major version line of its specification, so an agent knows which to use and how to move between them. See [ADR 0004](docs/decisions/0004-spec-skill-version-lines.md).
+
+- `metadata.json` `versions`: one entry per line, at the granularity the publisher uses for compatibility (an OpenAPI minor, a SCIM major, an MCP date revision, an RFC). Each entry has `id`, `label` (the name `SKILL.md` uses), `status`, `revision`, and optionally `posture`, `family` (for skills that cover several specs, each with its own current line) and `reference` (a file dedicated to that line).
+- `status` is one of:
+  - **current**: the default target. Exactly one per family.
+  - **supported**: released and still a valid target when a consumer needs it.
+  - **legacy**: superseded. The skill reads it and upgrades from it, but never authors it.
+  - **preview**: an alpha, beta, draft, `-dev` branch or Implementer's Draft of a line that follows a released one. Its `id` ends in `-preview` and it needs a `posture`. A spec whose only line is a draft is `current` with a posture, not a preview.
+- `references/versions.md` is the hub, with the same sections in every spec skill: version lines, which version to use, what changed, upgrading (one section per adjacent pair, plus legacy to current), and the preview. It mentions every `id`.
+- `SKILL.md` mentions every `label`, has a `Target version` input, and points its "pick the version" and "upgrade" workflow steps at `references/versions.md`. The description names every non-legacy line and the preview.
+- `README.md` has a `## Versions` table, and the root README row names the lines.
+
+`pnpm validate` checks the fields, the statuses, one current line per family, the `-preview` rule, and that `references/versions.md` and `SKILL.md` mention every line.
 
 ## Refreshing a spec skill
 
 1. Run `pnpm sources:check` to list dead links and sources whose `checked` date is more than 90 days old.
 2. For each skill you refresh, re-read every source in its `## Sources` section. Check the publishing body's index (IETF datatracker, OpenID Foundation specifications, OpenAPI Initiative, W3C, the protocol's own site) for a newer revision, a status change, a rename or a replacement.
 3. Update the content that changed, the `status` and `revision` pins in both places, and every `checked` date you re-read.
-4. Bump the version: patch when only pins or dates change, minor for new guidance, major when invariants change.
-5. Run `pnpm verify`.
+4. Check for a new version line or a new draft of the next one. When a preview ships, make it current, move the old current line to supported or legacy, and add an upgrade section to `references/versions.md`.
+5. Bump the version: patch when only pins or dates change, minor for new guidance, major when invariants change.
+6. Run `pnpm verify`.
 
 ## Testing a skill locally
 

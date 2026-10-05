@@ -1,9 +1,23 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OpenID Connect for relying parties, resource servers that consume OIDC identity, and OpenID Providers, pinned to Core 1.0 errata set 2 and the companion OpenID Foundation Final specifications for discovery, registration, logout, prompt=create, response modes and Identity Assurance. The Key Binding Implementer's Draft and the IPSIE SL1 profile draft are included at track posture. References are split into ID token validation, the authentication request, discovery and registration, logout and sessions, and extensions and drafts.",
+  "abstract": "Covers OpenID Connect for relying parties, resource servers that consume OIDC identity, and OpenID Providers. The current line is OpenID Connect 1.0, pinned to Core 1.0 errata set 2 and the companion OpenID Foundation Final specifications for discovery, registration, logout, prompt=create, response modes and Identity Assurance; OpenID Authentication 2.0 is the legacy line, with the OpenID 2.0 to OpenID Connect Migration steps. The Key Binding Implementer's Draft and the IPSIE SL1 profile draft are included at track posture. References are split into versions and upgrades, ID token validation, the authentication request, discovery and registration, logout and sessions, and extensions and drafts.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "OpenID Connect 1.0",
+      "status": "current",
+      "revision": "Core 1.0 errata set 2 (15 December 2023)"
+    },
+    {
+      "id": "openid-2.0",
+      "label": "OpenID Authentication 2.0",
+      "status": "legacy",
+      "revision": "Final (5 December 2007)"
+    }
+  ],
   "sources": [
     {
       "title": "OpenID Connect Core 1.0 incorporating errata set 2",
@@ -11,6 +25,13 @@
       "status": "Final",
       "revision": "1.0 errata set 2 (15 December 2023)",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Connect Core 1.0 incorporating errata set 1",
+      "url": "https://openid.net/specs/openid-connect-core-1_0-errata1.html",
+      "status": "Final",
+      "revision": "1.0 errata set 1 (8 November 2014)",
+      "checked": "2026-10-05"
     },
     {
       "title": "OpenID Connect Discovery 1.0 incorporating errata set 2",
@@ -109,6 +130,20 @@
       "status": "Draft",
       "revision": "editor's draft draft-openid-ipsie-sl1-profile-latest (29 September 2026, after -01); draft posture: track",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Authentication 2.0",
+      "url": "https://openid.net/specs/openid-authentication-2_0.html",
+      "status": "Final",
+      "revision": "2.0 (5 December 2007)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID 2.0 to OpenID Connect Migration 1.0",
+      "url": "https://openid.net/specs/openid-connect-migration-1_0.html",
+      "status": "Final",
+      "revision": "1.0 (16 April 2015)",
+      "checked": "2026-10-05"
     }
   ]
 }

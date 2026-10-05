@@ -1,9 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Arazzo Specification 1.1.0 from the OpenAPI Initiative: describing multi-step workflows over OpenAPI, AsyncAPI and other Arazzo documents with source descriptions, workflows, steps, parameters, success criteria, success and failure actions, components and runtime expressions, including AsyncAPI v3 send and receive steps, execution order and security for executors, and validation against the official Arazzo JSON Schemas. The 1.2 development line (WSDL sources) is tracked only. SKILL.md holds the invariants and workflow; references split out objects, expressions, AsyncAPI steps, execution, versions and examples.",
+  "abstract": "Covers the Arazzo Specification from the OpenAPI Initiative across its version lines: Arazzo 1.1 (current, 1.1.0), Arazzo 1.0 (supported, 1.0.1) and the Arazzo 1.2 draft on the v1.2-dev branch (preview, posture track, WSDL sources). It teaches source descriptions, workflows, steps, parameters, success criteria, success and failure actions, components and runtime expressions, AsyncAPI v3 send and receive steps, execution order and security for executors, validation against the official Arazzo JSON Schemas, and upgrading between lines. SKILL.md holds the invariants and workflow; references split out versions, objects, expressions, AsyncAPI steps, execution, validation and examples.",
+  "versions": [
+    {
+      "id": "1.2-preview",
+      "label": "Arazzo 1.2",
+      "status": "preview",
+      "posture": "track",
+      "revision": "v1.2-dev commit 6e08955 (2026-09-30)"
+    },
+    {
+      "id": "1.1",
+      "label": "Arazzo 1.1",
+      "status": "current",
+      "revision": "1.1.0 (2026-05-17)"
+    },
+    {
+      "id": "1.0",
+      "label": "Arazzo 1.0",
+      "status": "supported",
+      "revision": "1.0.1 (2025-01-16)"
+    }
+  ],
   "sources": [
     {
       "title": "Arazzo Specification v1.1.0",
@@ -17,7 +38,21 @@
       "url": "https://github.com/OAI/Arazzo-Specification/releases/tag/1.1.0",
       "status": "Released",
       "revision": "1.1.0 (tagged 2026-05-18)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Arazzo Specification v1.0.1",
+      "url": "https://spec.openapis.org/arazzo/v1.0.1.html",
+      "status": "Released",
+      "revision": "1.0.1 (2025-01-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Arazzo 1.0.1 release notes",
+      "url": "https://github.com/OAI/Arazzo-Specification/releases/tag/1.0.1",
+      "status": "Released",
+      "revision": "1.0.1 (tagged 2025-01-20)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Arazzo versions and schema iterations",
@@ -45,7 +80,7 @@
       "url": "https://raw.githubusercontent.com/OAI/Arazzo-Specification/6e089558f8a4eebe81162010b3d46842c8fb9892/src/arazzo.md",
       "status": "In development",
       "revision": "commit 6e08955 (2026-09-30); draft posture: track",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9535: JSONPath: Query Expressions for JSON",

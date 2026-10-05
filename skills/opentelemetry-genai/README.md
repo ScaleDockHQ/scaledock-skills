@@ -18,11 +18,21 @@ Then ask your agent to "add OpenTelemetry GenAI spans to our LLM client" or "ins
 - Client, server, agent and tool metrics, token metrics, and the GenAI events.
 - Development status, pinning to a commit and schema URL, and `OTEL_SEMCONV_STABILITY_OPT_IN`.
 
+## Versions
+
+| Line                                    | Status                            |
+| --------------------------------------- | --------------------------------- |
+| GenAI conventions (development)         | current (draft posture build)     |
+| semantic conventions v1.36.0 or earlier | legacy (upgrade from, via opt-in) |
+
+`references/versions.md` says which conventions to emit, what changed since v1.36.0, and how to upgrade behind `OTEL_SEMCONV_STABILITY_OPT_IN`.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:
 
 - [OpenTelemetry GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/docs/gen-ai/README.md): Development, commit b31e9e8 (schema `gen-ai-dev/1.42.0-dev`), with its spans, agent spans, events, metrics, MCP and registry docs.
+- [GenAI conventions at semantic conventions v1.36.0](https://github.com/open-telemetry/semantic-conventions/blob/v1.36.0/docs/gen-ai/README.md) and the [semantic conventions CHANGELOG](https://github.com/open-telemetry/semantic-conventions/blob/main/CHANGELOG.md): the legacy line and the changes up to the move.
 - [GenAI README in semantic conventions v1.41.1](https://github.com/open-telemetry/semantic-conventions/blob/v1.41.1/docs/gen-ai/README.md): the opt-in transition plan.
 - [Semantic conventions v1.44.0](https://github.com/open-telemetry/semantic-conventions/releases/tag/v1.44.0): the core conventions the GenAI registry depends on.
 

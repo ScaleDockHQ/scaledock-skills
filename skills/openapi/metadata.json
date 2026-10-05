@@ -1,9 +1,43 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenAPI Specification 3.2 (pinned at 3.2.1) with compatibility for 3.1: document structure, paths, operations, parameters, streaming media types, tags, security schemes and requirements, the 3.1 to 3.2 upgrade and the registered x-oai fallbacks, the OAI Extension and Namespace registries, and validation against the official OAS JSON Schemas. It tracks the 3.3 development line and the Security Profiles proposal without building on them. SKILL.md holds the invariants and workflow; references split out versions, objects, security, registries, validation and drafts.",
+  "abstract": "Covers the OpenAPI Specification version lines: 3.2 (current, pinned at 3.2.1), 3.1 (supported, 3.1.2), 3.0 (supported, 3.0.4), Swagger 2.0 (legacy, upgraded from) and the 3.3 development line (preview, tracked at a v3.3-dev commit). It teaches document structure, paths, operations, parameters, streaming media types, tags, security schemes and requirements, the 2.0 to 3.0, 3.0 to 3.1 and 3.1 to 3.2 upgrades with the registered x-oai fallbacks, the OAI Extension and Namespace registries, and validation against the official OAS JSON Schemas. SKILL.md holds the invariants and workflow; references split out versions, objects, security, registries, validation and drafts.",
+  "versions": [
+    {
+      "id": "3.3-preview",
+      "label": "OpenAPI 3.3",
+      "status": "preview",
+      "posture": "track",
+      "revision": "v3.3-dev commit aa2f6c0 (2026-09-24)",
+      "reference": "references/drafts.md"
+    },
+    {
+      "id": "3.2",
+      "label": "OpenAPI 3.2",
+      "status": "current",
+      "revision": "3.2.1 (2026-09-10)"
+    },
+    {
+      "id": "3.1",
+      "label": "OpenAPI 3.1",
+      "status": "supported",
+      "revision": "3.1.2 (2025-09-19)"
+    },
+    {
+      "id": "3.0",
+      "label": "OpenAPI 3.0",
+      "status": "supported",
+      "revision": "3.0.4 (2024-10-24)"
+    },
+    {
+      "id": "2.0",
+      "label": "Swagger 2.0",
+      "status": "legacy",
+      "revision": "2.0 (2014-09-08)"
+    }
+  ],
   "sources": [
     {
       "title": "OpenAPI Specification v3.2.1",
@@ -24,7 +58,21 @@
       "url": "https://spec.openapis.org/oas/v3.1.2.html",
       "status": "Released",
       "revision": "3.1.2 (2025-09-19)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenAPI Specification v3.0.4",
+      "url": "https://spec.openapis.org/oas/v3.0.4.html",
+      "status": "Released",
+      "revision": "3.0.4 (2024-10-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenAPI Specification v2.0",
+      "url": "https://spec.openapis.org/oas/v2.0.html",
+      "status": "Released (Swagger 2.0, superseded)",
+      "revision": "2.0 (2014-09-08)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Upgrading from OpenAPI 3.1 to 3.2",
@@ -34,11 +82,18 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "Upgrading from OpenAPI 3.0 to 3.1",
+      "url": "https://learn.openapis.org/upgrading/v3.0-to-v3.1.html",
+      "status": "OAI guide (non-normative)",
+      "revision": "page as published",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "OpenAPI Specification versions and schema iterations",
       "url": "https://spec.openapis.org/oas/",
       "status": "OAI index",
       "revision": "latest v3.2.1",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "OAS 3.2 JSON Schema",
@@ -69,11 +124,25 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "OAS 3.0 JSON Schema",
+      "url": "https://spec.openapis.org/oas/3.0/schema/2024-10-18",
+      "status": "Published schema",
+      "revision": "iteration 2024-10-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAS 2.0 JSON Schema",
+      "url": "https://spec.openapis.org/oas/2.0/schema/2017-08-27",
+      "status": "Published schema",
+      "revision": "iteration 2017-08-27",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "OAS v3.3-dev branch text",
       "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/aa2f6c0975ef85e24fd05ab2d7b8b57b04f108c4/src/oas.md",
       "status": "In development",
       "revision": "commit aa2f6c0 (2026-09-24); draft posture: track",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "Proposal: Supporting Loose-Coupling in Security Schemes and Security Requirements Objects (Security Profiles)",

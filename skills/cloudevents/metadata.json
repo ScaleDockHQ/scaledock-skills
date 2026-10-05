@@ -1,9 +1,23 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers CloudEvents 1.0.2, the CNCF specification for describing event data in a common way: the required and optional context attributes, the type system, extension attributes with the Distributed Tracing and Partitioning extensions, the JSON, Avro and Protobuf event formats with the JSON Schema, the HTTP, Kafka, AMQP, MQTT and NATS protocol bindings, and the HTTP webhook delivery spec. It also records the status of the Subscriptions and xRegistry Pagination working drafts, and that no Discovery specification is published. SKILL.md holds the invariants and workflow; references split out attributes, formats, bindings and drafts.",
+  "abstract": "Covers CloudEvents 1.0.2, the CNCF specification for describing event data in a common way: the required and optional context attributes, the type system, extension attributes with the Distributed Tracing and Partitioning extensions, the JSON, Avro and Protobuf event formats with the JSON Schema, the HTTP, Kafka, AMQP, MQTT and NATS protocol bindings, and the HTTP webhook delivery spec. It lists two version lines: CloudEvents 1.0 (current, pinned at 1.0.2) and CloudEvents 0.3 (legacy, upgraded from), with the 1.0.3-wip patch noted. It also records the status of the Subscriptions and xRegistry Pagination working drafts, and that no Discovery specification is published. SKILL.md holds the invariants and workflow; references split out versions, attributes, formats, bindings and drafts.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "CloudEvents 1.0",
+      "status": "current",
+      "revision": "1.0.2 (2022-02-06)"
+    },
+    {
+      "id": "0.3",
+      "label": "CloudEvents 0.3",
+      "status": "legacy",
+      "revision": "v0.3 (2019-06-14), working draft"
+    }
+  ],
   "sources": [
     {
       "title": "CloudEvents specification repository and README",
@@ -116,6 +130,34 @@
       "status": "Released",
       "revision": "1.0.2",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "CloudEvents v1.0-rc1 release notes",
+      "url": "https://github.com/cloudevents/spec/releases/tag/v1.0-rc1",
+      "status": "Released",
+      "revision": "v1.0-rc1 (2019-09-20), changes since v0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CloudEvents v1.0.1 release notes",
+      "url": "https://github.com/cloudevents/spec/releases/tag/ce@v1.0.1",
+      "status": "Released",
+      "revision": "ce@v1.0.1 (2020-12-12)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CloudEvents - Version 0.3",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v0.3/spec.md",
+      "status": "working draft (superseded)",
+      "revision": "v0.3 (2019-06-14)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Event Format for CloudEvents - Version 0.3",
+      "url": "https://raw.githubusercontent.com/cloudevents/spec/v0.3/json-format.md",
+      "status": "working draft (superseded)",
+      "revision": "v0.3 (2019-06-14)",
+      "checked": "2026-10-05"
     },
     {
       "title": "CloudEvents Subscriptions API",

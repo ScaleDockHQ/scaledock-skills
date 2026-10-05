@@ -1,10 +1,10 @@
 ---
 name: mcp-authorization
-description: "MCP authorization: secure MCP servers with OAuth 2.1 as resource servers, and build MCP clients that discover, register and request audience-bound tokens. Use when adding or reviewing authorization on an HTTP MCP server, client, gateway or authorization server: 401 and 403 WWW-Authenticate challenges with resource_metadata, RFC 9728 Protected Resource Metadata at /.well-known/oauth-protected-resource, authorization server discovery through RFC 8414 or OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents (CIMD), pre-registration and deprecated Dynamic Client Registration (DCR), PKCE S256, insufficient_scope step-up and scope accumulation, RFC 9207 iss validation and mix-up attacks, Enterprise-Managed Authorization (ID-JAG, RFC 8693 token exchange, RFC 7523 JWT bearer), token passthrough, confused deputy, SSRF, and the MCP TypeScript SDK auth helpers (requireBearerAuth, OAuthClientProvider, CrossAppAccessProvider). Pins MCP revision 2026-07-28."
+description: "MCP authorization: secure MCP servers with OAuth 2.1 as resource servers, and build MCP clients that discover, register and request audience-bound tokens. Use when adding or reviewing authorization on an HTTP MCP server, client, gateway or authorization server: 401 and 403 WWW-Authenticate challenges with resource_metadata, RFC 9728 Protected Resource Metadata at /.well-known/oauth-protected-resource, authorization server discovery through RFC 8414 or OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents (CIMD), pre-registration and deprecated Dynamic Client Registration (DCR), PKCE S256, insufficient_scope step-up and scope accumulation, RFC 9207 iss validation and mix-up attacks, Enterprise-Managed Authorization (ID-JAG, RFC 8693, RFC 7523), token passthrough, confused deputy, SSRF, and the MCP TypeScript SDK auth helpers. Targets MCP 2026-07-28; supports 2025-11-25 and 2025-06-18, upgrades from 2025-03-26, and tracks the MCP draft."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -19,7 +19,7 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 - Role: MCP server (resource server), MCP client, authorization server, or an MCP server that also calls upstream APIs (a proxy or gateway).
 - Transport: Streamable HTTP or another HTTP transport (this skill applies), or STDIO (it does not; credentials come from the environment).
 - Enterprise: whether an enterprise identity provider (IdP) must control access, which brings in Enterprise-Managed Authorization.
-- Revision: MCP 2026-07-28, the revision the MCP Versioning page marks Current, unless the user names another.
+- Target version: MCP 2026-07-28 (current, the default; the revision the MCP Versioning page marks Current). MCP 2025-11-25 and MCP 2025-06-18 are supported: keep their behaviour only for a named peer on that revision. MCP 2025-03-26 is legacy: read it and upgrade from it, never author it. The MCP draft is a preview (posture: track): never emit it. Revision 2024-11-05 had no authorization. See [`references/versions.md`](references/versions.md).
 - Sources: when refreshing this skill or when a rule looks out of date, re-read the MCP Versioning page for a newer Current revision, then the changelog and Deprecated Features page of that revision, then every URL in [Sources](#sources). Update the pins and bump the version.
 
 ## Invariants
@@ -40,8 +40,9 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 
 ## Workflow
 
-1. **Scope the work.** Confirm the role and transport from Inputs. For STDIO, stop: this skill does not apply.
-   ✓ The design names the role, the HTTP transport and the canonical server URI.
+1. **Scope the work and pick the version.** Confirm the role and transport from Inputs. For STDIO, stop: this skill does not apply. Target MCP 2026-07-28, and list any peers that still speak a supported older revision.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The design names the role, the HTTP transport, the canonical server URI and the target revision, and it is not a legacy or draft revision.
 2. **Publish Protected Resource Metadata and challenges (server).** Serve RFC 9728 metadata, send `401` with `resource_metadata` and an initial `scope`, and send `403 insufficient_scope` for per-operation scopes.
    -> [`references/resource-server.md`](references/resource-server.md)
    ✓ An unauthenticated request gets a 401 whose header leads a client to the metadata, and the metadata lists an authorization server.
@@ -69,6 +70,9 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 10. **Map to the TypeScript SDK if it is used.** Use the SDK's resource-server gate and client provider, and add the checks the SDK leaves to the app.
     -> [`references/typescript-sdk.md`](references/typescript-sdk.md)
     ✓ The app validates `state` itself and keys credentials by `ctx.issuer`.
+11. **Upgrade** (only when asked). Follow the checklist for each step from the source revision to MCP 2026-07-28.
+    -> [`references/versions.md`](references/versions.md)
+    ✓ The upgraded server or client passes the Verify list below, and existing users keep the same grants.
 
 ## Verify before done
 
@@ -84,6 +88,7 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 
 ## Reference index
 
+- **`references/versions.md`**: every MCP revision with authorization, its status, what each changed, the upgrade checklists between adjacent revisions, and the draft. Load for steps 1 and 11.
 - **`references/resource-server.md`**: Protected Resource Metadata, well-known URIs, 401 and 403 challenges, scope selection, token and audience validation, refresh token hints, error codes.
 - **`references/client-flow.md`**: discovery order, authorization server selection, CIMD, pre-registration and DCR, PKCE, `resource`, `iss` validation, step-up and scope accumulation.
 - **`references/enterprise-managed-authorization.md`**: the ext-auth Enterprise-Managed Authorization extension, ID-JAG token exchange, JWT bearer grant and discovery.
@@ -100,12 +105,20 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [MCP Versioning](https://modelcontextprotocol.io/specification/versioning): Specification page, lists 2026-07-28 as Current, checked 2026-10-02.
-- [MCP Authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization): Current, 2026-07-28, checked 2026-10-02.
+- [MCP Versioning](https://modelcontextprotocol.io/specification/versioning): Specification page, lists 2026-07-28 as Current; names 2025-11-25 and earlier as handshake-based revisions, checked 2026-10-05.
+- [MCP Authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization): Current, 2026-07-28, checked 2026-10-05.
 - [MCP Authorization Server Discovery](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/authorization-server-discovery): Current, 2026-07-28, checked 2026-10-02.
 - [MCP Client Registration](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/client-registration): Current, 2026-07-28, checked 2026-10-02.
 - [MCP Authorization Security Considerations](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations): Current, 2026-07-28, checked 2026-10-02.
-- [MCP Key Changes](https://modelcontextprotocol.io/specification/2026-07-28/changelog): Current, 2026-07-28, checked 2026-10-02.
+- [MCP Key Changes](https://modelcontextprotocol.io/specification/2026-07-28/changelog): Current, 2026-07-28, checked 2026-10-05.
+- [MCP Authorization (draft)](https://modelcontextprotocol.io/specification/draft/basic/authorization): Draft, draft as of 2026-10-05, same text as 2026-07-28, checked 2026-10-05. Draft posture: track.
+- [MCP Changelog (draft)](https://modelcontextprotocol.io/specification/draft/changelog): Draft, no changes listed as of 2026-10-05, checked 2026-10-05. Draft posture: track.
+- [MCP Authorization (2025-11-25)](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization): Final, 2025-11-25, checked 2026-10-05.
+- [MCP Key Changes (2025-11-25)](https://modelcontextprotocol.io/specification/2025-11-25/changelog): Final, 2025-11-25, checked 2026-10-05.
+- [MCP Authorization (2025-06-18)](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization): Final, 2025-06-18, checked 2026-10-05.
+- [MCP Key Changes (2025-06-18)](https://modelcontextprotocol.io/specification/2025-06-18/changelog): Final, 2025-06-18, checked 2026-10-05.
+- [MCP Authorization (2025-03-26)](https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization): Final, 2025-03-26, checked 2026-10-05.
+- [MCP Key Changes (2025-03-26)](https://modelcontextprotocol.io/specification/2025-03-26/changelog): Final, 2025-03-26, checked 2026-10-05.
 - [MCP Deprecated Features](https://modelcontextprotocol.io/specification/2026-07-28/deprecated): Current, 2026-07-28, checked 2026-10-02.
 - [MCP Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices): Documentation, 2026-07-28, checked 2026-10-02.
 - [SEP-2350: Clarify client-side scope accumulation in step-up authorization](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2350): SEP, Final, merged 2026-03-28, checked 2026-10-02.

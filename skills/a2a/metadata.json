@@ -1,9 +1,36 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Agent2Agent (A2A) protocol version 1.0 as published by the Linux Foundation A2A project, pinned to specification release v1.0.1 and its normative a2a.proto. SKILL.md holds the invariants and workflow; references cover the Agent Card and its security declarations, operations and the three protocol bindings, tasks with streaming and push notifications, and security including signed Agent Cards.",
+  "abstract": "Covers the Agent2Agent (A2A) protocol as published by the Linux Foundation A2A project, with four version lines: A2A 1.0 (current, pinned to specification release v1.0.1 and its normative a2a.proto), the legacy 0.3 and 0.2 lines with upgrades to 1.0, and the A2A 1.1 preview on the dev-1.1 branch (posture: track). SKILL.md holds the invariants and workflow; references cover versions and upgrades, the Agent Card and its security declarations, operations and the three protocol bindings, tasks with streaming and push notifications, and security including signed Agent Cards.",
+  "versions": [
+    {
+      "id": "1.1-preview",
+      "label": "A2A 1.1",
+      "status": "preview",
+      "posture": "track",
+      "revision": "dev-1.1 branch, commit db39eb5 (2026-09-22)"
+    },
+    {
+      "id": "1.0",
+      "label": "A2A 1.0",
+      "status": "current",
+      "revision": "specification release v1.0.1 (2026-05-28); 1.0.0 released 2026-03-12"
+    },
+    {
+      "id": "0.3",
+      "label": "A2A 0.3",
+      "status": "legacy",
+      "revision": "v0.3.0 (2025-07-30)"
+    },
+    {
+      "id": "0.2",
+      "label": "A2A 0.2",
+      "status": "legacy",
+      "revision": "v0.2.0 to v0.2.6 (v0.2.6 released 2025-07-17)"
+    }
+  ],
   "sources": [
     {
       "title": "Agent2Agent (A2A) Protocol Specification",
@@ -32,6 +59,62 @@
       "status": "Released (non-normative, generated from the proto)",
       "revision": "schema version v1",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "A2A release v1.0.0",
+      "url": "https://github.com/a2aproject/A2A/releases/tag/v1.0.0",
+      "status": "Released",
+      "revision": "v1.0.0 (2026-03-12)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "What's New in A2A Protocol v1.0",
+      "url": "https://a2a-protocol.org/latest/whats-new-v1/",
+      "status": "Documentation (migration notes from v0.3.0)",
+      "revision": "protocol version 1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2A CHANGELOG at v1.0.1",
+      "url": "https://raw.githubusercontent.com/a2aproject/A2A/v1.0.1/CHANGELOG.md",
+      "status": "Released (changelog)",
+      "revision": "entries 0.2.1 (2025-05-27) to 1.0.1 (2026-05-26)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2A release v0.3.0",
+      "url": "https://github.com/a2aproject/A2A/releases/tag/v0.3.0",
+      "status": "Released (superseded by 1.0)",
+      "revision": "v0.3.0 (2025-07-30)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Agent2Agent (A2A) Protocol Specification 0.3.0",
+      "url": "https://a2a-protocol.org/v0.3.0/specification/",
+      "status": "Released (superseded by 1.0)",
+      "revision": "0.3.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Agent2Agent (A2A) Protocol Specification 0.2.6",
+      "url": "https://a2a-protocol.org/v0.2.6/specification/",
+      "status": "Released (superseded; page marked deprecated)",
+      "revision": "0.2.6 (2025-07-17)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2A specification on the dev-1.1 branch",
+      "url": "https://github.com/a2aproject/A2A/blob/db39eb52363a007868a755703f7044841c729acb/docs/specification.md",
+      "status": "Development branch",
+      "revision": "dev-1.1, commit db39eb5 (2026-09-22); draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "a2a.proto on the dev-1.1 branch",
+      "url": "https://github.com/a2aproject/A2A/blob/db39eb52363a007868a755703f7044841c729acb/specification/a2a.proto",
+      "status": "Development branch",
+      "revision": "dev-1.1, commit db39eb5 (2026-09-22); draft posture: track",
+      "checked": "2026-10-05"
     }
   ]
 }

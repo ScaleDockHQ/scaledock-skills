@@ -1,9 +1,78 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Open Cybersecurity Schema Framework at version 1.9.0, the version the OCSF schema server reports: categories, classes and activities, base attributes, the metadata object, profiles, extensions, unmapped data and validation against schema.ocsf.io, with a focus on mapping application audit logs. SKILL.md holds the invariants and workflow; references split out classes and activity IDs, attributes and objects, profiles and extensions, and validation with example events that pass the 1.9.0 validator.",
+  "abstract": "Covers the Open Cybersecurity Schema Framework 1.x: OCSF 1.9 (1.9.0, the version the schema server reports) is current, OCSF 1.8 is supported, OCSF 1.0 to 1.7 are legacy and upgraded from, and the 1.10.0-dev schema is a tracked preview. It teaches categories, classes and activities, base attributes, the metadata object, profiles, extensions, unmapped data and validation against schema.ocsf.io, with a focus on mapping application audit logs. SKILL.md holds the invariants and workflow; references split out the version lines and upgrades, classes and activity IDs, attributes and objects, profiles and extensions, and validation with example events that pass the 1.9.0 validator.",
+  "versions": [
+    {
+      "id": "1.10-preview",
+      "label": "OCSF 1.10.0-dev",
+      "status": "preview",
+      "posture": "track",
+      "revision": "1.10.0-dev on schema.ocsf.io (CHANGELOG Unreleased, checked 2026-10-05)"
+    },
+    {
+      "id": "1.9",
+      "label": "OCSF 1.9",
+      "status": "current",
+      "revision": "1.9.0 (2026-08-03)"
+    },
+    {
+      "id": "1.8",
+      "label": "OCSF 1.8",
+      "status": "supported",
+      "revision": "1.8.0 (2026-03-18)"
+    },
+    {
+      "id": "1.7",
+      "label": "OCSF 1.7",
+      "status": "legacy",
+      "revision": "1.7.0 (2025-11-14)"
+    },
+    {
+      "id": "1.6",
+      "label": "OCSF 1.6",
+      "status": "legacy",
+      "revision": "1.6.0 (2025-08-01)"
+    },
+    {
+      "id": "1.5",
+      "label": "OCSF 1.5",
+      "status": "legacy",
+      "revision": "1.5.0 (2025-04-28)"
+    },
+    {
+      "id": "1.4",
+      "label": "OCSF 1.4",
+      "status": "legacy",
+      "revision": "1.4.0 (2025-02-05)"
+    },
+    {
+      "id": "1.3",
+      "label": "OCSF 1.3",
+      "status": "legacy",
+      "revision": "1.3.0 (2024-08-01)"
+    },
+    {
+      "id": "1.2",
+      "label": "OCSF 1.2",
+      "status": "legacy",
+      "revision": "v1.2.0 (2024-04-23)"
+    },
+    {
+      "id": "1.1",
+      "label": "OCSF 1.1",
+      "status": "legacy",
+      "revision": "v1.1.0 (2024-01-25)"
+    },
+    {
+      "id": "1.0",
+      "label": "OCSF 1.0",
+      "status": "legacy",
+      "revision": "v1.0.0 (2023-09-29)"
+    }
+  ],
   "sources": [
     {
       "title": "OCSF Schema 1.9.0 release",
@@ -13,11 +82,53 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "OCSF Schema releases",
+      "url": "https://github.com/ocsf/ocsf-schema/releases",
+      "status": "Released",
+      "revision": "v1.0.0 (2023-09-29) to 1.9.0 (2026-08-03)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OCSF Schema 1.8.0 release",
+      "url": "https://github.com/ocsf/ocsf-schema/releases/tag/1.8.0",
+      "status": "Released",
+      "revision": "1.8.0 (published 2026-03-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OCSF Schema 1.0.0 release",
+      "url": "https://github.com/ocsf/ocsf-schema/releases/tag/v1.0.0",
+      "status": "Released",
+      "revision": "v1.0.0 (published 2023-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OCSF schema CHANGELOG",
+      "url": "https://github.com/ocsf/ocsf-schema/blob/main/CHANGELOG.md",
+      "status": "changelog",
+      "revision": "main branch (v1.0.0 to v1.9.0 and Unreleased)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OCSF schema server: hosted versions",
+      "url": "https://schema.ocsf.io/api/versions",
+      "status": "schema server API",
+      "revision": "default 1.9.0, lists 1.10.0-dev and 1.0.0 to 1.9.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OCSF 1.10.0-dev schema",
+      "url": "https://schema.ocsf.io/1.10.0-dev/api/version",
+      "status": "schema server API, development version",
+      "revision": "1.10.0-dev, draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "OCSF schema server: current version",
       "url": "https://schema.ocsf.io/api/version",
       "status": "schema server API",
       "revision": "1.9.0",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "OCSF 1.9.0 categories",
@@ -59,7 +170,7 @@
       "url": "https://raw.githubusercontent.com/ocsf/ocsf-docs/main/overview/understanding-ocsf.md",
       "status": "white paper",
       "revision": "main branch",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "OCSF extensions registry",

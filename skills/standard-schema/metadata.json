@@ -1,9 +1,17 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Standard Schema v1 and Standard JSON Schema v1 as published in @standard-schema/spec 1.1.0: the ~standard property, StandardTypedV1, StandardSchemaV1 with its validate result shape, and StandardJSONSchemaV1 with its targets. SKILL.md holds the invariants and workflow; references split out the full interfaces, consuming, implementing, JSON Schema generation, and the implementer tables as listed on standardschema.dev.",
+  "abstract": "Covers Standard Schema v1 and Standard JSON Schema v1, the only version line, as published in @standard-schema/spec 1.1.0, with the upgrade from package 1.0.0; no preview exists. It teaches the ~standard property, StandardTypedV1, StandardSchemaV1 with its validate result shape, and StandardJSONSchemaV1 with its targets. SKILL.md holds the invariants and workflow; references split out versions, the full interfaces, consuming, implementing, JSON Schema generation, and the implementer tables as listed on standardschema.dev.",
+  "versions": [
+    {
+      "id": "1",
+      "label": "Standard Schema v1",
+      "status": "current",
+      "revision": "@standard-schema/spec 1.1.0 (2025-12-15)"
+    }
+  ],
   "sources": [
     {
       "title": "Standard Schema specification",
@@ -34,11 +42,25 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "@standard-schema/spec source at tag v1.0.0",
+      "url": "https://github.com/standard-schema/standard-schema/tree/v1.0.0/packages/spec",
+      "status": "Released",
+      "revision": "tag v1.0.0 (2025-01-27)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "@standard-schema/spec v1.1.0 release",
+      "url": "https://github.com/standard-schema/standard-schema/releases/tag/v1.1.0",
+      "status": "Released",
+      "revision": "v1.1.0 (2025-12-15)",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "@standard-schema/spec on the npm registry",
       "url": "https://registry.npmjs.org/@standard-schema/spec",
       "status": "Released",
       "revision": "1.1.0 (latest dist-tag, published 2025-12-15)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     }
   ]
 }

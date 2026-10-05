@@ -1,9 +1,25 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenTelemetry semantic conventions for generative AI, pinned to commit b31e9e8 of the semantic-conventions-genai repository (schema URL gen-ai-dev/1.42.0-dev, built on semantic conventions 1.44.0), all at Development status: inference, embeddings, retrieval, tool, agent, workflow and MCP spans; gen_ai.* attributes and well-known values; opt-in content capture; client, server, agent and token metrics; GenAI events; and the OTEL_SEMCONV_STABILITY_OPT_IN transition. SKILL.md holds the invariants and workflow; references split out spans, attributes, events and metrics, and versioning.",
+  "abstract": "Covers the OpenTelemetry semantic conventions for generative AI with two version lines: the GenAI conventions (development), current, pinned to commit b31e9e8 of the semantic-conventions-genai repository (schema URL gen-ai-dev/1.42.0-dev, built on semantic conventions 1.44.0, draft posture build), and semantic conventions v1.36.0 or earlier, legacy, which existing instrumentations emit by default. It teaches inference, embeddings, retrieval, tool, agent, workflow and MCP spans; gen_ai.* attributes and well-known values; opt-in content capture; client, server, agent and token metrics; GenAI events; and the OTEL_SEMCONV_STABILITY_OPT_IN upgrade. SKILL.md holds the invariants and workflow; references split out the version lines and upgrade, spans, attributes, events and metrics, and versioning.",
+  "versions": [
+    {
+      "id": "dev",
+      "label": "GenAI conventions (development)",
+      "status": "current",
+      "posture": "build",
+      "revision": "commit b31e9e8 (2026-09-30), schema gen-ai-dev/1.42.0-dev on semantic conventions v1.44.0"
+    },
+    {
+      "id": "1.36",
+      "label": "semantic conventions v1.36.0 or earlier",
+      "status": "legacy",
+      "revision": "semantic conventions v1.36.0 (2025-07-05)",
+      "reference": "references/versioning.md"
+    }
+  ],
   "sources": [
     {
       "title": "Semantic conventions for generative AI systems",
@@ -17,7 +33,7 @@
       "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/b31e9e8ea26ac1c086d3313d474e31d7c3f391ae/model/manifest.yaml",
       "status": "development",
       "revision": "schema gen-ai-dev/1.42.0-dev on semantic conventions 1.44.0 at commit b31e9e8",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "Generative client AI spans",
@@ -81,6 +97,27 @@
       "status": "Moved",
       "revision": "page as served on 2026-10-02",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "GenAI conventions at semantic conventions v1.36.0",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.36.0/docs/gen-ai/README.md",
+      "status": "Development",
+      "revision": "v1.36.0 (2025-07-05), with its spans and events docs",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Semantic conventions CHANGELOG",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/main/CHANGELOG.md",
+      "status": "changelog",
+      "revision": "main branch (GenAI entries v1.37.0 to v1.42.0)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "semantic-conventions-genai commits",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/commits/main",
+      "status": "no releases or tags",
+      "revision": "main at e07f4eb (2026-10-02, tooling only since b31e9e8)",
+      "checked": "2026-10-05"
     },
     {
       "title": "GenAI README with the opt-in transition plan",

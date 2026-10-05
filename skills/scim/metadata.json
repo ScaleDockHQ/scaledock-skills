@@ -1,9 +1,23 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers SCIM 2.0 for both service providers and clients: the RFC 7643 core schema (attribute characteristics, common attributes, User, Group, Enterprise User extension, schema definitions), the RFC 7644 protocol (endpoints, create, query, filters, sorting, PUT, PATCH, DELETE, Bulk, /Me, errors, ETags, discovery, multi-tenancy and security), RFC 9865 cursor pagination, RFC 9967 security events and asynchronous requests, RFC 7523 JWT client authentication, and the draft IPSIE AL and FastFed SCIM profiles. SKILL.md holds the invariants and workflow; references split out schema, protocol, pagination, discovery, security, profiles and events.",
+  "abstract": "Covers SCIM 2.0 as the current line for both service providers and clients: the RFC 7643 core schema (attribute characteristics, common attributes, User, Group, Enterprise User extension, schema definitions), the RFC 7644 protocol (endpoints, create, query, filters, sorting, PUT, PATCH, DELETE, Bulk, /Me, errors, ETags, discovery, multi-tenancy and security), RFC 9865 cursor pagination, RFC 9967 security events and asynchronous requests, RFC 7523 JWT client authentication, and the draft IPSIE AL and FastFed SCIM profiles. SCIM 1.1 (simplecloud.info, July 2012) is the legacy line, with upgrade steps to 2.0. SKILL.md holds the invariants and workflow; references hold the version hub and split out schema, protocol, pagination, discovery, security, profiles and events.",
+  "versions": [
+    {
+      "id": "2.0",
+      "label": "SCIM 2.0",
+      "status": "current",
+      "revision": "RFC 7643 and RFC 7644 (September 2015), updated by RFC 9865 and RFC 9967"
+    },
+    {
+      "id": "1.1",
+      "label": "SCIM 1.1",
+      "status": "legacy",
+      "revision": "Core Schema 1.1 and Protocol 1.1 (9 July 2012)"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 7642: SCIM Definitions, Overview, Concepts, and Requirements",
@@ -17,14 +31,14 @@
       "url": "https://www.rfc-editor.org/rfc/rfc7643",
       "status": "RFC (Proposed Standard, updated by RFC 9865 and RFC 9967)",
       "revision": "RFC 7643",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 7644: SCIM Protocol",
       "url": "https://www.rfc-editor.org/rfc/rfc7644",
       "status": "RFC (Proposed Standard, updated by RFC 9865 and RFC 9967)",
       "revision": "RFC 7644",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9865: Cursor-Based Pagination of SCIM Resources",
@@ -46,6 +60,34 @@
       "status": "RFC (Proposed Standard)",
       "revision": "RFC 7523",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "SCIM Core Schema 1.1",
+      "url": "http://www.simplecloud.info/specs/draft-scim-core-schema-01.html",
+      "status": "Draft (simplecloud.info)",
+      "revision": "1.1, 9 July 2012",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SCIM Protocol 1.1",
+      "url": "http://www.simplecloud.info/specs/draft-scim-api-01.html",
+      "status": "Draft (simplecloud.info)",
+      "revision": "1.1, 9 July 2012",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SCIM specification index",
+      "url": "http://www.simplecloud.info/",
+      "status": "Index (simplecloud.info)",
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IETF SCIM working group documents",
+      "url": "https://datatracker.ietf.org/wg/scim/documents/",
+      "status": "Index (IETF)",
+      "revision": "working group drafts as listed 2026-10-05",
+      "checked": "2026-10-05"
     },
     {
       "title": "IPSIE AL SCIM 2.0 Profile",

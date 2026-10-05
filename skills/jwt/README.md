@@ -16,6 +16,17 @@ Then ask your agent to "review our JWT validation" or "issue RFC 9068 access tok
 - Algorithm choice from the IANA registry, RFC 9864 fully specified algorithms, and the deprecation of `none` and `RSA1_5`.
 - Key strength, JWE limits, JWK and JWK Set members, OKP keys, RFC 7638 thumbprints and the `cnf` claim.
 - RFC 9068 JWT access tokens, including the `roles`, `groups` and `entitlements` claims, and the IANA JWT claims registry.
+- Upgrading a verifier from RFC 8725 to rfc8725bis, and moving `EdDSA` keys to `Ed25519`.
+
+## Versions
+
+| Line                      | Status          |
+| ------------------------- | --------------- |
+| rfc8725bis                | preview (build) |
+| Deprecate none and RSA1_5 | preview (build) |
+| JOSE RFCs                 | current         |
+
+`references/versions.md` says which line to use and how to upgrade between them.
 
 ## Pinned sources
 

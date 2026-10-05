@@ -1,9 +1,24 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers WebMCP, the W3C Web Machine Learning Community Group draft for registering page tools with AI agents through document.modelContext, pinned to the Draft Community Group Report of 30 September 2026 (commit d61d0e6) with a build posture. SKILL.md holds the invariants and workflow; references cover the API (WebIDL, registration, execution, discovery, events) and security and privacy (Permissions-Policy, cross-origin exposure, annotations, the draft's risk list).",
+  "abstract": "Covers WebMCP, the W3C Web Machine Learning Community Group draft for registering page tools with AI agents through document.modelContext, pinned to the Draft Community Group Report of 30 September 2026 (commit d61d0e6) with a build posture. It lists two version lines: the WebMCP Draft Community Group Report (current, build) and the legacy navigator.modelContext drafts before pull request #184, with an upgrade checklist. SKILL.md holds the invariants and workflow; references cover versions and upgrades, the API (WebIDL, registration, execution, discovery, events) and security and privacy (Permissions-Policy, cross-origin exposure, annotations, the draft's risk list).",
+  "versions": [
+    {
+      "id": "draft",
+      "label": "WebMCP Draft Community Group Report",
+      "status": "current",
+      "posture": "build",
+      "revision": "Draft CG Report of 30 September 2026, commit d61d0e6d297ddb6bff3510b1330dbb215c6ef43c"
+    },
+    {
+      "id": "navigator-era",
+      "label": "WebMCP navigator.modelContext drafts",
+      "status": "legacy",
+      "revision": "commits from 2026-01-26 to a816d2e (2026-05-20), before pull request #184"
+    }
+  ],
   "sources": [
     {
       "title": "WebMCP (published report)",
@@ -17,7 +32,7 @@
       "url": "https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/index.bs",
       "status": "Draft Community Group Report",
       "revision": "commit d61d0e6d297ddb6bff3510b1330dbb215c6ef43c (2026-09-30)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "WebMCP explainer, README.md",
@@ -38,7 +53,21 @@
       "url": "https://github.com/webmachinelearning/webmcp/pull/184",
       "status": "Merged change",
       "revision": "commit c7b5c7023f6e6a1c7a2495946136eb19b3109ae6 (2026-05-27)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WebMCP spec source, index.bs, last navigator.modelContext commit",
+      "url": "https://raw.githubusercontent.com/webmachinelearning/webmcp/a816d2e91d762adb9f3a07e1d5ce81f462ccd45a/index.bs",
+      "status": "Draft Community Group Report (superseded)",
+      "revision": "commit a816d2e91d762adb9f3a07e1d5ce81f462ccd45a (2026-05-20)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WebMCP index.bs commit history",
+      "url": "https://github.com/webmachinelearning/webmcp/commits/main/index.bs",
+      "status": "Repository history",
+      "revision": "2026-01-26 (initial draft) to d61d0e6 (2026-09-30); main at 6891d0e (2026-10-02) changes only an explainer",
+      "checked": "2026-10-05"
     },
     {
       "title": "Chrome for Developers: WebMCP",

@@ -17,6 +17,14 @@ Then ask your agent to "review this agent against the OWASP Agentic Top 10" or "
 - How to classify findings, with the boundaries the Top 10 draws between entries.
 - Mappings to the Agentic AI Threats and Mitigations taxonomy (T1 to T17) and the OWASP Top 10 for LLM Applications.
 
+## Versions
+
+| Line                                       | Status  |
+| ------------------------------------------ | ------- |
+| OWASP Top 10 for Agentic Applications 2026 | current |
+
+The 2026 edition is the first and only one; no preview is published. `references/versions.md` explains how the LLM Top 10 editions relate.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:

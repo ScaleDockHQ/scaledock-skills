@@ -12,7 +12,7 @@ Then ask your agent, for example, "Which OpenID spec do I need for logging users
 
 ## What it covers
 
-`SKILL.md` routes a task to a family and states the rules that apply across all OpenID specifications: the three maturity levels (Draft, Implementer's Draft, Final Specification), the IPR protection that comes with Implementer's Drafts and Finals, the approval process, how errata replace unversioned URLs, and the certification programme.
+`SKILL.md` routes a task to a family and states the rules that apply across all OpenID specifications: the three maturity levels (Draft, Implementer's Draft, Final Specification), the IPR protection that comes with Implementer's Drafts and Finals, the approval process, how errata replace unversioned URLs, how to pick and upgrade a version under the OpenID Foundation Process, and the certification programme.
 
 One reference file per working group or family lists each specification with its exact title, URL, maturity, date and errata:
 
@@ -42,6 +42,14 @@ These families have their own skills with normative detail. This skill points to
 | OpenID4VC         | `openid4vc`         | `npx skills add ScaleDockHQ/scaledock-skills --skill openid4vc`         |
 | AuthZEN           | `authzen`           | `npx skills add ScaleDockHQ/scaledock-skills --skill authzen`           |
 
+## Versions
+
+| Line                      | Status  |
+| ------------------------- | ------- |
+| OpenID Foundation Process | current |
+
+This skill is an index, so its one line is the OpenID Foundation Process that governs how every specification is versioned. `references/versions.md` explains Work Group Drafts, Implementer's Drafts, Finals and errata sets, and how to pick and upgrade a version of any OpenID specification. Each family's own version lines are in its dedicated skill.
+
 ## Pinned sources
 
 The skill was written from these index pages, read on 2026-10-02 and pinned in `metadata.json`. Each reference file also cites the specification documents it summarises.
@@ -50,6 +58,7 @@ The skill was written from these index pages, read on 2026-10-02 and pinned in `
 - Working group specification pages: [AB/Connect](https://openid.net/wg/connect/specifications/), [AuthZEN](https://openid.net/wg/authzen/specifications/), [DCP](https://openid.net/wg/digital-credentials-protocols/specifications/), [DCHP](https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/specifications/), [eKYC & IDA](https://openid.net/wg/ekyc-ida/specifications/), [FAPI](https://openid.net/wg/fapi/specifications/), [iGov](https://openid.net/wg/igov/specifications/), [IPSIE](https://openid.net/wg/ipsie/specifications/), [MODRNA](https://openid.net/wg/modrna/specifications/), [R&E](https://openid.net/wg/rande/specifications/), [Shared Signals](https://openid.net/wg/sharedsignals/specifications/)
 - Archived working groups: [EAP](https://openid.net/wg/eap/specifications/), [FastFed](https://openid.net/wg/fastfed/specifications/), [HEART](https://openid.net/wg/heart/specifications/), [Archived Groups](https://openid.net/wg/archived-groups/)
 - [Community Groups](https://openid.net/cg/)
+- [The OpenID Process](https://openid.net/foundation/openid-process-document/): Process Document v1.98, 19 October 2024, read on 2026-10-05.
 - [Developing an OpenID Standard](https://openid.net/foundation/developing-openid-standards/) and [OpenID Foundation Contribution Agreements](https://openid.net/intellectual-property/openid-foundation-contribution-agreements/)
 - [Certification](https://openid.net/certification/) and [How to Certify Your Implementation](https://openid.net/certification/how-to-certify-your-implementation/)
 

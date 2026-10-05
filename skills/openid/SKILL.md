@@ -1,10 +1,10 @@
 ---
 name: openid
-description: "OpenID Foundation specs: every spec, maturity and errata, routed to the right family reference or dedicated skill. Use when a task names any OpenID Foundation specification or working group, or asks which one fits a use case: OpenID Connect (OIDC) Core, Discovery, Dynamic Client Registration, logout, prompt=create, Native SSO, SIOPv2, Key Binding; OpenID Federation; FAPI 1.0, FAPI 2.0, JARM, Grant Management, FAPI CIBA; CIBA and MODRNA; Shared Signals (SSF), CAEP, RISC; OpenID4VCI, OpenID4VP, HAIP, DCP, DCHP; AuthZEN Authorization API; eKYC and Identity Assurance (verified_claims); iGov; IPSIE; R&E; HEART; FastFed; EAP ACR values and Token Bound Authentication; legacy OpenID 2.0, Attribute Exchange, PAPE, Simple Registration and Yadis. Also use to check whether a spec is Final, an Implementer's Draft or a Draft, to find its errata set, or to find OpenID certification and conformance tests."
+description: "OpenID Foundation specs: every spec, maturity and errata, routed to the right family reference or dedicated skill. Use when a task names any OpenID Foundation specification or working group, or asks which one fits a use case: OpenID Connect (OIDC) Core, Discovery, Dynamic Client Registration, logout, prompt=create, Native SSO, SIOPv2, Key Binding; OpenID Federation; FAPI 1.0, FAPI 2.0, JARM, Grant Management, FAPI CIBA; CIBA and MODRNA; Shared Signals (SSF), CAEP, RISC; OpenID4VCI, OpenID4VP, HAIP, DCP, DCHP; AuthZEN Authorization API; eKYC and Identity Assurance (verified_claims); iGov; IPSIE; R&E; HEART; FastFed; EAP ACR values and Token Bound Authentication; legacy OpenID 2.0, Attribute Exchange, PAPE, Simple Registration and Yadis. Also use to check whether a spec is Final, an Implementer's Draft or a Draft, to find its errata set, to upgrade from an Implementer's Draft under the OpenID Foundation Process, or to find OpenID certification and conformance tests."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ The OpenID Foundation (OIDF) publishes identity specifications through working g
 
 - What is being built or reviewed: for example a relying party (RP), an OpenID Provider (OP), an authorization server, a resource server, a wallet, a credential issuer or verifier, a policy decision point, or a signal transmitter or receiver.
 - Family: the working group or specification the task names, or the use case if it names none. Pick it with [Pick a family](#pick-a-family).
+- Target version: the OpenID Foundation Process (current, Process Document v1.98) defines how every specification is versioned. Per specification, default to the Final at its latest errata set, else the newest Implementer's Draft; older Implementer's Drafts are read only to upgrade. Each family's own lines, legacy versions and previews are in its dedicated skill or family reference. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in the family reference, unless the user names another.
 - Sources: when refreshing this skill or when a pin looks out of date, re-read every URL in [Sources](#sources), then every specification URL in the affected reference file. Compare titles, maturity sections and dates, update the reference entries and pins, and bump the version.
 
@@ -55,12 +56,16 @@ The OpenID Foundation (OIDF) publishes identity specifications through working g
    ✓ Each specification in scope has an exact title, URL, maturity and date from the reference.
 3. **Use the dedicated skill when one exists.** OpenID Connect, OpenID Federation, FAPI, Shared Signals, OpenID4VC and AuthZEN have dedicated skills with normative detail. Install it and follow its workflow; this skill only routes.
    ✓ The dedicated skill is installed, or the reference confirms there is none.
-4. **Pin the revision.** Record the document URL, maturity level, date and errata set you implement, and the posture from invariant 4.
+4. **Pick and pin the version.** Choose the Final at its latest errata set, or the newest Implementer's Draft, then record the document URL, maturity level, date and errata set, and the posture from invariant 4.
+   -> [`references/versions.md`](references/versions.md)
    ✓ The design or code cites a pinned URL, not only a title.
 5. **Read the specification itself for normative rules.** The reference files summarise; requirements come from the specification text.
    ✓ Every MUST you implement cites a section of the pinned document.
 6. **Plan conformance.** If the family has a conformance suite, plan to run it.
    ✓ The plan names the conformance test or states that none exists.
+7. **Upgrade** (only when asked). Move an implementation from an Implementer's Draft to the Final, or to a later errata set, using the dedicated skill's upgrade steps where one exists.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The new pin is a Final or the newest Implementer's Draft, and the conformance tests pass against it.
 
 ## Verify before done
 
@@ -73,6 +78,7 @@ The OpenID Foundation (OIDF) publishes identity specifications through working g
 
 ## Reference index
 
+- **`references/versions.md`**: the OpenID Foundation Process: the five stages, draft and Implementer's Draft numbering, errata sets, review periods and votes, how to pick and upgrade a version of any OpenID specification, and where each family's version lines live.
 - **`references/connect.md`**: AB/Connect: Core, Discovery, Registration, RP Metadata Choices, response types, Form Post, Migration, logout specs, `unmet_authentication_requirements`, `prompt=create`, Native SSO, SIOPv2, Key Binding, drafts and implementer's guides.
 - **`references/federation.md`**: OpenID Federation 1.0 and 1.1, Federation for OpenID Connect 1.1, extensions and drafts.
 - **`references/fapi.md`**: FAPI 1.0 Baseline and Advanced, FAPI 2.0 Security Profile, Attacker Model, Message Signing, JARM, FAPI CIBA, Grant Management, HTTP Signatures.
@@ -119,6 +125,7 @@ Status uses the publishing body's own maturity term; these are index pages, so t
 - [HEART Working Group – Specifications](https://openid.net/wg/heart/specifications/): Index, as of 2026-10-02, checked 2026-10-02.
 - [Archived Groups](https://openid.net/wg/archived-groups/): Index, as of 2026-10-02, checked 2026-10-02.
 - [Community Groups](https://openid.net/cg/): Index, as of 2026-10-02, checked 2026-10-02.
+- [The OpenID Process](https://openid.net/foundation/openid-process-document/): Published, OpenID Process Document v1.98 (19 October 2024), checked 2026-10-05.
 - [Developing an OpenID Standard](https://openid.net/foundation/developing-openid-standards/): Index, as of 2026-10-02, checked 2026-10-02.
 - [OpenID Foundation Contribution Agreements](https://openid.net/intellectual-property/openid-foundation-contribution-agreements/): Index, as of 2026-10-02, checked 2026-10-02.
 - [Certification](https://openid.net/certification/): Index, as of 2026-10-02, checked 2026-10-02.

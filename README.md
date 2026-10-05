@@ -42,43 +42,43 @@ ScaleDock skills start with `scaledock-`, so they never collide with a skill fro
 
 ### Spec skills
 
-Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section.
+Neutral skills, one per specification. Each pins the sources it was written from in its `metadata.json` and `## Sources` section. Each covers every major version line of its specification: the current default, older lines that are still supported, legacy lines to upgrade from, and a `-preview` line for drafts of the next version. Its `references/versions.md` says which line to use and how to upgrade between them.
 
-| Skill                                               | Description                                                                                                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`a2a`](skills/a2a)                                 | A2A 1.0: publish Agent Cards and talk agent to agent over the JSON-RPC, gRPC and HTTP+JSON bindings.                                              |
-| [`ag-ui`](skills/ag-ui)                             | AG-UI 1.0: stream agent runs to user-facing apps with typed events, shared state and human-in-the-loop interrupts.                                |
-| [`ap2`](skills/ap2)                                 | AP2 v0.2: authorize AI agent payments with signed Checkout and Payment Mandates.                                                                  |
-| [`owasp-agentic`](skills/owasp-agentic)             | OWASP Top 10 for Agentic Applications 2026: review AI agent apps against ASI01 to ASI10.                                                          |
-| [`web-bot-auth`](skills/web-bot-auth)               | Web Bot Auth: sign and verify bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures.                                               |
-| [`webmcp`](skills/webmcp)                           | WebMCP: expose web page tools to AI agents through `document.modelContext`.                                                                       |
-| [`asyncapi`](skills/asyncapi)                       | AsyncAPI 3.1: describe event-driven APIs with servers, channels, operations, messages and protocol bindings.                                      |
-| [`openapi`](skills/openapi)                         | OpenAPI 3.2: write, validate and upgrade API descriptions, including security schemes and the extension registries.                               |
-| [`openapi-arazzo`](skills/openapi-arazzo)           | Arazzo 1.1: describe and run multi-step workflows over OpenAPI and AsyncAPI operations.                                                           |
-| [`openapi-overlay`](skills/openapi-overlay)         | OpenAPI Overlay 1.2: apply repeatable JSONPath changes to OpenAPI documents without editing them.                                                 |
-| [`typespec`](skills/typespec)                       | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2.                                                                           |
-| [`cedar`](skills/cedar)                             | Cedar 4.5: write, validate and evaluate authorization policies with entities, schemas and templates.                                              |
-| [`cloudevents`](skills/cloudevents)                 | CloudEvents 1.0.2: a common event format with JSON, Avro and Protobuf formats and HTTP, Kafka, AMQP, MQTT and NATS bindings.                      |
-| [`eu-ai-act`](skills/eu-ai-act)                     | EU AI Act (Regulation 2024/1689, as amended in 2026): classify AI systems and turn the obligations into engineering requirements.                 |
-| [`ocsf`](skills/ocsf)                               | OCSF 1.9.0: map application audit logs to Open Cybersecurity Schema Framework events.                                                             |
-| [`openfeature`](skills/openfeature)                 | OpenFeature 0.9.0: evaluate feature flags through a vendor-neutral API with providers, hooks, events and tracking.                                |
-| [`opentelemetry-genai`](skills/opentelemetry-genai) | OpenTelemetry GenAI semantic conventions: instrument LLM calls, tool calls and agents with `gen_ai.*` telemetry.                                  |
-| [`fapi`](skills/fapi)                               | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, plus FAPI 1.0, JARM and CIBA.                        |
-| [`openid4vc`](skills/openid4vc)                     | OpenID4VCI, OpenID4VP and HAIP: issue and verify verifiable credentials over OAuth.                                                               |
-| [`shared-signals`](skills/shared-signals)           | Shared Signals (SSF, CAEP, RISC): send and receive security events between identity providers, apps and services.                                 |
-| [`authzen`](skills/authzen)                         | AuthZEN Authorization API 1.0: PEP-to-PDP access evaluation, batch evaluation, search and PDP metadata.                                           |
-| [`openid-connect`](skills/openid-connect)           | OpenID Connect: validate ID tokens and run login, logout, discovery and dynamic client registration.                                              |
-| [`openid-federation`](skills/openid-federation)     | OpenID Federation: build and validate trust chains, entity statements, metadata policy and trust marks.                                           |
-| [`gnap`](skills/gnap)                               | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                                    |
-| [`jwt`](skills/jwt)                                 | JWT and JOSE: verify and issue JWS, JWE and JWK safely, following RFC 8725 and current algorithm guidance.                                        |
-| [`mcp-authorization`](skills/mcp-authorization)     | MCP authorization: secure MCP servers as OAuth 2.1 resource servers, and build clients that discover, register and request audience-bound tokens. |
-| [`scim`](skills/scim)                               | SCIM 2.0: provision users and groups with RFC 7643 and RFC 7644, including cursor pagination and security events.                                 |
-| [`spiffe`](skills/spiffe)                           | SPIFFE and SPIRE: issue and verify workload identities with SPIFFE IDs, SVIDs, trust bundles and federation.                                      |
-| [`oauth`](skills/oauth)                             | OAuth 2.1 and its RFCs: resource servers, clients and authorization servers, with PKCE, DPoP, metadata, token exchange and RAR.                   |
-| [`openid`](skills/openid)                           | Every OpenID Foundation spec, maturity level and errata set, routed to the right family reference or dedicated skill.                             |
-| [`problem-details`](skills/problem-details)         | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json`, plus the `WWW-Authenticate` challenge for 401 and 403.            |
-| [`ratelimit-headers`](skills/ratelimit-headers)     | IETF RateLimit and RateLimit-Policy headers, `Retry-After` and 429 handling for HTTP API quotas.                                                  |
-| [`standard-schema`](skills/standard-schema)         | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                                     |
+| Skill                                               | Description                                                                                                                                        |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`a2a`](skills/a2a)                                 | A2A 1.0: publish Agent Cards and talk agent to agent over JSON-RPC, gRPC and HTTP+JSON, with upgrades from 0.3 and 0.2 and the 1.1 preview.        |
+| [`ag-ui`](skills/ag-ui)                             | AG-UI 1.0: stream agent runs to user-facing apps with typed events, shared state and interrupts, with upgrades from 0.x and the 1.1 preview.       |
+| [`ap2`](skills/ap2)                                 | AP2 v0.2: authorize AI agent payments with signed Checkout and Payment Mandates, with upgrades from v0.1.                                          |
+| [`owasp-agentic`](skills/owasp-agentic)             | OWASP Top 10 for Agentic Applications 2026 (first edition): review AI agent apps against ASI01 to ASI10.                                           |
+| [`web-bot-auth`](skills/web-bot-auth)               | Web Bot Auth (draft-ietf-webbotauth-00): sign and verify bot and AI agent requests with RFC 9421, with upgrades from the draft-meunier drafts.     |
+| [`webmcp`](skills/webmcp)                           | WebMCP (Draft CG Report): expose web page tools through `document.modelContext`, with upgrades from the `navigator.modelContext` drafts.           |
+| [`asyncapi`](skills/asyncapi)                       | AsyncAPI 3.1 and 3.0: describe, validate and upgrade event-driven APIs with servers, channels, operations and bindings, with upgrades from 2.x.    |
+| [`openapi`](skills/openapi)                         | OpenAPI 3.0 to 3.2: write, validate and upgrade API descriptions, with Swagger 2.0 upgrades and the 3.3 preview.                                   |
+| [`openapi-arazzo`](skills/openapi-arazzo)           | Arazzo 1.1 and 1.0: describe and run multi-step workflows over OpenAPI and AsyncAPI operations, with the 1.2 preview.                              |
+| [`openapi-overlay`](skills/openapi-overlay)         | OpenAPI Overlay 1.2 and 1.1: apply repeatable JSONPath changes to OpenAPI documents, with upgrades from 1.0.                                       |
+| [`typespec`](skills/typespec)                       | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                              |
+| [`cedar`](skills/cedar)                             | Cedar 4.x (language 4.5): write, validate and evaluate authorization policies and schemas, with upgrades from Cedar 3.x and 2.x.                   |
+| [`cloudevents`](skills/cloudevents)                 | CloudEvents 1.0 (1.0.2): JSON, Avro and Protobuf formats and HTTP, Kafka, AMQP, MQTT and NATS bindings, with upgrades from 0.3.                    |
+| [`eu-ai-act`](skills/eu-ai-act)                     | EU AI Act (consolidated text of 27 July 2026, with the Digital Omnibus): classify AI systems and update plans built on the original dates.         |
+| [`ocsf`](skills/ocsf)                               | OCSF 1.9 (1.8 supported): map audit logs to OCSF events, upgrade from any earlier 1.x release, and track the 1.10 preview.                         |
+| [`openfeature`](skills/openfeature)                 | OpenFeature 0.9 (0.8 supported): evaluate feature flags with providers, hooks, events and tracking, with upgrades from older 0.x releases.         |
+| [`opentelemetry-genai`](skills/opentelemetry-genai) | OpenTelemetry GenAI conventions (development): instrument models, tools and agents with `gen_ai.*`, and upgrade v1.36.0 instrumentations.          |
+| [`fapi`](skills/fapi)                               | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, with FAPI 1.0 upgrades, JARM and CIBA.                |
+| [`openid4vc`](skills/openid4vc)                     | OpenID4VCI, OpenID4VP and HAIP 1.0: issue and verify credentials, with upgrades from the Implementer's Drafts and the 1.1 previews.                |
+| [`shared-signals`](skills/shared-signals)           | SSF 1.0, CAEP 1.0 and RISC 1.0: send and receive security events, with upgrades from the Implementer's Drafts.                                     |
+| [`authzen`](skills/authzen)                         | AuthZEN Authorization API 1.0: PEP-to-PDP evaluation, batch, search and PDP metadata, with upgrades from the Implementer's Draft.                  |
+| [`openid-connect`](skills/openid-connect)           | OpenID Connect 1.0 (errata set 2): validate ID tokens and run login, logout and discovery, with OpenID 2.0 migration.                              |
+| [`openid-federation`](skills/openid-federation)     | OpenID Federation 1.1 and 1.0: build and validate trust chains, entity statements and metadata policy, with upgrades from pre-Final drafts.        |
+| [`gnap`](skills/gnap)                               | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                                     |
+| [`jwt`](skills/jwt)                                 | JWT and JOSE RFCs: verify and issue JWS, JWE and JWK safely, with the RFC 8725bis and `none`/`RSA1_5` deprecation previews.                        |
+| [`mcp-authorization`](skills/mcp-authorization)     | MCP authorization 2026-07-28 (2025-11-25 and 2025-06-18 supported): secure MCP servers and clients with OAuth, with upgrades from 2025-03-26.      |
+| [`scim`](skills/scim)                               | SCIM 2.0: provision users and groups with RFC 7643 and RFC 7644, including cursor pagination and security events, with SCIM 1.1 upgrades.          |
+| [`spiffe`](skills/spiffe)                           | SPIFFE and SPIRE: issue and verify workload identities, SVIDs, trust bundles and federation, with the Incubating WIT-SVID and Broker preview.      |
+| [`oauth`](skills/oauth)                             | OAuth 2.0 with RFC 9700 and the OAuth 2.1 draft as a build preview: resource servers, clients and authorization servers, with PKCE, DPoP and RAR.  |
+| [`openid`](skills/openid)                           | Every OpenID Foundation spec, maturity level and errata set under the OIDF Process, routed to the right family reference or dedicated skill.       |
+| [`problem-details`](skills/problem-details)         | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json` with the `WWW-Authenticate` challenge, with upgrades from RFC 7807. |
+| [`ratelimit-headers`](skills/ratelimit-headers)     | IETF RateLimit and RateLimit-Policy headers (draft-11), `Retry-After` and 429 handling, with upgrades from older drafts and `X-RateLimit-*`.       |
+| [`standard-schema`](skills/standard-schema)         | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                                      |
 
 ## Development
 

@@ -21,7 +21,7 @@ Field names are the JSON names of the messages in `a2a.proto` v1.0.1.
 | `TASK_STATE_CANCELED`       | Terminal: canceled before completion.                   |
 | `TASK_STATE_REJECTED`       | Terminal: the agent decided not to perform the task.    |
 
-`TASK_STATE_UNSPECIFIED` is the proto zero value. Version 1.0 spells "canceled" with one l (v1.0.0 release notes).
+`TASK_STATE_UNSPECIFIED` is the proto zero value. Version 1.0 spells "canceled" with one l (v1.0.0 release notes). The mapping from 0.3 lowercase states is in [`versions.md`](versions.md).
 
 Rules:
 
@@ -70,7 +70,7 @@ Three mechanisms: polling with `GetTask`, streaming (`SendStreamingMessage`, `Su
 - Message-only stream: exactly one `Message`, then close. Task stream: the `Task` first, then zero or more `TaskStatusUpdateEvent` or `TaskArtifactUpdateEvent`, closing when the task reaches a terminal state (§ 3.1.2). HTTP+JSON streams close on a terminal or interrupted state and may resend a final `Task` snapshot (§ 11.7).
 - `SubscribeToTask` must send the current `Task` as its first event (§ 3.1.6).
 - Events must be delivered in generation order. Several streams for one task each receive the same events; closing one does not affect the others (§ 3.5.2).
-- `TaskStatusUpdateEvent`: `taskId`, `contextId`, `status`, `metadata`. Version 1.0 removed the `final` field (v1.0.0 release notes); end-of-stream is the stream closing.
+- `TaskStatusUpdateEvent`: `taskId`, `contextId`, `status`, `metadata`. Version 1.0 removed the `final` field (v1.0.0 release notes); end-of-stream is the stream closing. The 1.1 preview adds `generation` here; do not emit it ([`versions.md`](versions.md)).
 - `TaskArtifactUpdateEvent`: `taskId`, `contextId`, `artifact`, `append`, `lastChunk`, `metadata`.
 
 On JSON-RPC and HTTP+JSON, streams are Server-Sent Events:
@@ -88,7 +88,7 @@ That example is HTTP+JSON; on JSON-RPC each `data:` line wraps the `StreamRespon
 ### Push notifications
 
 - Configure with `CreateTaskPushNotificationConfig` or inline through `configuration.taskPushNotificationConfig` on `SendMessage` (proto `SendMessageConfiguration`).
-- `TaskPushNotificationConfig`: `url` (required), `id`, `taskId`, `tenant`, `token`, `authentication` (`AuthenticationInfo`: `scheme` required, `credentials`). Version 1.0 merged `TaskPushNotificationConfig` and `PushNotificationConfig` (v1.0.0 release notes).
+- `TaskPushNotificationConfig`: `url` (required), `id`, `taskId`, `tenant`, `token`, `authentication` (`AuthenticationInfo`: `scheme` required, `credentials`). Version 1.0 merged `TaskPushNotificationConfig` and `PushNotificationConfig` (v1.0.0 release notes; see [`versions.md`](versions.md)).
 - The agent POSTs a `StreamResponse` with `Content-Type: application/a2a+json` and the configured credentials in the `Authorization` header (§ 4.3.3). Webhooks always use plain HTTP and the HTTP binding's JSON, whatever binding the agent uses (§ 3.5.1).
 - Agent: at least one delivery attempt per webhook; retries with exponential backoff and a 10 to 30 second timeout are recommended (§ 4.3.3).
 - Client: respond 2xx, process idempotently, validate the task ID and the notification source (§ 4.3.3).

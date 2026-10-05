@@ -1,10 +1,10 @@
 ---
 name: owasp-agentic
-description: "OWASP Agentic Top 10: review AI agent apps against the OWASP Top 10 for Agentic Applications 2026 (ASI01 to ASI10). Use when designing, threat modelling or reviewing an AI agent, multi-agent system, copilot, coding agent, MCP or A2A integration, or any LLM app that plans and calls tools: agent goal hijack and indirect prompt injection, tool misuse and exploitation, identity and privilege abuse, agentic supply chain vulnerabilities, unexpected code execution, memory and context poisoning, insecure inter-agent communication, cascading failures, human-agent trust exploitation and rogue agents. Works as a review checklist for tool use, identity and privilege, human-in-the-loop approvals, least agency, sandboxing, memory, inter-agent messages and monitoring, and maps findings to the OWASP Agentic AI Threats and Mitigations taxonomy (T1 to T17) and the OWASP Top 10 for LLM Applications. Triggers: owasp agentic, agentic top 10, ASI01, agent security review, excessive agency, least agency, agentic threat model."
+description: "OWASP Agentic Top 10: review AI agent apps against the OWASP Top 10 for Agentic Applications 2026 (ASI01 to ASI10), its only edition (no preview). Use when designing, threat modelling or reviewing an agent, multi-agent system, copilot, coding agent, MCP or A2A integration, or any LLM app that plans and calls tools: agent goal hijack and indirect prompt injection, tool misuse and exploitation, identity and privilege abuse, agentic supply chain vulnerabilities, unexpected code execution, memory and context poisoning, insecure inter-agent communication, cascading failures, human-agent trust exploitation and rogue agents. Works as a review checklist for tool use, identity and privilege, human-in-the-loop approvals, least agency, sandboxing, memory, inter-agent messages and monitoring, and maps findings to the OWASP Agentic AI Threats and Mitigations taxonomy (T1 to T17) and the OWASP Top 10 for LLM Applications. Triggers: owasp agentic, agentic top 10, ASI01, excessive agency, least agency, agentic threat model."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ The OWASP Top 10 for Agentic Applications 2026 (the Agentic Top 10, entries ASI0
 
 - Scope: which agents, tools, data sources, memory stores, peer agents and human approval points are in the review.
 - Mode: design review, code review, or threat model.
+- Target version: OWASP Top 10 for Agentic Applications 2026 (default and only edition). There is no supported or legacy edition and no preview. The LLM Top 10 editions are a related list, not lines of this one. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned Top 10 in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources), check genai.owasp.org for a newer Agentic Top 10 or Threats and Mitigations version, and update the pins.
 
@@ -34,19 +35,25 @@ The OWASP Top 10 for Agentic Applications 2026 (the Agentic Top 10, entries ASI0
 
 ## Workflow
 
-1. **Map the system.** List agents, their goals, tools, credentials, memory, data sources, peer agents, approval points and output channels. Note where autonomy is not needed.
+1. **Pick the version.** Review against the 2026 edition, and note which LLM Top 10 edition any cross-reference uses.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The report names the Agentic Top 10 edition and the Threats and Mitigations version it cites.
+2. **Map the system.** List agents, their goals, tools, credentials, memory, data sources, peer agents, approval points and output channels. Note where autonomy is not needed.
    ✓ Every tool has an owner, a privilege scope and a reason to exist; every credential has a lifetime.
-2. **Walk the ten entries.** For each ASI entry, check the system against the common examples and the mitigations.
+3. **Walk the ten entries.** For each ASI entry, check the system against the common examples and the mitigations.
    -> [`references/top-10.md`](references/top-10.md)
    ✓ Each entry has a verdict: not applicable (with reason), mitigated (with evidence), or finding.
-3. **Run the cross-cutting checklist.** Check tool use, identity and privilege, human-in-the-loop, least agency, memory, inter-agent traffic, supply chain, execution and monitoring.
+4. **Run the cross-cutting checklist.** Check tool use, identity and privilege, human-in-the-loop, least agency, memory, inter-agent traffic, supply chain, execution and monitoring.
    -> [`references/review-checklist.md`](references/review-checklist.md)
    ✓ Every unchecked item is either a finding or an accepted risk with an owner.
-4. **Classify findings.** Assign each finding to the entry that matches its origin, not its consequence: propagation is ASI08 only when a defect spreads beyond its origin; privilege escalation is ASI03, not ASI02; code execution is ASI05 (ASI02 p. 12, ASI08 p. 30).
+5. **Classify findings.** Assign each finding to the entry that matches its origin, not its consequence: propagation is ASI08 only when a defect spreads beyond its origin; privilege escalation is ASI03, not ASI02; code execution is ASI05 (ASI02 p. 12, ASI08 p. 30).
    -> [`references/mappings.md`](references/mappings.md)
    ✓ Each finding names one ASI entry, the related Threats and Mitigations IDs and LLM Top 10 IDs.
-5. **Report.** For each finding, state the scenario, the affected components and the mitigations from the entry, ordered by impact.
+6. **Report.** For each finding, state the scenario, the affected components and the mitigations from the entry, ordered by impact.
    ✓ Every recommended mitigation traces to a numbered item in the Top 10.
+7. **Upgrade** (only when asked). Move cross-references to another LLM Top 10 edition or taxonomy version, or move a review to a newer edition once one exists.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ Every verdict and severity is unchanged by the relabelling.
 
 ## Verify before done
 
@@ -60,9 +67,10 @@ The OWASP Top 10 for Agentic Applications 2026 (the Agentic Top 10, entries ASI0
 
 ## Reference index
 
-- **`references/top-10.md`**: each entry ASI01 to ASI10 with its description, common examples and mitigations. Load for step 2.
-- **`references/review-checklist.md`**: the checklist grouped by concern (tool use, identity and privilege, human-in-the-loop, least agency and more). Load for step 3.
-- **`references/mappings.md`**: the mapping to the Threats and Mitigations taxonomy (T1 to T17), the LLM Top 10 (2025) and the boundaries between entries. Load for step 4.
+- **`references/versions.md`**: the single 2026 edition, why no earlier edition or preview is listed, how the LLM Top 10 editions relate, and how to move cross-references. Load for steps 1 and 7.
+- **`references/top-10.md`**: each entry ASI01 to ASI10 with its description, common examples and mitigations. Load for step 3.
+- **`references/review-checklist.md`**: the checklist grouped by concern (tool use, identity and privilege, human-in-the-loop, least agency and more). Load for step 4.
+- **`references/mappings.md`**: the mapping to the Threats and Mitigations taxonomy (T1 to T17), the LLM Top 10 (2025) and the boundaries between entries. Load for step 5.
 
 ## Related skills
 
@@ -75,10 +83,10 @@ The OWASP Top 10 for Agentic Applications 2026 (the Agentic Top 10, entries ASI0
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [OWASP Top 10 for Agentic Applications for 2026 (resource page)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/): Published, Version 2026 (9 December 2025), checked 2026-10-02.
-- [OWASP Top 10 for Agentic Applications 2026 (PDF)](https://genai.owasp.org/download/52117/?tmstv=1765059207): Published, Version 2026 (December 2025), checked 2026-10-02.
-- [OWASP Top 10 for Agentic Applications: release announcement](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/): Published, 9 December 2025, checked 2026-10-02.
+- [OWASP Top 10 for Agentic Applications for 2026 (resource page)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/): Published, Version 2026 (9 December 2025), checked 2026-10-05.
+- [OWASP Top 10 for Agentic Applications 2026 (PDF)](https://genai.owasp.org/download/52117/?tmstv=1765059207): Published, Version 2026 (December 2025), checked 2026-10-05.
+- [OWASP Top 10 for Agentic Applications: release announcement](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/): Published, 9 December 2025, checked 2026-10-05.
 - [Agentic AI: Threats and Mitigations (resource page)](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/): Published, first released 17 February 2025, checked 2026-10-02.
-- [Agentic AI: Threats and Mitigations (PDF)](https://genai.owasp.org/download/45674/?tmstv=1739819891): Published, Version 1.1 (December 2025), checked 2026-10-02.
+- [Agentic AI: Threats and Mitigations (PDF)](https://genai.owasp.org/download/45674/?tmstv=1739819891): Published, Version 1.1 (December 2025), checked 2026-10-05.
 - [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/): Published, 2025 edition, checked 2026-10-02.
 - [OWASP GenAI LLM Top 10 2026 (resource page)](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/): Published, 2026 edition (3 August 2026), checked 2026-10-02.

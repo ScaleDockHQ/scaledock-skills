@@ -117,10 +117,4 @@ The `description` strings of the original are omitted here; the title is copied 
 
 ## Changes from RFC 7807
 
-RFC 9457 obsoletes RFC 7807 (header and Abstract). Appendix D lists the changes:
-
-- the HTTP Problem Types registry (§ 4.2);
-- guidance on multiple problems (§ 3);
-- guidance on type URIs that cannot be dereferenced (§ 3.1.1).
-
-Appendix D lists no change to the media types or the five standard members, and § 6 only updates the existing media type registrations to point at RFC 9457. Migrating an RFC 7807 producer means applying the new guidance and updating references from RFC 7807 to RFC 9457.
+What RFC 9457 changed from RFC 7807, and the upgrade checklist, are in [`versions.md`](versions.md).

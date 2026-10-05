@@ -1,16 +1,65 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenID AuthZEN Authorization API 1.0 Final for Policy Enforcement Points that call a Policy Decision Point and for PDPs that implement it: the subject, resource, action and context information model, the Access Evaluation and Access Evaluations APIs, the Search APIs with pagination, PDP metadata at /.well-known/authzen-configuration, the HTTPS JSON binding, errors and security considerations. The working group's certification scenario and interop vectors are pinned to a repository commit. References are split into the information model, evaluation APIs, search APIs, metadata and transport, and conformance.",
+  "abstract": "Covers the OpenID AuthZEN Authorization API for Policy Enforcement Points that call a Policy Decision Point and for PDPs that implement it, with two version lines: 1.0 Final (current, published 11 January 2026) and the legacy 1.0 Implementer's Draft 1 (draft 01), with the upgrade from the draft to the Final. Covers the subject, resource, action and context information model, the Access Evaluation and Access Evaluations APIs, the Search APIs with pagination, PDP metadata at /.well-known/authzen-configuration, the HTTPS JSON binding, errors and security considerations. The working group's certification scenario and interop vectors are pinned to a repository commit. References are split into versions, the information model, evaluation APIs, search APIs, metadata and transport, and conformance.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "AuthZEN Authorization API 1.0",
+      "status": "current",
+      "revision": "Final (published 11 January 2026)"
+    },
+    {
+      "id": "1.0-id1",
+      "label": "AuthZEN Authorization API 1.0 Implementer's Draft 1",
+      "status": "legacy",
+      "revision": "draft 01 (6 September 2024); approved as Implementer's Draft November 2024"
+    }
+  ],
   "sources": [
     {
       "title": "Authorization API 1.0",
       "url": "https://openid.net/specs/authorization-api-1_0.html",
       "status": "Final",
       "revision": "1.0 (published 11 January 2026)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Authorization API 1.0 – draft 01",
+      "url": "https://openid.net/specs/authorization-api-1_0-01.html",
+      "status": "Implementer's Draft (superseded by the Final)",
+      "revision": "draft 01 (6 September 2024); approved as Implementer's Draft November 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Authorization API 1.0 – draft 02",
+      "url": "https://openid.net/specs/authorization-api-1_0-02.html",
+      "status": "Working group draft (superseded by the Final)",
+      "revision": "draft 02 (23 January 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Authorization API 1.0 – draft 03",
+      "url": "https://openid.net/specs/authorization-api-1_0-03.html",
+      "status": "Working group draft (superseded by the Final)",
+      "revision": "draft 03 (18 March 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AuthZEN Working Group – Specifications",
+      "url": "https://openid.net/wg/authzen/specifications/",
+      "status": "Publisher index",
+      "revision": "as published; lists the Final, the editors' draft and previous versions",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Authorization API current editors' draft",
+      "url": "https://openid.github.io/authzen/",
+      "status": "Editors' draft",
+      "revision": "titled Authorization API 1.0, dated 5 October 2026; text identical to the Final apart from date and status",
+      "checked": "2026-10-05"
     },
     {
       "title": "AuthZEN Authorization API 1.0 Certification Scenario",

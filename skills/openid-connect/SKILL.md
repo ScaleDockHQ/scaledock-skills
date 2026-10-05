@@ -1,10 +1,10 @@
 ---
 name: openid-connect
-description: "OpenID Connect (OIDC): validate ID tokens and run login, logout and discovery. Use when building or reviewing a relying party (RP), a resource server that consumes OIDC identity, or an OpenID Provider (OP): authorization code flow, state, nonce, prompt, max_age, acr_values, acr/amr/auth_time, ID token validation (iss, aud, azp, exp, signature, at_hash), public or pairwise sub, UserInfo, the claims parameter, /.well-known/openid-configuration, jwks_uri and key rotation, Dynamic Client Registration, RP-Initiated Logout, Session Management, Front-Channel and Back-Channel Logout (logout_token validation), prompt=create, unmet_authentication_requirements, response_mode=form_post, multiple response types, RP Metadata Choices, Identity Assurance (verified_claims), the Key Binding draft (bound_key, cnf) and the IPSIE SL1 profile draft. Pins OpenID Connect Core 1.0 errata set 2 and the companion OpenID Foundation specifications."
+description: "OpenID Connect (OIDC): validate ID tokens and run login, logout and discovery. Use when building or reviewing a relying party (RP), a resource server that consumes OIDC identity, or an OpenID Provider (OP): authorization code flow, state, nonce, prompt, max_age, acr_values, acr/amr/auth_time, ID token validation (iss, aud, azp, exp, signature, at_hash), public or pairwise sub, UserInfo, the claims parameter, /.well-known/openid-configuration, jwks_uri and key rotation, Dynamic Client Registration, RP-Initiated Logout, Session Management, Front-Channel and Back-Channel Logout (logout_token validation), prompt=create, unmet_authentication_requirements, response_mode=form_post, multiple response types, RP Metadata Choices, Identity Assurance (verified_claims), the Key Binding draft (bound_key, cnf), the IPSIE SL1 profile draft, and migrating OpenID 2.0 users (openid2_id). Targets OpenID Connect 1.0 (Core errata set 2) and the companion OpenID Foundation specifications."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -17,6 +17,7 @@ OpenID Connect is an identity layer on OAuth 2.0: the OP authenticates the End-U
 ## Inputs (fill in, or ask before starting)
 
 - **Role:** RP (client), resource server that consumes ID token or UserInfo claims, or OP. Several roles can apply at once.
+- **Target version:** OpenID Connect 1.0 (current, the default), at Core errata set 2. OpenID Authentication 2.0 is legacy: read it and migrate its users to 1.0, never build a new 2.0 integration. No preview is listed; Key Binding and IPSIE SL1 are drafts of extensions, not a next Connect line. See [`references/versions.md`](references/versions.md).
 - **Revision:** the pinned revisions in [Sources](#sources). Ask before using a newer errata set or draft.
 - **Flow:** authorization code, implicit or hybrid (Core § 3), chosen by client type (Core § 15.4), and the response mode (query, fragment or form_post).
 - **Extensions in scope:** logout mechanisms, Dynamic Client Registration, Identity Assurance, Key Binding, IPSIE SL1.
@@ -37,30 +38,36 @@ OpenID Connect is an identity layer on OAuth 2.0: the OP authenticates the End-U
 
 ## Workflow
 
-1. **Fix the role, flow and response mode.** With the code flow, the ID token comes from the token endpoint over TLS (Core § 3.1.3.3).
+1. **Pick the version.** Use OpenID Connect 1.0 at errata set 2. If the system speaks OpenID Authentication 2.0, plan a migration instead (step 10).
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target version and errata set are recorded, and nothing new is built on OpenID 2.0.
+2. **Fix the role, flow and response mode.** With the code flow, the ID token comes from the token endpoint over TLS (Core § 3.1.3.3).
    -> [`references/authentication-request.md`](references/authentication-request.md)
    ✓ The response type, response mode and the endpoint that returns each token are written down.
-2. **Discover the OP.** Fetch `/.well-known/openid-configuration` and validate it.
+3. **Discover the OP.** Fetch `/.well-known/openid-configuration` and validate it.
    -> [`references/discovery-registration.md`](references/discovery-registration.md)
    ✓ `issuer`, `jwks_uri` and the endpoints come from a validated discovery document, or from static configuration.
-3. **Register the client.** Use static registration or Dynamic Client Registration, with exact `redirect_uris`.
+4. **Register the client.** Use static registration or Dynamic Client Registration, with exact `redirect_uris`.
    -> [`references/discovery-registration.md`](references/discovery-registration.md)
    ✓ `redirect_uris`, `id_token_signed_response_alg`, `subject_type` and the token endpoint auth method are settled.
-4. **Build the authentication request.** Include `state`, a high-entropy `nonce`, and, when needed, `prompt`, `max_age`, `acr_values` or `claims`.
+5. **Build the authentication request.** Include `state`, a high-entropy `nonce`, and, when needed, `prompt`, `max_age`, `acr_values` or `claims`.
    -> [`references/authentication-request.md`](references/authentication-request.md)
    ✓ `state` and `nonce` are bound to the browser session, and the error codes the RP handles are listed.
-5. **Validate the response and the ID token.** Check `state`, exchange the code, then run (Core § 3.1.3.7) in order, plus `at_hash` and `c_hash` where they apply.
+6. **Validate the response and the ID token.** Check `state`, exchange the code, then run (Core § 3.1.3.7) in order, plus `at_hash` and `c_hash` where they apply.
    -> [`references/id-token-validation.md`](references/id-token-validation.md)
    ✓ Every check in the ID token validation list has code and a negative test.
-6. **Establish identity.** Key the account on `iss` plus `sub`. Fetch UserInfo only if it is needed, and check its `sub`.
+7. **Establish identity.** Key the account on `iss` plus `sub`. Fetch UserInfo only if it is needed, and check its `sub`.
    -> [`references/id-token-validation.md`](references/id-token-validation.md)
    ✓ No account lookup uses a mutable claim.
-7. **Implement logout.** Choose among RP-Initiated, Front-Channel, Back-Channel and Session Management, and implement each one fully.
+8. **Implement logout.** Choose among RP-Initiated, Front-Channel, Back-Channel and Session Management, and implement each one fully.
    -> [`references/logout-and-sessions.md`](references/logout-and-sessions.md)
    ✓ The logout token validator rejects a token with a `nonce`, without `events`, or without both `sub` and `sid`.
-8. **Apply extensions only when asked.** Identity Assurance, Key Binding and IPSIE SL1 each have their own rules and posture.
+9. **Apply extensions only when asked.** Identity Assurance, Key Binding and IPSIE SL1 each have their own rules and posture.
    -> [`references/extensions-and-drafts.md`](references/extensions-and-drafts.md)
    ✓ Each draft in use is pinned to the revision in [Sources](#sources), with its posture recorded.
+10. **Upgrade** (only when asked). Migrate OpenID 2.0 users with the `openid2` scope and the `openid2_id` claim, verify the Connect OP is authoritative for each old identifier, then link accounts to `iss` plus `sub`.
+    -> [`references/versions.md`](references/versions.md)
+    ✓ Every migrated user reaches the same account, and no `openid2_id` is accepted without the authority check (Migration § 6).
 
 ## Verify before done
 
@@ -73,11 +80,13 @@ OpenID Connect is an identity layer on OAuth 2.0: the OP authenticates the End-U
 - [ ] The logout token tests cover a missing `events`, a present `nonce`, a missing `sub` and `sid`, a bad signature, and expiry (Back-Channel Logout § 2.6).
 - [ ] Post-logout redirects use exact matching against registered URIs (RP-Initiated Logout § 3).
 - [ ] Every draft in use carries its pinned revision and posture.
+- [ ] Nothing new is built on OpenID Authentication 2.0, and any migration checks `openid2_id` authority before linking accounts.
 
 ## Reference index
 
 | File                                                                           | Covers                                                                                                            |
 | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| [`references/versions.md`](references/versions.md)                             | Version lines, errata sets, what changed from OpenID 2.0, the OpenID 2.0 migration, why no preview is listed      |
 | [`references/id-token-validation.md`](references/id-token-validation.md)       | ID token claims, the validation order, at_hash and c_hash, keys, subject types, UserInfo                          |
 | [`references/authentication-request.md`](references/authentication-request.md) | Request parameters, prompt, max_age, acr, error codes, response types and modes, prompt=create, third-party login |
 | [`references/discovery-registration.md`](references/discovery-registration.md) | Discovery metadata and validation, Dynamic Client Registration, sector identifiers, RP Metadata Choices           |
@@ -97,6 +106,7 @@ OpenID Connect is an identity layer on OAuth 2.0: the OP authenticates the End-U
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [OpenID Connect Core 1.0 incorporating errata set 2](https://openid.net/specs/openid-connect-core-1_0.html): Final, 1.0 errata set 2 (15 December 2023), checked 2026-10-02.
+- [OpenID Connect Core 1.0 incorporating errata set 1](https://openid.net/specs/openid-connect-core-1_0-errata1.html): Final, 1.0 errata set 1 (8 November 2014), checked 2026-10-05. Superseded by errata set 2; read only to compare.
 - [OpenID Connect Discovery 1.0 incorporating errata set 2](https://openid.net/specs/openid-connect-discovery-1_0.html): Final, 1.0 errata set 2 (15 December 2023), checked 2026-10-02.
 - [OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2](https://openid.net/specs/openid-connect-registration-1_0.html): Final, 1.0 errata set 2 (15 December 2023), checked 2026-10-02.
 - [OpenID Connect RP-Initiated Logout 1.0](https://openid.net/specs/openid-connect-rpinitiated-1_0.html): Final, 1.0 (12 September 2022), checked 2026-10-02.
@@ -111,3 +121,5 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [OpenID Connect for Identity Assurance 1.0 incorporating errata set 1](https://openid.net/specs/openid-connect-4-identity-assurance-1_0-errata1.html): Final, 1.0 errata set 1 (1 July 2026), checked 2026-10-02.
 - [OpenID Connect Key Binding 1.0](https://openid.net/specs/openid-connect-key-binding-1_0-ID1.html): Implementer's Draft, ID1 (document draft 03, 8 September 2026), checked 2026-10-02. Draft posture: track, pinned to ID1.
 - [IPSIE SL1 OpenID Connect Profile](https://openid.github.io/ipsie-openid-sl1/draft-openid-ipsie-sl1-profile.html): Draft, editor's draft draft-openid-ipsie-sl1-profile-latest (29 September 2026, after -01), checked 2026-10-02. Draft posture: track, pinned to the 29 September 2026 editor's draft.
+- [OpenID Authentication 2.0](https://openid.net/specs/openid-authentication-2_0.html): Final, 2.0 (5 December 2007), checked 2026-10-05. Legacy line.
+- [OpenID 2.0 to OpenID Connect Migration 1.0](https://openid.net/specs/openid-connect-migration-1_0.html): Final, 1.0 (16 April 2015), checked 2026-10-05.

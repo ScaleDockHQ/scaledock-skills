@@ -1,9 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OpenID Federation for Trust Anchors, Intermediates, Leaves, Trust Mark Issuers and resolvers, pinned to OpenID Federation 1.0 Final and its 1.1 split into Federation 1.1 and Federation for OpenID Connect 1.1, both Final. The Subordinate Events Endpoint and Extended Subordinate Listing Implementer's Drafts are included at track posture. References are split into entity statements, trust chains, metadata policy, trust marks, endpoints and client registration.",
+  "abstract": "Covers OpenID Federation for Trust Anchors, Intermediates, Leaves, Trust Mark Issuers and resolvers. The current line is OpenID Federation 1.1, split into Federation 1.1 and Federation for OpenID Connect 1.1, both Final; OpenID Federation 1.0 Final is supported, and the pre-Final drafts (ID4 and earlier) are legacy, with upgrade steps from the draft 49 Document History. The Subordinate Events Endpoint and Extended Subordinate Listing Implementer's Drafts are included at track posture. References are split into versions and upgrades, entity statements, trust chains, metadata policy, trust marks, endpoints and client registration.",
+  "versions": [
+    {
+      "id": "1.1",
+      "label": "OpenID Federation 1.1",
+      "status": "current",
+      "revision": "Final, Federation 1.1 and Federation for OpenID Connect 1.1 (5 May 2026)"
+    },
+    {
+      "id": "1.0",
+      "label": "OpenID Federation 1.0",
+      "status": "supported",
+      "revision": "Final (17 February 2026)"
+    },
+    {
+      "id": "1.0-draft",
+      "label": "OpenID Federation 1.0 drafts",
+      "status": "legacy",
+      "revision": "Implementer's Drafts ID1 to ID4 (ID4 is draft 36, 31 May 2024) and working-group drafts up to draft 49 (15 February 2026)"
+    }
+  ],
   "sources": [
     {
       "title": "OpenID Federation 1.0",
@@ -25,6 +45,27 @@
       "status": "Final",
       "revision": "1.1 (5 May 2026)",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID Federation 1.0 - draft 49",
+      "url": "https://openid.net/specs/openid-federation-1_0-49.html",
+      "status": "Draft",
+      "revision": "draft 49 (15 February 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Federation 1.0 - draft 36 (Implementer's Draft 4)",
+      "url": "https://openid.net/specs/openid-federation-1_0-ID4.html",
+      "status": "Implementer's Draft",
+      "revision": "ID4 (document draft 36, 31 May 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Connect Federation 1.0 - draft 17 (Implementer's Draft 3)",
+      "url": "https://openid.net/specs/openid-connect-federation-1_0-ID3.html",
+      "status": "Implementer's Draft",
+      "revision": "ID3 (document draft 17, 9 September 2021)",
+      "checked": "2026-10-05"
     },
     {
       "title": "OpenID Connect Relying Party Metadata Choices 1.0",

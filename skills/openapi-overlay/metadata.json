@@ -1,9 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenAPI Overlay Specification 1.2.0, with compatibility for 1.1.0: the Overlay, Info, Components, Action, Reusable Action and Reusable Action Reference Objects, the update, copy and remove semantics and recursive merge rules, RFC 9535 JSONPath targets, upgrading from 1.1, validation against the Overlay JSON Schemas (the 1.2 schema is still unpublished and pinned to a work-in-progress commit), and safe application in pipelines. The 1.3 milestone is tracked only. SKILL.md holds the invariants and workflow; references split out objects, recipes, versions and safety.",
+  "abstract": "Covers the OpenAPI Overlay Specification version lines: 1.2 (current, pinned at 1.2.0), 1.1 (supported, 1.1.0) and 1.0 (legacy, upgraded from, 1.0.0); no preview is listed because the 1.3 milestone has no specification text. It teaches the Overlay, Info, Components, Action, Reusable Action and Reusable Action Reference Objects, the update, copy and remove semantics and recursive merge rules, RFC 9535 JSONPath targets, the 1.0 to 1.1 and 1.1 to 1.2 upgrades, validation against the Overlay JSON Schemas (the 1.2 schema is still unpublished and pinned to a work-in-progress commit), and safe application in pipelines. SKILL.md holds the invariants and workflow; references split out objects, recipes, versions and safety.",
+  "versions": [
+    {
+      "id": "1.2",
+      "label": "Overlay 1.2",
+      "status": "current",
+      "revision": "1.2.0 (2026-09-22)"
+    },
+    {
+      "id": "1.1",
+      "label": "Overlay 1.1",
+      "status": "supported",
+      "revision": "1.1.0 (2026-01-14)"
+    },
+    {
+      "id": "1.0",
+      "label": "Overlay 1.0",
+      "status": "legacy",
+      "revision": "1.0.0 (2024-10-17)"
+    }
+  ],
   "sources": [
     {
       "title": "Overlay Specification v1.2.0",
@@ -24,14 +44,28 @@
       "url": "https://spec.openapis.org/overlay/v1.1.0.html",
       "status": "Released",
       "revision": "1.1.0 (2026-01-14)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Overlay 1.1.0 release",
+      "url": "https://github.com/OAI/Overlay-Specification/releases/tag/1.1.0",
+      "status": "Released",
+      "revision": "1.1.0 (published 2026-01-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Overlay Specification v1.0.0",
+      "url": "https://spec.openapis.org/overlay/v1.0.0.html",
+      "status": "Released",
+      "revision": "1.0.0 (2024-10-17)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Overlay versions and schema iterations",
       "url": "https://spec.openapis.org/overlay/",
       "status": "OAI index",
       "revision": "latest v1.2.0",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "Overlay 1.1 JSON Schema",
@@ -39,6 +73,13 @@
       "status": "Published schema",
       "revision": "iteration 2026-04-01",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "Overlay 1.0 JSON Schema",
+      "url": "https://spec.openapis.org/overlay/1.0/schema/2026-04-01",
+      "status": "Published schema",
+      "revision": "iteration 2026-04-01",
+      "checked": "2026-10-05"
     },
     {
       "title": "Overlay 1.2 JSON Schema, work in progress",
@@ -62,11 +103,18 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "Overlay: upgrading between versions 1.0 and 1.1",
+      "url": "https://learn.openapis.org/upgrading/overlay-v1.0-to-v1.1.html",
+      "status": "OAI guide (non-normative)",
+      "revision": "page as published",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "Overlay Specification milestones",
       "url": "https://github.com/OAI/Overlay-Specification/milestones",
-      "status": "Planning (Release 1.3 has three open issues and no specification text)",
+      "status": "Planning (Release 1.3 has three open issues and Release 2.0 three open issues, neither with specification text)",
       "revision": "as listed; draft posture: track",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9535: JSONPath: Query Expressions for JSON",

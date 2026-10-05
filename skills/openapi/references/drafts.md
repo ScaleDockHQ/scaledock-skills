@@ -1,6 +1,6 @@
 # OpenAPI 3.3 development line and Security Profiles
 
-Read this when a user asks about OpenAPI 3.3, about describing security profiles such as FAPI 2.0, or about what comes after 3.2. Nothing here is released. Both items have draft posture **track**: follow them, and do not build or name anything that depends on them.
+Read this when a user asks about OpenAPI 3.3, about describing security profiles such as FAPI 2.0, or about what comes after 3.2. This is the detail behind the `3.3-preview` line in [`versions.md`](versions.md). Nothing here is released. Both items have draft posture **track**: follow them, and do not build or name anything that depends on them.
 
 ## The `v3.3-dev` branch
 

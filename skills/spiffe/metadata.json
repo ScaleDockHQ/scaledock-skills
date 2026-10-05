@@ -1,86 +1,122 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the SPIFFE standards for issuers, workloads, validators and federation operators: SPIFFE ID syntax and trust domain names, SVID trust and assertion safety, X.509-SVID certificate rules and leaf validation, JWT-SVID header, claims, validation and transmission, trust domain bundles and bundle maps, the Workload Endpoint and Workload API profiles, federation bundle endpoints with the https_web and https_spiffe profiles, and the Incubating WIT-SVID. Maps the standards to SPIRE server, agent, attestation, registration entries and federation configuration. SKILL.md holds the invariants and workflow; references split out SPIFFE IDs, X.509-SVID, JWT-SVID, bundles, the Workload API, federation, SPIRE and WIT-SVID.",
+  "abstract": "Covers the SPIFFE standards, which are unversioned and pinned by commit and stability level: the Stable line at spiffe/spiffe main f97c46d (SPIFFE ID syntax and trust domain names, SVID trust, X.509-SVID and JWT-SVID rules, trust domain bundles and bundle maps, the Workload Endpoint and Workload API profiles, federation bundle endpoints with the https_web and https_spiffe profiles) and the Incubating preview (WIT-SVID, the Workload API WIT-SVID profile, the Broker API and Broker Endpoint). Maps the standards to SPIRE v1.15.3 server, agent, attestation, registration entries and federation configuration. SKILL.md holds the invariants and workflow; references hold the version hub and split out SPIFFE IDs, X.509-SVID, JWT-SVID, bundles, the Workload API, federation, SPIRE and WIT-SVID.",
+  "versions": [
+    {
+      "id": "incubating-preview",
+      "label": "SPIFFE Incubating standards",
+      "status": "preview",
+      "posture": "track",
+      "revision": "spiffe/spiffe main at f97c46d (2026-09-26): WIT-SVID, Workload API §7, Broker API, Broker Endpoint"
+    },
+    {
+      "id": "stable",
+      "label": "SPIFFE standards (Stable)",
+      "status": "current",
+      "revision": "spiffe/spiffe main at f97c46d (2026-09-26)"
+    }
+  ],
   "sources": [
     {
       "title": "SPIFFE overview",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The SPIFFE Identity and Verifiable Identity Document",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE-ID.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The X.509 SPIFFE Verifiable Identity Document",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/X509-SVID.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The JWT SPIFFE Verifiable Identity Document",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/JWT-SVID.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The SPIFFE Trust Domain and Bundle",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Trust_Domain_and_Bundle.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The SPIFFE Workload API",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Workload_API.md",
       "status": "Stable (§7 WIT-SVID Profile Incubating)",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The SPIFFE Workload Endpoint",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Workload_Endpoint.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "SPIFFE Federation",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Federation.md",
       "status": "Stable",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "The WIT SPIFFE Verifiable Identity Document",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/WIT-SVID.md",
       "status": "Incubating",
       "revision": "main at f97c46d (2026-09-26); Draft posture: track",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "SPIFFE Specification Stability",
       "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/STABILITY.md",
       "status": "Process document",
       "revision": "main at f97c46d (2026-09-26)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "The SPIFFE Broker API",
+      "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Broker_API.md",
+      "status": "Incubating",
+      "revision": "main at f97c46d (2026-09-26); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "The SPIFFE Broker Endpoint",
+      "url": "https://raw.githubusercontent.com/spiffe/spiffe/main/standards/SPIFFE_Broker_Endpoint.md",
+      "status": "Incubating",
+      "revision": "main at f97c46d (2026-09-26); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "spiffe/spiffe commit history",
+      "url": "https://github.com/spiffe/spiffe/commits/main/standards",
+      "status": "Repository history",
+      "revision": "main at f97c46d (2026-09-26), no tags or releases",
+      "checked": "2026-10-05"
     },
     {
       "title": "SPIRE v1.15.3",
       "url": "https://github.com/spiffe/spire/releases/tag/v1.15.3",
       "status": "Released (latest)",
       "revision": "v1.15.3 (2026-08-21)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "SPIRE Concepts",
