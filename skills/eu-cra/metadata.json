@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the EU Cyber Resilience Act, Regulation (EU) 2024/2847, with one current line, the Official Journal text of 20 November 2024 read with its corrigenda and the delegated and implementing acts adopted under it, and two tracked previews: the Digital Omnibus proposal COM(2025) 837 and the public procurement proposal COM(2026) 590. It turns the engineering-relevant obligations into requirements: scope, exclusions, free and open-source software and stewards, operator roles, important and critical product classes (Annexes III and IV, Implementing Regulation (EU) 2025/2392), the Annex I essential requirements and vulnerability handling, the support period and security updates, Article 14 reporting through the single reporting platform, Annex VII technical documentation, conformity modules, the declaration of conformity and CE marking, and the Article 71 dates. It is not legal advice and tells the user to involve counsel.",
+  "versions": [
+    {
+      "id": "digital-omnibus-preview",
+      "label": "Digital Omnibus proposal COM(2025) 837",
+      "status": "preview",
+      "posture": "track",
+      "revision": "COM(2025) 837 final of 19.11.2025, procedure 2025/0360(COD)"
+    },
+    {
+      "id": "procurement-preview",
+      "label": "public procurement proposal COM(2026) 590",
+      "status": "preview",
+      "posture": "track",
+      "revision": "COM(2026) 590 final of 9.9.2026, procedure 2026/0265(COD)"
+    },
+    {
+      "id": "oj-20241120",
+      "label": "Official Journal text of 20 November 2024",
+      "status": "current",
+      "revision": "OJ L 2024/2847 of 20.11.2024 (CELEX 32024R2847), with corrigenda R(01) to R(07)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), Official Journal text",
+      "url": "https://publications.europa.eu/resource/celex/32024R2847",
+      "status": "Regulation in force",
+      "revision": "OJ L 2024/2847 of 20.11.2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Corrigendum 32024R2847R(01)",
+      "url": "https://publications.europa.eu/resource/celex/32024R2847R%2801%29",
+      "status": "corrigendum",
+      "revision": "OJ L 2024/90780 of 5.12.2024 (title)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Corrigendum 32024R2847R(02)",
+      "url": "https://publications.europa.eu/resource/celex/32024R2847R%2802%29",
+      "status": "corrigendum",
+      "revision": "OJ L 2025/90555 of 2.7.2025 (Art. 64(10))",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Corrigendum 32024R2847R(04)",
+      "url": "https://publications.europa.eu/resource/celex/32024R2847R%2804%29",
+      "status": "corrigendum",
+      "revision": "OJ L 2025/90828 of 17.10.2025 (Art. 67 point number)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Publications Office SPARQL endpoint (Cellar metadata for 32024R2847)",
+      "url": "https://publications.europa.eu/webapi/rdf/sparql",
+      "status": "metadata service",
+      "revision": "lists consolidated version 02024R2847-20241120, amending act 32025R0327, acts based on the Regulation 32025R1535, 32025R2392 and 32026R0881, corrigenda R(01) to R(07), and proposal 52026PC0590",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Regulation (EU) 2025/327 (European Health Data Space)",
+      "url": "https://publications.europa.eu/resource/celex/32025R0327",
+      "status": "Regulation in force",
+      "revision": "OJ L 2025/327 of 5.3.2025; Art. 104 amends the CRA from 26 March 2027",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Commission Delegated Regulation (EU) 2025/1535",
+      "url": "https://publications.europa.eu/resource/celex/32025R1535",
+      "status": "delegated regulation in force",
+      "revision": "OJ L 2025/1535 of 29.10.2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Commission Implementing Regulation (EU) 2025/2392",
+      "url": "https://publications.europa.eu/resource/celex/32025R2392",
+      "status": "implementing regulation in force",
+      "revision": "OJ L 2025/2392 of 1.12.2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Commission Delegated Regulation (EU) 2026/881",
+      "url": "https://publications.europa.eu/resource/celex/32026R0881",
+      "status": "delegated regulation in force",
+      "revision": "OJ L 2026/881 of 20.4.2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Commission guidance on the application of the CRA, C(2026) 5252 Annex",
+      "url": "https://ec.europa.eu/newsroom/dae/redirection/document/131456",
+      "status": "Commission guidance (non-binding)",
+      "revision": "27.7.2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "FAQs on the Cyber Resilience Act implementation",
+      "url": "https://ec.europa.eu/newsroom/dae/redirection/document/122331",
+      "status": "Commission services FAQ (non-authoritative)",
+      "revision": "version 1.4 of 04/09/2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Cyber Resilience Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act",
+      "status": "European Commission policy page",
+      "revision": "last update 7 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Cyber Resilience Act: reporting obligations",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+      "status": "European Commission policy page",
+      "revision": "last update 11 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Cyber Resilience Act: standardisation",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cra-standardisation",
+      "status": "European Commission policy page",
+      "revision": "last update 31 July 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Single Reporting Platform (SRP)",
+      "url": "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp",
+      "status": "ENISA topic page",
+      "revision": "platform operational from 11 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Digital Omnibus proposal, COM(2025) 837",
+      "url": "https://publications.europa.eu/resource/celex/52025PC0837",
+      "status": "Commission proposal",
+      "revision": "19.11.2025 (2025/0360(COD))",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Proposal on public contracts and concessions, COM(2026) 590",
+      "url": "https://publications.europa.eu/resource/celex/52026PC0590",
+      "status": "Commission proposal",
+      "revision": "9.9.2026 (2026/0265(COD))",
+      "checked": "2026-10-05"
+    }
+  ]
+}
