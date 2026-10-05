@@ -4,7 +4,7 @@ description: "RateLimit headers: advertise HTTP API quotas, handle 429 with the 
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -79,6 +79,7 @@ Draft posture: build (`draft-ietf-httpapi-ratelimit-headers-11`, 23 May 2026). I
 ## Related skills
 
 - `problem-details` for the RFC 9457 body of a 429 or 503 response: `npx skills add ScaleDockHQ/scaledock-skills --skill problem-details`.
+- `http-semantics` for RFC 9110 status codes, `Retry-After` and caching around rate-limited responses: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
 
 ## Sources
 

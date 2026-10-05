@@ -4,7 +4,7 @@ description: "AG-UI: stream agent runs to user-facing apps with the Agent-User I
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -81,6 +81,8 @@ AG-UI (Agent-User Interaction Protocol) connects agents to user-facing applicati
 
 - `owasp-agentic` for reviewing human-agent trust, tool misuse and approvals around the UI: `npx skills add ScaleDockHQ/scaledock-skills --skill owasp-agentic`.
 - `a2a` for agent-to-agent traffic behind an AG-UI front end: `npx skills add ScaleDockHQ/scaledock-skills --skill a2a`.
+- `a2ui` for declarative agent-generated UI rendered from a trusted component catalog: `npx skills add ScaleDockHQ/scaledock-skills --skill a2ui`.
+- `mcp-apps` for interactive `ui://` views that MCP servers serve to hosts: `npx skills add ScaleDockHQ/scaledock-skills --skill mcp-apps`.
 
 ## Sources
 

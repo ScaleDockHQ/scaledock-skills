@@ -4,7 +4,7 @@ description: "OpenTelemetry GenAI semantic conventions: instrument LLM inference
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -76,6 +76,8 @@ The OpenTelemetry semantic conventions for generative AI define the span names, 
 
 - `ocsf` to turn AI activity into security audit events: `npx skills add ScaleDockHQ/scaledock-skills --skill ocsf`.
 - `cloudevents` to carry trace context on events with `traceparent`: `npx skills add ScaleDockHQ/scaledock-skills --skill cloudevents`.
+- `opentelemetry` for the API, SDK, OTLP and general semantic conventions underneath the GenAI signals: `npx skills add ScaleDockHQ/scaledock-skills --skill opentelemetry`.
+- `trace-context` for parsing and propagating `traceparent`, `tracestate` and `baggage`: `npx skills add ScaleDockHQ/scaledock-skills --skill trace-context`.
 
 ## Sources
 

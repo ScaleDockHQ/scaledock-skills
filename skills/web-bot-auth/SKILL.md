@@ -4,7 +4,7 @@ description: "Web Bot Auth: sign and verify bot and AI agent HTTP requests with 
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -82,6 +82,9 @@ Draft posture: **build**, pinned to `draft-ietf-webbotauth-httpsig-protocol-00` 
 
 - `jwt` for JOSE key formats (JWK, JWKS, thumbprints) and token validation that often sits next to request signatures: `npx skills add ScaleDockHQ/scaledock-skills --skill jwt`.
 - `owasp-agentic` for reviewing agent identity and privilege as a whole: `npx skills add ScaleDockHQ/scaledock-skills --skill owasp-agentic`.
+- `http-message-signatures` for the full RFC 9421 signing and verification rules this profile builds on: `npx skills add ScaleDockHQ/scaledock-skills --skill http-message-signatures`.
+- `aipref` for publishing and reading AI usage preferences with Content-Usage: `npx skills add ScaleDockHQ/scaledock-skills --skill aipref`.
+- `robots-txt` for robots.txt rules that crawlers and AI agents follow: `npx skills add ScaleDockHQ/scaledock-skills --skill robots-txt`.
 
 ## Sources
 

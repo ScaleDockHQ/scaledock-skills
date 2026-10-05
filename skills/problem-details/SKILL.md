@@ -4,7 +4,7 @@ description: "RFC 9457 Problem Details: return standard HTTP API errors as appli
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -85,6 +85,7 @@ RFC 9457, published by the IETF, defines a JSON object (and an equivalent XML fo
 
 - `ratelimit-headers` for 429 responses with `Retry-After`, `RateLimit` and `RateLimit-Policy`: `npx skills add ScaleDockHQ/scaledock-skills --skill ratelimit-headers`.
 - `standard-schema` for turning validation issues from any Standard Schema validator into an `errors` extension: `npx skills add ScaleDockHQ/scaledock-skills --skill standard-schema`.
+- `http-semantics` for choosing the status code and headers that a problem response carries: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
 
 ## Sources
 
