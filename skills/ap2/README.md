@@ -16,7 +16,7 @@ Then ask your agent to "add AP2 Checkout Mandate verification to our checkout" o
 - The Checkout and Payment Mandate schemas, every constraint type, and a TypeScript sketch of merchant-side checks.
 - The five roles, Human Present and Human Not Present flows, verification per role, dispute evidence, and the threats AP2 mitigates.
 - AP2 with UCP, A2A and MCP, and the superseded v0.1 Intent, Cart and Payment Mandates with the v0.1 A2A extension.
-- A comparison with the Visa Trusted Agent Protocol and the Agentic Commerce Protocol (ACP).
+- A comparison with the Visa Trusted Agent Protocol, the Agentic Commerce Protocol (ACP) and x402 v2.
 
 Draft posture: build, pinned to AP2 v0.2 (tag `v0.2.0`). AP2 is pre-1.0 and its standardization continues in the FIDO Alliance.
 
@@ -41,6 +41,7 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [UCP and AP2](https://ucp.dev/documentation/ucp-and-ap2/): documentation.
 - [Visa Trusted Agent Protocol specifications](https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications): in development and deployment, unversioned.
 - [Agentic Commerce Protocol](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/README.md): Beta, latest stable 2026-04-17.
+- [x402 Protocol Specification v2](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/x402-specification-v2.md) and its HTTP, A2A and MCP transports: Protocol Version 2, commit cb0ec5b.
 
 ## License
 

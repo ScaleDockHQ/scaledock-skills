@@ -1,6 +1,6 @@
-# Adjacent protocols: Visa Trusted Agent Protocol and ACP
+# Adjacent protocols: Visa Trusted Agent Protocol, ACP and x402
 
-Two other agentic commerce protocols are often compared with AP2. This file covers only what their published pages and repositories say. AP2 does not reference either of them normatively.
+Three other agentic commerce protocols are often compared with AP2. This file covers only what their published pages and repositories say. AP2 does not reference any of them normatively.
 
 ## Visa Trusted Agent Protocol (TAP)
 
@@ -77,3 +77,35 @@ Requirements:
 - ACP defines the checkout API and the payment-token handoff between an agent platform and a merchant. User authorisation is expressed through the platform's session and the token's allowance.
 - AP2 defines no checkout API. It adds portable, user-signed mandates that downstream verifiers check independently, including in autonomous mode.
 - The fetched ACP documents do not mention AP2, and the AP2 v0.2 pages do not mention ACP.
+
+## x402 v2
+
+**What it is.** An open payment standard that lets clients pay for external resources over HTTP, MCP, A2A or another request-response transport (x402 v2 § 1, § 12.3). It is maintained in the x402 Foundation repository; this file follows x402 v2 (Protocol Version 2, spec v2.0, 2025-12-09) at commit cb0ec5b. Its roles are a resource server, a client (any application or agent) and a facilitator that verifies and settles payments (x402 v2 § 3).
+
+**Flow** (x402 v2 § 2, § 6.1):
+
+1. The client requests a resource.
+2. Without a valid payment, the server answers with payment requirements.
+3. The client retries with a signed payment authorization.
+4. The server has the facilitator verify the payment, runs the resource, then settles. This is the default `authorization` flow. The `upfront` and `escrow` flows settle before the resource runs, and at least one verify or settle always runs first.
+
+**Wire** (x402 HTTP transport v2; x402 v2 § 5.1.2, § 11.1):
+
+- HTTP 402 with a base64 `PAYMENT-REQUIRED` header carrying `PaymentRequired`: `x402Version` 2, `resource` and `accepts[]`.
+- Each `accepts[]` entry has `scheme`, a CAIP-2 `network` (such as `eip155:8453`), `amount` as a string of atomic units, `asset` (a token contract address, or an ISO 4217 code for fiat), `payTo` and `maxTimeoutSeconds`.
+- The client pays in a base64 `PAYMENT-SIGNATURE` header (`PaymentPayload`), and the server answers with a base64 `PAYMENT-RESPONSE` header (`SettlementResponse`).
+- Over A2A, payment required is a task in state `input-required` with `x402.payment.status` `payment-required` and `PaymentRequired` in the `x402.payment.required` metadata field; the payment comes back in `x402.payment.payload` (x402 A2A transport v2).
+
+**Trust model.** No payment scheme may let the facilitator or the resource server move funds other than as the client intended (x402 README, Principles). Replay is prevented with per-authorization nonces, validity windows and payer signatures (x402 v2 § 10.1). Client-side budget management is out of scope of the core specification (x402 v2, Document Scope).
+
+**What AP2 says about it.**
+
+- The FAQ says AP2 is payment-agnostic, from credit cards to stablecoins, points to `google-agentic-commerce/a2a-x402` as an implementation of A2A with x402, and says it will be aligned with AP2 over time (FAQ, "Does this work with x402 standard for crypto payments?").
+- The v0.2.0 samples include Human Present and Human Not Present scenarios that use an x402-compatible payment method over A2A. The Human Present README says the AP2-compatible x402 extension is "coming soon" and still describes v0.1 Intent and Cart Mandates (AP2 x402 sample READMEs, tag v0.2.0). Treat them as non-normative demos, not as a v0.2 binding.
+
+**Compared with AP2.**
+
+- x402 defines how a client pays for a resource and how the payment is verified and settled. It does not say what a user authorised an agent to spend.
+- AP2 defines user-signed mandates that prove what the user authorised, including the budget and amount-range constraints of open mandates. It defines no payment wire and no settlement.
+- In the AP2 samples x402 is the payment method, and the user-signed Payment Mandate still authorises the purchase. AP2 releases a payment credential only against a verified closed Payment Mandate, whatever the payment method (Security and Privacy, Payment Credential Theft).
+- The fetched x402 v2 specification and its HTTP, MCP and A2A transports do not mention AP2.

@@ -1,10 +1,10 @@
 ---
 name: ap2
-description: "AP2 Agent Payments Protocol: authorize AI agent payments with signed Checkout and Payment Mandates (SD-JWT verifiable digital credentials), following AP2 v0.2 (current, draft posture build; no preview). Use when building or reviewing a shopping agent, merchant, credential provider, payment processor or trusted surface in agent-initiated payments: open and closed mandates, mandate.checkout.1 and mandate.payment.1, checkout_jwt and checkout_hash, constraints such as checkout.line_items, payment.amount_range, payment.budget and payment.agent_recurrence, Human Present and Human Not Present flows, key binding with cnf and sd_hash, OpenID4VP delegation, mandate receipts, double-spend and dispute evidence, and how AP2 relates to A2A, MCP and UCP. Also upgrades v0.1 Intent and Cart Mandates and compares the Visa Trusted Agent Protocol and the Agentic Commerce Protocol (ACP). Triggers: ap2, agent payments protocol, agentic payments, payment mandate, intent mandate, cart mandate, checkout mandate, verifiable intent."
+description: "AP2 Agent Payments Protocol: authorize AI agent payments with signed Checkout and Payment Mandates (SD-JWT verifiable digital credentials), following AP2 v0.2 (current, draft posture build; no preview). Use when building or reviewing a shopping agent, merchant, credential provider, payment processor or trusted surface in agent-initiated payments: open and closed mandates, mandate.checkout.1 and mandate.payment.1, checkout_jwt and checkout_hash, constraints such as checkout.line_items, payment.amount_range, payment.budget and payment.agent_recurrence, Human Present and Human Not Present flows, key binding with cnf and sd_hash, OpenID4VP delegation, mandate receipts, double-spend and dispute evidence, and how AP2 relates to A2A, MCP and UCP. Also upgrades v0.1 Intent and Cart Mandates and compares Visa Trusted Agent Protocol, Agentic Commerce Protocol (ACP) and x402 v2. Triggers: ap2, agent payments protocol, agentic payments, payment mandate, intent mandate, cart mandate, checkout mandate, verifiable intent."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -82,13 +82,17 @@ Draft posture: **build**, pinned to AP2 v0.2 (repository tag `v0.2.0`, 28 April 
 - **`references/mandates-and-credentials.md`**: the Agent Authorization model, open and closed mandates, SD-JWT structure, OpenID4VP delegation, the Checkout and Payment Mandate schemas, every constraint type, receipts, errors and a TypeScript verification sketch. Load for steps 2 to 5.
 - **`references/roles-and-flows.md`**: the five roles, agentic versus non-agentic, Human Present and Human Not Present flows, verification per role, dispute checks, threats and mitigations. Load for steps 2, 5 and 6.
 - **`references/a2a-mcp-ucp-and-v0-1.md`**: how AP2 sits with UCP, A2A and MCP, the v0.1 Intent, Cart and Payment Mandates and the v0.1 A2A extension. Load for steps 7 and 8, or when a peer still speaks v0.1.
-- **`references/adjacent-protocols.md`**: the Visa Trusted Agent Protocol and the Agentic Commerce Protocol (ACP), compared with AP2. Load for step 7.
+- **`references/adjacent-protocols.md`**: the Visa Trusted Agent Protocol, the Agentic Commerce Protocol (ACP) and x402 v2, compared with AP2. Load for step 7.
 
 ## Related skills
 
 - `a2a` for the Agent2Agent protocol that AP2 v0.1 extended and v0.2 samples still use: `npx skills add ScaleDockHQ/scaledock-skills --skill a2a`.
 - `web-bot-auth` for RFC 9421 agent request signatures, which the Visa Trusted Agent Protocol builds on: `npx skills add ScaleDockHQ/scaledock-skills --skill web-bot-auth`.
 - `owasp-agentic` for reviewing the agent that holds payment authority: `npx skills add ScaleDockHQ/scaledock-skills --skill owasp-agentic`.
+- `x402` for the HTTP 402 payment protocol (x402 v2) that AP2's samples use as a payment method: `npx skills add ScaleDockHQ/scaledock-skills --skill x402`.
+- `ucp` for the Universal Commerce Protocol and its AP2 mandates extension, which carries AP2 through checkout: `npx skills add ScaleDockHQ/scaledock-skills --skill ucp`.
+- `agentic-commerce-protocol` for ACP agent checkouts and delegated payment tokens: `npx skills add ScaleDockHQ/scaledock-skills --skill agentic-commerce-protocol`.
+- `sd-jwt` for the SD-JWT format, disclosures and key binding JWTs that AP2 mandates use: `npx skills add ScaleDockHQ/scaledock-skills --skill sd-jwt`.
 
 ## Sources
 
@@ -100,11 +104,11 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Payment Mandate](https://ap2-protocol.org/ap2/payment_mandate/): Released, v0.2, checked 2026-10-02.
 - [Agent Authorization Framework](https://ap2-protocol.org/ap2/agent_authorization/): Released, v0.2, checked 2026-10-02.
 - [Flow Examples](https://ap2-protocol.org/ap2/flows/): Released, v0.2 (non-normative), checked 2026-10-02.
-- [Security and Privacy Considerations](https://ap2-protocol.org/ap2/security_and_privacy_considerations/): Released, v0.2, checked 2026-10-02.
+- [Security and Privacy Considerations](https://ap2-protocol.org/ap2/security_and_privacy_considerations/): Released, v0.2, checked 2026-10-05.
 - [Implementation Considerations](https://ap2-protocol.org/ap2/implementation_considerations/): Released, v0.2, checked 2026-10-02.
 - [Executive Summary](https://ap2-protocol.org/overview/): Released, v0.2, checked 2026-10-02.
 - [Glossary](https://ap2-protocol.org/glossary/): Released, v0.2, checked 2026-10-02.
-- [FAQ](https://ap2-protocol.org/faq/): Released, v0.2, checked 2026-10-02.
+- [FAQ](https://ap2-protocol.org/faq/): Released, v0.2, checked 2026-10-05.
 - [AP2 v0.2.0 release](https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0): Released, v0.2.0 (2026-04-28, commit b4587ac), checked 2026-10-02.
 - [AP2 changelog](https://github.com/google-agentic-commerce/AP2/blob/main/CHANGELOG.md): Released, 0.1.0 (2025-09-16) and 0.2.0 (2026-04-28), checked 2026-10-05.
 - [FIDO Alliance to Develop Standards for Trusted AI Agent Interactions](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/): Announcement (no specification text published), 2026-04-28, checked 2026-10-05. Draft posture: track.
@@ -121,3 +125,10 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [ACP RFC: Agentic Checkout](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.agentic_checkout.md): Draft, Version 2026-01-16 (commit 7fdd78d), checked 2026-10-02.
 - [ACP RFC: Delegate Payment](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/rfcs/rfc.delegate_payment.md): Draft, Version 2025-09-29 (commit 7fdd78d), checked 2026-10-02.
 - [ACP MCP transport binding](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/docs/mcp-binding.md): Repository document, commit 7fdd78d, checked 2026-10-02.
+- [AP2 sample: Human Present purchases with x402](https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.2.0/code/samples/python/scenarios/a2a/human-present/x402/README.md): Sample code (non-normative), tag v0.2.0, checked 2026-10-05.
+- [AP2 sample: Human Not Present purchases with x402](https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.2.0/code/samples/python/scenarios/a2a/human-not-present/x402/README.md): Sample code (non-normative), tag v0.2.0, checked 2026-10-05.
+- [x402 Protocol Specification v2](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/x402-specification-v2.md): Protocol Version 2, spec v2.0 (2025-12-09), commit cb0ec5b, checked 2026-10-05.
+- [x402 Transport: HTTP (v2)](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/http.md): Protocol Version 2, commit cb0ec5b, checked 2026-10-05.
+- [x402 Transport: A2A (v2)](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/a2a.md): Protocol Version 2, commit cb0ec5b, checked 2026-10-05.
+- [x402 Transport: MCP (v2)](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/mcp.md): Protocol Version 2, commit cb0ec5b, checked 2026-10-05.
+- [x402 repository README](https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/README.md): Repository documentation, commit cb0ec5b, checked 2026-10-05.
