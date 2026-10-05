@@ -3,7 +3,7 @@
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the W3C Web Content Accessibility Guidelines at WCAG 2.2 (W3C Recommendation, 12 December 2024 edition): conformance levels A, AA and AAA, the five conformance requirements, accessibility support, conformance claims and partial conformance statements, the success criteria under the four principles (perceivable, operable, understandable, robust), the nine criteria added in 2.2 and the removal of 4.1.1 Parsing, and testing with the informative Understanding, Techniques and Test Rules documents. Version lines: WCAG 2.2 is current, WCAG 2.1 (6 May 2025 edition) is supported, WCAG 2.0 (11 December 2008) is legacy, and the WCAG 3.0 Working Draft (10 September 2026) is tracked as a preview, with upgrade steps from 2.0 and 2.1. SKILL.md holds the invariants and workflow; references split out the version lines, conformance, perceivable and operable criteria, understandable and robust criteria, and testing.",
+  "abstract": "Covers the W3C Web Content Accessibility Guidelines at WCAG 2.2 (W3C Recommendation, 12 December 2024 edition): conformance levels A, AA and AAA, the five conformance requirements, accessibility support, conformance claims and partial conformance statements, the success criteria under the four principles (perceivable, operable, understandable, robust), the nine criteria added in 2.2 and the removal of 4.1.1 Parsing, and testing with the informative Understanding, Techniques and Test Rules documents. Version lines: WCAG 2.2 is current, WCAG 2.1 (6 May 2025 edition) is supported, WCAG 2.0 (11 December 2008) is supported, and the WCAG 3.0 Working Draft (10 September 2026) is a preview with posture build: on opt-in the skill builds and tests to its core and supplemental requirements alongside WCAG 2.2 AA, reported as work in progress against the dated draft and never as a conformance claim. Upgrade steps run from 2.0 and 2.1. SKILL.md holds the invariants and workflow; references split out the version lines, conformance, perceivable and operable criteria, understandable and robust criteria, testing, and the WCAG 3.0 draft's guidelines, requirements, conformance and derived WCAG 2.2 mapping.",
   "versions": [
     {
       "id": "3.0-preview",
@@ -64,7 +64,35 @@
       "title": "W3C Accessibility Guidelines (WCAG) 3.0",
       "url": "https://www.w3.org/TR/wcag-3.0/",
       "status": "W3C Working Draft",
-      "revision": "10 September 2026 (WD-wcag-3.0-20260910); Draft posture: track",
+      "revision": "10 September 2026 (WD-wcag-3.0-20260910); latest Working Draft as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "W3C Accessibility Guidelines (WCAG) 3.0, Editor's Draft",
+      "url": "https://w3c.github.io/wcag3/guidelines/",
+      "status": "W3C Editor's Draft",
+      "revision": "2 October 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Explainer for W3C Accessibility Guidelines (WCAG) 3.0",
+      "url": "https://www.w3.org/TR/wcag-3.0-explainer/",
+      "status": "W3C Group Note Draft",
+      "revision": "10 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WCAG 3 Introduction",
+      "url": "https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/",
+      "status": "WAI resource",
+      "revision": "updated 25 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WCAG 3 Support Material",
+      "url": "https://www.w3.org/WAI/WCAG3/informative/",
+      "status": "Informative",
+      "revision": "in-progress draft; Images detectable page updated 31 July 2026",
       "checked": "2026-10-05"
     },
     {
