@@ -1,0 +1,478 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "OpenTelemetry for instrumenting services: the OpenTelemetry Specification 1.61.0 (API and SDK for traces, metrics and logs, resources, propagation, environment variables and declarative configuration), Semantic Conventions 1.44.0 (resource, HTTP, database, messaging, RPC, errors and exceptions, and the OTEL_SEMCONV_STABILITY_OPT_IN migration from the pre-stable HTTP conventions of v1.20.0 and earlier), and OTLP 1.11.1 (gRPC and HTTP transports, JSON encoding, partial success, retry and size limits). It pins specification v1.61.0, semantic-conventions v1.44.0 and opentelemetry-proto v1.11.1, and tracks OTLP profiles as a Development preview. References are split into versions, signals and SDK, configuration, semantic conventions and OTLP.",
+  "versions": [
+    {
+      "id": "1.61",
+      "label": "OpenTelemetry Specification 1.61.0",
+      "status": "current",
+      "revision": "v1.61.0 (2026-09-14)",
+      "reference": "references/signals-and-sdk.md"
+    },
+    {
+      "id": "semconv-1.44",
+      "label": "Semantic Conventions 1.44.0",
+      "status": "current",
+      "revision": "v1.44.0 (2026-08-04), schema URL https://opentelemetry.io/schemas/1.44.0",
+      "family": "semconv",
+      "reference": "references/semantic-conventions.md"
+    },
+    {
+      "id": "semconv-http-1.20",
+      "label": "pre-stable HTTP conventions (v1.20.0 and earlier)",
+      "status": "legacy",
+      "revision": "opentelemetry-specification v1.20.0 (2023-04-07), Experimental",
+      "family": "semconv",
+      "reference": "references/versions.md"
+    },
+    {
+      "id": "otlp-1.11",
+      "label": "OTLP 1.11.1",
+      "status": "current",
+      "revision": "opentelemetry-proto v1.11.1 (2026-09-29)",
+      "family": "otlp",
+      "reference": "references/otlp.md"
+    },
+    {
+      "id": "otlp-profiles-preview",
+      "label": "OTLP profiles (Development)",
+      "status": "preview",
+      "posture": "track",
+      "revision": "v1development profiles packages in opentelemetry-proto v1.11.1",
+      "family": "otlp",
+      "reference": "references/versions.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenTelemetry Specification 1.61.0",
+      "url": "https://opentelemetry.io/docs/specs/otel/",
+      "status": "Stable except where otherwise specified",
+      "revision": "1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-specification v1.61.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/releases/tag/v1.61.0",
+      "status": "Released",
+      "revision": "v1.61.0 (2026-09-14)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-specification v1.60.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/releases/tag/v1.60.0",
+      "status": "Released",
+      "revision": "v1.60.0 (2026-08-07)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-specification v1.59.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/releases/tag/v1.59.0",
+      "status": "Released",
+      "revision": "v1.59.0 (2026-07-10)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-specification v1.58.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/releases/tag/v1.58.0",
+      "status": "Released",
+      "revision": "v1.58.0 (2026-06-22)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Specification Status Summary",
+      "url": "https://opentelemetry.io/docs/specs/status/",
+      "status": "status page",
+      "revision": "as served on 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace API",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/trace/api.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trace SDK",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/trace/sdk.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Exceptions (trace)",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/trace/exceptions.md",
+      "status": "Stable",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Metrics API",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/metrics/api.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Metrics SDK",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/metrics/sdk.md",
+      "status": "Mixed",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Metrics Exporter - OTLP",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/metrics/sdk_exporters/otlp.md",
+      "status": "Stable",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Logs API",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/logs/api.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Logs SDK",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/logs/sdk.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Resource SDK",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/resource/sdk.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Common: attributes and limits",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/common/README.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Propagators API",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/context/api-propagators.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Environment Variables as Context Propagation Carriers",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/context/env-carriers.md",
+      "status": "Release Candidate",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Configuration",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/configuration/README.md",
+      "status": "configuration interfaces",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenTelemetry Environment Variable Specification",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/configuration/sdk-environment-variables.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Configuration Data Model",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/configuration/data-model.md",
+      "status": "Stable",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Configuration SDK",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/configuration/sdk.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenTelemetry Protocol Exporter",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/protocol/exporter.md",
+      "status": "Stable",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Versioning and stability",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/versioning-and-stability.md",
+      "status": "normative policy",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Telemetry stability",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/telemetry-stability.md",
+      "status": "Development",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Maturity levels",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.61.0/specification/maturity-levels.md",
+      "status": "definitions",
+      "revision": "v1.61.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-configuration v1.2.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-configuration/releases/tag/v1.2.0",
+      "status": "Released",
+      "revision": "v1.2.0 (2026-09-11)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-configuration versioning",
+      "url": "https://github.com/open-telemetry/opentelemetry-configuration/blob/v1.2.0/VERSIONING.md",
+      "status": "versioning policy",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "otel-sdk-migration-config.yaml",
+      "url": "https://github.com/open-telemetry/opentelemetry-configuration/blob/v1.2.0/examples/otel-sdk-migration-config.yaml",
+      "status": "example",
+      "revision": "file_format 1.2, v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenTelemetry semantic conventions 1.44.0",
+      "url": "https://opentelemetry.io/docs/specs/semconv/",
+      "status": "Mixed by area",
+      "revision": "1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "semantic-conventions v1.44.0 release",
+      "url": "https://github.com/open-telemetry/semantic-conventions/releases/tag/v1.44.0",
+      "status": "Released",
+      "revision": "v1.44.0 (2026-08-04)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "semantic-conventions v1.23.0 release",
+      "url": "https://github.com/open-telemetry/semantic-conventions/releases/tag/v1.23.0",
+      "status": "Released",
+      "revision": "v1.23.0 (2023-11-03), first stable HTTP core",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Semantic conventions index",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/README.md",
+      "status": "index",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Attribute requirement levels",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/general/attribute-requirement-level.md",
+      "status": "Stable",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Naming",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/general/naming.md",
+      "status": "Stable unless otherwise specified",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Recording errors",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/general/recording-errors.md",
+      "status": "Development",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Semantic conventions for events",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/general/events.md",
+      "status": "Development",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Exceptions in logs",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/exceptions/exceptions-logs.md",
+      "status": "Stable except where otherwise specified",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Exceptions on spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/exceptions/exceptions-spans.md",
+      "status": "Deprecated",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Resource semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/resource/README.md",
+      "status": "Mixed",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Service",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/resource/service.md",
+      "status": "Stable attributes",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Deployment environment",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/resource/deployment-environment.md",
+      "status": "Development entity with a Stable attribute",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTTP semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/http/README.md",
+      "status": "Mixed",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTTP spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/http/http-spans.md",
+      "status": "Stable unless otherwise specified",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTTP metrics",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/http/http-metrics.md",
+      "status": "duration metrics Stable",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTTP semantic convention stability migration",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/non-normative/http-migration.md",
+      "status": "non-normative",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTTP conventions at specification v1.20.0",
+      "url": "https://github.com/open-telemetry/opentelemetry-specification/blob/v1.20.0/specification/trace/semantic_conventions/http.md",
+      "status": "Experimental",
+      "revision": "v1.20.0 (2023-04-07)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Database semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/db/README.md",
+      "status": "Mixed",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Database spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/db/database-spans.md",
+      "status": "Stable unless otherwise specified",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Database metrics",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/db/database-metrics.md",
+      "status": "Mixed",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Database migration",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/non-normative/db-migration.md",
+      "status": "non-normative",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Messaging semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/messaging/README.md",
+      "status": "Development",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Messaging spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/messaging/messaging-spans.md",
+      "status": "Development",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RPC semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/rpc/README.md",
+      "status": "Release Candidate",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RPC spans",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/rpc/rpc-spans.md",
+      "status": "Release Candidate",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RPC migration",
+      "url": "https://github.com/open-telemetry/semantic-conventions/blob/v1.44.0/docs/non-normative/rpc-migration.md",
+      "status": "non-normative",
+      "revision": "v1.44.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OTLP Specification",
+      "url": "https://opentelemetry.io/docs/specs/otlp/",
+      "status": "Stable for traces, metrics and logs",
+      "revision": "page shows 1.11.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenTelemetry Protocol Specification",
+      "url": "https://github.com/open-telemetry/opentelemetry-proto/blob/v1.11.1/docs/specification.md",
+      "status": "Stable for traces, metrics and logs; Development for profiles",
+      "revision": "v1.11.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenTelemetry Protobuf Definitions",
+      "url": "https://github.com/open-telemetry/opentelemetry-proto/blob/v1.11.1/README.md",
+      "status": "maturity table",
+      "revision": "v1.11.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-proto v1.11.1 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-proto/releases/tag/v1.11.1",
+      "status": "Released",
+      "revision": "v1.11.1 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "opentelemetry-proto v1.11.0 release",
+      "url": "https://github.com/open-telemetry/opentelemetry-proto/releases/tag/v1.11.0",
+      "status": "Released",
+      "revision": "v1.11.0 (2026-07-21)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
