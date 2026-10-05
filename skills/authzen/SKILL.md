@@ -4,7 +4,7 @@ description: "AuthZEN Authorization API: PEP-to-PDP access evaluation and search
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -95,6 +95,9 @@ The Authorization API lets a Policy Enforcement Point (PEP) ask a Policy Decisio
 - `openid`: the umbrella skill that routes between the OpenID Foundation specifications. `npx skills add ScaleDockHQ/scaledock-skills --skill openid`
 - `oauth`: OAuth-based authentication of the PEP to the PDP. `npx skills add ScaleDockHQ/scaledock-skills --skill oauth`
 - `jwt`: JWS and JWT processing for `signed_metadata`. `npx skills add ScaleDockHQ/scaledock-skills --skill jwt`
+- `rego`: writing PDP policies in Rego for Open Policy Agent. `npx skills add ScaleDockHQ/scaledock-skills --skill rego`
+- `openfga`: a relationship-based (Zanzibar-style) PDP model. `npx skills add ScaleDockHQ/scaledock-skills --skill openfga`
+- `cel`: PDP conditions written as Common Expression Language expressions. `npx skills add ScaleDockHQ/scaledock-skills --skill cel`
 
 ## Sources
 

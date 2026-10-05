@@ -4,7 +4,7 @@ description: "Standard Schema v1: accept any validator via ~standard, and implem
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -82,6 +82,7 @@ Standard Schema is a family of TypeScript interfaces, designed by the creators o
 
 - `openapi` for placing Standard JSON Schema output (for example the `openapi-3.0` or `draft-2020-12` target) into an OpenAPI document: `npx skills add ScaleDockHQ/scaledock-skills --skill openapi`.
 - `problem-details` for returning validation issues as an RFC 9457 response: `npx skills add ScaleDockHQ/scaledock-skills --skill problem-details`.
+- `json-schema` for writing and reviewing the JSON Schema that `StandardJSONSchemaV1` converters emit: `npx skills add ScaleDockHQ/scaledock-skills --skill json-schema`.
 
 ## Sources
 

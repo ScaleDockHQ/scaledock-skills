@@ -4,7 +4,7 @@ description: "EU AI Act, Regulation (EU) 2024/1689: classify AI systems and turn
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -91,6 +91,9 @@ Regulation (EU) 2024/1689, the Artificial Intelligence Act, lays down harmonised
 
 - `opentelemetry-genai` for tracing model and agent calls that feed Art. 12 logs: `npx skills add ScaleDockHQ/scaledock-skills --skill opentelemetry-genai`.
 - `ocsf` for storing AI-system audit events in a security schema: `npx skills add ScaleDockHQ/scaledock-skills --skill ocsf`.
+- `eu-cra` for the Cyber Resilience Act obligations on products with digital elements: `npx skills add ScaleDockHQ/scaledock-skills --skill eu-cra`.
+- `c2pa` for Content Credentials that mark AI-generated content: `npx skills add ScaleDockHQ/scaledock-skills --skill c2pa`.
+- `nist-ai-rmf` for structuring an AI risk management program with the NIST AI RMF: `npx skills add ScaleDockHQ/scaledock-skills --skill nist-ai-rmf`.
 
 ## Sources
 

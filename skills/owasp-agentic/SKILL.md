@@ -4,7 +4,7 @@ description: "OWASP Agentic Top 10: review AI agent apps against the OWASP Top 1
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -78,6 +78,8 @@ The OWASP Top 10 for Agentic Applications 2026 (the Agentic Top 10, entries ASI0
 - `mcp-authorization` for MCP authorization and token handling (ASI02, ASI03): `npx skills add ScaleDockHQ/scaledock-skills --skill mcp-authorization`.
 - `web-bot-auth` for signed agent identity over HTTP (ASI03, ASI07): `npx skills add ScaleDockHQ/scaledock-skills --skill web-bot-auth`.
 - `ag-ui` for agent-to-user event streams and human-in-the-loop interrupts (ASI09): `npx skills add ScaleDockHQ/scaledock-skills --skill ag-ui`.
+- `owasp-llm` for reviewing the underlying LLM application against the OWASP Top 10 for LLM Applications: `npx skills add ScaleDockHQ/scaledock-skills --skill owasp-llm`.
+- `mitre-atlas` for mapping agent threats to ATLAS tactics, techniques and mitigations: `npx skills add ScaleDockHQ/scaledock-skills --skill mitre-atlas`.
 
 ## Sources
 

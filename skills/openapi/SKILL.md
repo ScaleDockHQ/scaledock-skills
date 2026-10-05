@@ -4,7 +4,7 @@ description: "OpenAPI 3.0 to 3.2: write, validate and upgrade API descriptions (
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -86,6 +86,8 @@ These cite OAS 3.2.1. Most hold in 3.1 and 3.0 under other section numbers; the 
 - `openapi-arazzo` to describe multi-step workflows over OpenAPI operations: `npx skills add ScaleDockHQ/scaledock-skills --skill openapi-arazzo`.
 - `typespec` to design an API in TypeSpec and emit the OAD from it: `npx skills add ScaleDockHQ/scaledock-skills --skill typespec`.
 - `asyncapi` for event-driven and message-based APIs: `npx skills add ScaleDockHQ/scaledock-skills --skill asyncapi`.
+- `json-schema` for writing and reviewing the JSON Schema dialects that Schema Objects use: `npx skills add ScaleDockHQ/scaledock-skills --skill json-schema`.
+- `http-semantics` for the methods, status codes, conditional requests and caching behind each operation: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
 
 ## Sources
 

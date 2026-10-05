@@ -4,7 +4,7 @@ description: "Cedar policy language 4.5: write, validate and evaluate authorizat
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -80,6 +80,9 @@ Cedar is an open-source policy language for authorization, maintained in the `ce
 
 - `openfeature` when authorization and feature flags share targeting attributes: `npx skills add ScaleDockHQ/scaledock-skills --skill openfeature`.
 - `ocsf` to log authorization decisions as audit events: `npx skills add ScaleDockHQ/scaledock-skills --skill ocsf`.
+- `rego` for writing the policy in Rego for Open Policy Agent instead: `npx skills add ScaleDockHQ/scaledock-skills --skill rego`.
+- `openfga` for relationship-based (Zanzibar-style) authorization models: `npx skills add ScaleDockHQ/scaledock-skills --skill openfga`.
+- `cel` for policy conditions written as Common Expression Language expressions: `npx skills add ScaleDockHQ/scaledock-skills --skill cel`.
 
 ## Sources
 
