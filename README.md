@@ -75,6 +75,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openapi-overlay`](skills/openapi-overlay)                 | OpenAPI Overlay 1.2 and 1.1: apply repeatable JSONPath changes to OpenAPI documents, with upgrades from 1.0.                                       |
 | [`problem-details`](skills/problem-details)                 | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json` with the `WWW-Authenticate` challenge, with upgrades from RFC 7807. |
 | [`ratelimit-headers`](skills/ratelimit-headers)             | IETF RateLimit and RateLimit-Policy headers (draft-11), `Retry-After` and 429 handling, with upgrades from older drafts and `X-RateLimit-*`.       |
+| [`standard-webhooks`](skills/standard-webhooks)             | Standard Webhooks 1.0: sign, send and verify webhooks with v1 HMAC or v1a ed25519, replay protection and retries.                                  |
 | [`typespec`](skills/typespec)                               | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                              |
 
 #### Events and data
@@ -112,12 +113,17 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Security and supply chain
 
-| Skill                                             | Description                                                                                                                                  |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`owasp-agentic`](skills/owasp-agentic)           | OWASP Top 10 for Agentic Applications 2026 (first edition): review AI agent apps against ASI01 to ASI10.                                     |
-| [`owasp-api-security`](skills/owasp-api-security) | OWASP API Security Top 10 2023: review HTTP, GraphQL and RPC APIs against API1 to API10, with upgrades from the 2019 edition.                |
-| [`owasp-asvs`](skills/owasp-asvs)                 | OWASP ASVS 5.0.0: scope, cite and verify security requirements by level and chapter, with upgrades from 4.0.3.                               |
-| [`owasp-llm`](skills/owasp-llm)                   | OWASP Top 10 for LLM Applications 2026: review LLM apps, RAG and tool use entry by entry with mitigations, with upgrades from 2025 and v1.1. |
+| Skill                                             | Description                                                                                                                                      |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`cyclonedx`](skills/cyclonedx)                   | CycloneDX 1.7 (ECMA-424): produce, validate, sign and consume SBOMs, VEX and other BOMs, with 1.6 support and upgrades from 1.0 to 1.5.          |
+| [`in-toto`](skills/in-toto)                       | in-toto Attestation v1.2 and spec v1.0: produce and verify DSSE-signed attestations and layouts, with upgrades from v0.1 and 0.9.                |
+| [`owasp-agentic`](skills/owasp-agentic)           | OWASP Top 10 for Agentic Applications 2026 (first edition): review AI agent apps against ASI01 to ASI10.                                         |
+| [`owasp-api-security`](skills/owasp-api-security) | OWASP API Security Top 10 2023: review HTTP, GraphQL and RPC APIs against API1 to API10, with upgrades from the 2019 edition.                    |
+| [`owasp-asvs`](skills/owasp-asvs)                 | OWASP ASVS 5.0.0: scope, cite and verify security requirements by level and chapter, with upgrades from 4.0.3.                                   |
+| [`owasp-llm`](skills/owasp-llm)                   | OWASP Top 10 for LLM Applications 2026: review LLM apps, RAG and tool use entry by entry with mitigations, with upgrades from 2025 and v1.1.     |
+| [`purl`](skills/purl)                             | Package URL ECMA-427 1st Edition: build, parse and normalize pkg: identifiers per type, plus VERS ranges, with upgrades from pre-ECMA purl-spec. |
+| [`slsa`](skills/slsa)                             | SLSA v1.2: levels, provenance v1 and VSA checks for builds and source, with upgrades from SLSA v1.1, v1.0, v0.1 and the v0.2 predicates.         |
+| [`spdx`](skills/spdx)                             | SPDX 3.0.1: write and validate SBOMs, license expressions and SPDX-License-Identifier tags, with upgrades from SPDX 2.3 and 2.2.                 |
 
 #### Observability and operations
 
@@ -138,10 +144,13 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Web platform
 
-| Skill                         | Description                                                                                                                          |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [`wai-aria`](skills/wai-aria) | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                        |
-| [`wcag`](skills/wcag)         | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, with upgrades between them and WCAG 3.0 draft assessments. |
+| Skill                                                       | Description                                                                                                                         |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [`content-security-policy`](skills/content-security-policy) | CSP Level 3: strict CSP, Trusted Types, Permissions Policy and Fetch Metadata, with upgrades from CSP Level 2 and Feature-Policy.   |
+| [`hsts`](skills/hsts)                                       | RFC 6797 HSTS: send and enforce Strict-Transport-Security safely, with staged max-age rollout, preload rules and max-age=0 removal. |
+| [`http-cookies`](skills/http-cookies)                       | HTTP cookies RFC 6265: secure Set-Cookie and Cookie handling, with the RFC 6265bis preview and upgrades from RFC 2965 and RFC 2109. |
+| [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                       |
+| [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                |
 
 ## Development
 
