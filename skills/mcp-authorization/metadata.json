@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Model Context Protocol authorization specification at revision 2026-07-28: MCP servers as OAuth 2.1 resource servers with RFC 9728 Protected Resource Metadata and WWW-Authenticate challenges, authorization server discovery through RFC 8414 and OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents, pre-registration and deprecated Dynamic Client Registration, PKCE, RFC 9207 iss validation, scope step-up with client-side accumulation, the Stable Enterprise-Managed Authorization extension (ID-JAG), the security best practices, and the TypeScript SDK v2 helpers. Version lines: 2026-07-28 is current, 2025-11-25 and 2025-06-18 are supported, 2025-03-26 is legacy, and the draft revision is tracked as a preview, with upgrade checklists between adjacent revisions. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, the client flow, enterprise-managed authorization, security, and the TypeScript SDK.",
+  "abstract": "Covers the Model Context Protocol authorization specification at revision 2026-07-28: MCP servers as OAuth 2.1 resource servers with RFC 9728 Protected Resource Metadata and WWW-Authenticate challenges, authorization server discovery through RFC 8414 and OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents, pre-registration and deprecated Dynamic Client Registration, PKCE, RFC 9207 iss validation, scope step-up with client-side accumulation, the Stable Enterprise-Managed Authorization extension (ID-JAG), the Draft OAuth Client Credentials extension for machine-to-machine clients, the security best practices, and the TypeScript SDK v2 helpers. Version lines: 2026-07-28 is current, 2025-11-25 and 2025-06-18 are supported, 2025-03-26 is legacy, and the draft revision is tracked as a preview, with upgrade checklists between adjacent revisions. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, the client flow, enterprise-managed authorization, client credentials, security, and the TypeScript SDK.",
   "versions": [
     {
       "id": "draft-preview",
@@ -165,6 +165,41 @@
       "checked": "2026-10-02"
     },
     {
+      "title": "OAuth Client Credentials Extension",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/ext-auth/main/specification/draft/oauth-client-credentials.mdx",
+      "status": "Draft extension",
+      "revision": "Protocol Revision: draft; main at fb374c7 (2026-06-18; file last changed ce15435, 2025-10-14); Draft posture: build at fb374c7",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth Client Credentials (MCP docs)",
+      "url": "https://modelcontextprotocol.io/extensions/auth/oauth-client-credentials",
+      "status": "Documentation",
+      "revision": "extension io.modelcontextprotocol/oauth-client-credentials",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Authorization Extensions (MCP docs)",
+      "url": "https://modelcontextprotocol.io/extensions/auth/overview",
+      "status": "Documentation",
+      "revision": "lists OAuth Client Credentials and Enterprise-Managed Authorization",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Extensions Overview (MCP docs)",
+      "url": "https://modelcontextprotocol.io/extensions/overview",
+      "status": "Documentation",
+      "revision": "extension identifiers and negotiation",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SEP-1046: Support OAuth client credentials flow in authorization",
+      "url": "https://modelcontextprotocol.io/seps/1046-support-oauth-client-credentials-flow-in-authoriza",
+      "status": "SEP, Final",
+      "revision": "created 2025-07-23",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "MCP TypeScript SDK v2 documentation",
       "url": "https://ts.sdk.modelcontextprotocol.io/v2/",
       "status": "Released",
@@ -281,7 +316,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc7523",
       "status": "RFC (Proposed Standard)",
       "revision": "RFC 7523",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     }
   ]
 }
