@@ -1,0 +1,120 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Common Expression Language (CEL) language definition published in the cel-expr/cel-spec repository (formerly google/cel-spec): syntax, values and gradual typing, operators and precedence, macros, standard functions, error and unknown semantics, and the performance model. It lists four version lines: CEL v0.25 (current, pinned to v0.25.3), CEL v0.24 and CEL v0.6 (legacy, upgraded from), and the unreleased master branch (preview, posture track). SKILL.md holds the invariants and workflow; references split out versions, syntax and types, operators, macros and functions, errors and evaluation, and writing safe expressions.",
+  "versions": [
+    {
+      "id": "main-preview",
+      "label": "CEL spec main",
+      "status": "preview",
+      "posture": "track",
+      "revision": "master at 40a3c90 (2026-09-16)"
+    },
+    {
+      "id": "0.25",
+      "label": "CEL v0.25",
+      "status": "current",
+      "revision": "v0.25.3 (2026-08-13)"
+    },
+    {
+      "id": "0.24",
+      "label": "CEL v0.24",
+      "status": "legacy",
+      "revision": "v0.24.0 (2025-05-09); stands for v0.7.0 to v0.24.0"
+    },
+    {
+      "id": "0.6",
+      "label": "CEL v0.6",
+      "status": "legacy",
+      "revision": "v0.6.0 (2021-09-01); stands for v0.6.0 and earlier"
+    }
+  ],
+  "sources": [
+    {
+      "title": "CEL Language Definition (doc/langdef.md)",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.25.3/doc/langdef.md",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Introduction (doc/intro.md)",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.25.3/doc/intro.md",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Strings extension (doc/extensions/strings.md)",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.25.3/doc/extensions/strings.md",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL evaluation result protos (proto/cel/expr/eval.proto)",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.25.3/proto/cel/expr/eval.proto",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Conformance Tests (tests/README.md)",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.25.3/tests/README.md",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL simple conformance test data (tests/simple/testdata)",
+      "url": "https://github.com/cel-expr/cel-spec/tree/v0.25.3/tests/simple/testdata",
+      "status": "Released",
+      "revision": "v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "cel-spec releases",
+      "url": "https://github.com/cel-expr/cel-spec/releases",
+      "status": "Release notes",
+      "revision": "v0.0.1 to v0.25.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Language Definition, master branch",
+      "url": "https://github.com/cel-expr/cel-spec/blob/master/doc/langdef.md",
+      "status": "Unreleased (development branch)",
+      "revision": "master at 40a3c90 (2026-09-16)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Language Definition v0.24.0",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.24.0/doc/langdef.md",
+      "status": "Released (superseded)",
+      "revision": "v0.24.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CEL Language Definition v0.6.0",
+      "url": "https://github.com/cel-expr/cel-spec/blob/v0.6.0/doc/langdef.md",
+      "status": "Released (superseded)",
+      "revision": "v0.6.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "cel.dev home page",
+      "url": "https://cel.dev",
+      "status": "Project website",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "cel.dev CEL overview",
+      "url": "https://cel.dev/overview/cel-overview",
+      "status": "Project website",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
