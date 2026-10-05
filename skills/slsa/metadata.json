@@ -1,0 +1,317 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SLSA (Supply-chain Levels for Software Artifacts) v1.2 from OpenSSF: the Build track L0-L3 and Source track L1-L4 with their producer, build platform, organization and source control system requirements; the SLSA Provenance v1 predicate for in-toto attestations; distributing provenance; verifying artifacts against roots of trust and expectations; Verification Summary Attestations v1 and Source VSAs; and the threat model A-I. Version lines: SLSA v1.2 is current, v1.1, v1.0 and v0.1 are legacy, and the working draft (Build Environment and Dependency tracks) is tracked as a preview; Provenance and VSA predicates are separate families with v1 current and v0.2 and v0.1 legacy. SKILL.md holds the invariants and workflow; references split out versions, levels and tracks, provenance, verification, and threats.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "SLSA working draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "spec/draft, main at 82b296d (2026-09-29)"
+    },
+    {
+      "id": "1.2",
+      "label": "SLSA v1.2",
+      "status": "current",
+      "revision": "v1.2 Approved (tag v1.2; branch releases/v1.2 at ae7fc76)"
+    },
+    {
+      "id": "1.1",
+      "label": "SLSA v1.1",
+      "status": "legacy",
+      "revision": "v1.1 Retired (tag v1.1)"
+    },
+    {
+      "id": "1.0",
+      "label": "SLSA v1.0",
+      "status": "legacy",
+      "revision": "v1.0 Retired (tag v1.0.0)"
+    },
+    {
+      "id": "0.1",
+      "label": "SLSA v0.1",
+      "status": "legacy",
+      "revision": "v0.1 Approved, superseded by v1.0 (tag v0.1)"
+    },
+    {
+      "id": "provenance-v1",
+      "label": "SLSA Provenance v1",
+      "status": "current",
+      "family": "provenance",
+      "revision": "https://slsa.dev/provenance/v1 as published in SLSA v1.2",
+      "reference": "references/provenance.md"
+    },
+    {
+      "id": "provenance-v0.2",
+      "label": "SLSA Provenance v0.2",
+      "status": "legacy",
+      "family": "provenance",
+      "revision": "https://slsa.dev/provenance/v0.2"
+    },
+    {
+      "id": "provenance-v0.1",
+      "label": "SLSA Provenance v0.1",
+      "status": "legacy",
+      "family": "provenance",
+      "revision": "https://slsa.dev/provenance/v0.1"
+    },
+    {
+      "id": "vsa-v1",
+      "label": "SLSA VSA v1",
+      "status": "current",
+      "family": "vsa",
+      "revision": "https://slsa.dev/verification_summary/v1 as published in SLSA v1.2",
+      "reference": "references/verification.md"
+    },
+    {
+      "id": "vsa-v0.2",
+      "label": "SLSA VSA v0.2",
+      "status": "legacy",
+      "family": "vsa",
+      "revision": "https://slsa.dev/verification_summary/v0.2"
+    },
+    {
+      "id": "vsa-v0.1",
+      "label": "SLSA VSA v0.1",
+      "status": "legacy",
+      "family": "vsa",
+      "revision": "https://slsa.dev/verification_summary/v0.1"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SLSA specification (version index)",
+      "url": "https://slsa.dev/spec/",
+      "status": "Approved",
+      "revision": "v1.2 marked current",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Specification Stages and Versioning",
+      "url": "https://slsa.dev/spec-stages",
+      "status": "Site page",
+      "revision": "Specification Stages and Versioning page",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "status": "Approved",
+      "revision": "v1.2 (tag `v1.2`, branch `releases/v1.2` at ae7fc76)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 What's new",
+      "url": "https://slsa.dev/spec/v1.2/whats-new",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Tracks",
+      "url": "https://slsa.dev/spec/v1.2/tracks",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Track Basics",
+      "url": "https://slsa.dev/spec/v1.2/build-track-basics",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Requirements for producing artifacts",
+      "url": "https://slsa.dev/spec/v1.2/build-requirements",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Provenance",
+      "url": "https://slsa.dev/spec/v1.2/build-provenance",
+      "status": "Approved",
+      "revision": "v1.2 (predicate `https://slsa.dev/provenance/v1`)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Provenance v1 (predicate URI)",
+      "url": "https://slsa.dev/provenance/v1",
+      "status": "Approved",
+      "revision": "redirects to the v1.1 page as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Distributing provenance",
+      "url": "https://slsa.dev/spec/v1.2/distributing-provenance",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Verifying artifacts",
+      "url": "https://slsa.dev/spec/v1.2/verifying-artifacts",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Build: Assessing build platforms",
+      "url": "https://slsa.dev/spec/v1.2/assessing-build-platforms",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Source: Requirements for producing source",
+      "url": "https://slsa.dev/spec/v1.2/source-requirements",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Source: Verifying source",
+      "url": "https://slsa.dev/spec/v1.2/verifying-source",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Threats & mitigations",
+      "url": "https://slsa.dev/spec/v1.2/threats",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Verification Summary Attestation",
+      "url": "https://slsa.dev/spec/v1.2/verification_summary",
+      "status": "Approved",
+      "revision": "v1.2 (predicate `https://slsa.dev/verification_summary/v1`)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Verified Properties",
+      "url": "https://slsa.dev/spec/v1.2/verified-properties",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 Software attestations",
+      "url": "https://slsa.dev/spec/v1.2/attestation-model",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.2 FAQ",
+      "url": "https://slsa.dev/spec/v1.2/faq",
+      "status": "Approved",
+      "revision": "v1.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.1",
+      "url": "https://slsa.dev/spec/v1.1/",
+      "status": "Retired",
+      "revision": "v1.1 (tag `v1.1`)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.1 What's new",
+      "url": "https://slsa.dev/spec/v1.1/whats-new",
+      "status": "Retired",
+      "revision": "v1.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.0",
+      "url": "https://slsa.dev/spec/v1.0/",
+      "status": "Retired",
+      "revision": "v1.0 (tag `v1.0.0`)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v1.0 What's new",
+      "url": "https://slsa.dev/spec/v1.0/whats-new",
+      "status": "Retired",
+      "revision": "v1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v0.1",
+      "url": "https://slsa.dev/spec/v0.1/",
+      "status": "Approved (superseded)",
+      "revision": "v0.1 (tag `v0.1`)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA v0.1 Security levels",
+      "url": "https://slsa.dev/spec/v0.1/levels",
+      "status": "Approved (superseded)",
+      "revision": "v0.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Provenance v0.2",
+      "url": "https://slsa.dev/provenance/v0.2",
+      "status": "Approved (hidden version)",
+      "revision": "v0.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Working Draft",
+      "url": "https://slsa.dev/spec/draft/",
+      "status": "Draft",
+      "revision": "`main` at 82b296d (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Working Draft: Build Environment track",
+      "url": "https://slsa.dev/spec/draft/build-env-track-basics",
+      "status": "Draft",
+      "revision": "`main` at 82b296d",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SLSA Working Draft: Dependency Track",
+      "url": "https://slsa.dev/spec/draft/dependency-track",
+      "status": "Draft",
+      "revision": "`main` at 82b296d",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "slsa-framework/slsa repository",
+      "url": "https://github.com/slsa-framework/slsa",
+      "status": "tags `v1.2`",
+      "revision": "`v1.1`, `v1.0.0`, `v0.1`, no GitHub Releases; `www/_data/versions.yml` at 82b296d",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Attestation Framework specification",
+      "url": "https://github.com/in-toto/attestation/blob/main/spec/v1/README.md",
+      "status": "Released",
+      "revision": "v1.2 (release v1.2.0, 2026-03-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Statement layer",
+      "url": "https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md",
+      "status": "Released",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "in-toto Validation model",
+      "url": "https://github.com/in-toto/attestation/blob/main/docs/validation.md",
+      "status": "Released",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    }
+  ]
+}
