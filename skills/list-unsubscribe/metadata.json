@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the email list header fields of RFC 2369 (List-Help, List-Unsubscribe, List-Subscribe, List-Post, List-Owner, List-Archive), one-click unsubscribe from RFC 8058 (List-Unsubscribe-Post, the HTTPS POST, the DKIM requirement, no redirects and no cookies) and List-Id from RFC 2919, for both senders and receivers. It lists one version line, RFC 2369 with RFC 8058 (current); no legacy or preview line exists. Gmail and Yahoo bulk sender rules are included as labelled provider policy. SKILL.md holds the invariants and workflow; references split out versions and errata, the header fields, the one-click endpoint, and receiver behaviour.",
+  "versions": [
+    {
+      "id": "rfc8058",
+      "label": "RFC 2369 with RFC 8058",
+      "status": "current",
+      "revision": "RFC 2369 (July 1998) and RFC 8058 (January 2017), with RFC 2919 (March 2001)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 2369: The Use of URLs as Meta-Syntax for Core Mail List Commands and their Transport through Message Header Fields",
+      "url": "https://www.rfc-editor.org/rfc/rfc2369",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 2369",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8058: Signaling One-Click Functionality for List Email Headers",
+      "url": "https://www.rfc-editor.org/rfc/rfc8058",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8058",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8058 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc8058",
+      "status": "RFC Editor errata",
+      "revision": "verified EIDs 5117, 5559, 8927",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 2919: List-Id",
+      "url": "https://www.rfc-editor.org/rfc/rfc2919",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 2919",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 2919 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc2919",
+      "status": "RFC Editor errata",
+      "revision": "verified EID 3951, held EID 2499",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA Message Headers registry",
+      "url": "https://www.iana.org/assignments/message-headers",
+      "status": "IANA registry",
+      "revision": "last updated 2026-05-13",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Gmail: Email sender guidelines",
+      "url": "https://support.google.com/mail/answer/81126",
+      "status": "Provider policy (Google)",
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Gmail: Email sender guidelines FAQ",
+      "url": "https://support.google.com/mail/answer/14229414",
+      "status": "Provider policy (Google)",
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Yahoo: Sender Requirements & Recommendations",
+      "url": "https://senders.yahooinc.com/best-practices/",
+      "status": "Provider policy (Yahoo)",
+      "revision": "Senders Best Communications Practices Version 3.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Yahoo: Sender FAQs",
+      "url": "https://senders.yahooinc.com/faqs/",
+      "status": "Provider policy (Yahoo)",
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
