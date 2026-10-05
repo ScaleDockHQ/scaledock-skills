@@ -4,26 +4,35 @@ Check option names against the installed packages and the PermDock docs MCP (`ht
 
 ## Surfaces
 
-| Surface               | Spec skill          | PermDock                                                                                                                          |
-| --------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| AI SDK tools          | `owasp-agentic`     | `createPermDock` from `permdock/ai-sdk`: `toolApproval` into `generateText` or `ToolLoopAgent`, `capabilityMiddleware` per caller |
-| Claude, OpenAI, Eve   | `owasp-agentic`     | `permdock/claude-agent` (`canUseTool`), `permdock/openai`, `permdock/eve`                                                         |
-| MCP                   | `mcp-authorization` | `permdock/mcp`; see `scaledock-mcp-server`                                                                                        |
-| A2A agent             | `a2a`               | `agentCard`, `extendedAgentCard` and `protectSkill` from `permdock/a2a`; identity from transport auth only                        |
-| WebMCP page tools     | `webmcp`            | `registerTools(document.modelContext, ...)` from `permdock/webmcp`; a client entry, never the policy                              |
-| Chat UI approvals     | `ag-ui`             | Render `approval-required` as the AG-UI human-in-the-loop interrupt and resume with the approval token                            |
-| Agent payments        | `ap2`               | `pay` and `approve` are separate permissions with `approval: { by }`; the mandate is evidence on the approval                     |
-| Bot traffic over HTTP | `web-bot-auth`      | `webBotAuth: { verify: true, keys: discoverViaSignatureAgent({ allow }) }` on the HTTP adapter fills `actor`                      |
-| Approvals             | `owasp-agentic`     | `approvalsHandler` and a durable `ApprovalStore` from `permdock/approvals`; resume with `PermDock-Approval`                       |
+| Surface                  | Spec skill                         | PermDock                                                                                                                                           |
+| ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AI SDK tools             | `owasp-agentic`                    | `createPermDock` from `permdock/ai-sdk`: `toolApproval` into `generateText` or `ToolLoopAgent`, `capabilityMiddleware` per caller                  |
+| Claude, OpenAI, Eve      | `owasp-agentic`                    | `permdock/claude-agent` (`canUseTool`), `permdock/openai`, `permdock/eve`                                                                          |
+| MCP                      | `mcp-authorization`                | `permdock/mcp`; see `scaledock-mcp-server`                                                                                                         |
+| MCP base protocol        | `mcp`, `mcp-apps`                  | Same `permdock/mcp` decision for tool calls from `mcp-apps` views                                                                                  |
+| A2A agent                | `a2a`                              | `agentCard`, `extendedAgentCard` and `protectSkill` from `permdock/a2a`; identity from transport auth only                                         |
+| WebMCP page tools        | `webmcp`                           | `registerTools(document.modelContext, ...)` from `permdock/webmcp`; a client entry, never the policy                                               |
+| Chat UI approvals        | `ag-ui`                            | Render `approval-required` as the AG-UI human-in-the-loop interrupt and resume with the approval token                                             |
+| Agent-generated UI       | `a2ui`                             | Render only trusted catalog components; every action a component triggers is a PermDock-guarded call                                               |
+| Agent payments           | `ap2`                              | `pay` and `approve` are separate permissions with `approval: { by }`; the mandate is evidence on the approval                                      |
+| x402 payments            | `x402`                             | An agent paying: the `pay` grant with `approval` decides before it signs a payload. Charging: a valid payment never replaces the PermDock decision |
+| Agent checkout           | `ucp`, `agentic-commerce-protocol` | Guard each checkout operation; completing a checkout needs `approval`, and the delegated payment token is evidence                                 |
+| Bot traffic over HTTP    | `web-bot-auth`                     | `webBotAuth: { verify: true, keys: discoverViaSignatureAgent({ allow }) }` on the HTTP adapter fills `actor`                                       |
+| Crawler and AI-use rules | `robots-txt`, `aipref`             | Publish `/robots.txt` and Content-Usage statements; never treat them as access control, PermDock still decides                                     |
+| Generated media          | `c2pa`                             | Attach Content Credentials to media agents produce, naming the agent as the actor                                                                  |
+| Approvals                | `owasp-agentic`                    | `approvalsHandler` and a durable `ApprovalStore` from `permdock/approvals`; resume with `PermDock-Approval`                                        |
+| Out-of-band approval     | `ciba`                             | The approver confirms on a separate authentication device; the result resumes the PermDock approval                                                |
 
 ## Audit trail
 
-| Need                         | Spec skill            | Implementation                                                                                 |
-| ---------------------------- | --------------------- | ---------------------------------------------------------------------------------------------- |
-| Spans for tool calls         | `opentelemetry-genai` | `instrument(permdock, ...)` from `permdock/otel`; the decision span nests under `execute_tool` |
-| SIEM events                  | `ocsf`                | Project decision events onto the OCSF class the `ocsf` skill names for authorization           |
-| Event envelope               | `cloudevents`         | Wrap decision events leaving the app in CloudEvents when a consumer expects it                 |
-| Record-keeping and oversight | `eu-ai-act`           | Map the logging and human-oversight obligations to decision events and approvals               |
+| Need                         | Spec skill                 | Implementation                                                                                 |
+| ---------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| Spans for tool calls         | `opentelemetry-genai`      | `instrument(permdock, ...)` from `permdock/otel`; the decision span nests under `execute_tool` |
+| SIEM events                  | `ocsf`                     | Project decision events onto the OCSF class the `ocsf` skill names for authorization           |
+| Event envelope               | `cloudevents`              | Wrap decision events leaving the app in CloudEvents when a consumer expects it                 |
+| Threat model                 | `owasp-llm`, `mitre-atlas` | Tag each surface's threats with LLM Top 10 ids and ATLAS techniques                            |
+| AI risk program              | `nist-ai-rmf`              | Map decision events, approvals and tests to the GOVERN, MAP, MEASURE and MANAGE subcategories  |
+| Record-keeping and oversight | `eu-ai-act`                | Map the logging and human-oversight obligations to decision events and approvals               |
 
 ## Flags and external policy
 
