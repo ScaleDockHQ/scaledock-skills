@@ -8,7 +8,7 @@ An agent skill that builds or reviews a ScaleDock HTTP API whose contract, OpenA
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-http-api
 ```
 
-It asks you to install the spec skills it builds on: `openapi`, `openapi-overlay`, `problem-details`, `ratelimit-headers` and `standard-schema` (optionally `openapi-arazzo`, `asyncapi` and `typespec`), plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
+It asks you to install the spec skills it builds on: `http-semantics`, `openapi`, `json-schema`, `openapi-overlay`, `problem-details`, `ratelimit-headers` and `standard-schema` (optionally `openapi-arazzo`, `asyncapi`, `typespec`, `standard-webhooks`, `http-message-signatures`, `http-cookies`, `owasp-api-security` and `owasp-asvs`), plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
 
 Then ask your agent to "add an endpoint to the API", "publish our OpenAPI document with security schemes", or "make our API errors and 429s standard".
 
@@ -17,6 +17,7 @@ Then ask your agent to "add an endpoint to the API", "publish our OpenAPI docume
 - The spec skills decide format details; this skill maps them onto Hono, oRPC and PermDock.
 - Contract first, with Valibot as the one schema library.
 - PermDock guards every procedure and is the only writer of OpenAPI `security`.
+- Methods, status codes and caching follow HTTP Semantics; schemas are JSON Schema 2020-12.
 - Errors are RFC 9457 Problem Details; exhausted limits are 429 with `Retry-After`.
 - The committed OpenAPI snapshot is validated and checked for drift in CI.
 
