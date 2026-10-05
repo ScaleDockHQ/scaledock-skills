@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OAuth 2.0 (RFC 6749, RFC 6750) as tightened by the RFC 9700 Security BCP and the OAuth 2.1 draft (-16, build posture), with the extensions a resource server, client or authorization server needs: PKCE, DPoP, mTLS-bound tokens, Rich Authorization Requests, token exchange, resource indicators, AS and protected resource metadata, the iss parameter, step-up, dynamic client registration, introspection, revocation and the device grant. Drafts for Client ID Metadata Documents, identity chaining, transaction tokens and RAR remediation are pinned with a posture. Version lines: OAuth 2.0 is current, OAuth 2.1 is a build-posture preview with a 2.0 to 2.1 upgrade checklist, and OAuth 1.0 (RFC 5849) is legacy, replaced rather than upgraded. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, sender constraint, clients, the authorization server, delegation and drafts.",
+  "abstract": "Covers OAuth 2.0 (RFC 6749, RFC 6750) as tightened by the RFC 9700 Security BCP, the RFC 10017 browser-based apps BCP and the RFC 10027 cross-device flows BCP and the OAuth 2.1 draft (-16, build posture), with the extensions a resource server, client or authorization server needs: PKCE, DPoP, mTLS-bound tokens, Rich Authorization Requests, token exchange, resource indicators, AS and protected resource metadata, the iss parameter, step-up, dynamic client registration, introspection, revocation and the device grant. Drafts for Client ID Metadata Documents, identity chaining, rfc7523bis, attestation-based client authentication, first-party apps, transaction tokens, RAR remediation, the Security BCP update, refresh token expiration, SPIFFE client authentication and deferred token responses are pinned with a posture. Version lines: OAuth 2.0 is current, OAuth 2.1 is a build-posture preview with a 2.0 to 2.1 upgrade checklist, and OAuth 1.0 (RFC 5849) is legacy, replaced rather than upgraded. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, sender constraint, clients, the authorization server, delegation and drafts.",
   "versions": [
     {
       "id": "2.1-preview",
@@ -60,6 +60,20 @@
       "status": "RFC (Best Current Practice)",
       "revision": "RFC 9700",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "RFC 10017: OAuth 2.0 for Browser-Based Applications",
+      "url": "https://www.rfc-editor.org/rfc/rfc10017",
+      "status": "RFC (Best Current Practice, BCP 212)",
+      "revision": "RFC 10017 (August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 10027: Best Current Practice for Security of Cross-Device Flows",
+      "url": "https://www.rfc-editor.org/rfc/rfc10027",
+      "status": "RFC (Best Current Practice, BCP 247)",
+      "revision": "RFC 10027 (August 2026)",
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 7636: Proof Key for Code Exchange",
@@ -200,6 +214,55 @@
       "status": "WG draft",
       "revision": "draft-ietf-oauth-rar-metadata-remediation-00 (2026-08-23)",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "Updates to OAuth 2.0 JWT Client Authentication and Assertion-Based Authorization Grants",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc7523bis-11",
+      "status": "RFC Editor queue",
+      "revision": "draft-ietf-oauth-rfc7523bis-11 (2026-03-26; intended Proposed Standard)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth 2.0 Attestation-Based Client Authentication",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-attestation-based-client-auth-11",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-attestation-based-client-auth-11 (2026-09-03; in WG last call)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth 2.0 for First-Party Applications",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-first-party-apps-04",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-first-party-apps-04 (2026-07-01; WG consensus, waiting for write-up)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Updates to OAuth 2.0 Security Best Current Practice",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-update-03",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-security-topics-update-03 (2026-07-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth 2.0 Refresh Token and Authorization Expiration",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-refresh-token-expiration-03",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-refresh-token-expiration-03 (2026-07-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth SPIFFE Client Authentication",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-spiffe-client-auth-02",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-spiffe-client-auth-02 (2026-06-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Deferred Token Response",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-deferred-token-response-00",
+      "status": "WG draft",
+      "revision": "draft-ietf-oauth-deferred-token-response-00 (2026-09-16)",
+      "checked": "2026-10-05"
     }
   ]
 }
