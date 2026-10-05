@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Standard Webhooks specification, line 1.0 (specification text \"Version: 1.0.0\", pinned at repository tag v1.0.2). References are split into signing and verifying (headers, signed content, v1 HMAC-SHA256 and v1a ed25519, secret formats, rotation, replay protection), delivery (retries, status handling, timeouts, disabling endpoints), payloads and security (structure, event types, thin payloads, SSRF), and versions and migration.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "Standard Webhooks 1.0",
+      "status": "current",
+      "revision": "Version 1.0.0 at tag v1.0.2 (2026-02-18); text last changed 2025-02-16"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Standard Webhooks specification",
+      "url": "https://github.com/standard-webhooks/standard-webhooks/blob/v1.0.2/spec/standard-webhooks.md",
+      "status": "Specification (README: latest draft, source of truth)",
+      "revision": "Version 1.0.0 at tag v1.0.2 (2026-02-18); unchanged on main since 2025-02-16",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Standard Webhooks README",
+      "url": "https://github.com/standard-webhooks/standard-webhooks/blob/main/README.md",
+      "status": "Repository README",
+      "revision": "main at 7537d2a (2026-08-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Standard Webhooks releases",
+      "url": "https://github.com/standard-webhooks/standard-webhooks/releases",
+      "status": "Released",
+      "revision": "v1.0.2 (2026-02-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Standard Webhooks libraries",
+      "url": "https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries",
+      "status": "Reference implementations",
+      "revision": "main at 7537d2a (2026-08-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Reference JavaScript library source",
+      "url": "https://github.com/standard-webhooks/standard-webhooks/blob/main/libraries/javascript/src/index.ts",
+      "status": "Reference implementation",
+      "revision": "standardwebhooks 1.1.1, main at 7537d2a",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "standardwebhooks.com",
+      "url": "https://www.standardwebhooks.com",
+      "status": "Project website",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP API Security Top 10, API7:2023 Server Side Request Forgery",
+      "url": "https://owasp.org/API-Security/editions/2023/en/0xa7-server-side-request-forgery/",
+      "status": "OWASP Top 10",
+      "revision": "2023 edition",
+      "checked": "2026-10-05"
+    }
+  ]
+}
