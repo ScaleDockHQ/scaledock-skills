@@ -53,8 +53,10 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`ag-ui`](skills/ag-ui)                                         | AG-UI 1.0: stream agent runs to user-facing apps with typed events, shared state and interrupts, with upgrades from 0.x and the 1.1 preview.         |
 | [`agent-skills`](skills/agent-skills)                           | Agent Skills spec 2026-08-04: write, review and validate SKILL.md skills with skills-ref, and add skill discovery and loading to agents.             |
 | [`agentic-commerce-protocol`](skills/agentic-commerce-protocol) | ACP 2026-04-17: agent checkout sessions, delegated payment tokens and signed order webhooks, with upgrades from 2025-09-29.                          |
+| [`agents-md`](skills/agents-md)                                 | AGENTS.md (agents.md): write, place, migrate and review agent instruction files, with nested precedence and per-tool wiring.                         |
 | [`aipref`](skills/aipref)                                       | IETF aipref vocab-08 and attach-05: publish and read AI usage preferences in Content-Usage headers and robots.txt, with upgrades from older drafts.  |
 | [`ap2`](skills/ap2)                                             | AP2 v0.2: authorize AI agent payments with signed Checkout and Payment Mandates, with upgrades from v0.1.                                            |
+| [`llms-txt`](skills/llms-txt)                                   | llms.txt v2 proposal: write, validate and read /llms.txt files with markdown page versions and discovery links, with upgrades from v1.               |
 | [`mcp`](skills/mcp)                                             | MCP 2026-07-28 (2025-11-25 and 2025-06-18 supported): build MCP servers and clients, with upgrades from 2025-03-26 and 2024-11-05.                   |
 | [`mcp-apps`](skills/mcp-apps)                                   | MCP Apps 2026-01-26: interactive `ui://` HTML views for MCP tools, sandboxed hosts and the postMessage bridge, with upgrades from pre-stable drafts. |
 | [`mcp-authorization`](skills/mcp-authorization)                 | MCP authorization 2026-07-28 (2025-11-25 and 2025-06-18 supported): secure MCP servers and clients with OAuth, with upgrades from 2025-03-26.        |
@@ -97,6 +99,8 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cedar`](skills/cedar)                         | Cedar 4.x (language 4.5): write, validate and evaluate authorization policies and schemas, with upgrades from Cedar 3.x and 2.x.                      |
 | [`cel`](skills/cel)                             | CEL v0.25: write and review Common Expression Language expressions with types, macros, error semantics and cost, with upgrades from v0.24 and v0.6.   |
 | [`ciba`](skills/ciba)                           | OpenID CIBA Core 1.0: decoupled sign-in with poll, ping and push delivery, with upgrades from the Implementer's Drafts and MODRNA.                    |
+| [`did`](skills/did)                             | W3C DID 1.0 Decentralized Identifiers: parse DIDs and DID URLs, build DID documents, resolve them and vet methods, with upgrades to DID 1.1.          |
+| [`eudi-wallet`](skills/eudi-wallet)             | EUDI Wallet ARF 3.0.0: build and review wallets, issuers and relying parties against the HLRs, with upgrades from ARF 2.x and 1.x.                    |
 | [`fapi`](skills/fapi)                           | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, with FAPI 1.0 upgrades, JARM and CIBA.                   |
 | [`gnap`](skills/gnap)                           | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                                        |
 | [`jwt`](skills/jwt)                             | JWT and JOSE RFCs: verify and issue JWS, JWE and JWK safely, with the RFC 8725bis and `none`/`RSA1_5` deprecation previews.                           |
@@ -113,6 +117,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`sd-jwt`](skills/sd-jwt)                       | RFC 9901 SD-JWT: selective disclosure, Key Binding and verification, plus SD-JWT VC and Token Status List, with upgrades from pre-RFC drafts.         |
 | [`shared-signals`](skills/shared-signals)       | SSF 1.0, CAEP 1.0 and RISC 1.0: send and receive security events, with upgrades from the Implementer's Drafts.                                        |
 | [`spiffe`](skills/spiffe)                       | SPIFFE and SPIRE: issue and verify workload identities, SVIDs, trust bundles and federation, with the Incubating WIT-SVID and Broker preview.         |
+| [`vc-data-model`](skills/vc-data-model)         | W3C VC Data Model 2.0: build, secure and verify credentials with JOSE/COSE, Data Integrity and Bitstring Status List, with upgrades from 1.1.         |
 | [`webauthn`](skills/webauthn)                   | WebAuthn Level 3 (Level 2 supported): register and verify passkeys and security keys per § 7.1 and § 7.2, with upgrades from Level 1.                 |
 | [`wimse`](skills/wimse)                         | WIMSE drafts: authenticate service-to-service calls with WIT, WPT, HTTP signatures or mTLS, with upgrades from s2s-protocol.                          |
 
@@ -158,16 +163,27 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`eu-cra`](skills/eu-cra)           | EU Cyber Resilience Act, 2024 OJ text: scoping, Annex I, SBOMs, Art. 14 reporting and CE marking, tracking two amending proposals.                  |
 | [`nist-ai-rmf`](skills/nist-ai-rmf) | NIST AI RMF 1.0: build AI risk programs, profiles and control maps across GOVERN, MAP, MEASURE and MANAGE, plus the AI 600-1 Generative AI Profile. |
 
+#### Email
+
+| Skill                                         | Description                                                                                                                                       |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`dkim`](skills/dkim)                         | DKIM RFC 6376: sign and verify email with DKIM-Signature headers and _domainkey key records, with upgrades from RFC 4871.                         |
+| [`dmarc`](skills/dmarc)                       | DMARC RFC 9989: publish, evaluate and report on `_dmarc` records with tree-walk alignment and RFC 9990/9991 reports, with upgrades from RFC 7489. |
+| [`list-unsubscribe`](skills/list-unsubscribe) | RFC 2369 with RFC 8058: write List-Unsubscribe headers, one-click POST endpoints and receiver handling, with upgrades from RFC 2369-only lists.   |
+| [`spf`](skills/spf)                           | RFC 7208 SPF: write, check and debug v=spf1 sender records within the 10 DNS lookup limit, and record results, with upgrades from RFC 4408.       |
+
 #### Web platform
 
-| Skill                                                       | Description                                                                                                                                     |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`content-security-policy`](skills/content-security-policy) | CSP Level 3: strict CSP, Trusted Types, Permissions Policy and Fetch Metadata, with upgrades from CSP Level 2 and Feature-Policy.               |
-| [`ecmascript-temporal`](skills/ecmascript-temporal)         | Temporal (ES2027, stage 4): types, time zones, DST, calendars, arithmetic and RFC 9557 strings, with upgrades from Date and pre-2024 polyfills. |
-| [`hsts`](skills/hsts)                                       | RFC 6797 HSTS: send and enforce Strict-Transport-Security safely, with staged max-age rollout, preload rules and max-age=0 removal.             |
-| [`http-cookies`](skills/http-cookies)                       | HTTP cookies RFC 6265: secure Set-Cookie and Cookie handling, with the RFC 6265bis preview and upgrades from RFC 2965 and RFC 2109.             |
-| [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                                   |
-| [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                            |
+| Skill                                                       | Description                                                                                                                                           |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`content-security-policy`](skills/content-security-policy) | CSP Level 3: strict CSP, Trusted Types, Permissions Policy and Fetch Metadata, with upgrades from CSP Level 2 and Feature-Policy.                     |
+| [`ecmascript-temporal`](skills/ecmascript-temporal)         | Temporal (ES2027, stage 4): types, time zones, DST, calendars, arithmetic and RFC 9557 strings, with upgrades from Date and pre-2024 polyfills.       |
+| [`gpc`](skills/gpc)                                         | Global Privacy Control WD 2026-09-24: send and honor Sec-GPC and navigator.globalPrivacyControl, publish gpc.json, with upgrades from the 2020 draft. |
+| [`hsts`](skills/hsts)                                       | RFC 6797 HSTS: send and enforce Strict-Transport-Security safely, with staged max-age rollout, preload rules and max-age=0 removal.                   |
+| [`http-cookies`](skills/http-cookies)                       | HTTP cookies RFC 6265: secure Set-Cookie and Cookie handling, with the RFC 6265bis preview and upgrades from RFC 2965 and RFC 2109.                   |
+| [`messageformat`](skills/messageformat)                     | Unicode MessageFormat LDML 48: write, select and format MF2 messages, with upgrades from LDML 47, the tech preview and ICU MessageFormat 1.           |
+| [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                                         |
+| [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                                  |
 
 ## Development
 
