@@ -138,10 +138,10 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Web platform
 
-| Skill                         | Description                                                                                                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [`wai-aria`](skills/wai-aria) | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                            |
-| [`wcag`](skills/wcag)         | WCAG 2.2: build, review and test UIs against the A/AA/AAA success criteria and write conformance claims, with upgrades from 2.0 and 2.1. |
+| Skill                         | Description                                                                                                                          |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [`wai-aria`](skills/wai-aria) | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                        |
+| [`wcag`](skills/wcag)         | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, with upgrades between them and WCAG 3.0 draft assessments. |
 
 ## Development
 
