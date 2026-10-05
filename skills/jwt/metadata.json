@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers JOSE and JWT issuing and verification: RFC 7515 to RFC 7519, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices with its rfc8725bis update (-10, build posture), RFC 9864 fully specified algorithms, the none and RSA1_5 deprecation draft (-06, build posture), RFC 9068 JWT access tokens with roles, groups and entitlements, RFC 7638 thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. The published JOSE RFCs are the current line; rfc8725bis and the none and RSA1_5 deprecation are build-posture previews, with an RFC 8725 to rfc8725bis verifier upgrade. SKILL.md holds the invariants and workflow; references split out the version lines, the verification checklist, algorithms and keys, and access tokens with the claims registry.",
+  "abstract": "Covers JOSE and JWT issuing and verification: RFC 7515 to RFC 7519, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices with its rfc8725bis update (-10, build posture), RFC 9864 fully specified algorithms, RFC 9964 ML-DSA signatures with AKP keys, the none and RSA1_5 deprecation draft (-06, build posture), HPKE for JWE (-22, build posture), PQ/T composite signatures (-04, track posture), JSON Web Proof (-14, track posture), RFC 9068 JWT access tokens with roles, groups and entitlements, RFC 7638 thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. The published JOSE RFCs are the current line; rfc8725bis, the none and RSA1_5 deprecation and HPKE for JWE are build-posture previews, composite signatures and JSON Web Proof are tracked, with an RFC 8725 to rfc8725bis verifier upgrade. SKILL.md holds the invariants and workflow; references split out the version lines, the verification checklist, algorithms and keys, and access tokens with the claims registry.",
   "versions": [
     {
       "id": "rfc8725bis-preview",
@@ -20,10 +20,31 @@
       "revision": "draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25)"
     },
     {
+      "id": "jose-hpke-preview",
+      "label": "HPKE for JWE",
+      "status": "preview",
+      "posture": "build",
+      "revision": "draft-ietf-jose-hpke-encrypt-22 (2026-07-06; RFC Editor queue)"
+    },
+    {
+      "id": "pq-composite-sigs-preview",
+      "label": "PQ/T composite signatures",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-jose-pq-composite-sigs-04 (2026-09-10)"
+    },
+    {
+      "id": "jwp-preview",
+      "label": "JSON Web Proof",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-jose-json-web-proof-14 (2026-07-20)"
+    },
+    {
       "id": "jose-rfc",
       "label": "JOSE RFCs",
       "status": "current",
-      "revision": "RFC 7515 to RFC 7519, RFC 8037, RFC 8725, RFC 9864 and RFC 9068"
+      "revision": "RFC 7515 to RFC 7519, RFC 8037, RFC 8725, RFC 9864, RFC 9964 and RFC 9068"
     }
   ],
   "sources": [
@@ -98,6 +119,34 @@
       "checked": "2026-10-05"
     },
     {
+      "title": "RFC 9964: ML-DSA for JSON Object Signing and Encryption (JOSE) and CBOR Object Signing and Encryption (COSE)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9964",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9964 (May 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Use of Hybrid Public Key Encryption (HPKE) with JSON Web Encryption (JWE)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-jose-hpke-encrypt-22",
+      "status": "RFC Editor queue",
+      "revision": "draft-ietf-jose-hpke-encrypt-22 (2026-07-06; intended Proposed Standard, updates RFC 7516; RFC Editor state Blocked; alg values registered by IANA 2026-09-29); Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "PQ/T Hybrid Composite Signatures for JOSE and COSE",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-jose-pq-composite-sigs-04",
+      "status": "WG draft",
+      "revision": "draft-ietf-jose-pq-composite-sigs-04 (2026-09-10; intended Proposed Standard); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON Web Proof",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-jose-json-web-proof-14",
+      "status": "WG draft",
+      "revision": "draft-ietf-jose-json-web-proof-14 (2026-07-20; intended Proposed Standard); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
       "title": "RFC 9068: JWT Profile for OAuth 2.0 Access Tokens",
       "url": "https://www.rfc-editor.org/rfc/rfc9068",
       "status": "RFC (Proposed Standard)",
@@ -158,7 +207,7 @@
       "url": "https://www.iana.org/assignments/jose/jose.xhtml",
       "status": "IANA registry",
       "revision": "last updated 2026-09-29",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "IANA JSON Web Token (JWT) registries",
