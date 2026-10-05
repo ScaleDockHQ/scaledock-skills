@@ -1,0 +1,233 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenSSF Open Source Project Security (OSPS) Baseline at release v2026.08.28: the eight control families (Access Control, Build and Release, Documentation, Governance, Legal, Quality, Security Assessment, Vulnerability Management), every assessment requirement by maturity level 1 to 3, how to scope, evidence and self-attest an assessment of a repository, and the published relates-to mappings to Scorecard, the EU CRA, NIST SSDF, CSF, SP 800-161, SLSA and other frameworks. It also covers OpenSSF Scorecard v5 (pinned at v5.5.0) as a family: the checks, their risk levels and scoring, the aggregate score, maintainer annotations, probes, and running Scorecard in CI with scorecard-action. Version lines: Baseline v2026.08.28 is current, the in-development version is tracked as a preview, and v2026.02.19, v2025.10.10 and v2025.02.25 are legacy; Scorecard v5 is current and Scorecard v4 is legacy. SKILL.md holds the invariants and workflow; references split out the version lines, Level 1 controls, Level 2 and 3 controls, the assessment and mappings, and Scorecard.",
+  "versions": [
+    {
+      "id": "devel-preview",
+      "label": "OSPS Baseline in-development",
+      "status": "preview",
+      "posture": "track",
+      "revision": "main at ca5dbf3 (2026-10-02): OSPS-VM-05.01 split into VM-05.04 and VM-05.05, OSPS-AC-03.02 clarified"
+    },
+    {
+      "id": "2026.08.28",
+      "label": "OSPS Baseline v2026.08.28",
+      "status": "current",
+      "revision": "v2026.08.28 (2026-08-28)",
+      "reference": "references/controls-level-1.md"
+    },
+    {
+      "id": "2026.02.19",
+      "label": "OSPS Baseline v2026.02.19",
+      "status": "legacy",
+      "revision": "v2026.02.19 (2026-02-19)"
+    },
+    {
+      "id": "2025.10.10",
+      "label": "OSPS Baseline v2025.10.10",
+      "status": "legacy",
+      "revision": "v2025.10.10 (2025-10-10)"
+    },
+    {
+      "id": "2025.02.25",
+      "label": "OSPS Baseline v2025.02.25",
+      "status": "legacy",
+      "revision": "v2025.02.25 (2025-02-25, initial release)"
+    },
+    {
+      "id": "scorecard-v5",
+      "label": "OpenSSF Scorecard v5",
+      "status": "current",
+      "family": "scorecard",
+      "revision": "v5.5.0 (2026-04-23); scorecard-action v2.4.4 (2026-07-23)",
+      "reference": "references/scorecard.md"
+    },
+    {
+      "id": "scorecard-v4",
+      "label": "OpenSSF Scorecard v4",
+      "status": "legacy",
+      "family": "scorecard",
+      "revision": "v4.13.1 (2023-10-20)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Source Project Security Baseline (home and versions index)",
+      "url": "https://baseline.openssf.org/",
+      "status": "Released",
+      "revision": "lists v2026.08.28 as current; v2026.02.19, v2025.10.10 and v2025.02.25 as previous; an in-development version",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2026.08.28",
+      "url": "https://baseline.openssf.org/versions/2026-08-28",
+      "status": "Released (current)",
+      "revision": "v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2026.08.28 checklist",
+      "url": "https://baseline.openssf.org/versions/2026-08-28-checklist",
+      "status": "Released (current)",
+      "revision": "v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2026.08.28 external framework crosswalk",
+      "url": "https://baseline.openssf.org/versions/2026-08-28-crosswalk",
+      "status": "Released (current)",
+      "revision": "v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline control catalog (baseline/*.yaml)",
+      "url": "https://github.com/ossf/security-baseline/tree/v2026.08.28/baseline",
+      "status": "Released",
+      "revision": "tag v2026.08.28 (Gemara 1.2.0 ControlCatalog)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline mapping documents (baseline/mappings/*.yaml)",
+      "url": "https://github.com/ossf/security-baseline/tree/v2026.08.28/baseline/mappings",
+      "status": "Released (mappings marked draft)",
+      "revision": "tag v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline release v2026.08.28",
+      "url": "https://github.com/ossf/security-baseline/releases/tag/v2026.08.28",
+      "status": "Released",
+      "revision": "v2026.08.28 (2026-08-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline release notes",
+      "url": "https://baseline.openssf.org/release_notes",
+      "status": "Released",
+      "revision": "entries for 2026-08-28, 2026-02-19, 2025-10-10 and 2025-02-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2026.02.19",
+      "url": "https://baseline.openssf.org/versions/2026-02-19",
+      "status": "Released (previous)",
+      "revision": "v2026.02.19",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2025.10.10",
+      "url": "https://baseline.openssf.org/versions/2025-10-10",
+      "status": "Released (previous)",
+      "revision": "v2025.10.10",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline v2025.02.25",
+      "url": "https://baseline.openssf.org/versions/2025-02-25",
+      "status": "Released (previous)",
+      "revision": "v2025.02.25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline in-development version",
+      "url": "https://baseline.openssf.org/versions/devel",
+      "status": "In development",
+      "revision": "main at ca5dbf3 (2026-10-02); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline Maintenance Process",
+      "url": "https://baseline.openssf.org/maintenance",
+      "status": "Process document",
+      "revision": "as of v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline FAQ",
+      "url": "https://baseline.openssf.org/faq",
+      "status": "Documentation",
+      "revision": "as of v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OSPS Baseline Maintainer Guidance",
+      "url": "https://baseline.openssf.org/maintainers",
+      "status": "Documentation",
+      "revision": "as of v2026.08.28",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard check documentation",
+      "url": "https://github.com/ossf/scorecard/blob/v5.5.0/docs/checks.md",
+      "status": "Released",
+      "revision": "v5.5.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard README (checks table, scoring, CLI)",
+      "url": "https://github.com/ossf/scorecard/blob/v5.5.0/README.md",
+      "status": "Released",
+      "revision": "v5.5.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard release v5.5.0",
+      "url": "https://github.com/ossf/scorecard/releases/tag/v5.5.0",
+      "status": "Released (latest)",
+      "revision": "v5.5.0 (2026-04-23)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard release v5.0.0",
+      "url": "https://github.com/ossf/scorecard/releases/tag/v5.0.0",
+      "status": "Released",
+      "revision": "v5.0.0 (2024-07-19)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard v4 check documentation",
+      "url": "https://github.com/ossf/scorecard/blob/v4.13.1/docs/checks.md",
+      "status": "Released (superseded)",
+      "revision": "v4.13.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard maintainer annotations",
+      "url": "https://github.com/ossf/scorecard/blob/v5.5.0/config/README.md",
+      "status": "Released",
+      "revision": "v5.5.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard OSPS Baseline coverage analysis",
+      "url": "https://github.com/ossf/scorecard/blob/v5.5.0/docs/osps-baseline-coverage.md",
+      "status": "Living document",
+      "revision": "v5.5.0, analysed against Baseline v2026.02.19",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenSSF Scorecard roadmap (Scorecard v6)",
+      "url": "https://github.com/ossf/scorecard/blob/v5.5.0/docs/ROADMAP.md",
+      "status": "Roadmap",
+      "revision": "v5.5.0 (2026 roadmap)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scorecard GitHub Action",
+      "url": "https://github.com/ossf/scorecard-action",
+      "status": "Released",
+      "revision": "v2.4.4 (2026-07-23, runs Scorecard v5.5.0)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "scorecard.dev",
+      "url": "https://scorecard.dev/",
+      "status": "Project site",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
