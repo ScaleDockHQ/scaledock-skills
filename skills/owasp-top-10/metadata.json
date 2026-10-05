@@ -1,0 +1,204 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Turns the OWASP Top 10:2025 (A01:2025 to A10:2025, final release December 2025) into a review and prioritization workflow for web applications. The 2025 edition is current; the 2021 and 2017 editions are legacy; no newer edition or release candidate exists, so there is no preview. SKILL.md holds the access control, injection, configuration, supply chain, cryptography, authentication, integrity, logging and fail-closed invariants and the review workflow; references cover the version lines with the 2021 to 2025 and 2017 to 2021 mappings, each category with its data, description, prevention, scenarios and mapped CWEs, and a checklist with a classification table for borderline findings.",
+  "versions": [
+    {
+      "id": "2025",
+      "label": "OWASP Top 10:2025",
+      "status": "current",
+      "revision": "2025 edition, final release 24 December 2025"
+    },
+    {
+      "id": "2021",
+      "label": "OWASP Top 10:2021",
+      "status": "legacy",
+      "revision": "2021 edition, released 24 September 2021, v1.1 13 July 2025"
+    },
+    {
+      "id": "2017",
+      "label": "OWASP Top 10:2017",
+      "status": "legacy",
+      "revision": "2017 edition, 20 November 2017"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP Top 10:2025 (home)",
+      "url": "https://owasp.org/Top10/2025/",
+      "status": "released (final)",
+      "revision": "2025 edition (24 December 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2025 Introduction",
+      "url": "https://owasp.org/Top10/2025/0x00_2025-Introduction/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2025 What are Application Security Risks?",
+      "url": "https://owasp.org/Top10/2025/0x02_2025-What_are_Application_Security_Risks/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2025 Establishing a Modern Application Security Program",
+      "url": "https://owasp.org/Top10/2025/0x03_2025-Establishing_a_Modern_Application_Security_Program/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A01:2025 Broken Access Control",
+      "url": "https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A02:2025 Security Misconfiguration",
+      "url": "https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A03:2025 Software Supply Chain Failures",
+      "url": "https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A04:2025 Cryptographic Failures",
+      "url": "https://owasp.org/Top10/2025/A04_2025-Cryptographic_Failures/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A05:2025 Injection",
+      "url": "https://owasp.org/Top10/2025/A05_2025-Injection/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A06:2025 Insecure Design",
+      "url": "https://owasp.org/Top10/2025/A06_2025-Insecure_Design/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A07:2025 Authentication Failures",
+      "url": "https://owasp.org/Top10/2025/A07_2025-Authentication_Failures/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A08:2025 Software or Data Integrity Failures",
+      "url": "https://owasp.org/Top10/2025/A08_2025-Software_or_Data_Integrity_Failures/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A09:2025 Security Logging and Alerting Failures",
+      "url": "https://owasp.org/Top10/2025/A09_2025-Security_Logging_and_Alerting_Failures/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A10:2025 Mishandling of Exceptional Conditions",
+      "url": "https://owasp.org/Top10/2025/A10_2025-Mishandling_of_Exceptional_Conditions/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2025 Next Steps (X01 to X03)",
+      "url": "https://owasp.org/Top10/2025/X01_2025-Next_Steps/",
+      "status": "released",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10:2021 (home)",
+      "url": "https://owasp.org/Top10/2021/",
+      "status": "superseded by 2025",
+      "revision": "2021 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2021 Introduction",
+      "url": "https://owasp.org/Top10/2021/A00_2021_Introduction/",
+      "status": "superseded by 2025",
+      "revision": "2021 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2021 Notice (release dates)",
+      "url": "https://owasp.org/Top10/2021/0x00_2021-notice/",
+      "status": "superseded by 2025",
+      "revision": "released 24 September 2021, v1.1 13 July 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "2021 How to use the OWASP Top 10 as a standard",
+      "url": "https://owasp.org/Top10/2021/A00_2021_How_to_use_the_OWASP_Top_10_as_a_standard/",
+      "status": "superseded by 2025",
+      "revision": "2021 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top Ten 2017 (table of contents)",
+      "url": "https://owasp.org/www-project-top-ten/2017/",
+      "status": "historic",
+      "revision": "2017 edition (20 November 2017)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 2017 list",
+      "url": "https://github.com/OWASP/Top10/blob/master/2017/en/0x11-t10.md",
+      "status": "historic",
+      "revision": "2017 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 2017 release notes",
+      "url": "https://github.com/OWASP/Top10/blob/master/2017/en/0x06-release-notes.md",
+      "status": "historic",
+      "revision": "2017 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top Ten (project page)",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "status": "OWASP flagship documentation project",
+      "revision": "redirects to owasp.org/projects/top-ten; latest version 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP/www-project-top-ten (project page source)",
+      "url": "https://github.com/OWASP/www-project-top-ten",
+      "status": "project page source",
+      "revision": "latest commit 24 December 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP/Top10 (repository)",
+      "url": "https://github.com/OWASP/Top10",
+      "status": "source of the published editions",
+      "revision": "master at 3a31f35 (24 September 2026)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
