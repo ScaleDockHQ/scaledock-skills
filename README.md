@@ -66,15 +66,16 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### APIs and HTTP
 
-| Skill                                           | Description                                                                                                                                        |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`http-semantics`](skills/http-semantics)       | HTTP Semantics RFC 9110 and Caching RFC 9111: methods, status codes, conditionals, caching and API fields, with upgrades from RFC 7230-7235.       |
-| [`openapi`](skills/openapi)                     | OpenAPI 3.0 to 3.2: write, validate and upgrade API descriptions, with Swagger 2.0 upgrades and the 3.3 preview.                                   |
-| [`openapi-arazzo`](skills/openapi-arazzo)       | Arazzo 1.1 and 1.0: describe and run multi-step workflows over OpenAPI and AsyncAPI operations, with the 1.2 preview.                              |
-| [`openapi-overlay`](skills/openapi-overlay)     | OpenAPI Overlay 1.2 and 1.1: apply repeatable JSONPath changes to OpenAPI documents, with upgrades from 1.0.                                       |
-| [`problem-details`](skills/problem-details)     | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json` with the `WWW-Authenticate` challenge, with upgrades from RFC 7807. |
-| [`ratelimit-headers`](skills/ratelimit-headers) | IETF RateLimit and RateLimit-Policy headers (draft-11), `Retry-After` and 429 handling, with upgrades from older drafts and `X-RateLimit-*`.       |
-| [`typespec`](skills/typespec)                   | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                              |
+| Skill                                                       | Description                                                                                                                                        |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`http-message-signatures`](skills/http-message-signatures) | RFC 9421 HTTP Message Signatures: sign and verify HTTP messages, with RFC 9530 digests and upgrades from cavage-12 and RFC 3230.                   |
+| [`http-semantics`](skills/http-semantics)                   | HTTP Semantics RFC 9110 and Caching RFC 9111: methods, status codes, conditionals, caching and API fields, with upgrades from RFC 7230-7235.       |
+| [`openapi`](skills/openapi)                                 | OpenAPI 3.0 to 3.2: write, validate and upgrade API descriptions, with Swagger 2.0 upgrades and the 3.3 preview.                                   |
+| [`openapi-arazzo`](skills/openapi-arazzo)                   | Arazzo 1.1 and 1.0: describe and run multi-step workflows over OpenAPI and AsyncAPI operations, with the 1.2 preview.                              |
+| [`openapi-overlay`](skills/openapi-overlay)                 | OpenAPI Overlay 1.2 and 1.1: apply repeatable JSONPath changes to OpenAPI documents, with upgrades from 1.0.                                       |
+| [`problem-details`](skills/problem-details)                 | RFC 9457 Problem Details: return HTTP API errors as `application/problem+json` with the `WWW-Authenticate` challenge, with upgrades from RFC 7807. |
+| [`ratelimit-headers`](skills/ratelimit-headers)             | IETF RateLimit and RateLimit-Policy headers (draft-11), `Retry-After` and 429 handling, with upgrades from older drafts and `X-RateLimit-*`.       |
+| [`typespec`](skills/typespec)                               | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                              |
 
 #### Events and data
 
@@ -91,9 +92,11 @@ Neutral skills, one per specification or family of specifications from one publi
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP evaluation, batch, search and PDP metadata, with upgrades from the Implementer's Draft.                     |
 | [`cedar`](skills/cedar)                         | Cedar 4.x (language 4.5): write, validate and evaluate authorization policies and schemas, with upgrades from Cedar 3.x and 2.x.                      |
+| [`ciba`](skills/ciba)                           | OpenID CIBA Core 1.0: decoupled sign-in with poll, ping and push delivery, with upgrades from the Implementer's Drafts and MODRNA.                    |
 | [`fapi`](skills/fapi)                           | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, with FAPI 1.0 upgrades, JARM and CIBA.                   |
 | [`gnap`](skills/gnap)                           | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                                        |
 | [`jwt`](skills/jwt)                             | JWT and JOSE RFCs: verify and issue JWS, JWE and JWK safely, with the RFC 8725bis and `none`/`RSA1_5` deprecation previews.                           |
+| [`nist-800-63`](skills/nist-800-63)             | NIST SP 800-63-4: build sign-in, MFA, passkeys, recovery, sessions, proofing and federation to IAL, AAL and FAL, with upgrades from SP 800-63-3.      |
 | [`oauth`](skills/oauth)                         | OAuth 2.0 with RFC 9700 and the OAuth 2.1 draft as a build preview: resource servers, clients and authorization servers, with PKCE, DPoP and RAR.     |
 | [`openid`](skills/openid)                       | Every OpenID Foundation spec, maturity level and errata set under the OIDF Process, routed to the right family reference or dedicated skill.          |
 | [`openid-connect`](skills/openid-connect)       | OpenID Connect 1.0 (errata set 2): validate ID tokens and run login, logout and discovery, with OpenID 2.0 migration.                                 |
@@ -101,15 +104,20 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openid4vc`](skills/openid4vc)                 | OpenID4VCI, OpenID4VP and HAIP 1.0: issue and verify credentials, with upgrades from the Implementer's Drafts and the 1.1 previews.                   |
 | [`saml`](skills/saml)                           | SAML 2.0 with Errata 05: build SSO requests, responses and metadata, and validate responses against wrapping and replay, with upgrades from SAML 1.1. |
 | [`scim`](skills/scim)                           | SCIM 2.0: provision users and groups with RFC 7643 and RFC 7644, including cursor pagination and security events, with SCIM 1.1 upgrades.             |
+| [`sd-jwt`](skills/sd-jwt)                       | RFC 9901 SD-JWT: selective disclosure, Key Binding and verification, plus SD-JWT VC and Token Status List, with upgrades from pre-RFC drafts.         |
 | [`shared-signals`](skills/shared-signals)       | SSF 1.0, CAEP 1.0 and RISC 1.0: send and receive security events, with upgrades from the Implementer's Drafts.                                        |
 | [`spiffe`](skills/spiffe)                       | SPIFFE and SPIRE: issue and verify workload identities, SVIDs, trust bundles and federation, with the Incubating WIT-SVID and Broker preview.         |
 | [`webauthn`](skills/webauthn)                   | WebAuthn Level 3 (Level 2 supported): register and verify passkeys and security keys per § 7.1 and § 7.2, with upgrades from Level 1.                 |
+| [`wimse`](skills/wimse)                         | WIMSE drafts: authenticate service-to-service calls with WIT, WPT, HTTP signatures or mTLS, with upgrades from s2s-protocol.                          |
 
 #### Security and supply chain
 
-| Skill                                   | Description                                                                                              |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [`owasp-agentic`](skills/owasp-agentic) | OWASP Top 10 for Agentic Applications 2026 (first edition): review AI agent apps against ASI01 to ASI10. |
+| Skill                                             | Description                                                                                                                                  |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`owasp-agentic`](skills/owasp-agentic)           | OWASP Top 10 for Agentic Applications 2026 (first edition): review AI agent apps against ASI01 to ASI10.                                     |
+| [`owasp-api-security`](skills/owasp-api-security) | OWASP API Security Top 10 2023: review HTTP, GraphQL and RPC APIs against API1 to API10, with upgrades from the 2019 edition.                |
+| [`owasp-asvs`](skills/owasp-asvs)                 | OWASP ASVS 5.0.0: scope, cite and verify security requirements by level and chapter, with upgrades from 4.0.3.                               |
+| [`owasp-llm`](skills/owasp-llm)                   | OWASP Top 10 for LLM Applications 2026: review LLM apps, RAG and tool use entry by entry with mitigations, with upgrades from 2025 and v1.1. |
 
 #### Observability and operations
 
