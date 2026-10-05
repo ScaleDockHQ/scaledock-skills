@@ -1,0 +1,296 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers IETF Selective Disclosure for JWTs (RFC 9901): Issuer-signed JWTs with _sd digests, _sd_alg, object and array element Disclosures, decoy digests, recursive disclosures, the tilde-separated compact serialization and the JWS JSON serialization, Key Binding JWTs with sd_hash, the Issuer, Holder and Verifier processing rules, and the security and privacy considerations. It also covers two companion IETF OAuth WG drafts as their own version families, both with a build posture: SD-JWT-based Verifiable Digital Credentials (draft-ietf-oauth-sd-jwt-vc-19: dc+sd-jwt, vct, aka_vcts, JWT VC Issuer Metadata, x5c, Type Metadata and integrity) and Token Status List (draft-ietf-oauth-status-list-21, in the RFC Editor queue: Status List Tokens, the status claim, bits, DEFLATE/ZLIB compression and Referenced Token validation). Pre-RFC SD-JWT drafts and older SD-JWT VC and Status List revisions are legacy lines with upgrade checklists. SKILL.md holds the invariants and workflow; references split out versions, issuance and disclosures, presentation and key binding, verification, SD-JWT VC and the status list.",
+  "versions": [
+    {
+      "id": "rfc9901",
+      "label": "RFC 9901",
+      "status": "current",
+      "family": "sd-jwt",
+      "revision": "RFC 9901, Proposed Standard (November 2025)",
+      "reference": "references/issuance-and-disclosures.md"
+    },
+    {
+      "id": "sd-jwt-draft-09",
+      "label": "SD-JWT drafts -09 to -22",
+      "status": "legacy",
+      "family": "sd-jwt",
+      "revision": "draft-ietf-oauth-selective-disclosure-jwt-09 to -22 (13 June 2024 to 29 May 2025)"
+    },
+    {
+      "id": "sd-jwt-draft-07",
+      "label": "SD-JWT drafts -07 and -08",
+      "status": "legacy",
+      "family": "sd-jwt",
+      "revision": "draft-ietf-oauth-selective-disclosure-jwt-07 and -08 (11 December 2023 to 4 March 2024)"
+    },
+    {
+      "id": "sd-jwt-draft-05",
+      "label": "SD-JWT drafts -05 and -06",
+      "status": "legacy",
+      "family": "sd-jwt",
+      "revision": "draft-ietf-oauth-selective-disclosure-jwt-05 and -06 (30 June 2023 to 23 October 2023)"
+    },
+    {
+      "id": "sd-jwt-draft-04",
+      "label": "SD-JWT drafts -04 and earlier",
+      "status": "legacy",
+      "family": "sd-jwt",
+      "revision": "draft-ietf-oauth-selective-disclosure-jwt-00 to -04 (to 11 April 2023) and the pre-adoption individual drafts"
+    },
+    {
+      "id": "sd-jwt-vc-draft-19",
+      "label": "SD-JWT VC draft-19",
+      "status": "current",
+      "posture": "build",
+      "family": "sd-jwt-vc",
+      "revision": "draft-ietf-oauth-sd-jwt-vc-19 (31 August 2026), submitted to the IESG",
+      "reference": "references/sd-jwt-vc.md"
+    },
+    {
+      "id": "sd-jwt-vc-draft-12",
+      "label": "SD-JWT VC drafts -12 to -18",
+      "status": "legacy",
+      "family": "sd-jwt-vc",
+      "revision": "draft-ietf-oauth-sd-jwt-vc-12 to -18 (20 October 2025 to 3 August 2026)"
+    },
+    {
+      "id": "sd-jwt-vc-draft-06",
+      "label": "SD-JWT VC drafts -06 to -11",
+      "status": "legacy",
+      "family": "sd-jwt-vc",
+      "revision": "draft-ietf-oauth-sd-jwt-vc-06 to -11 (13 November 2024 to 15 September 2025)"
+    },
+    {
+      "id": "sd-jwt-vc-draft-05",
+      "label": "SD-JWT VC drafts -05 and earlier",
+      "status": "legacy",
+      "family": "sd-jwt-vc",
+      "revision": "draft-ietf-oauth-sd-jwt-vc-00 to -05 (16 August 2023 to 18 September 2024), typ vc+sd-jwt"
+    },
+    {
+      "id": "status-list-draft-21",
+      "label": "Token Status List draft-21",
+      "status": "current",
+      "posture": "build",
+      "family": "status-list",
+      "revision": "draft-ietf-oauth-status-list-21 (21 June 2026), in the RFC Editor queue",
+      "reference": "references/status-list.md"
+    },
+    {
+      "id": "status-list-draft-06",
+      "label": "Token Status List drafts -06 to -20",
+      "status": "legacy",
+      "family": "status-list",
+      "revision": "draft-ietf-oauth-status-list-06 to -20 (3 December 2024 to 20 April 2026)"
+    },
+    {
+      "id": "status-list-draft-01",
+      "label": "Token Status List drafts -01 to -05",
+      "status": "legacy",
+      "family": "status-list",
+      "revision": "draft-ietf-oauth-status-list-01 to -05 (6 February 2024 to 21 October 2024)"
+    },
+    {
+      "id": "status-list-draft-00",
+      "label": "Token Status List draft-00",
+      "status": "legacy",
+      "family": "status-list",
+      "revision": "draft-ietf-oauth-status-list-00 (23 October 2023)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9901: Selective Disclosure for JSON Web Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc9901.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9901 (November 2025), from draft-ietf-oauth-selective-disclosure-jwt-22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC Editor metadata for RFC 9901",
+      "url": "https://www.rfc-editor.org/rfc/rfc9901.json",
+      "status": "RFC Editor record",
+      "revision": "no errata, not updated or obsoleted",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-22)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-22.txt",
+      "status": "WG draft (IETF OAuth), became RFC 9901",
+      "revision": "revision 22 of 29 May 2025, with the Document History for -00 to -22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-20)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-20.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 20 of 27 May 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-09)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-09.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 09 of 13 June 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-08)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-08.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 08 of 4 March 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-07)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-07.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 07 of 11 December 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-06)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-06.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 06 of 23 October 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-05)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-05.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 05 of 30 June 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Selective Disclosure for JWTs (draft-ietf-oauth-selective-disclosure-jwt-04)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-04.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 04 of 11 April 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT-based Verifiable Digital Credentials (draft-ietf-oauth-sd-jwt-vc-19)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-19.txt",
+      "status": "WG draft (IETF OAuth), submitted to the IESG for publication",
+      "revision": "revision 19 of 31 August 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Datatracker API: draft-ietf-oauth-sd-jwt-vc",
+      "url": "https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-oauth-sd-jwt-vc/",
+      "status": "Active WG draft; IESG state Waiting for AD Go-Ahead; no RFC",
+      "revision": "rev 19 latest",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT VC (draft-ietf-oauth-sd-jwt-vc-12)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-12.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 12 of 20 October 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT VC (draft-ietf-oauth-sd-jwt-vc-11)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-11.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 11 of 15 September 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT VC (draft-ietf-oauth-sd-jwt-vc-06)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-06.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 06 of 13 November 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT VC (draft-ietf-oauth-sd-jwt-vc-05)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-05.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 05 of 18 September 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SD-JWT VC (draft-ietf-oauth-sd-jwt-vc-00)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-00.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 00 of 16 August 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-21)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-21.txt",
+      "status": "WG draft (IETF OAuth), approved, in the RFC Editor queue",
+      "revision": "revision 21 of 21 June 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Datatracker API: draft-ietf-oauth-status-list",
+      "url": "https://datatracker.ietf.org/api/v1/doc/document/draft-ietf-oauth-status-list/",
+      "status": "Active WG draft; IESG state RFC Ed Queue; RFC Editor state In Progress",
+      "revision": "rev 21 latest",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Datatracker API: became_rfc relation for draft-ietf-oauth-status-list",
+      "url": "https://datatracker.ietf.org/api/v1/doc/relateddocument/?source__name=draft-ietf-oauth-status-list&relationship__slug=became_rfc",
+      "status": "Datatracker relation query",
+      "revision": "0 results: no RFC published",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC Editor queue (XML)",
+      "url": "https://www.rfc-editor.org/queue2.xml",
+      "status": "RFC Editor queue",
+      "revision": "lists draft-ietf-oauth-status-list-20.txt, received 2026-06-04; draft-ietf-oauth-sd-jwt-vc not listed",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-20)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-20.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 20 of 20 April 2026, with the Document History for -00 to -20",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-06)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-06.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 06 of 3 December 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-05)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-05.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 05 of 21 October 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-03)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 03 of 8 July 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Token Status List (draft-ietf-oauth-status-list-01)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-01.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 01 of 6 February 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OAuth Status List (draft-ietf-oauth-status-list-00)",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-00.txt",
+      "status": "WG draft (IETF OAuth), superseded",
+      "revision": "revision 00 of 23 October 2023",
+      "checked": "2026-10-05"
+    }
+  ]
+}
