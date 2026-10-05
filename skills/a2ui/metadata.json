@@ -1,0 +1,205 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers A2UI (Agent-to-User Interface), the declarative, streaming JSON protocol in which agents describe UI that renderers draw from a trusted component catalog. Version lines: A2UI v0.9 is current at its v0.9.1 patch (the repository's current production release), A2UI v1.0 is a release candidate built behind a flag, and A2UI v0.8 is legacy, with upgrade steps from v0.8 to v0.9 and from v0.9 to v1.0. All pins are files in the a2ui-project/a2ui repository at main 3db3b41 (2026-10-05), plus a2ui.org. SKILL.md holds the invariants and workflow; references split out the version lines, the message envelopes, components and catalogs, data binding and actions, and transports and security.",
+  "versions": [
+    {
+      "id": "1.0-preview",
+      "label": "A2UI v1.0",
+      "status": "preview",
+      "posture": "build",
+      "revision": "v1.0 Candidate (spec last updated 2026-06-08; schemas at main 3db3b41, 2026-10-05)"
+    },
+    {
+      "id": "0.9",
+      "label": "A2UI v0.9",
+      "status": "current",
+      "revision": "v0.9.1 Current Production (spec last updated 2025-12-03); accepts v0.9 payloads"
+    },
+    {
+      "id": "0.8",
+      "label": "A2UI v0.8",
+      "status": "legacy",
+      "revision": "v0.8.2, closed (protocol doc updated 2025-11-12)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A2UI repository README",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/README.md",
+      "status": "Early stage public preview",
+      "revision": "main at 3db3b41 (2026-10-05): v0.9.1 current production, v1.0 release candidate, v0.8 legacy",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI website",
+      "url": "https://a2ui.org/",
+      "status": "Project site",
+      "revision": "lists v0.9.1 (Current), v1.0 (Candidate), v0.8 (Legacy)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI roadmap",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/roadmap.md",
+      "status": "Documentation",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Protocol v0.9.1",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/docs/a2ui_protocol.md",
+      "status": "Current Production (closed)",
+      "revision": "v0.9.1, last updated 2025-12-03",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Evolution Guide v0.9 to v0.9.1",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/docs/evolution_guide.md",
+      "status": "Current Production (closed)",
+      "revision": "v0.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI A2A Extension spec v0.9.1",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/docs/a2ui_extension_specification.md",
+      "status": "Current Production (closed)",
+      "revision": "v0.9.1, extension URI https://a2ui.org/a2a-extension/a2ui/v0.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v0.9.1 JSON schemas",
+      "url": "https://github.com/a2ui-project/a2ui/tree/main/specification/v0_9_1/json",
+      "status": "Current Production (closed)",
+      "revision": "server_to_client, client_to_server, common_types, capabilities and data model schemas at main 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v0.9.1 basic catalog",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/catalogs/basic/catalog.json",
+      "status": "Current Production (closed)",
+      "revision": "catalogId https://a2ui.org/specification/v0_9/catalogs/basic/catalog.json",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v0.9.1 Basic Catalog Implementation Guide",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/docs/basic_catalog_implementation_guide.md",
+      "status": "Current Production (closed)",
+      "revision": "v0.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v0.9.1 Defining Custom Functions",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9_1/docs/a2ui_custom_functions.md",
+      "status": "Current Production (closed)",
+      "revision": "v0.9.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Protocol v0.9",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9/docs/a2ui_protocol.md",
+      "status": "Stable (closed)",
+      "revision": "v0.9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Evolution Guide v0.8.1 to v0.9",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_9/docs/evolution_guide.md",
+      "status": "Stable (closed)",
+      "revision": "v0.9",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Protocol v1.0",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v1_0/docs/a2ui_protocol.md",
+      "status": "Candidate",
+      "revision": "v1.0, last updated 2026-06-08; main at 3db3b41; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Evolution Guide v0.9 to v1.0",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v1_0/docs/evolution_guide.md",
+      "status": "Candidate",
+      "revision": "main at 3db3b41; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI A2A Extension spec v1.0",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v1_0/extensions/a2a/docs/a2ui_extension_specification.md",
+      "status": "Candidate",
+      "revision": "extension URI https://a2ui.org/a2a-extension/a2ui/v1.0; main at 3db3b41; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v1.0 JSON schemas",
+      "url": "https://github.com/a2ui-project/a2ui/tree/main/specification/v1_0/json",
+      "status": "Candidate",
+      "revision": "agent_to_renderer, renderer_to_agent, common_types, catalog_definition and capabilities schemas at main 3db3b41; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI v1.0 basic catalog",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/catalogs/basic/v1/catalog.json",
+      "status": "Candidate",
+      "revision": "catalogId https://a2ui.org/specification/v1_0/catalogs/basic/catalog.json, protocolVersion 1.0; Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Protocol v0.8.2",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_8/docs/a2ui_protocol.md",
+      "status": "Closed (legacy)",
+      "revision": "v0.8.2, updated 2025-11-12",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI A2A Extension spec v0.8",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/specification/v0_8/docs/a2ui_extension_specification.md",
+      "status": "Closed (legacy)",
+      "revision": "extension URI https://a2ui.org/a2a-extension/a2ui/v0.8",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI concepts: Actions (security considerations and orchestration)",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/concepts/actions.md",
+      "status": "Documentation",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI concepts: Catalogs",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/concepts/catalogs.md",
+      "status": "Documentation",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI concepts: Transports",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/concepts/transports.md",
+      "status": "Documentation",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI over Model Context Protocol (MCP)",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/guides/a2ui_over_mcp.md",
+      "status": "Guide",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Apps Integration in A2UI Surfaces",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/guides/mcp-apps-in-a2ui.md",
+      "status": "Guide",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A2UI Dynamic Rendering within MCP Applications",
+      "url": "https://github.com/a2ui-project/a2ui/blob/main/docs/public/guides/a2ui-in-mcp-apps.md",
+      "status": "Guide",
+      "revision": "main at 3db3b41",
+      "checked": "2026-10-05"
+    }
+  ]
+}
