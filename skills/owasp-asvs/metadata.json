@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OWASP Application Security Verification Standard (ASVS) 5.0.0: the three priority-based levels and how 5.0 redefined them, the 17 chapters V1 to V17 with their sections and key requirements, versioned requirement identifiers such as v5.0.0-1.2.5, documented security decisions, and using ASVS for requirements, verification reports and procurement. Version lines: 5.0.0 (released 2025-05-30) is current, 4.0.3 (2021-10-28) is legacy with an upgrade path through the official 4.0.3 to 5.0.0 mapping files, and the bleeding-edge master branch is tracked as a preview. SKILL.md holds the invariants and workflow; references split out the version lines, levels and usage, chapters V1 to V8, chapters V9 to V17, and the upgrade from 4.0.3.",
+  "versions": [
+    {
+      "id": "bleeding-edge-preview",
+      "label": "ASVS bleeding edge",
+      "status": "preview",
+      "posture": "track",
+      "revision": "master at 9b5da31 (2026-10-05); bleeding-edge release regenerated 2026-09-03"
+    },
+    {
+      "id": "5.0.0",
+      "label": "ASVS 5.0.0",
+      "status": "current",
+      "revision": "5.0.0 (2025-05-30, tag v5.0.0_release)"
+    },
+    {
+      "id": "4.0.3",
+      "label": "ASVS 4.0.3",
+      "status": "legacy",
+      "revision": "4.0.3 (2021-10-28, tag v4.0.3_release)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP ASVS releases",
+      "url": "https://github.com/OWASP/ASVS/releases",
+      "status": "Released",
+      "revision": "v5.0.0_release (2025-05-30) latest stable; latest (bleeding edge) regenerated 2026-09-03; v4.0.3_release (2021-10-28)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP ASVS 5.0.0 (English markdown)",
+      "url": "https://github.com/OWASP/ASVS/tree/v5.0.0_release/5.0/en",
+      "status": "Released (stable)",
+      "revision": "5.0.0, tag v5.0.0_release",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS 5.0.0: What is the ASVS?",
+      "url": "https://github.com/OWASP/ASVS/blob/v5.0.0_release/5.0/en/0x03-What-is-the-ASVS.md",
+      "status": "Released (stable)",
+      "revision": "5.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS 5.0.0: Assessment and Certification",
+      "url": "https://github.com/OWASP/ASVS/blob/v5.0.0_release/5.0/en/0x04-Assessment_and_Certification.md",
+      "status": "Released (stable)",
+      "revision": "5.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS 5.0.0: Changes Compared to v4.x",
+      "url": "https://github.com/OWASP/ASVS/blob/v5.0.0_release/5.0/en/0x05-For-Users-Of-4.0.md",
+      "status": "Released (stable)",
+      "revision": "5.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS 5.0.0 flat JSON requirement list",
+      "url": "https://github.com/OWASP/ASVS/blob/v5.0.0_release/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json",
+      "status": "Released (stable)",
+      "revision": "5.0.0, 345 requirements",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS mapping files between 4.0.3 and 5.0.0",
+      "url": "https://github.com/OWASP/ASVS/tree/master/5.0/mappings",
+      "status": "Maintained on master (not tied to release versioning)",
+      "revision": "master at 9b5da31 (2026-10-05)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP ASVS 4.0.3 (English markdown)",
+      "url": "https://github.com/OWASP/ASVS/tree/v4.0.3_release/4.0/en",
+      "status": "Released (superseded)",
+      "revision": "4.0.3, tag v4.0.3_release",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ASVS 4.0.3: Using the ASVS",
+      "url": "https://github.com/OWASP/ASVS/blob/v4.0.3_release/4.0/en/0x03-Using-ASVS.md",
+      "status": "Released (superseded)",
+      "revision": "4.0.3",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP ASVS master branch (5.0 bleeding edge)",
+      "url": "https://github.com/OWASP/ASVS/tree/master/5.0/en",
+      "status": "Bleeding edge (testing and preview only)",
+      "revision": "master at 9b5da31 (2026-10-05); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Application Security Verification Standard project page",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "status": "OWASP Flagship Project",
+      "revision": "latest stable 5.0.0",
+      "checked": "2026-10-05"
+    }
+  ]
+}
