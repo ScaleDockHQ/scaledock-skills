@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OASIS SAML 2.0 for single sign-on: assertions, the request and response protocols, the HTTP-Redirect, HTTP-POST and HTTP-Artifact bindings, the Web Browser SSO and Single Logout profiles, metadata, and the secure validation of responses. SAML 2.0 is current, pinned to the 15 March 2005 OASIS Standard with Approved Errata 05 (1 May 2012); SAML 1.1 is legacy, with an upgrade path to 2.0. XML Signature 1.1, Exclusive XML Canonicalization and the XML Signature Best Practices are dependency sources. References are split into versions, assertions and protocol, bindings and profiles, metadata, and the response validation checklist.",
+  "versions": [
+    {
+      "id": "2.0",
+      "label": "SAML 2.0",
+      "status": "current",
+      "revision": "OASIS Standard, 15 March 2005, with Approved Errata 05 (2012-05-01)"
+    },
+    {
+      "id": "1.1",
+      "label": "SAML 1.1",
+      "status": "legacy",
+      "revision": "OASIS Standard, 2 September 2003 (oasis-sstc-saml-core-1.1)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-core-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Bindings for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-bindings-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Profiles for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-profiles-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-profiles-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Metadata for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-metadata-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Security and Privacy Considerations for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-sec-consider-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-sec-consider-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Conformance Requirements for the OASIS Security Assertion Markup Language (SAML) V2.0",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/saml-conformance-2.0-os.pdf",
+      "status": "OASIS Standard",
+      "revision": "saml-conformance-2.0-os (2005-03-15)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SAML Version 2.0 Errata 05",
+      "url": "https://docs.oasis-open.org/security/saml/v2.0/errata05/os/saml-v2.0-errata05-os.pdf",
+      "status": "OASIS Approved Errata",
+      "revision": "saml-v2.0-errata05-os (2012-05-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Assertions and Protocols for SAML V2.0 – Errata Composite",
+      "url": "https://groups.oasis-open.org/higherlogic/ws/public/download/56776/sstc-saml-core-errata-2.0-wd-07.pdf/latest",
+      "status": "Working Draft (non-normative)",
+      "revision": "sstc-saml-core-errata-2.0-wd-07 (2015-09-08)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Assertions and Protocol for the OASIS Security Assertion Markup Language (SAML) V1.1",
+      "url": "https://www.oasis-open.org/committees/download.php/3406/oasis-sstc-saml-core-1.1.pdf",
+      "status": "OASIS Standard",
+      "revision": "oasis-sstc-saml-core-1.1 (2003-09-02)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OASIS Security Services (SAML) TC",
+      "url": "https://www.oasis-open.org/committees/security/",
+      "status": "TC page (TC closed)",
+      "revision": "closed 2023-07-08",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "XML Signature Syntax and Processing Version 1.1",
+      "url": "https://www.w3.org/TR/xmldsig-core1/",
+      "status": "W3C Recommendation",
+      "revision": "2013-04-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Exclusive XML Canonicalization Version 1.0",
+      "url": "https://www.w3.org/TR/xml-exc-c14n/",
+      "status": "W3C Recommendation",
+      "revision": "2002-07-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "XML Signature Best Practices",
+      "url": "https://www.w3.org/TR/xmldsig-bestpractices/",
+      "status": "W3C Working Group Note",
+      "revision": "2013-04-11",
+      "checked": "2026-10-05"
+    }
+  ]
+}
