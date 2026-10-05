@@ -9,10 +9,12 @@
     "check": "pnpm format:check && pnpm validate",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
+    "inventory": "node scripts/inventory-standards.mjs",
     "prepare": "node scripts/prepare.ts",
     "sources:check": "node scripts/check-sources.mjs",
     "validate": "node scripts/validate-skills.mjs",
-    "verify": "pnpm check"
+    "verify": "pnpm check",
+    "versions:check": "node scripts/check-version-lines.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",

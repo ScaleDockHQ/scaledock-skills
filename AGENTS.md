@@ -6,21 +6,23 @@ This repo publishes agent skills: opinionated `scaledock-*` skills for ScaleDock
 
 The package manager is pnpm, pinned in `package.json`. Node is the major in `.node-version`.
 
-| Command              | What it does                                                                 |
-| -------------------- | ---------------------------------------------------------------------------- |
-| `pnpm install`       | Installs the dev tooling and the git hooks.                                  |
-| `pnpm validate`      | Checks every skill's frontmatter, versions, links, sources and README entry. |
-| `pnpm format`        | Formats the repo with oxfmt.                                                 |
-| `pnpm check`         | Runs `format:check` and `validate`.                                          |
-| `pnpm verify`        | The full gate. CI and the pre-push hook run it. Done means it passes.        |
-| `pnpm sources:check` | Fetches every spec skill source; lists dead links and stale `checked` dates. |
-| `pnpm dlx skills …`  | Runs the skills CLI, for example `pnpm dlx skills add . --list`.             |
+| Command               | What it does                                                                 |
+| --------------------- | ---------------------------------------------------------------------------- |
+| `pnpm install`        | Installs the dev tooling and the git hooks.                                  |
+| `pnpm validate`       | Checks every skill's frontmatter, versions, links, sources and README entry. |
+| `pnpm format`         | Formats the repo with oxfmt.                                                 |
+| `pnpm check`          | Runs `format:check` and `validate`.                                          |
+| `pnpm verify`         | The full gate. CI and the pre-push hook run it. Done means it passes.        |
+| `pnpm sources:check`  | Fetches every spec skill source; lists dead links and stale `checked` dates. |
+| `pnpm inventory`      | Pulls publisher indexes and writes `docs/standards-inventory.md`.            |
+| `pnpm versions:check` | Compares publisher levels with each spec skill's `versions`.                 |
+| `pnpm dlx skills …`   | Runs the skills CLI, for example `pnpm dlx skills add . --list`.             |
 
 ## Layout
 
 - `skills/<name>/`: published skills. Each has `SKILL.md`, `README.md`, `metadata.json`, and optional `references/`, `scripts/` and `assets/`.
 - `template/skill/` and `template/standard-skill/`: the starting points for opinionated and spec skills.
-- `scripts/`: the validator, the source checker and the `prepare` hook installer.
+- `scripts/`: the validator, the source checker, the standards inventory and the `prepare` hook installer.
 - `docs/decisions/`: ADRs.
 - `.agents/skills/` and `skills-lock.json`: skills installed into this repo. They are committed so every contributor gets them; never gitignore them.
 

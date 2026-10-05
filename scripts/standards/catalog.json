@@ -1,0 +1,161 @@
+{
+  "entries": [
+    {
+      "id": "ecma-standards",
+      "publisher": "Ecma",
+      "title": "Ecma Standards",
+      "parser": "ecma-standards",
+      "url": "https://ecma-international.org/publications-and-standards/standards/",
+      "note": "One row per ECMA-N page linked from the standards index."
+    },
+    {
+      "id": "ecma-262",
+      "publisher": "Ecma",
+      "title": "ECMA-262 ECMAScript",
+      "parser": "github-release",
+      "repo": "tc39/ecma262",
+      "url": "https://tc39.es/ecma262/",
+      "note": "Latest GitHub release is the edition the version-line check compares."
+    },
+    {
+      "id": "ecma-402",
+      "publisher": "Ecma",
+      "title": "ECMA-402 Internationalization API",
+      "parser": "github-release",
+      "repo": "tc39/ecma402",
+      "url": "https://tc39.es/ecma402/",
+      "note": "Latest GitHub release is the edition the version-line check compares."
+    },
+    {
+      "id": "fido-specs",
+      "publisher": "FIDO",
+      "title": "FIDO specification directory",
+      "parser": "apache-index",
+      "url": "https://fidoalliance.org/specs/",
+      "note": "Top-level folders of the public specs directory."
+    },
+    {
+      "id": "oasis-standards",
+      "publisher": "OASIS",
+      "title": "OASIS standards",
+      "parser": "oasis-docs",
+      "url": "https://www.oasis-open.org/standards/",
+      "note": "One row per docs.oasis-open.org specification shortname."
+    },
+    {
+      "id": "openssf-projects",
+      "publisher": "OpenSSF",
+      "title": "OpenSSF projects",
+      "parser": "html-links",
+      "url": "https://openssf.org/projects/",
+      "linkPattern": "^https://openssf\\.org/projects/[a-z0-9-]+/?$",
+      "note": "Project pages linked from the OpenSSF projects index."
+    },
+    {
+      "id": "cncf-projects",
+      "publisher": "CNCF",
+      "title": "CNCF projects",
+      "parser": "html-links",
+      "url": "https://www.cncf.io/projects/",
+      "linkPattern": "^https://www\\.cncf\\.io/projects/[a-z0-9-]+/?$",
+      "note": "Project pages linked from the CNCF projects index."
+    },
+    {
+      "id": "nist-publications",
+      "publisher": "NIST",
+      "title": "NIST CSRC final publications",
+      "parser": "html-links",
+      "url": "https://csrc.nist.gov/publications/final-pubs",
+      "linkPattern": "^https://csrc\\.nist\\.gov/pubs/(?:sp|fips|ir|cswp)/",
+      "note": "Final SP, FIPS, IR and CSWP pages linked from the CSRC final publications index."
+    },
+    {
+      "id": "first-cvss",
+      "publisher": "FIRST",
+      "title": "FIRST CVSS",
+      "parser": "html-links",
+      "url": "https://www.first.org/cvss/",
+      "linkPattern": "^https://www\\.first\\.org/cvss/v[0-9]",
+      "note": "CVSS version pages linked from the CVSS index."
+    },
+    {
+      "id": "first-epss",
+      "publisher": "FIRST",
+      "title": "FIRST EPSS",
+      "parser": "html-links",
+      "url": "https://www.first.org/epss/",
+      "linkPattern": "^https://www\\.first\\.org/epss/",
+      "note": "Pages linked from the EPSS index."
+    },
+    {
+      "id": "mitre-attack-versions",
+      "publisher": "MITRE",
+      "title": "MITRE ATT&CK versions",
+      "parser": "html-links",
+      "url": "https://attack.mitre.org/resources/versions/",
+      "linkPattern": "/versions/v[0-9]+/?$",
+      "note": "ATT&CK release pages. The highest version is the current edition."
+    },
+    {
+      "id": "cwe",
+      "publisher": "MITRE",
+      "title": "CWE List",
+      "parser": "cwe-version",
+      "url": "https://cwe.mitre.org/data/downloads.html",
+      "note": "Current CWE List version from the downloads page heading."
+    },
+    {
+      "id": "owasp-projects",
+      "publisher": "OWASP",
+      "title": "OWASP GitHub repositories",
+      "parser": "github-org",
+      "org": "OWASP",
+      "url": "https://api.github.com/orgs/OWASP/repos?per_page=100&sort=pushed&type=public",
+      "note": "First 100 public OWASP repositories by last push. The org index is larger than this page."
+    },
+    {
+      "id": "etsi-standards",
+      "publisher": "ETSI",
+      "title": "ETSI standards",
+      "parser": "html-links",
+      "url": "https://www.etsi.org/standards",
+      "linkPattern": "etsi\\.org/deliver/",
+      "note": "Deliverable links on the standards page. The page is mostly a search application."
+    },
+    {
+      "id": "eur-lex",
+      "publisher": "EUR-Lex",
+      "title": "EUR-Lex legislation directory",
+      "parser": "html-links",
+      "url": "https://eur-lex.europa.eu/browse/directories/legislation.html",
+      "linkPattern": "CELEX(?::|%3A)[0-9A-Z]+",
+      "note": "CELEX links on the legislation directory page."
+    },
+    {
+      "id": "1edtech-standards",
+      "publisher": "1EdTech",
+      "title": "1EdTech standards",
+      "parser": "html-links",
+      "url": "https://www.1edtech.org/standards",
+      "linkPattern": "^https://www\\.1edtech\\.org/standards/[a-z0-9-]+/?$",
+      "note": "Standard pages linked from the 1EdTech standards index, except the details landing page."
+    },
+    {
+      "id": "gs1-standards",
+      "publisher": "GS1",
+      "title": "GS1 standards",
+      "parser": "html-links",
+      "url": "https://www.gs1.org/standards",
+      "linkPattern": "gs1\\.org/standards/",
+      "note": "Standard pages linked from the GS1 standards index."
+    },
+    {
+      "id": "omg-specs",
+      "publisher": "OMG",
+      "title": "OMG specifications",
+      "parser": "omg-specs",
+      "url": "https://www.omg.org/spec/",
+      "note": "One row per specification linked from the OMG spec index."
+    }
+  ]
+}
