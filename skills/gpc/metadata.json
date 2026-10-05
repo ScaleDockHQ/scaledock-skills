@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C Privacy Working Group's Global Privacy Control (GPC) specification, pinned to the Working Draft of 24 September 2026 with a build posture: the Sec-GPC: 1 request header and its server and intermediary rules, the per-navigation gpcAtNavigation cache, navigator.globalPrivacyControl on Navigator and WorkerNavigator, the /.well-known/gpc.json support resource with its gpc and lastUpdate members, the WebDriver extension commands, and the spec's non-normative legal-effects text. The Editor's Draft has the same text, so there is no preview line. The pre-W3C community draft (2020 to 2024, with the version member and no navigation cache) is legacy, with an upgrade checklist. SKILL.md holds the invariants and workflow; references split out versions, the signal, the well-known resource, and server, client and testing implementation with the legal-effects summary.",
+  "versions": [
+    {
+      "id": "wd-2026-09-24",
+      "label": "GPC Working Draft 2026-09-24",
+      "status": "current",
+      "posture": "build",
+      "revision": "WD-gpc-20260924 (2026-09-24)"
+    },
+    {
+      "id": "community-draft",
+      "label": "GPC community draft (2020 to 2024)",
+      "status": "legacy",
+      "revision": "unofficial drafts in globalprivacycontrol/gpc-spec and privacycg/gpc-spec, 2020-10-07 to 2024-03-21 (commit 9027266)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Global Privacy Control (GPC), latest published version",
+      "url": "https://www.w3.org/TR/gpc/",
+      "status": "W3C Working Draft (Privacy WG, Recommendation track)",
+      "revision": "WD-gpc-20260924 (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Global Privacy Control (GPC), W3C Working Draft 24 September 2026",
+      "url": "https://www.w3.org/TR/2026/WD-gpc-20260924/",
+      "status": "W3C Working Draft",
+      "revision": "WD-gpc-20260924 (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Global Privacy Control (GPC), Editor's Draft",
+      "url": "https://w3c.github.io/gpc/",
+      "status": "Editor's Draft",
+      "revision": "w3c/gpc commit 09013ac (2026-09-24); index.html last changed 955777d (2026-09-17), same text as WD-gpc-20260924",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "W3C history of the GPC specification",
+      "url": "https://www.w3.org/standards/history/gpc/",
+      "status": "W3C publication history",
+      "revision": "Working Drafts from WD-gpc-20241121 to WD-gpc-20260924",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "w3c/gpc GitHub repository",
+      "url": "https://github.com/w3c/gpc",
+      "status": "Specification repository (formerly globalprivacycontrol/gpc-spec and privacycg/gpc-spec)",
+      "revision": "main at 09013ac (2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GPC community draft, last pre-W3C revision",
+      "url": "https://github.com/w3c/gpc/blob/90272664a01b925041eea0222a9f7c2ea194954f/index.html",
+      "status": "Unofficial draft (specStatus unofficial), superseded",
+      "revision": "commit 9027266 (2024-03-21)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "GPC community draft, 2020 revision",
+      "url": "https://github.com/w3c/gpc/blob/e60ad1cbc4aad738e8630c0d97fbecf392b453cc/index.html",
+      "status": "Unofficial draft (specStatus unofficial), superseded",
+      "revision": "commit e60ad1c (2020-11-14)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Global Privacy Control project page",
+      "url": "https://globalprivacycontrol.org/",
+      "status": "Project website (non-normative)",
+      "revision": "read 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
