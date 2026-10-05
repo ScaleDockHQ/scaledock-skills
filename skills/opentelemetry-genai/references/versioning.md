@@ -1,5 +1,7 @@
 # Status, pinning and the opt-in transition
 
+This file holds the opt-in and pinning detail. The version lines, the full list of changes since v1.36.0 and the upgrade checklist are in [`versions.md`](versions.md).
+
 Sources: the GenAI README and `model/manifest.yaml` at commit `b31e9e8`, the GenAI page on opentelemetry.io, the GenAI README in semantic conventions v1.41.1, and the semantic conventions v1.44.0 release.
 
 ## Where the conventions live

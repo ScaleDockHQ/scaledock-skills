@@ -1,10 +1,10 @@
 ---
 name: openfeature
-description: "OpenFeature specification 0.9.0: evaluate feature flags through a vendor-neutral API with providers, clients, evaluation context, hooks, events and tracking. Use when adding feature flags to an application without coupling to one vendor, writing or reviewing an OpenFeature provider or hook, choosing between the dynamic-context (server) and static-context (client) paradigms, setting the targeting key and merging evaluation context, handling provider status and events, emitting flag evaluation telemetry, or exposing flags over the OpenFeature Remote Evaluation Protocol. Triggers: OpenFeature, feature flag, feature toggle, flag evaluation, getBooleanValue, evaluation details, resolution details, reason, variant, error code, FLAG_NOT_FOUND, TYPE_MISMATCH, provider, domain, client, evaluation context, targeting key, transaction context propagator, hook, before after error finally, PROVIDER_READY, provider status, track, OFREP, CNCF."
+description: "OpenFeature specification 0.9.0: evaluate feature flags through a vendor-neutral API with providers, clients, evaluation context, hooks, events and tracking. OpenFeature 0.9 is current, 0.8 supported, older releases upgraded; no preview. Use when adding feature flags to an application without coupling to one vendor, writing or reviewing an OpenFeature provider or hook, choosing between the dynamic-context (server) and static-context (client) paradigms, setting the targeting key and merging evaluation context, handling provider status and events, emitting flag evaluation telemetry, or exposing flags over the OpenFeature Remote Evaluation Protocol. Triggers: OpenFeature, feature flag, feature toggle, flag evaluation, getBooleanValue, evaluation details, resolution details, reason, variant, error code, FLAG_NOT_FOUND, TYPE_MISMATCH, provider, domain, client, evaluation context, targeting key, transaction context propagator, hook, before after error finally, PROVIDER_READY, provider status, track, OFREP, CNCF."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ OpenFeature is a CNCF project that specifies a vendor-neutral API for feature fl
 
 - Role: application author, provider author, hook author, or flag management system exposing OFREP.
 - Paradigm: dynamic context (server-side, context per evaluation) or static context (client-side, one user, flags evaluated in bulk) (glossary).
+- Target version: OpenFeature 0.9 (default). OpenFeature 0.8 is supported for components that must run in a 0.8 SDK. OpenFeature 0.7, OpenFeature 0.6, OpenFeature 0.5, OpenFeature 0.4, OpenFeature 0.3, OpenFeature 0.2 and OpenFeature 0.1 are legacy: read and upgrade, never author. No 1.0 and no preview exist; OFREP is a separate protocol tracked in its own reference. See [`references/versions.md`](references/versions.md).
 - Revision: specification v0.9.0 (Released, 2026-07-29). OFREP is pinned to OpenAPI 0.4.0 at a commit, with no release.
 - Sources: when refreshing, re-read every URL in [Sources](#sources), check the spec releases page for a newer version and the protocol repository for a release, and update the pins.
 
@@ -34,24 +35,30 @@ OpenFeature is a CNCF project that specifies a vendor-neutral API for feature fl
 
 ## Workflow
 
-1. **Choose the paradigm and wire the API.** Set the default provider, bind providers to domains where several are needed, and create clients.
+1. **Pick the version.** Target OpenFeature 0.9 unless the SDK a provider or hook runs in still implements OpenFeature 0.8.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target release is recorded, and it is not a legacy line.
+2. **Choose the paradigm and wire the API.** Set the default provider, bind providers to domains where several are needed, and create clients.
    -> [`references/evaluation-api.md`](references/evaluation-api.md)
    ✓ Clients are created without throwing and use the provider of their domain or the default.
-2. **Evaluate flags.** Use typed methods with a safe default; use detailed methods where reason, variant or error code matter.
+3. **Evaluate flags.** Use typed methods with a safe default; use detailed methods where reason, variant or error code matter.
    -> [`references/evaluation-api.md`](references/evaluation-api.md)
    ✓ Every call site works with the default value when the provider fails.
-3. **Supply evaluation context.** Set the targeting key and attributes at the right level, and a transaction context propagator for per-request context on servers.
+4. **Supply evaluation context.** Set the targeting key and attributes at the right level, and a transaction context propagator for per-request context on servers.
    -> [`references/context-hooks.md`](references/context-hooks.md)
    ✓ The merged context for a request matches the precedence order.
-4. **Write or review the provider.** Implement metadata, typed resolution returning resolution details, initialization, shutdown and status events.
+5. **Write or review the provider.** Implement metadata, typed resolution returning resolution details, initialization, shutdown and status events.
    -> [`references/providers-events.md`](references/providers-events.md)
    ✓ Normal resolutions carry no error code; failures use the spec error codes.
-5. **Add hooks, events and tracking.** Hooks for telemetry and validation, handlers for provider events, and `track` for experimentation outcomes.
+6. **Add hooks, events and tracking.** Hooks for telemetry and validation, handlers for provider events, and `track` for experimentation outcomes.
    -> [`references/context-hooks.md`](references/context-hooks.md), [`references/providers-events.md`](references/providers-events.md)
    ✓ Hook failures in `error` and `finally` do not stop evaluation.
-6. **Use OFREP for remote evaluation** when a flag system exposes, or a provider calls, the HTTP API.
+7. **Use OFREP for remote evaluation** when a flag system exposes, or a provider calls, the HTTP API.
    -> [`references/ofrep.md`](references/ofrep.md)
    ✓ Requests and responses match the pinned OpenAPI document.
+8. **Upgrade** (only when asked). Move an SDK, provider or hook from an older release with the upgrade checklists, for example the `finally` signature and event-driven provider status for 0.8 to 0.9.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The component passes the target release's Gherkin suite and returns the same values, reasons and error codes as before.
 
 ## Verify before done
 
@@ -63,10 +70,11 @@ OpenFeature is a CNCF project that specifies a vendor-neutral API for feature fl
 
 ## Reference index
 
-- **`references/evaluation-api.md`**: API, provider mutator, domains, clients, typed and detailed evaluation, evaluation details, error codes, reasons, shutdown, isolated instances. Load for steps 1 and 2.
-- **`references/context-hooks.md`**: evaluation context, merging, transaction propagation, hook stages, ordering, hints and data, tracking, and telemetry mapping. Load for steps 3 and 5.
-- **`references/providers-events.md`**: provider interface, resolution details, initialization, shutdown, context reconciliation, status, events and handlers. Load for steps 4 and 5.
-- **`references/ofrep.md`**: OFREP endpoints, request and response shapes, errors, caching and event streams. Load for step 6.
+- **`references/versions.md`**: every 0.x release with its status, which one to target, what each changed, the 0.8 to 0.9 and 0.7 to 0.8 upgrade checklists, and unreleased work. Load for steps 1 and 8.
+- **`references/evaluation-api.md`**: API, provider mutator, domains, clients, typed and detailed evaluation, evaluation details, error codes, reasons, shutdown, isolated instances. Load for steps 2 and 3.
+- **`references/context-hooks.md`**: evaluation context, merging, transaction propagation, hook stages, ordering, hints and data, tracking, and telemetry mapping. Load for steps 4 and 6.
+- **`references/providers-events.md`**: provider interface, resolution details, initialization, shutdown, context reconciliation, status, events and handlers. Load for steps 5 and 6.
+- **`references/ofrep.md`**: OFREP endpoints, request and response shapes, errors, caching and event streams. Load for step 7.
 
 ## Related skills
 
@@ -76,12 +84,16 @@ OpenFeature is a CNCF project that specifies a vendor-neutral API for feature fl
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [OpenFeature specification v0.9.0 release](https://github.com/open-feature/spec/releases/tag/v0.9.0): Released, v0.9.0 (2026-07-29), checked 2026-10-02.
+- [OpenFeature specification v0.9.0 release](https://github.com/open-feature/spec/releases/tag/v0.9.0): Released, v0.9.0 (2026-07-29), checked 2026-10-05.
+- [OpenFeature specification releases](https://github.com/open-feature/spec/releases): Released, v0.1.0 (2022-07-18) to v0.9.0 (2026-07-29), no 1.0, checked 2026-10-05.
+- [OpenFeature specification v0.8.0 release](https://github.com/open-feature/spec/releases/tag/v0.8.0): Released, v0.8.0 (2024-03-11), checked 2026-10-05.
+- [Providers at v0.8.0](https://github.com/open-feature/spec/blob/v0.8.0/specification/sections/02-providers.md): Hardening, v0.8.0 (2.4 to 2.6 Experimental), checked 2026-10-05.
+- [OpenFeature specification v0.7.0 release](https://github.com/open-feature/spec/releases/tag/v0.7.0): Released, v0.7.0 (2023-09-08), checked 2026-10-05.
 - [OpenFeature specification introduction](https://github.com/open-feature/spec/blob/v0.9.0/specification/README.md): Released, v0.9.0 (conformance and document statuses), checked 2026-10-02.
-- [Flag Evaluation API](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/01-flag-evaluation.md): Stable, v0.9.0 (1.3, 1.4, 1.6 and 1.7.2 Hardening; 1.8 Experimental), checked 2026-10-02.
-- [Providers](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/02-providers.md): Stable, v0.9.0 (2.4, 2.5, 2.6 and 2.8 Hardening; 2.7 Experimental), checked 2026-10-02.
+- [Flag Evaluation API](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/01-flag-evaluation.md): Stable, v0.9.0 (1.3, 1.4, 1.6 and 1.7.2 Hardening; 1.8 Experimental), checked 2026-10-05.
+- [Providers](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/02-providers.md): Stable, v0.9.0 (2.4, 2.5, 2.6 and 2.8 Hardening; 2.7 Experimental), checked 2026-10-05.
 - [Evaluation Context](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/03-evaluation-context.md): Hardening, v0.9.0 (3.3 Experimental), checked 2026-10-02.
-- [Hooks](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/04-hooks.md): Hardening, v0.9.0, checked 2026-10-02.
+- [Hooks](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/04-hooks.md): Hardening, v0.9.0, checked 2026-10-05.
 - [Events](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/05-events.md): Hardening, v0.9.0, checked 2026-10-02.
 - [Tracking](https://github.com/open-feature/spec/blob/v0.9.0/specification/sections/06-tracking.md): Experimental, v0.9.0, checked 2026-10-02.
 - [Types and Data Structures](https://github.com/open-feature/spec/blob/v0.9.0/specification/types.md): Released, v0.9.0, checked 2026-10-02.

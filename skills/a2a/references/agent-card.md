@@ -28,7 +28,7 @@ REQUIRED in the proto: `name`, `description`, `supportedInterfaces`, `version`, 
 | `signatures`           | `AgentCardSignature[]`          | JWS signatures over the card (§ 8.4).                                                                 |
 | `iconUrl`              | string                          | Optional.                                                                                             |
 
-Version 1.0 moved the extended card flag into `capabilities.extendedAgentCard` and renamed `supportsAuthenticatedExtendedCard` to `supportsExtendedAgentCard` on the way (v1.0.0 release notes). Do not use either old top-level name.
+Version 1.0 moved the extended card flag into `capabilities.extendedAgentCard` and renamed `supportsAuthenticatedExtendedCard` to `supportsExtendedAgentCard` on the way (v1.0.0 release notes). Do not use either old top-level name. Upgrading a 0.3 card: [`versions.md`](versions.md).
 
 ### AgentInterface
 
@@ -69,7 +69,7 @@ Client selection rules (§ 8.3.2): parse `supportedInterfaces`, pick the first s
 | `openIdConnectSecurityScheme` | `openIdConnectUrl`, `description`                                 |
 | `mtlsSecurityScheme`          | `description`                                                     |
 
-`OAuthFlows` is also a oneof: `authorizationCode` (`authorizationUrl`, `tokenUrl`, `refreshUrl`, `scopes`, `pkceRequired`), `clientCredentials` (`tokenUrl`, `refreshUrl`, `scopes`) or `deviceCode` (`deviceAuthorizationUrl`, `tokenUrl`, `refreshUrl`, `scopes`). `implicit` and `password` are deprecated in the proto; v1.0.0 removed them from the flows the specification describes and added device code and PKCE (release notes, § 4.5.7 to § 4.5.10).
+`OAuthFlows` is also a oneof: `authorizationCode` (`authorizationUrl`, `tokenUrl`, `refreshUrl`, `scopes`, `pkceRequired`), `clientCredentials` (`tokenUrl`, `refreshUrl`, `scopes`) or `deviceCode` (`deviceAuthorizationUrl`, `tokenUrl`, `refreshUrl`, `scopes`). `implicit` and `password` are deprecated in the proto; v1.0.0 removed them from the flows the specification describes and added device code and PKCE (release notes, § 4.5.7 to § 4.5.10; upgrade steps in [`versions.md`](versions.md)).
 
 `SecurityRequirement` is `{ "schemes": { "<scheme name>": { "list": ["<scope>", ...] } } }`: a map from a key of `securitySchemes` to the required scopes (proto, JSON Schema). Put a list on the card for the whole agent and on each skill that needs more.
 

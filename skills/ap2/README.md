@@ -20,6 +20,15 @@ Then ask your agent to "add AP2 Checkout Mandate verification to our checkout" o
 
 Draft posture: build, pinned to AP2 v0.2 (tag `v0.2.0`). AP2 is pre-1.0 and its standardization continues in the FIDO Alliance.
 
+## Versions
+
+| Line     | Status                        |
+| -------- | ----------------------------- |
+| AP2 v0.2 | current (draft posture build) |
+| AP2 v0.1 | legacy (upgrade from)         |
+
+`references/versions.md` says which line to use, how to upgrade from v0.1, and why no preview is listed while FIDO takes over standardization.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:
@@ -27,6 +36,8 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [AP2 specification](https://ap2-protocol.org/ap2/specification/) and its pages on mandates, agent authorization, flows, security and implementation: Released, v0.2.
 - [AP2 v0.2.0 release](https://github.com/google-agentic-commerce/AP2/releases/tag/v0.2.0): Released, 2026-04-28.
 - [AP2 v0.1 specification](https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.1.0/docs/specification.md) and [v0.1 A2A extension](https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.1.0/docs/a2a-extension.md): superseded, v0.1.0.
+- [AP2 changelog](https://github.com/google-agentic-commerce/AP2/blob/main/CHANGELOG.md): Released, 0.1.0 and 0.2.0.
+- [FIDO Alliance announcement](https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/): announcement of the agentic commerce standards work, 2026-04-28.
 - [UCP and AP2](https://ucp.dev/documentation/ucp-and-ap2/): documentation.
 - [Visa Trusted Agent Protocol specifications](https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications): in development and deployment, unversioned.
 - [Agentic Commerce Protocol](https://raw.githubusercontent.com/agentic-commerce-protocol/agentic-commerce-protocol/7fdd78df677a94dce04c770644b0fbbb1401272b/README.md): Beta, latest stable 2026-04-17.

@@ -1,23 +1,44 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the EU Artificial Intelligence Act, Regulation (EU) 2024/1689, read with the consolidated text of 27 July 2026 that incorporates the Digital Omnibus on AI, Regulation (EU) 2026/1744. It turns the engineering-relevant obligations into requirements: operator roles, prohibited practices (Art. 5), high-risk classification (Art. 6, Annex III), high-risk requirements (Arts. 9 to 15) and Annex IV documentation, logging and retention (Arts. 12, 19, 26), transparency and content marking (Art. 50), general-purpose AI model obligations (Arts. 51 to 56) and the GPAI Code of Practice, and the application dates (Arts. 111, 113). It is not legal advice and tells the user to involve counsel.",
+  "abstract": "Covers the EU Artificial Intelligence Act, Regulation (EU) 2024/1689, with two version lines: the consolidated text of 27 July 2026 that incorporates the Digital Omnibus on AI, Regulation (EU) 2026/1744 (current), and the original text of 12 July 2024 (legacy, upgraded from). It turns the engineering-relevant obligations into requirements: operator roles, prohibited practices (Art. 5), high-risk classification (Art. 6, Annex III), high-risk requirements (Arts. 9 to 15) and Annex IV documentation, logging and retention (Arts. 12, 19, 26), transparency and content marking (Art. 50), general-purpose AI model obligations (Arts. 51 to 56) and the GPAI Code of Practice, and the application dates (Arts. 111, 113). It is not legal advice and tells the user to involve counsel.",
+  "versions": [
+    {
+      "id": "consolidated-20260727",
+      "label": "consolidated text of 27 July 2026",
+      "status": "current",
+      "revision": "CELEX 02024R1689-20260727, incorporating Regulation (EU) 2026/1744"
+    },
+    {
+      "id": "original-20240712",
+      "label": "original text of 12 July 2024",
+      "status": "legacy",
+      "revision": "OJ L 2024/1689 of 12.7.2024 (CELEX 32024R1689)"
+    }
+  ],
   "sources": [
     {
       "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal text",
       "url": "https://publications.europa.eu/resource/celex/32024R1689",
       "status": "Regulation in force",
       "revision": "OJ L 2024/1689 of 12.7.2024",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "Regulation (EU) 2024/1689, consolidated text",
       "url": "https://publications.europa.eu/resource/celex/02024R1689-20260727",
       "status": "consolidated version (no legal effect)",
       "revision": "27.07.2026 incorporating Regulation (EU) 2026/1744",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Publications Office SPARQL endpoint (Cellar metadata for 32024R1689)",
+      "url": "https://publications.europa.eu/webapi/rdf/sparql",
+      "status": "metadata service",
+      "revision": "lists consolidated versions 02024R1689-20240712 and 02024R1689-20260727, amending act 32026R1744 and corrigenda 32024R1689R(01) to R(04)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI)",

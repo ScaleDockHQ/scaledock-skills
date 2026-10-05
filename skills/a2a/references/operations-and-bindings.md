@@ -67,7 +67,7 @@ Standard service parameters (§ 3.2.6):
 ## gRPC binding (§ 10)
 
 - gRPC over HTTP/2 with TLS, Protocol Buffers 3, implementing the `A2AService` service from `a2a.proto` (§ 10.1).
-- The proto package is `lf.a2a.v1` (a2a.proto v1.0.1; v1.0.0 added the LF prefix per the release notes).
+- The proto package is `lf.a2a.v1` (a2a.proto v1.0.1; v1.0.0 added the LF prefix per the release notes). The 0.3 method names and their 1.0 replacements are in [`versions.md`](versions.md).
 
 ## HTTP+JSON binding (§ 11)
 

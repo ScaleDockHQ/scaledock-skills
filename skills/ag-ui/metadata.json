@@ -1,9 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers AG-UI, the Agent-User Interaction Protocol, at specification 1.0 with its JSON Schema, cross-checked against repository commit e60019d and @ag-ui/core 1.0.0. SKILL.md holds the invariants and workflow for producers, consumers and middleware; references cover the event model and its eight families, the HTTP + SSE and HTTP + Protobuf bindings, frontend tools and interrupts for human-in-the-loop, and the processing model, version negotiation and SDKs.",
+  "abstract": "Covers AG-UI, the Agent-User Interaction Protocol, in three version lines: AG-UI 1.0 (current, specification 1.0 with its JSON Schema, cross-checked against repository commit e60019d and @ag-ui/core 1.0.0), the legacy 0.x line with the upgrade to 1.0, and the AG-UI 1.1 working draft as a preview (posture: track). SKILL.md holds the invariants and workflow for producers, consumers and middleware; references cover versions and upgrades, the event model and its eight families, the HTTP + SSE and HTTP + Protobuf bindings, frontend tools and interrupts for human-in-the-loop, and the processing model, version negotiation and SDKs.",
+  "versions": [
+    {
+      "id": "1.1-preview",
+      "label": "AG-UI 1.1",
+      "status": "preview",
+      "posture": "track",
+      "revision": "working draft (docs.ag-ui.com/spec/draft), checked 2026-10-05; no changes against 1.0 recorded yet"
+    },
+    {
+      "id": "1.0",
+      "label": "AG-UI 1.0",
+      "status": "current",
+      "revision": "specification 1.0; @ag-ui/core 1.0.0 (2026-09-17), latest 1.0.1 (2026-09-29)"
+    },
+    {
+      "id": "0.x",
+      "label": "AG-UI 0.x",
+      "status": "legacy",
+      "revision": "no normative specification; @ag-ui/core 0.0.x, last 0.0.59 (2026-08-27)"
+    }
+  ],
   "sources": [
     {
       "title": "AG-UI Specification 1.0",
@@ -171,7 +192,7 @@
       "url": "https://docs.ag-ui.com/spec/1.0/changelog",
       "status": "Released (informative)",
       "revision": "1.0",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "AG-UI 1.0 JSON Schema",
@@ -185,7 +206,28 @@
       "url": "https://docs.ag-ui.com/migrating-to-1-0",
       "status": "Documentation",
       "revision": "1.0",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AG-UI Specification (Draft)",
+      "url": "https://docs.ag-ui.com/spec/draft",
+      "status": "Draft",
+      "revision": "working draft of 1.1, as published 2026-10-05; draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Key Changes (Draft)",
+      "url": "https://docs.ag-ui.com/spec/draft/changelog",
+      "status": "Draft (informative)",
+      "revision": "Changes in 1.1: none yet, as published 2026-10-05; draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AG-UI documentation index (llms.txt)",
+      "url": "https://docs.ag-ui.com/llms.txt",
+      "status": "Publisher index",
+      "revision": "lists spec 1.0 and spec draft, as published 2026-10-05",
+      "checked": "2026-10-05"
     },
     {
       "title": "MCP, A2A, and AG-UI",
@@ -205,8 +247,8 @@
       "title": "@ag-ui/core on the npm registry",
       "url": "https://registry.npmjs.org/@ag-ui/core",
       "status": "Published package",
-      "revision": "1.0.0 (2026-09-17), latest 1.0.1 (2026-09-29)",
-      "checked": "2026-10-02"
+      "revision": "1.0.0 (2026-09-17), latest 1.0.1 (2026-09-29); last 0.x release 0.0.59 (2026-08-27)",
+      "checked": "2026-10-05"
     }
   ]
 }

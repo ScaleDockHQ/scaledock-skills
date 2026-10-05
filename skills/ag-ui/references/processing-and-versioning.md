@@ -28,6 +28,7 @@ The compatibility boundary translates retired shapes (for example 0.x `THINKING_
 - A producer meeting a newer minor of its line must serve the run and should warn; it may reject, before `RUN_STARTED`, only a major line it does not implement.
 - A proxy declares what the stream speaks: the original producer's version if forwarding untranslated, its own if translating.
 - With an unknown peer version, behave as though the peer is current.
+- The version lines themselves (1.0, the 0.x line and the 1.1 draft) and the upgrade from 0.x are in [`versions.md`](versions.md).
 
 Additions and downgrades:
 
