@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OWASP CycloneDX, published by Ecma TC54 as ECMA-424, at version 1.7 (ECMA-424 2nd edition, schema 1.7.2): the BOM object model (metadata, components, services, dependencies, compositions, vulnerabilities, formulation, annotations, declarations, definitions, citations), the BOM types it serves (SBOM, SaaSBOM, HBOM, CBOM, ML-BOM, OBOM, MBOM, VDR, VEX, CDXA), identifiers and BOM-Link, JSON, XML and Protobuf serialization, schema validation, JSF signing, and producing and consuming BOMs in CI. Version lines: 1.7 is current, 1.6 (ECMA-424 1st edition, schema 1.6.2) is supported, 1.5, 1.4 and 1.0-1.3 are legacy with upgrade checklists, and the 2.0 development branch is tracked as a preview. SKILL.md holds the invariants and workflow; references split out the version lines, BOM types, the object model, identifiers and links, vulnerabilities and VEX, and validation and signing.",
+  "versions": [
+    {
+      "id": "2.0-preview",
+      "label": "CycloneDX 2.0 draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "2.0-dev branch at 7a3ab08 (2026-10-05); release date to be announced"
+    },
+    {
+      "id": "1.7",
+      "label": "CycloneDX 1.7",
+      "status": "current",
+      "revision": "1.7.2 (2026-09-17); ECMA-424 2nd edition (December 2025)"
+    },
+    {
+      "id": "1.6",
+      "label": "CycloneDX 1.6",
+      "status": "supported",
+      "revision": "1.6.2 (2026-06-02); ECMA-424 1st edition (June 2024)"
+    },
+    {
+      "id": "1.5",
+      "label": "CycloneDX 1.5",
+      "status": "legacy",
+      "revision": "1.5.1 (2026-06-02)"
+    },
+    {
+      "id": "1.4",
+      "label": "CycloneDX 1.4",
+      "status": "legacy",
+      "revision": "1.4 (2022-01-12)"
+    },
+    {
+      "id": "1.0-1.3",
+      "label": "CycloneDX 1.0-1.3",
+      "status": "legacy",
+      "revision": "1.3 (2021-05-04), 1.2 (2020-05-26), 1.1 (2019-03-03), 1.0 (2018-03-26)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ECMA-424: CycloneDX Bill of materials specification",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-424/",
+      "status": "Ecma Standard",
+      "revision": "2nd edition, December 2025 (CycloneDX v1.7); 1st edition June 2024 archived",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-424 2nd edition (PDF)",
+      "url": "https://ecma-international.org/wp-content/uploads/ECMA-424_2nd_edition_december_2025.pdf",
+      "status": "Ecma Standard",
+      "revision": "2nd edition, December 2025 (CycloneDX v1.7)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-424 1st edition (PDF)",
+      "url": "https://ecma-international.org/wp-content/uploads/ECMA-424_1st_edition_june_2024.pdf",
+      "status": "Ecma Standard (superseded edition)",
+      "revision": "1st edition, June 2024 (CycloneDX v1.6)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX Specification Overview",
+      "url": "https://cyclonedx.org/specification/overview/",
+      "status": "Released",
+      "revision": "current version 1.7 (2025-10-21)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX v1.7 JSON Reference",
+      "url": "https://cyclonedx.org/docs/1.7/json/",
+      "status": "Released",
+      "revision": "1.7",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX specification releases",
+      "url": "https://github.com/CycloneDX/specification/releases",
+      "status": "Released",
+      "revision": "latest 1.7.2 (2026-09-17); 1.6.2 and 1.5.1 (2026-06-02)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX 1.7 JSON Schema",
+      "url": "https://raw.githubusercontent.com/CycloneDX/specification/1.7.2/schema/bom-1.7.schema.json",
+      "status": "Released",
+      "revision": "tag 1.7.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX 1.7 XML Schema",
+      "url": "https://raw.githubusercontent.com/CycloneDX/specification/1.7.2/schema/bom-1.7.xsd",
+      "status": "Released",
+      "revision": "tag 1.7.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX 1.7 Protobuf schema",
+      "url": "https://raw.githubusercontent.com/CycloneDX/specification/1.7.2/schema/bom-1.7.proto",
+      "status": "Released",
+      "revision": "tag 1.7.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX 1.6 JSON Schema",
+      "url": "https://raw.githubusercontent.com/CycloneDX/specification/1.6.2/schema/bom-1.6.schema.json",
+      "status": "Released",
+      "revision": "tag 1.6.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX schema directory (1.0 to 1.7)",
+      "url": "https://github.com/CycloneDX/specification/tree/1.7.2/schema",
+      "status": "Released",
+      "revision": "tag 1.7.2 (1.5.1, 1.4, 1.3, 1.2 JSON; 1.0, 1.1 XSD; jsf-0.82, spdx and cryptography-defs schemas)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX specification README",
+      "url": "https://github.com/CycloneDX/specification/blob/1.7.2/README.md",
+      "status": "Released",
+      "revision": "tag 1.7.2",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX BOM-Link",
+      "url": "https://cyclonedx.org/capabilities/bomlink/",
+      "status": "Capability page",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX VEX",
+      "url": "https://cyclonedx.org/capabilities/vex/",
+      "status": "Capability page",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX VDR",
+      "url": "https://cyclonedx.org/capabilities/vdr/",
+      "status": "Capability page",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSF: JSON Signature Format",
+      "url": "https://cyberphone.github.io/doc/security/jsf.html",
+      "status": "Specification",
+      "revision": "0.82 (2020-10-10), as referenced by jsf-0.82.schema.json",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX CLI",
+      "url": "https://github.com/CycloneDX/cyclonedx-cli",
+      "status": "Released",
+      "revision": "v0.33.1 (2026-07-23)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CycloneDX 2.0 schemas (development branch)",
+      "url": "https://github.com/CycloneDX/specification/tree/2.0-dev/schema/2.0",
+      "status": "Draft",
+      "revision": "2.0-dev at 7a3ab08 (2026-10-05); Draft posture: track",
+      "checked": "2026-10-05"
+    }
+  ]
+}
