@@ -1,10 +1,10 @@
 ---
 name: spiffe
-description: "SPIFFE: issue and verify workload identities with SPIFFE IDs, X.509-SVIDs, JWT-SVIDs, trust bundles, the Workload API and federation. Use when building or reviewing service-to-service authentication, mTLS between workloads, workload identity on Kubernetes or VMs, or a SPIRE deployment: spiffe:// URI and trust domain name rules, X.509-SVID URI SAN, key usage and leaf validation, JWT-SVID alg, aud and exp checks, SPIFFE bundles as JWK Sets with use x509-svid or jwt-svid, spiffe_sequence and spiffe_refresh_hint, bundle maps, the Workload API gRPC profiles (FetchX509SVID, FetchJWTSVID, ValidateJWTSVID), SPIFFE_ENDPOINT_SOCKET and the workload.spiffe.io metadata header, federation bundle endpoints with the https_web and https_spiffe profiles, and SPIRE servers, agents, node and workload attestation, registration entries and federates_with. Targets the Stable SPIFFE standards at main f97c46d (pinned by commit), tracks the Incubating standards (WIT-SVID, Broker API) as a preview, and maps to SPIRE v1.15.3."
+description: "SPIFFE: issue and verify workload identities with SPIFFE IDs, X.509-SVIDs, JWT-SVIDs, trust bundles, the Workload API and federation. Use when building or reviewing service-to-service authentication, workload mTLS, workload identity on Kubernetes or VMs, or SPIRE: spiffe:// URI and trust domain name rules, X.509-SVID URI SAN, key usage and leaf validation, JWT-SVID alg, aud and exp checks, SPIFFE bundles as JWK Sets with use x509-svid or jwt-svid, spiffe_sequence and spiffe_refresh_hint, bundle maps, Workload API profiles (FetchX509SVID, FetchJWTSVID, ValidateJWTSVID), SPIFFE_ENDPOINT_SOCKET and the workload.spiffe.io metadata header, federation bundle endpoints with the https_web and https_spiffe profiles, SPIRE servers, agents, attestation, registration entries and federates_with, and mapping SPIFFE to WIMSE and OAuth SPIFFE client auth. Targets the Stable SPIFFE standards at main f97c46d (pinned by commit), tracks the Incubating standards (WIT-SVID, Broker API) as a preview, and maps to SPIRE v1.15.3."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -67,7 +67,10 @@ SPIFFE (Secure Production Identity Framework for Everyone) defines how workloads
 9. **Track WIT-SVID if proof of possession is needed.** It is part of the Incubating preview: prototype it only when asked, behind a feature flag.
    -> [`references/wit-svid.md`](references/wit-svid.md), [`references/versions.md`](references/versions.md)
    ✓ No code path accepts a WIT-SVID without a proof of possession, and no default path emits one.
-10. **Upgrade to the pinned commit** (only when code follows an older revision, or a specification is promoted). Follow the upgrade section.
+10. **Bridge to WIMSE or OAuth if needed.** Map SPIFFE IDs, bundles and SVIDs onto WIMSE terms, or authenticate an OAuth client with its SVID per draft-ietf-oauth-spiffe-client-auth-02.
+    -> [`references/wimse-and-oauth.md`](references/wimse-and-oauth.md)
+    ✓ The authorization server keys bundles by trust domain from a configured bundle endpoint, and never validates an X.509-SVID with the system trust store or a JWT-SVID with keys found only through `iss`.
+11. **Upgrade to the pinned commit** (only when code follows an older revision, or a specification is promoted). Follow the upgrade section.
     -> [`references/versions.md`](references/versions.md)
     ✓ The recorded commit is f97c46d, and root-path X.509-SVID leaves are rejected.
 
@@ -92,10 +95,13 @@ SPIFFE (Secure Production Identity Framework for Everyone) defines how workloads
 - **`references/federation.md`**: bundle endpoints, key rollover, `https_web` and `https_spiffe`, relationship lifecycle and security.
 - **`references/spire.md`**: SPIRE server and agent, attestation, registration entries, federation configuration and fetching SVIDs.
 - **`references/wit-svid.md`**: the Incubating WIT-SVID profile of the WIMSE Workload Identity Token.
+- **`references/wimse-and-oauth.md`**: how SPIFFE maps to the IETF WIMSE drafts, and OAuth client authentication with JWT-SVIDs, X.509-SVIDs and WIT-SVIDs.
 
 ## Related skills
 
 - `jwt`, for JWT and JWS validation that JWT-SVIDs and WIT-SVIDs build on: `npx skills add ScaleDockHQ/scaledock-skills --skill jwt`
+- `wimse`, for the IETF workload identity drafts (WIT, WPT, HTTP signatures, mutual TLS) that WIT-SVID profiles: `npx skills add ScaleDockHQ/scaledock-skills --skill wimse`
+- `oauth`, for the OAuth 2.0 framework, client authentication and token endpoint rules that SPIFFE client authentication profiles: `npx skills add ScaleDockHQ/scaledock-skills --skill oauth`
 
 ## Sources
 
@@ -118,3 +124,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [SPIRE Concepts](https://spiffe.io/docs/latest/spire-about/spire-concepts/): Documentation, spiffe.io docs latest, checked 2026-10-02.
 - [Deploying a Federated SPIRE Architecture](https://spiffe.io/docs/latest/architecture/federation/readme/): Documentation, spiffe.io docs latest (written against SPIRE 1.11.2), checked 2026-10-02.
 - [Working with SVIDs](https://spiffe.io/docs/latest/deploying/svids/): Documentation, spiffe.io docs latest, checked 2026-10-02.
+- [draft-ietf-wimse-arch-08: Workload Identity in a Multi System Environment (WIMSE) Architecture](https://www.ietf.org/archive/id/draft-ietf-wimse-arch-08.txt): WG draft (Informational), -08 (6 July 2026); Draft posture: name, checked 2026-10-05.
+- [draft-ietf-wimse-identifier-03: Workload Identifier](https://www.ietf.org/archive/id/draft-ietf-wimse-identifier-03.txt): WG draft (Standards Track), -03 (6 July 2026); Draft posture: name, checked 2026-10-05.
+- [draft-ietf-wimse-workload-creds-02: WIMSE Workload Credentials](https://www.ietf.org/archive/id/draft-ietf-wimse-workload-creds-02.txt): WG draft (Standards Track), -02 (2 July 2026); Draft posture: name, checked 2026-10-05.
+- [draft-ietf-oauth-spiffe-client-auth-02: OAuth SPIFFE Client Authentication](https://www.ietf.org/archive/id/draft-ietf-oauth-spiffe-client-auth-02.txt): WG draft (Standards Track), -02 (15 June 2026); Draft posture: build (JWT-SVID and X.509-SVID methods), track (WIT-SVID method), checked 2026-10-05.

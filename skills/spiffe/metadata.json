@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the SPIFFE standards, which are unversioned and pinned by commit and stability level: the Stable line at spiffe/spiffe main f97c46d (SPIFFE ID syntax and trust domain names, SVID trust, X.509-SVID and JWT-SVID rules, trust domain bundles and bundle maps, the Workload Endpoint and Workload API profiles, federation bundle endpoints with the https_web and https_spiffe profiles) and the Incubating preview (WIT-SVID, the Workload API WIT-SVID profile, the Broker API and Broker Endpoint). Maps the standards to SPIRE v1.15.3 server, agent, attestation, registration entries and federation configuration. SKILL.md holds the invariants and workflow; references hold the version hub and split out SPIFFE IDs, X.509-SVID, JWT-SVID, bundles, the Workload API, federation, SPIRE and WIT-SVID.",
+  "abstract": "Covers the SPIFFE standards, which are unversioned and pinned by commit and stability level: the Stable line at spiffe/spiffe main f97c46d (SPIFFE ID syntax and trust domain names, SVID trust, X.509-SVID and JWT-SVID rules, trust domain bundles and bundle maps, the Workload Endpoint and Workload API profiles, federation bundle endpoints with the https_web and https_spiffe profiles) and the Incubating preview (WIT-SVID, the Workload API WIT-SVID profile, the Broker API and Broker Endpoint). Maps the standards to SPIRE v1.15.3 server, agent, attestation, registration entries and federation configuration, maps SPIFFE onto the IETF WIMSE drafts (arch-08, identifier-03, workload-creds-02), and covers OAuth client authentication with SVIDs per draft-ietf-oauth-spiffe-client-auth-02. SKILL.md holds the invariants and workflow; references hold the version hub and split out SPIFFE IDs, X.509-SVID, JWT-SVID, bundles, the Workload API, federation, SPIRE, WIT-SVID, and WIMSE and OAuth.",
   "versions": [
     {
       "id": "incubating-preview",
@@ -138,6 +138,34 @@
       "status": "Documentation",
       "revision": "spiffe.io docs latest",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-ietf-wimse-arch-08: Workload Identity in a Multi System Environment (WIMSE) Architecture",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-arch-08.txt",
+      "status": "WG draft (Informational)",
+      "revision": "-08 (6 July 2026); Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-identifier-03: Workload Identifier",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-identifier-03.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-03 (6 July 2026); Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-wimse-workload-creds-02: WIMSE Workload Credentials",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-wimse-workload-creds-02.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-02 (2 July 2026); Draft posture: name",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-oauth-spiffe-client-auth-02: OAuth SPIFFE Client Authentication",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-oauth-spiffe-client-auth-02.txt",
+      "status": "WG draft (Standards Track)",
+      "revision": "-02 (15 June 2026); Draft posture: build (JWT-SVID and X.509-SVID methods), track (WIT-SVID method)",
+      "checked": "2026-10-05"
     }
   ]
 }
