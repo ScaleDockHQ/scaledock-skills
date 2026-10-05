@@ -1,0 +1,135 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers NIST SP 800-63-4 Digital Identity Guidelines, final since 31 July 2025: the base volume (digital identity risk management, impact assessment, IAL/AAL/FAL selection, tailoring and the Digital Identity Acceptance Statement), SP 800-63A-4 (identity proofing at IAL1-3, evidence strength, validation, verification pathways, no KBV), SP 800-63B-4 (authenticators at AAL1-3, password length and blocklists without composition rules or forced rotation, MFA, phishing resistance, syncable authenticators, rate limiting, binding, account recovery, notifications, sessions and reauthentication) and SP 800-63C-4 (FAL1-3, assertion contents and validation, injection protection, holder-of-key and bound authenticators, shared signaling, wallets). It lists two version lines: SP 800-63-4 (current) and SP 800-63-3 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions and upgrades, assurance levels, identity proofing, authenticators, sessions and recovery, and federation.",
+  "versions": [
+    {
+      "id": "800-63-4",
+      "label": "SP 800-63-4",
+      "status": "current",
+      "revision": "Final, published 2025-07-31 (SP 800-63-4, 63A-4, 63B-4, 63C-4)"
+    },
+    {
+      "id": "800-63-3",
+      "label": "SP 800-63-3",
+      "status": "legacy",
+      "revision": "Final, June 2017, errata 2017-12-01 and 2020-03-02; superseded 2025-08-01"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NIST SP 800-63 Digital Identity Guidelines (Revision 4 home)",
+      "url": "https://pages.nist.gov/800-63-4/",
+      "status": "NIST online edition index",
+      "revision": "Final released July 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63-4 Digital Identity Guidelines (online)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63.html",
+      "status": "Final",
+      "revision": "SP 800-63-4",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63A-4 Identity Proofing and Enrollment (online)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63a.html",
+      "status": "Final",
+      "revision": "SP 800-63A-4",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63B-4 Authentication and Authenticator Management (online)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "status": "Final",
+      "revision": "SP 800-63B-4",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63C-4 Federation and Assertions (online)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63c.html",
+      "status": "Final",
+      "revision": "SP 800-63C-4",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSRC: SP 800-63-4",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "status": "Final",
+      "revision": "Published 2025-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSRC: SP 800-63A-4",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/a/4/final",
+      "status": "Final",
+      "revision": "Published 2025-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSRC: SP 800-63B-4",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/b/4/final",
+      "status": "Final",
+      "revision": "Published 2025-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSRC: SP 800-63C-4",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/c/4/final",
+      "status": "Final",
+      "revision": "Published 2025-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSRC: SP 800-63B Supplement 1, Incorporating Syncable Authenticators",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/b/sup/final",
+      "status": "Withdrawn",
+      "revision": "Published April 2024, withdrawn 2025-07-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST SP 800-63-3 Digital Identity Guidelines (home)",
+      "url": "https://pages.nist.gov/800-63-3/",
+      "status": "Superseded",
+      "revision": "Superseded by SP 800-63-4 as of 2025-08-01",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63-3 Digital Identity Guidelines (online)",
+      "url": "https://pages.nist.gov/800-63-3/sp800-63-3.html",
+      "status": "Final (superseded)",
+      "revision": "June 2017, errata 2017-12-01 and 2020-03-02",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63A Enrollment and Identity Proofing (online)",
+      "url": "https://pages.nist.gov/800-63-3/sp800-63a.html",
+      "status": "Final (superseded)",
+      "revision": "June 2017, errata 2017-12-01 and 2020-03-02",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63B Authentication and Lifecycle Management (online)",
+      "url": "https://pages.nist.gov/800-63-3/sp800-63b.html",
+      "status": "Final (superseded)",
+      "revision": "June 2017, errata 2017-12-01 and 2020-03-02",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "SP 800-63C Federation and Assertions (online)",
+      "url": "https://pages.nist.gov/800-63-3/sp800-63c.html",
+      "status": "Final (superseded)",
+      "revision": "June 2017, errata 2017-12-01 and 2020-03-02",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "NIST SP 800-63 FAQ",
+      "url": "https://pages.nist.gov/800-63-FAQ/",
+      "status": "FAQ for SP 800-63-3",
+      "revision": "2022-03-03",
+      "checked": "2026-10-05"
+    }
+  ]
+}
