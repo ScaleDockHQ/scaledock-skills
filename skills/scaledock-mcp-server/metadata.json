@@ -1,8 +1,8 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Build or harden a ScaleDock MCP server: an OAuth 2.1 resource server per the MCP authorization spec, JWT verification, RFC 9457 errors, and PermDock deciding, filtering, validating, approving and auditing every tool call. It installs the mcp-authorization, oauth, jwt and problem-details spec skills and defers to them on protocol details; references/stack.md maps each requirement onto the ScaleDock stack.",
+  "abstract": "Build or harden a ScaleDock MCP server: an MCP base-protocol server and OAuth 2.1 resource server per the MCP authorization spec, JWT verification, RFC 9457 errors, and PermDock deciding, filtering, validating, approving and auditing every tool call. It installs the mcp, mcp-authorization, oauth, jwt and problem-details spec skills (mcp-apps optional) and defers to them on protocol details; references/stack.md maps each requirement onto the ScaleDock stack.",
   "references": [
     "https://modelcontextprotocol.io/specification/latest",
     "https://permdock.dev/docs/adapters/mcp",

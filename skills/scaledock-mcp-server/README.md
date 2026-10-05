@@ -8,7 +8,7 @@ An agent skill that builds or hardens an MCP server the ScaleDock way: a correct
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-mcp-server
 ```
 
-It asks you to install the spec skills it builds on: `mcp-authorization`, `oauth`, `jwt` and `problem-details`, plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
+It asks you to install the spec skills it builds on: `mcp`, `mcp-authorization`, `oauth`, `jwt` and `problem-details` (optionally `mcp-apps` for interactive tool UI), plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
 
 Then ask your agent to "add an MCP server to this repo", "protect these MCP tools", or "review our MCP server against the spec".
 
