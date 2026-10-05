@@ -1,10 +1,10 @@
 ---
 name: scaledock-http-api
-description: Build or review a ScaleDock HTTP API that follows OpenAPI 3.2, OpenAPI Overlay, RFC 9457 Problem Details, the RateLimit header fields and Standard Schema, with PermDock guarding every procedure and writing the OpenAPI security. Use when adding or changing the api surface, publishing an OpenAPI document, adding security schemes or scopes to it, standardising API errors or 429 responses, or reviewing an API against these specs.
+description: Build or review a ScaleDock HTTP API that follows HTTP Semantics (RFC 9110, RFC 9111), OpenAPI 3.2, JSON Schema 2020-12, OpenAPI Overlay, RFC 9457 Problem Details, the RateLimit header fields and Standard Schema, with PermDock guarding every procedure and writing the OpenAPI security. Use when adding or changing the api surface, publishing an OpenAPI document, adding security schemes or scopes to it, standardising API errors, status codes, caching or 429 responses, signing webhooks, or reviewing an API against these specs.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # ScaleDock HTTP API
@@ -19,19 +19,20 @@ An API whose contract, document, errors and limits all follow open specs, with P
 - Authorization server: Supabase Auth's OAuth 2.1 server (default), or another issuer the user names.
 - Quotas: which procedures have rate or usage limits, if any.
 - Event-driven APIs or design-first specs: whether the repo also publishes AsyncAPI documents or authors in TypeSpec.
+- Webhooks, message signing, cookies and security review: whether the API sends webhooks, signs messages between services, authenticates with cookies, or must meet an OWASP ASVS level.
 
 ## Skills to install
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills --skill openapi --skill openapi-overlay --skill problem-details --skill ratelimit-headers --skill standard-schema
+npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics --skill openapi --skill json-schema --skill openapi-overlay --skill problem-details --skill ratelimit-headers --skill standard-schema
 npx skills add ScaleDockHQ/PermDock
 ```
 
-Optional companions: `openapi-arazzo` (multi-step workflows), `asyncapi` (event-driven APIs), `typespec` (design-first authoring). `scaledock-repo-standard` (its `references/api.md` and `references/architecture.md`) owns the app layout: Hono shell, oRPC contract in `packages/contract`, Scalar, the committed OpenAPI snapshot.
+Optional companions: `openapi-arazzo` (multi-step workflows), `asyncapi` (event-driven APIs), `typespec` (design-first authoring), `standard-webhooks` (outgoing webhooks), `http-message-signatures` (signed requests and responses between services), `http-cookies` (cookie-authenticated routes), `owasp-api-security` (API risk review) and `owasp-asvs` (security requirements by ASVS level). `scaledock-repo-standard` (its `references/api.md` and `references/architecture.md`) owns the app layout: Hono shell, oRPC contract in `packages/contract`, Scalar, the committed OpenAPI snapshot.
 
 ## Invariants
 
-1. **The spec skills win on format details.** Document structure follows `openapi`; Overlay shape follows `openapi-overlay`; error bodies follow `problem-details`; 429 responses follow `ratelimit-headers`.
+1. **The spec skills win on format details.** Methods, status codes, conditional requests and caching follow `http-semantics`; document structure follows `openapi` and its schemas follow `json-schema`; Overlay shape follows `openapi-overlay`; error bodies follow `problem-details`; 429 responses follow `ratelimit-headers`.
 2. **Contract first, one schema library.** Every procedure lives in `packages/contract` with Valibot schemas, which are Standard Schema; the OpenAPI document is generated from the contract, never written by hand.
 3. **PermDock guards every procedure.** oRPC procedures use `protect` from `permdock/orpc`; plain Hono routes use `permdock/hono`. A denial is a 403 Problem Details object; an anonymous call is a 401 with `WWW-Authenticate`.
 4. **PermDock owns `security`.** `permdock openapi emit` writes the security schemes, scopes and per-operation `security` from the permission catalog. No other tool writes `security` on the same operations.
@@ -53,10 +54,12 @@ Optional companions: `openapi-arazzo` (multi-step workflows), `asyncapi` (event-
    ✓ The snapshot validates and `permdock openapi emit --check` exits 0.
 6. **Test and audit.** Add a policy matrix with `permdock/testing`, a contract test per error type, then run `audit-permissions` from `ScaleDockHQ/PermDock`.
    ✓ Tests pass and the audit has no blocker.
+7. **Optional companions.** When the inputs call for them: sign outgoing webhooks as `standard-webhooks` describes, sign service-to-service messages as `http-message-signatures` describes, set cookies as `http-cookies` describes, and review the API against `owasp-api-security` and the chosen `owasp-asvs` level.
+   ✓ Each installed companion's Verify list passes.
 
 ## Verify before done
 
-- [ ] Every item in the `openapi` and `problem-details` Verify lists passes.
+- [ ] Every item in the `http-semantics`, `openapi`, `json-schema` and `problem-details` Verify lists passes.
 - [ ] Every procedure has a PermDock guard and appears in `permdock usage`.
 - [ ] The OpenAPI `security` comes only from `permdock openapi emit`.
 - [ ] Every limited procedure returns 429 with `Retry-After` when exhausted.
