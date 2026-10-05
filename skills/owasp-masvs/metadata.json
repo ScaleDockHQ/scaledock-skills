@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OWASP Mobile Application Security Verification Standard (MASVS) with its MAS project companions, the Mobile Application Security Weakness Enumeration (MASWE) and the Mobile Application Security Testing Guide (MASTG), for reviewing and hardening iOS and Android apps. It lists three families: MASVS 2.1 (current, v2.1.0) and MASVS 1.5 (legacy), MASTG 2.0 (current, v2.0.0) and MASTG 1.7 (legacy), and MASWE 1.0 (current, v1.0.0) and the MASWE beta numbering (legacy). SKILL.md holds the invariants and assessment workflow; references split out versions and upgrades, the 24 controls with their MASWE weaknesses, MAS testing profiles and the testing process, and the MASVS 1.x to 2.x requirement mapping.",
+  "versions": [
+    {
+      "id": "masvs-2.1",
+      "label": "MASVS 2.1",
+      "status": "current",
+      "family": "masvs",
+      "revision": "v2.1.0 (2024-01-18)"
+    },
+    {
+      "id": "masvs-1.5",
+      "label": "MASVS 1.5",
+      "status": "legacy",
+      "family": "masvs",
+      "revision": "v1.5.0 (2023-01-31)"
+    },
+    {
+      "id": "mastg-2",
+      "label": "MASTG 2.0",
+      "status": "current",
+      "family": "mastg",
+      "revision": "v2.0.0 (2026-06-30)"
+    },
+    {
+      "id": "mastg-1",
+      "label": "MASTG 1.7",
+      "status": "legacy",
+      "family": "mastg",
+      "revision": "v1.7.0 (2023-10-31)"
+    },
+    {
+      "id": "maswe-1",
+      "label": "MASWE 1.0",
+      "status": "current",
+      "family": "maswe",
+      "revision": "v1.0.0 (2026-08-17)"
+    },
+    {
+      "id": "maswe-beta",
+      "label": "MASWE beta",
+      "status": "legacy",
+      "family": "maswe",
+      "revision": "pre-1.0 beta numbering (119 weaknesses)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP MASVS v2.1.0 release",
+      "url": "https://github.com/OWASP/masvs/releases/tag/v2.1.0",
+      "status": "Released (latest)",
+      "revision": "v2.1.0 (2024-01-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS v2.1.0 document",
+      "url": "https://github.com/OWASP/masvs/tree/v2.1.0/Document",
+      "status": "Released",
+      "revision": "v2.1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS v2.1.0 controls",
+      "url": "https://github.com/OWASP/masvs/tree/v2.1.0/controls",
+      "status": "Released",
+      "revision": "v2.1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS v2.0.0 release",
+      "url": "https://github.com/OWASP/masvs/releases/tag/v2.0.0",
+      "status": "Released (superseded by v2.1.0)",
+      "revision": "v2.0.0 (2023-04-01)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS v1.5.0 document",
+      "url": "https://github.com/OWASP/masvs/tree/v1.5.0/Document",
+      "status": "Released (last 1.x)",
+      "revision": "v1.5.0 (2023-01-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS unreleased changes since v2.1.0",
+      "url": "https://github.com/OWASP/masvs/compare/v2.1.0...master",
+      "status": "development branch",
+      "revision": "19 commits ahead of v2.1.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASVS website",
+      "url": "https://mas.owasp.org/MASVS/",
+      "status": "website (tracks the development branch)",
+      "revision": "live",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG website",
+      "url": "https://mas.owasp.org/MASTG/",
+      "status": "website (tracks the development branch)",
+      "revision": "live",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG v2.0.0 release",
+      "url": "https://github.com/OWASP/mastg/releases/tag/v2.0.0",
+      "status": "Released (latest)",
+      "revision": "v2.0.0 (2026-06-30)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG v2.0.0 tests",
+      "url": "https://github.com/OWASP/mastg/tree/v2.0.0/tests-beta",
+      "status": "Released",
+      "revision": "v2.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG v2.0.0 Mobile App Security Testing",
+      "url": "https://github.com/OWASP/mastg/blob/v2.0.0/Document/0x04b-Mobile-App-Security-Testing.md",
+      "status": "Released",
+      "revision": "v2.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG v1.7.0 release",
+      "url": "https://github.com/OWASP/mastg/releases/tag/v1.7.0",
+      "status": "Released (last 1.x)",
+      "revision": "v1.7.0 (2023-10-31)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASTG pull request 3979: Remove profiles from MASTG tests",
+      "url": "https://github.com/OWASP/mastg/pull/3979",
+      "status": "merged, unreleased",
+      "revision": "merged 2026-09-17",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASWE website",
+      "url": "https://mas.owasp.org/MASWE/",
+      "status": "website",
+      "revision": "live",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASWE v1.0.0 release",
+      "url": "https://github.com/OWASP/maswe/releases/tag/v1.0.0",
+      "status": "Released (first stable)",
+      "revision": "v1.0.0 (2026-08-17)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP MASWE v1.0.0 YAML",
+      "url": "https://github.com/OWASP/maswe/releases/download/v1.0.0/OWASP_MASWE.yaml",
+      "status": "Released",
+      "revision": "v1.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MAS Testing Profiles",
+      "url": "https://mas.owasp.org/Profiles/",
+      "status": "website",
+      "revision": "live, with the MAS-L1, MAS-L2, MAS-R, MAS-P and MAS-EUDIW pages",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Using MAS Profiles",
+      "url": "https://mas.owasp.org/Profiles/Using-MAS-Profiles/",
+      "status": "website",
+      "revision": "live",
+      "checked": "2026-10-05"
+    }
+  ]
+}
