@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OASIS Common Security Advisory Framework: CSAF 2.0 (OASIS Standard, 18 November 2022, with Approved Errata 01 of 26 January 2024) as the current line, the CSAF 2.1 Committee Specification Draft 03 (11 September 2026) as a tracked preview, and CVRF 1.2 (Committee Specification 01, 13 September 2017) as the legacy XML predecessor. SKILL.md holds the invariants and workflow; references split the document model, profiles and VEX, tests and conformance, distribution, and version lines with upgrade notes.",
+  "versions": [
+    {
+      "id": "2.1-preview",
+      "label": "CSAF 2.1",
+      "status": "preview",
+      "posture": "track",
+      "revision": "Committee Specification Draft 03 (2026-09-11)"
+    },
+    {
+      "id": "2.0",
+      "label": "CSAF 2.0",
+      "status": "current",
+      "revision": "OASIS Standard (2022-11-18), with Approved Errata 01 (2024-01-26)"
+    },
+    {
+      "id": "cvrf-1.2",
+      "label": "CVRF 1.2",
+      "status": "legacy",
+      "revision": "Committee Specification 01 (2017-09-13)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Common Security Advisory Framework Version 2.0",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html",
+      "status": "OASIS Standard",
+      "revision": "18 November 2022",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF Version 2.0 Errata 01",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/errata01/os/csaf-v2.0-errata01-os.html",
+      "status": "OASIS Approved Errata",
+      "revision": "26 January 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.0 latest stage",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html",
+      "status": "OASIS Standard with Approved Errata 01",
+      "revision": "Serves the Errata 01 document (26 January 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.0 JSON schema",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+      "status": "OASIS Standard",
+      "revision": "2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.0 provider metadata JSON schema",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/provider_json_schema.json",
+      "status": "OASIS Standard",
+      "revision": "2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.0 aggregator JSON schema",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/aggregator_json_schema.json",
+      "status": "OASIS Approved Errata",
+      "revision": "2.0 Errata 01",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.0 known issues",
+      "url": "https://github.com/oasis-tcs/csaf/blob/master/csaf_2.0/known_issues.md",
+      "status": "TC repository note",
+      "revision": "master at e0da5a9 (2026-09-13)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Common Security Advisory Framework Version 2.1 (CSD03)",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.1/csd03/csaf-v2.1-csd03.html",
+      "status": "Committee Specification Draft",
+      "revision": "CSD03, 11 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.1 stage index",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.1/",
+      "status": "Stage listing",
+      "revision": "Latest stage CSD03 (csd01, csd02, csd03; no CS)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF 2.1 JSON schema",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.1/schema/csaf.json",
+      "status": "Committee Specification Draft",
+      "revision": "CSD03, 2026-09-11",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "oasis-tcs/csaf",
+      "url": "https://github.com/oasis-tcs/csaf",
+      "status": "TC repository",
+      "revision": "master at e0da5a9 (2026-09-13), tag csaf-2.1-csd-03-20260911-rc1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF Common Vulnerability Reporting Framework (CVRF) Version 1.2",
+      "url": "https://docs.oasis-open.org/csaf/csaf-cvrf/v1.2/csaf-cvrf-v1.2.html",
+      "status": "Committee Specification 01",
+      "revision": "13 September 2017",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CSAF documentation site",
+      "url": "https://oasis-open.github.io/csaf-documentation/",
+      "status": "TC documentation site",
+      "revision": "as of 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
