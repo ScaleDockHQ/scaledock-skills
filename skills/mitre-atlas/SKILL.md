@@ -108,10 +108,6 @@ MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) i
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [MITRE ATLAS website](https://atlas.mitre.org/): released, Data v2026.09 (Website v5.4.1), checked 2026-10-05.
-- [ATLAS Matrix page](https://atlas.mitre.org/matrices/ATLAS-matrix): released, Data v2026.09, checked 2026-10-05.
-- [ATLAS Mitigations page](https://atlas.mitre.org/mitigations): released, Data v2026.09, checked 2026-10-05.
-- [ATLAS technique page AML.T0051](https://atlas.mitre.org/techniques/AML.T0051): released, Data v2026.09, checked 2026-10-05.
-- [ATLAS General Information page](https://atlas.mitre.org/resources/info): released, Data v2026.09, checked 2026-10-05.
 - [mitre-atlas/atlas-data README](https://github.com/mitre-atlas/atlas-data/blob/v2026.09/README.md): released, tag v2026.09 (commit 3259f38), checked 2026-10-05.
 - [ATLAS release v2026.09](https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09): released, latest release 2026-09-15 (not a pre-release), checked 2026-10-05.
 - [ATLAS-2026.09.yaml (format 6.0.0)](https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml): released, content 2026.09, checked 2026-10-05.

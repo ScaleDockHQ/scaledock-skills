@@ -33,7 +33,7 @@ The skill was written from these sources, pinned in `metadata.json`:
 
 - [OWASP API Security Top 10 2023](https://owasp.org/API-Security/editions/2023/en/0x00-header/): the list, release notes, risk rating, methodology and the ten risk pages (stable release, June 2023).
 - [OWASP API Security Top 10 2019](https://owasp.org/API-Security/editions/2019/en/0x00-header/): the legacy edition and its list.
-- [OWASP API Security Project](https://owasp.org/www-project-api-security/) and [its page source](https://github.com/OWASP/www-project-api-security): news and roadmap.
+- [OWASP API Security Project page source](https://github.com/OWASP/www-project-api-security): news and roadmap.
 - [OWASP/API-Security](https://github.com/OWASP/API-Security): the source of both editions, including unreleased clarifications on `develop`.
 
 The OWASP documents are licensed CC BY-SA 4.0; the skill paraphrases them.

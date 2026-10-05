@@ -51,34 +51,6 @@
       "checked": "2026-10-05"
     },
     {
-      "title": "ATLAS Matrix page",
-      "url": "https://atlas.mitre.org/matrices/ATLAS-matrix",
-      "status": "released",
-      "revision": "Data v2026.09",
-      "checked": "2026-10-05"
-    },
-    {
-      "title": "ATLAS Mitigations page",
-      "url": "https://atlas.mitre.org/mitigations",
-      "status": "released",
-      "revision": "Data v2026.09",
-      "checked": "2026-10-05"
-    },
-    {
-      "title": "ATLAS technique page AML.T0051",
-      "url": "https://atlas.mitre.org/techniques/AML.T0051",
-      "status": "released",
-      "revision": "Data v2026.09",
-      "checked": "2026-10-05"
-    },
-    {
-      "title": "ATLAS General Information page",
-      "url": "https://atlas.mitre.org/resources/info",
-      "status": "released",
-      "revision": "Data v2026.09",
-      "checked": "2026-10-05"
-    },
-    {
       "title": "mitre-atlas/atlas-data README",
       "url": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/README.md",
       "status": "released",

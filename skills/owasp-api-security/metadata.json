@@ -139,13 +139,6 @@
       "checked": "2026-10-05"
     },
     {
-      "title": "OWASP API Security Project (project page)",
-      "url": "https://owasp.org/www-project-api-security/",
-      "status": "OWASP documentation project, level 3",
-      "revision": "redirects to owasp.org/projects/api-security, which returned 404; read from its source repository",
-      "checked": "2026-10-05"
-    },
-    {
       "title": "OWASP/www-project-api-security (project page source, news and roadmap)",
       "url": "https://github.com/OWASP/www-project-api-security",
       "status": "project page source",
