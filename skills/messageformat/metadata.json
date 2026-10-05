@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Unicode MessageFormat (MessageFormat 2.0), UTS #35 Part 9: syntax, declarations, matchers, markup, the default functions, pattern selection, errors and fallback output, bidi isolation and the interchange data model, plus ICU MessageFormat 1 and its migration. It lists Unicode MessageFormat LDML 48 (current, pinned at 48.2), LDML 47 (supported), the MessageFormat 2.0 Tech Preview of LDML 45 to 46.1 (legacy), the LDML 49 draft (preview, track), and ICU MessageFormat 1 as its own family (pinned to the ICU4J 78 docs). SKILL.md holds the invariants and workflow; references split out versions and upgrades, syntax and the data model, functions, selection and errors, and ICU MessageFormat 1 migration.",
+  "versions": [
+    {
+      "id": "ldml49-preview",
+      "label": "Unicode MessageFormat LDML 49 draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "CLDR 49 draft, tr35-79 (2026-09-24)"
+    },
+    {
+      "id": "ldml48",
+      "label": "Unicode MessageFormat LDML 48",
+      "status": "current",
+      "revision": "LDML 48.2, tr35-78 (2026-03-03)"
+    },
+    {
+      "id": "ldml47",
+      "label": "Unicode MessageFormat LDML 47",
+      "status": "supported",
+      "revision": "LDML 47, tr35-75 (release 2025-02-27)"
+    },
+    {
+      "id": "ldml45-46",
+      "label": "MessageFormat 2.0 Tech Preview",
+      "status": "legacy",
+      "revision": "LDML 45 (tr35-72), LDML 46 (tr35-73), LDML 46.1 (tr35-74)"
+    },
+    {
+      "id": "icu-mf1",
+      "label": "ICU MessageFormat 1",
+      "status": "current",
+      "family": "icu-mf1",
+      "revision": "ICU4J 78 MessageFormat API docs",
+      "reference": "references/icu-mf1-migration.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UTS #35 Part 9: MessageFormat (latest)",
+      "url": "https://www.unicode.org/reports/tr35/tr35-messageFormat.html",
+      "status": "Unicode Technical Standard (approved, stable)",
+      "revision": "LDML 48.2 (tr35-78, 2026-03-03)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UTS #35 Part 9: MessageFormat, LDML 49 draft",
+      "url": "https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html",
+      "status": "Proposed Update (draft)",
+      "revision": "CLDR 49 draft (tr35-79, 2026-09-24)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UTS #35 Part 9: MessageFormat, LDML 47",
+      "url": "https://www.unicode.org/reports/tr35/tr35-75/tr35-messageFormat.html",
+      "status": "Unicode Technical Standard (superseded)",
+      "revision": "LDML 47 (tr35-75)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UTS #35 Part 9: MessageFormat, LDML 46.1",
+      "url": "https://www.unicode.org/reports/tr35/tr35-74/tr35-messageFormat.html",
+      "status": "Unicode Technical Standard (superseded; MF2 Final Candidate)",
+      "revision": "LDML 46.1 (tr35-74)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UTS #35 Part 9: MessageFormat, LDML 46",
+      "url": "https://www.unicode.org/reports/tr35/tr35-73/tr35-messageFormat.html",
+      "status": "Unicode Technical Standard (superseded; MF2 Tech Preview)",
+      "revision": "LDML 46 (tr35-73)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "UTS #35 Part 9: MessageFormat, LDML 45",
+      "url": "https://www.unicode.org/reports/tr35/tr35-72/tr35-messageFormat.html",
+      "status": "Unicode Technical Standard (superseded; MF2 Tech Preview)",
+      "revision": "LDML 45 (tr35-72)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "message-format-wg specification (editor's copy)",
+      "url": "https://github.com/unicode-org/message-format-wg/tree/main/spec",
+      "status": "Editor's draft",
+      "revision": "main as of 2026-08-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "message-format-wg releases",
+      "url": "https://github.com/unicode-org/message-format-wg/releases",
+      "status": "Release notes",
+      "revision": "LDML48.2 (2026-04-21)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "message-format-wg test suite",
+      "url": "https://github.com/unicode-org/message-format-wg/tree/main/test",
+      "status": "Conformance tests",
+      "revision": "main as of 2026-08-31",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ICU User Guide: Formatting Messages",
+      "url": "https://unicode-org.github.io/icu/userguide/format_parse/messages/",
+      "status": "ICU documentation",
+      "revision": "current site (ICU 79 listed)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ICU4J MessageFormat API",
+      "url": "https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/MessageFormat.html",
+      "status": "API documentation",
+      "revision": "ICU4J 78",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ICU4J PluralFormat API",
+      "url": "https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/PluralFormat.html",
+      "status": "API documentation",
+      "revision": "ICU4J 78",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ICU4J SelectFormat API",
+      "url": "https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/SelectFormat.html",
+      "status": "API documentation",
+      "revision": "ICU4J 78",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ICU4J MessagePattern.ApostropheMode API",
+      "url": "https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/MessagePattern.ApostropheMode.html",
+      "status": "API documentation (Stable since ICU 4.8)",
+      "revision": "ICU4J 78",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "BCP 47",
+      "url": "https://www.rfc-editor.org/info/bcp47",
+      "status": "IETF Best Current Practice",
+      "revision": "RFC 5646 and RFC 4647",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 5646: Tags for Identifying Languages",
+      "url": "https://www.rfc-editor.org/rfc/rfc5646",
+      "status": "RFC (Best Current Practice, BCP 47)",
+      "revision": "RFC 5646",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 4647: Matching of Language Tags",
+      "url": "https://www.rfc-editor.org/rfc/rfc4647",
+      "status": "RFC (Best Current Practice, BCP 47)",
+      "revision": "RFC 4647",
+      "checked": "2026-10-05"
+    }
+  ]
+}
