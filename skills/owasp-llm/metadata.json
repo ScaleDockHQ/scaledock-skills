@@ -1,0 +1,169 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Turns the OWASP Top 10 for LLM Applications into a review workflow for LLM-powered applications. It covers three version lines: the 2026 edition (Version 2026, 3 August 2026) as current, the 2025 edition (18 November 2024) as supported, and v1.1 (16 October 2023) as legacy; no preview is published. SKILL.md holds the invariants and the review workflow; references cover the version lines with an ID table across editions and upgrade steps, the ten 2026 entries in two files with their numbered mitigations, and a checklist grouped by prompts, input, tools, output, data, retrieval, supply chain and consumption, with the Appendix A mappings to the Agentic Top 10 and MITRE ATLAS.",
+  "versions": [
+    {
+      "id": "2026",
+      "label": "OWASP Top 10 for LLM Applications 2026",
+      "status": "current",
+      "revision": "Version 2026 (3 August 2026)"
+    },
+    {
+      "id": "2025",
+      "label": "OWASP Top 10 for LLM Applications 2025",
+      "status": "supported",
+      "revision": "Version 2025 (18 November 2024)"
+    },
+    {
+      "id": "1.1",
+      "label": "OWASP Top 10 for LLM Applications v1.1",
+      "status": "legacy",
+      "revision": "Version 1.1 (16 October 2023), tag 2023-v1.1"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP GenAI LLM Top 10 2026 (resource page)",
+      "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "status": "Published",
+      "revision": "Version 2026 (3 August 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for LLM Applications 2026 (PDF)",
+      "url": "https://genai.owasp.org/download/56857/?tmstv=1785822482",
+      "status": "Published",
+      "revision": "Version 2026 (cover date placeholder)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP GenAI Security Project unveils 2026 Top 10 for LLM Applications (announcement)",
+      "url": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/",
+      "status": "Published",
+      "revision": "2 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for LLM Applications 2025 (resource page)",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+      "status": "Published",
+      "revision": "Version 2025 (17 November 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for LLM Applications 2025 (PDF)",
+      "url": "https://genai.owasp.org/download/43299/?tmstv=1731900559",
+      "status": "Published",
+      "revision": "Version 2025 (18 November 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM Top 10 page",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM01:2025 Prompt Injection",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM02:2025 Sensitive Information Disclosure",
+      "url": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM03:2025 Supply Chain",
+      "url": "https://genai.owasp.org/llmrisk/llm032025-supply-chain/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM04:2025 Data and Model Poisoning",
+      "url": "https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM05:2025 Improper Output Handling",
+      "url": "https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM06:2025 Excessive Agency",
+      "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM07:2025 System Prompt Leakage",
+      "url": "https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM08:2025 Vector and Embedding Weaknesses",
+      "url": "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM09:2025 Misinformation",
+      "url": "https://genai.owasp.org/llmrisk/llm092025-misinformation/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "LLM10:2025 Unbounded Consumption",
+      "url": "https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/",
+      "status": "Published",
+      "revision": "2025 edition",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for LLMs 2023-24",
+      "url": "https://genai.owasp.org/llm-top-10-2023-24/",
+      "status": "Published",
+      "revision": "Version 1.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for LLM Applications v1.1 entries (GitHub)",
+      "url": "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/tree/2023-v1.1/1_1_vulns",
+      "status": "Released",
+      "revision": "tag 2023-v1.1 (Version 1.1, 16 October 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Project change log (GitHub)",
+      "url": "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/blob/main/changes.md",
+      "status": "Published",
+      "revision": "entries 1.0 to 2.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OWASP Top 10 for Large Language Model Applications (OWASP project page)",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "status": "OWASP Lab Project",
+      "revision": "links Version 2025",
+      "checked": "2026-10-05"
+    }
+  ]
+}
