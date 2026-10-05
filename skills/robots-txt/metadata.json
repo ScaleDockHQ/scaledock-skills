@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 9309, the Robots Exclusion Protocol: the /robots.txt location and format, user-agent groups and product tokens, group merging and the * fallback, allow and disallow rules with longest-match precedence, the * and $ special characters, percent-encoding, other records such as Sitemap, fetch outcomes (4xx allow all, 5xx or unreachable disallow all, at least five redirects), 24-hour caching, the 500 KiB parsing limit and the security considerations, plus addressing AI crawlers by the product tokens their operators document and how robots.txt relates to AI usage preferences. Version lines: RFC 9309 is current, the 1994 A Standard for Robot Exclusion and the 1996 draft-koster-robots-00 are legacy with upgrade steps, and draft-ietf-aipref-attach-05 (the Content-Usage rule) is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions and upgrades, syntax and matching, fetching and caching, and crawlers and AI.",
+  "versions": [
+    {
+      "id": "aipref-attach-preview",
+      "label": "draft-ietf-aipref-attach",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-aipref-attach-05 (19 August 2026)"
+    },
+    {
+      "id": "rfc9309",
+      "label": "RFC 9309",
+      "status": "current",
+      "revision": "RFC 9309 (September 2022)"
+    },
+    {
+      "id": "draft-koster-robots-00",
+      "label": "draft-koster-robots-00",
+      "status": "legacy",
+      "revision": "draft-koster-robots-00 (December 1996)"
+    },
+    {
+      "id": "norobots-1994",
+      "label": "A Standard for Robot Exclusion (1994)",
+      "status": "legacy",
+      "revision": "robots mailing list consensus (30 June 1994)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9309: Robots Exclusion Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9309",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9309 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc9309",
+      "status": "RFC Editor errata",
+      "revision": "4 Reported (7124, 7128, 7995, 8895), none Verified",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A Standard for Robot Exclusion",
+      "url": "https://www.robotstxt.org/orig.html",
+      "status": "Community convention (robots mailing list consensus)",
+      "revision": "30 June 1994",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "A Method for Web Robots Control (draft-koster-robots-00)",
+      "url": "https://www.robotstxt.org/norobots-rfc.txt",
+      "status": "Expired Internet-Draft (Informational)",
+      "revision": "draft-koster-robots-00 (December 1996); no Datatracker record",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Associating AI Usage Preferences with Content in HTTP (draft-ietf-aipref-attach)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/",
+      "status": "Internet-Draft (aipref WG document)",
+      "revision": "draft-ietf-aipref-attach-05 (19 August 2026); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 5234: Augmented BNF for Syntax Specifications: ABNF",
+      "url": "https://www.rfc-editor.org/rfc/rfc5234",
+      "status": "RFC (Internet Standard, STD 68)",
+      "revision": "RFC 5234",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Google's common crawlers",
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "status": "Crawler operator documentation",
+      "revision": "last updated 2026-07-14",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Overview of OpenAI Crawlers",
+      "url": "https://developers.openai.com/api/docs/bots",
+      "status": "Crawler operator documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler?",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "status": "Crawler operator documentation",
+      "revision": "April 7, 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "About Applebot",
+      "url": "https://support.apple.com/en-us/119829",
+      "status": "Crawler operator documentation",
+      "revision": "published September 04, 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Common Crawl CCBot",
+      "url": "https://commoncrawl.org/ccbot",
+      "status": "Crawler operator documentation",
+      "revision": "undated",
+      "checked": "2026-10-05"
+    }
+  ]
+}
