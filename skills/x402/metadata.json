@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the x402 payment protocol, which revives HTTP 402 Payment Required for agent and machine payments: the PaymentRequired, PaymentRequirements, ResourceInfo, PaymentPayload and SettlementResponse types; the HTTP (PAYMENT-REQUIRED, PAYMENT-SIGNATURE, PAYMENT-RESPONSE), MCP and A2A transports; the authorization, upfront and escrow payment flows; the exact, upto, batch-settlement and auth-capture schemes with their EVM and SVM bindings; the facilitator /verify, /settle and /supported APIs; Bazaar discovery and extensions; and replay, amount and expiry security. It lists two version lines: x402 v2 (current) and x402 v1 (legacy, upgraded from, with deprecated SDKs), both pinned to x402-foundation/x402 at commit cb0ec5b. SKILL.md holds the invariants and workflow; references split out versions and the v1 to v2 upgrade, the payment flow and transports, schemes and networks, the facilitator, and security.",
+  "versions": [
+    {
+      "id": "v2",
+      "label": "x402 v2",
+      "status": "current",
+      "revision": "Protocol Version 2, spec v2.0 (2025-12-09), main at cb0ec5b (2026-10-05)"
+    },
+    {
+      "id": "v1",
+      "label": "x402 v1",
+      "status": "legacy",
+      "revision": "Protocol Version 1, spec v0.2 (2025-10-03), main at cb0ec5b (2026-10-05); v1 SDKs deprecated"
+    }
+  ],
+  "sources": [
+    {
+      "title": "x402 Protocol Specification v2",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/x402-specification-v2.md",
+      "status": "Protocol Version 2",
+      "revision": "spec v2.0 (2025-12-09), commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: HTTP (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/http.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: MCP (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/mcp.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: A2A (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/a2a.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Protocol Specification v1",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/x402-specification-v1.md",
+      "status": "Protocol Version 1 (legacy)",
+      "revision": "spec v0.2 (2025-10-03), commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: HTTP (v1)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v1/http.md",
+      "status": "Protocol Version 1 (legacy)",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: MCP (v1)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v1/mcp.md",
+      "status": "Protocol Version 1 (legacy)",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: exact",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/exact/scheme_exact.md",
+      "status": "Scheme specification",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: exact on EVM",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/exact/scheme_exact_evm.md",
+      "status": "Network binding",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: exact on SVM",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/exact/scheme_exact_svm.md",
+      "status": "Network binding",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: upto",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/upto/scheme_upto.md",
+      "status": "Scheme specification",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: upto on EVM",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/upto/scheme_upto_evm.md",
+      "status": "Network binding",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: upto on SVM",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/upto/scheme_upto_svm.md",
+      "status": "Network binding",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: batch-settlement",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/batch-settlement/scheme_batch_settlement.md",
+      "status": "Scheme specification",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Scheme: auth-capture",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/schemes/auth-capture/scheme_auth_capture.md",
+      "status": "Scheme specification",
+      "revision": "v1.1 (2026-08-18), commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Extension: bazaar",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/extensions/bazaar.md",
+      "status": "Extension specification",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Extension: payment-identifier",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/extensions/payment_identifier.md",
+      "status": "Extension specification",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 repository README",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/README.md",
+      "status": "Repository documentation",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Legacy v1 package notice",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/typescript/packages/legacy/x402/README.md",
+      "status": "Deprecated (v1), security patches only",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Migration Guide: V1 to V2",
+      "url": "https://docs.x402.org/guides/migration-v1-to-v2",
+      "status": "Documentation",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402.org",
+      "url": "https://x402.org",
+      "status": "Project site",
+      "revision": "as published 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
