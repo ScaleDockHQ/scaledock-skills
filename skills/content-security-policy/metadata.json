@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C response headers that lock down documents: Content Security Policy Level 3 (Working Draft of 16 September 2026, build posture) with directives, source lists, nonces and hashes, 'strict-dynamic', 'unsafe-hashes', report-to with Reporting-Endpoints, report-uri, Content-Security-Policy-Report-Only, frame-ancestors, upgrade-insecure-requests and the Strict CSP pattern; Trusted Types (require-trusted-types-for, trusted-types, policies, the default policy); Permissions Policy (the Permissions-Policy structured header, allowlists, the iframe allow attribute, report-only); and Fetch Metadata Request Headers (Sec-Fetch-Site, -Mode, -Dest, -User) with a server-side resource isolation policy. Version lines: CSP Level 3 current, CSP Level 2 supported, CSP 1.0 and its X-Content-Security-Policy and X-WebKit-CSP headers legacy; Trusted Types, Permissions Policy and Fetch Metadata each have one current line, with the Feature-Policy header legacy in the Permissions Policy family. SKILL.md holds the invariants and workflow; references split out versions and upgrades, CSP directives, strict CSP and reporting, Trusted Types, Permissions Policy, and Fetch Metadata.",
+  "versions": [
+    {
+      "id": "csp3",
+      "label": "CSP Level 3",
+      "status": "current",
+      "posture": "build",
+      "revision": "W3C Working Draft, 16 September 2026 (WD-CSP3-20260916)",
+      "reference": "references/csp-directives.md"
+    },
+    {
+      "id": "csp2",
+      "label": "CSP Level 2",
+      "status": "supported",
+      "revision": "W3C Recommendation, 15 December 2016 (REC-CSP2-20161215)"
+    },
+    {
+      "id": "csp1",
+      "label": "CSP 1.0",
+      "status": "legacy",
+      "revision": "W3C Working Group Note, 19 February 2015 (discontinued); text in CR-CSP-20121115; X-Content-Security-Policy and X-WebKit-CSP prefixed headers"
+    },
+    {
+      "id": "trusted-types",
+      "label": "Trusted Types",
+      "status": "current",
+      "posture": "build",
+      "family": "trusted-types",
+      "revision": "W3C Working Draft, 23 June 2026 (WD-trusted-types-20260623)",
+      "reference": "references/trusted-types.md"
+    },
+    {
+      "id": "permissions-policy",
+      "label": "Permissions Policy",
+      "status": "current",
+      "posture": "build",
+      "family": "permissions-policy",
+      "revision": "W3C Working Draft, 22 September 2026 (WD-permissions-policy-1-20260922)",
+      "reference": "references/permissions-policy.md"
+    },
+    {
+      "id": "feature-policy",
+      "label": "Feature Policy",
+      "status": "legacy",
+      "family": "permissions-policy",
+      "revision": "W3C First Public Working Draft, 16 April 2019 (WD-feature-policy-1-20190416); Feature-Policy header"
+    },
+    {
+      "id": "fetch-metadata",
+      "label": "Fetch Metadata Request Headers",
+      "status": "current",
+      "posture": "build",
+      "family": "fetch-metadata",
+      "revision": "W3C Working Draft, 21 September 2026 (WD-fetch-metadata-20260921)",
+      "reference": "references/fetch-metadata.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Content Security Policy Level 3",
+      "url": "https://www.w3.org/TR/CSP3/",
+      "status": "W3C Working Draft",
+      "revision": "WD-CSP3-20260916 (16 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Content Security Policy Level 3 (Editor's Draft)",
+      "url": "https://w3c.github.io/webappsec-csp/",
+      "status": "Editor's Draft",
+      "revision": "16 September 2026, same normative text as WD-CSP3-20260916",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Content Security Policy Level 2",
+      "url": "https://www.w3.org/TR/CSP2/",
+      "status": "W3C Recommendation",
+      "revision": "REC-CSP2-20161215 (15 December 2016)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Content Security Policy 1.0",
+      "url": "https://www.w3.org/TR/CSP1/",
+      "status": "W3C Working Group Note (work discontinued)",
+      "revision": "NOTE-CSP1-20150219 (19 February 2015)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Content Security Policy 1.0 (Candidate Recommendation)",
+      "url": "https://www.w3.org/TR/2012/CR-CSP-20121115/",
+      "status": "W3C Candidate Recommendation, superseded",
+      "revision": "CR-CSP-20121115 (15 November 2012)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Trusted Types",
+      "url": "https://www.w3.org/TR/trusted-types/",
+      "status": "W3C Working Draft",
+      "revision": "WD-trusted-types-20260623 (23 June 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Permissions Policy",
+      "url": "https://www.w3.org/TR/permissions-policy/",
+      "status": "W3C Working Draft",
+      "revision": "WD-permissions-policy-1-20260922 (22 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Policy Controlled Features (Permissions Policy companion list)",
+      "url": "https://github.com/w3c/webappsec-permissions-policy/blob/10d8736ea4f13e38410fe0b7424ae04e513b528c/features.md",
+      "status": "Non-normative companion document",
+      "revision": "commit 10d8736 (2026-05-26)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Feature Policy",
+      "url": "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+      "status": "W3C First Public Working Draft, superseded by Permissions Policy",
+      "revision": "WD-feature-policy-1-20190416 (16 April 2019)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Fetch Metadata Request Headers",
+      "url": "https://www.w3.org/TR/fetch-metadata/",
+      "status": "W3C Working Draft",
+      "revision": "WD-fetch-metadata-20260921 (21 September 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Upgrade Insecure Requests",
+      "url": "https://www.w3.org/TR/upgrade-insecure-requests/",
+      "status": "W3C Candidate Recommendation",
+      "revision": "CR-upgrade-insecure-requests-20151008 (8 October 2015)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Mixed Content",
+      "url": "https://www.w3.org/TR/mixed-content/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "CRD-mixed-content-20230223 (23 February 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Reporting API",
+      "url": "https://www.w3.org/TR/reporting-1/",
+      "status": "W3C Working Draft",
+      "revision": "WD-reporting-1-20250611 (11 June 2025)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
