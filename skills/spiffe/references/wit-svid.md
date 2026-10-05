@@ -4,7 +4,7 @@ Source: [WIT-SVID](https://raw.githubusercontent.com/spiffe/spiffe/main/standard
 
 Incubating specifications may still change based on implementation experience, and adopters are encouraged to gate them behind a feature flag ([STABILITY.md](https://raw.githubusercontent.com/spiffe/spiffe/main/standards/STABILITY.md) §2.3). Build on X.509-SVID or JWT-SVID for production paths; prototype WIT-SVID behind a flag.
 
-A WIT-SVID is a SPIFFE profile of the IETF WIMSE Workload Identity Token (WIT), which binds a public key to a workload identity. Every WIT-SVID is a WIT, but not every WIT is a WIT-SVID. It is a JWT in JWS compact serialization (§1). This skill does not pin the WIMSE drafts; read them before implementing.
+A WIT-SVID is a SPIFFE profile of the IETF WIMSE Workload Identity Token (WIT), which binds a public key to a workload identity. Every WIT-SVID is a WIT, but not every WIT is a WIT-SVID. It is a JWT in JWS compact serialization (§1). For how WIT-SVID and the other SVIDs map to the WIMSE drafts, and the pinned WIMSE revisions, see [wimse-and-oauth.md](wimse-and-oauth.md); build the WIMSE protocols themselves with the `wimse` skill.
 
 ## Header (§2)
 
