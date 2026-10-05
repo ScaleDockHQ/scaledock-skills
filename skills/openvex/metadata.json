@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenVEX specification from the openvex/spec repository: VEX documents and statements, the product, component and vulnerability structs, the four status labels and five not_affected justifications, inheritance and document updates, the JSON Schema and JSON-LD context, embedding as an in-toto attestation predicate, and the mapping to the CISA Minimum Requirements for VEX. It lists two version lines: OpenVEX v0.2.0 (current, pinned to the v0.2.0 release and the main-branch text at commit 61b5f88) and OpenVEX v0.0.2 (legacy, upgraded from); no newer draft exists. SKILL.md holds the invariants and workflow; references split out versions and upgrades, the document and statement model, status and justifications, and producing and consuming.",
+  "versions": [
+    {
+      "id": "v0.2.0",
+      "label": "OpenVEX v0.2.0",
+      "status": "current",
+      "revision": "v0.2.0 (2023-08-22); main 61b5f88 (2026-09-09)"
+    },
+    {
+      "id": "v0.0.2",
+      "label": "OpenVEX v0.0.2",
+      "status": "legacy",
+      "revision": "v0.0.2 (2023-07-18)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenVEX Specification (OPENVEX-SPEC.md)",
+      "url": "https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md",
+      "status": "Draft specification",
+      "revision": "v0.2.0, commit 61b5f88 (2026-09-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenVEX spec releases",
+      "url": "https://github.com/openvex/spec/releases",
+      "status": "Released",
+      "revision": "v0.2.0 latest (2023-08-22)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenVEX Specification v0.0.2",
+      "url": "https://github.com/openvex/spec/blob/v0.0.2/OPENVEX-SPEC.md",
+      "status": "Released (superseded by v0.2.0)",
+      "revision": "tag v0.0.2 (2023-07-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Attesting OpenVEX Documents (ATTESTING.md)",
+      "url": "https://github.com/openvex/spec/blob/main/ATTESTING.md",
+      "status": "Draft",
+      "revision": "commit 61b5f88 (2026-09-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenVEX JSON Schema",
+      "url": "https://github.com/openvex/spec/blob/main/openvex_json_schema.json",
+      "status": "JSON Schema 2020-12 for v0.2.0",
+      "revision": "commit 61b5f88 (2026-09-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenVEX JSON-LD context v0.2.0",
+      "url": "https://github.com/openvex/spec/blob/main/ns/v0.2.0/context.json",
+      "status": "JSON-LD context",
+      "revision": "commit 61b5f88 (2026-09-09)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "openvex.dev",
+      "url": "https://openvex.dev",
+      "status": "Project site (redirects to openvex/spec)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPEV-0014: Expansion of the VEX Product Field",
+      "url": "https://github.com/openvex/community/blob/main/enhancements/opev-0014.md",
+      "status": "Accepted enhancement (in v0.2.0)",
+      "revision": "OPEV-0014",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPEV-0015: Expansion of the Vulnerability Field",
+      "url": "https://github.com/openvex/community/blob/main/enhancements/opev-0015.md",
+      "status": "Accepted enhancement (in v0.2.0)",
+      "revision": "OPEV-0015",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "CISA Minimum Requirements for Vulnerability Exploitability eXchange (VEX)",
+      "url": "https://www.cisa.gov/sites/default/files/2023-04/minimum-requirements-for-vex-508c.pdf",
+      "status": "Published (CISA, VEX Working Group)",
+      "revision": "Requirements version 1.0.0 (April 2023)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
