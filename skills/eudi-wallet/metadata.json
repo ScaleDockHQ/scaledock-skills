@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the European Digital Identity Wallet Architecture and Reference Framework (ARF) at release 3.0.0 and its Annex 2 High-Level Requirements: the roles (Wallet Providers and Wallet Units, PID Providers, QEAA, PuB-EAA and non-qualified EAA Providers, Relying Parties and intermediaries, Registrars, Access CAs and Providers of registration certificates), Trusted Lists and LoTEs, access and registration certificates, Wallet Instance Attestations and Key Attestations, the ISO/IEC 18013-5 mdoc and SD-JWT VC formats and the PID Rulebook identifiers, issuance with OpenID4VCI and HAIP, remote presentation with OpenID4VP or ISO/IEC 18013-7 over redirects or the W3C Digital Credentials API, ISO/IEC 18013-5 proximity presentation, User approval, revocation with status lists, embedded disclosure policies, unlinkability methods and pseudonyms, with Regulation (EU) 2024/1183 as the cited legal basis. Version lines: ARF 3.0.0 is current, ARF 2.9.0 and ARF 1.10.0 are legacy, and the main branch is tracked as a preview, with upgrade steps from 2.x and 1.x. SKILL.md holds the invariants and workflow; references split out the version lines, roles and trust, credentials and formats, issuance and presentation, and an HLR index.",
+  "versions": [
+    {
+      "id": "arf-main-preview",
+      "label": "ARF main branch",
+      "status": "preview",
+      "posture": "track",
+      "revision": "main at f5789a7 (2026-10-02), 102 commits after v3.0.0"
+    },
+    {
+      "id": "arf-3",
+      "label": "ARF 3.0.0",
+      "status": "current",
+      "revision": "v3.0.0 (21 July 2026; GitHub release published 23 July 2026)"
+    },
+    {
+      "id": "arf-2",
+      "label": "ARF 2.9.0",
+      "status": "legacy",
+      "revision": "v2.9.0 (GitHub release published 21 May 2026), last of 2.0.0 to 2.9.0"
+    },
+    {
+      "id": "arf-1",
+      "label": "ARF 1.10.0",
+      "status": "legacy",
+      "revision": "v1.10.0 (2 May 2025), last of 1.0.0 to 1.10.0"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ARF repository at v3.0.0",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/v3.0.0",
+      "status": "Released",
+      "revision": "v3.0.0 (21 July 2026, commit c64f2cb)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF High-Level Requirements CSV at v3.0.0",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/v3.0.0/hltr/high-level-requirements.csv",
+      "status": "Released",
+      "revision": "v3.0.0 (725 rows)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF releases",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases",
+      "status": "Release index",
+      "revision": "v1.0.0 to v3.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF changelog",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "main, entries 1.0.0 to 3.0.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF repository at v2.9.0",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/v2.9.0",
+      "status": "Released",
+      "revision": "v2.9.0 (21 May 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF repository at v1.10.0",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/v1.10.0",
+      "status": "Released",
+      "revision": "v1.10.0 (2 May 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF repository main branch",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/tree/main",
+      "status": "Development branch",
+      "revision": "commit f5789a7 (2 October 2026); preview posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ARF published site",
+      "url": "https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/",
+      "status": "Published site",
+      "revision": "shows v3.0.0 (21 July 2026); redirects to eudi.dev",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Regulation (EU) 2024/1183",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "status": "Legal basis (Regulation in force)",
+      "revision": "OJ L 2024/1183 of 30 April 2024, amending Regulation (EU) No 910/2014",
+      "checked": "2026-10-05"
+    }
+  ]
+}
