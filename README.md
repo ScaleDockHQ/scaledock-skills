@@ -68,8 +68,10 @@ Neutral skills, one per specification or family of specifications from one publi
 
 | Skill                                                       | Description                                                                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`graphql`](skills/graphql)                                 | GraphQL September 2025: schemas, validation, execution, errors and GraphQL over HTTP, with upgrades from October 2021 and June 2018.               |
 | [`http-message-signatures`](skills/http-message-signatures) | RFC 9421 HTTP Message Signatures: sign and verify HTTP messages, with RFC 9530 digests and upgrades from cavage-12 and RFC 3230.                   |
 | [`http-semantics`](skills/http-semantics)                   | HTTP Semantics RFC 9110 and Caching RFC 9111: methods, status codes, conditionals, caching and API fields, with upgrades from RFC 7230-7235.       |
+| [`json-api`](skills/json-api)                               | JSON:API 1.1: build and review APIs with resources, includes, pagination, errors and Atomic Operations, with upgrades from 1.0.                    |
 | [`openapi`](skills/openapi)                                 | OpenAPI 3.0 to 3.2: write, validate and upgrade API descriptions, with Swagger 2.0 upgrades and the 3.3 preview.                                   |
 | [`openapi-arazzo`](skills/openapi-arazzo)                   | Arazzo 1.1 and 1.0: describe and run multi-step workflows over OpenAPI and AsyncAPI operations, with the 1.2 preview.                              |
 | [`openapi-overlay`](skills/openapi-overlay)                 | OpenAPI Overlay 1.2 and 1.1: apply repeatable JSONPath changes to OpenAPI documents, with upgrades from 1.0.                                       |
@@ -93,6 +95,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP evaluation, batch, search and PDP metadata, with upgrades from the Implementer's Draft.                     |
 | [`cedar`](skills/cedar)                         | Cedar 4.x (language 4.5): write, validate and evaluate authorization policies and schemas, with upgrades from Cedar 3.x and 2.x.                      |
+| [`cel`](skills/cel)                             | CEL v0.25: write and review Common Expression Language expressions with types, macros, error semantics and cost, with upgrades from v0.24 and v0.6.   |
 | [`ciba`](skills/ciba)                           | OpenID CIBA Core 1.0: decoupled sign-in with poll, ping and push delivery, with upgrades from the Implementer's Drafts and MODRNA.                    |
 | [`fapi`](skills/fapi)                           | FAPI 2.0 Security Profile and Message Signing: high-security OAuth for financial-grade APIs, with FAPI 1.0 upgrades, JARM and CIBA.                   |
 | [`gnap`](skills/gnap)                           | GNAP (RFC 9635 and RFC 9767): request, issue and verify key-bound access tokens, and connect resource servers.                                        |
@@ -103,6 +106,8 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openid-connect`](skills/openid-connect)       | OpenID Connect 1.0 (errata set 2): validate ID tokens and run login, logout and discovery, with OpenID 2.0 migration.                                 |
 | [`openid-federation`](skills/openid-federation) | OpenID Federation 1.1 and 1.0: build and validate trust chains, entity statements and metadata policy, with upgrades from pre-Final drafts.           |
 | [`openid4vc`](skills/openid4vc)                 | OpenID4VCI, OpenID4VP and HAIP 1.0: issue and verify credentials, with upgrades from the Implementer's Drafts and the 1.1 previews.                   |
+| [`openfga`](skills/openfga)                     | OpenFGA schema 1.1: relationship-based authorization models, tuples, tests and API calls, with modular models (1.2) and upgrades from schema 1.0.     |
+| [`rego`](skills/rego)                           | Rego v1 (OPA 1.21): write, test and bundle Open Policy Agent policies with deny-by-default authorization, with upgrades from Rego v0.                 |
 | [`saml`](skills/saml)                           | SAML 2.0 with Errata 05: build SSO requests, responses and metadata, and validate responses against wrapping and replay, with upgrades from SAML 1.1. |
 | [`scim`](skills/scim)                           | SCIM 2.0: provision users and groups with RFC 7643 and RFC 7644, including cursor pagination and security events, with SCIM 1.1 upgrades.             |
 | [`sd-jwt`](skills/sd-jwt)                       | RFC 9901 SD-JWT: selective disclosure, Key Binding and verification, plus SD-JWT VC and Token Status List, with upgrades from pre-RFC drafts.         |
@@ -155,13 +160,14 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Web platform
 
-| Skill                                                       | Description                                                                                                                         |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`content-security-policy`](skills/content-security-policy) | CSP Level 3: strict CSP, Trusted Types, Permissions Policy and Fetch Metadata, with upgrades from CSP Level 2 and Feature-Policy.   |
-| [`hsts`](skills/hsts)                                       | RFC 6797 HSTS: send and enforce Strict-Transport-Security safely, with staged max-age rollout, preload rules and max-age=0 removal. |
-| [`http-cookies`](skills/http-cookies)                       | HTTP cookies RFC 6265: secure Set-Cookie and Cookie handling, with the RFC 6265bis preview and upgrades from RFC 2965 and RFC 2109. |
-| [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                       |
-| [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                |
+| Skill                                                       | Description                                                                                                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`content-security-policy`](skills/content-security-policy) | CSP Level 3: strict CSP, Trusted Types, Permissions Policy and Fetch Metadata, with upgrades from CSP Level 2 and Feature-Policy.               |
+| [`ecmascript-temporal`](skills/ecmascript-temporal)         | Temporal (ES2027, stage 4): types, time zones, DST, calendars, arithmetic and RFC 9557 strings, with upgrades from Date and pre-2024 polyfills. |
+| [`hsts`](skills/hsts)                                       | RFC 6797 HSTS: send and enforce Strict-Transport-Security safely, with staged max-age rollout, preload rules and max-age=0 removal.             |
+| [`http-cookies`](skills/http-cookies)                       | HTTP cookies RFC 6265: secure Set-Cookie and Cookie handling, with the RFC 6265bis preview and upgrades from RFC 2965 and RFC 2109.             |
+| [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                                   |
+| [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                            |
 
 ## Development
 
