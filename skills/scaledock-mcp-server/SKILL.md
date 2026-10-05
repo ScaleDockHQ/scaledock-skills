@@ -1,10 +1,10 @@
 ---
 name: scaledock-mcp-server
-description: Build or harden a ScaleDock MCP server that follows the MCP authorization spec, OAuth 2.1, JWT verification and Problem Details, with PermDock deciding every tool call. Use when adding an MCP surface, protecting MCP tools, wiring Protected Resource Metadata, scope challenges or step-up, filtering tools/list per user, adding human approval to destructive tools, or reviewing an MCP server against the specs.
+description: Build or harden a ScaleDock MCP server that follows the MCP base protocol and authorization spec, OAuth 2.1, JWT verification and Problem Details, with PermDock deciding every tool call. Use when adding an MCP surface, protecting MCP tools, wiring Protected Resource Metadata, scope challenges or step-up, filtering tools/list per user, adding MCP Apps UI to tools, adding human approval to destructive tools, or reviewing an MCP server against the specs.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # ScaleDock MCP server
@@ -23,15 +23,17 @@ An MCP server that is a correct OAuth 2.1 resource server, acts as the signed-in
 ## Skills to install
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills --skill mcp-authorization --skill oauth --skill jwt --skill problem-details
+npx skills add ScaleDockHQ/scaledock-skills --skill mcp --skill mcp-authorization --skill oauth --skill jwt --skill problem-details
 npx skills add ScaleDockHQ/PermDock
 ```
+
+Optional: `mcp-apps` (`npx skills add ScaleDockHQ/scaledock-skills --skill mcp-apps`) when a tool ships an interactive `ui://` view next to its text result.
 
 `scaledock-repo-standard` (its `references/mcp.md` and `references/auth.md`) owns the app layout: the `@modelcontextprotocol/server` package, the Hono mount, the per-request server factory and tools from the contract.
 
 ## Invariants
 
-1. **The spec skills win on protocol details.** Protected Resource Metadata, the `WWW-Authenticate` challenge, resource indicators and audience checks follow `mcp-authorization` and `oauth`; token checks follow `jwt`. Do not restate them here or in the app; link the skill in code review.
+1. **The spec skills win on protocol details.** Messages, transports, `tools/list`, tool results and errors follow `mcp`; UI views follow `mcp-apps`. Protected Resource Metadata, the `WWW-Authenticate` challenge, resource indicators and audience checks follow `mcp-authorization` and `oauth`; token checks follow `jwt`. Do not restate them here or in the app; link the skill in code review.
 2. **Every tool call is a PermDock decision.** Tools register through `createPermDock(...).protectServer(server)` from `permdock/mcp`, one permission per tool. PermDock filters `tools/list`, validates arguments against the resource schema, and audits each call.
 3. **Authorization comes from the user, not from scopes.** Scopes say what the client may ask for; PermDock and RLS say what the user may do. Enforce a scope only when the authorization server can issue it.
 4. **The subject is never model-supplied.** It comes from the verified access token (`authInfo`) through the PermDock subject resolver, never from tool arguments.
@@ -41,12 +43,12 @@ npx skills add ScaleDockHQ/PermDock
 
 ## Workflow
 
-1. **Set the inputs and read the docs.** Read the installed `@modelcontextprotocol/server` docs, the `permdock/mcp` page through the PermDock docs MCP (`https://permdock.dev/mcp`), and the `mcp-authorization` skill's Invariants.
+1. **Set the inputs and read the docs.** Read the installed `@modelcontextprotocol/server` docs, the `permdock/mcp` page through the PermDock docs MCP (`https://permdock.dev/mcp`), and the `mcp` and `mcp-authorization` skills' Invariants.
    ✓ You can name the spec revision the SDK serves and the PermDock options you will set.
 2. **Resource server.** Serve Protected Resource Metadata, return 401 with the `resource_metadata` challenge, and verify every bearer token (signature, issuer, expiry, audience) as `mcp-authorization` and `jwt` require. With Supabase, wrap the handler in `withOAuthProtectedResource` and `withSupabase({ auth: "user" })` from `@supabase/server` (the nested form), and serve the OAuth Consent block at `/oauth/consent` in the app.
    -> [`references/stack.md`](references/stack.md) (how each requirement maps to the ScaleDock stack)
    ✓ An unauthenticated request gets 401 with the metadata URL, a token for another resource is rejected, and a signed-out user reaching `/oauth/consent` signs in and returns to the consent screen.
-3. **Permissions.** Define one permission per tool in `permissions.ts`, grant them in `policy.ts`, and register tools with `protectServer`. Follow `wire-permdock` from `ScaleDockHQ/PermDock`.
+3. **Permissions.** Define one permission per tool in `permissions.ts`, grant them in `policy.ts`, and register tools with `protectServer`. Follow `wire-permdock` from `ScaleDockHQ/PermDock`. With `mcp-apps`, link each UI tool to its `ui://` resource and keep its text result; a view's `tools/call` goes through the same PermDock decision.
    ✓ `tools/list` differs per role, and a call without a grant returns a Problem Details denial.
 4. **Approvals and step-up.** Put `approval` on every destructive grant and configure a durable approval store. When a tool needs a scope the token lacks, return the scope challenge that `mcp-authorization` describes.
    ✓ A destructive call returns `approval-required` and resumes only after a distinct approver accepts.
@@ -57,7 +59,7 @@ npx skills add ScaleDockHQ/PermDock
 
 ## Verify before done
 
-- [ ] Every item in the `mcp-authorization` Verify list passes.
+- [ ] Every item in the `mcp` and `mcp-authorization` Verify lists passes (and `mcp-apps` when installed).
 - [ ] Every tool has exactly one permission, and an unmapped tool is not listed.
 - [ ] `/oauth/consent` is reachable signed out and returns to the consent screen after sign-in.
 - [ ] The subject comes from `authInfo`; no tool reads a user, tenant or actor id from its arguments.
