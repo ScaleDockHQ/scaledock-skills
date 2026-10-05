@@ -50,6 +50,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`a2a`](skills/a2a)                             | A2A 1.0: publish Agent Cards and talk agent to agent over JSON-RPC, gRPC and HTTP+JSON, with upgrades from 0.3 and 0.2 and the 1.1 preview.    |
 | [`ag-ui`](skills/ag-ui)                         | AG-UI 1.0: stream agent runs to user-facing apps with typed events, shared state and interrupts, with upgrades from 0.x and the 1.1 preview.   |
+| [`agent-skills`](skills/agent-skills)           | Agent Skills spec 2026-08-04: write, review and validate SKILL.md skills with skills-ref, and add skill discovery and loading to agents.       |
 | [`ap2`](skills/ap2)                             | AP2 v0.2: authorize AI agent payments with signed Checkout and Payment Mandates, with upgrades from v0.1.                                      |
 | [`mcp`](skills/mcp)                             | MCP 2026-07-28 (2025-11-25 and 2025-06-18 supported): build MCP servers and clients, with upgrades from 2025-03-26 and 2024-11-05.             |
 | [`mcp-authorization`](skills/mcp-authorization) | MCP authorization 2026-07-28 (2025-11-25 and 2025-06-18 supported): secure MCP servers and clients with OAuth, with upgrades from 2025-03-26.  |
@@ -92,6 +93,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`shared-signals`](skills/shared-signals)       | SSF 1.0, CAEP 1.0 and RISC 1.0: send and receive security events, with upgrades from the Implementer's Drafts.                                        |
 | [`saml`](skills/saml)                           | SAML 2.0 with Errata 05: build SSO requests, responses and metadata, and validate responses against wrapping and replay, with upgrades from SAML 1.1. |
 | [`scim`](skills/scim)                           | SCIM 2.0: provision users and groups with RFC 7643 and RFC 7644, including cursor pagination and security events, with SCIM 1.1 upgrades.             |
+| [`webauthn`](skills/webauthn)                   | WebAuthn Level 3 (Level 2 supported): register and verify passkeys and security keys per § 7.1 and § 7.2, with upgrades from Level 1.                 |
 | [`spiffe`](skills/spiffe)                       | SPIFFE and SPIRE: issue and verify workload identities, SVIDs, trust bundles and federation, with the Incubating WIT-SVID and Broker preview.         |
 | [`authzen`](skills/authzen)                     | AuthZEN Authorization API 1.0: PEP-to-PDP evaluation, batch, search and PDP metadata, with upgrades from the Implementer's Draft.                     |
 | [`cedar`](skills/cedar)                         | Cedar 4.x (language 4.5): write, validate and evaluate authorization policies and schemas, with upgrades from Cedar 3.x and 2.x.                      |
@@ -115,6 +117,14 @@ Neutral skills, one per specification or family of specifications from one publi
 | Skill                           | Description                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`eu-ai-act`](skills/eu-ai-act) | EU AI Act (consolidated text of 27 July 2026, with the Digital Omnibus): classify AI systems and update plans built on the original dates. |
+| [`eu-cra`](skills/eu-cra)       | EU Cyber Resilience Act, 2024 OJ text: scoping, Annex I, SBOMs, Art. 14 reporting and CE marking, tracking two amending proposals.         |
+
+#### Web platform
+
+| Skill                         | Description                                                                                                                              |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [`wcag`](skills/wcag)         | WCAG 2.2: build, review and test UIs against the A/AA/AAA success criteria and write conformance claims, with upgrades from 2.0 and 2.1. |
+| [`wai-aria`](skills/wai-aria) | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                            |
 
 ## Development
 
