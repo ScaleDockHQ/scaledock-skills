@@ -1,0 +1,245 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers IETF HTTP Semantics (RFC 9110) and HTTP Caching (RFC 9111) for API and server authors: method safety and idempotency, status codes, validators and conditional requests (ETag, If-Match, If-None-Match, 304, 412), content negotiation and Vary, range requests, and Cache-Control freshness and validation, plus the RFC 5861 stale extensions. It also covers the HTTP extension fields APIs use most: the QUERY method (RFC 10008), Structured Field Values (RFC 9651), Web Linking (RFC 8288), Deprecation (RFC 9745), Sunset (RFC 8594), api-catalog (RFC 9727), Prefer (RFC 7240), and tracks the expired Idempotency-Key draft-07. Legacy lines RFC 7230-7235 and RFC 8941 are read and upgraded from. SKILL.md holds the invariants and workflow; references split out versions and upgrades, methods and status codes, conditional and range requests, caching and negotiation, structured fields, and the API lifecycle fields.",
+  "versions": [
+    {
+      "id": "rfc9110",
+      "label": "RFC 9110 and RFC 9111",
+      "status": "current",
+      "revision": "RFC 9110 (STD 97) and RFC 9111 (STD 98), June 2022",
+      "family": "core"
+    },
+    {
+      "id": "rfc7230-7235",
+      "label": "RFC 7230-7235",
+      "status": "legacy",
+      "revision": "RFC 7230 to RFC 7235, June 2014",
+      "family": "core"
+    },
+    {
+      "id": "idempotency-key-preview",
+      "label": "Idempotency-Key draft-07",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-httpapi-idempotency-key-header-07 (15 October 2025, expired 18 April 2026)",
+      "family": "core",
+      "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc10008",
+      "label": "RFC 10008 QUERY",
+      "status": "current",
+      "revision": "RFC 10008, June 2026",
+      "family": "query",
+      "reference": "references/methods-and-status.md"
+    },
+    {
+      "id": "rfc9651",
+      "label": "RFC 9651 Structured Fields",
+      "status": "current",
+      "revision": "RFC 9651, September 2024",
+      "family": "structured-fields",
+      "reference": "references/structured-fields.md"
+    },
+    {
+      "id": "rfc8941",
+      "label": "RFC 8941 Structured Fields",
+      "status": "legacy",
+      "revision": "RFC 8941, February 2021",
+      "family": "structured-fields",
+      "reference": "references/structured-fields.md"
+    },
+    {
+      "id": "rfc8288",
+      "label": "RFC 8288 Web Linking",
+      "status": "current",
+      "revision": "RFC 8288, October 2017",
+      "family": "web-linking",
+      "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc9745",
+      "label": "RFC 9745 Deprecation",
+      "status": "current",
+      "revision": "RFC 9745, March 2025",
+      "family": "deprecation",
+      "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc8594",
+      "label": "RFC 8594 Sunset",
+      "status": "current",
+      "revision": "RFC 8594, May 2019",
+      "family": "sunset",
+      "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc9727",
+      "label": "RFC 9727 api-catalog",
+      "status": "current",
+      "revision": "RFC 9727, June 2025",
+      "family": "api-catalog",
+      "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc7240",
+      "label": "RFC 7240 Prefer",
+      "status": "current",
+      "revision": "RFC 7240, June 2014, updated by RFC 8144",
+      "family": "prefer",
+      "reference": "references/api-lifecycle-fields.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9110: HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "status": "RFC (Internet Standard, STD 97)",
+      "revision": "RFC 9110",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9111: HTTP Caching",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111",
+      "status": "RFC (Internet Standard, STD 98)",
+      "revision": "RFC 9111",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9112: HTTP/1.1",
+      "url": "https://www.rfc-editor.org/rfc/rfc9112",
+      "status": "RFC (Internet Standard, STD 99, updated by RFC 9931)",
+      "revision": "RFC 9112",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7230: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing",
+      "url": "https://www.rfc-editor.org/rfc/rfc7230",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9110 and RFC 9112)",
+      "revision": "RFC 7230",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7231: Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content",
+      "url": "https://www.rfc-editor.org/rfc/rfc7231",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9110)",
+      "revision": "RFC 7231",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7232: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests",
+      "url": "https://www.rfc-editor.org/rfc/rfc7232",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9110)",
+      "revision": "RFC 7232",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7233: Hypertext Transfer Protocol (HTTP/1.1): Range Requests",
+      "url": "https://www.rfc-editor.org/rfc/rfc7233",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9110)",
+      "revision": "RFC 7233",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching",
+      "url": "https://www.rfc-editor.org/rfc/rfc7234",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9111)",
+      "revision": "RFC 7234",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7235: Hypertext Transfer Protocol (HTTP/1.1): Authentication",
+      "url": "https://www.rfc-editor.org/rfc/rfc7235",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9110)",
+      "revision": "RFC 7235",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 10008: The HTTP QUERY Method",
+      "url": "https://www.rfc-editor.org/rfc/rfc10008",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 10008",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-httpbis-safe-method-w-body: The HTTP QUERY Method",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-httpbis-safe-method-w-body/",
+      "status": "RFC Published (became RFC 10008)",
+      "revision": "-14",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 5861: HTTP Cache-Control Extensions for Stale Content",
+      "url": "https://www.rfc-editor.org/rfc/rfc5861",
+      "status": "RFC (Informational)",
+      "revision": "RFC 5861",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9651: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9651",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9651",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8941: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8941",
+      "status": "RFC (Proposed Standard, obsoleted by RFC 9651)",
+      "revision": "RFC 8941",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8288: Web Linking",
+      "url": "https://www.rfc-editor.org/rfc/rfc8288",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8288",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9745: The Deprecation HTTP Response Header Field",
+      "url": "https://www.rfc-editor.org/rfc/rfc9745",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9745",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8594: The Sunset HTTP Header Field",
+      "url": "https://www.rfc-editor.org/rfc/rfc8594",
+      "status": "RFC (Informational)",
+      "revision": "RFC 8594",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9727: api-catalog: A Well-Known URI and Link Relation to Help Discovery of APIs",
+      "url": "https://www.rfc-editor.org/rfc/rfc9727",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9727",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7240: Prefer Header for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc7240",
+      "status": "RFC (Proposed Standard, updated by RFC 8144)",
+      "revision": "RFC 7240",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 8144: Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8144",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 8144",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-httpapi-idempotency-key-header-07: The Idempotency-Key HTTP Header Field",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-idempotency-key-header-07",
+      "status": "Internet-Draft (Expired, WG Document)",
+      "revision": "-07",
+      "checked": "2026-10-05"
+    }
+  ]
+}
