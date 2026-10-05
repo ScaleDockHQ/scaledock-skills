@@ -12,9 +12,9 @@ description: >-
   status messages. Covers conformance and claims, the four
   principles (perceivable, operable, understandable, robust), what WCAG 2.2
   added (2.4.11, 2.4.13, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8, 3.3.9) and the
-  removal of 4.1.1 Parsing, and testing with the informative Understanding,
-  Techniques and Test Rules documents. Targets WCAG 2.2; supports WCAG 2.1,
-  upgrades from WCAG 2.0, and tracks the WCAG 3.0 Working Draft.
+  removal of 4.1.1 Parsing, and testing. Targets WCAG 2.2; supports WCAG 2.1
+  and WCAG 2.0 with upgrades between them; builds WCAG 3.0 draft assessments,
+  never claims.
 license: MIT
 metadata:
   author: ScaleDockHQ
@@ -24,7 +24,7 @@ metadata:
 
 # WCAG
 
-The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibility Guidelines Working Group, define testable success criteria that make web content accessible to people with disabilities. This skill pins WCAG 2.2 (W3C Recommendation, 12 December 2024 edition) and produces a UI, a review or a test plan that meets a chosen conformance level, plus a conformance claim when one is wanted.
+The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibility Guidelines Working Group, define testable success criteria that make web content accessible to people with disabilities. This skill pins WCAG 2.2 (W3C Recommendation, 12 December 2024 edition) as the default, supports WCAG 2.1 and WCAG 2.0 as targets, and produces a UI, a review or a test plan that meets a chosen version and conformance level, plus a conformance claim when one is wanted. It can also assess content against the WCAG 3.0 Working Draft, reported separately as work in progress.
 
 **Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources), with the section it cites. Success criteria are cited by number (SC 2.5.8), conformance rules by section (§ 5.2.1), and glossary terms by name. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
@@ -35,7 +35,7 @@ The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibil
 - Scope: the web pages, page variations (responsive breakpoints), and complete processes (for example checkout or sign-in) in scope (§ 5.2.2, § 5.2.3).
 - Technologies relied upon: for example HTML, CSS, JavaScript, WAI-ARIA, and the user agents and assistive technologies they are tested with (§ 5.2.4, § 5.3.1).
 - Platform: web in a browser, or native mobile or desktop software. WCAG 2 is written for web content; the WCAG 2 Overview points to WCAG2ICT for applying it to native apps, software and documents.
-- Target version: WCAG 2.2 (current, the default). WCAG 2.1 is supported: target it only when a named policy or contract requires it, knowing that WCAG 2.2 conformance also satisfies it. WCAG 2.0 is legacy: read and upgrade from it; content that meets WCAG 2.2 also meets WCAG 2.0. WCAG 3.0 is a preview (posture: track): do not test or claim against it. See [`references/versions.md`](references/versions.md).
+- Target version: WCAG 2.2 (current, the default). WCAG 2.1 and WCAG 2.0 are supported: target one when a named policy, law or contract requires a claim against it, and use that version's criteria set and claim URI. Content that meets WCAG 2.2 also meets WCAG 2.1 and WCAG 2.0. WCAG 3.0 is a preview (posture: build): on request, run a separate draft assessment against the Working Draft, labelled as work in progress, alongside a WCAG 2 result and never as a conformance claim. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read the WCAG 2 Overview and FAQ for new editions, the WCAG 2.2 Change Log for errata, and the WCAG 3.0 status section; then every URL in [Sources](#sources). Update the pins and bump the version.
 
@@ -56,9 +56,9 @@ The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibil
 
 ## Workflow
 
-1. **Pick the version and level.** Default to WCAG 2.2 Level AA. Record any policy that names WCAG 2.0 or WCAG 2.1, and whether it still expects 4.1.1 to be reported.
+1. **Pick the version and level.** Default to WCAG 2.2 Level AA. Target WCAG 2.1 or WCAG 2.0 when a named policy requires it, and record whether 4.1.1 must be reported. Add a WCAG 3.0 draft assessment only when asked.
    -> [`references/versions.md`](references/versions.md)
-   ✓ The target version is recorded, and it is not WCAG 2.0 or the WCAG 3.0 draft.
+   ✓ The target WCAG 2 version is recorded with its criteria set (2.2: 55 at A and AA; 2.1: 50; 2.0: 38), and any WCAG 3.0 work is marked as a draft assessment.
 2. **Define the scope.** List pages, responsive variations, complete processes, third-party content, and the technologies relied upon.
    -> [`references/conformance.md`](references/conformance.md)
    ✓ No part of a page is excluded, and every step of each process in scope is listed.
@@ -73,25 +73,28 @@ The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibil
    ✓ Every in-scope criterion has a result backed by a manual check where automated tools cannot decide it.
 6. **Write the claim or statement** (only when asked). Include the required components, and use a statement of partial conformance for uncontrolled third-party content.
    -> [`references/conformance.md`](references/conformance.md)
-   ✓ The claim names "Web Content Accessibility Guidelines 2.2 at https://www.w3.org/TR/WCAG22/", the level, the date, the pages and the technologies.
-7. **Upgrade** (only when asked). Follow the upgrade section from the source version to WCAG 2.2.
+   ✓ The claim names the target version and its URI (for example "Web Content Accessibility Guidelines 2.2 at https://www.w3.org/TR/WCAG22/"), the level, the date, the pages and the technologies.
+7. **Upgrade** (only when asked). Follow the upgrade section from the source version to the new target, WCAG 2.1 or WCAG 2.2.
    -> [`references/versions.md`](references/versions.md)
-   ✓ The nine WCAG 2.2 criteria at or below the target level are tested, and 4.1.1 is handled as the policy requires.
+   ✓ Every criterion the new version adds at or below the target level is tested, and 4.1.1 is handled as the policy requires.
+8. **Assess against the WCAG 3.0 draft** (only when asked). Map the WCAG 2 results onto the draft's core requirements, and note gaps.
+   -> [`references/versions.md`](references/versions.md#preview-wcag-30)
+   ✓ The report names the Working Draft and its date, says it is work in progress, and sits apart from the WCAG 2 result.
 
 ## Verify before done
 
-- [ ] Every Level A and AA criterion in WCAG 2.2 (55 at A and AA, with 4.1.1 removed) has a pass, fail or not-applicable result for each page variation in scope.
+- [ ] Every Level A and AA criterion in the target version (WCAG 2.2: 55, with 4.1.1 removed; WCAG 2.1: 50; WCAG 2.0: 38) has a pass, fail or not-applicable result for each page variation in scope.
 - [ ] All functionality works with the keyboard alone, without traps, and the focused element is never fully covered by sticky headers, footers or banners (SC 2.1.1, 2.1.2, 2.4.11).
 - [ ] Text contrast is at least 4.5:1 (3:1 for large-scale text), and component boundaries, states and focus indicators are at least 3:1 (SC 1.4.3, 1.4.11).
 - [ ] Content reflows at 320 CSS pixels wide without two-dimensional scrolling, and survives the SC 1.4.12 text spacing overrides without loss (SC 1.4.10, 1.4.12).
 - [ ] Every drag interaction has a click or tap alternative, and every pointer target is at least 24 by 24 CSS pixels or passes the spacing circle test (SC 2.5.7, 2.5.8).
 - [ ] Sign-in fields allow paste and password manager fill, and any CAPTCHA has a non-cognitive alternative (SC 3.3.8).
 - [ ] Custom controls expose name, role, state and value, and status messages are announced without moving focus (SC 4.1.2, 4.1.3).
-- [ ] No result or claim refers to the WCAG 3.0 draft, and no WCAG 2.2 report fails content on 4.1.1.
+- [ ] No conformance claim refers to the WCAG 3.0 draft, any WCAG 3.0 assessment is labelled as work in progress, and no WCAG 2.2 report fails content on 4.1.1.
 
 ## Reference index
 
-- **`references/versions.md`**: WCAG 2.2, WCAG 2.1, WCAG 2.0 and the WCAG 3.0 draft with their status, what each added, upgrade steps, and the preview. Load for steps 1 and 7.
+- **`references/versions.md`**: WCAG 2.2, WCAG 2.1, WCAG 2.0 and the WCAG 3.0 draft with their status, what each added, upgrade steps, and the preview. Load for steps 1, 7 and 8.
 - **`references/conformance.md`**: levels, the five conformance requirements, accessibility support, conforming alternate versions, claims, partial conformance, and the privacy and security notes. Load for steps 2 and 6.
 - **`references/perceivable-operable.md`**: principles 1 and 2, criterion by criterion at A and AA (AAA listed), with 2.4.11, 2.4.13, 2.5.7 and 2.5.8 in detail. Load for step 3.
 - **`references/understandable-robust.md`**: principles 3 and 4, with 3.2.6, 3.3.7, 3.3.8 and 3.3.9 in detail, and the removal of 4.1.1. Load for step 4.
@@ -109,7 +112,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/): W3C Recommendation, 6 May 2025 (REC-WCAG21-20250506; first published 5 June 2018), checked 2026-10-05.
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/): W3C Recommendation, 11 December 2008 (REC-WCAG20-20081211), checked 2026-10-05.
 - [WCAG 2.0 Errata](https://www.w3.org/WAI/WCAG20/errata/): W3C errata page, includes the 4.1.1 Parsing note, checked 2026-10-05.
-- [W3C Accessibility Guidelines (WCAG) 3.0](https://www.w3.org/TR/wcag-3.0/): W3C Working Draft, 10 September 2026 (WD-wcag-3.0-20260910), checked 2026-10-05. Draft posture: track.
+- [W3C Accessibility Guidelines (WCAG) 3.0](https://www.w3.org/TR/wcag-3.0/): W3C Working Draft, 10 September 2026 (WD-wcag-3.0-20260910), checked 2026-10-05. Draft posture: build.
 - [What's New in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/): WAI resource, updated 5 October 2023, checked 2026-10-05.
 - [WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/): WAI resource, updated 17 September 2026, checked 2026-10-05.
 - [WCAG 2 FAQ](https://www.w3.org/WAI/standards-guidelines/wcag/faq/): WAI resource, updated 5 May 2026, checked 2026-10-05.

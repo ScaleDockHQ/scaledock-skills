@@ -8,7 +8,7 @@ An agent skill for the W3C Web Content Accessibility Guidelines (WCAG) 2.2: buil
 npx skills add ScaleDockHQ/scaledock-skills --skill wcag
 ```
 
-Then ask your agent to "review this component against WCAG 2.2 AA" or "write a WCAG 2.2 test plan for our checkout".
+Then ask your agent to "review this component against WCAG 2.2 AA" or "write a WCAG 2.2 test plan for our checkout". Name another version when a policy needs it: "audit this page against WCAG 2.1 AA", or "how does this form fare against the WCAG 3.0 draft?".
 
 ## What it covers
 
@@ -17,16 +17,17 @@ Then ask your agent to "review this component against WCAG 2.2 AA" or "write a W
 - What WCAG 2.2 added: Focus Not Obscured, Focus Appearance, Dragging Movements, Target Size (Minimum), Consistent Help, Redundant Entry and Accessible Authentication, and the removal of 4.1.1 Parsing.
 - The contrast ratio and relative luminance formulas, with a TypeScript helper.
 - Testing: how Understanding documents, Techniques, failures and Test Rules relate to conformance, and a manual checklist per criterion.
-- Upgrading audits and claims from WCAG 2.0 and 2.1.
+- Targeting WCAG 2.2, 2.1 or 2.0, with the criteria set and claim URI of each, and upgrading audits and claims between them.
+- Draft assessments against the WCAG 3.0 Working Draft, reported separately as work in progress.
 
 ## Versions
 
-| Line     | Status                |
-| -------- | --------------------- |
-| WCAG 3.0 | preview (track)       |
-| WCAG 2.2 | current               |
-| WCAG 2.1 | supported             |
-| WCAG 2.0 | legacy (upgrade from) |
+| Line     | Status                                        |
+| -------- | --------------------------------------------- |
+| WCAG 3.0 | preview (build): draft assessments, no claims |
+| WCAG 2.2 | current                                       |
+| WCAG 2.1 | supported                                     |
+| WCAG 2.0 | supported                                     |
 
 `references/versions.md` says which line to use and how to upgrade between them.
 

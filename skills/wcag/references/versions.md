@@ -6,12 +6,12 @@ Read this when choosing which WCAG version to build and test against, reading an
 
 | Id            | Line     | Status    | Revision                                          | Posture | Summary                                                                                  |
 | ------------- | -------- | --------- | ------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------- |
-| `3.0-preview` | WCAG 3.0 | preview   | W3C Working Draft, 10 September 2026              | track   | New model: core and supplemental requirements, assertions, reporting tiers, no A/AA/AAA. |
+| `3.0-preview` | WCAG 3.0 | preview   | W3C Working Draft, 10 September 2026              | build   | New model: core and supplemental requirements, assertions, reporting tiers, no A/AA/AAA. |
 | `2.2`         | WCAG 2.2 | current   | W3C Recommendation, 12 December 2024 edition      |         | Adds 9 criteria to 2.1 and removes 4.1.1 Parsing. 86 criteria: 31 A, 24 AA, 31 AAA.      |
 | `2.1`         | WCAG 2.1 | supported | W3C Recommendation, 6 May 2025 edition            |         | Adds 1 guideline and 17 criteria to 2.0 (mobile, low vision, cognitive). 78 criteria.    |
-| `2.0`         | WCAG 2.0 | legacy    | W3C Recommendation, 11 December 2008, plus errata |         | The original 12 guidelines and 61 criteria. Superseded in practice by 2.1 and 2.2.       |
+| `2.0`         | WCAG 2.0 | supported | W3C Recommendation, 11 December 2008, plus errata |         | The original 12 guidelines and 61 criteria. Still named by many policies and contracts.  |
 
-Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows.
+Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **preview** is a draft of the next line, used only as its posture allows. Posture **build** for WCAG 3.0 means: assess against the draft on request, in a separate report labelled as work in progress, never as a conformance claim and never instead of a WCAG 2 result.
 
 W3C's own position: WCAG 2.0, 2.1 and 2.2 are all W3C Recommendations, and WCAG 2.2 does not deprecate or supersede 2.1 or 2.0; W3C advises using WCAG 2.2 (WCAG 2.2, Abstract; WCAG 2 Overview, WCAG 2.0, 2.1, 2.2). The statuses above are this skill's guidance for what to author, not a W3C status. The Working Group does not plan a WCAG 2.3 (WCAG 2 FAQ, What is different in WCAG 2.0, 2.1, and 2.2?).
 
@@ -24,9 +24,17 @@ Policy: for the European Accessibility Act, most organizations use WCAG and EN 3
 ## Which version to use
 
 - Build and test against WCAG 2.2. Content that conforms to WCAG 2.2 also conforms to WCAG 2.1 and WCAG 2.0, and the Working Group recommends WCAG 2.2 as the conformance target even when formal obligations name an earlier version (WCAG 2.2, Introduction, New Features in WCAG 2.2 and Conformance to WCAG 2.2).
-- Target WCAG 2.1 only when a named policy or contract requires a WCAG 2.1 claim. Even then, testing against WCAG 2.2 covers it, except that a WCAG 2.1 report has 4.1.1 Parsing in its list (always satisfied for HTML or XML, WCAG 2.1 SC 4.1.1 Note 1).
-- Treat WCAG 2.0 as input to an upgrade: an older audit, a VPAT-style report, or a policy citing it. Meeting WCAG 2.2 meets WCAG 2.0 (WCAG 2 Overview).
-- Follow WCAG 3.0 only to see what is coming. Its posture is **track**: do not test, report or claim against it.
+- Target WCAG 2.1 when a named policy, law or contract requires a WCAG 2.1 claim. Testing against WCAG 2.2 covers it, except that a WCAG 2.1 report has 4.1.1 Parsing in its list (always satisfied for HTML or XML, WCAG 2.1 SC 4.1.1 Note 1).
+- Target WCAG 2.0 when a policy requires a WCAG 2.0 claim, and read older WCAG 2.0 audits as input to an upgrade. Meeting WCAG 2.2 meets WCAG 2.0 (WCAG 2 Overview). A WCAG 2.0 report lists 4.1.1 as satisfied for HTML or XML (WCAG 2.0 Errata).
+- Use WCAG 3.0 (posture **build**) for a draft assessment when asked: see what is coming and where current content falls short, without claiming conformance (WCAG 3.0, Status of This Document).
+
+| Target   | Criteria at A and AA | Claim cites                                                                 | 4.1.1                          |
+| -------- | -------------------- | --------------------------------------------------------------------------- | ------------------------------ |
+| WCAG 2.2 | 55 (31 A, 24 AA)     | "Web Content Accessibility Guidelines 2.2 at https://www.w3.org/TR/WCAG22/" | removed                        |
+| WCAG 2.1 | 50 (30 A, 20 AA)     | "Web Content Accessibility Guidelines 2.1 at https://www.w3.org/TR/WCAG21/" | listed, satisfied for HTML/XML |
+| WCAG 2.0 | 38 (25 A, 13 AA)     | the dated URI `http://www.w3.org/TR/2008/REC-WCAG20-20081211/`              | listed, satisfied for HTML/XML |
+
+When building for WCAG 2.1 or WCAG 2.0, use the WCAG 2.2 reference files and skip the criteria the target version does not have (listed under [What changed](#what-changed)).
 
 ## What changed
 
@@ -83,7 +91,7 @@ Apply both checklists above in order, then follow the 2.2 report rules: 4.1.1 is
 
 ## Preview: WCAG 3.0
 
-W3C Accessibility Guidelines (WCAG) 3.0 is a W3C Working Draft dated 10 September 2026; publication as a Working Draft does not imply W3C endorsement, and it is inappropriate to cite it other than as work in progress (WCAG 3.0, Status of This Document). Posture: **track**.
+W3C Accessibility Guidelines (WCAG) 3.0 is a W3C Working Draft dated 10 September 2026; publication as a Working Draft does not imply W3C endorsement, and it is inappropriate to cite it other than as work in progress (WCAG 3.0, Status of This Document). Posture: **build**.
 
 What the draft contains today (WCAG 3.0, § 1, § 3, § 4):
 
@@ -92,4 +100,12 @@ What the draft contains today (WCAG 3.0, § 1, § 3, § 4):
 - Conformance needs a defined scope and an accessibility support set, which a claim must include; the default set is not yet defined (§ 3.2.1, § 3.2.2).
 - Guidelines are grouped by topic (images and media, text and wording, interactive components, input and operation, error handling, animation, layout, consistency, process completion, policy and protection, help, user control), and only requirements at "developing" status are in the draft (§ 1.1, § 2). The draft says it still has several years of work, and the WCAG 2 FAQ says WCAG 3 is years away.
 
-Do not test, score or claim against WCAG 3.0, and do not replace WCAG 2.2 criteria with draft requirements. Watch the W3C history page for `wcag-3.0` and the WCAG 3.0 Change Log for movement to Candidate Recommendation. When WCAG 3.0 becomes a W3C Recommendation: add it as a separate line, decide whether WCAG 2.2 stays current (WCAG 2 remains referenced by policy), and add an upgrade section that maps WCAG 2.2 results onto core requirements.
+### Running a WCAG 3.0 draft assessment
+
+1. Start from a complete WCAG 2 result for the same scope; the draft assessment adds to it and never replaces it.
+2. Record the draft's date (10 September 2026) and the scope and accessibility support set used, since the draft requires both and has no default set yet (§ 3.2.1, § 3.2.2).
+3. For each core requirement in the draft, note which WCAG 2 results cover it and where the content falls short; list supplemental requirements and assertions separately (§ 3.1.1, § 3.2).
+4. Title the report as an assessment against the WCAG 3.0 Working Draft, state that it is work in progress, and do not score Bronze, Silver or Gold as a claim: the tiers are still exploratory (§ 4.1.4).
+5. When the draft changes, re-run against the new date rather than editing the old report.
+
+Do not claim conformance to WCAG 3.0, and do not replace WCAG 2 criteria with draft requirements. Watch the W3C history page for `wcag-3.0` and the WCAG 3.0 Change Log for movement to Candidate Recommendation. When WCAG 3.0 becomes a W3C Recommendation: add it as a separate line, decide whether WCAG 2.2 stays current (WCAG 2 remains referenced by policy), and add an upgrade section that maps WCAG 2.2 results onto core requirements.
