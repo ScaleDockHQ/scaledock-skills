@@ -1,6 +1,6 @@
 # MODRNA Working Group: CIBA and mobile operator profiles
 
-There is no dedicated skill for this family. This file is the reference.
+CIBA Core has a dedicated skill, `ciba`, with its normative detail: `npx skills add ScaleDockHQ/scaledock-skills --skill ciba`. The rest of the family has none; for it, this file is the reference.
 
 The MODRNA working group develops a profile of OpenID Connect for mobile network operators (MNOs) that provide identity services to relying parties, and for RPs that consume them. Its best-known output, CIBA Core, is used well beyond mobile operators; FAPI profiles it for high-security APIs (see [`fapi.md`](fapi.md)).
 

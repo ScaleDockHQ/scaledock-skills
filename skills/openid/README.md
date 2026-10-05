@@ -38,6 +38,7 @@ These families have their own skills with normative detail. This skill points to
 | OpenID Connect    | `openid-connect`    | `npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect`    |
 | OpenID Federation | `openid-federation` | `npx skills add ScaleDockHQ/scaledock-skills --skill openid-federation` |
 | FAPI              | `fapi`              | `npx skills add ScaleDockHQ/scaledock-skills --skill fapi`              |
+| CIBA              | `ciba`              | `npx skills add ScaleDockHQ/scaledock-skills --skill ciba`              |
 | Shared Signals    | `shared-signals`    | `npx skills add ScaleDockHQ/scaledock-skills --skill shared-signals`    |
 | OpenID4VC         | `openid4vc`         | `npx skills add ScaleDockHQ/scaledock-skills --skill openid4vc`         |
 | AuthZEN           | `authzen`           | `npx skills add ScaleDockHQ/scaledock-skills --skill authzen`           |

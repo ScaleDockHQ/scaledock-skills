@@ -4,7 +4,7 @@ description: "OpenID Foundation specs: every spec, maturity and errata, routed t
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -54,7 +54,7 @@ The OpenID Foundation (OIDF) publishes identity specifications through working g
 2. **Load the family reference.** Read only the reference for that family, plus any family it builds on (for example FAPI builds on OpenID Connect and OAuth; CAEP and RISC build on SSF).
    -> the reference file named in the [Reference index](#reference-index)
    ✓ Each specification in scope has an exact title, URL, maturity and date from the reference.
-3. **Use the dedicated skill when one exists.** OpenID Connect, OpenID Federation, FAPI, Shared Signals, OpenID4VC and AuthZEN have dedicated skills with normative detail. Install it and follow its workflow; this skill only routes.
+3. **Use the dedicated skill when one exists.** OpenID Connect, OpenID Federation, FAPI, CIBA, Shared Signals, OpenID4VC and AuthZEN have dedicated skills with normative detail. Install it and follow its workflow; this skill only routes.
    ✓ The dedicated skill is installed, or the reference confirms there is none.
 4. **Pick and pin the version.** Choose the Final at its latest errata set, or the newest Implementer's Draft, then record the document URL, maturity level, date and errata set, and the posture from invariant 4.
    -> [`references/versions.md`](references/versions.md)
@@ -100,6 +100,7 @@ Install the dedicated family skills by name:
 - `openid-connect`: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect`
 - `openid-federation`: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-federation`
 - `fapi`: `npx skills add ScaleDockHQ/scaledock-skills --skill fapi`
+- `ciba`: `npx skills add ScaleDockHQ/scaledock-skills --skill ciba`
 - `shared-signals`: `npx skills add ScaleDockHQ/scaledock-skills --skill shared-signals`
 - `openid4vc`: `npx skills add ScaleDockHQ/scaledock-skills --skill openid4vc`
 - `authzen`: `npx skills add ScaleDockHQ/scaledock-skills --skill authzen`
