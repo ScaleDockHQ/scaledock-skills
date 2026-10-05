@@ -88,7 +88,7 @@ The skill installs these and defers to them for their areas:
 - [`expo/skills`](https://github.com/expo/skills): Expo Router, Expo UI, the dev client and SDK upgrades.
 - [better-supabase](https://github.com/ScaleDockHQ/better-supabase): typed Supabase access.
 - [PermDock](https://github.com/ScaleDockHQ/PermDock): roles and permissions.
-- The spec and bundle skills in this repo, per surface: `scaledock-http-api`, `scaledock-mcp-server`, `scaledock-agent-permissions` and `scaledock-enterprise-identity`, and the spec skills they install (`openapi`, `problem-details`, `mcp-authorization`, `oauth`, `jwt`, and others). They own the protocol rules for their areas.
+- The spec and bundle skills in this repo, per surface: `scaledock-http-api`, `scaledock-mcp-server`, `scaledock-agent-permissions` and `scaledock-enterprise-identity`, and the spec skills they install (`http-semantics`, `openapi`, `json-schema`, `problem-details`, `mcp`, `mcp-authorization`, `oauth`, `jwt`, `saml`, `webauthn`, and others), plus the web (`wcag`, `wai-aria`, `content-security-policy`, `http-cookies`), repo (`agent-skills`, `agents-md`, `openssf-baseline`, `security-txt`, `slsa`, `cyclonedx`, `eu-cra`), data (`ecmascript-temporal`, `messageformat`, `json-schema`), docs (`llms-txt`) and email (`dmarc`, `dkim`, `spf`, `list-unsubscribe`) spec skills. They own the protocol rules for their areas.
 
 ## License
 
