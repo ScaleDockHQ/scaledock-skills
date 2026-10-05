@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Rego policy language of Open Policy Agent at OPA v1.21.1: modules, packages and imports, every rule kind, the if, contains, in, every, some, not and with keywords, the opt-in and/or keywords and improved not semantics, comprehensions, verified built-ins, the input and data documents, opa test with mocking, opa check, strict mode, opa fmt and capabilities, bundles and signing, the /v1/data Data API, performance basics and deny-by-default authorization patterns. Rego v1 (OPA 1.x) is current, Rego v0 (OPA 0.x) is legacy with upgrade steps, and the unreleased import rego.v2 is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions, the language, authorization patterns, built-ins and OPA interfaces, and testing and tooling.",
+  "versions": [
+    {
+      "id": "rego-v2-preview",
+      "label": "Rego v2 import (unreleased)",
+      "status": "preview",
+      "posture": "track",
+      "revision": "OPA CHANGELOG Unreleased section on main as of 2026-10-05; rejected by OPA v1.21.1"
+    },
+    {
+      "id": "v1",
+      "label": "Rego v1 (OPA 1.x)",
+      "status": "current",
+      "revision": "OPA v1.21.1 (2026-09-29)"
+    },
+    {
+      "id": "v0",
+      "label": "Rego v0 (OPA 0.x)",
+      "status": "legacy",
+      "revision": "OPA v0.70.0 (2024-10-31), last 0.x release"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OPA Policy Language",
+      "url": "https://www.openpolicyagent.org/docs/policy-language",
+      "status": "Documentation (latest)",
+      "revision": "docs source at main as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA Policy Reference",
+      "url": "https://www.openpolicyagent.org/docs/policy-reference",
+      "status": "Documentation (latest)",
+      "revision": "grammar and reserved names as of 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Rego Keyword: import",
+      "url": "https://www.openpolicyagent.org/docs/policy-reference/keywords/import",
+      "status": "Documentation (latest)",
+      "revision": "includes the unreleased rego.v2 section, 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Rego Keyword: not",
+      "url": "https://www.openpolicyagent.org/docs/policy-reference/keywords/not",
+      "status": "Documentation (latest)",
+      "revision": "improved negation semantics since OPA v1.17.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Rego Keywords: and, or",
+      "url": "https://www.openpolicyagent.org/docs/policy-reference/keywords/logical",
+      "status": "Documentation (latest)",
+      "revision": "keywords since OPA v1.20.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Rego Built-ins",
+      "url": "https://www.openpolicyagent.org/docs/policy-reference/builtins",
+      "status": "Documentation (latest)",
+      "revision": "generated from built-in metadata, 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA built-in metadata",
+      "url": "https://github.com/open-policy-agent/opa/blob/v1.21.1/builtin_metadata.json",
+      "status": "Released",
+      "revision": "v1.21.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA capabilities",
+      "url": "https://github.com/open-policy-agent/opa/blob/v1.21.1/capabilities.json",
+      "status": "Released",
+      "revision": "v1.21.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA Policy Testing",
+      "url": "https://www.openpolicyagent.org/docs/policy-testing",
+      "status": "Documentation (latest)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Upgrading to v1.0",
+      "url": "https://www.openpolicyagent.org/docs/v0-upgrade",
+      "status": "Documentation (latest)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "v0 Backwards Compatibility",
+      "url": "https://www.openpolicyagent.org/docs/v0-compatibility",
+      "status": "Documentation (latest)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA REST API",
+      "url": "https://www.openpolicyagent.org/docs/rest-api",
+      "status": "Documentation (latest)",
+      "revision": "Data API with rule_labels since OPA v1.21.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA Bundles",
+      "url": "https://www.openpolicyagent.org/docs/management-bundles",
+      "status": "Documentation (latest)",
+      "revision": "manifest schema v1, 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA Policy Performance",
+      "url": "https://www.openpolicyagent.org/docs/policy-performance",
+      "status": "Documentation (latest)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA CLI Reference",
+      "url": "https://www.openpolicyagent.org/docs/cli",
+      "status": "Documentation (latest)",
+      "revision": "generated from opa command help, 2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA Philosophy: The OPA Document Model",
+      "url": "https://www.openpolicyagent.org/docs/philosophy",
+      "status": "Documentation (latest)",
+      "revision": "2026-10-05",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA releases",
+      "url": "https://github.com/open-policy-agent/opa/releases",
+      "status": "Released",
+      "revision": "v1.21.1 (2026-09-29) latest; v1.0.0 (2024-12-20); v0.70.0 (2024-10-31) last 0.x",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OPA CHANGELOG",
+      "url": "https://github.com/open-policy-agent/opa/blob/main/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "main as of 2026-10-05 (Unreleased section adds import rego.v2)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
