@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the JSON:API specification at v1.1 (finalized 2022-09-30): the application/vnd.api+json media type with its ext and profile parameters and 415/406 negotiation, document structure (data, errors, meta, links, included, jsonapi), resource objects with type, id and lid, relationships, resource linkage and compound documents with full linkage, fetching with include, sparse fieldsets, sorting, pagination and filtering, query parameter families and naming, creating, updating and deleting resources and relationships with their status codes, error objects, extensions, profiles, and the Atomic Operations extension. Version lines: 1.1 is current, 1.0 is supported, and the 1.2 working draft is tracked as a preview, with a 1.0 to 1.1 upgrade checklist. SKILL.md holds the invariants and workflow; references split out the version lines, document structure, fetching, writing, and content negotiation with errors and extensions.",
+  "versions": [
+    {
+      "id": "1.2-preview",
+      "label": "JSON:API 1.2 draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "format/1.2 working draft as of 2026-10-05 (no normative change from 1.1)"
+    },
+    {
+      "id": "1.1",
+      "label": "JSON:API 1.1",
+      "status": "current",
+      "revision": "v1.1, finalized 2022-09-30 (tag v1.1)"
+    },
+    {
+      "id": "1.0",
+      "label": "JSON:API 1.0",
+      "status": "supported",
+      "revision": "v1.0, final 2015-05-29"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JSON:API Latest Specification",
+      "url": "https://jsonapi.org/format/",
+      "status": "Latest specification page",
+      "revision": "serves v1.1",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON:API v1.1",
+      "url": "https://jsonapi.org/format/1.1/",
+      "status": "Stable (archived copy, normative text frozen)",
+      "revision": "v1.1, finalized 2022-09-30",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON:API v1.0",
+      "url": "https://jsonapi.org/format/1.0/",
+      "status": "Archived copy, normative text frozen",
+      "revision": "v1.0, final 2015-05-29",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON:API v1.2",
+      "url": "https://jsonapi.org/format/1.2/",
+      "status": "Still in Development (working draft)",
+      "revision": "draft as of 2026-10-05; Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Atomic Operations extension",
+      "url": "https://jsonapi.org/ext/atomic/",
+      "status": "Extension listed by the JSON:API editors",
+      "revision": "unversioned; URI https://jsonapi.org/ext/atomic",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Extensions and Profiles",
+      "url": "https://jsonapi.org/extensions/",
+      "status": "Registry page maintained by the editors",
+      "revision": "lists Atomic Operations and Cursor Pagination",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "JSON:API home page",
+      "url": "https://jsonapi.org/",
+      "status": "Project home page",
+      "revision": "milestones: 1.1 final 2022-09-30, 1.0 final 2015-05-29",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "json-api/json-api repository",
+      "url": "https://github.com/json-api/json-api",
+      "status": "Source repository of jsonapi.org",
+      "revision": "gh-pages at bde79ce (2026-10-04); tag v1.1 at db7abaa (2022-09-30)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
