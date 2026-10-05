@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Package URL (purl) as standardized in ECMA-427 1st Edition (December 2025): the seven components, permitted and separator characters, per-component percent-encoding and case rules, the parse and build algorithms, lenient parsing and the purl-spec test suite, the PURL type definition schema and the registered types at purl-spec 1.0.1 and later with their normalizations, and the recommended qualifiers. It also covers the separately versioned VERS 1.2 version range specifier. Version lines: ECMA-427 1st Edition is current, the ECMA-427 2nd Edition draft is a preview with posture track, the pre-ECMA purl-spec text is legacy with an upgrade checklist, and VERS 1.2 is current in its own family. SKILL.md holds the invariants and workflow; references split out versions, syntax and encoding, parsing and building, types and qualifiers, and VERS.",
+  "versions": [
+    {
+      "id": "ecma-427-2-preview",
+      "label": "ECMA-427 2nd Edition",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft dated 2026-12-08; Ecma-TC54/ECMA-427 main at 33b680c (2026-09-30)"
+    },
+    {
+      "id": "ecma-427-1",
+      "label": "ECMA-427 1st Edition",
+      "status": "current",
+      "revision": "1st edition, December 2025 (spec.html tag v1.0, dated 2025-12-06); purl-spec v1.0.1 (2026-08-03)"
+    },
+    {
+      "id": "pre-ecma",
+      "label": "purl-spec pre-ECMA",
+      "status": "legacy",
+      "revision": "PURL-SPECIFICATION.rst v1.0.X at 4f7d28e (2024-11-21)"
+    },
+    {
+      "id": "vers-1",
+      "label": "VERS 1.2",
+      "status": "current",
+      "posture": "build",
+      "family": "vers",
+      "revision": "vers-spec v1.2.0 (2026-09-09), submitted to TC54 as the VERS 1st Edition draft",
+      "reference": "references/vers.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ECMA-427: Package-URL (PURL) specification",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-427/",
+      "status": "Ecma Standard",
+      "revision": "1st edition, December 2025",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-427 1st Edition source text",
+      "url": "https://github.com/Ecma-TC54/ECMA-427/blob/v1.0/spec.html",
+      "status": "Ecma Standard source",
+      "revision": "tag v1.0 (dated 2025-12-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-427 2nd Edition draft source text",
+      "url": "https://github.com/Ecma-TC54/ECMA-427/blob/main/spec.html",
+      "status": "Draft",
+      "revision": "main at 33b680c (2026-09-30), dated 2026-12-08; Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "ECMA-427 2nd Edition release notes",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/ECMA-427-2nd_Edition-Release_notes.md",
+      "status": "Draft",
+      "revision": "purl-spec main at 7cd2d34 (2026-09-29)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "purl-spec release v1.0.1",
+      "url": "https://github.com/package-url/purl-spec/releases/tag/v1.0.1",
+      "status": "Released",
+      "revision": "v1.0.1 (2026-08-03)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "purl-spec Clause 5 (2nd Edition working copy)",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/standard/Clause-5-Package-URL-Specification.md",
+      "status": "Draft",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Annex B Recommended Qualifiers",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/standard/Annex-B-Recommended-Qualifiers.md",
+      "status": "Draft (informative annex)",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Annex C ABNF Grammar",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/standard/Annex-C-ABNF-Grammar.md",
+      "status": "Draft (informative annex)",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "PURL qualifiers guidance",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/common-qualifiers.md",
+      "status": "Specification documentation",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "How to parse a PURL",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/how-to-parse.md",
+      "status": "Specification documentation",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "How to build a PURL",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/how-to-build.md",
+      "status": "Specification documentation",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Lenient PURL grammar",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/specification/lenient-ABNF-grammar.md",
+      "status": "Specification documentation",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Registered PURL type definitions",
+      "url": "https://github.com/package-url/purl-spec/tree/main/types",
+      "status": "Registered types (schema 1.0)",
+      "revision": "42 types, main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "PURL test suite",
+      "url": "https://github.com/package-url/purl-spec/blob/main/docs/tests/test-suite.md",
+      "status": "Test documentation (purl-test schema 0.2)",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "purl-spec FAQ",
+      "url": "https://github.com/package-url/purl-spec/blob/main/faq.md",
+      "status": "FAQ",
+      "revision": "main at 7cd2d34",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Pre-ECMA purl specification",
+      "url": "https://github.com/package-url/purl-spec/blob/4f7d28e1d1343a38bc8d7537ac60d390ae64a772/PURL-SPECIFICATION.rst",
+      "status": "Superseded by ECMA-427",
+      "revision": "v1.0.X at 4f7d28e (2024-11-21)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "VERS specification, Clause 5",
+      "url": "https://github.com/package-url/vers-spec/blob/v1.2.0/docs/specification/standard/Clause-5-VERS-Specification.md",
+      "status": "Released (submitted to TC54 as a draft Ecma standard)",
+      "revision": "v1.2.0 (2026-09-09); Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "How to parse and validate VERS",
+      "url": "https://github.com/package-url/vers-spec/blob/v1.2.0/docs/specification/how-to-parse.md",
+      "status": "Released",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "VERS types",
+      "url": "https://github.com/package-url/vers-spec/blob/v1.2.0/docs/types/vers-types.md",
+      "status": "Released",
+      "revision": "v1.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "vers-spec release v1.2.0",
+      "url": "https://github.com/package-url/vers-spec/releases/tag/v1.2.0",
+      "status": "Released",
+      "revision": "v1.2.0 (2026-09-09)",
+      "checked": "2026-10-05"
+    }
+  ]
+}
