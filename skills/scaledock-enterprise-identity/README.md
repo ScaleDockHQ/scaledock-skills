@@ -1,6 +1,6 @@
 # scaledock-enterprise-identity
 
-An agent skill that makes a ScaleDock product enterprise-ready: SSO, SCIM provisioning, immediate revocation through Shared Signals, FAPI 2.0 when required, and workload identity, with PermDock turning what the IdP says into permissions.
+An agent skill that makes a ScaleDock product enterprise-ready: OIDC and SAML SSO, passkeys, SCIM provisioning, immediate revocation through Shared Signals, NIST SP 800-63-4 assurance levels, CIBA and FAPI 2.0 when required, and workload identity, with PermDock turning what the IdP says into permissions.
 
 ## Install
 
@@ -8,9 +8,9 @@ An agent skill that makes a ScaleDock product enterprise-ready: SSO, SCIM provis
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-enterprise-identity
 ```
 
-It asks you to install the spec skills it builds on: `openid-connect`, `scim` and `shared-signals`, plus `fapi` and `spiffe` when selected, and PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
+It asks you to install the spec skills it builds on: `openid-connect`, `saml`, `webauthn`, `scim` and `shared-signals`, plus `nist-800-63`, `ciba`, `fapi`, `spiffe` and `wimse` when selected, and PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
 
-Then ask your agent to "add SCIM provisioning for Okta", "revoke sessions when Entra says so", or "make this API FAPI 2.0 compliant".
+Then ask your agent to "add SCIM provisioning for Okta", "add SAML SSO and passkeys", "revoke sessions when Entra says so", or "make this API FAPI 2.0 compliant".
 
 ## Rules
 
