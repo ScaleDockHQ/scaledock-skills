@@ -1,0 +1,120 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C Web Content Accessibility Guidelines at WCAG 2.2 (W3C Recommendation, 12 December 2024 edition): conformance levels A, AA and AAA, the five conformance requirements, accessibility support, conformance claims and partial conformance statements, the success criteria under the four principles (perceivable, operable, understandable, robust), the nine criteria added in 2.2 and the removal of 4.1.1 Parsing, and testing with the informative Understanding, Techniques and Test Rules documents. Version lines: WCAG 2.2 is current, WCAG 2.1 (6 May 2025 edition) is supported, WCAG 2.0 (11 December 2008) is legacy, and the WCAG 3.0 Working Draft (10 September 2026) is tracked as a preview, with upgrade steps from 2.0 and 2.1. SKILL.md holds the invariants and workflow; references split out the version lines, conformance, perceivable and operable criteria, understandable and robust criteria, and testing.",
+  "versions": [
+    {
+      "id": "3.0-preview",
+      "label": "WCAG 3.0",
+      "status": "preview",
+      "posture": "track",
+      "revision": "W3C Working Draft, 10 September 2026 (WD-wcag-3.0-20260910)"
+    },
+    {
+      "id": "2.2",
+      "label": "WCAG 2.2",
+      "status": "current",
+      "revision": "W3C Recommendation, 12 December 2024 (REC-WCAG22-20241212)"
+    },
+    {
+      "id": "2.1",
+      "label": "WCAG 2.1",
+      "status": "supported",
+      "revision": "W3C Recommendation, 6 May 2025 (REC-WCAG21-20250506)"
+    },
+    {
+      "id": "2.0",
+      "label": "WCAG 2.0",
+      "status": "legacy",
+      "revision": "W3C Recommendation, 11 December 2008 (REC-WCAG20-20081211), with errata"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "status": "W3C Recommendation",
+      "revision": "12 December 2024 (REC-WCAG22-20241212; first published 5 October 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
+      "url": "https://www.w3.org/TR/WCAG21/",
+      "status": "W3C Recommendation",
+      "revision": "6 May 2025 (REC-WCAG21-20250506; first published 5 June 2018)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.0",
+      "url": "https://www.w3.org/TR/WCAG20/",
+      "status": "W3C Recommendation",
+      "revision": "11 December 2008 (REC-WCAG20-20081211)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WCAG 2.0 Errata",
+      "url": "https://www.w3.org/WAI/WCAG20/errata/",
+      "status": "W3C errata page",
+      "revision": "includes the 4.1.1 Parsing note",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "W3C Accessibility Guidelines (WCAG) 3.0",
+      "url": "https://www.w3.org/TR/wcag-3.0/",
+      "status": "W3C Working Draft",
+      "revision": "10 September 2026 (WD-wcag-3.0-20260910); Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "What's New in WCAG 2.2",
+      "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+      "status": "WAI resource",
+      "revision": "updated 5 October 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WCAG 2 Overview",
+      "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+      "status": "WAI resource",
+      "revision": "updated 17 September 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "WCAG 2 FAQ",
+      "url": "https://www.w3.org/WAI/standards-guidelines/wcag/faq/",
+      "status": "WAI resource",
+      "revision": "updated 5 May 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Understanding WCAG 2.2",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/",
+      "status": "Informative",
+      "revision": "updated 11 February 2026; per-criterion pages for 2.4.11, 2.4.13, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8 and Understanding Conformance read",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Understanding Techniques for WCAG 2.2 Success Criteria",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/understanding-techniques",
+      "status": "Informative",
+      "revision": "updated 26 July 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Understanding Test Rules for WCAG 2 Success Criteria",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/understanding-act-rules",
+      "status": "Informative",
+      "revision": "updated 10 August 2026",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "How to Meet WCAG (Quick Reference)",
+      "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+      "status": "Informative",
+      "revision": "updated 22 September 2025",
+      "checked": "2026-10-05"
+    }
+  ]
+}
