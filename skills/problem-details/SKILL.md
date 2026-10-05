@@ -1,10 +1,10 @@
 ---
 name: problem-details
-description: "RFC 9457 Problem Details: return standard HTTP API errors as application/problem+json, with the type, title, status, detail and instance members plus extension members. Use when designing, implementing or reviewing API error responses: an error envelope, a 4xx or 5xx body, validation errors, a problem type URI or an IANA HTTP Problem Types registry entry, or the WWW-Authenticate challenge that goes next to a 401 or 403 (RFC 9110, RFC 6750 Bearer, RFC 9470 step-up). Triggers: problem details, problem+json, application/problem+xml, RFC 7807 (obsoleted by RFC 9457), about:blank, error response format, invalid_token, insufficient_scope, insufficient_user_authentication."
+description: "RFC 9457 Problem Details: return standard HTTP API errors as application/problem+json, with the type, title, status, detail and instance members plus extension members. Use when designing, implementing or reviewing API error responses: an error envelope, a 4xx or 5xx body, validation errors, a problem type URI or an IANA HTTP Problem Types registry entry, or the WWW-Authenticate challenge that goes next to a 401 or 403 (RFC 9110, RFC 6750 Bearer, RFC 9470 step-up). Triggers: problem details, problem+json, application/problem+xml, RFC 7807 (obsoleted by RFC 9457, upgrade to RFC 9457), about:blank, error response format, invalid_token, insufficient_scope, insufficient_user_authentication."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ RFC 9457, published by the IETF, defines a JSON object (and an equivalent XML fo
 
 - Role: producer (an API that returns problems), consumer (a client that reads them), or both.
 - Authentication: none, Bearer tokens (RFC 6750), or another HTTP authentication scheme. This decides the 401 and 403 headers.
+- Target version: RFC 9457 (default). RFC 7807 is legacy: read it and upgrade from it, never author against it; the wire format is the same. No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the RFC Editor entry for RFC 9457 for errata or an obsoleting RFC, check the IANA registry for new problem types, and update the pins.
 
@@ -36,24 +37,30 @@ RFC 9457, published by the IETF, defines a JSON object (and an equivalent XML fo
 
 ## Workflow
 
-1. **Decide whether a problem type is needed.** A generic condition that the status code already explains needs no new type; use `about:blank` or omit `type` (§ 4, § 4.2.1). Check the IANA HTTP Problem Types registry for a reusable type before minting one (§ 4.1, § 4.2).
+1. **Pick the version.** Use RFC 9457. If the API or its documentation cites RFC 7807, plan the upgrade (step 8).
+   -> [`references/versions.md`](references/versions.md)
+   ✓ New documentation and code cite RFC 9457.
+2. **Decide whether a problem type is needed.** A generic condition that the status code already explains needs no new type; use `about:blank` or omit `type` (§ 4, § 4.2.1). Check the IANA HTTP Problem Types registry for a reusable type before minting one (§ 4.1, § 4.2).
    -> [`references/members.md`](references/members.md)
    ✓ Every error the API returns maps to a status code and either `about:blank`, a registered type, or a type you document.
-2. **Define each new problem type.** Write down its type URI (stable and under your control), title, status code and extension members (§ 4, § 4.1). Make the type URI resolve to human-readable documentation (§ 3.1.1, § 4).
+3. **Define each new problem type.** Write down its type URI (stable and under your control), title, status code and extension members (§ 4, § 4.1). Make the type URI resolve to human-readable documentation (§ 3.1.1, § 4).
    -> [`references/members.md`](references/members.md)
    ✓ Each type has a documented URI, title, status and members, and every extension name follows the naming rule.
-3. **Pair authentication errors with the right header.** Pick the status and the `WWW-Authenticate` challenge for each authentication or authorization failure, then build the body from the same reason.
+4. **Pair authentication errors with the right header.** Pick the status and the `WWW-Authenticate` challenge for each authentication or authorization failure, then build the body from the same reason.
    -> [`references/auth-challenges.md`](references/auth-challenges.md)
    ✓ Every 401 has a challenge; `invalid_token`, `insufficient_scope` and `insufficient_user_authentication` use the status RFC 6750 and RFC 9470 give them; a request without credentials gets no error code.
-4. **Generate responses.** Set the status, `Content-Type: application/problem+json`, and the body. Put field-level validation errors in an extension array such as the `errors` example in § 3. For 429 and 503, add `Retry-After` where the type calls for it (§ 4).
+5. **Generate responses.** Set the status, `Content-Type: application/problem+json`, and the body. Put field-level validation errors in an extension array such as the `errors` example in § 3. For 429 and 503, add `Retry-After` where the type calls for it (§ 4).
    -> [`references/examples.md`](references/examples.md)
    ✓ The body validates against the JSON Schema in Appendix A, and `status` equals the response code.
-5. **Consume responses.** Switch on `type`, read extensions you know, ignore the rest, and fall back to the HTTP status code when `type` is `about:blank` or unknown.
+6. **Consume responses.** Switch on `type`, read extensions you know, ignore the rest, and fall back to the HTTP status code when `type` is `about:blank` or unknown.
    -> [`references/examples.md`](references/examples.md)
    ✓ The client never parses `detail`, never auto-dereferences `type` (§ 3.1.1), and survives a malformed member.
-6. **Review security.** Check each type and each generated body against the security considerations.
+7. **Review security.** Check each type and each generated body against the security considerations.
    -> [`references/security.md`](references/security.md)
    ✓ No stack traces, internal identifiers or other users' data appear in any body or `instance` URI.
+8. **Upgrade** (only when asked). Follow the RFC 7807 to RFC 9457 checklist: update references, keep the media types, namespace and every `type` URI, and apply the multiple-problem and wrong-type guidance.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ Bodies validate against Appendix A, and no existing `type` URI changed.
 
 ## Verify before done
 
@@ -68,10 +75,11 @@ RFC 9457, published by the IETF, defines a JSON object (and an equivalent XML fo
 
 ## Reference index
 
-- **`references/members.md`**: every standard member, `about:blank`, extension naming, the registry and its current entries, and the Appendix A JSON Schema. Load for steps 1 and 2.
-- **`references/auth-challenges.md`**: status and `WWW-Authenticate` per authentication outcome (RFC 9110, RFC 6750, RFC 9470), and how the body lines up with the header. Load for step 3.
-- **`references/examples.md`**: full HTTP examples and framework-neutral TypeScript for producing and consuming problems. Load for steps 4 and 5.
-- **`references/security.md`**: information leaks, `status` disagreement, and what to keep out of `detail` and `instance`. Load for step 6.
+- **`references/versions.md`**: RFC 9457 and RFC 7807 with their status, what RFC 9457 changed, and the upgrade checklist. Load for steps 1 and 8.
+- **`references/members.md`**: every standard member, `about:blank`, extension naming, the registry and its current entries, and the Appendix A JSON Schema. Load for steps 2 and 3.
+- **`references/auth-challenges.md`**: status and `WWW-Authenticate` per authentication outcome (RFC 9110, RFC 6750, RFC 9470), and how the body lines up with the header. Load for step 4.
+- **`references/examples.md`**: full HTTP examples and framework-neutral TypeScript for producing and consuming problems. Load for steps 5 and 6.
+- **`references/security.md`**: information leaks, `status` disagreement, and what to keep out of `detail` and `instance`. Load for step 7.
 
 ## Related skills
 
@@ -82,8 +90,8 @@ RFC 9457, published by the IETF, defines a JSON object (and an equivalent XML fo
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457): RFC (Proposed Standard), RFC 9457, checked 2026-10-02.
-- [RFC 7807: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc7807): RFC (Proposed Standard, obsoleted by RFC 9457), RFC 7807, checked 2026-10-02.
+- [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457): RFC (Proposed Standard), RFC 9457, checked 2026-10-05.
+- [RFC 7807: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc7807): RFC (Proposed Standard, obsoleted by RFC 9457), RFC 7807, checked 2026-10-05.
 - [IANA HTTP Problem Types registry](https://www.iana.org/assignments/http-problem-types): IANA registry, last updated 2026-06-26, checked 2026-10-02.
 - [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110): RFC (Internet Standard, STD 97), RFC 9110, checked 2026-10-02.
 - [RFC 6750: OAuth 2.0 Bearer Token Usage](https://www.rfc-editor.org/rfc/rfc6750): RFC (Proposed Standard, updated by RFC 8996 and RFC 9700), RFC 6750, checked 2026-10-02.

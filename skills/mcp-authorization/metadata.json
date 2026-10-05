@@ -1,23 +1,56 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Model Context Protocol authorization specification at revision 2026-07-28: MCP servers as OAuth 2.1 resource servers with RFC 9728 Protected Resource Metadata and WWW-Authenticate challenges, authorization server discovery through RFC 8414 and OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents, pre-registration and deprecated Dynamic Client Registration, PKCE, RFC 9207 iss validation, scope step-up with client-side accumulation, the Stable Enterprise-Managed Authorization extension (ID-JAG), the security best practices, and the TypeScript SDK v2 helpers. SKILL.md holds the invariants and workflow; references split out the resource server, the client flow, enterprise-managed authorization, security, and the TypeScript SDK.",
+  "abstract": "Covers the Model Context Protocol authorization specification at revision 2026-07-28: MCP servers as OAuth 2.1 resource servers with RFC 9728 Protected Resource Metadata and WWW-Authenticate challenges, authorization server discovery through RFC 8414 and OpenID Connect Discovery, RFC 8707 resource indicators and audience validation, Client ID Metadata Documents, pre-registration and deprecated Dynamic Client Registration, PKCE, RFC 9207 iss validation, scope step-up with client-side accumulation, the Stable Enterprise-Managed Authorization extension (ID-JAG), the security best practices, and the TypeScript SDK v2 helpers. Version lines: 2026-07-28 is current, 2025-11-25 and 2025-06-18 are supported, 2025-03-26 is legacy, and the draft revision is tracked as a preview, with upgrade checklists between adjacent revisions. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, the client flow, enterprise-managed authorization, security, and the TypeScript SDK.",
+  "versions": [
+    {
+      "id": "draft-preview",
+      "label": "MCP draft",
+      "status": "preview",
+      "posture": "track",
+      "revision": "specification/draft as of 2026-10-05 (authorization text unchanged from 2026-07-28; changelog empty)"
+    },
+    {
+      "id": "2026-07-28",
+      "label": "MCP 2026-07-28",
+      "status": "current",
+      "revision": "2026-07-28 (Current)"
+    },
+    {
+      "id": "2025-11-25",
+      "label": "MCP 2025-11-25",
+      "status": "supported",
+      "revision": "2025-11-25 (Final)"
+    },
+    {
+      "id": "2025-06-18",
+      "label": "MCP 2025-06-18",
+      "status": "supported",
+      "revision": "2025-06-18 (Final)"
+    },
+    {
+      "id": "2025-03-26",
+      "label": "MCP 2025-03-26",
+      "status": "legacy",
+      "revision": "2025-03-26 (Final)"
+    }
+  ],
   "sources": [
     {
       "title": "MCP Versioning",
       "url": "https://modelcontextprotocol.io/specification/versioning",
       "status": "Specification page",
-      "revision": "lists 2026-07-28 as Current",
-      "checked": "2026-10-02"
+      "revision": "lists 2026-07-28 as Current; names 2025-11-25 and earlier as handshake-based revisions",
+      "checked": "2026-10-05"
     },
     {
       "title": "MCP Authorization",
       "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
       "status": "Current",
       "revision": "2026-07-28",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "MCP Authorization Server Discovery",
@@ -45,7 +78,63 @@
       "url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog",
       "status": "Current",
       "revision": "2026-07-28",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Authorization (draft)",
+      "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization",
+      "status": "Draft",
+      "revision": "draft as of 2026-10-05, same text as 2026-07-28; Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Changelog (draft)",
+      "url": "https://modelcontextprotocol.io/specification/draft/changelog",
+      "status": "Draft",
+      "revision": "no changes listed as of 2026-10-05; Draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Authorization (2025-11-25)",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes (2025-11-25)",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/changelog",
+      "status": "Final",
+      "revision": "2025-11-25",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Authorization (2025-06-18)",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization",
+      "status": "Final",
+      "revision": "2025-06-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes (2025-06-18)",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/changelog",
+      "status": "Final",
+      "revision": "2025-06-18",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Authorization (2025-03-26)",
+      "url": "https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization",
+      "status": "Final",
+      "revision": "2025-03-26",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "MCP Key Changes (2025-03-26)",
+      "url": "https://modelcontextprotocol.io/specification/2025-03-26/changelog",
+      "status": "Final",
+      "revision": "2025-03-26",
+      "checked": "2026-10-05"
     },
     {
       "title": "MCP Deprecated Features",

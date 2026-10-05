@@ -1,23 +1,37 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers RFC 9457 Problem Details for HTTP APIs, which obsoletes RFC 7807: the application/problem+json object, its five members, extension members, defining problem types and the IANA HTTP Problem Types registry, plus the WWW-Authenticate challenge that pairs with 401 and 403 under RFC 9110, RFC 6750 and RFC 9470. SKILL.md holds the invariants and workflow; references split out the members and registry, authentication challenges, producer and consumer examples, and security considerations.",
+  "abstract": "Covers RFC 9457 Problem Details for HTTP APIs, which obsoletes RFC 7807: the application/problem+json object, its five members, extension members, defining problem types and the IANA HTTP Problem Types registry, plus the WWW-Authenticate challenge that pairs with 401 and 403 under RFC 9110, RFC 6750 and RFC 9470. It lists two version lines: RFC 9457 (current) and RFC 7807 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions and upgrades, the members and registry, authentication challenges, producer and consumer examples, and security considerations.",
+  "versions": [
+    {
+      "id": "rfc9457",
+      "label": "RFC 9457",
+      "status": "current",
+      "revision": "RFC 9457 (August 2023)"
+    },
+    {
+      "id": "rfc7807",
+      "label": "RFC 7807",
+      "status": "legacy",
+      "revision": "RFC 7807 (April 2016)"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 9457: Problem Details for HTTP APIs",
       "url": "https://www.rfc-editor.org/rfc/rfc9457",
       "status": "RFC (Proposed Standard)",
       "revision": "RFC 9457",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 7807: Problem Details for HTTP APIs",
       "url": "https://www.rfc-editor.org/rfc/rfc7807",
       "status": "RFC (Proposed Standard, obsoleted by RFC 9457)",
       "revision": "RFC 7807",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "IANA HTTP Problem Types registry",

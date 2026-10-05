@@ -1,6 +1,6 @@
 # problem-details
 
-An agent skill for RFC 9457 Problem Details for HTTP APIs: standard `application/problem+json` error responses.
+An agent skill for RFC 9457 Problem Details for HTTP APIs: standard `application/problem+json` error responses, and upgrading from RFC 7807.
 
 ## Install
 
@@ -17,6 +17,15 @@ Then ask your agent to "return RFC 9457 problem details for our API errors" or "
 - Which status and `WWW-Authenticate` challenge go with each authentication failure (RFC 9110, RFC 6750, RFC 9470).
 - Producer and consumer examples in framework-neutral TypeScript.
 - Security considerations, and migrating from RFC 7807.
+
+## Versions
+
+| Line     | Status                |
+| -------- | --------------------- |
+| RFC 9457 | current               |
+| RFC 7807 | legacy (upgrade from) |
+
+`references/versions.md` says what RFC 9457 changed and how to upgrade from RFC 7807.
 
 ## Pinned sources
 

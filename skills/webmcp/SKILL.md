@@ -1,10 +1,10 @@
 ---
 name: webmcp
-description: "WebMCP: expose web page tools to AI agents via document.modelContext, following the W3C Web Machine Learning Community Group draft. Use when adding, reviewing or testing in-page agent tools in a website or web app: registerTool with name, title, description, inputSchema (JSON Schema) and execute, tool annotations (readOnlyHint, untrustedContentHint, consequentialHint, debugging), unregistering with an AbortSignal, getTools and executeTool for in-page agents, toolchange, toolactivated and toolcancel events, cross-origin exposure with exposedTo and fromOrigins, the tools Permissions-Policy and the iframe allow attribute, and the security and privacy risks (tool poisoning, output injection, misrepresentation of intent, over-parameterization). Triggers: webmcp, web mcp, modelContext, navigator.modelContext, document.modelContext, browser agent tools, agent-ready website, Chrome WebMCP origin trial."
+description: "WebMCP: expose web page tools to AI agents via document.modelContext, following the W3C Web Machine Learning Community Group draft (Draft Community Group Report, build posture), and upgrade code from the legacy navigator.modelContext drafts. Use when adding, reviewing or testing in-page agent tools in a website or web app: registerTool with name, title, description, inputSchema (JSON Schema) and execute, tool annotations (readOnlyHint, untrustedContentHint, consequentialHint, debugging), unregistering with an AbortSignal, getTools and executeTool for in-page agents, toolchange, toolactivated and toolcancel events, cross-origin exposure with exposedTo and fromOrigins, the tools Permissions-Policy and the iframe allow attribute, and the security and privacy risks (tool poisoning, output injection, misrepresentation of intent, over-parameterization). Triggers: webmcp, web mcp, modelContext, navigator.modelContext, document.modelContext, browser agent tools, agent-ready website, Chrome WebMCP origin trial."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,6 +20,7 @@ Draft posture: **build**, pinned to the Draft Community Group Report of 30 Septe
 
 - Role: tool owner (a page that registers tools), in-page agent (a page or iframe that discovers and executes tools), or reviewer.
 - Embedding: top-level only, or same-origin or cross-origin iframes that register or consume tools.
+- Target version: the WebMCP Draft Community Group Report (default, posture build: implement it at the pinned commit). The WebMCP navigator.modelContext drafts are legacy: read them and upgrade from them, never write new code against them. No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned commit in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources), compare the repository's latest commit and the published report date with the pin, check the implementation status page, and update the pins.
 
@@ -37,24 +38,30 @@ Draft posture: **build**, pinned to the Draft Community Group Report of 30 Septe
 
 ## Workflow
 
-1. **Decide which tools to expose.** One well-defined function per tool, few tools per page state, names and descriptions that say what the tool does.
+1. **Pick the version.** Use the current draft. If the code uses `navigator.modelContext`, `unregisterTool()`, `provideContext()` or `requestUserInteraction()`, it is navigator-era: plan the upgrade (step 8).
+   -> [`references/versions.md`](references/versions.md)
+   ✓ New code targets `document.modelContext` at the pinned commit.
+2. **Decide which tools to expose.** One well-defined function per tool, few tools per page state, names and descriptions that say what the tool does.
    -> [`references/api.md`](references/api.md)
    ✓ Every tool has a valid unique name, a description, and an input schema with a `description` on each property.
-2. **Register tools.** Call `document.modelContext.registerTool(tool, { signal })` after feature detection, inside a secure context.
+3. **Register tools.** Call `document.modelContext.registerTool(tool, { signal })` after feature detection, inside a secure context.
    -> [`references/api.md`](references/api.md)
    ✓ Registration resolves; an `AbortController` per tool or per page state controls its lifetime.
-3. **Annotate.** Set `readOnlyHint`, `untrustedContentHint` and `consequentialHint` from what the tool actually does.
+4. **Annotate.** Set `readOnlyHint`, `untrustedContentHint` and `consequentialHint` from what the tool actually does.
    -> [`references/api.md`](references/api.md), [`references/security.md`](references/security.md)
    ✓ Read-only tools say so; tools that return user-generated or external content set `untrustedContentHint`; purchases, transfers and deletions set `consequentialHint`.
-4. **Handle execution.** Validate inputs, check authorization against current state, honor `options.signal`, return JSON-serializable results and clear error messages, and update the visible UI.
+5. **Handle execution.** Validate inputs, check authorization against current state, honor `options.signal`, return JSON-serializable results and clear error messages, and update the visible UI.
    -> [`references/api.md`](references/api.md)
    ✓ Calls with stale or invalid arguments fail with an actionable message instead of acting.
-5. **Scope embedding.** Set `Permissions-Policy` and iframe `allow` attributes; use `exposedTo` and `fromOrigins` only for origins you trust.
+6. **Scope embedding.** Set `Permissions-Policy` and iframe `allow` attributes; use `exposedTo` and `fromOrigins` only for origins you trust.
    -> [`references/security.md`](references/security.md)
    ✓ Documents that should not register tools send `Permissions-Policy: tools=()`; no tool is exposed to an origin you would not share the data with.
-6. **Review security and privacy.** Check tool metadata, inputs and outputs against the draft's risk list.
+7. **Review security and privacy.** Check tool metadata, inputs and outputs against the draft's risk list.
    -> [`references/security.md`](references/security.md)
    ✓ No tool asks for parameters it does not need, and no tool path skips checks the UI path performs.
+8. **Upgrade** (only when asked). Follow the navigator-era checklist: move to `document.modelContext`, await `registerTool()`, unregister with an `AbortSignal`, and replace `requestUserInteraction()` with page UI.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ No `navigator.modelContext`, `unregisterTool()` or `ModelContextClient` remains, and the tools behave as before.
 
 ## Verify before done
 
@@ -68,8 +75,9 @@ Draft posture: **build**, pinned to the Draft Community Group Report of 30 Septe
 
 ## Reference index
 
-- **`references/api.md`**: the WebIDL, every dictionary member, registration and unregistration rules, execution, discovery, events, and examples. Load for steps 1 to 4.
-- **`references/security.md`**: Permissions-Policy, cross-origin exposure, annotations as mitigations, and the draft's prompt injection, misrepresentation, over-parameterization and private browsing risks. Load for steps 3, 5 and 6.
+- **`references/versions.md`**: the current draft and the navigator-era drafts, what changed between them, and the upgrade checklist. Load for steps 1 and 8.
+- **`references/api.md`**: the WebIDL, every dictionary member, registration and unregistration rules, execution, discovery, events, and examples. Load for steps 2 to 5.
+- **`references/security.md`**: Permissions-Policy, cross-origin exposure, annotations as mitigations, and the draft's prompt injection, misrepresentation, over-parameterization and private browsing risks. Load for steps 4, 6 and 7.
 
 ## Related skills
 
@@ -81,10 +89,12 @@ Draft posture: **build**, pinned to the Draft Community Group Report of 30 Septe
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [WebMCP (published report)](https://webmachinelearning.github.io/webmcp/): Draft Community Group Report (W3C Web Machine Learning CG), 30 September 2026, checked 2026-10-02. Draft posture: build.
-- [WebMCP spec source, index.bs](https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/index.bs): Draft Community Group Report, commit d61d0e6 (2026-09-30), checked 2026-10-02. Draft posture: build.
+- [WebMCP spec source, index.bs](https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/index.bs): Draft Community Group Report, commit d61d0e6 (2026-09-30), checked 2026-10-05. Draft posture: build.
 - [WebMCP explainer, README.md](https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/README.md): Explainer (non-normative), commit d61d0e6 (2026-09-30), checked 2026-10-02.
 - [WebMCP implementation status](https://raw.githubusercontent.com/webmachinelearning/webmcp/d61d0e6d297ddb6bff3510b1330dbb215c6ef43c/implementation-status.md): Informative, commit d61d0e6 (2026-09-30), checked 2026-10-02.
-- [WebMCP pull request #184: Move the modelContext getter to Document](https://github.com/webmachinelearning/webmcp/pull/184): Merged change, commit c7b5c70 (2026-05-27), checked 2026-10-02.
+- [WebMCP pull request #184: Move the modelContext getter to Document](https://github.com/webmachinelearning/webmcp/pull/184): Merged change, commit c7b5c70 (2026-05-27), checked 2026-10-05.
+- [WebMCP spec source, index.bs, last navigator.modelContext commit](https://raw.githubusercontent.com/webmachinelearning/webmcp/a816d2e91d762adb9f3a07e1d5ce81f462ccd45a/index.bs): Draft Community Group Report (superseded), commit a816d2e (2026-05-20), checked 2026-10-05.
+- [WebMCP index.bs commit history](https://github.com/webmachinelearning/webmcp/commits/main/index.bs): Repository history, 2026-01-26 to d61d0e6 (2026-09-30); main at 6891d0e (2026-10-02) changes only an explainer, checked 2026-10-05.
 - [Chrome for Developers: WebMCP](https://developer.chrome.com/docs/ai/webmcp): Origin trial documentation, last updated 2026-10-01, checked 2026-10-02.
 - [Chrome for Developers: WebMCP Imperative API](https://developer.chrome.com/docs/ai/webmcp/imperative-api): Origin trial documentation, last updated 2026-09-21, checked 2026-10-02.
 - [Chrome for Developers: WebMCP tool security](https://developer.chrome.com/docs/ai/webmcp/secure-tools): Origin trial documentation, last updated 2026-09-01, checked 2026-10-02.

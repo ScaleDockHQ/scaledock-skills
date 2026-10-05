@@ -1,6 +1,6 @@
 # web-bot-auth
 
-An agent skill for Web Bot Auth: sign bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures, publish keys in a directory, and verify signed requests at an origin or proxy.
+An agent skill for Web Bot Auth: sign bot and AI agent HTTP requests with RFC 9421 HTTP Message Signatures, publish keys in a directory, and verify signed requests at an origin or proxy, following `draft-ietf-webbotauth-httpsig-protocol-00` with upgrades from the individual `draft-meunier-*` drafts.
 
 ## Install
 
@@ -19,6 +19,15 @@ Then ask your agent to "sign our crawler's requests with Web Bot Auth" or "verif
 
 Draft posture: build, pinned to `draft-ietf-webbotauth-httpsig-protocol-00`.
 
+## Versions
+
+| Line                            | Status                |
+| ------------------------------- | --------------------- |
+| draft-ietf-webbotauth-00        | current (build)       |
+| draft-meunier individual drafts | legacy (upgrade from) |
+
+`references/versions.md` says what changed since the individual drafts and how to upgrade.
+
 ## Pinned sources
 
 The skill was written from these sources, pinned in `metadata.json`:
@@ -28,6 +37,7 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [draft-ietf-webbotauth-httpsig-protocol datatracker page](https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/): WG Document.
 - [draft-meunier-webbotauth-httpsig-protocol](https://datatracker.ietf.org/doc/draft-meunier-webbotauth-httpsig-protocol/): Replaced, -02.
 - [draft-meunier-http-message-signatures-directory](https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/): Replaced, -05.
+- [draft-meunier-webbotauth-httpsig-protocol-02](https://www.ietf.org/archive/id/draft-meunier-webbotauth-httpsig-protocol-02.txt), [draft-meunier-web-bot-auth-architecture-05](https://www.ietf.org/archive/id/draft-meunier-web-bot-auth-architecture-05.txt) and [draft-meunier-http-message-signatures-directory-05](https://www.ietf.org/archive/id/draft-meunier-http-message-signatures-directory-05.txt): replaced individual drafts, for the legacy line.
 - [Web Bot Auth working group charter](https://datatracker.ietf.org/wg/webbotauth/about/): Active.
 - [RFC 7638](https://www.rfc-editor.org/rfc/rfc7638) and [RFC 8037](https://www.rfc-editor.org/rfc/rfc8037): RFC (Standards Track), for JWK thumbprints.
 

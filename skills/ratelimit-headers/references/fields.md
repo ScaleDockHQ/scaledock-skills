@@ -92,7 +92,7 @@ The draft's informative section "RateLimit header fields currently used on the w
 | `X-RateLimit-Remaining` | `r` in `RateLimit`                                 |
 | `X-RateLimit-Reset`     | `t` in `RateLimit`, always in seconds from now     |
 
-When migrating, convert any timestamp-based reset into delay seconds for `t` (§ 4.1.2).
+When migrating, convert any timestamp-based reset into delay seconds for `t` (§ 4.1.2). The upgrade checklists for these headers and for the earlier draft designs are in [`versions.md`](versions.md).
 
 ## Known inconsistencies in the pinned revision
 

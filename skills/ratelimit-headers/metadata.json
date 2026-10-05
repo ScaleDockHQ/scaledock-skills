@@ -1,16 +1,85 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the IETF HTTPAPI RateLimit header fields draft, pinned to draft-ietf-httpapi-ratelimit-headers-11 with a build posture: the RateLimit-Policy and RateLimit fields, their Structured Fields syntax (RFC 9651), and their use with Retry-After (RFC 9110), 429 Too Many Requests (RFC 6585) and the draft's problem types for RFC 9457 bodies. SKILL.md holds the invariants and workflow; references split out field syntax, server, client and intermediary behavior with security considerations, and examples with a TypeScript serializer and parser.",
+  "abstract": "Covers the IETF HTTPAPI RateLimit header fields draft, pinned to draft-ietf-httpapi-ratelimit-headers-11 with a build posture: the RateLimit-Policy and RateLimit fields, their Structured Fields syntax (RFC 9651), and their use with Retry-After (RFC 9110), 429 Too Many Requests (RFC 6585) and the draft's problem types for RFC 9457 bodies. It lists four version lines: draft-11 (current, build), and the legacy draft-07 single-field design, the draft-06 and earlier three-field design, and the de facto X-RateLimit headers, with upgrade checklists from each. SKILL.md holds the invariants and workflow; references split out versions and upgrades, field syntax, server, client and intermediary behavior with security considerations, and examples with a TypeScript serializer and parser.",
+  "versions": [
+    {
+      "id": "draft-11",
+      "label": "draft-11",
+      "status": "current",
+      "posture": "build",
+      "revision": "draft-ietf-httpapi-ratelimit-headers-11 (2026-05-23)"
+    },
+    {
+      "id": "draft-07",
+      "label": "draft-07",
+      "status": "legacy",
+      "revision": "draft-ietf-httpapi-ratelimit-headers-07 (2023-06-24)"
+    },
+    {
+      "id": "draft-06",
+      "label": "draft-06 and earlier",
+      "status": "legacy",
+      "revision": "draft-ietf-httpapi-ratelimit-headers-00 to -06 (2020-12-18 to 2022-12-22) and draft-polli-ratelimit-headers-00 to -05"
+    },
+    {
+      "id": "x-ratelimit",
+      "label": "X-RateLimit headers",
+      "status": "legacy",
+      "revision": "de facto, no specification"
+    }
+  ],
   "sources": [
     {
       "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-11)",
       "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-11",
       "status": "WG draft",
       "revision": "draft-ietf-httpapi-ratelimit-headers-11 (2026-05-23)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Datatracker: draft-ietf-httpapi-ratelimit-headers (revision history)",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/",
+      "status": "WG draft (IETF HTTPAPI), active, no RFC",
+      "revision": "revision 11 latest; history back to draft-polli-ratelimit-headers-00",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-08)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-08",
+      "status": "WG draft (IETF HTTPAPI), superseded",
+      "revision": "revision 08 of 7 October 2024",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-07)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-07",
+      "status": "WG draft (IETF HTTPAPI), superseded",
+      "revision": "revision 07 of 24 June 2023",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-06)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-06",
+      "status": "WG draft (IETF HTTPAPI), superseded",
+      "revision": "revision 06 of 22 December 2022",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers-00)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-00",
+      "status": "WG draft (IETF HTTPAPI), superseded",
+      "revision": "revision 00 of 18 December 2020",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RateLimit Header Fields for HTTP (draft-polli-ratelimit-headers-00)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-polli-ratelimit-headers-00",
+      "status": "Individual draft, replaced by draft-ietf-httpapi-ratelimit-headers",
+      "revision": "revision 00 of 5 September 2019",
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9110: HTTP Semantics",

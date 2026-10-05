@@ -1,9 +1,24 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Web Bot Auth, the IETF webbotauth working group's profile of RFC 9421 HTTP Message Signatures for bots and AI agents, pinned to draft-ietf-webbotauth-httpsig-protocol-00. SKILL.md holds the invariants and workflow; references cover RFC 9421 essentials, the signer role with Signature-Agent and the key directory, and the verifier role with key resolution, caching, SSRF limits and outcomes.",
+  "abstract": "Covers Web Bot Auth, the IETF webbotauth working group's profile of RFC 9421 HTTP Message Signatures for bots and AI agents, pinned to draft-ietf-webbotauth-httpsig-protocol-00. It lists two version lines: draft-ietf-webbotauth-00 (current, build) and the legacy draft-meunier individual drafts it replaced, with an upgrade checklist. SKILL.md holds the invariants and workflow; references cover versions and upgrades, RFC 9421 essentials, the signer role with Signature-Agent and the key directory, and the verifier role with key resolution, caching, SSRF limits and outcomes.",
+  "versions": [
+    {
+      "id": "ietf-00",
+      "label": "draft-ietf-webbotauth-00",
+      "status": "current",
+      "posture": "build",
+      "revision": "draft-ietf-webbotauth-httpsig-protocol-00 (2026-09-01)"
+    },
+    {
+      "id": "meunier-02",
+      "label": "draft-meunier individual drafts",
+      "status": "legacy",
+      "revision": "draft-meunier-webbotauth-httpsig-protocol-00 to -02 (to 2026-08-18), draft-meunier-web-bot-auth-architecture-00 to -05 and draft-meunier-http-message-signatures-directory-00 to -05 (to 2026-03-02), draft-meunier-webbotauth-httpsig-directory-00"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 9421: HTTP Message Signatures",
@@ -17,28 +32,49 @@
       "url": "https://www.ietf.org/archive/id/draft-ietf-webbotauth-httpsig-protocol-00.txt",
       "status": "WG draft (IETF webbotauth WG)",
       "revision": "-00 (1 September 2026)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "draft-ietf-webbotauth-httpsig-protocol datatracker page",
       "url": "https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/",
       "status": "WG Document",
       "revision": "latest revision -00",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "draft-meunier-webbotauth-httpsig-protocol",
       "url": "https://datatracker.ietf.org/doc/draft-meunier-webbotauth-httpsig-protocol/",
       "status": "Replaced (by draft-ietf-webbotauth-httpsig-protocol)",
       "revision": "-02 (2026-08-18)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "draft-meunier-http-message-signatures-directory",
       "url": "https://datatracker.ietf.org/doc/draft-meunier-http-message-signatures-directory/",
       "status": "Replaced (by draft-meunier-webbotauth-httpsig-directory, later merged into the protocol draft)",
       "revision": "-05 (2026-03-02)",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-meunier-webbotauth-httpsig-protocol-02: HTTP Message Signatures for automated traffic",
+      "url": "https://www.ietf.org/archive/id/draft-meunier-webbotauth-httpsig-protocol-02.txt",
+      "status": "Replaced individual draft",
+      "revision": "-02 (2026-08-18)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-meunier-web-bot-auth-architecture-05: HTTP Message Signatures for Bots",
+      "url": "https://www.ietf.org/archive/id/draft-meunier-web-bot-auth-architecture-05.txt",
+      "status": "Replaced individual draft (renamed to draft-meunier-webbotauth-httpsig-protocol)",
+      "revision": "-05 (2026-03-02)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-meunier-http-message-signatures-directory-05: HTTP Message Signatures Directory",
+      "url": "https://www.ietf.org/archive/id/draft-meunier-http-message-signatures-directory-05.txt",
+      "status": "Replaced individual draft",
+      "revision": "-05 (2026-03-02)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Web Bot Auth (webbotauth) working group charter",
