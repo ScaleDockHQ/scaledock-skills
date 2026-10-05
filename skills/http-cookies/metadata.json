@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the IETF HTTP State Management Mechanism for servers that set and read cookies: the Set-Cookie and Cookie header fields, the Expires, Max-Age, Domain, Path, Secure, HttpOnly and SameSite attributes, the __Secure- and __Host- name prefixes, the user agent storage model, eviction, size and lifetime limits, same-site and cross-site requests with Lax-by-default, and the security and privacy considerations (CSRF, session fixation, weak integrity across subdomains). Version lines: RFC 6265 is current, draft-ietf-httpbis-rfc6265bis-22 (in the RFC Editor queue) is a preview with posture build, and RFC 2965 and RFC 2109 are legacy, with upgrade checklists. SKILL.md holds the invariants and workflow; references split out versions, Set-Cookie attributes, SameSite and prefixes, storage and limits, and security.",
+  "versions": [
+    {
+      "id": "rfc6265bis-preview",
+      "label": "RFC 6265bis",
+      "status": "preview",
+      "posture": "build",
+      "revision": "draft-ietf-httpbis-rfc6265bis-22 (1 December 2025), IESG state RFC Ed Queue"
+    },
+    {
+      "id": "rfc6265",
+      "label": "RFC 6265",
+      "status": "current",
+      "revision": "RFC 6265 (April 2011)"
+    },
+    {
+      "id": "rfc2965",
+      "label": "RFC 2965",
+      "status": "legacy",
+      "revision": "RFC 2965 (October 2000), Historic"
+    },
+    {
+      "id": "rfc2109",
+      "label": "RFC 2109",
+      "status": "legacy",
+      "revision": "RFC 2109 (February 1997), Historic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6265: HTTP State Management Mechanism",
+      "url": "https://www.rfc-editor.org/rfc/rfc6265.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 6265",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-httpbis-rfc6265bis-22: Cookies: HTTP State Management Mechanism",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-httpbis-rfc6265bis-22.txt",
+      "status": "Internet-Draft (HTTPBIS WG, intended Proposed Standard, RFC Ed Queue)",
+      "revision": "draft-ietf-httpbis-rfc6265bis-22 (1 December 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-ietf-httpbis-rfc6265bis datatracker entry",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-httpbis-rfc6265bis/",
+      "status": "IESG state RFC Ed Queue; no became_rfc relation",
+      "revision": "latest revision 22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 2965: HTTP State Management Mechanism",
+      "url": "https://www.rfc-editor.org/rfc/rfc2965.txt",
+      "status": "RFC (Historic, obsoleted by RFC 6265)",
+      "revision": "RFC 2965",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 2109: HTTP State Management Mechanism",
+      "url": "https://www.rfc-editor.org/rfc/rfc2109.txt",
+      "status": "RFC (Historic, obsoleted by RFC 2965)",
+      "revision": "RFC 2109",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "HTML Living Standard: sites and same site",
+      "url": "https://html.spec.whatwg.org/multipage/browsers.html#same-site",
+      "status": "WHATWG Living Standard",
+      "revision": "fetched 2026-10-05",
+      "checked": "2026-10-05"
+    }
+  ]
+}
