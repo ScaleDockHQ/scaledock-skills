@@ -45,9 +45,14 @@ Location applies to every repo kind. The install list applies to product repos; 
 - **Permissions:** `npx skills add ScaleDockHQ/PermDock`.
 - **API, MCP and CLI:** `middleapi/orpc` orpc, orpc-contract, orpc-openapi; `anthropics/skills` mcp-builder.
 - **Standards** (`ScaleDockHQ/scaledock-skills`), per surface:
-  - `api`: scaledock-http-api, openapi, openapi-overlay, problem-details, ratelimit-headers, standard-schema.
-  - `mcp`: scaledock-mcp-server, mcp-authorization, oauth, jwt, problem-details.
+  - `api`: scaledock-http-api, http-semantics, openapi, json-schema, openapi-overlay, problem-details, ratelimit-headers, standard-schema.
+  - `mcp`: scaledock-mcp-server, mcp, mcp-authorization, oauth, jwt, problem-details; mcp-apps when tools ship interactive views.
   - Agents (AI SDK or another agent runtime): scaledock-agent-permissions, owasp-agentic, opentelemetry-genai, plus a2a, webmcp, ag-ui or ap2 for the surfaces the product has.
-  - Enterprise SSO or SCIM: scaledock-enterprise-identity, openid-connect, scim, shared-signals.
+  - Enterprise SSO or SCIM: scaledock-enterprise-identity, openid-connect, saml, webauthn, scim, shared-signals.
+  - Web (`app`, `docs`, `marketing`): wcag, wai-aria, content-security-policy, http-cookies.
+  - Repo (agent files, supply chain and security disclosure): agent-skills, agents-md, openssf-baseline, security-txt, slsa, cyclonedx, eu-cra.
+  - Data (shared schemas, dates and messages): ecmascript-temporal, messageformat, json-schema.
+  - Docs (`docs`): llms-txt.
+  - Email (the product sends mail): dmarc, dkim, spf, list-unsubscribe.
   - Any other open spec the repo implements: install its spec skill by name (`pnpm dlx skills add ScaleDockHQ/scaledock-skills --list`).
 - **Email:** `resend/react-email` react-email.
