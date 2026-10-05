@@ -185,6 +185,38 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                                         |
 | [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                                  |
 
+#### Web application APIs
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### CSS, graphics and media
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Data and semantics
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Documents and publishing
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Payments and commerce
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Regulations
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Developer conventions
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
+#### Domain verticals
+
+Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+
 ## Development
 
 You need the Node major in `.node-version` and the pnpm version pinned in `package.json`.
