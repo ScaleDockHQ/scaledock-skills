@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RFC 9421 HTTP Message Signatures: covered components (HTTP fields with the sf, key, bs, req and tr parameters, and the derived components @method, @target-uri, @authority, @scheme, @request-target, @path, @query, @query-param and @status), the signature base and @signature-params, the Signature-Input, Signature and Accept-Signature fields, the created, expires, nonce, alg, keyid and tag parameters, the six registered algorithms and JWS algorithms, verification, and the security and privacy considerations. Also covers RFC 9530 Digest Fields (Content-Digest, Repr-Digest, Want-Content-Digest, Want-Repr-Digest and the hash algorithm registry) as a separate family. RFC 9421 and RFC 9530 are the current lines; draft-cavage-http-signatures-12 and RFC 3230 are legacy, with upgrade checklists. SKILL.md holds the invariants and workflow; references split out versions and upgrades, components and the signature base, signing and verifying with security, algorithms and keys, and digest fields.",
+  "versions": [
+    {
+      "id": "rfc9421",
+      "label": "RFC 9421",
+      "status": "current",
+      "family": "signatures",
+      "revision": "RFC 9421, Proposed Standard (February 2024); verified errata 8102, 8103",
+      "reference": "references/components-and-base.md"
+    },
+    {
+      "id": "cavage-12",
+      "label": "draft-cavage-http-signatures-12",
+      "status": "legacy",
+      "family": "signatures",
+      "revision": "Individual Internet-Draft -12 (20 October 2019, last revision; expired 2020-04-23)"
+    },
+    {
+      "id": "rfc9530",
+      "label": "RFC 9530",
+      "status": "current",
+      "family": "digest",
+      "revision": "RFC 9530, Proposed Standard (February 2024); verified errata 8158, 8273; reported 8890",
+      "reference": "references/digest-fields.md"
+    },
+    {
+      "id": "rfc3230",
+      "label": "RFC 3230",
+      "status": "legacy",
+      "family": "digest",
+      "revision": "RFC 3230, Proposed Standard (January 2002), obsoleted by RFC 9530"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9421: HTTP Message Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9421 (February 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9421 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc9421",
+      "status": "RFC Editor errata",
+      "revision": "verified 8102 and 8103",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9530: Digest Fields",
+      "url": "https://www.rfc-editor.org/rfc/rfc9530.html",
+      "status": "RFC (Proposed Standard), obsoletes RFC 3230",
+      "revision": "RFC 9530 (February 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9530 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc9530",
+      "status": "RFC Editor errata",
+      "revision": "verified 8158 and 8273; reported 8890",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 3230: Instance Digests in HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3230.html",
+      "status": "RFC (Proposed Standard), obsoleted by RFC 9530",
+      "revision": "RFC 3230 (January 2002)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "draft-cavage-http-signatures-12: Signing HTTP Messages",
+      "url": "https://datatracker.ietf.org/doc/html/draft-cavage-http-signatures-12",
+      "status": "Internet-Draft (individual, expired)",
+      "revision": "-12 (20 October 2019), the last revision",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9651: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+      "status": "RFC (Proposed Standard), obsoletes RFC 8941",
+      "revision": "RFC 9651 (September 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA HTTP Message Signature registries",
+      "url": "https://www.iana.org/assignments/http-message-signature/",
+      "status": "IANA registry group",
+      "revision": "last updated 2026-07-20",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA Hash Algorithms for HTTP Digest Fields",
+      "url": "https://www.iana.org/assignments/http-digest-hash-alg/",
+      "status": "IANA registry",
+      "revision": "last updated 2024-05-22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA HTTP Digest Algorithm Values",
+      "url": "https://www.iana.org/assignments/http-dig-alg/",
+      "status": "IANA registry (deprecated by RFC 9530)",
+      "revision": "last updated 2024-02-16",
+      "checked": "2026-10-05"
+    }
+  ]
+}
