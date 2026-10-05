@@ -10,6 +10,7 @@ The AsyncAPI Initiative publishes JSON Schemas in the spec-json-schemas reposito
 | ------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `3.1.0`             | `https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/schemas/3.1.0.json` | `$id` `http://asyncapi.com/definitions/3.1.0/asyncapi.json`, JSON Schema draft-07. |
 | `3.0.0`             | `https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/schemas/3.0.0.json` | Same release.                                                                      |
+| `2.6.0`             | `https://raw.githubusercontent.com/asyncapi/spec-json-schemas/v6.11.1/schemas/2.6.0.json` | Legacy: use only to check a 2.6 document before upgrading it.                      |
 
 - Each schema fixes the version with `const`, so the 3.1.0 schema rejects a document that says `asyncapi: 3.0.0`. Pick the schema by the document's exact `asyncapi` value.
 - The repository has schemas with and without `$id`, because tools differ in how they resolve `$ref` against `$id` (README, "Two types of schemas").

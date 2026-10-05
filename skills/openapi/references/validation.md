@@ -9,6 +9,7 @@ Read this before saying an OpenAPI Description is valid. Source: the OAI index o
 | 3.2.x  | `https://spec.openapis.org/oas/3.2/schema/2026-08-30`                        | `https://spec.openapis.org/oas/3.2/schema-base/2026-08-30` | `.../oas/3.2/dialect/2026-02-26`, `.../oas/3.2/meta/2026-02-26` |
 | 3.1.x  | `https://spec.openapis.org/oas/3.1/schema/2026-08-03`                        | `https://spec.openapis.org/oas/3.1/schema-base/2026-08-03` | `.../oas/3.1/dialect/2024-11-10`, `.../oas/3.1/meta/2024-11-10` |
 | 3.0.x  | `https://spec.openapis.org/oas/3.0/schema/2024-10-18` (JSON Schema draft-04) | n/a                                                        | n/a                                                             |
+| 2.0    | `https://spec.openapis.org/oas/2.0/schema/2017-08-27` (JSON Schema draft-04) | n/a                                                        | n/a                                                             |
 
 Rules from the index page:
 
@@ -20,7 +21,7 @@ Rules from the index page:
 
 The 3.2 and 3.1 schemas are JSON Schema Draft 2020-12 and use `$dynamicAnchor`, so the validator must support Draft 2020-12, including dynamic references. `schema-base` references the dialect and meta schemas; preload them by their `$id`, or let the validator fetch them.
 
-The `openapi` pattern in the 3.2 schema is `^3\.2\.[0-9]+(-.+)?$`, so a 3.2 schema rejects a 3.1 document outright. Pick the schema from the `openapi` field.
+The `openapi` pattern in the 3.2 schema is `^3\.2\.[0-9]+(-.+)?$`, so a 3.2 schema rejects a 3.1 document outright. Pick the schema from the `openapi` field. A Swagger 2.0 document carries `swagger: "2.0"` instead; validate it against the 2.0 schema only to check the input of an upgrade ([`versions.md`](versions.md)).
 
 ## Selecting the schema in code
 

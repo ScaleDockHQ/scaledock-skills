@@ -1,9 +1,23 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers TypeSpec 1.x from Microsoft for design-first HTTP APIs: language basics, @typespec/http routes, parameters, bodies, status codes, files, visibility and authentication, the @typespec/openapi3 emitter with its openapi-versions option (3.0.0, 3.1.0 and 3.2.0, default 3.0.0) and other options, the TypeSpec to OpenAPI mapping and @typespec/openapi decorators, API versioning with @typespec/versioning, tsp-openapi3 conversion, and project configuration and CLI. Pinned to compiler, http, openapi and openapi3 1.16.0 and versioning 0.86.0. SKILL.md holds the invariants and workflow; references split out project setup, language, HTTP, the emitter and versioning.",
+  "abstract": "Covers TypeSpec from Microsoft for design-first HTTP APIs across its version lines: TypeSpec 1.x (current, compiler, http, openapi and openapi3 1.16.0, with versioning 0.86.0 at draft posture build) and TypeSpec 0.x (legacy, pre-1.0 and Cadl, upgraded from); no preview line exists. It teaches language basics, @typespec/http routes, parameters, bodies, status codes, files, visibility and authentication, the @typespec/openapi3 emitter with its openapi-versions option (3.0.0, 3.1.0 and 3.2.0, default 3.0.0), the TypeSpec to OpenAPI mapping and @typespec/openapi decorators, API versioning with @typespec/versioning, tsp-openapi3 conversion, project configuration and CLI, and upgrading from 0.x. SKILL.md holds the invariants and workflow; references split out versions, project setup, language, HTTP, the emitter and versioning.",
+  "versions": [
+    {
+      "id": "1.x",
+      "label": "TypeSpec 1.x",
+      "status": "current",
+      "revision": "1.16.0 (2026-09-09)"
+    },
+    {
+      "id": "0.x",
+      "label": "TypeSpec 0.x",
+      "status": "legacy",
+      "revision": "0.67.2 (2025-03-24), last pre-1.0 compiler"
+    }
+  ],
   "sources": [
     {
       "title": "TypeSpec documentation",
@@ -116,6 +130,48 @@
       "status": "Changelog",
       "revision": "commit 843c089 (2026-10-02), entries through 1.16.0",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "TypeSpec 1.0.0 release notes",
+      "url": "https://typespec.io/release-notes/typespec-1-0-0/",
+      "status": "Release notes",
+      "revision": "1.0.0 (2025-05-06)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "TypeSpec 1.0.0-rc.0 release notes",
+      "url": "https://typespec.io/release-notes/typespec-1-0-0-rc-0/",
+      "status": "Release notes",
+      "revision": "1.0.0-rc.0 (2025-04-02)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "TypeSpec 0.67 release notes",
+      "url": "https://typespec.io/release-notes/typespec-0-67/",
+      "status": "Release notes",
+      "revision": "0.67 (last 0.x minor)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "TypeSpec 1.0 GA blog post",
+      "url": "https://typespec.io/blog/typespec-1-0-GA-release/",
+      "status": "Announcement",
+      "revision": "1.0 GA",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "Cadl to TypeSpec migration",
+      "url": "https://typespec.io/release-notes/cadl-typespec-migration/",
+      "status": "Release notes",
+      "revision": "2023-03-13 release",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "@typespec/compiler on the npm registry",
+      "url": "https://registry.npmjs.org/@typespec/compiler",
+      "status": "Released",
+      "revision": "latest 1.16.0, next 1.17.0-dev.10",
+      "checked": "2026-10-05"
     },
     {
       "title": "@typespec/compiler changelog",

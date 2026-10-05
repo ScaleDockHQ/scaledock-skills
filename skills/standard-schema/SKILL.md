@@ -1,10 +1,10 @@
 ---
 name: standard-schema
-description: "Standard Schema v1: accept any validator via ~standard, and implement or consume the @standard-schema/spec interfaces (StandardSchemaV1, StandardJSONSchemaV1, StandardTypedV1). Use when writing a library, framework, form, router, RPC or MCP tool that accepts user schemas from Zod, Valibot, ArkType, Effect Schema or any compliant validator; when making a schema library spec-compliant; when handling the validate result ({ value } or { issues }) and sync or async validation; when inferring types with InferInput and InferOutput; or when generating JSON Schema (draft-2020-12, draft-07, openapi-3.0) from a schema with Standard JSON Schema. Triggers: standard schema, ~standard, @standard-schema/spec, StandardSchemaV1, validator-agnostic, schema adapter, issues path, jsonSchema.input, jsonSchema.output."
+description: "Standard Schema v1: accept any validator via ~standard, and implement or consume the @standard-schema/spec interfaces (StandardSchemaV1, StandardJSONSchemaV1, StandardTypedV1). Covers Standard Schema v1, the only line (package 1.1.0, upgrades from 1.0.0); no preview exists. Use when writing a library, framework, form, router, RPC or MCP tool that accepts user schemas from Zod, Valibot, ArkType, Effect Schema or any compliant validator; when making a schema library spec-compliant; when handling the validate result ({ value } or { issues }) and sync or async validation; when inferring types with InferInput and InferOutput; or when generating JSON Schema (draft-2020-12, draft-07, openapi-3.0) from a schema with Standard JSON Schema. Triggers: standard schema, ~standard, @standard-schema/spec, StandardSchemaV1, validator-agnostic, schema adapter, issues path, jsonSchema.input, jsonSchema.output."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -19,6 +19,7 @@ Standard Schema is a family of TypeScript interfaces, designed by the creators o
 - Role: consumer (a tool that accepts schemas), implementer (a schema library), or both.
 - Interfaces: `StandardSchemaV1` (validate), `StandardJSONSchemaV1` (convert to JSON Schema), or both.
 - Sync or async: whether the consumer can await validation.
+- Target version: Standard Schema v1 (default and only line), from `@standard-schema/spec` 1.1.0. Code written against 1.0.0 is the same line and upgrades without changes. No preview exists. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned package version in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the npm registry for a newer `@standard-schema/spec` version and the repository tags for a new release, and update the pins.
 
@@ -36,21 +37,27 @@ Standard Schema is a family of TypeScript interfaces, designed by the creators o
 
 ## Workflow
 
-1. **Add the types.** Depend on `@standard-schema/spec` at the pinned version as a regular dependency, or copy the interfaces verbatim.
+1. **Pick the version.** Use v1 from package 1.1.0; check whether existing code pins 1.0.0, which lacks `StandardJSONSchemaV1`, `StandardTypedV1` and `validate` options.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The package version is 1.1.0 or later wherever `StandardJSONSchemaV1` or `StandardTypedV1` is used.
+2. **Add the types.** Depend on `@standard-schema/spec` at the pinned version as a regular dependency, or copy the interfaces verbatim.
    -> [`references/interface.md`](references/interface.md)
    ✓ The types match the pinned `src/index.ts`, and nothing imports them as values.
-2. **Consume schemas.** Accept a generic `T extends StandardSchemaV1`, call `~standard.validate`, handle a `Promise` (await it or reject it), branch on `issues`, and normalize issue paths.
+3. **Consume schemas.** Accept a generic `T extends StandardSchemaV1`, call `~standard.validate`, handle a `Promise` (await it or reject it), branch on `issues`, and normalize issue paths.
    -> [`references/consuming.md`](references/consuming.md)
    ✓ Input and output types come from `InferInput` and `InferOutput`, and no code depends on a specific `vendor`.
-3. **Implement the interface** (schema library authors). Add `~standard` to every schema object, returning `{ value }` or `{ issues }` from your existing validation code.
+4. **Implement the interface** (schema library authors). Add `~standard` to every schema object, returning `{ value }` or `{ issues }` from your existing validation code.
    -> [`references/implementing.md`](references/implementing.md)
    ✓ The schema satisfies `StandardSchemaV1<Input, Output>` with `satisfies` or `implements`, and validates synchronously where possible.
-4. **Generate JSON Schema** where needed. Call `jsonSchema.input` or `.output` with a `target`; implementers support `draft-2020-12` and `draft-07` at least.
+5. **Generate JSON Schema** where needed. Call `jsonSchema.input` or `.output` with a `target`; implementers support `draft-2020-12` and `draft-07` at least.
    -> [`references/json-schema.md`](references/json-schema.md)
    ✓ Unsupported targets throw in the implementer and are caught in the consumer, and input and output schemas are chosen deliberately.
-5. **Check which libraries qualify.** Confirm the minimum version of each validator your users bring.
+6. **Check which libraries qualify.** Confirm the minimum version of each validator your users bring.
    -> [`references/libraries.md`](references/libraries.md)
    ✓ Documentation names minimum versions from the spec pages, and notes libraries that need an adapter.
+7. **Upgrade** (only when asked). Follow the 1.0.0 to 1.1.0 section.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The code type-checks against 1.1.0 and validates the same values as before.
 
 ## Verify before done
 
@@ -64,11 +71,12 @@ Standard Schema is a family of TypeScript interfaces, designed by the creators o
 
 ## Reference index
 
-- **`references/interface.md`**: the full v1 interfaces with each member explained. Load for step 1.
-- **`references/consuming.md`**: generic validation helpers, sync-only handling, path normalization, and turning issues into an HTTP error body. Load for step 2.
-- **`references/implementing.md`**: adding `~standard` to a schema library, with the official example. Load for step 3.
-- **`references/json-schema.md`**: `StandardJSONSchemaV1`, targets, input versus output, combining with `StandardSchemaV1`. Load for step 4.
-- **`references/libraries.md`**: implementers and minimum versions for both specs, as listed on 2026-10-02. Load for step 5.
+- **`references/versions.md`**: the v1 line, what changed between packages 1.0.0 and 1.1.0, the upgrade steps, and why no preview is listed. Load for steps 1 and 7.
+- **`references/interface.md`**: the full v1 interfaces with each member explained. Load for step 2.
+- **`references/consuming.md`**: generic validation helpers, sync-only handling, path normalization, and turning issues into an HTTP error body. Load for step 3.
+- **`references/implementing.md`**: adding `~standard` to a schema library, with the official example. Load for step 4.
+- **`references/json-schema.md`**: `StandardJSONSchemaV1`, targets, input versus output, combining with `StandardSchemaV1`. Load for step 5.
+- **`references/libraries.md`**: implementers and minimum versions for both specs, as listed on 2026-10-02. Load for step 6.
 
 ## Related skills
 
@@ -83,4 +91,6 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Standard JSON Schema specification](https://standardschema.dev/json-schema): Released, v1 in `@standard-schema/spec` 1.1.0, checked 2026-10-02.
 - [Standard Schema project overview](https://standardschema.dev/): Released, `@standard-schema/spec` 1.1.0 (adds `StandardTypedV1`), checked 2026-10-02.
 - [`@standard-schema/spec` source at tag v1.1.0](https://github.com/standard-schema/standard-schema/tree/v1.1.0/packages/spec): Released, tag v1.1.0, checked 2026-10-02.
-- [`@standard-schema/spec` on the npm registry](https://registry.npmjs.org/@standard-schema/spec): Released, 1.1.0 (latest dist-tag, published 2025-12-15), checked 2026-10-02.
+- [`@standard-schema/spec` source at tag v1.0.0](https://github.com/standard-schema/standard-schema/tree/v1.0.0/packages/spec): Released, tag v1.0.0 (2025-01-27), checked 2026-10-05.
+- [`@standard-schema/spec` v1.1.0 release](https://github.com/standard-schema/standard-schema/releases/tag/v1.1.0): Released, v1.1.0 (2025-12-15), checked 2026-10-05.
+- [`@standard-schema/spec` on the npm registry](https://registry.npmjs.org/@standard-schema/spec): Released, 1.1.0 (latest dist-tag, published 2025-12-15), checked 2026-10-05.
