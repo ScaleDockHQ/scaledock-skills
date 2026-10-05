@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DMARC as revised by DMARCbis: RFC 9989 for the _dmarc policy record, identifier alignment, the DNS Tree Walk for Organizational Domain and policy discovery, receiver evaluation and enforcement, with RFC 9990 aggregate reporting and RFC 9991 failure reporting. It lists three version lines: RFC 9989 (current, covering RFC 9990 and RFC 9991, all May 2026), and RFC 7489 and RFC 9091 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions and upgrades, the record and its tags, alignment and the tree walk with receiver behaviour, reporting and privacy, and the rollout to enforcement.",
+  "versions": [
+    {
+      "id": "rfc9989",
+      "label": "RFC 9989",
+      "status": "current",
+      "revision": "RFC 9989 with RFC 9990 and RFC 9991 (May 2026)"
+    },
+    {
+      "id": "rfc7489",
+      "label": "RFC 7489",
+      "status": "legacy",
+      "revision": "RFC 7489 (March 2015)"
+    },
+    {
+      "id": "rfc9091",
+      "label": "RFC 9091",
+      "status": "legacy",
+      "revision": "RFC 9091 (July 2021)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9989: Domain-Based Message Authentication, Reporting, and Conformance (DMARC)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9989",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9989 (May 2026), two verified editorial errata",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9990: DMARC Aggregate Reporting",
+      "url": "https://www.rfc-editor.org/rfc/rfc9990",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9990 (May 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9991: DMARC Failure Reporting",
+      "url": "https://www.rfc-editor.org/rfc/rfc9991",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9991 (May 2026)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7489: Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+      "url": "https://www.rfc-editor.org/rfc/rfc7489",
+      "status": "RFC (Informational, obsoleted by RFC 9989, RFC 9990 and RFC 9991)",
+      "revision": "RFC 7489 (March 2015)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9091: Experimental DMARC Extension for Public Suffix Domains",
+      "url": "https://www.rfc-editor.org/rfc/rfc9091",
+      "status": "RFC (Experimental, obsoleted by RFC 9989)",
+      "revision": "RFC 9091 (July 2021)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 9989 errata",
+      "url": "https://www.rfc-editor.org/errata/rfc9989",
+      "status": "RFC Editor errata",
+      "revision": "errata IDs 9025 and 9150 (verified)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IANA DMARC parameters registry",
+      "url": "https://www.iana.org/assignments/dmarc-parameters/",
+      "status": "IANA registry",
+      "revision": "last updated 2026-05-22",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "IETF dmarc WG documents",
+      "url": "https://datatracker.ietf.org/wg/dmarc/documents/",
+      "status": "IETF Datatracker",
+      "revision": "WG active; one active I-D (draft-ietf-dmarc-arc-to-historic-00)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC Editor index",
+      "url": "https://www.rfc-editor.org/rfc-index.txt",
+      "status": "RFC Editor",
+      "revision": "index searched for DMARC",
+      "checked": "2026-10-05"
+    }
+  ]
+}
