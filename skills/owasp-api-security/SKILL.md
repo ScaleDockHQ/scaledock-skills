@@ -116,6 +116,5 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [API10:2023 Unsafe Consumption of APIs](https://owasp.org/API-Security/editions/2023/en/0xaa-unsafe-consumption-of-apis/): stable release, 2023 edition, checked 2026-10-05.
 - [OWASP API Security Top 10 2019 (cover)](https://owasp.org/API-Security/editions/2019/en/0x00-header/): stable release, superseded by 2023, 2019 edition (26 December 2019), checked 2026-10-05.
 - [OWASP Top 10 API Security Risks – 2019 (list)](https://owasp.org/API-Security/editions/2019/en/0x11-t10/): stable release, superseded by 2023, 2019 edition, checked 2026-10-05.
-- [OWASP API Security Project (project page)](https://owasp.org/www-project-api-security/): OWASP documentation project, level 3 in its project metadata; the URL redirects to `owasp.org/projects/api-security`, which returned 404 on 2026-10-05, so the page was read from its source, checked 2026-10-05.
 - [OWASP/www-project-api-security (project page source, news and roadmap)](https://github.com/OWASP/www-project-api-security): latest commit 10 December 2025, checked 2026-10-05.
 - [OWASP/API-Security (repository)](https://github.com/OWASP/API-Security): `master` at 33cea37 (21 September 2026), VERSION 2.7.0; `develop` carries unreleased 2023 clarifications, checked 2026-10-05.

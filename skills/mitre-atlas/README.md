@@ -35,7 +35,7 @@ Then ask your agent to "threat-model our RAG agent with MITRE ATLAS", "tag these
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [MITRE ATLAS website](https://atlas.mitre.org/): Data v2026.09, including the Matrix, Mitigations, technique and General Information pages.
+- [MITRE ATLAS website](https://atlas.mitre.org/): Data v2026.09.
 - [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data/blob/v2026.09/README.md): tag v2026.09, with `dist/v6/ATLAS-2026.09.yaml`, the CHANGELOG, the release manifest, `atlas/schemas.py`, `atlas/enums.py` and `tools/atlas_to_stix.py`.
 - [ATLAS release v2026.09](https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09): released 2026-09-15.
 - [Deprecated ATLAS.yaml](https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/ATLAS.yaml): legacy format, 5.6.0.
