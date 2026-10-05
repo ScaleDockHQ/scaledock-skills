@@ -10,17 +10,7 @@ Re-check the IETF datatracker for a newer revision before relying on any of thes
 
 ## OAuth 2.1 (draft-ietf-oauth-v2-1-16)
 
-Posture: **build**. A working group draft that consolidates OAuth 2.0 with its security updates. Most of its rules already apply through RFC 9700, so building to it now costs little.
-
-Differences from OAuth 2.0 (§ 10):
-
-- PKCE is required for the authorization code grant. `code_challenge` is REQUIRED unless the client is confidential and the AS can rely on a correct OpenID Connect `nonce` (§ 4.1.1, § 7.5.1.1). The `plain` method is gone; use `S256`.
-- Redirect URIs are compared by exact string match.
-- The implicit grant (§ 10.1) and the resource owner password credentials grant are omitted.
-- Bearer tokens MUST NOT be sent in the URI query, and resource servers MUST ignore tokens found there (§ 5.1).
-- Refresh tokens for public clients are sender-constrained or one-time use (§ 4.3.3).
-- `redirect_uri` is no longer sent in the token request. An AS that still serves OAuth 2.0 clients MUST keep accepting and checking it when present (§ 10.2).
-- The AS must support client credentials in the request body.
+Posture: **build**. A working group draft that consolidates OAuth 2.0 with its security updates. Most of its rules already apply through RFC 9700, so building to it now costs little. OAuth 2.1 is a version line of OAuth, not an extension: its differences from OAuth 2.0 (§ 10), the RFC 9700 section behind each, and the 2.0 to 2.1 upgrade checklist are in [`versions.md`](versions.md).
 
 A resource server MUST check that a token is not expired, is authorized for the resource, has the right scope, and meets any other policy (§ 5.2).
 

@@ -1,9 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Cedar policy language at version 4.5, as implemented by SDK v4.13.0: policy structure with effect, scope and conditions, annotations, operators, policy templates, the Cedar and JSON schema formats, entity and context JSON, PARC authorization requests, the authorization algorithm (default deny, forbid overrides permit, skip on error), validation checks and their limits, and security practices. SKILL.md holds the invariants and workflow; references split out policies, schemas and entities, and evaluation and validation.",
+  "abstract": "Covers the Cedar policy language in three version lines: Cedar 4.x (current, language 4.5 as implemented by SDK v4.13.0) and the legacy Cedar 3.x and 2.x lines, with what changed in each language version and the upgrades from 2.x to 3.x and 3.x to 4.x. Covers policy structure with effect, scope and conditions, annotations, operators, policy templates, the Cedar and JSON schema formats, entity and context JSON, PARC authorization requests, the authorization algorithm (default deny, forbid overrides permit, skip on error), validation checks and their limits, and security practices. SKILL.md holds the invariants and workflow; references split out versions, policies, schemas and entities, and evaluation and validation.",
+  "versions": [
+    {
+      "id": "4.x",
+      "label": "Cedar 4.x",
+      "status": "current",
+      "revision": "language 4.5 (April 23, 2026), SDK 4.10.0 to 4.13.0; pinned to SDK v4.13.0 (2026-09-15)"
+    },
+    {
+      "id": "3.x",
+      "label": "Cedar 3.x",
+      "status": "legacy",
+      "revision": "language 3.4 (August 19, 2024), SDK 3.3.0 to 3.4.3"
+    },
+    {
+      "id": "2.x",
+      "label": "Cedar 2.x",
+      "status": "legacy",
+      "revision": "language 2.2 (April 1, 2024), SDK 2.4.5 to 2.5.1"
+    }
+  ],
   "sources": [
     {
       "title": "Cedar Policy Language Reference Guide",
@@ -16,8 +36,8 @@
       "title": "Cedar document history",
       "url": "https://docs.cedarpolicy.com/other/doc-history.html",
       "status": "language version table",
-      "revision": "4.5 (SDK 4.10.0 to 4.13.0; April 23, 2026)",
-      "checked": "2026-10-02"
+      "revision": "language versions 2.0 to 4.5 (4.5: SDK 4.10.0 to 4.13.0; April 23, 2026)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Cedar v4.13.0 release",
@@ -25,6 +45,13 @@
       "status": "Released",
       "revision": "v4.13.0 (2026-09-15)",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "cedar-policy SDK changelog",
+      "url": "https://github.com/cedar-policy/cedar/blob/main/cedar-policy/CHANGELOG.md",
+      "status": "Released (changelog)",
+      "revision": "main branch; entries 2.0.0 (2023-05-10) to 4.13.0 (2026-09-15), Unreleased language version TBD",
+      "checked": "2026-10-05"
     },
     {
       "title": "Cedar repository",

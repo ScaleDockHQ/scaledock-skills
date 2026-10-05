@@ -1,10 +1,10 @@
 ---
 name: scim
-description: "SCIM 2.0: provision users and groups across domains with the RFC 7643 schema and RFC 7644 protocol, as a service provider or a client. Use when building, consuming or reviewing a SCIM API or an identity provider provisioning connector: /Users, /Groups, /Me, /Bulk and /.search endpoints, PATCH PatchOp add, remove and replace with value paths, filter expressions (eq, co, sw, pr, and, or, not, brackets), sortBy, startIndex and count, RFC 9865 cursor pagination (cursor, nextCursor), ETags with If-Match and If-None-Match, ListResponse and Error messages with scimType, /ServiceProviderConfig, /ResourceTypes and /Schemas discovery, the core User and Group schemas, the Enterprise User extension, attribute mutability and returned rules, externalId, deprovisioning with active false, bearer token and RFC 7523 JWT client authentication, RFC 9967 SCIM security events and asynchronous requests (Set-Txn), and the IPSIE AL and FastFed SCIM profiles. Pins RFC 7643, RFC 7644, RFC 9865 and RFC 9967."
+description: "SCIM 2.0: provision users and groups across domains with the RFC 7643 schema and RFC 7644 protocol, as a service provider or a client. Use when building, consuming or reviewing a SCIM API or an identity provider provisioning connector: /Users, /Groups, /Me, /Bulk and /.search endpoints, PATCH PatchOp with value paths, filter expressions, sortBy, startIndex and count, RFC 9865 cursor pagination (cursor, nextCursor), ETags with If-Match and If-None-Match, ListResponse and Error messages with scimType, /ServiceProviderConfig, /ResourceTypes and /Schemas discovery, the core User and Group schemas, the Enterprise User extension, attribute mutability and returned rules, externalId, deprovisioning with active false, bearer token and RFC 7523 JWT client authentication, RFC 9967 SCIM security events and asynchronous requests (Set-Txn), the IPSIE AL and FastFed SCIM profiles, and upgrading SCIM 1.1 (urn:scim:schemas:core:1.0, /v1) to 2.0. Pins RFC 7643, RFC 7644, RFC 9865 and RFC 9967; no next-line draft exists."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -17,6 +17,7 @@ The System for Cross-domain Identity Management (SCIM) 2.0 is an HTTP and JSON p
 ## Inputs (fill in, or ask before starting)
 
 - Role: SCIM service provider (server), SCIM client, or both. RFC 7643 §1.2 defines both roles; RFC 7642 §2.2.2 describes the actors behind them.
+- Target version: SCIM 2.0 (current, the default). SCIM 1.1 is legacy: read it and upgrade from it, never author it. No preview is listed. See [`references/versions.md`](references/versions.md).
 - Resources: Users only, or Users and Groups, plus any extensions such as the Enterprise User extension.
 - Profile: plain RFC 7643 and RFC 7644, the IPSIE AL SCIM profile (AL1 or AL2), or the FastFed Enterprise SCIM profile.
 - Optional features: PATCH, Bulk, filtering, sorting, ETags, cursor pagination, security events.
@@ -40,8 +41,9 @@ The System for Cross-domain Identity Management (SCIM) 2.0 is an HTTP and JSON p
 
 ## Workflow
 
-1. **Scope the work.** Confirm the role, resources, profile and optional features from Inputs.
-   ✓ The design lists each endpoint and method to support, and which profile applies.
+1. **Pick the version and scope the work.** Target SCIM 2.0; if a peer speaks SCIM 1.1, plan its upgrade. Confirm the role, resources, profile and optional features from Inputs.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The design names SCIM 2.0 as the target, lists each endpoint and method to support, and says which profile applies.
 2. **Model the resources.** Define User, Group and extension attributes with their characteristics, and the common attributes.
    -> [`references/schema.md`](references/schema.md)
    ✓ Every attribute has type, mutability, returned, uniqueness and caseExact settled.
@@ -66,6 +68,9 @@ The System for Cross-domain Identity Management (SCIM) 2.0 is an HTTP and JSON p
 9. **Add security events if used.** Emit or consume RFC 9967 SETs, and support asynchronous requests.
    -> [`references/events.md`](references/events.md)
    ✓ A 202 response carries `Set-Txn`, and the completion SET has the same `txn`.
+10. **Upgrade from SCIM 1.1** (only when a peer runs it). Move URNs, endpoints, PATCH bodies, list responses and errors to their 2.0 forms.
+    -> [`references/versions.md`](references/versions.md)
+    ✓ No `urn:scim:schemas:core:1.0`, `/v1`, `meta.attributes` or `Errors` array remains, and the checks below pass.
 
 ## Verify before done
 
@@ -81,6 +86,7 @@ The System for Cross-domain Identity Management (SCIM) 2.0 is an HTTP and JSON p
 
 ## Reference index
 
+- **`references/versions.md`**: the SCIM 2.0 and SCIM 1.1 lines, which to use, what changed, the 1.1 to 2.0 upgrade steps, and why no preview is listed.
 - **`references/schema.md`**: attribute characteristics and data types, multi-valued attributes, common attributes, User, Group, the Enterprise User extension and schema extensions.
 - **`references/protocol.md`**: endpoints and methods, create, read, PUT, PATCH, DELETE, filters, sorting, attribute selection, `/.search`, Bulk, `/Me`, errors, versioning and ETags.
 - **`references/pagination.md`**: index pagination from RFC 7644 and cursor pagination from RFC 9865.
@@ -99,11 +105,15 @@ The System for Cross-domain Identity Management (SCIM) 2.0 is an HTTP and JSON p
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [RFC 7642: SCIM Definitions, Overview, Concepts, and Requirements](https://www.rfc-editor.org/rfc/rfc7642): RFC (Informational), RFC 7642, checked 2026-10-02.
-- [RFC 7643: SCIM Core Schema](https://www.rfc-editor.org/rfc/rfc7643): RFC (Proposed Standard, updated by RFC 9865 and RFC 9967), RFC 7643, checked 2026-10-02.
-- [RFC 7644: SCIM Protocol](https://www.rfc-editor.org/rfc/rfc7644): RFC (Proposed Standard, updated by RFC 9865 and RFC 9967), RFC 7644, checked 2026-10-02.
+- [RFC 7643: SCIM Core Schema](https://www.rfc-editor.org/rfc/rfc7643): RFC (Proposed Standard, updated by RFC 9865 and RFC 9967), RFC 7643, checked 2026-10-05.
+- [RFC 7644: SCIM Protocol](https://www.rfc-editor.org/rfc/rfc7644): RFC (Proposed Standard, updated by RFC 9865 and RFC 9967), RFC 7644, checked 2026-10-05.
 - [RFC 9865: Cursor-Based Pagination of SCIM Resources](https://www.rfc-editor.org/rfc/rfc9865): RFC (Proposed Standard), RFC 9865, checked 2026-10-02.
 - [RFC 9967: SCIM Profile for Security Event Tokens](https://www.rfc-editor.org/rfc/rfc9967): RFC (Proposed Standard), RFC 9967, checked 2026-10-02.
 - [RFC 7523: JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants](https://www.rfc-editor.org/rfc/rfc7523): RFC (Proposed Standard), RFC 7523, checked 2026-10-02.
+- [SCIM Core Schema 1.1](http://www.simplecloud.info/specs/draft-scim-core-schema-01.html): Draft (simplecloud.info), 1.1, 9 July 2012, checked 2026-10-05. Legacy line.
+- [SCIM Protocol 1.1](http://www.simplecloud.info/specs/draft-scim-api-01.html): Draft (simplecloud.info), 1.1, 9 July 2012, checked 2026-10-05. Legacy line.
+- [SCIM specification index](http://www.simplecloud.info/): Index (simplecloud.info), page as read 2026-10-05, lists SCIM 2.0, SCIM 1.1 and SCIM 1.0 (deprecated), checked 2026-10-05.
+- [IETF SCIM working group documents](https://datatracker.ietf.org/wg/scim/documents/): Index (IETF), working group drafts as listed 2026-10-05, checked 2026-10-05.
 - [IPSIE AL SCIM 2.0 Profile](https://openid.github.io/ipsie-scim-al/draft-openid-ipsie-al-scim-profile.html): Editor's draft (IPSIE Working Group), Draft 00, editor's copy at commit 1a9985f (2026-09-08); Draft posture: track, checked 2026-10-02.
 - [IPSIE AL SCIM profile repository](https://github.com/openid/ipsie-scim-al): Editor's draft source, main at 1a9985f (2026-09-08), checked 2026-10-02.
 - [FastFed Enterprise SCIM Profile 1.0](https://openid.net/specs/fastfed-scim-1_0-03.html): Implementer's Draft (archived working group), draft 03, identical to ID1, 2020-10-07; Draft posture: track, checked 2026-10-02.

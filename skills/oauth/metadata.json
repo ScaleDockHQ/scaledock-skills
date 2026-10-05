@@ -1,9 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OAuth 2.0 (RFC 6749, RFC 6750) as tightened by the RFC 9700 Security BCP and the OAuth 2.1 draft (-16, build posture), with the extensions a resource server, client or authorization server needs: PKCE, DPoP, mTLS-bound tokens, Rich Authorization Requests, token exchange, resource indicators, AS and protected resource metadata, the iss parameter, step-up, dynamic client registration, introspection, revocation and the device grant. Drafts for Client ID Metadata Documents, identity chaining, transaction tokens and RAR remediation are pinned with a posture. SKILL.md holds the invariants and workflow; references split out the resource server, sender constraint, clients, the authorization server, delegation and drafts.",
+  "abstract": "Covers OAuth 2.0 (RFC 6749, RFC 6750) as tightened by the RFC 9700 Security BCP and the OAuth 2.1 draft (-16, build posture), with the extensions a resource server, client or authorization server needs: PKCE, DPoP, mTLS-bound tokens, Rich Authorization Requests, token exchange, resource indicators, AS and protected resource metadata, the iss parameter, step-up, dynamic client registration, introspection, revocation and the device grant. Drafts for Client ID Metadata Documents, identity chaining, transaction tokens and RAR remediation are pinned with a posture. Version lines: OAuth 2.0 is current, OAuth 2.1 is a build-posture preview with a 2.0 to 2.1 upgrade checklist, and OAuth 1.0 (RFC 5849) is legacy, replaced rather than upgraded. SKILL.md holds the invariants and workflow; references split out the version lines, the resource server, sender constraint, clients, the authorization server, delegation and drafts.",
+  "versions": [
+    {
+      "id": "2.1-preview",
+      "label": "OAuth 2.1",
+      "status": "preview",
+      "posture": "build",
+      "revision": "draft-ietf-oauth-v2-1-16 (2026-09-03)"
+    },
+    {
+      "id": "2.0",
+      "label": "OAuth 2.0",
+      "status": "current",
+      "revision": "RFC 6749 and RFC 6750, as updated by RFC 9700"
+    },
+    {
+      "id": "1.0",
+      "label": "OAuth 1.0",
+      "status": "legacy",
+      "revision": "RFC 5849 (April 2010)"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 6749: The OAuth 2.0 Authorization Framework",
@@ -23,8 +44,15 @@
       "title": "The OAuth 2.1 Authorization Framework",
       "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16",
       "status": "WG draft",
-      "revision": "draft-ietf-oauth-v2-1-16 (2026-09-03)",
-      "checked": "2026-10-02"
+      "revision": "draft-ietf-oauth-v2-1-16 (2026-09-03); Draft posture: build",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 5849: The OAuth 1.0 Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc5849",
+      "status": "RFC (Informational, obsoleted by RFC 6749)",
+      "revision": "RFC 5849",
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9700: Best Current Practice for OAuth 2.0 Security",

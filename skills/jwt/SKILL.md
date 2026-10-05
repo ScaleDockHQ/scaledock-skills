@@ -1,10 +1,10 @@
 ---
 name: jwt
-description: "JWT and JOSE: verify and issue JWS, JWE and JWK safely. Covers RFC 7515 JWS, RFC 7516 JWE, RFC 7517 JWK, RFC 7518 JWA, RFC 7519 JWT, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices and its rfc8725bis update, RFC 9864 fully specified algorithms (Ed25519 instead of EdDSA), the deprecation of none and RSA1_5, RFC 9068 JWT access tokens with the roles, groups and entitlements claims, RFC 7638 JWK thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. Use when validating or signing JWTs, choosing alg values, publishing a JWKS, checking typ, kid, iss, aud, exp or nbf, preventing algorithm confusion or alg none attacks, issuing at+jwt access tokens, naming a new claim, or reviewing a JWT library configuration."
+description: "JWT and JOSE: verify and issue JWS, JWE and JWK safely. Covers RFC 7515 JWS, RFC 7516 JWE, RFC 7517 JWK, RFC 7518 JWA, RFC 7519 JWT, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices and its rfc8725bis update, RFC 9864 fully specified algorithms (Ed25519 instead of EdDSA), the deprecation of none and RSA1_5, RFC 9068 JWT access tokens with the roles, groups and entitlements claims, RFC 7638 JWK thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. Use when validating or signing JWTs, choosing alg values, publishing a JWKS, checking typ, kid, iss, aud, exp or nbf, preventing algorithm confusion or alg none attacks, issuing at+jwt access tokens, naming a new claim, reviewing a JWT library configuration, or upgrading a verifier from RFC 8725 to rfc8725bis. Lines: the JOSE RFCs (current); rfc8725bis and the none and RSA1_5 deprecation are build previews."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,6 +18,7 @@ The IETF JOSE specifications define signed (JWS), encrypted (JWE) and key (JWK) 
 
 - Role: issuer, verifier, or both. For a verifier, which issuers and which kinds of token (access token, ID token, logout token, custom).
 - Protection: signed only, or also encrypted.
+- Target version: JOSE RFCs (current, the default: RFC 7515 to RFC 7519, RFC 8725 and RFC 9864). Two previews, both posture build, are applied on top because they only add stricter checks: rfc8725bis (`draft-ietf-oauth-rfc8725bis-10`) and Deprecate none and RSA1_5 (`draft-ietf-jose-deprecate-none-rsa15-06`). Cite them by draft name, never as RFCs. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revisions in [Sources](#sources), unless the user names another. Drafts apply only at the posture recorded there.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the IETF datatracker for a published RFC 8725 successor or a published deprecation of `none` and `RSA1_5`, re-read both IANA registries, and update the pins.
 
@@ -38,8 +39,9 @@ The IETF JOSE specifications define signed (JWS), encrypted (JWE) and key (JWK) 
 
 ## Workflow
 
-1. **List issuers and token kinds.** For each, write down the issuer identifier, the key source, the expected `typ`, the audience and the allowed algorithms.
-   ✓ No verifier accepts "any algorithm the key supports" or "any issuer".
+1. **Pick the version, then list issuers and token kinds.** Target the JOSE RFCs with both build previews. For each issuer, write down the issuer identifier, the key source, the expected `typ`, the audience and the allowed algorithms.
+   -> [references/versions.md](references/versions.md)
+   ✓ The rules in use name their RFC or draft revision, and no verifier accepts "any algorithm the key supports" or "any issuer".
 2. **Choose algorithms and keys.** Prefer `ES256` or `Ed25519`; use HMAC only with a shared secret of at least the hash size.
    -> [references/algorithms-and-keys.md](references/algorithms-and-keys.md)
    ✓ Every key has exactly one `alg`, and `none`, `RSA1_5` and `EdDSA` are not on any new allow-list.
@@ -58,6 +60,9 @@ The IETF JOSE specifications define signed (JWS), encrypted (JWE) and key (JWK) 
 7. **Name claims from the registry.** Reuse registered claims; give new ones a collision-resistant name.
    -> [references/access-tokens.md](references/access-tokens.md)
    ✓ Every custom claim is either registered with IANA or a name you control.
+8. **Upgrade** (only when asked). Bring an RFC 8725 verifier up to rfc8725bis, apply the `none` and `RSA1_5` defaults, or move `EdDSA` keys to `Ed25519`.
+   -> [references/versions.md](references/versions.md)
+   ✓ The new rejection tests pass, and every token a conforming issuer sent before is still accepted.
 
 ## Verify before done
 
@@ -71,6 +76,7 @@ The IETF JOSE specifications define signed (JWS), encrypted (JWE) and key (JWK) 
 
 ## Reference index
 
+- **`references/versions.md`**: the JOSE RFCs line and the two build-posture previews, what each changes, the RFC 8725 to rfc8725bis verifier upgrade, the `none` and `RSA1_5` move, and `EdDSA` to `Ed25519`. Load for steps 1 and 8.
 - **`references/verification.md`**: the step-by-step verification checklist, key confusion, claim checks and a TypeScript example with `jose`.
 - **`references/algorithms-and-keys.md`**: the IANA algorithm statuses, RFC 9864, the `none` and `RSA1_5` deprecation, key strength, JWE limits, JWK members, thumbprints and `cnf`.
 - **`references/access-tokens.md`**: the RFC 9068 access token profile, roles, groups and entitlements, its validation steps, and the IANA claims registry.
@@ -91,9 +97,9 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [RFC 7519: JSON Web Token (JWT)](https://www.rfc-editor.org/rfc/rfc7519): RFC (Proposed Standard, updated by RFC 7797 and RFC 8725), RFC 7519, checked 2026-10-02.
 - [RFC 8037: CFRG Elliptic Curve Diffie-Hellman (ECDH) and Signatures in JOSE](https://www.rfc-editor.org/rfc/rfc8037): RFC (Proposed Standard, updated by RFC 9864), RFC 8037, checked 2026-10-02.
 - [RFC 8725: JSON Web Token Best Current Practices](https://www.rfc-editor.org/rfc/rfc8725): RFC (Best Current Practice), RFC 8725, checked 2026-10-02.
-- [JSON Web Token Best Current Practices (rfc8725bis)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc8725bis-10): RFC Editor queue, draft-ietf-oauth-rfc8725bis-10 (2026-08-31; intended Best Current Practice, obsoletes RFC 8725; RFC Editor state Blocked), checked 2026-10-02. Draft posture: build, pinned to -10.
+- [JSON Web Token Best Current Practices (rfc8725bis)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc8725bis-10): RFC Editor queue, draft-ietf-oauth-rfc8725bis-10 (2026-08-31; intended Best Current Practice, obsoletes RFC 8725; RFC Editor state Blocked, reference not received), checked 2026-10-05. Draft posture: build, pinned to -10.
 - [RFC 9864: Fully-Specified Algorithms for JOSE and COSE](https://www.rfc-editor.org/rfc/rfc9864): RFC (Proposed Standard), RFC 9864, checked 2026-10-02.
-- [JOSE: Deprecate 'none' and 'RSA1_5'](https://datatracker.ietf.org/doc/html/draft-ietf-jose-deprecate-none-rsa15-06): WG draft, draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25; in IETF Last Call, intended Proposed Standard), checked 2026-10-02. Draft posture: build, pinned to -06.
+- [JOSE: Deprecate 'none' and 'RSA1_5'](https://datatracker.ietf.org/doc/html/draft-ietf-jose-deprecate-none-rsa15-06): WG draft, draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25; in IETF Last Call, intended Proposed Standard), checked 2026-10-05. Draft posture: build, pinned to -06.
 - [RFC 9068: JWT Profile for OAuth 2.0 Access Tokens](https://www.rfc-editor.org/rfc/rfc9068): RFC (Proposed Standard), RFC 9068, checked 2026-10-02.
 - [RFC 7643: SCIM Core Schema](https://www.rfc-editor.org/rfc/rfc7643): RFC (Proposed Standard, updated by RFC 9865 and RFC 9967), RFC 7643, checked 2026-10-02.
 - [RFC 7638: JSON Web Key (JWK) Thumbprint](https://www.rfc-editor.org/rfc/rfc7638): RFC (Proposed Standard), RFC 7638, checked 2026-10-02.

@@ -1,9 +1,17 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Grant Negotiation and Authorization Protocol: RFC 9635 core (grant requests, the access rights array, interaction and its hash, continuation, token management, key proofing and discovery) and RFC 9767 resource server connections (token model, token formats, RS-facing discovery, introspection, resource registration and derived tokens), with the relationship to OAuth Rich Authorization Requests (RFC 9396). SKILL.md holds the invariants and workflow; references split out the grant flow, access rights with the RAR comparison, and resource servers.",
+  "abstract": "Covers the Grant Negotiation and Authorization Protocol: RFC 9635 core (grant requests, the access rights array, interaction and its hash, continuation, token management, key proofing and discovery) and RFC 9767 resource server connections (token model, token formats, RS-facing discovery, introspection, resource registration and derived tokens), with the relationship to OAuth Rich Authorization Requests (RFC 9396). RFC 9635 is the only version line; pre-RFC drafts up to draft-ietf-gnap-core-protocol-20 are upgraded to it, and no preview exists. SKILL.md holds the invariants and workflow; references split out the version line, the grant flow, access rights with the RAR comparison, and resource servers.",
+  "versions": [
+    {
+      "id": "rfc9635",
+      "label": "RFC 9635",
+      "status": "current",
+      "revision": "RFC 9635 (October 2024), with RFC 9767 for resource server connections"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 9635: Grant Negotiation and Authorization Protocol (GNAP)",
@@ -25,6 +33,13 @@
       "status": "RFC (Proposed Standard)",
       "revision": "RFC 9396",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "draft-ietf-gnap-core-protocol history",
+      "url": "https://datatracker.ietf.org/doc/draft-ietf-gnap-core-protocol/history/",
+      "status": "Datatracker page (became RFC 9635)",
+      "revision": "last draft draft-ietf-gnap-core-protocol-20 (2024-03-19)",
+      "checked": "2026-10-05"
     }
   ]
 }

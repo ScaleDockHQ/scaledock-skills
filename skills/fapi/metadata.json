@@ -1,16 +1,31 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenID FAPI 2.0 Security Profile, Message Signing and Attacker Model (all Final), with FAPI 1.0 Baseline and Advanced as legacy, JARM, and the FAPI-CIBA and Grant Management Implementer's Drafts. SKILL.md holds the invariants and workflow; references/ splits the rules by authorization server, client, resource server, cryptography, message signing, FAPI 1.0, drafts, attacker model and certification.",
+  "abstract": "Covers the OpenID FAPI 2.0 Security Profile, Message Signing and Attacker Model (all Final) as the current FAPI 2.0 line, FAPI 1.0 Baseline and Advanced (Final, 12 March 2021) as the legacy line with a 1.0 to 2.0 upgrade path, JARM, and the FAPI-CIBA and Grant Management Implementer's Drafts. SKILL.md holds the invariants and workflow; references/ holds the version hub and splits the rules by authorization server, client, resource server, cryptography, message signing, FAPI 1.0, drafts, attacker model and certification.",
+  "versions": [
+    {
+      "id": "2.0",
+      "label": "FAPI 2.0",
+      "status": "current",
+      "revision": "Security Profile and Attacker Model Final (22 February 2025); Message Signing Final (25 September 2025)"
+    },
+    {
+      "id": "1.0",
+      "label": "FAPI 1.0",
+      "status": "legacy",
+      "revision": "Part 1 Baseline and Part 2 Advanced Final (12 March 2021)",
+      "reference": "references/fapi-1.md"
+    }
+  ],
   "sources": [
     {
       "title": "FAPI 2.0 Security Profile",
       "url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
       "status": "Final",
       "revision": "published 22 February 2025",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "FAPI 2.0 Message Signing",
@@ -128,8 +143,8 @@
       "title": "FAPI WG specifications",
       "url": "https://openid.net/wg/fapi/specifications/",
       "status": "Index",
-      "revision": "page as read 2026-10-02",
-      "checked": "2026-10-02"
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
     },
     {
       "title": "Conformance Testing for FAPI OPs",

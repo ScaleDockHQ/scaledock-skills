@@ -1,10 +1,10 @@
 ---
 name: authzen
-description: "AuthZEN Authorization API: PEP-to-PDP access evaluation and search over HTTPS JSON. Use when building or reviewing a Policy Enforcement Point (PEP) that asks a Policy Decision Point (PDP) for access decisions, or a PDP that implements the API: the subject, resource, action and context information model, decision and decision context, the Access Evaluation endpoint (/access/v1/evaluation), the Access Evaluations batch endpoint with default values and evaluations_semantic (execute_all, deny_on_first_deny, permit_on_first_permit), Subject, Resource and Action Search with pagination (page, next_token), PDP metadata at /.well-known/authzen-configuration and signed_metadata, HTTP error codes, X-Request-ID, PEP authentication, the interop test vectors, and the Basic, Batch, Search and Discovery certification levels. Pins the OpenID AuthZEN Authorization API 1.0 Final."
+description: "AuthZEN Authorization API: PEP-to-PDP access evaluation and search over HTTPS JSON. Use when building or reviewing a Policy Enforcement Point (PEP) that asks a Policy Decision Point (PDP) for access decisions, or a PDP that implements the API: the subject, resource, action and context information model, decision and decision context, the Access Evaluation endpoint (/access/v1/evaluation), the Access Evaluations batch endpoint with default values and evaluations_semantic (execute_all, deny_on_first_deny, permit_on_first_permit), Subject, Resource and Action Search with pagination (page, next_token), PDP metadata at /.well-known/authzen-configuration and signed_metadata, HTTP error codes, X-Request-ID, PEP authentication, the interop test vectors, and the Basic, Batch, Search and Discovery certification levels, and upgrading a PEP or PDP from the 1.0 Implementer's Draft. Targets the OpenID AuthZEN Authorization API 1.0 Final; no newer draft line exists."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -17,7 +17,7 @@ The Authorization API lets a Policy Enforcement Point (PEP) ask a Policy Decisio
 ## Inputs (fill in, or ask before starting)
 
 - **Role:** PEP (the caller), PDP (the server), or both, for example a gateway that enforces decisions from a hosted PDP.
-- **Revision:** Authorization API 1.0. Later revisions may add to the API but MUST NOT change 1.0 (AuthZEN § 4).
+- **Target version:** AuthZEN Authorization API 1.0 (current, the Final; the default). AuthZEN Authorization API 1.0 Implementer's Draft 1 is legacy: read it and upgrade from it, never author it. No preview line exists. Later revisions may add to the API but MUST NOT change 1.0 (AuthZEN § 4). See [`references/versions.md`](references/versions.md).
 - **APIs in scope:** Access Evaluation is the core feature. Access Evaluations, the three Search APIs and metadata are optional for a PDP (AuthZEN § 3, § 9.1.1).
 - **PEP authentication:** mutual TLS, OAuth or an API key. The choice is out of scope of the specification (AuthZEN § 11.2).
 - **Certification target:** none, or one or more of Basic, Batch, Search and Discovery, each with Core and Properties sub-levels (Cert § certification-levels).
@@ -38,25 +38,31 @@ The Authorization API lets a Policy Enforcement Point (PEP) ask a Policy Decisio
 
 ## Workflow
 
-1. **Model the request.** Map your principal, target, operation and environment to `subject`, `resource`, `action` and `context`.
+1. **Pick the version.** Target the 1.0 Final. An existing PEP or PDP built against draft 01, 02 or 03 is legacy input to an upgrade.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target is the Final, and any draft-era PEP or PDP is marked for upgrade.
+2. **Model the request.** Map your principal, target, operation and environment to `subject`, `resource`, `action` and `context`.
    -> [`references/information-model.md`](references/information-model.md)
    ✓ Every subject and resource has a string `type` and `id`, and every action has a `name`.
-2. **Call or serve the Access Evaluation API.**
+3. **Call or serve the Access Evaluation API.**
    -> [`references/evaluation-apis.md`](references/evaluation-apis.md)
    ✓ A deny returns `200` with `decision: false`, and a missing `subject`, `action` or `resource` returns `400`.
-3. **Add the Access Evaluations API when you batch.**
+4. **Add the Access Evaluations API when you batch.**
    -> [`references/evaluation-apis.md`](references/evaluation-apis.md)
    ✓ Tests cover default inheritance, per-item override, response order, an empty array, and each `evaluations_semantic` value.
-4. **Add the Search APIs when you list permitted entities.**
+5. **Add the Search APIs when you list permitted entities.**
    -> [`references/search-apis.md`](references/search-apis.md)
    ✓ The searched entity carries no `id` (or it is ignored), Action Search omits `action`, and pagination ends with an empty `next_token`.
-5. **Publish or consume PDP metadata.**
+6. **Publish or consume PDP metadata.**
    -> [`references/metadata-transport.md`](references/metadata-transport.md)
    ✓ The PEP compares `policy_decision_point` with the identifier it used, and falls back to the default paths when an endpoint is not published.
-6. **Secure the transport.** Authenticate the PEP, echo `X-Request-ID`, and limit payload size and request rate.
+7. **Secure the transport.** Authenticate the PEP, echo `X-Request-ID`, and limit payload size and request rate.
    -> [`references/metadata-transport.md`](references/metadata-transport.md)
    ✓ An unauthenticated call returns `401` with `WWW-Authenticate`, and a request carrying `X-Request-ID` gets the same value back.
-7. **Check conformance.** Load the certification fixture and run the interop vectors that match your scope.
+8. **Upgrade** (only when asked). Follow the Implementer's Draft to Final checklist.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The upgraded PEP or PDP passes the Final's checks and returns the same decisions as before.
+9. **Check conformance.** Load the certification fixture and run the interop vectors that match your scope.
    -> [`references/conformance.md`](references/conformance.md)
    ✓ The eight fixture decisions hold and the prerequisites for each certification sub-level are met.
 
@@ -77,6 +83,7 @@ The Authorization API lets a Policy Enforcement Point (PEP) ask a Policy Decisio
 
 | File                                                                   | Covers                                                                                                                                |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [`references/versions.md`](references/versions.md)                     | The 1.0 Final and the Implementer's Draft, what changed between them, the upgrade checklist, and why no preview is listed             |
 | [`references/information-model.md`](references/information-model.md)   | Subject, Resource, Action, Context, Decision and decision context, with JSON examples                                                 |
 | [`references/evaluation-apis.md`](references/evaluation-apis.md)       | Access Evaluation and Access Evaluations, defaults, `evaluations_semantic`, per-item errors, PEP and PDP sketches                     |
 | [`references/search-apis.md`](references/search-apis.md)               | Subject, Resource and Action Search, search semantics, pagination, the response shape                                                 |
@@ -93,6 +100,11 @@ The Authorization API lets a Policy Enforcement Point (PEP) ask a Policy Decisio
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [Authorization API 1.0](https://openid.net/specs/authorization-api-1_0.html): Final, 1.0 (published 11 January 2026), checked 2026-10-02.
+- [Authorization API 1.0](https://openid.net/specs/authorization-api-1_0.html): Final, 1.0 (published 11 January 2026), checked 2026-10-05.
+- [Authorization API 1.0 – draft 01](https://openid.net/specs/authorization-api-1_0-01.html): Implementer's Draft (superseded by the Final), draft 01 (6 September 2024; approved as Implementer's Draft November 2024), checked 2026-10-05.
+- [Authorization API 1.0 – draft 02](https://openid.net/specs/authorization-api-1_0-02.html): Working group draft (superseded by the Final), draft 02 (23 January 2025), checked 2026-10-05.
+- [Authorization API 1.0 – draft 03](https://openid.net/specs/authorization-api-1_0-03.html): Working group draft (superseded by the Final), draft 03 (18 March 2025), checked 2026-10-05.
+- [AuthZEN Working Group – Specifications](https://openid.net/wg/authzen/specifications/): Publisher index, as published, checked 2026-10-05.
+- [Authorization API current editors' draft](https://openid.github.io/authzen/): Editors' draft, titled Authorization API 1.0 and dated 5 October 2026; text identical to the Final apart from date and status, checked 2026-10-05.
 - [AuthZEN Authorization API 1.0 Certification Scenario](https://raw.githubusercontent.com/openid/authzen/b304f68cb206e8be3dfde093142005296582c509/certification/authorization-api-1_0-scenario.md): Working group draft, commit b304f68 (1 October 2026), checked 2026-10-02. Draft posture: build when targeting certification, otherwise track, pinned to commit b304f68.
 - [AuthZEN interop scenarios and test vectors](https://github.com/openid/authzen/tree/b304f68cb206e8be3dfde093142005296582c509/interop): Working group repository, non-normative, commit b304f68 (1 October 2026), checked 2026-10-02.

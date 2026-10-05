@@ -1,10 +1,10 @@
 ---
 name: cedar
-description: "Cedar policy language 4.5: write, validate and evaluate authorization policies with entities, schemas, templates and PARC requests. Use when adding fine-grained authorization to an application, modelling RBAC or ABAC as permit and forbid policies, designing a Cedar schema, writing entity and context JSON, linking policy templates for sharing features, debugging an unexpected Allow or Deny, or reviewing policies for safety. Triggers: Cedar, cedar-policy, Cedar policy, cedarschema, permit, forbid, when, unless, principal action resource context, PARC, policy template, ?principal, ?resource, template-linked policy, entity hierarchy, Cedar validator, default deny, forbid overrides permit, Amazon Verified Permissions."
+description: "Cedar policy language 4.5: write, validate and evaluate authorization policies with entities, schemas, templates and PARC requests. Targets Cedar 4.x (language 4.5, SDK 4.13.0) and upgrades policies and schemas from Cedar 3.x and 2.x. Use when adding fine-grained authorization to an application, modelling RBAC or ABAC as permit and forbid policies, designing a Cedar schema, writing entity and context JSON, linking policy templates for sharing features, debugging an unexpected Allow or Deny, upgrading to Cedar 4, or reviewing policies for safety. Triggers: Cedar, cedar-policy, Cedar policy, cedarschema, permit, forbid, when, unless, principal action resource context, PARC, policy template, ?principal, ?resource, template-linked policy, entity hierarchy, Cedar validator, default deny, forbid overrides permit, Amazon Verified Permissions."
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -18,7 +18,7 @@ Cedar is an open-source policy language for authorization, maintained in the `ce
 
 - Role: policy author, application integrating the authorizer, or reviewer.
 - Model: the principals, actions, resources and hierarchies of the application, and which decisions need attributes or context.
-- Revision: Cedar language version 4.5, implemented by SDK versions 4.10.0 to 4.13.0; pinned to SDK v4.13.0 (Released, 2026-09-15).
+- Target version: Cedar 4.x (current, the default): language version 4.5, implemented by SDK versions 4.10.0 to 4.13.0, pinned to SDK v4.13.0 (Released, 2026-09-15). Cedar 3.x and Cedar 2.x are legacy: read their policies and schemas and upgrade them, never author them. No preview exists. See [`references/versions.md`](references/versions.md).
 - Sources: when refreshing, re-read every URL in [Sources](#sources), check the document history for a new language version and the releases page for a new SDK, and update the pins.
 
 ## Invariants
@@ -35,24 +35,30 @@ Cedar is an open-source policy language for authorization, maintained in the `ce
 
 ## Workflow
 
-1. **Model entities and actions.** Choose entity types, parent relations and attributes, and the actions with the principal and resource types they apply to.
+1. **Pick the version.** Target Cedar 4.x at language 4.5 unless the deployment pins an older language version; then use only features at or below it.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The language and SDK versions are recorded, and neither is from a legacy line.
+2. **Model entities and actions.** Choose entity types, parent relations and attributes, and the actions with the principal and resource types they apply to.
    -> [`references/schema-entities.md`](references/schema-entities.md)
    ✓ A Cedar schema declares every entity type and action, with `appliesTo` for each action.
-2. **Write the policies.** Start from least privilege, use `in` for groups and hierarchies, and use `forbid` for guardrails.
+3. **Write the policies.** Start from least privilege, use `in` for groups and hierarchies, and use `forbid` for guardrails.
    -> [`references/policies.md`](references/policies.md)
    ✓ Each policy has a reason in an annotation and uses only schema names.
-3. **Use templates where grants are per user or per resource.** Link templates rather than generating policy text.
+4. **Use templates where grants are per user or per resource.** Link templates rather than generating policy text.
    -> [`references/policies.md`](references/policies.md)
    ✓ No policy text is built by concatenating input.
-4. **Validate.** Run the validator against the schema and fix every error; review warnings.
+5. **Validate.** Run the validator against the schema and fix every error; review warnings.
    -> [`references/validation-evaluation.md`](references/validation-evaluation.md)
    ✓ Validation reports no errors.
-5. **Build requests and entity data.** Produce PARC requests and entity JSON that follow the schema, with schema-based parsing where available.
+6. **Build requests and entity data.** Produce PARC requests and entity JSON that follow the schema, with schema-based parsing where available.
    -> [`references/schema-entities.md`](references/schema-entities.md)
    ✓ Test requests cover allow, deny and forbid-override cases, and the expected determining policies.
-6. **Integrate and review.** Authenticate before authorizing, bound input sizes, log decisions with determining policies and errors, and re-validate on schema change.
+7. **Integrate and review.** Authenticate before authorizing, bound input sizes, log decisions with determining policies and errors, and re-validate on schema change.
    -> [`references/validation-evaluation.md`](references/validation-evaluation.md)
    ✓ Errors in the response are monitored, not silently dropped.
+8. **Upgrade** (only when asked). Follow the 2.x to 3.x and 3.x to 4.x checklists in order.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The upgraded policies validate under language 4.5 and the test requests return the same decisions.
 
 ## Verify before done
 
@@ -65,9 +71,10 @@ Cedar is an open-source policy language for authorization, maintained in the `ce
 
 ## Reference index
 
-- **`references/policies.md`**: policy structure, scope forms, conditions, annotations, operators, templates and patterns. Load for steps 2 and 3.
-- **`references/schema-entities.md`**: the Cedar schema format, the JSON schema form, entity and context JSON, and requests. Load for steps 1 and 5.
-- **`references/validation-evaluation.md`**: the authorization algorithm, policy evaluation, validation checks and their limits, the 4.13.0 warning change, and security practices. Load for steps 4 and 6.
+- **`references/versions.md`**: Cedar 4.x, 3.x and 2.x, the language and SDK versions in each, what changed, the upgrade checklists, and why no preview is listed. Load for steps 1 and 8.
+- **`references/policies.md`**: policy structure, scope forms, conditions, annotations, operators, templates and patterns. Load for steps 3 and 4.
+- **`references/schema-entities.md`**: the Cedar schema format, the JSON schema form, entity and context JSON, and requests. Load for steps 2 and 6.
+- **`references/validation-evaluation.md`**: the authorization algorithm, policy evaluation, validation checks and their limits, the 4.13.0 warning change, and security practices. Load for steps 5 and 7.
 
 ## Related skills
 
@@ -79,8 +86,9 @@ Cedar is an open-source policy language for authorization, maintained in the `ce
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [Cedar Policy Language Reference Guide](https://docs.cedarpolicy.com/): reference for Version 4.5, docs commit 3a37098 (2026-09-25), checked 2026-10-02.
-- [Cedar document history](https://docs.cedarpolicy.com/other/doc-history.html): language version table, 4.5 (SDK 4.10.0 to 4.13.0; April 23, 2026), checked 2026-10-02.
+- [Cedar document history](https://docs.cedarpolicy.com/other/doc-history.html): language version table, language versions 2.0 to 4.5 (4.5: SDK 4.10.0 to 4.13.0; April 23, 2026), checked 2026-10-05.
 - [Cedar v4.13.0 release](https://github.com/cedar-policy/cedar/releases/tag/v4.13.0): Released, v4.13.0 (2026-09-15), checked 2026-10-02.
+- [cedar-policy SDK changelog](https://github.com/cedar-policy/cedar/blob/main/cedar-policy/CHANGELOG.md): Released (changelog), main branch; entries 2.0.0 (2023-05-10) to 4.13.0 (2026-09-15), Unreleased language version TBD, checked 2026-10-05.
 - [Cedar repository](https://github.com/cedar-policy/cedar): Apache-2.0, main branch, checked 2026-10-02.
 - [Basic policy construction](https://docs.cedarpolicy.com/policies/syntax-policy.html): reference, language 4.5, checked 2026-10-02.
 - [Operators and functions](https://docs.cedarpolicy.com/policies/syntax-operators.html): reference, language 4.5, checked 2026-10-02.

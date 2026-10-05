@@ -1,9 +1,94 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OpenID for Verifiable Credential Issuance 1.0, OpenID for Verifiable Presentations 1.0 and the OpenID4VC High Assurance Interoperability Profile 1.0 (all Final), with DCQL, the W3C Digital Credentials API integration, the SD-JWT VC, ISO mdoc and W3C VCDM format profiles, and OpenID conformance testing. SKILL.md holds the invariants and workflow; references/ splits issuance, presentation, DCQL, the DC API, formats, HAIP and certification.",
+  "abstract": "Covers OpenID for Verifiable Credential Issuance 1.0, OpenID for Verifiable Presentations 1.0 and the OpenID4VC High Assurance Interoperability Profile 1.0 (all Final, each the current line of its own version family), with DCQL, the W3C Digital Credentials API integration, the SD-JWT VC, ISO mdoc and W3C VCDM format profiles, and OpenID conformance testing. The Implementer's Drafts (OpenID4VCI ID1 and ID2, OpenID4VP ID2 and ID3, HAIP ID1) are legacy lines with upgrade steps, and the 1.1 editor's drafts of all three are tracked as previews. SKILL.md holds the invariants and workflow; references/ splits versions, issuance, presentation, DCQL, the DC API, formats, HAIP and certification.",
+  "versions": [
+    {
+      "id": "vci-1.1-preview",
+      "label": "OpenID4VCI 1.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "vci",
+      "revision": "editor's draft 1.1 -01 (1 October 2026); draft posture: track"
+    },
+    {
+      "id": "vci-1.0",
+      "label": "OpenID4VCI 1.0",
+      "status": "current",
+      "family": "vci",
+      "revision": "Final (16 September 2025)",
+      "reference": "references/issuance.md"
+    },
+    {
+      "id": "vci-id2",
+      "label": "OpenID4VCI ID2 (draft 15)",
+      "status": "legacy",
+      "family": "vci",
+      "revision": "Implementer's Draft 2, document draft 15 (19 December 2024)"
+    },
+    {
+      "id": "vci-id1",
+      "label": "OpenID4VCI ID1 (draft 13)",
+      "status": "legacy",
+      "family": "vci",
+      "revision": "Implementer's Draft 1, document draft 13 (8 February 2024)"
+    },
+    {
+      "id": "vp-1.1-preview",
+      "label": "OpenID4VP 1.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "vp",
+      "revision": "editor's draft 1.1 -01 (1 October 2026); draft posture: track"
+    },
+    {
+      "id": "vp-1.0",
+      "label": "OpenID4VP 1.0",
+      "status": "current",
+      "family": "vp",
+      "revision": "Final (9 July 2025)",
+      "reference": "references/presentation.md"
+    },
+    {
+      "id": "vp-id3",
+      "label": "OpenID4VP ID3 (draft 23)",
+      "status": "legacy",
+      "family": "vp",
+      "revision": "Implementer's Draft 3, document draft 23 (2 December 2024)"
+    },
+    {
+      "id": "vp-id2",
+      "label": "OpenID4VP ID2 (draft 18)",
+      "status": "legacy",
+      "family": "vp",
+      "revision": "Implementer's Draft 2, document draft 18 (21 April 2023)"
+    },
+    {
+      "id": "haip-1.1-preview",
+      "label": "HAIP 1.1",
+      "status": "preview",
+      "posture": "track",
+      "family": "haip",
+      "revision": "editor's draft 1.1 -01 (24 September 2026); draft posture: track"
+    },
+    {
+      "id": "haip-1.0",
+      "label": "HAIP 1.0",
+      "status": "current",
+      "family": "haip",
+      "revision": "Final (24 December 2025)",
+      "reference": "references/haip.md"
+    },
+    {
+      "id": "haip-id1",
+      "label": "HAIP ID1 (draft 03)",
+      "status": "legacy",
+      "family": "haip",
+      "revision": "Implementer's Draft 1, document draft 03 (7 February 2025)"
+    }
+  ],
   "sources": [
     {
       "title": "OpenID for Verifiable Credential Issuance 1.0",
@@ -25,6 +110,83 @@
       "status": "Final",
       "revision": "published 24 December 2025",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "OpenID for Verifiable Credential Issuance - draft 13 (Implementer's Draft 1)",
+      "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1, document draft 13 (8 February 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Credential Issuance - draft 15 (Implementer's Draft 2)",
+      "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "ID2, document draft 15 (19 December 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Credential Issuance 1.0 - draft 17",
+      "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-17.html",
+      "status": "Draft",
+      "revision": "draft 17 (17 August 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Credential Issuance 1.1 - Editor's draft",
+      "url": "https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-1_1-wg-draft.html",
+      "status": "Editor's draft",
+      "revision": "1.1 -01 (1 October 2026); draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Presentations - draft 18 (Implementer's Draft 2)",
+      "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "ID2, document draft 18 (21 April 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Presentations - draft 23 (Implementer's Draft 3)",
+      "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html",
+      "status": "Implementer's Draft",
+      "revision": "ID3, document draft 23 (2 December 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Presentations - draft 29",
+      "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0-29.html",
+      "status": "Draft",
+      "revision": "draft 29 (10 June 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID for Verifiable Presentations 1.1 - Editor's draft",
+      "url": "https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-1_1-wg-draft.html",
+      "status": "Editor's draft",
+      "revision": "1.1 -01 (1 October 2026); draft posture: track",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID4VC High Assurance Interoperability Profile - draft 03 (Implementer's Draft 1)",
+      "url": "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1, document draft 03 (7 February 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID4VC High Assurance Interoperability Profile 1.0 - draft 06",
+      "url": "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-06.html",
+      "status": "Draft",
+      "revision": "draft 06 (20 November 2025)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID4VC High Assurance Interoperability Profile 1.1 - Editor's draft",
+      "url": "https://openid.github.io/OpenID4VC-HAIP/openid4vc-high-assurance-interoperability-profile-1_1-wg-draft.html",
+      "status": "Editor's draft",
+      "revision": "1.1 -01 (24 September 2026); draft posture: track",
+      "checked": "2026-10-05"
     },
     {
       "title": "Security and Trust in OpenID for Verifiable Credentials Ecosystems",

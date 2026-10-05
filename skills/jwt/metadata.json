@@ -1,9 +1,31 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers JOSE and JWT issuing and verification: RFC 7515 to RFC 7519, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices with its rfc8725bis update (-10, build posture), RFC 9864 fully specified algorithms, the none and RSA1_5 deprecation draft (-06, build posture), RFC 9068 JWT access tokens with roles, groups and entitlements, RFC 7638 thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. SKILL.md holds the invariants and workflow; references split out the verification checklist, algorithms and keys, and access tokens with the claims registry.",
+  "abstract": "Covers JOSE and JWT issuing and verification: RFC 7515 to RFC 7519, RFC 8037 OKP keys, the RFC 8725 JWT Best Current Practices with its rfc8725bis update (-10, build posture), RFC 9864 fully specified algorithms, the none and RSA1_5 deprecation draft (-06, build posture), RFC 9068 JWT access tokens with roles, groups and entitlements, RFC 7638 thumbprints, the RFC 7800 cnf claim, and the IANA JOSE and JWT claims registries. The published JOSE RFCs are the current line; rfc8725bis and the none and RSA1_5 deprecation are build-posture previews, with an RFC 8725 to rfc8725bis verifier upgrade. SKILL.md holds the invariants and workflow; references split out the version lines, the verification checklist, algorithms and keys, and access tokens with the claims registry.",
+  "versions": [
+    {
+      "id": "rfc8725bis-preview",
+      "label": "rfc8725bis",
+      "status": "preview",
+      "posture": "build",
+      "revision": "draft-ietf-oauth-rfc8725bis-10 (2026-08-21; RFC Editor queue)"
+    },
+    {
+      "id": "deprecate-none-preview",
+      "label": "Deprecate none and RSA1_5",
+      "status": "preview",
+      "posture": "build",
+      "revision": "draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25)"
+    },
+    {
+      "id": "jose-rfc",
+      "label": "JOSE RFCs",
+      "status": "current",
+      "revision": "RFC 7515 to RFC 7519, RFC 8037, RFC 8725, RFC 9864 and RFC 9068"
+    }
+  ],
   "sources": [
     {
       "title": "RFC 7515: JSON Web Signature (JWS)",
@@ -58,8 +80,8 @@
       "title": "JSON Web Token Best Current Practices (rfc8725bis)",
       "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rfc8725bis-10",
       "status": "RFC Editor queue",
-      "revision": "draft-ietf-oauth-rfc8725bis-10 (2026-08-31; intended Best Current Practice, obsoletes RFC 8725; RFC Editor state Blocked)",
-      "checked": "2026-10-02"
+      "revision": "draft-ietf-oauth-rfc8725bis-10 (2026-08-31; intended Best Current Practice, obsoletes RFC 8725; RFC Editor state Blocked, reference not received); Draft posture: build",
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9864: Fully-Specified Algorithms for JOSE and COSE",
@@ -72,8 +94,8 @@
       "title": "JOSE: Deprecate 'none' and 'RSA1_5'",
       "url": "https://datatracker.ietf.org/doc/html/draft-ietf-jose-deprecate-none-rsa15-06",
       "status": "WG draft",
-      "revision": "draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25; in IETF Last Call, intended Proposed Standard)",
-      "checked": "2026-10-02"
+      "revision": "draft-ietf-jose-deprecate-none-rsa15-06 (2026-09-25; in IETF Last Call, intended Proposed Standard); Draft posture: build",
+      "checked": "2026-10-05"
     },
     {
       "title": "RFC 9068: JWT Profile for OAuth 2.0 Access Tokens",

@@ -1,30 +1,105 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the OpenID Shared Signals Framework 1.0, CAEP 1.0 and RISC 1.0 (all Final), the CAEP Interoperability Profile (Implementer's Draft 1, with the working-group draft tracked), the IETF SET, push, poll and subject identifier RFCs, and OpenID Connect Back-Channel Logout as a related revocation input. SKILL.md holds the invariants and workflow; references/ splits SETs and subjects, event types, transmitter, receiver, the interoperability profile with conformance testing, and back-channel logout.",
+  "abstract": "Covers the OpenID Shared Signals Framework 1.0, CAEP 1.0 and RISC 1.0 Finals as the current line, with the Implementer's Draft lines (spec_version 1_0-ID3, 1_0-ID2 and the 1_0-ID1 SSE framework) as legacy and upgrade steps from each, the CAEP Interoperability Profile (Implementer's Draft 1, with the working-group draft tracked), the IETF SET, push, poll and subject identifier RFCs, and OpenID Connect Back-Channel Logout as a related revocation input. SKILL.md holds the invariants and workflow; references/ holds the version hub and splits SETs and subjects, event types, transmitter, receiver, the interoperability profile with conformance testing, and back-channel logout.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "SSF 1.0, CAEP 1.0, RISC 1.0",
+      "status": "current",
+      "revision": "Final, 29 August 2025 (spec_version 1_0)"
+    },
+    {
+      "id": "1.0-id3",
+      "label": "SSF 1.0 Implementer's Draft 3",
+      "status": "legacy",
+      "revision": "SSF ID3 (draft 03, 25 June 2024), CAEP ID2 (draft 03, 19 June 2024), RISC ID2 (draft 02, 5 April 2022); spec_version 1_0-ID3"
+    },
+    {
+      "id": "1.0-id2",
+      "label": "SSF 1.0 Implementer's Draft 2",
+      "status": "legacy",
+      "revision": "SSF ID2 (draft 02, 9 October 2023), CAEP ID1 (draft 02, 9 August 2021), RISC ID2 (draft 02, 5 April 2022); spec_version 1_0-ID2"
+    },
+    {
+      "id": "1.0-id1",
+      "label": "SSE Framework 1.0 Implementer's Draft 1",
+      "status": "legacy",
+      "revision": "SSE Framework ID1 (draft 01, 8 June 2021), CAEP ID1 (draft 02, 9 August 2021); spec_version 1_0-ID1 or absent"
+    }
+  ],
   "sources": [
     {
       "title": "OpenID Shared Signals Framework Specification 1.0",
       "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-final.html",
       "status": "Final",
       "revision": "published 29 August 2025",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "OpenID Continuous Access Evaluation Profile 1.0",
       "url": "https://openid.net/specs/openid-caep-1_0-final.html",
       "status": "Final",
       "revision": "published 29 August 2025",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "OpenID RISC Profile Specification 1.0",
       "url": "https://openid.net/specs/openid-risc-1_0-final.html",
       "status": "Final",
       "revision": "published 29 August 2025",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Shared Signals Framework Specification 1.0, Implementer's Draft 3",
+      "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-ID3.html",
+      "status": "Implementer's Draft",
+      "revision": "ID3 (draft 03, 25 June 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Shared Signals Framework Specification 1.0, Implementer's Draft 2",
+      "url": "https://openid.net/specs/openid-sharedsignals-framework-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "ID2 (draft 02, 9 October 2023)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Shared Signals and Events Framework Specification 1.0, Implementer's Draft 1",
+      "url": "https://openid.net/specs/openid-sse-framework-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (draft 01, 8 June 2021)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Continuous Access Evaluation Profile 1.0, Implementer's Draft 2",
+      "url": "https://openid.net/specs/openid-caep-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "ID2 (draft 03, 19 June 2024)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID Continuous Access Evaluation Profile 1.0, Implementer's Draft 1",
+      "url": "https://openid.net/specs/openid-caep-specification-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (draft 02, 9 August 2021)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID RISC Profile Specification 1.0, Implementer's Draft 2",
+      "url": "https://openid.net/specs/openid-risc-profile-specification-1_0-ID2.html",
+      "status": "Implementer's Draft",
+      "revision": "ID2 (draft 02, 5 April 2022)",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "OpenID RISC Profile of IETF Security Events 1.0, Implementer's Draft 1",
+      "url": "https://openid.net/specs/openid-risc-profile-1_0-ID1.html",
+      "status": "Implementer's Draft",
+      "revision": "ID1 (24 April 2018)",
+      "checked": "2026-10-05"
     },
     {
       "title": "CAEP Interoperability Profile",
@@ -79,8 +154,8 @@
       "title": "Shared Signals WG specifications",
       "url": "https://openid.net/wg/sharedsignals/specifications/",
       "status": "Index",
-      "revision": "page as read 2026-10-02",
-      "checked": "2026-10-02"
+      "revision": "page as read 2026-10-05",
+      "checked": "2026-10-05"
     },
     {
       "title": "OpenID Shared Signals conformance testing",

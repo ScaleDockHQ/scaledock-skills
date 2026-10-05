@@ -1,9 +1,17 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "An index of every OpenID Foundation specification listed on openid.net/developers/specs and the working group specification pages as of 2026-10-02: Final Specifications, Implementer's Drafts, Drafts, errata, inactive and obsolete documents, archived working groups and community groups. SKILL.md routes a task to the right family and states the maturity, IPR and certification rules that apply across families. One reference file per working group or family records each specification's exact title, URL, maturity, date and errata, and points to the dedicated skill where one exists.",
+  "abstract": "An index of every OpenID Foundation specification listed on openid.net/developers/specs and the working group specification pages as of 2026-10-02: Final Specifications, Implementer's Drafts, Drafts, errata, inactive and obsolete documents, archived working groups and community groups. Its one version line is the OpenID Foundation Process (Process Document v1.98), which defines how every specification moves from Work Group Draft to Implementer's Draft, Final and errata edition; references/versions.md explains how to pick and upgrade a version of any OpenID specification, and the per-specification version lines live in the dedicated skills. SKILL.md routes a task to the right family and states the maturity, IPR and certification rules that apply across families. One reference file per working group or family records each specification's exact title, URL, maturity, date and errata, and points to the dedicated skill where one exists.",
+  "versions": [
+    {
+      "id": "process",
+      "label": "OpenID Foundation Process",
+      "status": "current",
+      "revision": "OpenID Process Document v1.98 (19 October 2024)"
+    }
+  ],
   "sources": [
     {
       "title": "Explore All Specifications",
@@ -123,6 +131,13 @@
       "status": "Index",
       "revision": "as of 2026-10-02",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "The OpenID Process",
+      "url": "https://openid.net/foundation/openid-process-document/",
+      "status": "Published",
+      "revision": "OpenID Process Document v1.98 (19 October 2024)",
+      "checked": "2026-10-05"
     },
     {
       "title": "Developing an OpenID Standard",

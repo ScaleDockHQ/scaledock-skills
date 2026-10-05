@@ -16,7 +16,11 @@ Index: [Digital Credentials Protocols (DCP) Working Group – Specifications](ht
 
 ## Implementer's Drafts
 
-The DCP page lists none at present. The Explore All Specifications page still lists OpenID4VCI under Implementer's Drafts; its [most recent Implementer's Draft](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) is draft 13 of 8 February 2024, superseded by the Final.
+The DCP page lists none at present. The Explore All Specifications page still lists OpenID4VCI under Implementer's Drafts and links [ID1](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html) (draft 13, 8 February 2024) as the most recent, but a later [ID2](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID2.html) (draft 15, 19 December 2024) exists (checked 2026-10-05). Both are superseded by the Final. OpenID4VP had Implementer's Drafts [ID2](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html) (draft 18, 21 April 2023) and [ID3](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html) (draft 23, 2 December 2024), and HAIP had [ID1](https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0-ID1.html) (draft 03, 7 February 2025). The `openid4vc` skill lists these as legacy lines with upgrade steps.
+
+## Next versions
+
+The working group repositories carry 1.1 editor's drafts of [OpenID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-1_1-wg-draft.html), [OpenID4VP](https://openid.github.io/OpenID4VP/openid-4-verifiable-presentations-1_1-wg-draft.html) (both 1 October 2026) and [HAIP](https://openid.github.io/OpenID4VC-HAIP/openid4vc-high-assurance-interoperability-profile-1_1-wg-draft.html) (24 September 2026). They are Work Group Drafts: track them only.
 
 ## Drafts
 
