@@ -1,9 +1,9 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers the Agent Payments Protocol (AP2) with two version lines: AP2 v0.2 (current, repository tag v0.2.0, draft posture build) and AP2 v0.1 (legacy, tag v0.1.0). It teaches the Agent Authorization model, open and closed Checkout and Payment Mandates as SD-JWT verifiable digital credentials, constraints, receipts, the five roles, Human Present and Human Not Present flows, and verification and dispute rules. References cover the version lines and the 0.1 to 0.2 upgrade, AP2 with UCP, A2A and MCP, the v0.1 Intent, Cart and Payment Mandates, and a comparison with the Visa Trusted Agent Protocol and the Agentic Commerce Protocol.",
+  "abstract": "Covers the Agent Payments Protocol (AP2) with two version lines: AP2 v0.2 (current, repository tag v0.2.0, draft posture build) and AP2 v0.1 (legacy, tag v0.1.0). It teaches the Agent Authorization model, open and closed Checkout and Payment Mandates as SD-JWT verifiable digital credentials, constraints, receipts, the five roles, Human Present and Human Not Present flows, and verification and dispute rules. References cover the version lines and the 0.1 to 0.2 upgrade, AP2 with UCP, A2A and MCP, the v0.1 Intent, Cart and Payment Mandates, and a comparison with the Visa Trusted Agent Protocol, the Agentic Commerce Protocol and x402 v2.",
   "versions": [
     {
       "id": "0.2",
@@ -68,7 +68,7 @@
       "url": "https://ap2-protocol.org/ap2/security_and_privacy_considerations/",
       "status": "Released",
       "revision": "v0.2",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "Implementation Considerations",
@@ -96,7 +96,7 @@
       "url": "https://ap2-protocol.org/faq/",
       "status": "Released",
       "revision": "v0.2",
-      "checked": "2026-10-02"
+      "checked": "2026-10-05"
     },
     {
       "title": "AP2 v0.2.0 release",
@@ -209,6 +209,55 @@
       "status": "Repository document",
       "revision": "commit 7fdd78d",
       "checked": "2026-10-02"
+    },
+    {
+      "title": "AP2 sample: Human Present purchases with x402",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.2.0/code/samples/python/scenarios/a2a/human-present/x402/README.md",
+      "status": "Sample code (non-normative)",
+      "revision": "tag v0.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "AP2 sample: Human Not Present purchases with x402",
+      "url": "https://raw.githubusercontent.com/google-agentic-commerce/AP2/v0.2.0/code/samples/python/scenarios/a2a/human-not-present/x402/README.md",
+      "status": "Sample code (non-normative)",
+      "revision": "tag v0.2.0",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Protocol Specification v2",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/x402-specification-v2.md",
+      "status": "Protocol Version 2",
+      "revision": "spec v2.0 (2025-12-09), commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: HTTP (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/http.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: A2A (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/a2a.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 Transport: MCP (v2)",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/specs/transports-v2/mcp.md",
+      "status": "Protocol Version 2",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
+    },
+    {
+      "title": "x402 repository README",
+      "url": "https://github.com/x402-foundation/x402/blob/cb0ec5bca0a5b21860a36bb60f34433c2e8e0d71/README.md",
+      "status": "Repository documentation",
+      "revision": "commit cb0ec5b",
+      "checked": "2026-10-05"
     }
   ]
 }
