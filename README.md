@@ -473,6 +473,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`sitemaps`](skills/sitemaps)                                             | Sitemaps: The Sitemap protocol format consists of XML tags. Covers Sitemaps 0.9. Use when publishing a sitemap                                                                                                                                                                           |
 | [`open-graph`](skills/open-graph)                                         | Open Graph: og:image:alt - A description of what is in the image (not a caption). Covers Open Graph. Use when adding Open Graph metadata                                                                                                                                                 |
 | [`oembed`](skills/oembed)                                                 | oEmbed: oEmbed is a format for allowing an embedded representation of a URL on third party sites. Covers oEmbed. Use when embedding a resource with oEmbed                                                                                                                               |
+| [`indexnow`](skills/indexnow)                                             | IndexNow: To submit a URL using an HTTP request (replace with the URL provided by the search engine), issue your request to the following URL: Covers IndexNow. Use when notifying search engines of URL changes                                                                         |
 
 #### Documents and publishing
 
