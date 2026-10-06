@@ -1,0 +1,151 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the REFEDS MFA, SFA, RAF, Sirtfi and entity category texts that REFEDS deposited on Zenodo. Requirements are quotes from those texts.",
+  "versions": [
+    {
+      "id": "refeds-mfa-2-0",
+      "label": "REFEDS MFA Profile 2.0",
+      "status": "current",
+      "revision": "Version 2.0, published at refeds.org/profile/mfa (text not pinned)",
+      "family": "mfa"
+    },
+    {
+      "id": "refeds-mfa-1-2",
+      "label": "REFEDS MFA Profile 1.2",
+      "status": "supported",
+      "revision": "Version 1.2, final 2023-09-26",
+      "family": "mfa"
+    },
+    {
+      "id": "refeds-sfa-1-0",
+      "label": "REFEDS SFA Profile 1.0",
+      "status": "current",
+      "revision": "Version 1.0, 2018-08-28",
+      "family": "sfa"
+    },
+    {
+      "id": "refeds-raf-2-0",
+      "label": "REFEDS Assurance Framework 2.0",
+      "status": "current",
+      "revision": "Version 2.0, 2023-12-05",
+      "family": "raf"
+    },
+    {
+      "id": "refeds-raf-1-0",
+      "label": "REFEDS Assurance Framework 1.0",
+      "status": "supported",
+      "revision": "Version 1.0",
+      "family": "raf"
+    },
+    {
+      "id": "sirtfi-2-0",
+      "label": "Sirtfi 2.0",
+      "status": "current",
+      "revision": "Version 2.0, published at refeds.org/sirtfi (text not pinned)",
+      "family": "sirtfi"
+    },
+    {
+      "id": "sirtfi-1-0",
+      "label": "Sirtfi 1.0",
+      "status": "supported",
+      "revision": "Version 1.0, 2015-12-14",
+      "family": "sirtfi"
+    },
+    {
+      "id": "refeds-rands-1-3",
+      "label": "Research and Scholarship 1.3",
+      "status": "current",
+      "revision": "Version 1.3, 2016-09-16",
+      "family": "rands"
+    },
+    {
+      "id": "refeds-access-v2",
+      "label": "Access entity categories v2",
+      "status": "current",
+      "revision": "Personalized and Pseudonymous v2 2023-02-13, Anonymous v2 2021-03-15",
+      "family": "access"
+    }
+  ],
+  "sources": [
+    {
+      "title": "REFEDS Multi-Factor Authentication Profile v1.2",
+      "url": "https://zenodo.org/records/10135577",
+      "status": "REFEDS Final",
+      "revision": "Version 1.2, 2023-11-15",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "REFEDS MFA (wiki page naming the current profile)",
+      "url": "https://wiki.refeds.org/spaces/PRO/pages/22544394/MFA",
+      "status": "REFEDS wiki",
+      "revision": "Page version of 2026-06-30",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Consultation: MFA Profile v2.0",
+      "url": "https://wiki.refeds.org/spaces/CON/pages/418414593/Consultation+MFA+Profile+v2.0",
+      "status": "REFEDS wiki",
+      "revision": "Closed consultation page summarising the 2.0 changes",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "REFEDS SFA Profile v1.0",
+      "url": "https://zenodo.org/records/5113499",
+      "status": "REFEDS Final",
+      "revision": "Version 1.0, 2018-08-28",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "REFEDS Assurance Framework v2.0",
+      "url": "https://zenodo.org/records/10277233",
+      "status": "REFEDS Final",
+      "revision": "Version 2.0, 2023-12-05",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Security Incident Response Trust Framework for Federated Identity (Sirtfi) v1.0",
+      "url": "https://zenodo.org/records/1256531",
+      "status": "REFEDS Final",
+      "revision": "Version 1.0, 2015-12-14",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Consultation: Sirtfi v2",
+      "url": "https://wiki.refeds.org/spaces/CON/pages/100270114/Consultation+Sirtfi+v2",
+      "status": "REFEDS wiki",
+      "revision": "Consultation page with the v1 and v2 coexistence note",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "REFEDS Research and Scholarship Entity Category v1.3",
+      "url": "https://zenodo.org/records/4700413",
+      "status": "REFEDS Final",
+      "revision": "Version 1.3, 2016-09-16",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Personalized Access Entity Category v2",
+      "url": "https://zenodo.org/records/7684449",
+      "status": "REFEDS Final",
+      "revision": "Version 2, 2023-02-13",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pseudonymous Access Entity Category v2",
+      "url": "https://zenodo.org/records/7684488",
+      "status": "REFEDS Final",
+      "revision": "Version 2, 2023-02-13",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "REFEDS Anonymous Access Entity Category v2",
+      "url": "https://zenodo.org/records/7816828",
+      "status": "REFEDS Final",
+      "revision": "Version 2, 2021-03-15",
+      "checked": "2026-10-06"
+    }
+  ]
+}

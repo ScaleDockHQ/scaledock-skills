@@ -170,6 +170,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`apple-app-site-association`](skills/apple-app-site-association) | apple-app-site-association: Please turn on JavaScript in your browser and refresh the page to view its content. Covers apple-app-site-association. Use when associating an app with a website                                                                                            |
 | [`sign-in-with-apple`](skills/sign-in-with-apple)                 | Sign in with Apple: Please turn on JavaScript in your browser and refresh the page to view its content. Covers Sign in with Apple. Use when signing users in with Apple                                                                                                                  |
 | [`eu-age-verification`](skills/eu-age-verification)               | EU Age Verification blueprint (2026-09-02): proof-of-age mDoc attestations (`eu.europa.ec.av.1`) over OpenID4VCI, OpenID4VP and the Digital Credentials API, with ZKP and a plain mDoc fallback.                                                                                         |
+| [`refeds-profiles`](skills/refeds-profiles)                       | REFEDS MFA 2.0 and 1.2, SFA 1.0, Assurance Framework 2.0, Sirtfi, Research and Scholarship 1.3 and the access entity categories v2.                                                                                                                                                      |
 
 #### Security and supply chain
 
