@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Payment Request API. Payment Request API is current; Payment Method Identifiers is current; Web-based Payment Handler API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "payment-request",
+      "label": "Payment Request API",
+      "status": "current",
+      "revision": "payment-request CRD-payment-request-20260622 (Candidate Recommendation Draft, 2026-06-22)",
+      "posture": "build",
+      "family": "payment-request"
+    },
+    {
+      "id": "payment-method-id",
+      "label": "Payment Method Identifiers",
+      "status": "current",
+      "revision": "payment-method-id REC-payment-method-id-20220908 (Recommendation, 2022-09-08)",
+      "family": "payment-method-id"
+    },
+    {
+      "id": "web-based-payment-handler",
+      "label": "Web-based Payment Handler API",
+      "status": "current",
+      "revision": "web-based-payment-handler WD-web-based-payment-handler-20260930 (Working Draft, 2026-09-30)",
+      "posture": "track",
+      "family": "payment-handler"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Payment Request API",
+      "url": "https://www.w3.org/TR/payment-request/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "payment-request CRD-payment-request-20260622 (Candidate Recommendation Draft, 2026-06-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Payment Method Identifiers",
+      "url": "https://www.w3.org/TR/payment-method-id/",
+      "status": "Recommendation",
+      "revision": "payment-method-id REC-payment-method-id-20220908 (Recommendation, 2022-09-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web-based Payment Handler API",
+      "url": "https://www.w3.org/TR/web-based-payment-handler/",
+      "status": "Working Draft",
+      "revision": "web-based-payment-handler WD-web-based-payment-handler-20260930 (Working Draft, 2026-09-30)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -229,7 +229,9 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Payments and commerce
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                                       | Description                                                                                                                                                                                                                                                                              |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`payment-request`](skills/payment-request) | Payment Request API: This specification standardizes an API to allow merchants (i.e. Covers Payment Request API (build), Payment Method Identifiers, Web-based Payment Handler API (track). Use when building a checkout that uses Payment Request, a payment method identifier, or a we |
 
 #### Regulations
 
