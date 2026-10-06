@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebXR. WebXR Device API is current; WebXR Augmented Reality Module - Level 1 is current; WebXR Depth Sensing Module Level 1 is current; WebXR DOM Overlays Module Level 1 is current; WebXR Gamepads Module - Level 1 is current; WebXR Hand Input Module - Level 1 is current; WebXR Hit Test Module Level 1 is current; WebXR Layers API Level 1 is current; WebXR Lighting Estimation API Level 1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "webxr",
+      "label": "WebXR Device API",
+      "status": "current",
+      "revision": "webxr CRD-webxr-20260609 (Candidate Recommendation Draft, 2026-06-09)",
+      "posture": "build",
+      "family": "device"
+    },
+    {
+      "id": "webxr-ar-module-1",
+      "label": "WebXR Augmented Reality Module - Level 1",
+      "status": "current",
+      "revision": "webxr-ar-module-1 CRD-webxr-ar-module-1-20250425 (Candidate Recommendation Draft, 2025-04-25)",
+      "posture": "build",
+      "family": "ar"
+    },
+    {
+      "id": "webxr-depth-sensing-1",
+      "label": "WebXR Depth Sensing Module Level 1",
+      "status": "current",
+      "revision": "webxr-depth-sensing-1 WD-webxr-depth-sensing-1-20260825 (Working Draft, 2026-08-25)",
+      "posture": "track",
+      "family": "depth"
+    },
+    {
+      "id": "webxr-dom-overlays-1",
+      "label": "WebXR DOM Overlays Module Level 1",
+      "status": "current",
+      "revision": "webxr-dom-overlays-1 WD-webxr-dom-overlays-1-20240924 (Working Draft, 2024-09-24)",
+      "posture": "track",
+      "family": "dom-overlays"
+    },
+    {
+      "id": "webxr-gamepads-module-1",
+      "label": "WebXR Gamepads Module - Level 1",
+      "status": "current",
+      "revision": "webxr-gamepads-module-1 WD-webxr-gamepads-module-1-20250707 (Working Draft, 2025-07-07)",
+      "posture": "track",
+      "family": "gamepads"
+    },
+    {
+      "id": "webxr-hand-input-1",
+      "label": "WebXR Hand Input Module - Level 1",
+      "status": "current",
+      "revision": "webxr-hand-input-1 WD-webxr-hand-input-1-20240605 (Working Draft, 2024-06-05)",
+      "posture": "track",
+      "family": "hand"
+    },
+    {
+      "id": "webxr-hit-test-1",
+      "label": "WebXR Hit Test Module Level 1",
+      "status": "current",
+      "revision": "webxr-hit-test-1 WD-webxr-hit-test-1-20251211 (Working Draft, 2025-12-11)",
+      "posture": "track",
+      "family": "hit-test"
+    },
+    {
+      "id": "webxrlayers-1",
+      "label": "WebXR Layers API Level 1",
+      "status": "current",
+      "revision": "webxrlayers-1 WD-webxrlayers-1-20260811 (Working Draft, 2026-08-11)",
+      "posture": "track",
+      "family": "layers"
+    },
+    {
+      "id": "webxr-lighting-estimation-1",
+      "label": "WebXR Lighting Estimation API Level 1",
+      "status": "current",
+      "revision": "webxr-lighting-estimation-1 WD-webxr-lighting-estimation-1-20251211 (Working Draft, 2025-12-11)",
+      "posture": "track",
+      "family": "lighting"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WebXR Device API",
+      "url": "https://www.w3.org/TR/webxr/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "webxr CRD-webxr-20260609 (Candidate Recommendation Draft, 2026-06-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Augmented Reality Module - Level 1",
+      "url": "https://www.w3.org/TR/webxr-ar-module-1/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "webxr-ar-module-1 CRD-webxr-ar-module-1-20250425 (Candidate Recommendation Draft, 2025-04-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Depth Sensing Module",
+      "url": "https://www.w3.org/TR/webxr-depth-sensing-1/",
+      "status": "Working Draft",
+      "revision": "webxr-depth-sensing-1 WD-webxr-depth-sensing-1-20260825 (Working Draft, 2026-08-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR DOM Overlays Module",
+      "url": "https://www.w3.org/TR/webxr-dom-overlays-1/",
+      "status": "Working Draft",
+      "revision": "webxr-dom-overlays-1 WD-webxr-dom-overlays-1-20240924 (Working Draft, 2024-09-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Gamepads Module - Level 1",
+      "url": "https://www.w3.org/TR/webxr-gamepads-module-1/",
+      "status": "Working Draft",
+      "revision": "webxr-gamepads-module-1 WD-webxr-gamepads-module-1-20250707 (Working Draft, 2025-07-07)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Hand Input Module - Level 1",
+      "url": "https://www.w3.org/TR/webxr-hand-input-1/",
+      "status": "Working Draft",
+      "revision": "webxr-hand-input-1 WD-webxr-hand-input-1-20240605 (Working Draft, 2024-06-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Hit Test Module",
+      "url": "https://www.w3.org/TR/webxr-hit-test-1/",
+      "status": "Working Draft",
+      "revision": "webxr-hit-test-1 WD-webxr-hit-test-1-20251211 (Working Draft, 2025-12-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Layers API Level 1",
+      "url": "https://www.w3.org/TR/webxrlayers-1/",
+      "status": "Working Draft",
+      "revision": "webxrlayers-1 WD-webxrlayers-1-20260811 (Working Draft, 2026-08-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebXR Lighting Estimation API Level 1",
+      "url": "https://www.w3.org/TR/webxr-lighting-estimation-1/",
+      "status": "Working Draft",
+      "revision": "webxr-lighting-estimation-1 WD-webxr-lighting-estimation-1-20251211 (Working Draft, 2025-12-11)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
