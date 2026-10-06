@@ -1,11 +1,11 @@
 ---
 name: css
 description: >-
-  CSS Snapshot: This document collects together into one definition all the specs that together form the current state of Cascading Style Sheets (CSS) as of 2026. Covers CSS Snapshot 2026 (track), CSS Snapshot 2025 (supported), CSS Snapshot 2024 (supported). Use when writing or reviewing CSS and choosing a snapshot. Triggers: CSS Snapshot, CSS.
+  CSS Snapshot: This document collects together into one definition all the specs that together form the current state of Cascading Style Sheets (CSS) as of 2026. Covers CSS Snapshot 2026 (track), CSS Snapshot 2025 (supported), CSS Snapshot 2024 (supported). Use when writing or reviewing CSS and choosing a snapshot. Also CSS 2.1 and CSS 2.2. Triggers: CSS Snapshot, CSS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: CSS Snapshot 2026 (default, posture track); CSS Snapshot 2025 (supported); CSS Snapshot 2024 (supported); CSS Snapshot 2023 (legacy: read and upgrade, never author). See [`references/versions.md`](references/versions.md).
+- Target version: CSS Snapshot 2026 (default, posture track); CSS Snapshot 2025 (supported); CSS Snapshot 2024 (supported); CSS Snapshot 2023 (legacy: read and upgrade, never author). CSS 2.1 is the current Recommendation of the CSS Level 2 family. CSS 2.2 is a First Public Working Draft preview (posture track); its abstract says it is not the latest CSS and points at the CSS Snapshot. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -70,3 +70,5 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [CSS Snapshot 2025](https://www.w3.org/TR/css-2025/): Note, css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18), checked 2026-10-06.
 - [CSS Snapshot 2024](https://www.w3.org/TR/css-2024/): Note, css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25), checked 2026-10-06.
 - [CSS Snapshot 2023](https://www.w3.org/TR/css-2023/): Note, css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07), checked 2026-10-06.
+- [CSS 2.1](https://www.w3.org/TR/CSS2/): Recommendation, W3C Recommendation 07 June 2011, checked 2026-10-06.
+- [CSS 2.2](https://www.w3.org/TR/CSS22/): First Public Working Draft, W3C First Public Working Draft 12 April 2016, checked 2026-10-06.

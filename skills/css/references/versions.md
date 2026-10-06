@@ -4,12 +4,14 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id         | Line              | Status    | Revision                                           | Posture | Publisher       |
-| ---------- | ----------------- | --------- | -------------------------------------------------- | ------- | --------------- |
-| `css-2026` | CSS Snapshot 2026 | current   | css-2026 NOTE-css-2026-20260622 (Note, 2026-06-22) | track   | Note 2026-06-22 |
-| `css-2025` | CSS Snapshot 2025 | supported | css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18) |         | Note 2025-09-18 |
-| `css-2024` | CSS Snapshot 2024 | supported | css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25) |         | Note 2025-02-25 |
-| `css-2023` | CSS Snapshot 2023 | legacy    | css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07) |         | Note 2023-12-07 |
+| Id              | Line              | Status    | Revision                                           | Posture | Publisher                             |
+| --------------- | ----------------- | --------- | -------------------------------------------------- | ------- | ------------------------------------- |
+| `css-2026`      | CSS Snapshot 2026 | current   | css-2026 NOTE-css-2026-20260622 (Note, 2026-06-22) | track   | Note 2026-06-22                       |
+| `css-2025`      | CSS Snapshot 2025 | supported | css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18) |         | Note 2025-09-18                       |
+| `css-2024`      | CSS Snapshot 2024 | supported | css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25) |         | Note 2025-02-25                       |
+| `css-2023`      | CSS Snapshot 2023 | legacy    | css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07) |         | Note 2023-12-07                       |
+| `css2`          | CSS 2.1           | current   | W3C Recommendation 07 June 2011                    |         | Recommendation 2011-06-07             |
+| `css22-preview` | CSS 2.2           | preview   | W3C First Public Working Draft 12 April 2016       | track   | First Public Working Draft 2016-04-12 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 

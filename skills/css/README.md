@@ -23,6 +23,8 @@ Then ask the agent to apply CSS Snapshot.
 | CSS Snapshot 2025 | supported             |
 | CSS Snapshot 2024 | supported             |
 | CSS Snapshot 2023 | legacy (upgrade from) |
+| CSS 2.1           | current               |
+| CSS 2.2           | preview (track)       |
 
 `references/versions.md` says which line to use and how to upgrade between them.
 
@@ -34,6 +36,8 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [CSS Snapshot 2025](https://www.w3.org/TR/css-2025/): Note, css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18).
 - [CSS Snapshot 2024](https://www.w3.org/TR/css-2024/): Note, css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25).
 - [CSS Snapshot 2023](https://www.w3.org/TR/css-2023/): Note, css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07).
+- [CSS 2.1](https://www.w3.org/TR/CSS2/): Recommendation, W3C Recommendation 07 June 2011.
+- [CSS 2.2](https://www.w3.org/TR/CSS22/): First Public Working Draft, W3C First Public Working Draft 12 April 2016.
 
 ## License
 
