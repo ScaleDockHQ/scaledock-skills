@@ -4,7 +4,7 @@ description: "JWT and JOSE: verify and issue JWS, JWE and JWK safely. Covers RFC
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.2.1"
   kind: standard
 ---
 
@@ -90,6 +90,9 @@ The IETF JOSE specifications define signed (JWS), encrypted (JWE) and key (JWK) 
 - `sd-jwt` for selective disclosure on top of JWS: `npx skills add ScaleDockHQ/scaledock-skills --skill sd-jwt`
 - `http-message-signatures` for signing HTTP requests and responses instead of tokens: `npx skills add ScaleDockHQ/scaledock-skills --skill http-message-signatures`
 - `wimse` for workload identity tokens between services: `npx skills add ScaleDockHQ/scaledock-skills --skill wimse`
+- `cose`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill cose`
+- `cbor`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill cbor`
+- `web-cryptography`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill web-cryptography`
 
 ## Sources
 
