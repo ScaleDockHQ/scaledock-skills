@@ -4,7 +4,7 @@ description: "OpenID4VC: issue and verify verifiable credentials over OAuth. Use
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.1"
+  version: "1.2.2"
   kind: standard
 ---
 

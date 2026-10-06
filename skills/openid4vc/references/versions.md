@@ -20,6 +20,8 @@ Read this when choosing a target version for issuance, presentation or HAIP, mee
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows.
 
+The W3C Digital Credentials API is not a version line of OpenID4VCI, OpenID4VP or HAIP. It is the `digital-credentials` skill. This skill cites it where a wallet presents a credential through the browser API.
+
 OpenID4VP also had a first Implementer's Draft, published as OpenID Connect for Verifiable Presentations (28 January 2022), before the base protocol moved to OAuth 2.0 in draft 11 (OpenID4VP draft 29 Appendix H). Treat it like ID2: read it and upgrade.
 
 ## Which version to use
