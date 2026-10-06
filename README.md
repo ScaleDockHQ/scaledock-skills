@@ -93,6 +93,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`time-zone-database`](skills/time-zone-database)           | Procedures for Maintaining the Time Zone Database: Procedures for Maintaining the Time Zone Database Covers RFC 6557 Procedures for Maintaining the Time Zone Database. Use when using the IANA time zone database                                                                       |
 | [`http2`](skills/http2)                                     | HTTP/2: This specification describes an optimized expression of the semantics of the Hypertext Transfer Protocol (HTTP), referred to as HTTP version 2 (HTTP/2). Covers RFC 9113 HTTP/2. Use when speaking HTTP/2                                                                        |
 | [`http3`](skills/http3)                                     | HTTP/3: The QUIC transport protocol has several features that are desirable in a transport for HTTP, such as stream multiplexing, per-stream flow control, and low-latency connection establishment. Covers RFC 9114 HTTP/3, RFC 9000 QUIC: A UDP-Based Multiplexed and Secure Transport |
+| [`websocket`](skills/websocket)                             | The WebSocket Protocol: The WebSocket Protocol Covers RFC 6455 The WebSocket Protocol, RFC 8441 Bootstrapping WebSockets with HTTP/2. Use when speaking the WebSocket protocol                                                                                                           |
 
 #### Events and data
 
