@@ -87,6 +87,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`jsonpath`](skills/jsonpath)                               | JSONPath: Query Expressions for JSON: JSONPath defines a string syntax for selecting and extracting JSON (RFC 8259) values from within a given JSON value. Covers RFC 9535 JSONPath: Query Expressions for JSON. Use when querying JSON with JSONPath                                    |
 | [`uuid`](skills/uuid)                                       | Universally Unique IDentifiers (UUIDs): This specification defines UUIDs (Universally Unique IDentifiers) -- also known as GUIDs (Globally Unique IDentifiers) -- and a Uniform Resource Name namespace for UUIDs. Covers RFC 9562 Universally Unique IDentifiers (UUIDs). Use when gene |
 | [`uri`](skills/uri)                                         | Uniform Resource Identifier (URI): Generic Syntax: Uniform Resource Identifier (URI): Generic Syntax Covers RFC 3986 Uniform Resource Identifier (URI): Generic Syntax, RFC 3987 Internationalized Resource Identifiers (IRIs), RFC 8141 Uniform Resource Names (URNs), RFC 6570 URI Tem |
+| [`language-tags`](skills/language-tags)                     | Tags for Identifying Languages: Tags for Identifying Languages Covers RFC 5646 Tags for Identifying Languages, RFC 4647 Matching of Language Tags. Use when matching BCP 47 language tags                                                                                                |
 
 #### Events and data
 
