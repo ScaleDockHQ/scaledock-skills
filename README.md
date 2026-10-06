@@ -266,6 +266,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`storage`](skills/storage)                                 | Storage: The Storage Standard defines an API for persistent storage and quota estimates, as well as the platform storage architecture. Covers Storage Living Standard. Use when using the Storage standard                                                                               |
 | [`notifications`](skills/notifications)                     | Notifications: This standard defines an API to display notifications to the end user, typically outside the top-level browsing context’s viewport. Covers Notifications Living Standard. Use when showing a notification                                                                 |
 | [`console`](skills/console)                                 | Console: This specification defines APIs for console debugging facilities. Covers Console Living Standard. Use when writing console methods                                                                                                                                              |
+| [`compression`](skills/compression)                         | Compression: This document defines a set of JavaScript APIs to compress and decompress streams of binary data. Covers Compression Living Standard. Use when compressing or decompressing bytes                                                                                           |
 
 #### CSS, graphics and media
 
