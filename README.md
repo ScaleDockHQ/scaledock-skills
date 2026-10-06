@@ -231,6 +231,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`swid`](skills/swid)                                   | SWID: Willie May, Under Secretary of Commerce for Standards and Technology and Director Covers NIST IR 8060. Use when tagging software with SWID                                                                                                                                         |
 | [`cisa-secure-by-design`](skills/cisa-secure-by-design) | Secure by Design: A .gov website belongs to an official government organization in the United States. Covers Secure by Design. Use when applying CISA Secure by Design                                                                                                                   |
 | [`owasp-samm`](skills/owasp-samm)                       | OWASP SAMM: OWASP SAMM \| OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP SAMM. Use when assessing software assurance maturity                                                                                           |
+| [`owasp-wstg`](skills/owasp-wstg)                       | OWASP WSTG: OWASP WSTG Covers OWASP WSTG. Use when testing web application security                                                                                                                                                                                                      |
 
 #### Observability and operations
 
