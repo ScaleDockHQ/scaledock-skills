@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Universally Unique IDentifiers (UUIDs). RFC 9562 Universally Unique IDentifiers (UUIDs) is current; RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc9562",
+      "label": "RFC 9562 Universally Unique IDentifiers (UUIDs)",
+      "status": "current",
+      "revision": "RFC 9562 (PROPOSED STANDARD, May 2024)"
+    },
+    {
+      "id": "rfc4122",
+      "label": "RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace",
+      "status": "legacy",
+      "revision": "RFC 4122 (PROPOSED STANDARD, July 2005)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9562 Universally Unique IDentifiers (UUIDs)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9562.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9562 (PROPOSED STANDARD, May 2024)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4122 A Universally Unique IDentifier (UUID) URN Namespace",
+      "url": "https://www.rfc-editor.org/rfc/rfc4122.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 4122 (PROPOSED STANDARD, July 2005)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
