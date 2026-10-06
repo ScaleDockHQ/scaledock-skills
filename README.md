@@ -200,6 +200,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`kmip`](skills/kmip)                                   | KMIP: https://docs.oasis-open.org/kmip/kmip-spec/v3.0/csd02/kmip-spec-v3.0-csd02.docx (Authoritative) Covers KMIP 3.0. Use when managing cryptographic keys over KMIP                                                                                                                    |
 | [`openc2`](skills/openc2)                               | OpenC2: https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.md (Authoritative) Covers OpenC2 Language 1.0. Use when sending cybersecurity commands                                                                                                                        |
 | [`pkcs11`](skills/pkcs11)                               | PKCS #11: https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/cs01/pkcs11-spec-v3.1-cs01.pdf Covers PKCS #11 3.1. Use when using a cryptographic token interface                                                                                                                         |
+| [`tuf`](skills/tuf)                                     | TUF: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework with subject line “ [TUF] … message topic … ” Covers TUF specification. Use when securing a software update repository                                                                                        |
 
 #### Observability and operations
 
