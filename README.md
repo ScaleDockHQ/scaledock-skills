@@ -317,6 +317,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`xpath-xquery`](skills/xpath-xquery)                                     | XPath and XQuery: XPath 3.1 is an expression language that allows the processing of values conforming to the data model defined in [XQuery and XPath Data Model (XDM) 3.1] . Covers XML Path Language (XPath) 3.1, XML Path Language (XPath) 3.0 (supported), XQuery 4.0 (track preview) |
 | [`xslt`](skills/xslt)                                                     | XSLT: This specification defines the syntax and semantics of XSLT 3.0 , a language designed primarily for transforming XML documents into other XML documents. Covers XSLT 4.0 (track preview), XSL Transformations (XSLT) Version 3.0, XSL Transformations (XSLT) Version 2.0 (Second E |
 | [`xml-signature`](skills/xml-signature)                                   | XML Signature: This document specifies XML digital signature processing rules and syntax. Covers XML Signature Syntax and Processing Version 1.1, Canonical XML Version 1.1, Exclusive XML Canonicalization Version 1.0. Use when signing or verifying XML                               |
+| [`xml-encryption`](skills/xml-encryption)                                 | XML Encryption: This document specifies a process for encrypting data and representing the result in XML. Covers XML Encryption Syntax and Processing Version 1.1. Use when encrypting XML                                                                                               |
 
 #### Documents and publishing
 
