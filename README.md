@@ -449,6 +449,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`yaml`](skills/yaml)                                         | YAML: YAML Covers YAML 1.2.2. Use when parsing YAML                                                                                                                                                                                                                                            |
 | [`toml`](skills/toml)                                         | TOML: { name = "Baz Qux", email = "bazqux@example.com", url = "https://example.com/bazqux" } Covers TOML 1.1.0, TOML 1.0.0 (supported). Use when parsing TOML                                                                                                                                  |
 | [`json5`](skills/json5)                                       | JSON5: This JavaScript library is a reference implementation for JSON5 parsing and serialization, Covers JSON5. Use when parsing JSON5                                                                                                                                                         |
+| [`json-lines`](skills/json-lines)                             | JSON Lines: This page describes the JSON Lines text format, also called newline-delimited JSON. Covers JSON Lines. Use when reading newline-delimited JSON                                                                                                                                     |
 
 #### Domain verticals
 
