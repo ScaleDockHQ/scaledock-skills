@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Uniform Resource Identifier (URI): Generic Syntax. RFC 3986 Uniform Resource Identifier (URI): Generic Syntax is current; RFC 3987 Internationalized Resource Identifiers (IRIs) is current; RFC 8141 Uniform Resource Names (URNs) is current; RFC 6570 URI Template is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc3986",
+      "label": "RFC 3986 Uniform Resource Identifier (URI): Generic Syntax",
+      "status": "current",
+      "revision": "RFC 3986 (INTERNET STANDARD, January 20)",
+      "family": "uri"
+    },
+    {
+      "id": "rfc3987",
+      "label": "RFC 3987 Internationalized Resource Identifiers (IRIs)",
+      "status": "current",
+      "revision": "RFC 3987 (PROPOSED STANDARD, January 20)",
+      "family": "iri"
+    },
+    {
+      "id": "rfc8141",
+      "label": "RFC 8141 Uniform Resource Names (URNs)",
+      "status": "current",
+      "revision": "RFC 8141 (PROPOSED STANDARD, April 2017)",
+      "family": "urn"
+    },
+    {
+      "id": "rfc6570",
+      "label": "RFC 6570 URI Template",
+      "status": "current",
+      "revision": "RFC 6570 (PROPOSED STANDARD, March 2012)",
+      "family": "template"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 3986 Uniform Resource Identifier (URI): Generic Syntax",
+      "url": "https://www.rfc-editor.org/rfc/rfc3986.html",
+      "status": "INTERNET STANDARD",
+      "revision": "RFC 3986 (INTERNET STANDARD, January 20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 3987 Internationalized Resource Identifiers (IRIs)",
+      "url": "https://www.rfc-editor.org/rfc/rfc3987.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 3987 (PROPOSED STANDARD, January 20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 8141 Uniform Resource Names (URNs)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8141.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8141 (PROPOSED STANDARD, April 2017)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6570 URI Template",
+      "url": "https://www.rfc-editor.org/rfc/rfc6570.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6570 (PROPOSED STANDARD, March 2012)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
