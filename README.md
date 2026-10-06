@@ -243,6 +243,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`oscal`](skills/oscal)               | OSCAL: OSCAL Covers OSCAL. Use when exchanging control assessment data                                                                                                              |
 | [`nist-800-207`](skills/nist-800-207) | NIST SP 800-207: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-207, SP 800-207A. Use when applying zero trust architecture |
 | [`nist-ssdf`](skills/nist-ssdf)       | NIST SP 800-218: James K. Covers SP 800-218. Use when applying the Secure Software Development Framework                                                                            |
+| [`nist-800-171`](skills/nist-800-171) | NIST SP 800-171: Laurie E. Covers SP 800-171 Rev 3. Use when protecting controlled unclassified information                                                                         |
 
 #### Email
 
