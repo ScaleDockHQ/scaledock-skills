@@ -552,6 +552,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`ubl`](skills/ubl)     | UBL: This stage: https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.html https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.pdf https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.xml Covers UBL 2.4. Use when exchanging business documents                                            |
 | [`fhir`](skills/fhir)   | FHIR: This page is part of the FHIR Specification (v5.0.0: R5 - STU ). Covers FHIR R5, FHIR R4 (supported), FHIR R4B (supported), FHIR draft (track preview). Use when exchanging healthcare data                                                                                        |
 | [`lti`](skills/lti)     | LTI: The IMS Learning Tools Interoperability (LTI)® specification allows Learning Management Systems (LMS) or platforms to integrate remote tools and content in a standard way. Covers LTI 1.3. Use when integrating a learning tool                                                    |
+| [`gtfs`](skills/gtfs)   | GTFS: This document defines the format and structure of the files that comprise a GTFS dataset. Covers GTFS Schedule, GTFS Realtime. Use when publishing transit data                                                                                                                    |
 
 ## Development
 
