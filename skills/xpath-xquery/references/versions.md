@@ -15,6 +15,10 @@ Read this when choosing a target version, reading a document written for an olde
 | `xpath-datamodel-31` | XQuery and XPath Data Model 3.1              | current   | xpath-datamodel-31 REC-xpath-datamodel-31-20170321 (Recommendation, 2017-03-21) |         | Recommendation 2017-03-21        |
 | `xqueryx-31`         | XQueryX 3.1                                  | current   | xqueryx-31 REC-xqueryx-31-20170321 (Recommendation, 2017-03-21)                 |         | Recommendation 2017-03-21        |
 | `xpath-full-text-30` | XQuery and XPath Full Text 3.0               | current   | xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24) |         | Recommendation 2015-11-24        |
+| `xpath-10`           | XPath 1.0                                    | legacy    | W3C Recommendation 16 November 1999                                             |         | Recommendation 1999-11-16        |
+| `xpath20`            | XPath 2.0                                    | legacy    | W3C Recommendation 14 December 2010                                             |         | Recommendation 2010-12-14        |
+| `xpath-full-text-10` | XQuery and XPath Full Text 1.0               | legacy    | W3C Recommendation 17 March 2011                                                |         | Recommendation 2011-03-17        |
+| `xquery-10`          | XQuery 1.0                                   | legacy    | W3C Recommendation 14 December 2010                                             |         | Recommendation 2010-12-14        |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 

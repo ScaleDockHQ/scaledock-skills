@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: XML Path Language (XPath) 3.1 (default); XML Path Language (XPath) 3.0 (supported); XQuery 4.0 (preview, posture track: emit only when the user opts in and the posture is build); XQuery 3.1: An XML Query Language (default); XQuery 3.0: An XML Query Language (supported); XPath and XQuery Functions and Operators 3.1 (default); XQuery and XPath Data Model 3.1 (default); XQueryX 3.1 (default); XQuery and XPath Full Text 3.0 (default). See [`references/versions.md`](references/versions.md).
+- Target version: XML Path Language (XPath) 3.1 (default); XML Path Language (XPath) 3.0 (supported); XQuery 4.0 (preview, posture track: emit only when the user opts in and the posture is build); XQuery 3.1: An XML Query Language (default); XQuery 3.0: An XML Query Language (supported); XPath and XQuery Functions and Operators 3.1 (default); XQuery and XPath Data Model 3.1 (default); XQueryX 3.1 (default); XQuery and XPath Full Text 3.0 (default). XPath 1.0, XPath 2.0, XQuery 1.0 and XQuery and XPath Full Text 1.0 are legacy. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -75,3 +75,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [XQuery and XPath Data Model 3.1](https://www.w3.org/TR/xpath-datamodel-31/): Recommendation, xpath-datamodel-31 REC-xpath-datamodel-31-20170321 (Recommendation, 2017-03-21), checked 2026-10-06.
 - [XQueryX 3.1](https://www.w3.org/TR/xqueryx-31/): Recommendation, xqueryx-31 REC-xqueryx-31-20170321 (Recommendation, 2017-03-21), checked 2026-10-06.
 - [XQuery and XPath Full Text 3.0](https://www.w3.org/TR/xpath-full-text-30/): Recommendation, xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24), checked 2026-10-06.
+- [XPath 1.0](https://www.w3.org/TR/xpath-10/): Recommendation, W3C Recommendation 16 November 1999, checked 2026-10-06.
+- [XPath 2.0](https://www.w3.org/TR/xpath20/): Recommendation, W3C Recommendation 14 December 2010, checked 2026-10-06.
+- [XQuery and XPath Full Text 1.0](https://www.w3.org/TR/xpath-full-text-10/): Recommendation, W3C Recommendation 17 March 2011, checked 2026-10-06.
+- [XQuery 1.0](https://www.w3.org/TR/xquery-10/): Recommendation, W3C Recommendation 14 December 2010, checked 2026-10-06.

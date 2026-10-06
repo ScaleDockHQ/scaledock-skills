@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -68,6 +68,34 @@
       "status": "current",
       "revision": "xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24)",
       "family": "full-text"
+    },
+    {
+      "id": "xpath-10",
+      "label": "XPath 1.0",
+      "status": "legacy",
+      "family": "xpath",
+      "revision": "XML Path Language (XPath), W3C Recommendation 16 November 1999. The status update says later versions exist and no further maintenance is planned."
+    },
+    {
+      "id": "xpath20",
+      "label": "XPath 2.0",
+      "status": "legacy",
+      "family": "xpath",
+      "revision": "XML Path Language (XPath) 2.0 (Second Edition), W3C Recommendation 14 December 2010"
+    },
+    {
+      "id": "xpath-full-text-10",
+      "label": "XQuery and XPath Full Text 1.0",
+      "status": "legacy",
+      "family": "full-text",
+      "revision": "W3C Recommendation 17 March 2011"
+    },
+    {
+      "id": "xquery-10",
+      "label": "XQuery 1.0",
+      "status": "legacy",
+      "family": "xquery",
+      "revision": "XQuery 1.0: An XML Query Language (Second Edition), W3C Recommendation 14 December 2010"
     }
   ],
   "sources": [
@@ -132,6 +160,34 @@
       "url": "https://www.w3.org/TR/xpath-full-text-30/",
       "status": "Recommendation",
       "revision": "xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XPath 1.0",
+      "url": "https://www.w3.org/TR/xpath-10/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 16 November 1999",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XPath 2.0",
+      "url": "https://www.w3.org/TR/xpath20/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 14 December 2010",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery and XPath Full Text 1.0",
+      "url": "https://www.w3.org/TR/xpath-full-text-10/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 17 March 2011",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery 1.0",
+      "url": "https://www.w3.org/TR/xquery-10/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 14 December 2010",
       "checked": "2026-10-06"
     }
   ]
