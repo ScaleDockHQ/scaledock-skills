@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers BIMI from draft-brand-indicators-for-message-identification-14. Requirements are quotes from that draft.",
+  "versions": [
+    {
+      "id": "bimi-draft-14",
+      "label": "BIMI draft-14",
+      "status": "current",
+      "revision": "draft-brand-indicators-for-message-identification-14, 1 May 2026",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Brand Indicators for Message Identification (BIMI), draft-14",
+      "url": "https://www.ietf.org/archive/id/draft-brand-indicators-for-message-identification-14.txt",
+      "status": "Internet-Draft",
+      "revision": "draft-brand-indicators-for-message-identification-14, 1 May 2026",
+      "checked": "2026-10-06"
+    }
+  ]
+}

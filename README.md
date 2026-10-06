@@ -293,6 +293,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`jmap`](skills/jmap)                                       | The JSON Meta Application Protocol (JMAP): The JSON Meta Application Protocol (JMAP) Covers RFC 8620 The JSON Meta Application Protocol (JMAP), RFC 8621 The JSON Meta Application Protocol (JMAP) for Mail. Use when synchronizing mail with JMAP                                       |
 | [`icalendar`](skills/icalendar)                             | Internet Calendaring and Scheduling Core Object Specification (iCalendar): Internet Calendaring and Scheduling Core Object Specification (iCalendar) Covers RFC 5545 Internet Calendaring and Scheduling Core Object Specification (iCalendar), RFC 7265 jCal: The JSON Format for iCale |
 | [`vcard`](skills/vcard)                                     | vCard Format Specification: vCard Format Specification Covers RFC 6350 vCard Format Specification, RFC 7095 jCard: The JSON Format for vCard, RFC 9553 JSContact: A JSON Representation of Contact Data. Use when reading or writing contact data                                        |
+| [`bimi`](skills/bimi)                                       | BIMI draft-14: publish `_bimi` TXT records and SVG Indicators, and validate them as a receiver behind a DMARC enforcement policy.                                                                                                                                                        |
 
 #### Web platform
 
