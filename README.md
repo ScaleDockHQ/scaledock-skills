@@ -164,6 +164,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`hpke`](skills/hpke)                                   | Hybrid Public Key Encryption: This document describes a scheme for hybrid public key encryption (HPKE). Covers RFC 9180 Hybrid Public Key Encryption. Use when using hybrid public key encryption                                                                                        |
 | [`hotp-totp`](skills/hotp-totp)                         | HOTP: An HMAC-Based One-Time Password Algorithm: HOTP: An HMAC-Based One-Time Password Algorithm Covers RFC 4226 HOTP: An HMAC-Based One-Time Password Algorithm, RFC 6238 TOTP: Time-Based One-Time Password Algorithm. Use when verifying a one-time password                          |
 | [`openpgp`](skills/openpgp)                             | OpenPGP: This document specifies the message formats used in OpenPGP. Covers RFC 9580 OpenPGP. Use when signing or encrypting with OpenPGP                                                                                                                                               |
+| [`mls`](skills/mls)                                     | The Messaging Layer Security (MLS) Protocol: Messaging applications are increasingly making use of end-to-end security mechanisms to ensure that messages are only accessible to the communicating endpoints, and not to any servers involved in delivering messages. Covers RFC 9420 Th |
 
 #### Observability and operations
 
