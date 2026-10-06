@@ -226,6 +226,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`screen-wake-lock`](skills/screen-wake-lock)               | Screen Wake Lock API: This document specifies an API that allows web applications to request a screen wake lock. Covers Screen Wake Lock API (track). Use when keeping the screen awake                                                                                                  |
 | [`contact-picker`](skills/contact-picker)                   | Contact Picker API: An API to give one-off access to a user’s contact information with full control over the shared data. Covers Contact Picker API (track). Use when picking contacts from the device                                                                                   |
 | [`file-api`](skills/file-api)                               | File API: This specification provides an API for representing file objects in web applications, as well as programmatically selecting them and accessing their data. Covers File API (track). Use when reading local files in the browser                                                |
+| [`indexeddb`](skills/indexeddb)                             | Indexed Database API: This document defines APIs for a database of records holding simple values and hierarchical objects. Covers Indexed Database API 2.0, Indexed Database API 3.0 (track preview). Use when storing structured data in IndexedDB                                      |
 
 #### CSS, graphics and media
 
