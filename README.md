@@ -123,6 +123,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`fedcm`](skills/fedcm)                                 | Federated Credential Management (FedCM): A Web Platform API that allows users to login to websites with their federated accounts in a privacy preserving manner. Covers Federated Credential Management API Level 1 (track). Use when a browser, identity provider or relying party impl |
 | [`digital-credentials`](skills/digital-credentials)     | Digital Credentials API: This document specifies an API enabling user agents to mediate the presentation and issuance of digital credentials , such as a driver's license, government-issued identification card, or other types of digital credential . Covers Digital Credentials (tra |
 | [`credential-management`](skills/credential-management) | Credential Management: This specification describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use. Covers Credential Management Level 1 (track), A Well-Known URL f |
+| [`dbsc`](skills/dbsc)                                   | Device Bound Session Credentials (DBSC): Device Bound Sessions Credentials (DBSC) aims to prevent hijacking via cookie theft by building a protocol and infrastructure that allows a user agent to assert possession of a securely-stored private key. Covers Device Bound Session Crede |
 
 #### Security and supply chain
 
