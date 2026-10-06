@@ -257,6 +257,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`webrtc`](skills/webrtc)               | WebRTC: This document defines a set of ECMAScript APIs in WebIDL to allow media and generic application data to be sent to and received from another browser or device implementing the appropriate set of real-time protocols. Covers WebRTC: Real-Time Communication in Browsers, Iden |
 | [`media-capture`](skills/media-capture) | Media Capture: This document defines a set of JavaScript APIs that allow local media, including audio and video, to be requested from a platform. Covers Media Capture and Streams (build), MediaStream Image Capture (track), MediaStream Recording (track), Media Capture from DOM Ele |
+| [`media-session`](skills/media-session) | Media Session: This specification enables web developers to show customized media metadata on platform UI, customize available platform media controls, and access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in n |
 
 #### Data and semantics
 
