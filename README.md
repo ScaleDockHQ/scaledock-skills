@@ -278,6 +278,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`nist-800-171`](skills/nist-800-171)                     | NIST SP 800-171: Laurie E. Covers SP 800-171 Rev 3. Use when protecting controlled unclassified information                                                                                                                      |
 | [`nist-800-61`](skills/nist-800-61)                       | NIST SP 800-61: Craig Burkhardt, Acting Under Secretary of Commerce for Standards and Technology and Acting NIST Director Covers SP 800-61 Rev 3. Use when handling computer security incidents                                  |
 | [`nist-privacy-framework`](skills/nist-privacy-framework) | NIST Privacy Framework: For more than two decades, the Internet and associated information technologies have driven Covers Privacy Framework 1.0, Privacy Framework 1.1 (track preview). Use when applying the Privacy Framework |
+| [`consent-receipt`](skills/consent-receipt)               | Kantara Consent Receipt 1.1.0: issue human-readable and JSON records of consent with the required controller, purpose and PII fields.                                                                                            |
 
 #### Email
 
