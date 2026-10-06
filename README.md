@@ -210,7 +210,9 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Web application APIs
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                                                 | Description                                                                                                                                                                                                                                                                              |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`performance-timeline`](skills/performance-timeline) | Performance Timeline: This specification extends the High Resolution Time specification [ HR-TIME-3 ] by providing methods to store and retrieve high resolution performance metric data. Covers Performance Timeline Level 1 (build), High Resolution Time Level 2, High Resolution Tim |
 
 #### CSS, graphics and media
 
