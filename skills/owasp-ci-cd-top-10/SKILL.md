@@ -1,11 +1,11 @@
 ---
 name: owasp-ci-cd-top-10
 description: >-
-  OWASP CI/CD Top 10: OWASP Top 10 CI/CD Security Risks | OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP CI/CD Top 10. Use when reviewing CI/CD security risks. Triggers: CI/CD Top 10.
+  OWASP CI/CD Top 10: review build and deployment pipelines against the top CI/CD security risks. Covers OWASP CI/CD Top 10. Use when reviewing CI/CD security risks. Triggers: CI/CD Top 10.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

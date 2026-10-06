@@ -1,11 +1,11 @@
 ---
 name: xacml
 description: >-
-  XACML: http://www.oasis-open.org/committees/download.php/43799/xacml-3.0-core-spec-csprd03-en.zip Covers XACML 3.0, XACML JSON Profile 1.1. Use when writing or evaluating attribute-based access policies. Triggers: XACML, attribute-based access control.
+  XACML 3.0: write and evaluate attribute-based access control policies, with the JSON profile. Covers XACML 3.0, XACML JSON Profile 1.1. Use when writing or evaluating attribute-based access policies. Triggers: XACML, attribute-based access control.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

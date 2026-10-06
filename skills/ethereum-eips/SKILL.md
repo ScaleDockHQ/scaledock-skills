@@ -1,11 +1,11 @@
 ---
 name: ethereum-eips
 description: >-
-  Ethereum EIPs: Fabian Vogelsteller < fabian@ethereum.org >, Vitalik Buterin < vitalik.buterin@ethereum.org > Covers ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004. Use when implementing ERC-20, EIP-712, ERC-4337, EIP-1193, or ERC-8004. Triggers: ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004.
+  Ethereum EIPs: implement ERC-20 tokens, EIP-712 typed signing, ERC-4337 account abstraction, EIP-1193 providers and ERC-8004 agents. Covers ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004. Use when implementing ERC-20, EIP-712, ERC-4337, EIP-1193, or ERC-8004. Triggers: ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

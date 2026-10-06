@@ -1,11 +1,11 @@
 ---
 name: ecma-402-intl
 description: >-
-  ECMA-402 Internationalization API: + 6 Identification of Locales, Currencies, Time Zones, Measurement Units, Numbering Systems, Collations, and Calendars 6.1 Case Sensitivity and Case Mapping Covers ECMA-402 2026, ECMA-402 2025 (supported), ECMA-402 2024 (supported), ECMA-402 draft (track preview). Use when formatting numbers, dates or collation with Intl. Triggers: ECMA-402, Intl.
+  ECMA-402 Internationalization API: format numbers, dates, lists and plurals and compare strings with Intl. Covers ECMA-402 2026, ECMA-402 2025 (supported), ECMA-402 2024 (supported), ECMA-402 draft (track preview). Use when formatting numbers, dates or collation with Intl. Triggers: ECMA-402, Intl.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

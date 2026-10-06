@@ -1,11 +1,11 @@
 ---
 name: owasp-aivss
 description: >-
-  OWASP AIVSS: For full functionality of this site it is necessary to enable JavaScript. Covers OWASP AIVSS. Use when scoring AI vulnerability severity. Triggers: AIVSS.
+  OWASP AIVSS: score the severity of vulnerabilities in AI and agentic systems. Covers OWASP AIVSS. Use when scoring AI vulnerability severity. Triggers: AIVSS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

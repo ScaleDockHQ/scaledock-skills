@@ -1,11 +1,11 @@
 ---
 name: model-signing
 description: >-
-  Model signing: Statement](https://github.com/in-toto/attestation/blob/80e7efeca762e8276ed5e04e6d8bc796a4a19170/spec/v1/statement.md) Covers Model signing. Use when signing machine-learning models. Triggers: model signing.
+  Model signing: sign and verify machine-learning models with Sigstore and in-toto statements. Covers Model signing. Use when signing machine-learning models. Triggers: model signing.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

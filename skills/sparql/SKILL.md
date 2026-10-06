@@ -1,11 +1,11 @@
 ---
 name: sparql
 description: >-
-  SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update, SPARQL 1.2 Query Language, SPARQL 1.2 Protocol and SPARQL 1.2 Update. Use when querying RDF with SPARQL. Triggers: SPARQL 1.1, SPARQL 1.2.
+  SPARQL: query and update RDF graphs with the SPARQL query language, protocol and update language. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update, SPARQL 1.2 Query Language, SPARQL 1.2 Protocol and SPARQL 1.2 Update. Use when querying RDF with SPARQL. Triggers: SPARQL 1.1, SPARQL 1.2.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 

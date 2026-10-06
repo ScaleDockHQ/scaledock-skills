@@ -1,11 +1,11 @@
 ---
 name: geojson
 description: >-
-  The GeoJSON Format: The GeoJSON Format Covers RFC 7946 The GeoJSON Format. Use when reading or writing GeoJSON. Triggers: GeoJSON, RFC 7946.
+  GeoJSON (RFC 7946): read and write geographic features, geometries and coordinates as JSON. Covers RFC 7946 The GeoJSON Format. Use when reading or writing GeoJSON. Triggers: GeoJSON, RFC 7946.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

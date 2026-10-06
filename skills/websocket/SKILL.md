@@ -1,11 +1,11 @@
 ---
 name: websocket
 description: >-
-  The WebSocket Protocol: The WebSocket Protocol Covers RFC 6455 The WebSocket Protocol, RFC 8441 Bootstrapping WebSockets with HTTP/2. Use when speaking the WebSocket protocol. Triggers: WebSocket, RFC 6455.
+  WebSocket (RFC 6455): open and run full-duplex WebSocket connections, including over HTTP/2. Covers RFC 6455 The WebSocket Protocol, RFC 8441 Bootstrapping WebSockets with HTTP/2. Use when speaking the WebSocket protocol. Triggers: WebSocket, RFC 6455.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: cisa-kev
 description: >-
-  CISA KEV: A .gov website belongs to an official government organization in the United States. Covers CISA KEV. Use when checking the Known Exploited Vulnerabilities catalog. Triggers: KEV.
+  CISA KEV: prioritize vulnerability fixes with the Known Exploited Vulnerabilities catalog. Covers CISA KEV. Use when checking the Known Exploited Vulnerabilities catalog. Triggers: KEV.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

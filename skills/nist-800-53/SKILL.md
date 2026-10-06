@@ -1,11 +1,11 @@
 ---
 name: nist-800-53
 description: >-
-  NIST SP 800-53: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-53 Rev 5. Use when selecting security and privacy controls. Triggers: SP 800-53.
+  NIST SP 800-53: select and apply security and privacy controls for information systems. Covers SP 800-53 Rev 5. Use when selecting security and privacy controls. Triggers: SP 800-53.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

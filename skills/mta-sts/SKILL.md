@@ -1,11 +1,11 @@
 ---
 name: mta-sts
 description: >-
-  SMTP MTA Strict Transport Security (MTA-STS): SMTP MTA Strict Transport Security (MTA-STS) Covers RFC 8461 SMTP MTA Strict Transport Security (MTA-STS), RFC 8460 SMTP TLS Reporting. Use when publishing an MTA-STS policy. Triggers: MTA-STS, TLS-RPT, RFC 8461.
+  MTA-STS (RFC 8461) and TLS-RPT (RFC 8460): enforce TLS for inbound SMTP and receive TLS failure reports. Covers RFC 8461 SMTP MTA Strict Transport Security (MTA-STS), RFC 8460 SMTP TLS Reporting. Use when publishing an MTA-STS policy. Triggers: MTA-STS, TLS-RPT, RFC 8461.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

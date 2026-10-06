@@ -1,11 +1,11 @@
 ---
 name: openc2
 description: >-
-  OpenC2: https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.md (Authoritative) Covers OpenC2 Language 1.0. Use when sending cybersecurity commands. Triggers: OpenC2.
+  OpenC2 1.0: send and answer standardized cybersecurity command and control messages. Covers OpenC2 Language 1.0. Use when sending cybersecurity commands. Triggers: OpenC2.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

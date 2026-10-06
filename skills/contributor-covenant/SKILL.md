@@ -1,11 +1,11 @@
 ---
 name: contributor-covenant
 description: >-
-  Contributor Covenant: We are committed to fostering an environment that respects and promotes the dignity, rights, and contributions of all individuals, regardless of characteristics including race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disability, sex or gender, gender identity or expression, sexual orientation, language, philosophy or religion, national or social origin, socio-economic position, level of education, or other status. Covers Contributor Covenant 3.0, Contributor Covenant 2.1 (supported). Use when adopting a code of conduct. Triggers: Contributor Covenant.
+  Contributor Covenant: adopt and enforce a code of conduct for an open source community. Covers Contributor Covenant 3.0, Contributor Covenant 2.1 (supported). Use when adopting a code of conduct. Triggers: Contributor Covenant.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

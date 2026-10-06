@@ -1,11 +1,11 @@
 ---
 name: open-graph
 description: >-
-  Open Graph: og:image:alt - A description of what is in the image (not a caption). Covers Open Graph. Use when adding Open Graph metadata. Triggers: Open Graph.
+  Open Graph: add og: meta tags that control how pages appear when shared. Covers Open Graph. Use when adding Open Graph metadata. Triggers: Open Graph.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: unicode-bidi
 description: >-
-  Unicode Bidirectional Algorithm (UAX #9): This annex describes specifications for the positioning of characters in text containing characters flowing from right Covers UAX #9. Use when ordering bidirectional text. Triggers: UAX 9, bidi.
+  Unicode Bidirectional Algorithm (UAX #9): order and display mixed left-to-right and right-to-left text. Covers UAX #9. Use when ordering bidirectional text. Triggers: UAX 9, bidi.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

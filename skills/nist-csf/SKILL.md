@@ -1,11 +1,11 @@
 ---
 name: nist-csf
 description: >-
-  NIST CSF: This publication is available free of charge from: https://doi.org/10.6028/NIST.CSWP.29 Covers CSF 2.0. Use when applying the Cybersecurity Framework. Triggers: NIST CSF.
+  NIST CSF 2.0: manage cybersecurity risk with the Govern, Identify, Protect, Detect, Respond and Recover functions. Covers CSF 2.0. Use when applying the Cybersecurity Framework. Triggers: NIST CSF.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

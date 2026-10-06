@@ -1,11 +1,11 @@
 ---
 name: owasp-samm
 description: >-
-  OWASP SAMM: OWASP SAMM | OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP SAMM. Use when assessing software assurance maturity. Triggers: SAMM.
+  OWASP SAMM: assess and improve software assurance maturity across business functions and practices. Covers OWASP SAMM. Use when assessing software assurance maturity. Triggers: SAMM.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: cvss
 description: >-
-  CVSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers CVSS 4.0, CVSS 3.1 (supported). Use when scoring vulnerability severity. Triggers: CVSS.
+  CVSS: score vulnerability severity with Common Vulnerability Scoring System vectors. Covers CVSS 4.0, CVSS 3.1 (supported). Use when scoring vulnerability severity. Triggers: CVSS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

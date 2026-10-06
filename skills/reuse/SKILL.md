@@ -1,11 +1,11 @@
 ---
 name: reuse
 description: >-
-  REUSE: REUSE Covers REUSE. Use when adding machine-readable license information. Triggers: REUSE, SPDX-License-Identifier.
+  REUSE: add machine-readable copyright and license information to every file in a project. Covers REUSE. Use when adding machine-readable license information. Triggers: REUSE, SPDX-License-Identifier.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

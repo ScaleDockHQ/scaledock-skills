@@ -1,11 +1,11 @@
 ---
 name: github-flavored-markdown
 description: >-
-  GitHub Flavored Markdown: non-whitespace character after the list marker. Covers GitHub Flavored Markdown. Use when parsing GitHub Flavored Markdown. Triggers: GFM, GitHub Flavored Markdown.
+  GitHub Flavored Markdown: parse and write GFM with tables, task lists, strikethrough and autolinks. Covers GitHub Flavored Markdown. Use when parsing GitHub Flavored Markdown. Triggers: GFM, GitHub Flavored Markdown.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

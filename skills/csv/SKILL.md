@@ -1,11 +1,11 @@
 ---
 name: csv
 description: >-
-  Common Format and MIME Type for Comma-Separated Values (CSV) Files: Common Format and MIME Type for Comma-Separated Values (CSV) Files Covers RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files. Use when reading or writing CSV. Triggers: CSV, RFC 4180.
+  CSV (RFC 4180): read and write comma-separated values files and the text/csv media type. Covers RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files. Use when reading or writing CSV. Triggers: CSV, RFC 4180.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

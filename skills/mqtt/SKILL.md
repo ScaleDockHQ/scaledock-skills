@@ -1,11 +1,11 @@
 ---
 name: mqtt
 description: >-
-  MQTT: http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.docx (Authoritative) Covers MQTT 5.0, MQTT 3.1.1 (supported). Use when publishing or subscribing with MQTT. Triggers: MQTT, CONNECT.
+  MQTT 5.0: publish and subscribe over the OASIS MQTT messaging protocol, with MQTT 3.1.1 supported. Covers MQTT 5.0, MQTT 3.1.1 (supported). Use when publishing or subscribing with MQTT. Triggers: MQTT, CONNECT.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

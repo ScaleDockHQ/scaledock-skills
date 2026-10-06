@@ -1,11 +1,11 @@
 ---
 name: kubernetes-api-conventions
 description: >-
-  Kubernetes API conventions: An introduction to using resources with kubectl can be found in [the object management overview](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/).* Covers Kubernetes API conventions. Use when designing a Kubernetes API. Triggers: Kubernetes API conventions.
+  Kubernetes API conventions: design Kubernetes resources with spec, status, metadata and conditions. Covers Kubernetes API conventions. Use when designing a Kubernetes API. Triggers: Kubernetes API conventions.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

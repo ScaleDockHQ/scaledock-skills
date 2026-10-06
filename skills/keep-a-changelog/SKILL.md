@@ -1,11 +1,11 @@
 ---
 name: keep-a-changelog
 description: >-
-  Keep a Changelog: Keep a Changelog Version 1.1 1.0 0.3 Language (28) العربية (n/a) Čeština Dansk Deutsch English Español Français Hrvatski (n/a) Indonesia (n/a) Italiano 日本語 Norsk (Bokmål) Nederlands polski Português (BR) română Pyccкий Slovenčina (n/a) ქართული (n/a) Slovenščina Srpski (n/a) Svenska Türkçe Українська 简体中文 正體中文 한국어 فارسی Covers Keep a Changelog 1.1.0. Use when writing a changelog. Triggers: Keep a Changelog.
+  Keep a Changelog: write a human-readable CHANGELOG.md grouped by release and change type. Covers Keep a Changelog 1.1.0. Use when writing a changelog. Triggers: Keep a Changelog.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

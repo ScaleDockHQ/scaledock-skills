@@ -1,11 +1,11 @@
 ---
 name: owasp-wstg
 description: >-
-  OWASP WSTG: OWASP WSTG Covers OWASP WSTG. Use when testing web application security. Triggers: WSTG.
+  OWASP WSTG: test web application security with the Web Security Testing Guide. Covers OWASP WSTG. Use when testing web application security. Triggers: WSTG.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

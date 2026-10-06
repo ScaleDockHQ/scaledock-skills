@@ -1,11 +1,11 @@
 ---
 name: nist-key-management
 description: >-
-  NIST key management: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-57 Part 1 Rev 5, SP 800-131A Rev 2, SP 800-132. Use when managing cryptographic keys. Triggers: SP 800-57, SP 800-131A, SP 800-132.
+  NIST key management: generate, protect, rotate and retire cryptographic keys by SP 800-57, SP 800-131A and SP 800-132. Covers SP 800-57 Part 1 Rev 5, SP 800-131A Rev 2, SP 800-132. Use when managing cryptographic keys. Triggers: SP 800-57, SP 800-131A, SP 800-132.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

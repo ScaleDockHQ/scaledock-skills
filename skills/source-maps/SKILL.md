@@ -1,11 +1,11 @@
 ---
 name: source-maps
 description: >-
-  Source maps (ECMA-426): + 4 Notational Conventions + 4.1 Algorithm Conventions + 4.1.1 Implicit Completions 4.1.1.1 GetTheAnswer ( input ) Covers ECMA-426. Use when writing or consuming a source map. Triggers: source map, ECMA-426.
+  Source maps (ECMA-426): write and consume source maps that map generated code back to its sources. Covers ECMA-426. Use when writing or consuming a source map. Triggers: source map, ECMA-426.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

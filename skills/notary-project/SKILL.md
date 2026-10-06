@@ -1,11 +1,11 @@
 ---
 name: notary-project
 description: >-
-  Notary Project: - **[Signature Envelope](#signature-envelope)**: Describes the structure of the Notary Project signature. Covers Notation signature specification. Use when signing OCI artifacts with Notation. Triggers: Notation, Notary.
+  Notary Project: sign and verify OCI artifacts with Notation signatures and trust policies. Covers Notation signature specification. Use when signing OCI artifacts with Notation. Triggers: Notation, Notary.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

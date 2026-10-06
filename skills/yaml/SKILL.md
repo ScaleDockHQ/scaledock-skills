@@ -1,11 +1,11 @@
 ---
 name: yaml
 description: >-
-  YAML: YAML Covers YAML 1.2.2. Use when parsing YAML. Triggers: YAML.
+  YAML 1.2.2: parse and write YAML documents. Covers YAML 1.2.2. Use when parsing YAML. Triggers: YAML.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

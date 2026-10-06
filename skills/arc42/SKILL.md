@@ -1,11 +1,11 @@
 ---
 name: arc42
 description: >-
-  arc42: You are using an outdated browser. Covers arc42. Use when writing an arc42 architecture document. Triggers: arc42.
+  arc42: write software architecture documentation in the arc42 template sections. Covers arc42. Use when writing an arc42 architecture document. Triggers: arc42.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

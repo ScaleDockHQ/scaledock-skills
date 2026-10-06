@@ -1,11 +1,11 @@
 ---
 name: en-301-549
 description: >-
-  EN 301 549: B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements. Triggers: EN 301 549.
+  EN 301 549: apply the European accessibility requirements for ICT products and services, including web, documents and software. Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements. Triggers: EN 301 549.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

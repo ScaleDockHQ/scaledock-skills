@@ -1,11 +1,11 @@
 ---
 name: owasp-scvs
 description: >-
-  OWASP SCVS: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP SCVS. Use when verifying software components. Triggers: SCVS.
+  OWASP SCVS: verify software components, SBOMs and supply chain controls by level. Covers OWASP SCVS. Use when verifying software components. Triggers: SCVS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

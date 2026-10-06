@@ -1,11 +1,11 @@
 ---
 name: webfinger
 description: >-
-  WebFinger: WebFinger Covers RFC 7033 WebFinger. Use when discovering a resource with WebFinger. Triggers: WebFinger, RFC 7033.
+  WebFinger (RFC 7033): discover information about people and resources from a URI. Covers RFC 7033 WebFinger. Use when discovering a resource with WebFinger. Triggers: WebFinger, RFC 7033.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: kmip
 description: >-
-  KMIP: https://docs.oasis-open.org/kmip/kmip-spec/v3.0/csd02/kmip-spec-v3.0-csd02.docx (Authoritative) Covers KMIP 3.0. Use when managing cryptographic keys over KMIP. Triggers: KMIP.
+  KMIP 3.0: manage cryptographic keys and objects over the OASIS Key Management Interoperability Protocol. Covers KMIP 3.0. Use when managing cryptographic keys over KMIP. Triggers: KMIP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

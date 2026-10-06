@@ -1,11 +1,11 @@
 ---
 name: nist-privacy-framework
 description: >-
-  NIST Privacy Framework: For more than two decades, the Internet and associated information technologies have driven Covers Privacy Framework 1.0, Privacy Framework 1.1 (track preview). Use when applying the Privacy Framework. Triggers: Privacy Framework.
+  NIST Privacy Framework: manage privacy risk with the Identify-P, Govern-P, Control-P, Communicate-P and Protect-P functions. Covers Privacy Framework 1.0, Privacy Framework 1.1 (track preview). Use when applying the Privacy Framework. Triggers: Privacy Framework.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: ccpa-cpra
 description: >-
-  CCPA: California Consumer Privacy Act (CCPA) | State of California - Department of Justice - Office of the Attorney General Covers CCPA. Use when applying the California Consumer Privacy Act. Triggers: CCPA, CPRA.
+  CCPA and CPRA: honor California consumer privacy rights, notices and opt-outs of sale or sharing. Covers CCPA. Use when applying the California Consumer Privacy Act. Triggers: CCPA, CPRA.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

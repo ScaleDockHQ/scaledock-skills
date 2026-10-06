@@ -1,11 +1,11 @@
 ---
 name: test-anything-protocol
 description: >-
-  Test Anything Protocol: TestPoint := ("not ")? "ok" (" " Number)? ((" -")? (" " Description) )? (" " Directive)? "\n" (YAMLBlock)? Covers TAP 14. Use when emitting TAP output. Triggers: TAP.
+  Test Anything Protocol (TAP 14): emit and parse TAP test output. Covers TAP 14. Use when emitting TAP output. Triggers: TAP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

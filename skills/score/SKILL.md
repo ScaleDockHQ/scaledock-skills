@@ -1,11 +1,11 @@
 ---
 name: score
 description: >-
-  Score: The Score Specification is a YAML file that contains the following top-level reference definitions. Covers Score specification. Use when writing a Score workload spec. Triggers: Score.
+  Score: describe a workload and its dependencies in a platform-agnostic score.yaml. Covers Score specification. Use when writing a Score workload spec. Triggers: Score.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

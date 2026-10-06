@@ -1,11 +1,11 @@
 ---
 name: schema-org
 description: >-
-  Schema.org: An abstract is a short description that summarizes a CreativeWork . Covers Schema.org. Use when marking up structured data. Triggers: Schema.org.
+  Schema.org: mark up structured data with Schema.org types and properties. Covers Schema.org. Use when marking up structured data. Triggers: Schema.org.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

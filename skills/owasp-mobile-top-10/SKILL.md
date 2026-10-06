@@ -1,11 +1,11 @@
 ---
 name: owasp-mobile-top-10
 description: >-
-  OWASP Mobile Top 10: OWASP Mobile Top 10 | OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP Mobile Top 10. Use when reviewing mobile security risks. Triggers: Mobile Top 10.
+  OWASP Mobile Top 10: review mobile apps against the top mobile security risks. Covers OWASP Mobile Top 10. Use when reviewing mobile security risks. Triggers: Mobile Top 10.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

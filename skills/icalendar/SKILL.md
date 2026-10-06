@@ -1,11 +1,11 @@
 ---
 name: icalendar
 description: >-
-  Internet Calendaring and Scheduling Core Object Specification (iCalendar): Internet Calendaring and Scheduling Core Object Specification (iCalendar) Covers RFC 5545 Internet Calendaring and Scheduling Core Object Specification (iCalendar), RFC 7265 jCal: The JSON Format for iCalendar, RFC 8984 JSCalendar: A JSON Representation of Calendar Data. Use when reading or writing calendar data. Triggers: iCalendar, RFC 5545, JSCalendar.
+  iCalendar (RFC 5545): read and write calendar events, to-dos and recurrence rules, plus jCal and JSCalendar. Covers RFC 5545 Internet Calendaring and Scheduling Core Object Specification (iCalendar), RFC 7265 jCal: The JSON Format for iCalendar, RFC 8984 JSCalendar: A JSON Representation of Calendar Data. Use when reading or writing calendar data. Triggers: iCalendar, RFC 5545, JSCalendar.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

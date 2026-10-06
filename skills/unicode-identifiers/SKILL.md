@@ -1,11 +1,11 @@
 ---
 name: unicode-identifiers
 description: >-
-  Unicode Identifier and Pattern Syntax (UAX #31): for the use of Unicode in the definitions of general-purpose identifiers, immutable identifiers, hashtag identifiers, and in Covers UAX #31. Use when deciding which characters are identifiers. Triggers: UAX 31, identifier.
+  Unicode identifiers (UAX #31): decide which characters may start and continue identifiers. Covers UAX #31. Use when deciding which characters are identifiers. Triggers: UAX 31, identifier.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

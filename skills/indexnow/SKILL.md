@@ -1,11 +1,11 @@
 ---
 name: indexnow
 description: >-
-  IndexNow: To submit a URL using an HTTP request (replace with the URL provided by the search engine), issue your request to the following URL: Covers IndexNow. Use when notifying search engines of URL changes. Triggers: IndexNow.
+  IndexNow: notify search engines when site URLs are added, updated or deleted. Covers IndexNow. Use when notifying search engines of URL changes. Triggers: IndexNow.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

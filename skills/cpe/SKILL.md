@@ -1,11 +1,11 @@
 ---
 name: cpe
 description: >-
-  CPE: The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology Covers CPE 2.3. Use when naming IT products with CPE. Triggers: CPE.
+  CPE 2.3: name and match IT platforms, software and hardware with Common Platform Enumeration identifiers. Covers CPE 2.3. Use when naming IT products with CPE. Triggers: CPE.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

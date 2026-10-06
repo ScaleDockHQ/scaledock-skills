@@ -1,11 +1,11 @@
 ---
 name: prometheus
 description: >-
-  Prometheus: Exposition formats | Prometheus Join PromCon EU 2026 , the Prometheus users conference, on October 7–8, 2026 in Munich. Covers Prometheus exposition formats, Prometheus remote write 2.0. Use when exposing Prometheus metrics or using remote write. Triggers: Prometheus, remote write.
+  Prometheus: expose metrics in the Prometheus exposition formats and send them with remote write 2.0. Covers Prometheus exposition formats, Prometheus remote write 2.0. Use when exposing Prometheus metrics or using remote write. Triggers: Prometheus, remote write.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: stix-taxii
 description: >-
-  STIX and TAXII: https://docs.oasis-open.org/cti/stix/v2.1/errata01/csd01/stix-v2.1-errata01-csd01-complete.md Covers STIX 2.1, TAXII 2.1. Use when sharing cyber threat intelligence. Triggers: STIX, TAXII.
+  STIX and TAXII 2.1: represent cyber threat intelligence as STIX objects and share it over TAXII. Covers STIX 2.1, TAXII 2.1. Use when sharing cyber threat intelligence. Triggers: STIX, TAXII.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

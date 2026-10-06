@@ -1,11 +1,11 @@
 ---
 name: hls
 description: >-
-  HLS: RFC 8216: HTTP Live Streaming | RFC Editor Your browser has JavaScript disabled. Covers RFC 8216. Use when serving HTTP Live Streaming. Triggers: HLS.
+  HLS (RFC 8216): serve and play HTTP Live Streaming playlists and media segments. Covers RFC 8216. Use when serving HTTP Live Streaming. Triggers: HLS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: dockerfile
 description: >-
-  Dockerfile: | :------------------------------------- | :---------------------------------------------------------- | Covers Dockerfile. Use when writing a Dockerfile. Triggers: Dockerfile.
+  Dockerfile: write and review Dockerfile build instructions for container images. Covers Dockerfile. Use when writing a Dockerfile. Triggers: Dockerfile.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

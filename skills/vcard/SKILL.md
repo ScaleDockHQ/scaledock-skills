@@ -1,11 +1,11 @@
 ---
 name: vcard
 description: >-
-  vCard Format Specification: vCard Format Specification Covers RFC 6350 vCard Format Specification, RFC 7095 jCard: The JSON Format for vCard, RFC 9553 JSContact: A JSON Representation of Contact Data. Use when reading or writing contact data. Triggers: vCard, RFC 6350, JSContact.
+  vCard (RFC 6350): read and write contact data, plus jCard and JSContact. Covers RFC 6350 vCard Format Specification, RFC 7095 jCard: The JSON Format for vCard, RFC 9553 JSContact: A JSON Representation of Contact Data. Use when reading or writing contact data. Triggers: vCard, RFC 6350, JSContact.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

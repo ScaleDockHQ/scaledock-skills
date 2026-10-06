@@ -1,11 +1,11 @@
 ---
 name: payment-request
 description: >-
-  Payment Request API: This specification standardizes an API to allow merchants (i.e. Covers Payment Request API (build), Payment Method Identifiers, Web-based Payment Handler API (track). Use when building a checkout that uses Payment Request, a payment method identifier, or a web-based payment handler. Triggers: Payment Request, PaymentRequest, payment method identifier.
+  Payment Request API: build browser checkouts with PaymentRequest, payment method identifiers and web-based payment handlers. Covers Payment Request API (build), Payment Method Identifiers, Web-based Payment Handler API (track). Use when building a checkout that uses Payment Request, a payment method identifier, or a web-based payment handler. Triggers: Payment Request, PaymentRequest, payment method identifier.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

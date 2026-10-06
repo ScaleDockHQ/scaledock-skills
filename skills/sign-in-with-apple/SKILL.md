@@ -1,11 +1,11 @@
 ---
 name: sign-in-with-apple
 description: >-
-  Sign in with Apple: Please turn on JavaScript in your browser and refresh the page to view its content. Covers Sign in with Apple. Use when signing users in with Apple. Triggers: Sign in with Apple.
+  Sign in with Apple: sign users in with their Apple Account and verify Apple identity tokens. Covers Sign in with Apple. Use when signing users in with Apple. Triggers: Sign in with Apple.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

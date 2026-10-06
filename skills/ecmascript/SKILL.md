@@ -1,11 +1,11 @@
 ---
 name: ecmascript
 description: >-
-  ECMAScript: + 5 Notational Conventions + 5.1 Syntactic and Lexical Grammars 5.1.1 Context-Free Grammars Covers ECMAScript 2026, ECMAScript 2025 (supported), ECMAScript 2024 (supported), ECMAScript 2027 (track preview). Use when writing JavaScript against a published ECMAScript edition. Triggers: ECMAScript, ECMA-262, ES2026.
+  ECMAScript (ECMA-262): write and review JavaScript against a published ECMAScript edition. Covers ECMAScript 2026, ECMAScript 2025 (supported), ECMAScript 2024 (supported), ECMAScript 2027 (track preview). Use when writing JavaScript against a published ECMAScript edition. Triggers: ECMAScript, ECMA-262, ES2026.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

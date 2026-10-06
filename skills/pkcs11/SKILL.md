@@ -1,11 +1,11 @@
 ---
 name: pkcs11
 description: >-
-  PKCS #11: https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/cs01/pkcs11-spec-v3.1-cs01.pdf Covers PKCS #11 3.1. Use when using a cryptographic token interface. Triggers: PKCS #11, cryptoki.
+  PKCS #11 3.1: use HSMs and cryptographic tokens through the Cryptoki interface. Covers PKCS #11 3.1. Use when using a cryptographic token interface. Triggers: PKCS #11, cryptoki.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

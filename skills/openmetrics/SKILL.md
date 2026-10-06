@@ -1,11 +1,11 @@
 ---
 name: openmetrics
 description: >-
-  OpenMetrics: target: https://github.com/protocolbuffers/protobuf/blob/2f6a7546e4539499bc08abc6900dc929782f5dcd/src/google/protobuf/timestamp.proto Covers OpenMetrics. Use when exposing metrics in the OpenMetrics format. Triggers: OpenMetrics.
+  OpenMetrics: expose metrics in the OpenMetrics text format for scraping. Covers OpenMetrics. Use when exposing metrics in the OpenMetrics format. Triggers: OpenMetrics.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

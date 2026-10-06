@@ -1,11 +1,11 @@
 ---
 name: arc
 description: >-
-  The Authenticated Received Chain (ARC) Protocol: The Authenticated Received Chain (ARC) Protocol Covers RFC 8617 The Authenticated Received Chain (ARC) Protocol. Use when sealing or validating an authenticated received chain. Triggers: ARC, RFC 8617.
+  ARC (RFC 8617): seal and validate the Authenticated Received Chain so forwarded mail keeps its authentication results. Covers RFC 8617 The Authenticated Received Chain (ARC) Protocol. Use when sealing or validating an authenticated received chain. Triggers: ARC, RFC 8617.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

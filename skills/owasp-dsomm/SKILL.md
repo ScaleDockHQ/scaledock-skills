@@ -1,11 +1,11 @@
 ---
 name: owasp-dsomm
 description: >-
-  OWASP DSOMM: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP DSOMM. Use when assessing DevSecOps maturity. Triggers: DSOMM.
+  OWASP DSOMM: assess and improve DevSecOps maturity by dimension and level. Covers OWASP DSOMM. Use when assessing DevSecOps maturity. Triggers: DSOMM.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

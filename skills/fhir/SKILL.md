@@ -1,11 +1,11 @@
 ---
 name: fhir
 description: >-
-  FHIR: This page is part of the FHIR Specification (v5.0.0: R5 - STU ). Covers FHIR R5, FHIR R4 (supported), FHIR R4B (supported), FHIR draft (track preview). Use when exchanging healthcare data. Triggers: FHIR.
+  FHIR: exchange healthcare data as HL7 FHIR resources over a RESTful API. Covers FHIR R5, FHIR R4 (supported), FHIR R4B (supported), FHIR draft (track preview). Use when exchanging healthcare data. Triggers: FHIR.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

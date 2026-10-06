@@ -1,11 +1,11 @@
 ---
 name: owasp-ml-top-10
 description: >-
-  OWASP ML Top 10: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP ML Top 10. Use when reviewing machine learning security risks. Triggers: ML Top 10.
+  OWASP ML Top 10: review machine learning systems against the top ML security risks. Covers OWASP ML Top 10. Use when reviewing machine learning security risks. Triggers: ML Top 10.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

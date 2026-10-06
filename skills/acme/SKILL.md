@@ -1,11 +1,11 @@
 ---
 name: acme
 description: >-
-  Automatic Certificate Management Environment (ACME): Automatic Certificate Management Environment (ACME) Covers RFC 8555 Automatic Certificate Management Environment (ACME), RFC 9773 ACME Renewal Information (ARI) Extension. Use when issuing certificates with ACME. Triggers: ACME, RFC 8555.
+  ACME (RFC 8555): automate certificate issuance, renewal and revocation with an ACME server. Covers RFC 8555 Automatic Certificate Management Environment (ACME), RFC 9773 ACME Renewal Information (ARI) Extension. Use when issuing certificates with ACME. Triggers: ACME, RFC 8555.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

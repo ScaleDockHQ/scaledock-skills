@@ -1,11 +1,11 @@
 ---
 name: editorconfig
 description: >-
-  EditorConfig: considered literally. Covers EditorConfig. Use when defining editor settings. Triggers: EditorConfig.
+  EditorConfig: define consistent editor settings per file pattern in .editorconfig files. Covers EditorConfig. Use when defining editor settings. Triggers: EditorConfig.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

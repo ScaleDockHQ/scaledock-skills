@@ -1,11 +1,11 @@
 ---
 name: nist-800-190
 description: >-
-  NIST SP 800-190: Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director Covers SP 800-190. Use when securing application containers. Triggers: SP 800-190.
+  NIST SP 800-190: secure container images, registries, orchestrators, containers and host operating systems. Covers SP 800-190. Use when securing application containers. Triggers: SP 800-190.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

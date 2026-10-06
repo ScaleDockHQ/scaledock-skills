@@ -1,11 +1,11 @@
 ---
 name: madr
 description: >-
-  MADR: About MADR | MADR Skip to main content Link Menu Expand (external link) Document Search Copy Copied MADR About MADR Covers MADR. Use when writing an architecture decision record. Triggers: MADR, ADR.
+  MADR: write architecture decision records in the Markdown Any Decision Records template. Covers MADR. Use when writing an architecture decision record. Triggers: MADR, ADR.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

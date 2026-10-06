@@ -1,11 +1,11 @@
 ---
 name: nist-800-171
 description: >-
-  NIST SP 800-171: Laurie E. Covers SP 800-171 Rev 3. Use when protecting controlled unclassified information. Triggers: SP 800-171.
+  NIST SP 800-171: protect controlled unclassified information in nonfederal systems. Covers SP 800-171 Rev 3. Use when protecting controlled unclassified information. Triggers: SP 800-171.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: gittuf
 description: >-
-  gittuf: [attacks targeting Git metadata](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias). Covers gittuf. Use when verifying Git repository policy. Triggers: gittuf.
+  gittuf: protect Git repositories with signed, verifiable policy for who may change which branches and files. Covers gittuf. Use when verifying Git repository policy. Triggers: gittuf.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: semver
 description: >-
-  Semantic Versioning: ^(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$ Covers SemVer 2.0.0. Use when assigning version numbers. Triggers: semver, SemVer.
+  Semantic Versioning 2.0.0: assign and compare MAJOR.MINOR.PATCH versions with pre-release and build metadata. Covers SemVer 2.0.0. Use when assigning version numbers. Triggers: semver, SemVer.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

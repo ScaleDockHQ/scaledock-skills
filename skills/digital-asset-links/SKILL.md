@@ -1,11 +1,11 @@
 ---
 name: digital-asset-links
 description: >-
-  Digital Asset Links: The Digital Asset Links protocol and API enable an app or website to make public, Covers Digital Asset Links. Use when publishing an assetlinks.json statement. Triggers: Digital Asset Links.
+  Digital Asset Links: publish assetlinks.json statements that link an Android app to a website. Covers Digital Asset Links. Use when publishing an assetlinks.json statement. Triggers: Digital Asset Links.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

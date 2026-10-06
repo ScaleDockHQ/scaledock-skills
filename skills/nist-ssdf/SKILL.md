@@ -1,11 +1,11 @@
 ---
 name: nist-ssdf
 description: >-
-  NIST SP 800-218: James K. Covers SP 800-218. Use when applying the Secure Software Development Framework. Triggers: SSDF, SP 800-218.
+  NIST SSDF (SP 800-218): build secure software with the Secure Software Development Framework practices. Covers SP 800-218. Use when applying the Secure Software Development Framework. Triggers: SSDF, SP 800-218.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

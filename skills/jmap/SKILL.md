@@ -1,11 +1,11 @@
 ---
 name: jmap
 description: >-
-  The JSON Meta Application Protocol (JMAP): The JSON Meta Application Protocol (JMAP) Covers RFC 8620 The JSON Meta Application Protocol (JMAP), RFC 8621 The JSON Meta Application Protocol (JMAP) for Mail. Use when synchronizing mail with JMAP. Triggers: JMAP, RFC 8620.
+  JMAP (RFC 8620, RFC 8621): synchronize mail and other data with the JSON Meta Application Protocol. Covers RFC 8620 The JSON Meta Application Protocol (JMAP), RFC 8621 The JSON Meta Application Protocol (JMAP) for Mail. Use when synchronizing mail with JMAP. Triggers: JMAP, RFC 8620.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

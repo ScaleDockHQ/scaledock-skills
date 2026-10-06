@@ -1,11 +1,11 @@
 ---
 name: diataxis
 description: >-
-  Diátaxis: It prescribes approaches to content, architecture and form that emerge from a systematic approach to understanding the needs of documentation users. Covers Diátaxis. Use when structuring documentation. Triggers: Diátaxis.
+  Diátaxis: structure documentation into tutorials, how-to guides, reference and explanation. Covers Diátaxis. Use when structuring documentation. Triggers: Diátaxis.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

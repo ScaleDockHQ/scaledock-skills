@@ -1,11 +1,11 @@
 ---
 name: toml
 description: >-
-  TOML: { name = "Baz Qux", email = "bazqux@example.com", url = "https://example.com/bazqux" } Covers TOML 1.1.0, TOML 1.0.0 (supported). Use when parsing TOML. Triggers: TOML.
+  TOML: parse and write TOML configuration files. Covers TOML 1.1.0, TOML 1.0.0 (supported). Use when parsing TOML. Triggers: TOML.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: unicode
 description: >-
-  Unicode Standard: STATUS: This is a preliminary draft page for an upcoming release. Covers Unicode 18.0.0, Unicode 17.0.0 (supported), Unicode 16.0.0 (supported). Use when handling Unicode text against a published version. Triggers: Unicode, Unicode 18.0.
+  Unicode Standard: handle text by a published Unicode version, its character properties and algorithms. Covers Unicode 18.0.0, Unicode 17.0.0 (supported), Unicode 16.0.0 (supported). Use when handling Unicode text against a published version. Triggers: Unicode, Unicode 18.0.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

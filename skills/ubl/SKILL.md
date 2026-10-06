@@ -1,11 +1,11 @@
 ---
 name: ubl
 description: >-
-  UBL: This stage: https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.html https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.pdf https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.xml Covers UBL 2.4. Use when exchanging business documents. Triggers: UBL, Universal Business Language.
+  UBL 2.4: exchange business documents such as orders and invoices in OASIS Universal Business Language XML. Covers UBL 2.4. Use when exchanging business documents. Triggers: UBL, Universal Business Language.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

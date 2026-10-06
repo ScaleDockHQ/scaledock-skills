@@ -1,11 +1,11 @@
 ---
 name: nist-pqc
 description: >-
-  NIST PQC: Laurie E. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography. Triggers: FIPS 203, FIPS 204, FIPS 205.
+  NIST post-quantum cryptography: implement ML-KEM, ML-DSA and SLH-DSA from FIPS 203, 204 and 205. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography. Triggers: FIPS 203, FIPS 204, FIPS 205.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

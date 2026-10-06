@@ -1,11 +1,11 @@
 ---
 name: x509-pkix
 description: >-
-  Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile Covers RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile, RFC 6960 X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP, RFC 9162 Certificate Transparency Version 2.0. Use when issuing or checking X.509 certificates. Triggers: PKIX, RFC 5280, OCSP, Certificate Transparency.
+  X.509 PKIX (RFC 5280): issue and validate certificates and CRLs, with OCSP and Certificate Transparency. Covers RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile, RFC 6960 X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP, RFC 9162 Certificate Transparency Version 2.0. Use when issuing or checking X.509 certificates. Triggers: PKIX, RFC 5280, OCSP, Certificate Transparency.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

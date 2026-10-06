@@ -1,11 +1,11 @@
 ---
 name: swid
 description: >-
-  SWID: Willie May, Under Secretary of Commerce for Standards and Technology and Director Covers NIST IR 8060. Use when tagging software with SWID. Triggers: SWID.
+  SWID tags: identify installed software with ISO/IEC 19770-2 tags, following NIST IR 8060. Covers NIST IR 8060. Use when tagging software with SWID. Triggers: SWID.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

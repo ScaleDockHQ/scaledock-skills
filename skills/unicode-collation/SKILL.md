@@ -1,11 +1,11 @@
 ---
 name: unicode-collation
 description: >-
-  Unicode Collation Algorithm (UTS #10): supplies the Default Unicode Collation Element Table (DUCET) as the data specifying Covers UTS #10. Use when sorting Unicode text. Triggers: UTS 10, UCA, collation.
+  Unicode Collation Algorithm (UTS #10): sort and compare Unicode strings with DUCET and tailoring. Covers UTS #10. Use when sorting Unicode text. Triggers: UTS 10, UCA, collation.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

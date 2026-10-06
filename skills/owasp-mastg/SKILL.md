@@ -1,11 +1,11 @@
 ---
 name: owasp-mastg
 description: >-
-  OWASP MASTG: MASWE-0021: Fallback to Non-biometric Credentials Allowed for Sensitive Transactions Covers OWASP MASTG. Use when testing mobile application security. Triggers: MASTG.
+  OWASP MASTG: test iOS and Android app security with the Mobile Application Security Testing Guide. Covers OWASP MASTG. Use when testing mobile application security. Triggers: MASTG.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: json-patch
 description: >-
-  JavaScript Object Notation (JSON) Patch: JavaScript Object Notation (JSON) Patch Covers RFC 6902 JavaScript Object Notation (JSON) Patch, RFC 7396 JSON Merge Patch. Use when applying a JSON Patch or a merge patch. Triggers: JSON Patch, RFC 6902, RFC 7396.
+  JSON Patch (RFC 6902) and JSON Merge Patch (RFC 7396): describe and apply changes to JSON documents. Covers RFC 6902 JavaScript Object Notation (JSON) Patch, RFC 7396 JSON Merge Patch. Use when applying a JSON Patch or a merge patch. Triggers: JSON Patch, RFC 6902, RFC 7396.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

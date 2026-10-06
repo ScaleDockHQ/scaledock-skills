@@ -1,11 +1,11 @@
 ---
 name: presentation-exchange
 description: >-
-  Presentation Exchange: specification and not yet on a standards track, the concept of “decentralized web nodes” Covers Presentation Exchange 2.1.1, Presentation Exchange 2.1.0 (supported). Use when requesting and submitting verifiable presentations. Triggers: Presentation Exchange, presentation_definition.
+  Presentation Exchange 2.1: request verifiable credentials with presentation definitions and answer with presentation submissions. Covers Presentation Exchange 2.1.1, Presentation Exchange 2.1.0 (supported). Use when requesting and submitting verifiable presentations. Triggers: Presentation Exchange, presentation_definition.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

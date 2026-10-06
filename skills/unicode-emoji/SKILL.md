@@ -1,11 +1,11 @@
 ---
 name: unicode-emoji
 description: >-
-  Unicode Emoji (UTS #51): Please submit corrigenda and other comments with the online reporting form [ Feedback ]. Covers UTS #51. Use when handling emoji sequences. Triggers: UTS 51, emoji.
+  Unicode Emoji (UTS #51): handle emoji characters, presentation and ZWJ sequences. Covers UTS #51. Use when handling emoji sequences. Triggers: UTS 51, emoji.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

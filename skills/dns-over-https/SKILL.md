@@ -1,11 +1,11 @@
 ---
 name: dns-over-https
 description: >-
-  DNS Queries over HTTPS (DoH): DNS Queries over HTTPS (DoH) Covers RFC 8484 DNS Queries over HTTPS (DoH), RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records). Use when resolving DNS over HTTPS. Triggers: DoH, RFC 8484, SVCB.
+  DNS over HTTPS (RFC 8484): resolve DNS queries over HTTPS, with SVCB and HTTPS records for discovery. Covers RFC 8484 DNS Queries over HTTPS (DoH), RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records). Use when resolving DNS over HTTPS. Triggers: DoH, RFC 8484, SVCB.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

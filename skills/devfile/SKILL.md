@@ -1,11 +1,11 @@
 ---
 name: devfile
 description: >-
-  Devfile: 2.3.0 Search docs Theme Registry Docs Get Started API reference Devfile schema Search docs Covers Devfile 2.3. Use when writing a devfile. Triggers: devfile.
+  Devfile 2.3: describe cloud development environments with components, commands and events in a devfile.yaml. Covers Devfile 2.3. Use when writing a devfile. Triggers: devfile.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

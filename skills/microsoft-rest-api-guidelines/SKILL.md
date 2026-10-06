@@ -1,11 +1,11 @@
 ---
 name: microsoft-rest-api-guidelines
 description: >-
-  Microsoft REST API Guidelines: > This document has been deprecated and has been moved to the Microsoft REST API Guidelines deprecated. Covers Microsoft REST API Guidelines. Use when designing a REST API. Triggers: REST API Guidelines.
+  Microsoft REST API Guidelines: design consistent REST APIs by the Microsoft guidelines. Covers Microsoft REST API Guidelines. Use when designing a REST API. Triggers: REST API Guidelines.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

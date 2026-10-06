@@ -1,11 +1,11 @@
 ---
 name: internet-message-format
 description: >-
-  Internet Message Format: Internet Message Format Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text, RFC 6838 Media Type Specifications and Registration Procedures, RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures, RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples. Use when parsing an email message or a MIME body. Triggers: RFC 5322, MIME, RFC 2045.
+  Internet Message Format (RFC 5322) and MIME: parse and build email headers, bodies and multipart media types. Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text, RFC 6838 Media Type Specifications and Registration Procedures, RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures, RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples. Use when parsing an email message or a MIME body. Triggers: RFC 5322, MIME, RFC 2045.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 

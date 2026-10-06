@@ -1,11 +1,11 @@
 ---
 name: xmpp
 description: >-
-  XMPP: RFC 6120: Extensible Messaging and Presence Protocol (XMPP): Core | RFC Editor Your browser has JavaScript disabled. Covers RFC 6120. Use when implementing XMPP. Triggers: XMPP.
+  XMPP (RFC 6120): build clients and servers for the Extensible Messaging and Presence Protocol. Covers RFC 6120. Use when implementing XMPP. Triggers: XMPP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: protobuf
 description: >-
-  Protocol Buffers: Covers how to use the proto3 revision of the Protocol Buffers language in your project. Covers proto3, Protobuf Editions. Use when defining Protocol Buffer messages. Triggers: protobuf, proto3, editions.
+  Protocol Buffers: define messages and services in proto3 and Protobuf Editions. Covers proto3, Protobuf Editions. Use when defining Protocol Buffer messages. Triggers: protobuf, proto3, editions.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

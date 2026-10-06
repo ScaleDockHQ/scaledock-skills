@@ -1,11 +1,11 @@
 ---
 name: commonmark
 description: >-
-  CommonMark: <p>foo<a href="https://example.com/?search=%5D(uri)">https://example.com/?search=</a></p> Covers CommonMark 0.31.2. Use when parsing CommonMark. Triggers: CommonMark.
+  CommonMark: parse and render Markdown by the CommonMark specification. Covers CommonMark 0.31.2. Use when parsing CommonMark. Triggers: CommonMark.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

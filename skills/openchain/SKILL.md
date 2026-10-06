@@ -1,11 +1,11 @@
 ---
 name: openchain
 description: >-
-  OpenChain: Learn More: [htttps://www.openchainproject.org](htttps://www.openchainproject.org) Covers OpenChain ISO 5230, OpenChain ISO 18974. Use when conforming to OpenChain license or security assurance. Triggers: OpenChain, ISO 5230, ISO 18974.
+  OpenChain (ISO/IEC 5230, ISO/IEC 18974): run open source license compliance and security assurance programs. Covers OpenChain ISO 5230, OpenChain ISO 18974. Use when conforming to OpenChain license or security assurance. Triggers: OpenChain, ISO 5230, ISO 18974.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

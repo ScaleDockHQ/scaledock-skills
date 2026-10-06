@@ -1,11 +1,11 @@
 ---
 name: hotp-totp
 description: >-
-  HOTP: An HMAC-Based One-Time Password Algorithm: HOTP: An HMAC-Based One-Time Password Algorithm Covers RFC 4226 HOTP: An HMAC-Based One-Time Password Algorithm, RFC 6238 TOTP: Time-Based One-Time Password Algorithm. Use when verifying a one-time password. Triggers: HOTP, TOTP, RFC 4226, RFC 6238.
+  HOTP and TOTP (RFC 4226, RFC 6238): generate and verify HMAC-based and time-based one-time passwords. Covers RFC 4226 HOTP: An HMAC-Based One-Time Password Algorithm, RFC 6238 TOTP: Time-Based One-Time Password Algorithm. Use when verifying a one-time password. Triggers: HOTP, TOTP, RFC 4226, RFC 6238.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: section-508
 description: >-
-  Section 508: Federal government websites often end in .gov or .mil. Covers Revised 508 Standards. Use when applying the Revised 508 Standards. Triggers: Section 508.
+  Section 508: apply the Revised 508 Standards for accessible ICT in US federal agencies. Covers Revised 508 Standards. Use when applying the Revised 508 Standards. Triggers: Section 508.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: visa-trusted-agent-protocol
 description: >-
-  Trusted Agent Protocol: *Establishing a universal standard of trust between AI agents and merchants for the next phase of agentic commerce.* Covers Trusted Agent Protocol. Use when identifying an agent to a merchant. Triggers: Trusted Agent Protocol.
+  Visa Trusted Agent Protocol: identify trusted AI agents to merchants with signed HTTP requests. Covers Trusted Agent Protocol. Use when identifying an agent to a merchant. Triggers: Trusted Agent Protocol.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

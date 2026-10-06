@@ -1,11 +1,11 @@
 ---
 name: cacao
 description: >-
-  CACAO: https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.docx (Authoritative) Covers CACAO 2.0. Use when writing security playbooks. Triggers: CACAO, security playbooks.
+  CACAO 2.0: write machine-readable security playbooks in the OASIS CACAO JSON format. Covers CACAO 2.0. Use when writing security playbooks. Triggers: CACAO, security playbooks.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: compose-spec
 description: >-
-  Compose specification: > Find more information about the key features and use cases of Docker Compose or try the quickstart guide. Covers Compose file. Use when writing a Compose file. Triggers: Compose, docker compose.
+  Compose specification: write compose.yaml files that define multi-container applications. Covers Compose file. Use when writing a Compose file. Triggers: Compose, docker compose.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

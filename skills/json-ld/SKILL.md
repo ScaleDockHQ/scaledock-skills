@@ -1,11 +1,11 @@
 ---
 name: json-ld
 description: >-
-  JSON-LD: JSON is a useful data serialization and messaging format. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD. Triggers: JSON-LD, @context, CBOR-LD, YAML-LD.
+  JSON-LD 1.1: express linked data in JSON with @context, and expand, compact and frame documents. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD. Triggers: JSON-LD, @context, CBOR-LD, YAML-LD.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

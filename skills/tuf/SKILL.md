@@ -1,11 +1,11 @@
 ---
 name: tuf
 description: >-
-  TUF: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework with subject line “ [TUF] … message topic … ” Covers TUF specification. Use when securing a software update repository. Triggers: TUF, The Update Framework.
+  The Update Framework (TUF): secure software update repositories with signed, role-separated metadata. Covers TUF specification. Use when securing a software update repository. Triggers: TUF, The Update Framework.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

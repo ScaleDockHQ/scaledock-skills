@@ -1,11 +1,11 @@
 ---
 name: amqp
 description: >-
-  AMQP: OASIS Advanced Message Queuing Protocol (AMQP) Version 1.0, Part 0: Overview OASIS Advanced Message Queuing Protocol (AMQP) Version 1.0 Covers AMQP 1.0. Use when exchanging messages with AMQP 1.0. Triggers: AMQP.
+  AMQP 1.0: exchange messages over the OASIS Advanced Message Queuing Protocol with its type system, links and transfers. Covers AMQP 1.0. Use when exchanging messages with AMQP 1.0. Triggers: AMQP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

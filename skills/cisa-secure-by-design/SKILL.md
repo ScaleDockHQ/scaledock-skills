@@ -1,11 +1,11 @@
 ---
 name: cisa-secure-by-design
 description: >-
-  Secure by Design: A .gov website belongs to an official government organization in the United States. Covers Secure by Design. Use when applying CISA Secure by Design. Triggers: Secure by Design.
+  CISA Secure by Design: apply the secure-by-design principles to software products and their defaults. Covers Secure by Design. Use when applying CISA Secure by Design. Triggers: Secure by Design.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

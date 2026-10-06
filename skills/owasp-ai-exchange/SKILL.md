@@ -1,11 +1,11 @@
 ---
 name: owasp-ai-exchange
 description: >-
-  OWASP AI Exchange: 300+ pages of free, constantly-evolving, practical guidance on securing AI systems. Covers OWASP AI Exchange. Use when applying the OWASP AI Exchange. Triggers: AI Exchange.
+  OWASP AI Exchange: identify AI security threats and apply the matching controls. Covers OWASP AI Exchange. Use when applying the OWASP AI Exchange. Triggers: AI Exchange.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

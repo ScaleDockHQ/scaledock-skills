@@ -1,11 +1,11 @@
 ---
 name: coap
 description: >-
-  The Constrained Application Protocol (CoAP): The Constrained Application Protocol (CoAP) Covers RFC 7252 The Constrained Application Protocol (CoAP). Use when speaking the Constrained Application Protocol. Triggers: CoAP, RFC 7252.
+  CoAP (RFC 7252): build REST-style request and response messaging over UDP for constrained devices. Covers RFC 7252 The Constrained Application Protocol (CoAP). Use when speaking the Constrained Application Protocol. Triggers: CoAP, RFC 7252.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

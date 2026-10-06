@@ -1,11 +1,11 @@
 ---
 name: uri
 description: >-
-  Uniform Resource Identifier (URI): Generic Syntax: Uniform Resource Identifier (URI): Generic Syntax Covers RFC 3986 Uniform Resource Identifier (URI): Generic Syntax, RFC 3987 Internationalized Resource Identifiers (IRIs), RFC 8141 Uniform Resource Names (URNs), RFC 6570 URI Template. Use when parsing URIs, IRIs, URNs or URI templates. Triggers: URI, IRI, URN, URI Template.
+  URI (RFC 3986): parse, resolve and normalize URIs, plus IRIs, URNs and URI Templates. Covers RFC 3986 Uniform Resource Identifier (URI): Generic Syntax, RFC 3987 Internationalized Resource Identifiers (IRIs), RFC 8141 Uniform Resource Names (URNs), RFC 6570 URI Template. Use when parsing URIs, IRIs, URNs or URI templates. Triggers: URI, IRI, URN, URI Template.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

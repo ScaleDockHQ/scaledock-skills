@@ -1,11 +1,11 @@
 ---
 name: did-methods
 description: >-
-  DID methods: "@context": ["https://www.w3.org/ns/did/v1", "https://w3id.org/security/suites/secp256k1recovery-2020/v2"], Covers did:web, did:key, did:jwk, did:webvh. Use when resolving did:web, did:key, did:jwk, or did:webvh. Triggers: did:web, did:key, did:jwk, did:webvh.
+  DID methods: create and resolve did:web, did:key, did:jwk and did:webvh identifiers. Covers did:web, did:key, did:jwk, did:webvh. Use when resolving did:web, did:key, did:jwk, or did:webvh. Triggers: did:web, did:key, did:jwk, did:webvh.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

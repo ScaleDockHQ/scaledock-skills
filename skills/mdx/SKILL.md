@@ -1,11 +1,11 @@
 ---
 name: mdx
 description: >-
-  MDX: These docs explain the core concepts of MDX. Covers MDX. Use when writing MDX. Triggers: MDX.
+  MDX: write Markdown that imports and renders JSX components. Covers MDX. Use when writing MDX. Triggers: MDX.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

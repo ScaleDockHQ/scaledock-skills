@@ -1,11 +1,11 @@
 ---
 name: oscal
 description: >-
-  OSCAL: OSCAL Covers OSCAL. Use when exchanging control assessment data. Triggers: OSCAL.
+  OSCAL: exchange control catalogs, profiles, system security plans and assessment results in NIST OSCAL formats. Covers OSCAL. Use when exchanging control assessment data. Triggers: OSCAL.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

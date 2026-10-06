@@ -1,11 +1,11 @@
 ---
 name: wasi
 description: >-
-  WASI: The [WebAssembly Interface Type (WIT)][wit] definitions for the proposals included in this Covers WASI 0.2.12, WASI 0.3.1 (track preview), WebAssembly Component Model. Use when targeting the WebAssembly System Interface. Triggers: WASI, Component Model.
+  WASI: target the WebAssembly System Interface and Component Model with WIT interfaces. Covers WASI 0.2.12, WASI 0.3.1 (track preview), WebAssembly Component Model. Use when targeting the WebAssembly System Interface. Triggers: WASI, Component Model.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

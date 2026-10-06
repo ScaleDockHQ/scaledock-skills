@@ -1,11 +1,11 @@
 ---
 name: html
 description: >-
-  HTML Living Standard: This is a Review Draft. Covers HTML Living Standard. Use when writing HTML, including forms, dialog, popover, workers, storage, canvas and import maps. Triggers: HTML, HTML Living Standard, dialog, popover.
+  HTML Living Standard: write and review HTML elements, forms, dialog, popover, workers, storage, canvas and import maps. Covers HTML Living Standard. Use when writing HTML, including forms, dialog, popover, workers, storage, canvas and import maps. Triggers: HTML, HTML Living Standard, dialog, popover.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

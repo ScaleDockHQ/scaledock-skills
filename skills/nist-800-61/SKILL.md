@@ -1,11 +1,11 @@
 ---
 name: nist-800-61
 description: >-
-  NIST SP 800-61: Craig Burkhardt, Acting Under Secretary of Commerce for Standards and Technology and Acting NIST Director Covers SP 800-61 Rev 3. Use when handling computer security incidents. Triggers: SP 800-61.
+  NIST SP 800-61: prepare for, detect, respond to and recover from cybersecurity incidents. Covers SP 800-61 Rev 3. Use when handling computer security incidents. Triggers: SP 800-61.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

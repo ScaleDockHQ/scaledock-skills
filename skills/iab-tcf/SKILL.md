@@ -1,11 +1,11 @@
 ---
 name: iab-tcf
 description: >-
-  IAB TCF: JavaScript is disabled in your browser. Covers TCF 2.2. Use when encoding a TCF consent string. Triggers: TCF.
+  IAB TCF 2.2: encode and decode Transparency and Consent Framework consent strings. Covers TCF 2.2. Use when encoding a TCF consent string. Triggers: TCF.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

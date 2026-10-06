@@ -1,11 +1,11 @@
 ---
 name: trusted-publishing
 description: >-
-  Trusted publishing: Trusted publishing for npm packages | npm Docs Skip to search Skip to content npm Docs npmjs.com Status Support Covers npm trusted publishing, PyPI trusted publishing. Use when publishing packages with OIDC trusted publishers. Triggers: trusted publishing, OIDC.
+  Trusted publishing: publish npm and PyPI packages from CI with OIDC instead of long-lived tokens. Covers npm trusted publishing, PyPI trusted publishing. Use when publishing packages with OIDC trusted publishers. Triggers: trusted publishing, OIDC.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

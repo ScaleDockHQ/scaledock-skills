@@ -1,11 +1,11 @@
 ---
 name: epss
 description: >-
-  EPSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers EPSS. Use when estimating exploit probability. Triggers: EPSS.
+  EPSS: estimate the probability that a vulnerability will be exploited with the Exploit Prediction Scoring System. Covers EPSS. Use when estimating exploit probability. Triggers: EPSS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

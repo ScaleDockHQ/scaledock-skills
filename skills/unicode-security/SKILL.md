@@ -1,11 +1,11 @@
 ---
 name: unicode-security
 description: >-
-  Unicode Security Mechanisms (UTS #39): the General Profile for Identifiers shall do so by conforming to either UTS-39-C1-1 or UTS-39-C1-2 . Covers UTS #39. Use when detecting confusable or restricted Unicode text. Triggers: UTS 39, confusables.
+  Unicode Security Mechanisms (UTS #39): detect confusable and mixed-script text and restrict identifiers. Covers UTS #39. Use when detecting confusable or restricted Unicode text. Triggers: UTS 39, confusables.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

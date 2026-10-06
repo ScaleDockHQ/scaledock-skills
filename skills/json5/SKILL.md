@@ -1,11 +1,11 @@
 ---
 name: json5
 description: >-
-  JSON5: This JavaScript library is a reference implementation for JSON5 parsing and serialization, Covers JSON5. Use when parsing JSON5. Triggers: JSON5.
+  JSON5: parse and write JSON5, the JSON superset with comments, trailing commas and unquoted keys. Covers JSON5. Use when parsing JSON5. Triggers: JSON5.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: c4-model
 description: >-
-  C4 model: Home | C4 model Skip to main content Link Menu Expand (external link) Document Search Copy Copied C4 model Home Covers C4 model. Use when drawing software architecture diagrams. Triggers: C4 model.
+  C4 model: diagram software architecture as system context, container, component and code views. Covers C4 model. Use when drawing software architecture diagrams. Triggers: C4 model.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

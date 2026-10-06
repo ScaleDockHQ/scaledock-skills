@@ -1,11 +1,11 @@
 ---
 name: nist-800-204
 description: >-
-  NIST SP 800-204: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices. Triggers: SP 800-204.
+  NIST SP 800-204: secure microservices-based applications and their service-to-service communication. Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices. Triggers: SP 800-204.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

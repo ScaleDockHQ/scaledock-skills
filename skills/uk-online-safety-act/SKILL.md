@@ -1,11 +1,11 @@
 ---
 name: uk-online-safety-act
 description: >-
-  Online Safety Act 2023: 2023 CHAPTER 50 An Act to make provision for and in connection with the regulation by OFCOM of certain internet services; for and in connection with communications offences; and for connected purposes. Covers Online Safety Act 2023. Use when applying the UK Online Safety Act. Triggers: Online Safety Act.
+  UK Online Safety Act 2023: apply the duties for user-to-user and search services, including illegal content and child safety. Covers Online Safety Act 2023. Use when applying the UK Online Safety Act. Triggers: Online Safety Act.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

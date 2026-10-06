@@ -1,11 +1,11 @@
 ---
 name: apple-app-site-association
 description: >-
-  apple-app-site-association: Please turn on JavaScript in your browser and refresh the page to view its content. Covers apple-app-site-association. Use when associating an app with a website. Triggers: apple-app-site-association.
+  apple-app-site-association: host the file that links an Apple app to a website for universal links, shared web credentials and app clips. Covers apple-app-site-association. Use when associating an app with a website. Triggers: apple-app-site-association.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

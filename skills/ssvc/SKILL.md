@@ -1,11 +1,11 @@
 ---
 name: ssvc
 description: >-
-  SSVC: This section assumes that you are already familiar with SSVC and want to look up specific details. Covers SSVC. Use when prioritizing vulnerabilities with SSVC. Triggers: SSVC.
+  SSVC: prioritize vulnerability responses with Stakeholder-Specific Vulnerability Categorization decision trees. Covers SSVC. Use when prioritizing vulnerabilities with SSVC. Triggers: SSVC.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

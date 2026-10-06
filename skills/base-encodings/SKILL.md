@@ -1,11 +1,11 @@
 ---
 name: base-encodings
 description: >-
-  The Base16, Base32, and Base64 Data Encodings: The Base16, Base32, and Base64 Data Encodings Covers RFC 4648 The Base16, Base32, and Base64 Data Encodings. Use when encoding or decoding base16, base32 or base64. Triggers: base64, RFC 4648.
+  Base16, Base32 and Base64 (RFC 4648): encode and decode binary data with the standard and URL-safe alphabets and padding. Covers RFC 4648 The Base16, Base32, and Base64 Data Encodings. Use when encoding or decoding base16, base32 or base64. Triggers: base64, RFC 4648.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

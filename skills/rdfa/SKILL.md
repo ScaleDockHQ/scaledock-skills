@@ -1,11 +1,11 @@
 ---
 name: rdfa
 description: >-
-  RDFa: The current Web is primarily made up of an enormous number of documents that have been created using HTML. Covers RDFa Core 1.1 - Third Edition, RDFa Lite 1.1 - Second Edition, HTML+RDFa 1.1 - Second Edition. Use when embedding RDF in HTML. Triggers: RDFa, RDFa Lite.
+  RDFa 1.1: embed RDF statements in HTML and XML attributes. Covers RDFa Core 1.1 - Third Edition, RDFa Lite 1.1 - Second Edition, HTML+RDFa 1.1 - Second Edition. Use when embedding RDF in HTML. Triggers: RDFa, RDFa Lite.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: matrix
 description: >-
-  Matrix: The key words &ldquo;MUST&rdquo;, &ldquo;MUST NOT&rdquo;, &ldquo;REQUIRED&rdquo;, &ldquo;SHALL&rdquo;, &ldquo;SHALL NOT&rdquo;, &ldquo;SHOULD&rdquo;, Covers Matrix 1.14. Use when implementing a Matrix client or server. Triggers: Matrix.
+  Matrix: build clients and servers for the decentralized Matrix messaging protocol. Covers Matrix 1.14. Use when implementing a Matrix client or server. Triggers: Matrix.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

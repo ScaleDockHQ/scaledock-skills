@@ -1,11 +1,11 @@
 ---
 name: server-sent-events
 description: >-
-  Server-sent events: ← 9 Communication — Table of Contents — 9.3 Cross-document messaging → 9.2 Server-sent events 9.2.1 Introduction 9.2.2 The EventSource interface 9.2.3 Processing model 9.2.4 The ` Last-Event-ID ` header 9.2.5 Parsing an event stream 9.2.6 Interpreting an event stream 9.2.7 Authoring notes 9.2.8 Connectionless push and other features 9.2.9 Garbage collection 9.2.10 Implementation advice Covers Server-sent events. Use when streaming text events from a server to a page. Triggers: EventSource, text/event-stream, server-sent events.
+  Server-sent events: stream text/event-stream events from a server to an EventSource in the browser. Covers Server-sent events. Use when streaming text events from a server to a page. Triggers: EventSource, text/event-stream, server-sent events.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

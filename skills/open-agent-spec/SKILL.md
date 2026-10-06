@@ -1,11 +1,11 @@
 ---
 name: open-agent-spec
 description: >-
-  Open Agent Specification: ![AgentSpec][website-agentspec] Covers Open Agent Specification. Use when describing agents with Agent Spec. Triggers: Agent Spec, Open Agent Specification.
+  Open Agent Specification: describe agents and agentic workflows in a portable, framework-agnostic format. Covers Open Agent Specification. Use when describing agents with Agent Spec. Triggers: Agent Spec, Open Agent Specification.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

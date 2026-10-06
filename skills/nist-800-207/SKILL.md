@@ -1,11 +1,11 @@
 ---
 name: nist-800-207
 description: >-
-  NIST SP 800-207: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-207, SP 800-207A. Use when applying zero trust architecture. Triggers: zero trust, SP 800-207.
+  NIST SP 800-207: design a zero trust architecture with policy decision and enforcement points. Covers SP 800-207, SP 800-207A. Use when applying zero trust architecture. Triggers: zero trust, SP 800-207.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

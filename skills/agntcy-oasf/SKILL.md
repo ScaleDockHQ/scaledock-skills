@@ -1,11 +1,11 @@
 ---
 name: agntcy-oasf
 description: >-
-  Open Agentic Schema Framework: ![GitHub Release (latest by date)](https://img.shields.io/github/v/release/agntcy/oasf) Covers OASF 1.1.0, OASF 1.2 (track preview). Use when describing agent capabilities with OASF. Triggers: OASF.
+  Open Agentic Schema Framework (OASF): describe AI agents, their skills and domains in standard records. Covers OASF 1.1.0, OASF 1.2 (track preview). Use when describing agent capabilities with OASF. Triggers: OASF.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

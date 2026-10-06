@@ -1,11 +1,11 @@
 ---
 name: unicode-normalization
 description: >-
-  Unicode Normalization (UAX #15): When implementations keep strings in a normalized form, they can be assured that equivalent Covers UAX #15. Use when normalizing Unicode text. Triggers: UAX 15, NFC, NFD.
+  Unicode Normalization (UAX #15): normalize text to NFC, NFD, NFKC or NFKD. Covers UAX #15. Use when normalizing Unicode text. Triggers: UAX 15, NFC, NFD.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

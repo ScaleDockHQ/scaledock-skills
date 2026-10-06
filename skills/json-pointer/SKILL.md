@@ -1,11 +1,11 @@
 ---
 name: json-pointer
 description: >-
-  JavaScript Object Notation (JSON) Pointer: JavaScript Object Notation (JSON) Pointer Covers RFC 6901 JavaScript Object Notation (JSON) Pointer. Use when evaluating a JSON Pointer. Triggers: JSON Pointer, RFC 6901.
+  JSON Pointer (RFC 6901): identify and evaluate a specific value within a JSON document. Covers RFC 6901 JavaScript Object Notation (JSON) Pointer. Use when evaluating a JSON Pointer. Triggers: JSON Pointer, RFC 6901.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

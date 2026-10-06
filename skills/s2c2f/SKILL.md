@@ -1,11 +1,11 @@
 ---
 name: s2c2f
 description: >-
-  S2C2F: This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. Covers S2C2F. Use when assessing a secure supply chain. Triggers: S2C2F.
+  S2C2F: secure how a project consumes open source dependencies, by practice and maturity level. Covers S2C2F. Use when assessing a secure supply chain. Triggers: S2C2F.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

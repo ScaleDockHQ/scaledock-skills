@@ -1,11 +1,11 @@
 ---
 name: webdav
 description: >-
-  HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV): HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) Covers RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV), RFC 4791 Calendaring Extensions to WebDAV (CalDAV), RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV). Use when implementing WebDAV, CalDAV or CardDAV. Triggers: WebDAV, CalDAV, CardDAV.
+  WebDAV (RFC 4918): implement distributed authoring over HTTP, plus CalDAV and CardDAV. Covers RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV), RFC 4791 Calendaring Extensions to WebDAV (CalDAV), RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV). Use when implementing WebDAV, CalDAV or CardDAV. Triggers: WebDAV, CalDAV, CardDAV.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

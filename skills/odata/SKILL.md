@@ -1,11 +1,11 @@
 ---
 name: odata
 description: >-
-  OData: https://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.docx Covers OData 4.01, OData 4.0 (supported). Use when serving or querying an OData service. Triggers: OData, $filter.
+  OData 4.01: build and query RESTful OData services with $filter, $select, $expand and metadata. Covers OData 4.01, OData 4.0 (supported). Use when serving or querying an OData service. Triggers: OData, $filter.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

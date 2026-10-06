@@ -1,11 +1,11 @@
 ---
 name: iab-gpp
 description: >-
-  IAB GPP: This document is one of the IAB Tech Lab Global Privacy Protocol Specifications. Covers Global Privacy Platform. Use when encoding a Global Privacy Platform string. Triggers: GPP.
+  IAB Global Privacy Platform: encode and decode GPP strings that carry privacy signals across jurisdictions. Covers Global Privacy Platform. Use when encoding a Global Privacy Platform string. Triggers: GPP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

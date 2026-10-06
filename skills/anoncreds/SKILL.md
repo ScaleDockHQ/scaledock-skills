@@ -1,11 +1,11 @@
 ---
 name: anoncreds
 description: >-
-  AnonCreds: The AnonCreds (Anonymous Credentials) specification is based on the open source verifiable credential Covers AnonCreds 1.0. Use when issuing or verifying anonymous credentials. Triggers: AnonCreds, CL signatures.
+  AnonCreds: issue, hold and verify anonymous credentials with selective disclosure and zero-knowledge proofs. Covers AnonCreds 1.0. Use when issuing or verifying anonymous credentials. Triggers: AnonCreds, CL signatures.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

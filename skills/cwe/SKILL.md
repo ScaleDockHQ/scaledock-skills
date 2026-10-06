@@ -1,11 +1,11 @@
 ---
 name: cwe
 description: >-
-  CWE: This view is intended to facilitate research into weaknesses, including their inter-dependencies, and can be leveraged to systematically identify theoretical gaps within CWE. Covers CWE. Use when classifying software weaknesses. Triggers: CWE.
+  CWE: classify software and hardware weaknesses with Common Weakness Enumeration ids. Covers CWE. Use when classifying software weaknesses. Triggers: CWE.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

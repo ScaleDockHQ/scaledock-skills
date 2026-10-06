@@ -1,11 +1,11 @@
 ---
 name: nlweb
 description: >-
-  NLWeb: At this point, NLWeb supports 2 APIs at the endpoints /ask and /mcp. Covers NLWeb. Use when exposing a site through the NLWeb REST API. Triggers: NLWeb.
+  NLWeb: expose a website to natural-language queries and agents through the /ask and /mcp endpoints. Covers NLWeb. Use when exposing a site through the NLWeb REST API. Triggers: NLWeb.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

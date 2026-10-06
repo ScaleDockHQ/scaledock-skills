@@ -1,11 +1,11 @@
 ---
 name: cds-hooks
 description: >-
-  CDS Hooks: This is the current published release of the CDS Hooks specification. Covers CDS Hooks 2.0. Use when a clinical system calls decision support. Triggers: CDS Hooks.
+  CDS Hooks 2.0: call clinical decision support services from an EHR workflow and return cards. Covers CDS Hooks 2.0. Use when a clinical system calls decision support. Triggers: CDS Hooks.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

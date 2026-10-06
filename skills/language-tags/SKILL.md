@@ -1,11 +1,11 @@
 ---
 name: language-tags
 description: >-
-  Tags for Identifying Languages: Tags for Identifying Languages Covers RFC 5646 Tags for Identifying Languages, RFC 4647 Matching of Language Tags. Use when matching BCP 47 language tags. Triggers: BCP 47, RFC 5646, language tag.
+  BCP 47 language tags (RFC 5646, RFC 4647): build, validate and match language tags. Covers RFC 5646 Tags for Identifying Languages, RFC 4647 Matching of Language Tags. Use when matching BCP 47 language tags. Triggers: BCP 47, RFC 5646, language tag.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

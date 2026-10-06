@@ -1,11 +1,11 @@
 ---
 name: peppol-bis
 description: >-
-  Peppol BIS Billing: Please note that all element names are inhereted from EN16931 and naming use the term invoice, but this covers both invoice and credit notes. Covers Peppol BIS Billing 3.0. Use when sending a Peppol invoice. Triggers: Peppol BIS.
+  Peppol BIS Billing 3.0: send and validate Peppol invoices and credit notes based on EN 16931. Covers Peppol BIS Billing 3.0. Use when sending a Peppol invoice. Triggers: Peppol BIS.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

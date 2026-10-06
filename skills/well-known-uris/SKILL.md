@@ -1,11 +1,11 @@
 ---
 name: well-known-uris
 description: >-
-  Well-Known Uniform Resource Identifiers (URIs): Well-Known Uniform Resource Identifiers (URIs) Covers RFC 8615 Well-Known Uniform Resource Identifiers (URIs). Use when publishing a /.well-known/ resource. Triggers: well-known, RFC 8615.
+  Well-known URIs (RFC 8615): publish and register resources under /.well-known/. Covers RFC 8615 Well-Known Uniform Resource Identifiers (URIs). Use when publishing a /.well-known/ resource. Triggers: well-known, RFC 8615.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

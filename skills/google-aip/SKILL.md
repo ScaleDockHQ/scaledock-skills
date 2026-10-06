@@ -1,11 +1,11 @@
 ---
 name: google-aip
 description: >-
-  AIP: AIP Covers AIPs. Use when designing an API with Google AIP guidance. Triggers: AIP.
+  Google AIPs: design resource-oriented APIs by the Google API Improvement Proposals. Covers AIPs. Use when designing an API with Google AIP guidance. Triggers: AIP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

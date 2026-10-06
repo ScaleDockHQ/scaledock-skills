@@ -1,11 +1,11 @@
 ---
 name: time-zone-database
 description: >-
-  Procedures for Maintaining the Time Zone Database: Procedures for Maintaining the Time Zone Database Covers RFC 6557 Procedures for Maintaining the Time Zone Database. Use when using the IANA time zone database. Triggers: time zone, RFC 6557, tzdb.
+  IANA Time Zone Database: use tz identifiers and data correctly, as maintained under RFC 6557. Covers RFC 6557 Procedures for Maintaining the Time Zone Database. Use when using the IANA time zone database. Triggers: time zone, RFC 6557, tzdb.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: citation-cff
 description: >-
-  Citation File Format: You are using an outdated browser. Covers Citation File Format. Use when writing a CITATION.cff file. Triggers: CFF, CITATION.cff.
+  Citation File Format: write CITATION.cff files that tell people how to cite software and datasets. Covers Citation File Format. Use when writing a CITATION.cff file. Triggers: CFF, CITATION.cff.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

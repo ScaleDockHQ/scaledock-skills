@@ -1,11 +1,11 @@
 ---
 name: json
 description: >-
-  The JavaScript Object Notation (JSON) Data Interchange Format: The JavaScript Object Notation (JSON) Data Interchange Format Covers RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format, RFC 7493 The I-JSON Message Format. Use when producing or parsing JSON text. Triggers: JSON, RFC 8259, ECMA-404, I-JSON.
+  JSON (RFC 8259): produce and parse interoperable JSON text, including the I-JSON profile. Covers RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format, RFC 7493 The I-JSON Message Format. Use when producing or parsing JSON text. Triggers: JSON, RFC 8259, ECMA-404, I-JSON.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: unicode-segmentation
 description: >-
-  Unicode Text Segmentation (UAX #29): implementations can produce these divisions. Covers UAX #29. Use when splitting text into graphemes, words or sentences. Triggers: UAX 29, grapheme cluster.
+  Unicode Text Segmentation (UAX #29): split text into grapheme clusters, words and sentences. Covers UAX #29. Use when splitting text into graphemes, words or sentences. Triggers: UAX 29, grapheme cluster.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

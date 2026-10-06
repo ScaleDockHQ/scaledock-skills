@@ -1,11 +1,11 @@
 ---
 name: language-server-protocol
 description: >-
-  Language Server Protocol: This document describes the previous 3.17.x version of the language server protocol. Covers LSP 3.17, LSP 3.18 (track preview). Use when implementing a language server. Triggers: LSP.
+  Language Server Protocol: build language servers and editor clients that exchange JSON-RPC messages for code intelligence. Covers LSP 3.17, LSP 3.18 (track preview). Use when implementing a language server. Triggers: LSP.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

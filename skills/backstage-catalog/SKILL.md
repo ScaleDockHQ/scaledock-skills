@@ -1,11 +1,11 @@
 ---
 name: backstage-catalog
 description: >-
-  Backstage catalog: Descriptor Format of Catalog Entities | Backstage Software Catalog and Developer Platform Covers Backstage catalog descriptor. Use when describing a Backstage catalog entity. Triggers: Backstage, catalog-info.yaml.
+  Backstage catalog: write catalog-info.yaml descriptors for components, APIs, systems, resources and groups. Covers Backstage catalog descriptor. Use when describing a Backstage catalog entity. Triggers: Backstage, catalog-info.yaml.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

@@ -1,11 +1,11 @@
 ---
 name: coppa
 description: >-
-  COPPA: From the Federal Register Online via the Government Publishing Office [ www.gpo.gov ] Covers COPPA Rule 2025. Use when applying the Children's Online Privacy Protection Rule. Triggers: COPPA.
+  COPPA: collect personal information from children under 13 only with notice and verifiable parental consent. Covers COPPA Rule 2025. Use when applying the Children's Online Privacy Protection Rule. Triggers: COPPA.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 

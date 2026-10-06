@@ -1,11 +1,11 @@
 ---
 name: xregistry
 description: >-
-  xRegistry: - [Implicit Creation of Parent Entities](#design-implicit-creation-of-parent-entities) Covers xRegistry 1.0-rc4 (build). Use when managing metadata with xRegistry. Triggers: xRegistry.
+  xRegistry: manage and discover metadata for message, schema and endpoint registries. Covers xRegistry 1.0-rc4 (build). Use when managing metadata with xRegistry. Triggers: xRegistry.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
