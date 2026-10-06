@@ -260,6 +260,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`media-session`](skills/media-session)           | Media Session: This specification enables web developers to show customized media metadata on platform UI, customize available platform media controls, and access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in n |
 | [`media-capabilities`](skills/media-capabilities) | Media Capabilities: This specification intends to provide APIs to allow websites to make an optimal decision when picking media content for the user. Covers Media Capabilities (track). Use when querying decoding or encoding support                                                  |
 | [`picture-in-picture`](skills/picture-in-picture) | Picture-in-Picture: This specification provides APIs to allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device. Covers Picture-in-Pict |
+| [`remote-playback`](skills/remote-playback)       | Remote Playback API: This specification defines an API extending the HTMLMediaElement that enables controlling remote playback of media from a web page. Covers Remote Playback API (build). Use when playing media on a remote device                                                   |
 
 #### Data and semantics
 
