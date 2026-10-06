@@ -252,6 +252,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`autoplay-detection`](skills/autoplay-detection)           | Autoplay Policy Detection: This specification provides web developers the ability to detect if automatically starting the playback of a media file is allowed in different situations. Covers Autoplay Policy Detection (track). Use when detecting whether autoplay is allowed          |
 | [`webtransport`](skills/webtransport)                       | WebTransport: This document defines a set of ECMAScript APIs in WebIDL to allow data to be sent and received between a browser and server, utilizing [WEB-TRANSPORT-OVERVIEW] . Covers WebTransport (build). Use when sending unreliable or bidirectional data to a server               |
 | [`webassembly`](skills/webassembly)                         | WebAssembly: This document describes version 1.0 of the core WebAssembly standard, a safe, portable, low-level code format designed for efficient execution and compact representation. Covers WebAssembly Core Specification Level 1, WebAssembly Core Specification Level 2.0 (build p |
+| [`webgpu`](skills/webgpu)                                   | WebGPU: WebGPU exposes an API for performing operations, such as rendering and computation, on a Graphics Processing Unit. Covers WebGPU (build), WebGPU Shading Language (build). Use when rendering or computing with WebGPU or WGSL                                                   |
 
 #### CSS, graphics and media
 
