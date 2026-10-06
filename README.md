@@ -149,6 +149,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`didcomm`](skills/didcomm)                                   | DIDComm Messaging: Contributors: Sam Curren (Indicio), Tobias Looker (MATTR), Oliver Terbu (ConsenSys), Kyle Den Hartog (MATTR), Baha Shaaban (SecureKey), Drummond Reed (Evernym), Steve McCown (Anonyome Labs), Troy Ronda (SecureKey), George Aristy (SecureKey), Vyacheslav Gudkov ( |
 | [`did-methods`](skills/did-methods)                           | DID methods: "@context": ["https://www.w3.org/ns/did/v1", "https://w3id.org/security/suites/secp256k1recovery-2020/v2"], Covers did:web, did:key, did:jwk, did:webvh. Use when resolving did:web, did:key, did:jwk, or did:webvh                                                         |
 | [`anoncreds`](skills/anoncreds)                               | AnonCreds: The AnonCreds (Anonymous Credentials) specification is based on the open source verifiable credential Covers AnonCreds 1.0. Use when issuing or verifying anonymous credentials                                                                                               |
+| [`xacml`](skills/xacml)                                       | XACML: http://www.oasis-open.org/committees/download.php/43799/xacml-3.0-core-spec-csprd03-en.zip Covers XACML 3.0, XACML JSON Profile 1.1. Use when writing or evaluating attribute-based access policies                                                                               |
 
 #### Security and supply chain
 
