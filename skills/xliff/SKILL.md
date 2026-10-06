@@ -1,11 +1,11 @@
 ---
 name: xliff
 description: >-
-  XLIFF: http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.pdf http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.xml Covers XLIFF 2.1. Use when exchanging localizable content. Triggers: XLIFF.
+  XLIFF: write and read XML Localization Interchange File Format documents. Covers XLIFF 2.1 (current) and XLIFF 2.2 Committee Specification 01 as a preview, with Part 1 Core and Part 2 Extended and the Plural, Gender, and Select Module. Use when exchanging localizable content. Triggers: XLIFF.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: XLIFF 2.1 (default). See [`references/versions.md`](references/versions.md).
+- Target version: XLIFF 2.1 (default); XLIFF 2.2 (preview, posture: build). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -67,3 +67,5 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [XLIFF 2.1](https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html): OASIS Standard, XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06), checked 2026-10-06.
+- [XLIFF 2.2 Part 1: Core](https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-core-v2.2-cs01-part1.html): Committee Specification, XLIFF 2.2 Committee Specification 01, 2025-03-13, checked 2026-10-06.
+- [XLIFF 2.2 Part 2: Extended](https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-extended-v2.2-cs01-part2.html): Committee Specification, XLIFF 2.2 Committee Specification 01, 2025-03-13, checked 2026-10-06.
