@@ -4,13 +4,16 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id                  | Line                          | Status  | Revision                                                                        | Posture | Publisher                 |
-| ------------------- | ----------------------------- | ------- | ------------------------------------------------------------------------------- | ------- | ------------------------- |
-| `sparql11-query`    | SPARQL 1.1 Query Language     | current | sparql11-query REC-sparql11-query-20130321 (Recommendation, 2013-03-21)         |         | Recommendation 2013-03-21 |
-| `sparql10-query`    | SPARQL Query Language for RDF | legacy  | sparql10-query REC-rdf-sparql-query-20080115 (Recommendation, 2008-01-15)       |         | Recommendation 2008-01-15 |
-| `sparql11-protocol` | SPARQL 1.1 Protocol           | current | sparql11-protocol REC-sparql11-protocol-20130321 (Recommendation, 2013-03-21)   |         | Recommendation 2013-03-21 |
-| `sparql10-protocol` | SPARQL Protocol for RDF       | legacy  | sparql10-protocol REC-rdf-sparql-protocol-20080115 (Recommendation, 2008-01-15) |         | Recommendation 2008-01-15 |
-| `sparql11-update`   | SPARQL 1.1 Update             | current | sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)       |         | Recommendation 2013-03-21 |
+| Id                          | Line                          | Status  | Revision                                                                        | Posture | Publisher                 |
+| --------------------------- | ----------------------------- | ------- | ------------------------------------------------------------------------------- | ------- | ------------------------- |
+| `sparql11-query`            | SPARQL 1.1 Query Language     | current | sparql11-query REC-sparql11-query-20130321 (Recommendation, 2013-03-21)         |         | Recommendation 2013-03-21 |
+| `sparql10-query`            | SPARQL Query Language for RDF | legacy  | sparql10-query REC-rdf-sparql-query-20080115 (Recommendation, 2008-01-15)       |         | Recommendation 2008-01-15 |
+| `sparql11-protocol`         | SPARQL 1.1 Protocol           | current | sparql11-protocol REC-sparql11-protocol-20130321 (Recommendation, 2013-03-21)   |         | Recommendation 2013-03-21 |
+| `sparql10-protocol`         | SPARQL Protocol for RDF       | legacy  | sparql10-protocol REC-rdf-sparql-protocol-20080115 (Recommendation, 2008-01-15) |         | Recommendation 2008-01-15 |
+| `sparql11-update`           | SPARQL 1.1 Update             | current | sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)       |         | Recommendation 2013-03-21 |
+| `sparql12-query-preview`    | SPARQL 1.2 Query Language     | preview | W3C Working Draft 04 October 2026 (sparql12-query)                              | track   | Working Draft 2026-10-04  |
+| `sparql12-protocol-preview` | SPARQL 1.2 Protocol           | preview | W3C Working Draft 23 July 2026 (sparql12-protocol)                              | track   | Working Draft 2026-07-23  |
+| `sparql12-update-preview`   | SPARQL 1.2 Update             | preview | W3C Working Draft 12 June 2026 (sparql12-update)                                | track   | Working Draft 2026-06-12  |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 

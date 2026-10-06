@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -39,6 +39,30 @@
       "status": "current",
       "revision": "sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)",
       "family": "update"
+    },
+    {
+      "id": "sparql12-query-preview",
+      "label": "SPARQL 1.2 Query Language",
+      "status": "preview",
+      "posture": "track",
+      "family": "query",
+      "revision": "W3C Working Draft 04 October 2026 (sparql12-query)"
+    },
+    {
+      "id": "sparql12-protocol-preview",
+      "label": "SPARQL 1.2 Protocol",
+      "status": "preview",
+      "posture": "track",
+      "family": "protocol",
+      "revision": "W3C Working Draft 23 July 2026 (sparql12-protocol)"
+    },
+    {
+      "id": "sparql12-update-preview",
+      "label": "SPARQL 1.2 Update",
+      "status": "preview",
+      "posture": "track",
+      "family": "update",
+      "revision": "W3C Working Draft 12 June 2026 (sparql12-update)"
     }
   ],
   "sources": [
@@ -75,6 +99,27 @@
       "url": "https://www.w3.org/TR/sparql11-update/",
       "status": "Recommendation",
       "revision": "sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Query Language",
+      "url": "https://www.w3.org/TR/sparql12-query/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 04 October 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Protocol",
+      "url": "https://www.w3.org/TR/sparql12-protocol/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 23 July 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Update",
+      "url": "https://www.w3.org/TR/sparql12-update/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 12 June 2026",
       "checked": "2026-10-06"
     }
   ]

@@ -1,11 +1,11 @@
 ---
 name: sparql
 description: >-
-  SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update. Use when querying RDF with SPARQL. Triggers: SPARQL 1.1, SPARQL 1.2.
+  SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update, SPARQL 1.2 Query Language, SPARQL 1.2 Protocol and SPARQL 1.2 Update. Use when querying RDF with SPARQL. Triggers: SPARQL 1.1, SPARQL 1.2.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: SPARQL 1.1 Query Language (default); SPARQL Query Language for RDF (legacy: read and upgrade, never author); SPARQL 1.1 Protocol (default); SPARQL Protocol for RDF (legacy: read and upgrade, never author); SPARQL 1.1 Update (default). See [`references/versions.md`](references/versions.md).
+- Target version: SPARQL 1.1 Query Language (default); SPARQL Query Language for RDF (legacy: read and upgrade, never author); SPARQL 1.1 Protocol (default); SPARQL Protocol for RDF (legacy: read and upgrade, never author); SPARQL 1.1 Update (default). SPARQL 1.2 Query Language, SPARQL 1.2 Protocol and SPARQL 1.2 Update are Working Draft previews (posture track). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -71,3 +71,6 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [SPARQL 1.1 Protocol](https://www.w3.org/TR/sparql11-protocol/): Recommendation, sparql11-protocol REC-sparql11-protocol-20130321 (Recommendation, 2013-03-21), checked 2026-10-06.
 - [SPARQL Protocol for RDF](https://www.w3.org/TR/rdf-sparql-protocol/): Recommendation, sparql10-protocol REC-rdf-sparql-protocol-20080115 (Recommendation, 2008-01-15), checked 2026-10-06.
 - [SPARQL 1.1 Update](https://www.w3.org/TR/sparql11-update/): Recommendation, sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21), checked 2026-10-06.
+- [SPARQL 1.2 Query Language](https://www.w3.org/TR/sparql12-query/): Working Draft, W3C Working Draft 04 October 2026, checked 2026-10-06.
+- [SPARQL 1.2 Protocol](https://www.w3.org/TR/sparql12-protocol/): Working Draft, W3C Working Draft 23 July 2026, checked 2026-10-06.
+- [SPARQL 1.2 Update](https://www.w3.org/TR/sparql12-update/): Working Draft, W3C Working Draft 12 June 2026, checked 2026-10-06.
