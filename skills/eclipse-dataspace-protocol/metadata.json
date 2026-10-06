@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Dataspace Protocol release 2025-1. Requirements are quotes from the release page and the protocol markdown at that tag.",
+  "versions": [
+    {
+      "id": "dsp-2025-1",
+      "label": "Dataspace Protocol 2025-1",
+      "status": "current",
+      "revision": "2025-1, published 12 August 2025"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dataspace Protocol 2025-1",
+      "url": "https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1/",
+      "status": "Release",
+      "revision": "2025-1, published 12 August 2025",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Scope",
+      "url": "https://raw.githubusercontent.com/eclipse-dataspace-protocol-base/DataspaceProtocol/2025-1/specifications/common/scope.md",
+      "status": "Specification",
+      "revision": "tag 2025-1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Catalog protocol",
+      "url": "https://raw.githubusercontent.com/eclipse-dataspace-protocol-base/DataspaceProtocol/2025-1/specifications/catalog/catalog.protocol.md",
+      "status": "Specification",
+      "revision": "tag 2025-1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Contract negotiation protocol",
+      "url": "https://raw.githubusercontent.com/eclipse-dataspace-protocol-base/DataspaceProtocol/2025-1/specifications/negotiation/contract.negotiation.protocol.md",
+      "status": "Specification",
+      "revision": "tag 2025-1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Transfer process protocol",
+      "url": "https://raw.githubusercontent.com/eclipse-dataspace-protocol-base/DataspaceProtocol/2025-1/specifications/transfer/transfer.process.protocol.md",
+      "status": "Specification",
+      "revision": "tag 2025-1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Common protocol",
+      "url": "https://raw.githubusercontent.com/eclipse-dataspace-protocol-base/DataspaceProtocol/2025-1/specifications/common/common.protocol.md",
+      "status": "Specification",
+      "revision": "tag 2025-1",
+      "checked": "2026-10-06"
+    }
+  ]
+}
