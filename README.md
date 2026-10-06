@@ -290,6 +290,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`rdf-dataset-canonicalization`](skills/rdf-dataset-canonicalization) | RDF Dataset Canonicalization (RDFC-1.0): RDF [ RDF11-CONCEPTS ] describes a graph-based data model for making claims about the world and provides the foundation for reasoning upon that graph of information. Covers RDF Dataset Canonicalization. Use when canonicalizing an RDF datas |
 | [`rdf`](skills/rdf)                                                   | RDF: The Resource Description Framework (RDF) is a framework for representing information in the Web. Covers RDF 1.1 Concepts and Abstract Syntax, RDF 1.2 Concepts and Abstract Data Model (build preview), RDF 1.1 N-Triples, RDF 1.2 N-Triples (track preview), RDF 1.1 N-Quads, RDF  |
 | [`sparql`](skills/sparql)                                             | SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update. Use when querying RDF with SPARQL                                                                                |
+| [`shacl`](skills/shacl)                                               | SHACL: This document defines the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions. Covers Shapes Constraint Language (SHACL), SHACL 1.2 Core (track preview). Use when validating an RDF graph with shapes                             |
 
 #### Documents and publishing
 
