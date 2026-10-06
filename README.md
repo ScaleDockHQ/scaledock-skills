@@ -146,6 +146,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`fido-credential-exchange`](skills/fido-credential-exchange) | FIDO Credential Exchange: This document defines the data structures and format of credentials being passed or referenced between two applications during credential exchange. Covers Credential Exchange Format 1.0, Credential Exchange Protocol 1.0 (build). Use when exchanging passk |
 | [`uma`](skills/uma)                                           | User-Managed Access: This specification defines a means for a client, representing a requesting party, to use a permission ticket to request an OAuth 2.0 access token to gain access to a protected resource asynchronously from the time a resource owner authorizes access. Covers UM |
 | [`presentation-exchange`](skills/presentation-exchange)       | Presentation Exchange: specification and not yet on a standards track, the concept of “decentralized web nodes” Covers Presentation Exchange 2.1.1, Presentation Exchange 2.1.0 (supported). Use when requesting and submitting verifiable presentations                                 |
+| [`didcomm`](skills/didcomm)                                   | DIDComm Messaging: Contributors: Sam Curren (Indicio), Tobias Looker (MATTR), Oliver Terbu (ConsenSys), Kyle Den Hartog (MATTR), Baha Shaaban (SecureKey), Drummond Reed (Evernym), Steve McCown (Anonyome Labs), Troy Ronda (SecureKey), George Aristy (SecureKey), Vyacheslav Gudkov ( |
 
 #### Security and supply chain
 
