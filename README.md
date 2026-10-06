@@ -280,6 +280,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`woff`](skills/woff)                                             | WOFF: Based on experience with WOFF 1.0, which is widely deployed, this specification was developed to provide improved compression and thus lower use of network bandwidth, while still allowing fast decompression even on mobile devices. Covers WOFF File Format 2.0. Use when packa |
 | [`incremental-font-transfer`](skills/incremental-font-transfer)   | Incremental Font Transfer: This specification defines a method to incrementally transfer a font from server to client. Covers Incremental Font Transfer (build). Use when transferring fonts incrementally                                                                               |
 | [`ttml`](skills/ttml)                                             | Timed Text Markup Language (TTML): This document specifies the Timed Text Markup Language (TTML), Version 2, also known as TTML2, in terms of a vocabulary and semantics thereof. Covers Timed Text Markup Language 2 (TTML2) (2nd Edition) (build), Timed Text Markup Language 1 (TTML1 |
+| [`webvtt`](skills/webvtt)                                         | WebVTT: This specification defines WebVTT, the Web Video Text Tracks format. Covers WebVTT: The Web Video Text Tracks Format Level 1 (build). Use when writing or parsing WebVTT cues                                                                                                    |
 
 #### Data and semantics
 
