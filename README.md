@@ -274,6 +274,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-midi`](skills/web-midi)                                     | Web MIDI API: Some user agents have music devices, such as synthesizers, keyboard and other controllers, and drum machines connected to their host computer or device. Covers Web MIDI API (track). Use when talking to MIDI devices                                                     |
 | [`html-media-capture`](skills/html-media-capture)                 | HTML Media Capture: The HTML Media Capture specification defines an HTML form extension that facilitates user access to a device's media capture mechanism , such as a camera, or microphone, from within a file upload control. Covers HTML Media Capture. Use when capturing media fro |
 | [`css`](skills/css)                                               | CSS Snapshot: This document collects together into one definition all the specs that together form the current state of Cascading Style Sheets (CSS) as of 2026. Covers CSS Snapshot 2026 (track), CSS Snapshot 2025 (supported), CSS Snapshot 2024 (supported). Use when writing or rev |
+| [`svg`](skills/svg)                                               | Scalable Vector Graphics (SVG): This specification defines the features and syntax for Scalable Vector Graphics (SVG) Version 2. Covers Scalable Vector Graphics (SVG) 2 (build), SVG Accessibility API Mappings Level 1.0 (track). Use when authoring or processing SVG                 |
 
 #### Data and semantics
 
