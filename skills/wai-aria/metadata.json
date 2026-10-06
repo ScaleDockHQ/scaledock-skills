@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -68,6 +68,21 @@
       "status": "current",
       "revision": "W3C Recommendation, 12 June 2025 (REC-dpub-aria-1.1-20250612)",
       "family": "dpub-aria"
+    },
+    {
+      "id": "svg-aam-1.0",
+      "label": "SVG-AAM",
+      "status": "current",
+      "posture": "track",
+      "family": "svg-aam",
+      "revision": "W3C Working Draft, 24 September 2026 (WD-svg-aam-1.0-20260924)"
+    },
+    {
+      "id": "dpub-aam-1.0",
+      "label": "DPub-AAM 1.0",
+      "status": "current",
+      "family": "dpub-aam",
+      "revision": "W3C Recommendation, 14 December 2017 (REC-dpub-aam-1.0-20171214)"
     }
   ],
   "sources": [

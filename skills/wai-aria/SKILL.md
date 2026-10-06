@@ -14,11 +14,11 @@ description: >-
   auditing ARIA misuse. Targets WAI-ARIA 1.2, AccName 1.1 and ARIA in HTML;
   builds on the AccName 1.2 preview, reserves names from the WAI-ARIA 1.3
   preview, and upgrades from WAI-ARIA 1.1 and WAI-ARIA 1.0. Also Graphics ARIA
-  1.0 and DPUB-ARIA 1.1.
+  1.0 and DPUB-ARIA 1.1. Also SVG-AAM and DPub-AAM 1.0.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -33,7 +33,7 @@ Accessible Rich Internet Applications (WAI-ARIA), published by the W3C, defines 
 - Role: component author (building a widget), reviewer or auditor, or conformance checker author. User agent and assistive technology implementers are out of scope.
 - Host language: HTML (the default; ARIA in HTML applies), SVG or another host.
 - Component: which widget or pattern, for example modal dialog, menu button, combobox, tabs, grid or a live region, and whether a native HTML element already does the job.
-- Target version: WAI-ARIA 1.2 (current, the default). WAI-ARIA 1.1 and WAI-ARIA 1.0 are legacy: read them and upgrade from them, never author them. WAI-ARIA 1.3 is a preview (posture: name): reserve its names, never ship its new roles or attributes as the only carrier of meaning. AccName 1.1 is the current AccName Recommendation; AccName 1.2 is a preview (posture: build) that WAI-ARIA 1.2 cites normatively, so predict names with it and test what it adds. ARIA in HTML is current. Graphics ARIA 1.0 and DPUB-ARIA 1.1 are each the current line of their family. See [`references/versions.md`](references/versions.md).
+- Target version: WAI-ARIA 1.2 (current, the default). WAI-ARIA 1.1 and WAI-ARIA 1.0 are legacy: read them and upgrade from them, never author them. WAI-ARIA 1.3 is a preview (posture: name): reserve its names, never ship its new roles or attributes as the only carrier of meaning. AccName 1.1 is the current AccName Recommendation; AccName 1.2 is a preview (posture: build) that WAI-ARIA 1.2 cites normatively, so predict names with it and test what it adds. ARIA in HTML is current. Graphics ARIA 1.0 and DPUB-ARIA 1.1 are each the current line of their family. SVG-AAM is current with posture track. DPub-AAM 1.0 is current. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the W3C TR pages for WAI-ARIA, AccName and ARIA in HTML for a newer maturity level, and update the pins.
 
