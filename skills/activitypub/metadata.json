@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers ActivityPub. ActivityPub is current; Activity Streams 2.0 is current; Activity Vocabulary is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "activitypub",
+      "label": "ActivityPub",
+      "status": "current",
+      "revision": "activitypub REC-activitypub-20180123 (Recommendation, 2018-01-23)",
+      "family": "activitypub"
+    },
+    {
+      "id": "activitystreams-core",
+      "label": "Activity Streams 2.0",
+      "status": "current",
+      "revision": "activitystreams-core REC-activitystreams-core-20170523 (Recommendation, 2017-05-23)",
+      "family": "core"
+    },
+    {
+      "id": "activitystreams-vocabulary",
+      "label": "Activity Vocabulary",
+      "status": "current",
+      "revision": "activitystreams-vocabulary REC-activitystreams-vocabulary-20170523 (Recommendation, 2017-05-23)",
+      "family": "vocabulary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ActivityPub",
+      "url": "https://www.w3.org/TR/activitypub/",
+      "status": "Recommendation",
+      "revision": "activitypub REC-activitypub-20180123 (Recommendation, 2018-01-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Activity Streams 2.0",
+      "url": "https://www.w3.org/TR/activitystreams-core/",
+      "status": "Recommendation",
+      "revision": "activitystreams-core REC-activitystreams-core-20170523 (Recommendation, 2017-05-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Activity Vocabulary",
+      "url": "https://www.w3.org/TR/activitystreams-vocabulary/",
+      "status": "Recommendation",
+      "revision": "activitystreams-vocabulary REC-activitystreams-vocabulary-20170523 (Recommendation, 2017-05-23)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

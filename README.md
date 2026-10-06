@@ -321,6 +321,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`exi`](skills/exi)                                                       | Efficient XML Interchange: This document is the specification of the Efficient XML Interchange (EXI) format. Covers Efficient XML Interchange (EXI) Format 1.0 (Second Edition), Efficient XML Interchange (EXI) Profile for limiting usage of dynamic memory, Canonical EXI. Use when e |
 | [`soap`](skills/soap)                                                     | SOAP: SOAP Version 1.2 is a lightweight protocol intended for exchanging structured information in a decentralized, distributed environment. Covers SOAP Version 1.2 Part 1: Messaging Framework (Second Edition), SOAP Version 1.2 Part 2: Adjuncts (Second Edition), Web Services Desc |
 | [`i18n-best-practices`](skills/i18n-best-practices)                       | Internationalization best practices: This Architectural Specification provides authors of specifications, software developers, and content developers with a common reference for interoperable text manipulation on the World Wide Web, building on the Universal Character Set, define |
+| [`activitypub`](skills/activitypub)                                       | ActivityPub: The ActivityPub protocol is a decentralized social networking protocol based upon the [ ActivityStreams ] 2.0 data format. Covers ActivityPub, Activity Streams 2.0, Activity Vocabulary. Use when implementing ActivityPub                                                 |
 
 #### Documents and publishing
 
