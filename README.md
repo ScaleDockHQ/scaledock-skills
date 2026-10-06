@@ -300,6 +300,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`ssn-sosa`](skills/ssn-sosa)                                             | SSN and SOSA: The Semantic Sensor Network (SSN) ontology is an ontology for describing sensors and their observations, the involved procedures, the studied features of interest, the samples used to do so, and the observed properties, as well as actuators. Covers Semantic Sensor N |
 | [`owl-time`](skills/owl-time)                                             | OWL Time: OWL-Time is an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources in the world or described in Web pages. Covers Time Ontology in OWL (build). Use when describing time in OWL                                                        |
 | [`r2rml`](skills/r2rml)                                                   | R2RML: This document describes R2RML, a language for expressing customized mappings from relational databases to RDF datasets. Covers R2RML: RDB to RDF Mapping Language, A Direct Mapping of Relational Data to RDF. Use when mapping relational data to RDF                            |
+| [`rdfa`](skills/rdfa)                                                     | RDFa: The current Web is primarily made up of an enormous number of documents that have been created using HTML. Covers RDFa Core 1.1 - Third Edition, RDFa Lite 1.1 - Second Edition, HTML+RDFa 1.1 - Second Edition. Use when embedding RDF in HTML                                    |
 
 #### Documents and publishing
 
