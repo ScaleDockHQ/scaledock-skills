@@ -563,6 +563,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cds-hooks`](skills/cds-hooks)         | CDS Hooks: This is the current published release of the CDS Hooks specification. Covers CDS Hooks 2.0. Use when a clinical system calls decision support.                                                                                                                                               |
 | [`dicom`](skills/dicom)                 | DICOM: PS3.1 introduction and overview of medical image exchange. Covers DICOM PS3.1. Use when exchanging medical images.                                                                                                                                                                               |
 | [`openehr`](skills/openehr)             | openEHR: The openEHR Foundation is an independent, non-profit foundation, facilitating the sharing of health records by consumers and clinicians via open specifications, clinical models and open platform implementations. Covers openEHR Architecture Overview. Use when modeling an openEHR record. |
+| [`open-badges`](skills/open-badges)     | Open Badges: This specification is a new version of the 1EdTech Open Badges Specification that aligns with the conventions of the Verifiable Credentials Data Model v2.0 for the use cases of Defined Achievement Claim and a Skill Claim . Covers Open Badges 3.0. Use when issuing an Open Badge.     |
 
 ## Development
 
