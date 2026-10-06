@@ -312,6 +312,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`multimodal-architecture`](skills/multimodal-architecture)               | Multimodal Architecture: This document describes a loosely coupled architecture for multimodal user interfaces, which allows for co-resident and distributed implementations, and focuses on the role of markup and scripting, and the use of well defined interfaces between its consti |
 | [`media-fragments`](skills/media-fragments)                               | Media Fragments: This document describes the Media Fragments 1.0 (basic) specification. Covers Media Fragments URI 1.0 (basic). Use when addressing a fragment of a media resource                                                                                                       |
 | [`media-ontology`](skills/media-ontology)                                 | Ontology for Media Resources: This document defines the Ontology for Media Resources 1.0. Covers Ontology for Media Resources 1.0, Metadata API for Media Resources 1.0. Use when describing media resources                                                                             |
+| [`xml`](skills/xml)                                                       | XML: The Extensible Markup Language (XML) is a subset of SGML that is completely described in this document. Covers Extensible Markup Language (XML) 1.0 (Fifth Edition), Namespaces in XML 1.0 (Third Edition), XML Inclusions (XInclude) Version 1.0 (Second Edition), XML Base (Secon |
 
 #### Documents and publishing
 
