@@ -164,6 +164,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`did-methods`](skills/did-methods)                           | DID methods: "@context": ["https://www.w3.org/ns/did/v1", "https://w3id.org/security/suites/secp256k1recovery-2020/v2"], Covers did:web, did:key, did:jwk, did:webvh. Use when resolving did:web, did:key, did:jwk, or did:webvh                                                         |
 | [`anoncreds`](skills/anoncreds)                               | AnonCreds: The AnonCreds (Anonymous Credentials) specification is based on the open source verifiable credential Covers AnonCreds 1.0. Use when issuing or verifying anonymous credentials                                                                                               |
 | [`xacml`](skills/xacml)                                       | XACML: http://www.oasis-open.org/committees/download.php/43799/xacml-3.0-core-spec-csprd03-en.zip Covers XACML 3.0, XACML JSON Profile 1.1. Use when writing or evaluating attribute-based access policies                                                                               |
+| [`digital-asset-links`](skills/digital-asset-links)           | Digital Asset Links: The Digital Asset Links protocol and API enable an app or website to make public, Covers Digital Asset Links. Use when publishing an assetlinks.json statement                                                                                                      |
 
 #### Security and supply chain
 
