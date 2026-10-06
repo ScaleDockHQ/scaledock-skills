@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers W3C accessibility user requirements. Media Accessibility User Requirements is current; XR Accessibility User Requirements is current; RTC Accessibility User Requirements is current; Collaboration Tools Accessibility User Requirements is current; Synchronization Accessibility User Requirements is current; Natural Language Interface Accessibility User Requirements is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "media-accessibility-reqs",
+      "label": "Media Accessibility User Requirements",
+      "status": "current",
+      "revision": "media-accessibility-reqs NOTE-media-accessibility-reqs-20151203 (Note, 2015-12-03)",
+      "posture": "track",
+      "family": "maur"
+    },
+    {
+      "id": "xaur",
+      "label": "XR Accessibility User Requirements",
+      "status": "current",
+      "revision": "xaur NOTE-xaur-20210825 (Note, 2021-08-25)",
+      "posture": "track",
+      "family": "xaur"
+    },
+    {
+      "id": "raur",
+      "label": "RTC Accessibility User Requirements",
+      "status": "current",
+      "revision": "raur NOTE-raur-20210525 (Note, 2021-05-25)",
+      "posture": "track",
+      "family": "raur"
+    },
+    {
+      "id": "ctaur",
+      "label": "Collaboration Tools Accessibility User Requirements",
+      "status": "current",
+      "revision": "ctaur NOTE-ctaur-20250121 (Note, 2025-01-21)",
+      "posture": "track",
+      "family": "ctaur"
+    },
+    {
+      "id": "saur",
+      "label": "Synchronization Accessibility User Requirements",
+      "status": "current",
+      "revision": "saur NOTE-saur-20230628 (Note, 2023-06-28)",
+      "posture": "track",
+      "family": "saur"
+    },
+    {
+      "id": "naur",
+      "label": "Natural Language Interface Accessibility User Requirements",
+      "status": "current",
+      "revision": "naur DNOTE-naur-20220903 (Draft Note, 2022-09-03)",
+      "posture": "track",
+      "family": "naur"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Media Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/media-accessibility-reqs/",
+      "status": "Note",
+      "revision": "media-accessibility-reqs NOTE-media-accessibility-reqs-20151203 (Note, 2015-12-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XR Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/xaur/",
+      "status": "Note",
+      "revision": "xaur NOTE-xaur-20210825 (Note, 2021-08-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RTC Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/raur/",
+      "status": "Note",
+      "revision": "raur NOTE-raur-20210525 (Note, 2021-05-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Collaboration Tools Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/ctaur/",
+      "status": "Note",
+      "revision": "ctaur NOTE-ctaur-20250121 (Note, 2025-01-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Synchronization Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/saur/",
+      "status": "Note",
+      "revision": "saur NOTE-saur-20230628 (Note, 2023-06-28)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Natural Language Interface Accessibility User Requirements",
+      "url": "https://www.w3.org/TR/naur/",
+      "status": "Draft Note",
+      "revision": "naur DNOTE-naur-20220903 (Draft Note, 2022-09-03)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
