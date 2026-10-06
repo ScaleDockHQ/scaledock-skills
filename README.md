@@ -213,6 +213,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | Skill                                                 | Description                                                                                                                                                                                                                                                                              |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`performance-timeline`](skills/performance-timeline) | Performance Timeline: This specification extends the High Resolution Time specification [ HR-TIME-3 ] by providing methods to store and retrieve high resolution performance metric data. Covers Performance Timeline Level 1 (build), High Resolution Time Level 2, High Resolution Tim |
+| [`webnn`](skills/webnn)                               | Web Neural Network API (WebNN): This document describes a dedicated low-level API for neural network inference hardware acceleration. Covers Web Neural Network API (build). Use when running a neural network graph in the browser                                                      |
 
 #### CSS, graphics and media
 
