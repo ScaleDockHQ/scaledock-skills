@@ -113,6 +113,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`standard-schema`](skills/standard-schema) | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                                                                                             |
 | [`mqtt`](skills/mqtt)                       | MQTT: http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.docx (Authoritative) Covers MQTT 5.0, MQTT 3.1.1 (supported). Use when publishing or subscribing with MQTT                          |
 | [`amqp`](skills/amqp)                       | AMQP: OASIS Advanced Message Queuing Protocol (AMQP) Version 1.0, Part 0: Overview OASIS Advanced Message Queuing Protocol (AMQP) Version 1.0 Covers AMQP 1.0. Use when exchanging messages with AMQP 1.0 |
+| [`xregistry`](skills/xregistry)             | xRegistry: - [Implicit Creation of Parent Entities](#design-implicit-creation-of-parent-entities) Covers xRegistry 1.0-rc4 (build). Use when managing metadata with xRegistry                             |
 
 #### Identity and authorization
 
