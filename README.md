@@ -101,12 +101,13 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Events and data
 
-| Skill                                       | Description                                                                                                                                       |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`asyncapi`](skills/asyncapi)               | AsyncAPI 3.1 and 3.0: describe, validate and upgrade event-driven APIs with servers, channels, operations and bindings, with upgrades from 2.x.   |
-| [`cloudevents`](skills/cloudevents)         | CloudEvents 1.0 (1.0.2): JSON, Avro and Protobuf formats and HTTP, Kafka, AMQP, MQTT and NATS bindings, with upgrades from 0.3.                   |
-| [`json-schema`](skills/json-schema)         | JSON Schema 2020-12: write, compose, bundle and validate schemas with `$ref` and `unevaluatedProperties`, with upgrades from draft-04 to 2019-09. |
-| [`standard-schema`](skills/standard-schema) | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                                     |
+| Skill                                       | Description                                                                                                                                                                      |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`asyncapi`](skills/asyncapi)               | AsyncAPI 3.1 and 3.0: describe, validate and upgrade event-driven APIs with servers, channels, operations and bindings, with upgrades from 2.x.                                  |
+| [`cloudevents`](skills/cloudevents)         | CloudEvents 1.0 (1.0.2): JSON, Avro and Protobuf formats and HTTP, Kafka, AMQP, MQTT and NATS bindings, with upgrades from 0.3.                                                  |
+| [`json-schema`](skills/json-schema)         | JSON Schema 2020-12: write, compose, bundle and validate schemas with `$ref` and `unevaluatedProperties`, with upgrades from draft-04 to 2019-09.                                |
+| [`standard-schema`](skills/standard-schema) | Standard Schema v1: accept any validator via `~standard`, and generate JSON Schema with Standard JSON Schema.                                                                    |
+| [`mqtt`](skills/mqtt)                       | MQTT: http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.docx (Authoritative) Covers MQTT 5.0, MQTT 3.1.1 (supported). Use when publishing or subscribing with MQTT |
 
 #### Identity and authorization
 
