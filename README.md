@@ -68,6 +68,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`agntcy-oasf`](skills/agntcy-oasf)                             | Open Agentic Schema Framework: ![GitHub Release (latest by date)](https://img.shields.io/github/v/release/agntcy/oasf) Covers OASF 1.1.0, OASF 1.2 (track preview). Use when describing agent capabilities with OASF |
 | [`langchain-agent-protocol`](skills/langchain-agent-protocol)   | Agent Protocol: Agent Protocol is our attempt at codifying the framework-agnostic APIs that are needed to serve LLM agents in production. Covers Agent Protocol. Use when implementing the LangChain Agent Protocol  |
 | [`open-agent-spec`](skills/open-agent-spec)                     | Open Agent Specification: [![AgentSpec](docs/pyagentspec/source/_static/agentspec-dark.svg)][website-agentspec] Covers Open Agent Specification. Use when describing agents with Agent Spec                          |
+| [`nlweb`](skills/nlweb)                                         | NLWeb: At this point, NLWeb supports 2 APIs at the endpoints /ask and /mcp. Covers NLWeb. Use when exposing a site through the NLWeb REST API                                                                        |
 
 #### APIs and HTTP
 
