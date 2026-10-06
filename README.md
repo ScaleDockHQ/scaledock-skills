@@ -241,6 +241,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`pointer-lock`](skills/pointer-lock)                       | Pointer Lock: This specification defines an API that provides scripted access to raw mouse movement data while locking the target of mouse events to a single element and removing the cursor from view. Covers Pointer Lock, Pointer Lock 2.0 (track preview). Use when locking the poi |
 | [`touch-events`](skills/touch-events)                       | Touch Events: The Touch Events specification defines a set of low-level events that represent one or more points of contact with a touch-sensitive surface, and changes of those points with respect to the surface and any DOM elements displayed upon it (e.g. Covers Touch Events. Us |
 | [`gamepad`](skills/gamepad)                                 | Gamepad: The Gamepad specification defines a low-level interface that represents gamepad devices. Covers Gamepad (track). Use when reading gamepad input                                                                                                                                 |
+| [`generic-sensor`](skills/generic-sensor)                   | Generic Sensor API: This specification defines a framework for exposing sensor data to the Open Web Platform in a consistent way. Covers Generic Sensor API (build), Accelerometer (build), Gyroscope (build), Magnetometer (track), Orientation Sensor (track), Ambient Light Sensor (t |
 
 #### CSS, graphics and media
 

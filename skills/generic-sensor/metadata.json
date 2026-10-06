@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Generic Sensor API. Generic Sensor API is current; Accelerometer is current; Gyroscope is current; Magnetometer is current; Orientation Sensor is current; Ambient Light Sensor is current; Proximity Sensor is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "generic-sensor",
+      "label": "Generic Sensor API",
+      "status": "current",
+      "revision": "generic-sensor CRD-generic-sensor-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "posture": "build",
+      "family": "generic"
+    },
+    {
+      "id": "accelerometer",
+      "label": "Accelerometer",
+      "status": "current",
+      "revision": "accelerometer CRD-accelerometer-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "posture": "build",
+      "family": "accelerometer"
+    },
+    {
+      "id": "gyroscope",
+      "label": "Gyroscope",
+      "status": "current",
+      "revision": "gyroscope CRD-gyroscope-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "posture": "build",
+      "family": "gyroscope"
+    },
+    {
+      "id": "magnetometer",
+      "label": "Magnetometer",
+      "status": "current",
+      "revision": "magnetometer WD-magnetometer-20260514 (Working Draft, 2026-05-14)",
+      "posture": "track",
+      "family": "magnetometer"
+    },
+    {
+      "id": "orientation-sensor",
+      "label": "Orientation Sensor",
+      "status": "current",
+      "revision": "orientation-sensor WD-orientation-sensor-20260514 (Working Draft, 2026-05-14)",
+      "posture": "track",
+      "family": "orientation"
+    },
+    {
+      "id": "ambient-light",
+      "label": "Ambient Light Sensor",
+      "status": "current",
+      "revision": "ambient-light WD-ambient-light-20260514 (Working Draft, 2026-05-14)",
+      "posture": "track",
+      "family": "ambient-light"
+    },
+    {
+      "id": "proximity",
+      "label": "Proximity Sensor",
+      "status": "current",
+      "revision": "proximity WD-proximity-20260514 (Working Draft, 2026-05-14)",
+      "posture": "track",
+      "family": "proximity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Generic Sensor API",
+      "url": "https://www.w3.org/TR/generic-sensor/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "generic-sensor CRD-generic-sensor-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Accelerometer",
+      "url": "https://www.w3.org/TR/accelerometer/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "accelerometer CRD-accelerometer-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Gyroscope",
+      "url": "https://www.w3.org/TR/gyroscope/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "gyroscope CRD-gyroscope-20260514 (Candidate Recommendation Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Magnetometer",
+      "url": "https://www.w3.org/TR/magnetometer/",
+      "status": "Working Draft",
+      "revision": "magnetometer WD-magnetometer-20260514 (Working Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Orientation Sensor",
+      "url": "https://www.w3.org/TR/orientation-sensor/",
+      "status": "Working Draft",
+      "revision": "orientation-sensor WD-orientation-sensor-20260514 (Working Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Ambient Light Sensor",
+      "url": "https://www.w3.org/TR/ambient-light/",
+      "status": "Working Draft",
+      "revision": "ambient-light WD-ambient-light-20260514 (Working Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Proximity Sensor",
+      "url": "https://www.w3.org/TR/proximity/",
+      "status": "Working Draft",
+      "revision": "proximity WD-proximity-20260514 (Working Draft, 2026-05-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
