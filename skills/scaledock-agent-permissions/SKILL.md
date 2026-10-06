@@ -4,7 +4,7 @@ description: Give AI agents least-privilege, auditable access in a ScaleDock pro
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # ScaleDock agent permissions
@@ -27,6 +27,7 @@ Agents act for users, so every agent surface needs to know who the user is, whic
 npx skills add ScaleDockHQ/scaledock-skills --skill owasp-agentic --skill opentelemetry-genai
 npx skills add ScaleDockHQ/scaledock-skills --skill a2a --skill webmcp --skill ag-ui --skill ap2 --skill web-bot-auth   # the surfaces you selected
 npx skills add ScaleDockHQ/scaledock-skills --skill ocsf --skill eu-ai-act --skill openfeature --skill cedar             # when they apply
+npx skills add ScaleDockHQ/scaledock-skills --skill privacy-pass --skill webdriver --skill prompt-api
 npx skills add ScaleDockHQ/PermDock
 ```
 
