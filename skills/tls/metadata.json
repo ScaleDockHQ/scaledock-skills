@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers The Transport Layer Security (TLS) Protocol Version 1.3. RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3 is current; RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 is supported; RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) is current; RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens is current; TLS Encrypted Client Hello is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc8446",
+      "label": "RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3",
+      "status": "current",
+      "revision": "RFC 8446 (PROPOSED STANDARD, August 201)",
+      "family": "tls"
+    },
+    {
+      "id": "rfc5246",
+      "label": "RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2",
+      "status": "supported",
+      "revision": "RFC 5246 (PROPOSED STANDARD, August 200)",
+      "family": "tls"
+    },
+    {
+      "id": "rfc9325",
+      "label": "RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)",
+      "status": "current",
+      "revision": "RFC 9325 (BEST CURRENT PRACTICE, November 2)",
+      "family": "bcp195"
+    },
+    {
+      "id": "rfc8705",
+      "label": "RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "status": "current",
+      "revision": "RFC 8705 (PROPOSED STANDARD, February 2)",
+      "family": "mtls"
+    },
+    {
+      "id": "ech-preview",
+      "label": "TLS Encrypted Client Hello",
+      "status": "preview",
+      "revision": "draft-ietf-tls-esni-25 (WG draft, 2026-10-06)",
+      "posture": "track",
+      "family": "tls"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8446 (PROPOSED STANDARD, August 201)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2",
+      "url": "https://www.rfc-editor.org/rfc/rfc5246.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 5246 (PROPOSED STANDARD, August 200)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9325.html",
+      "status": "BEST CURRENT PRACTICE",
+      "revision": "RFC 9325 (BEST CURRENT PRACTICE, November 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens",
+      "url": "https://www.rfc-editor.org/rfc/rfc8705.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8705 (PROPOSED STANDARD, February 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "TLS Encrypted Client Hello",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-tls-esni-25",
+      "status": "WG draft",
+      "revision": "draft-ietf-tls-esni-25 (WG draft, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
