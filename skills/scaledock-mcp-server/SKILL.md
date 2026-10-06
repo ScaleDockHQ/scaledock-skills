@@ -4,7 +4,7 @@ description: Build or harden a ScaleDock MCP server that follows the MCP base pr
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # ScaleDock MCP server
@@ -23,7 +23,7 @@ An MCP server that is a correct OAuth 2.1 resource server, acts as the signed-in
 ## Skills to install
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills --skill mcp --skill mcp-authorization --skill oauth --skill jwt --skill problem-details
+npx skills add ScaleDockHQ/scaledock-skills --skill mcp --skill mcp-authorization --skill oauth --skill jwt --skill problem-details --skill json-rpc --skill server-sent-events
 npx skills add ScaleDockHQ/PermDock
 ```
 
