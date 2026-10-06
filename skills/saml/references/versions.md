@@ -13,6 +13,8 @@ Statuses: **current** is the default target; **supported** is released and still
 
 There is no preview line. The OASIS Security Services (SAML) TC "was closed by Project Administration on 08 July 2023 and is no longer active", and no SAML 2.x successor draft was found on the TC page. Do not invent a "SAML 2.1".
 
+XML Signature Syntax and Processing and Exclusive XML Canonicalization are not SAML version lines. They are the `xml-signature` skill. SAML signatures depend on them; follow that skill when signing or verifying XML.
+
 ## Which version to use
 
 - Default to `2.0`, and always apply Errata 05. Errata 05 is OASIS Approved Errata: it changes normative text, such as when `Issuer` is required (E17), how multiple assertions are evaluated (E26), clock skew (E92), `ds:Object` rejection (E91) and CBC decryption (E93).

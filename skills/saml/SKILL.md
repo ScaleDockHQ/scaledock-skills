@@ -18,7 +18,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 
