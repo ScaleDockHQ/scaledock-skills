@@ -17,7 +17,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -112,6 +112,7 @@ x402 is an open standard for internet-native payments, maintained in the x402 Fo
 - `ap2` for agent payment mandates: `npx skills add ScaleDockHQ/scaledock-skills --skill ap2`.
 - `agentic-commerce-protocol` for agent checkout flows: `npx skills add ScaleDockHQ/scaledock-skills --skill agentic-commerce-protocol`.
 - `ucp` for the Universal Commerce Protocol: `npx skills add ScaleDockHQ/scaledock-skills --skill ucp`.
+- `ethereum-eips`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill ethereum-eips`
 
 ## Sources
 
