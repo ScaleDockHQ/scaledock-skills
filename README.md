@@ -313,6 +313,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`media-fragments`](skills/media-fragments)                               | Media Fragments: This document describes the Media Fragments 1.0 (basic) specification. Covers Media Fragments URI 1.0 (basic). Use when addressing a fragment of a media resource                                                                                                       |
 | [`media-ontology`](skills/media-ontology)                                 | Ontology for Media Resources: This document defines the Ontology for Media Resources 1.0. Covers Ontology for Media Resources 1.0, Metadata API for Media Resources 1.0. Use when describing media resources                                                                             |
 | [`xml`](skills/xml)                                                       | XML: The Extensible Markup Language (XML) is a subset of SGML that is completely described in this document. Covers Extensible Markup Language (XML) 1.0 (Fifth Edition), Namespaces in XML 1.0 (Third Edition), XML Inclusions (XInclude) Version 1.0 (Second Edition), XML Base (Secon |
+| [`xml-schema`](skills/xml-schema)                                         | XML Schema: This document specifies the XML Schema Definition Language, which offers facilities for describing the structure and constraining the contents of XML documents, including those which exploit the XML Namespace facility. Covers W3C XML Schema Definition Language (XSD) 1 |
 
 #### Documents and publishing
 
