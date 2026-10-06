@@ -191,6 +191,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`unicode-security`](skills/unicode-security)           | Unicode Security Mechanisms (UTS #39): the General Profile for Identifiers shall do so by conforming to either UTS-39-C1-1 or UTS-39-C1-2 . Covers UTS #39. Use when detecting confusable or restricted Unicode text                                                                     |
 | [`sarif`](skills/sarif)                                 | SARIF: https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/sarif-v2.1.0-errata01-os-complete.docx Covers SARIF 2.1.0. Use when exchanging static analysis results                                                                                                                 |
 | [`stix-taxii`](skills/stix-taxii)                       | STIX and TAXII: https://docs.oasis-open.org/cti/stix/v2.1/errata01/csd01/stix-v2.1-errata01-csd01-complete.md Covers STIX 2.1, TAXII 2.1. Use when sharing cyber threat intelligence                                                                                                     |
+| [`cacao`](skills/cacao)                                 | CACAO: https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.docx (Authoritative) Covers CACAO 2.0. Use when writing security playbooks                                                                                                            |
 
 #### Observability and operations
 
