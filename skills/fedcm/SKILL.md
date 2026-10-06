@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -61,6 +61,8 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Related skills
 
 Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+
+- `openid4vc`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill openid4vc`
 
 ## Sources
 
