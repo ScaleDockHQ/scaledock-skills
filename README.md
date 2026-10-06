@@ -476,6 +476,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`buildpacks`](skills/buildpacks)                             | Cloud Native Buildpacks: A platform orchestrates a lifecycle to make buildpack functionality available to end-users such as application developers. Covers Buildpacks platform API, Buildpack API. Use when implementing a buildpack or platform                                               |
 | [`devfile`](skills/devfile)                                   | Devfile: 2.3.0 Search docs Theme Registry Docs Get Started API reference Devfile schema Search docs Covers Devfile 2.3. Use when writing a devfile                                                                                                                                             |
 | [`cnab`](skills/cnab)                                         | CNAB: The Cloud Native Application Bundle (CNAB) is a _standard packaging format_ for multi-component distributed applications. Covers CNAB 1.2.0. Use when packaging a cloud native application bundle                                                                                        |
+| [`backstage-catalog`](skills/backstage-catalog)               | Backstage catalog: Descriptor Format of Catalog Entities \| Backstage Software Catalog and Developer Platform Covers Backstage catalog descriptor. Use when describing a Backstage catalog entity                                                                                              |
 
 #### Domain verticals
 
