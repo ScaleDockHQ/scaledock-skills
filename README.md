@@ -306,6 +306,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`linked-data-platform`](skills/linked-data-platform)                     | Linked Data Platform: Linked Data Platform (LDP) defines a set of rules for HTTP operations on web resources, some based on RDF , to provide an architecture for read-write Linked Data on the web. Covers Linked Data Platform 1.0. Use when reading or writing LDP resources           |
 | [`linked-data-notifications`](skills/linked-data-notifications)           | Linked Data Notifications: Linked Data Notifications is a protocol that describes how servers (receivers) can have messages pushed to them by applications (senders), as well as how other applications (consumers) may retrieve those messages. Covers Linked Data Notifications. Use w |
 | [`web-of-things`](skills/web-of-things)                                   | Web of Things: The W3C Web of Things (WoT) enables interoperability across IoT platforms and application domains. Covers Web of Things (WoT) Architecture 1.1, Web of Things (WoT) Thing Description 1.1, Web of Things (WoT) Thing Description 2.0 (track preview), Web of Things (WoT) |
+| [`scxml`](skills/scxml)                                                   | SCXML: This document describes SCXML, or the "State Chart extensible Markup Language". Covers State Chart XML (SCXML): State Machine Notation for Control Abstraction. Use when writing a state machine in SCXML                                                                         |
 
 #### Documents and publishing
 
