@@ -203,6 +203,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`act-rules-format`](skills/act-rules-format)                               | Accessibility Conformance Testing (ACT) Rules Format: Accessibility Conformance Testing (ACT) Rules Format 1.1 defines a format for writing accessibility test rules. Covers Accessibility Conformance Testing (ACT) Rules Format 1.1. Use when writing or running an ACT rule           |
 | [`wai-adapt`](skills/wai-adapt)                                             | WAI-Adapt: This specification provides web content authors a standard approach to support web users with various cognitive and learning disabilities who: Customarily communicate using symbolic languages generally known as Augmentative and Alternative Communications ( AAC ); Need  |
 | [`accessibility-user-requirements`](skills/accessibility-user-requirements) | W3C accessibility user requirements: This document presents the accessibility requirements users with disabilities have with respect to audio and video on the web. Covers Media Accessibility User Requirements (track), XR Accessibility User Requirements (track), RTC Accessibility  |
+| [`cognitive-accessibility`](skills/cognitive-accessibility)                 | Making Content Usable for People with Cognitive and Learning Disabilities: This document is for people who make web content (web pages) and web applications. Covers Making Content Usable for People with Cognitive and Learning Disabilities (track), Cognitive Accessibility Roadmap  |
 
 #### Web application APIs
 
