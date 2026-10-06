@@ -390,6 +390,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`unicode-segmentation`](skills/unicode-segmentation)                     | Unicode Text Segmentation (UAX #29): implementations can produce these divisions. Covers UAX #29. Use when splitting text into graphemes, words or sentences                                                                                                                             |
 | [`unicode-identifiers`](skills/unicode-identifiers)                       | Unicode Identifier and Pattern Syntax (UAX #31): for the use of Unicode in the definitions of general-purpose identifiers, immutable identifiers, hashtag identifiers, and in Covers UAX #31. Use when deciding which characters are identifiers                                         |
 | [`unicode-emoji`](skills/unicode-emoji)                                   | Unicode Emoji (UTS #51): Please submit corrigenda and other comments with the online reporting form [ Feedback ]. Covers UTS #51. Use when handling emoji sequences                                                                                                                      |
+| [`unicode-bidi`](skills/unicode-bidi)                                     | Unicode Bidirectional Algorithm (UAX #9): This annex describes specifications for the positioning of characters in text containing characters flowing from right Covers UAX #9. Use when ordering bidirectional text                                                                     |
 
 #### Documents and publishing
 
