@@ -264,6 +264,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`streams`](skills/streams)                                 | Streams: This specification provides APIs for creating, composing, and consuming streams of data that map efficiently to low-level I/O primitives. Covers Streams Living Standard. Use when reading or writing streams                                                                   |
 | [`encoding`](skills/encoding)                               | Encoding: The Encoding Standard defines encodings and their JavaScript API. Covers Encoding Living Standard. Use when encoding or decoding text                                                                                                                                          |
 | [`storage`](skills/storage)                                 | Storage: The Storage Standard defines an API for persistent storage and quota estimates, as well as the platform storage architecture. Covers Storage Living Standard. Use when using the Storage standard                                                                               |
+| [`notifications`](skills/notifications)                     | Notifications: This standard defines an API to display notifications to the end user, typically outside the top-level browsing context’s viewport. Covers Notifications Living Standard. Use when showing a notification                                                                 |
 
 #### CSS, graphics and media
 
