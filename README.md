@@ -208,6 +208,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`mta-sts`](skills/mta-sts)                                 | SMTP MTA Strict Transport Security (MTA-STS): SMTP MTA Strict Transport Security (MTA-STS) Covers RFC 8461 SMTP MTA Strict Transport Security (MTA-STS), RFC 8460 SMTP TLS Reporting. Use when publishing an MTA-STS policy                                                             |
 | [`arc`](skills/arc)                                         | The Authenticated Received Chain (ARC) Protocol: The Authenticated Received Chain (ARC) Protocol Covers RFC 8617 The Authenticated Received Chain (ARC) Protocol. Use when sealing or validating an authenticated received chain                                                        |
 | [`internet-message-format`](skills/internet-message-format) | Internet Message Format: Internet Message Format Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME |
+| [`jmap`](skills/jmap)                                       | The JSON Meta Application Protocol (JMAP): The JSON Meta Application Protocol (JMAP) Covers RFC 8620 The JSON Meta Application Protocol (JMAP), RFC 8621 The JSON Meta Application Protocol (JMAP) for Mail. Use when synchronizing mail with JMAP                                      |
 
 #### Web platform
 
