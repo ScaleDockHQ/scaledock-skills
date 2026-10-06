@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Publication Manifest. Publication Manifest is current; Audiobooks is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "pub-manifest",
+      "label": "Publication Manifest",
+      "status": "current",
+      "revision": "pub-manifest REC-json-ld-20140116 (Recommendation, 2020-11-10)",
+      "family": "manifest"
+    },
+    {
+      "id": "audiobooks",
+      "label": "Audiobooks",
+      "status": "current",
+      "revision": "audiobooks REC-audiobooks-20201110 (Recommendation, 2020-11-10)",
+      "family": "audiobooks"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Publication Manifest",
+      "url": "https://www.w3.org/TR/pub-manifest/",
+      "status": "Recommendation",
+      "revision": "pub-manifest REC-json-ld-20140116 (Recommendation, 2020-11-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Audiobooks",
+      "url": "https://www.w3.org/TR/audiobooks/",
+      "status": "Recommendation",
+      "revision": "audiobooks REC-audiobooks-20201110 (Recommendation, 2020-11-10)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
