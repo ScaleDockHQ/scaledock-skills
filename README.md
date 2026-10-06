@@ -217,6 +217,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openchain`](skills/openchain)                         | OpenChain: Learn More: [htttps://www.openchainproject.org](htttps://www.openchainproject.org) Covers OpenChain ISO 5230, OpenChain ISO 18974. Use when conforming to OpenChain license or security assurance                                                                             |
 | [`trusted-publishing`](skills/trusted-publishing)       | Trusted publishing: Trusted publishing for npm packages \| npm Docs Skip to search Skip to content npm Docs npmjs.com Status Support Covers npm trusted publishing, PyPI trusted publishing. Use when publishing packages with OIDC trusted publishers                                   |
 | [`nist-pqc`](skills/nist-pqc)                           | NIST PQC: Laurie E. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography                                                                                                                                                                |
+| [`nist-800-190`](skills/nist-800-190)                   | NIST SP 800-190: Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director Covers SP 800-190. Use when securing application containers                                                                                                          |
 
 #### Observability and operations
 
