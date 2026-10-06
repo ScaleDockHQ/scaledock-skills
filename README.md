@@ -84,6 +84,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`json`](skills/json)                                       | The JavaScript Object Notation (JSON) Data Interchange Format: The JavaScript Object Notation (JSON) Data Interchange Format Covers RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format, RFC 7493 The I-JSON Message Format. Use when producing or parsing JSON text |
 | [`json-pointer`](skills/json-pointer)                       | JavaScript Object Notation (JSON) Pointer: JavaScript Object Notation (JSON) Pointer Covers RFC 6901 JavaScript Object Notation (JSON) Pointer. Use when evaluating a JSON Pointer                                                                                                      |
 | [`json-patch`](skills/json-patch)                           | JavaScript Object Notation (JSON) Patch: JavaScript Object Notation (JSON) Patch Covers RFC 6902 JavaScript Object Notation (JSON) Patch, RFC 7396 JSON Merge Patch. Use when applying a JSON Patch or a merge patch                                                                    |
+| [`jsonpath`](skills/jsonpath)                               | JSONPath: Query Expressions for JSON: JSONPath defines a string syntax for selecting and extracting JSON (RFC 8259) values from within a given JSON value. Covers RFC 9535 JSONPath: Query Expressions for JSON. Use when querying JSON with JSONPath                                   |
 
 #### Events and data
 
