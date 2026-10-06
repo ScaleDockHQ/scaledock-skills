@@ -82,6 +82,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`standard-webhooks`](skills/standard-webhooks)             | Standard Webhooks 1.0: sign, send and verify webhooks with v1 HMAC or v1a ed25519, replay protection and retries.                                                                                                                                                                       |
 | [`typespec`](skills/typespec)                               | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                                                                                                                                                                   |
 | [`json`](skills/json)                                       | The JavaScript Object Notation (JSON) Data Interchange Format: The JavaScript Object Notation (JSON) Data Interchange Format Covers RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format, RFC 7493 The I-JSON Message Format. Use when producing or parsing JSON text |
+| [`json-pointer`](skills/json-pointer)                       | JavaScript Object Notation (JSON) Pointer: JavaScript Object Notation (JSON) Pointer Covers RFC 6901 JavaScript Object Notation (JSON) Pointer. Use when evaluating a JSON Pointer                                                                                                      |
 
 #### Events and data
 

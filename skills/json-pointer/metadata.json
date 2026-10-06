@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JavaScript Object Notation (JSON) Pointer. RFC 6901 JavaScript Object Notation (JSON) Pointer is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc6901",
+      "label": "RFC 6901 JavaScript Object Notation (JSON) Pointer",
+      "status": "current",
+      "revision": "RFC 6901 (PROPOSED STANDARD, April 2013)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6901 JavaScript Object Notation (JSON) Pointer",
+      "url": "https://www.rfc-editor.org/rfc/rfc6901.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6901 (PROPOSED STANDARD, April 2013)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
