@@ -303,6 +303,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`rdfa`](skills/rdfa)                                                     | RDFa: The current Web is primarily made up of an enormous number of documents that have been created using HTML. Covers RDFa Core 1.1 - Third Edition, RDFa Lite 1.1 - Second Edition, HTML+RDFa 1.1 - Second Edition. Use when embedding RDF in HTML                                    |
 | [`profiles-vocabulary`](skills/profiles-vocabulary)                       | Profiles Vocabulary: The Profiles Vocabulary is an RDF vocabulary created to allow the machine-readable description of profiles of standards for information resources. Covers The Profiles Vocabulary 1.0 (track), Content Negotiation by Profile (track). Use when negotiating or desc |
 | [`web-annotation`](skills/web-annotation)                                 | Web Annotation: Annotations are typically used to convey information about a resource or associations between resources. Covers Web Annotation Data Model, Web Annotation Protocol, Web Annotation Vocabulary. Use when creating or exchanging annotations                               |
+| [`linked-data-platform`](skills/linked-data-platform)                     | Linked Data Platform: Linked Data Platform (LDP) defines a set of rules for HTTP operations on web resources, some based on RDF , to provide an architecture for read-write Linked Data on the web. Covers Linked Data Platform 1.0. Use when reading or writing LDP resources           |
 
 #### Documents and publishing
 
