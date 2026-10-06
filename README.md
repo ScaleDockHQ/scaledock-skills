@@ -99,6 +99,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webdav`](skills/webdav)                                   | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV): HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) Covers RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV), RFC 4791 Calendaring Extensions to WebDAV (CalDAV),  |
 | [`odata`](skills/odata)                                     | OData: https://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.docx Covers OData 4.01, OData 4.0 (supported). Use when serving or querying an OData service                                                                                        |
 | [`json-rpc`](skills/json-rpc)                               | JSON-RPC: JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. Covers JSON-RPC 2.0. Use when calling procedures over JSON-RPC 2.0                                                                                                                                 |
+| [`grpc`](skills/grpc)                                       | gRPC: This document serves as a detailed description for an implementation of gRPC carried over HTTP2 framing . Covers gRPC over HTTP/2. Use when speaking the gRPC over HTTP/2 protocol                                                                                                 |
 
 #### Events and data
 
