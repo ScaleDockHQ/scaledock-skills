@@ -199,6 +199,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-platform-design-principles`](skills/web-platform-design-principles) | Web Platform Design Principles: This document contains a set of design principles to be used when designing web platform technologies. Covers Web Platform Design Principles (track). Use when designing or reviewing a web platform feature                                             |
 | [`attribution`](skills/attribution)                                       | Attribution API: This specifies a browser API for attribution. Covers Attribution Level 1 (track). Use when measuring conversions without cross-site identifiers                                                                                                                         |
 | [`web-sustainability-guidelines`](skills/web-sustainability-guidelines)   | Web Sustainability Guidelines (WSG): Web Sustainability Guidelines ( WSG ) provide actionable recommendations to help digital teams make informed, sustainable decisions. Covers Web Sustainability Guidelines (WSG) (track). Use when reviewing a site or product against the Web Susta |
+| [`atag`](skills/atag)                                                     | Authoring Tool Accessibility Guidelines (ATAG): The Authoring Tool Accessibility Guidelines (ATAG) 2.0 provides guidelines for designing web content authoring tools that are both more accessible to authors with disabilities (Part A) and designed to enable, support, and promote th |
 
 #### Web application APIs
 
