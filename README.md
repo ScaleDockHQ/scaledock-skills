@@ -141,6 +141,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`credential-management`](skills/credential-management) | Credential Management: This specification describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use. Covers Credential Management Level 1 (track), A Well-Known URL f |
 | [`dbsc`](skills/dbsc)                                   | Device Bound Session Credentials (DBSC): Device Bound Sessions Credentials (DBSC) aims to prevent hijacking via cookie theft by building a protocol and infrastructure that allows a user agent to assert possession of a securely-stored private key. Covers Device Bound Session Crede |
 | [`linked-web-storage`](skills/linked-web-storage)       | Linked Web Storage: The Linked Web Storage Protocol specification aims to provide applications with secure and permissioned access to externally stored data in an interoperable way. Covers Linked Web Storage Protocol 1.0 (track), LWS 1.0 Authentication Suite: OpenID Connect (trac |
+| [`fido-ctap`](skills/fido-ctap)                         | FIDO CTAP: This specification describes an application layer protocol for communication between a roaming authenticator and another client/platform, as well as bindings of this application protocol to a variety of transport protocols using different physical media. Covers CTAP 2. |
 
 #### Security and supply chain
 
