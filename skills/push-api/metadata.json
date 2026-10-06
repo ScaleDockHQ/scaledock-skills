@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Push API. Push API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "push-api",
+      "label": "Push API",
+      "status": "current",
+      "revision": "push-api WD-push-api-20261005 (Working Draft, 2026-10-05)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Push API",
+      "url": "https://www.w3.org/TR/push-api/",
+      "status": "Working Draft",
+      "revision": "push-api WD-push-api-20261005 (Working Draft, 2026-10-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Generic Event Delivery Using HTTP Push",
+      "url": "https://www.rfc-editor.org/rfc/rfc8030.html",
+      "status": "RFC",
+      "revision": "RFC 8030",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Message Encryption for Web Push",
+      "url": "https://www.rfc-editor.org/rfc/rfc8291.html",
+      "status": "RFC",
+      "revision": "RFC 8291",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Voluntary Application Server Identification (VAPID) for Web Push",
+      "url": "https://www.rfc-editor.org/rfc/rfc8292.html",
+      "status": "RFC",
+      "revision": "RFC 8292",
+      "checked": "2026-10-06"
+    }
+  ]
+}

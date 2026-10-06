@@ -1,0 +1,57 @@
+# Requirements from the pinned text
+
+These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+
+## Push API
+
+Source: https://www.w3.org/TR/push-api/
+
+The Push API enables sending of a push message to a web application via a push service . An application server can send a push message at any time, even when a web application or user agent is inactive. The push service ensures reliable and efficient delivery to the user agent . Push messages are delivered to a Service Worker that runs in the origin of the web application, which can use the information in the message to update local state or display a notification to the user. This specification is designed for use with the web push protocol , which describes how an application server or user agent interacts with a push service .
+
+- **3.4.** It MUST be the absolute URL exposed by the push service where the application server can send push messages to.
+- **3.4.** A push endpoint MUST uniquely identify the push subscription .
+- **3.4.** When set, it MUST be the time, in milliseconds since 00:00:00 UTC on 1 January 1970, at which the subscription will be deactivated .
+- **3.4.** The user agent SHOULD attempt to refresh the push subscription before the subscription expires.
+- **3.4.** If the user agent has to change the keys of a push subscription for any reason and the push subscription 's associated service worker registration is non-null, it MUST refresh the push subscription .
+- **3.4.2.** When this happens, the user agent MUST run the steps to create a push subscription given the PushSubscriptionOptions that were provided for creating the current push subscription , and set the new push subscription 's scope to the original subscription's scope .
+- **3.4.2.** The new push subscription MUST have a key pair that's different from the original subscription.
+- **3.4.2.** When successful, user agent then MUST fire the " pushsubscriptionchange " event with the service worker registration associated with the push subscription as registration , a PushSubscription instance representing the initial push subscription as oldSubscription and a PushSubscription instance representing the new push subscription as newSubscription .
+
+## Generic Event Delivery Using HTTP Push
+
+Source: https://www.rfc-editor.org/rfc/rfc8030.html
+
+- **document.** Conventions and Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ].
+- **document.** Connecting to the Push Service The push service MUST use HTTP over Transport Layer Security (TLS) [ RFC2818 ] following the recommendations in [ RFC7525 ].
+- **document.** Middleboxes SHOULD comply with REQ-5 in [ RFC5382 ], which states that "the value of the 'established connection idle-timeout' MUST NOT be less than 2 hours 4 minutes".
+- **document.** A URI for the push message subscription resource that was created in response to the request MUST be returned in the Location header field.
+- **document.** The push service MUST provide a URI for the push resource corresponding to the push message subscription in a link relation of type "urn:ietf:params:push".
+- **document.** Confidentiality protection and application server authentication MUST be used to ensure that this URI is not disclosed to unauthorized recipients ( Section 8.3 ).
+- **document.** When a subscription set is returned in a push message subscription response, the user agent SHOULD include this subscription set in a link relation of type "urn:ietf:params:push:set" in subsequent requests to create new push message subscriptions.
+- **document.** POST /subscribe HTTP/1.1 Host: push.example.net Link: </subscription-set/4UXwi2Rd7jGS7gp5cuutF8ZldnEuvbOy>; rel="urn:ietf:params:push:set" The push service SHOULD return the same subscription set in its response, although it MAY return a new subscription set if it is unable to reuse the one provided by the user agent.
+
+## Message Encryption for Web Push
+
+Source: https://www.rfc-editor.org/rfc/rfc8291.html
+
+- **document.** Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here.
+- **document.** An application MUST use an authenticated, confidentiality-protected communications medium for this purpose.
+- **document.** A user agent MUST generate and provide a hard-to-guess sequence of 16 octets that is used for authentication of push messages.
+- **document.** This SHOULD be generated by a cryptographically strong random number generator [ RFC4086 ].
+- **document.** Restrictions on Use of "aes128gcm" Content Coding An application server MUST encrypt a push message with a single record.
+- **document.** An application server MUST set the "rs" parameter in the "aes128gcm" content coding header to a size that is greater than the sum of the lengths of the plaintext, the padding delimiter (1 octet), any padding, and the authentication tag (16 octets).
+- **document.** A push message MUST include the application server ECDH public key in the "keyid" parameter of the encrypted content coding header.
+- **document.** An application server MUST NOT use other content encodings for push messages.
+
+## Voluntary Application Server Identification (VAPID) for Web Push
+
+Source: https://www.rfc-editor.org/rfc/rfc8292.html
+
+- **document.** Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here.
+- **document.** This key pair MUST be usable with the Elliptic Curve Digital Signature Algorithm (ECDSA) over the P-256 curve [ FIPS186 ].
+- **document.** The token includes a number of claims as follows: o An "aud" (Audience) claim in the token MUST include the Unicode serialization of the origin ( Section 6.1 of [RFC6454] ) of the push resource URL.
+- **document.** o An "exp" (Expiry) claim MUST be included with the time after which the token expires.
+- **document.** An "exp" claim MUST NOT be more than 24 hours from the Thomson & Beverloo Standards Track [Page 4] RFC 8292 VAPID for Web Push November 2017 time of the request.
+- **document.** A push service MUST NOT use information from an invalid token.
+- **document.** The JWT MUST use a JSON Web Signature (JWS) [ RFC7515 ].
+- **document.** The signature MUST use ECDSA on the NIST P-256 curve [ FIPS186 ], which is identified as "ES256" [ RFC7518 ].

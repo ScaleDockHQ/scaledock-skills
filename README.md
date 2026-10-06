@@ -219,6 +219,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`writing-assistance-apis`](skills/writing-assistance-apis) | Writing Assistance APIs: The summarizer, writer, and rewriter APIs provide high-level interfaces to call on a browser or operating system’s built-in language model to help with writing tasks. Covers Writing Assistance APIs (track), Translator and Language Detector APIs (track). U |
 | [`web-app-manifest`](skills/web-app-manifest)               | Web Application Manifest: This specification defines a JSON-based file format that provides developers with a centralized place to put metadata associated with a web application. Covers Web Application Manifest (track). Use when writing or parsing a web app manifest               |
 | [`service-workers`](skills/service-workers)                 | Service Workers: The core of this specification is a worker that wakes to receive events. Covers Service Workers Nightly (build). Use when implementing a service worker or its registration                                                                                             |
+| [`push-api`](skills/push-api)                               | Push API: The Push API enables sending of a push message to a web application via a push service . Covers Push API (track). Use when subscribing to or delivering a web push message                                                                                                     |
 
 #### CSS, graphics and media
 
