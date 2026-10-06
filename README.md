@@ -261,6 +261,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`media-capabilities`](skills/media-capabilities) | Media Capabilities: This specification intends to provide APIs to allow websites to make an optimal decision when picking media content for the user. Covers Media Capabilities (track). Use when querying decoding or encoding support                                                  |
 | [`picture-in-picture`](skills/picture-in-picture) | Picture-in-Picture: This specification provides APIs to allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device. Covers Picture-in-Pict |
 | [`remote-playback`](skills/remote-playback)       | Remote Playback API: This specification defines an API extending the HTMLMediaElement that enables controlling remote playback of media from a web page. Covers Remote Playback API (build). Use when playing media on a remote device                                                   |
+| [`presentation-api`](skills/presentation-api)     | Presentation API: This specification defines an API to enable Web content to access presentation displays and use them for presenting Web content. Covers Presentation API (build). Use when presenting content on a second screen                                                       |
 
 #### Data and semantics
 
