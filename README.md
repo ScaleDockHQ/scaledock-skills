@@ -309,6 +309,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`scxml`](skills/scxml)                                                   | SCXML: This document describes SCXML, or the "State Chart extensible Markup Language". Covers State Chart XML (SCXML): State Machine Notation for Control Abstraction. Use when writing a state machine in SCXML                                                                         |
 | [`rif`](skills/rif)                                                       | RIF: This document, developed by the Rule Interchange Format (RIF) Working Group , specifies RIF-Core, a common subset of RIF-BLD and RIF-PRD based on RIF-DTB 1.0. Covers RIF Core Dialect (Second Edition), RIF Basic Logic Dialect (Second Edition), RIF Production Rule Dialect (Sec |
 | [`emotionml`](skills/emotionml)                                           | EmotionML: As the Web is becoming ubiquitous, interactive, and multimodal, technology needs to deal increasingly with human factors, including emotions. Covers Emotion Markup Language (EmotionML) 1.0. Use when annotating emotion                                                     |
+| [`multimodal-architecture`](skills/multimodal-architecture)               | Multimodal Architecture: This document describes a loosely coupled architecture for multimodal user interfaces, which allows for co-resident and distributed implementations, and focuses on the role of markup and scripting, and the use of well defined interfaces between its consti |
 
 #### Documents and publishing
 
