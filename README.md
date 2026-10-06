@@ -404,7 +404,9 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Developer conventions
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                               | Description                                                                                                                                                                                            |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`source-maps`](skills/source-maps) | Source maps (ECMA-426): + 4 Notational Conventions + 4.1 Algorithm Conventions + 4.1.1 Implicit Completions 4.1.1.1 GetTheAnswer ( input ) Covers ECMA-426. Use when writing or consuming a source map |
 
 #### Domain verticals
 
