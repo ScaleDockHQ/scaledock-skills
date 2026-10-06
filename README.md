@@ -174,6 +174,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`eat`](skills/eat)                                     | The Entity Attestation Token (EAT): An Entity Attestation Token (EAT) provides an attested claims set that describes the state and characteristics of an entity, a device such as a smartphone, an Internet of Things (IoT) device, network equipment, or such. Covers RFC 9711 The Enti |
 | [`dns-over-https`](skills/dns-over-https)               | DNS Queries over HTTPS (DoH): DNS Queries over HTTPS (DoH) Covers RFC 8484 DNS Queries over HTTPS (DoH), RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records). Use when resolving DNS over HTTPS                                           |
 | [`privacy-pass`](skills/privacy-pass)                   | The Privacy Pass Architecture: This document specifies the Privacy Pass architecture and requirements for its constituent protocols used for authorization based on privacy-preserving authentication mechanisms. Covers RFC 9576 The Privacy Pass Architecture, RFC 9577 The Privacy Pa |
+| [`oblivious-http`](skills/oblivious-http)               | Oblivious HTTP: This document describes Oblivious HTTP, a protocol for forwarding encrypted HTTP messages. Covers RFC 9458 Oblivious HTTP. Use when sending a request through an oblivious relay                                                                                         |
 
 #### Observability and operations
 
