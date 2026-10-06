@@ -253,7 +253,9 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### CSS, graphics and media
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                     | Description                                                                                                                                                                                                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`webrtc`](skills/webrtc) | WebRTC: This document defines a set of ECMAScript APIs in WebIDL to allow media and generic application data to be sent to and received from another browser or device implementing the appropriate set of real-time protocols. Covers WebRTC: Real-Time Communication in Browsers, Iden |
 
 #### Data and semantics
 

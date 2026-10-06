@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebRTC. WebRTC: Real-Time Communication in Browsers is current; Identifiers for WebRTC's Statistics API is current; WebRTC Encoded Transform is current; Scalable Video Coding (SVC) Extension for WebRTC is current; WebRTC Priority Control API is current; Identity for WebRTC 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "webrtc",
+      "label": "WebRTC: Real-Time Communication in Browsers",
+      "status": "current",
+      "revision": "webrtc REC-webrtc-20250313 (Recommendation, 2025-03-13)",
+      "family": "webrtc"
+    },
+    {
+      "id": "webrtc-stats",
+      "label": "Identifiers for WebRTC's Statistics API",
+      "status": "current",
+      "revision": "webrtc-stats CRD-webrtc-stats-20250925 (Candidate Recommendation Draft, 2025-09-25)",
+      "posture": "build",
+      "family": "stats"
+    },
+    {
+      "id": "webrtc-encoded-transform",
+      "label": "WebRTC Encoded Transform",
+      "status": "current",
+      "revision": "webrtc-encoded-transform WD-webrtc-encoded-transform-20260625 (Working Draft, 2026-06-25)",
+      "posture": "track",
+      "family": "encoded-transform"
+    },
+    {
+      "id": "webrtc-svc",
+      "label": "Scalable Video Coding (SVC) Extension for WebRTC",
+      "status": "current",
+      "revision": "webrtc-svc WD-webrtc-svc-20260914 (Working Draft, 2026-09-14)",
+      "posture": "track",
+      "family": "svc"
+    },
+    {
+      "id": "webrtc-priority",
+      "label": "WebRTC Priority Control API",
+      "status": "current",
+      "revision": "webrtc-priority CR-webrtc-priority-20210318 (Candidate Recommendation Snapshot, 2021-03-18)",
+      "posture": "build",
+      "family": "priority"
+    },
+    {
+      "id": "webrtc-identity",
+      "label": "Identity for WebRTC 1.0",
+      "status": "current",
+      "revision": "webrtc-identity CR-webrtc-20180621 (Candidate Recommendation Snapshot, 2018-09-27)",
+      "posture": "build",
+      "family": "identity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WebRTC: Real-Time Communication in Browsers",
+      "url": "https://www.w3.org/TR/webrtc/",
+      "status": "Recommendation",
+      "revision": "webrtc REC-webrtc-20250313 (Recommendation, 2025-03-13)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Identifiers for WebRTC's Statistics API",
+      "url": "https://www.w3.org/TR/webrtc-stats/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "webrtc-stats CRD-webrtc-stats-20250925 (Candidate Recommendation Draft, 2025-09-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebRTC Encoded Transform",
+      "url": "https://www.w3.org/TR/webrtc-encoded-transform/",
+      "status": "Working Draft",
+      "revision": "webrtc-encoded-transform WD-webrtc-encoded-transform-20260625 (Working Draft, 2026-06-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Scalable Video Coding (SVC) Extension for WebRTC",
+      "url": "https://www.w3.org/TR/webrtc-svc/",
+      "status": "Working Draft",
+      "revision": "webrtc-svc WD-webrtc-svc-20260914 (Working Draft, 2026-09-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebRTC Priority Control API",
+      "url": "https://www.w3.org/TR/webrtc-priority/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "webrtc-priority CR-webrtc-priority-20210318 (Candidate Recommendation Snapshot, 2021-03-18)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Identity for WebRTC 1.0",
+      "url": "https://www.w3.org/TR/webrtc-identity/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "webrtc-identity CR-webrtc-20180621 (Candidate Recommendation Snapshot, 2018-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebRTC Extended Use Cases",
+      "url": "https://www.w3.org/TR/webrtc-nv-use-cases/",
+      "status": "Draft Note",
+      "revision": "webrtc-nv-use-cases (Draft Note, 2023-12-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
