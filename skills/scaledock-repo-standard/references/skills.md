@@ -54,5 +54,9 @@ Location applies to every repo kind. The install list applies to product repos; 
   - Data (shared schemas, dates and messages): ecmascript-temporal, messageformat, json-schema.
   - Docs (`docs`): llms-txt.
   - Email (the product sends mail): dmarc, dkim, spf, list-unsubscribe.
+  - Performance and app shell: performance-timeline, web-app-manifest, service-workers.
+  - Accessibility law: en-301-549, section-508, alongside wcag.
+  - Internationalization: i18n-best-practices, ecma-402-intl, unicode.
+  - Docs and conventions: semver, conventional-commits, commonmark, yaml, toml, madr, editorconfig, diataxis.
   - Any other open spec the repo implements: install its spec skill by name (`pnpm dlx skills add ScaleDockHQ/scaledock-skills --list`).
 - **Email:** `resend/react-email` react-email.

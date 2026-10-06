@@ -1,0 +1,93 @@
+{
+  "version": "1.1.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers CSS Snapshot. CSS Snapshot 2026 is current; CSS Snapshot 2025 is supported; CSS Snapshot 2024 is supported; CSS Snapshot 2023 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "css-2026",
+      "label": "CSS Snapshot 2026",
+      "status": "current",
+      "revision": "css-2026 NOTE-css-2026-20260622 (Note, 2026-06-22)",
+      "posture": "track"
+    },
+    {
+      "id": "css-2025",
+      "label": "CSS Snapshot 2025",
+      "status": "supported",
+      "revision": "css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18)"
+    },
+    {
+      "id": "css-2024",
+      "label": "CSS Snapshot 2024",
+      "status": "supported",
+      "revision": "css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25)"
+    },
+    {
+      "id": "css-2023",
+      "label": "CSS Snapshot 2023",
+      "status": "legacy",
+      "revision": "css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07)"
+    },
+    {
+      "id": "css2",
+      "label": "CSS 2.1",
+      "status": "current",
+      "family": "css2",
+      "revision": "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification, W3C Recommendation 07 June 2011"
+    },
+    {
+      "id": "css22-preview",
+      "label": "CSS 2.2",
+      "status": "preview",
+      "posture": "track",
+      "family": "css2",
+      "revision": "Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification, W3C First Public Working Draft 12 April 2016"
+    }
+  ],
+  "sources": [
+    {
+      "title": "CSS Snapshot 2026",
+      "url": "https://www.w3.org/TR/css-2026/",
+      "status": "Note",
+      "revision": "css-2026 NOTE-css-2026-20260622 (Note, 2026-06-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CSS Snapshot 2025",
+      "url": "https://www.w3.org/TR/css-2025/",
+      "status": "Note",
+      "revision": "css-2025 NOTE-css-2025-20250918 (Note, 2025-09-18)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CSS Snapshot 2024",
+      "url": "https://www.w3.org/TR/css-2024/",
+      "status": "Note",
+      "revision": "css-2024 NOTE-css-2024-20250225 (Note, 2025-02-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CSS Snapshot 2023",
+      "url": "https://www.w3.org/TR/css-2023/",
+      "status": "Note",
+      "revision": "css-2023 NOTE-css-2023-20231207 (Note, 2023-12-07)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CSS 2.1",
+      "url": "https://www.w3.org/TR/CSS2/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 07 June 2011",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CSS 2.2",
+      "url": "https://www.w3.org/TR/CSS22/",
+      "status": "First Public Working Draft",
+      "revision": "W3C First Public Working Draft 12 April 2016",
+      "checked": "2026-10-06"
+    }
+  ]
+}

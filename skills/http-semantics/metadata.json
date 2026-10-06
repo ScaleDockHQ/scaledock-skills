@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers IETF HTTP Semantics (RFC 9110) and HTTP Caching (RFC 9111) for API and server authors: method safety and idempotency, status codes, validators and conditional requests (ETag, If-Match, If-None-Match, 304, 412), content negotiation and Vary, range requests, and Cache-Control freshness and validation, plus the RFC 5861 stale extensions. It also covers the HTTP extension fields APIs use most: the QUERY method (RFC 10008), Structured Field Values (RFC 9651), Web Linking (RFC 8288), Deprecation (RFC 9745), Sunset (RFC 8594), api-catalog (RFC 9727), Prefer (RFC 7240), and tracks the expired Idempotency-Key draft-07. Legacy lines RFC 7230-7235 and RFC 8941 are read and upgraded from. SKILL.md holds the invariants and workflow; references split out versions and upgrades, methods and status codes, conditional and range requests, caching and negotiation, structured fields, and the API lifecycle fields.",
+  "abstract": "Covers IETF HTTP Semantics (RFC 9110) and HTTP Caching (RFC 9111) for API and server authors: method safety and idempotency, status codes, validators and conditional requests (ETag, If-Match, If-None-Match, 304, 412), content negotiation and Vary, range requests, and Cache-Control freshness and validation, plus the RFC 5861 stale extensions. It also covers the HTTP extension fields APIs use most: the QUERY method (RFC 10008), Structured Field Values (RFC 9651), Web Linking (RFC 8288), Deprecation (RFC 9745), Sunset (RFC 8594), api-catalog (RFC 9727), Prefer (RFC 7240), and tracks the expired Idempotency-Key draft-07. Legacy lines RFC 7230-7235 and RFC 8941 are read and upgraded from. SKILL.md holds the invariants and workflow; references split out versions and upgrades, methods and status codes, conditional and range requests, caching and negotiation, structured fields, and the API lifecycle fields. Also covers Alt-Svc, Early Hints, Client Hints, Cache-Status, Proxy-Status, Targeted Cache-Control, Priority, PATCH, multipart/form-data, Link-Template and Compression Dictionary Transport, and tracks Resumable Uploads draft-12.",
   "versions": [
     {
       "id": "rfc9110",
@@ -11,6 +11,13 @@
       "status": "current",
       "revision": "RFC 9110 (STD 97) and RFC 9111 (STD 98), June 2022",
       "family": "core"
+    },
+    {
+      "id": "rfc9112",
+      "label": "RFC 9112 HTTP/1.1",
+      "status": "current",
+      "family": "http11",
+      "revision": "RFC 9112, Internet Standard, June 2022. Specifies HTTP/1.1 message syntax and obsoletes portions of RFC 7230."
     },
     {
       "id": "rfc7230-7235",
@@ -91,6 +98,91 @@
       "revision": "RFC 7240, June 2014, updated by RFC 8144",
       "family": "prefer",
       "reference": "references/api-lifecycle-fields.md"
+    },
+    {
+      "id": "rfc7838",
+      "label": "RFC 7838 Alt-Svc",
+      "status": "current",
+      "revision": "Standards Track, April 2016",
+      "family": "alt-svc"
+    },
+    {
+      "id": "rfc8297",
+      "label": "RFC 8297 Early Hints",
+      "status": "current",
+      "revision": "Experimental, December 2017",
+      "family": "early-hints"
+    },
+    {
+      "id": "rfc8942",
+      "label": "RFC 8942 Client Hints",
+      "status": "current",
+      "revision": "Experimental, February 2021",
+      "family": "client-hints"
+    },
+    {
+      "id": "rfc9211",
+      "label": "RFC 9211 Cache-Status",
+      "status": "current",
+      "revision": "Standards Track, June 2022",
+      "family": "cache-status"
+    },
+    {
+      "id": "rfc9209",
+      "label": "RFC 9209 Proxy-Status",
+      "status": "current",
+      "revision": "Standards Track, June 2022",
+      "family": "proxy-status"
+    },
+    {
+      "id": "rfc9213",
+      "label": "RFC 9213 Targeted Cache-Control",
+      "status": "current",
+      "revision": "Standards Track, June 2022",
+      "family": "targeted-cache-control"
+    },
+    {
+      "id": "rfc9218",
+      "label": "RFC 9218 Priority",
+      "status": "current",
+      "revision": "Standards Track, June 2022",
+      "family": "priority"
+    },
+    {
+      "id": "rfc5789",
+      "label": "RFC 5789 PATCH",
+      "status": "current",
+      "revision": "Standards Track, March 2010",
+      "family": "patch"
+    },
+    {
+      "id": "rfc7578",
+      "label": "RFC 7578 multipart/form-data",
+      "status": "current",
+      "revision": "Standards Track, July 2015",
+      "family": "form-data"
+    },
+    {
+      "id": "rfc9652",
+      "label": "RFC 9652 Link-Template",
+      "status": "current",
+      "revision": "Standards Track, September 2024",
+      "family": "link-template"
+    },
+    {
+      "id": "rfc9842",
+      "label": "RFC 9842 Compression Dictionary Transport",
+      "status": "current",
+      "revision": "Standards Track, September 2025",
+      "family": "compression-dictionary"
+    },
+    {
+      "id": "resumable-upload",
+      "label": "Resumable Uploads draft-12",
+      "status": "current",
+      "posture": "track",
+      "revision": "draft-ietf-httpbis-resumable-upload-12 (6 July 2026, expires 7 January 2027)",
+      "family": "resumable-upload"
     }
   ],
   "sources": [
@@ -113,7 +205,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9112",
       "status": "RFC (Internet Standard, STD 99, updated by RFC 9931)",
       "revision": "RFC 9112",
-      "checked": "2026-10-05"
+      "checked": "2026-10-06"
     },
     {
       "title": "RFC 7230: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing",
@@ -240,6 +332,90 @@
       "status": "Internet-Draft (Expired, WG Document)",
       "revision": "-07",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "RFC 7838 Alt-Svc",
+      "url": "https://www.rfc-editor.org/rfc/rfc7838",
+      "status": "RFC (Standards Track, April 2016)",
+      "revision": "RFC 7838",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 8297 Early Hints",
+      "url": "https://www.rfc-editor.org/rfc/rfc8297",
+      "status": "RFC (Experimental, December 2017)",
+      "revision": "RFC 8297",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 8942 Client Hints",
+      "url": "https://www.rfc-editor.org/rfc/rfc8942",
+      "status": "RFC (Experimental, February 2021)",
+      "revision": "RFC 8942",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9211 Cache-Status",
+      "url": "https://www.rfc-editor.org/rfc/rfc9211",
+      "status": "RFC (Standards Track, June 2022)",
+      "revision": "RFC 9211",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9209 Proxy-Status",
+      "url": "https://www.rfc-editor.org/rfc/rfc9209",
+      "status": "RFC (Standards Track, June 2022)",
+      "revision": "RFC 9209",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9213 Targeted Cache-Control",
+      "url": "https://www.rfc-editor.org/rfc/rfc9213",
+      "status": "RFC (Standards Track, June 2022)",
+      "revision": "RFC 9213",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9218 Priority",
+      "url": "https://www.rfc-editor.org/rfc/rfc9218",
+      "status": "RFC (Standards Track, June 2022)",
+      "revision": "RFC 9218",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 5789 PATCH",
+      "url": "https://www.rfc-editor.org/rfc/rfc5789",
+      "status": "RFC (Standards Track, March 2010)",
+      "revision": "RFC 5789",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 7578 multipart/form-data",
+      "url": "https://www.rfc-editor.org/rfc/rfc7578",
+      "status": "RFC (Standards Track, July 2015)",
+      "revision": "RFC 7578",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9652 Link-Template",
+      "url": "https://www.rfc-editor.org/rfc/rfc9652",
+      "status": "RFC (Standards Track, September 2024)",
+      "revision": "RFC 9652",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9842 Compression Dictionary Transport",
+      "url": "https://www.rfc-editor.org/rfc/rfc9842",
+      "status": "RFC (Standards Track, September 2025)",
+      "revision": "RFC 9842",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Resumable Uploads for HTTP",
+      "url": "https://www.ietf.org/archive/id/draft-ietf-httpbis-resumable-upload-12.html",
+      "status": "Internet-Draft (intended status Standards Track)",
+      "revision": "draft-ietf-httpbis-resumable-upload-12",
+      "checked": "2026-10-06"
     }
   ]
 }

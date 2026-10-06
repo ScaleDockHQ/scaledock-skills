@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Linked Web Storage. Linked Web Storage Protocol 1.0 is current; LWS 1.0 Authentication Suite: OpenID Connect is current; LWS 1.0 Authentication Suite: SAML 2.0 is current; LWS 1.0 Authentication Suite: Self-signed Identity using Controlled Identifiers is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "lws10-core",
+      "label": "Linked Web Storage Protocol 1.0",
+      "status": "current",
+      "revision": "lws10-core WD-lws10-core-20260921 (Working Draft, 2026-10-05)",
+      "posture": "track",
+      "family": "core"
+    },
+    {
+      "id": "lws10-authn-openid",
+      "label": "LWS 1.0 Authentication Suite: OpenID Connect",
+      "status": "current",
+      "revision": "lws10-authn-openid WD-lws10-authn-openid-20260803 (Working Draft, 2026-08-03)",
+      "posture": "track",
+      "family": "openid"
+    },
+    {
+      "id": "lws10-authn-saml",
+      "label": "LWS 1.0 Authentication Suite: SAML 2.0",
+      "status": "current",
+      "revision": "lws10-authn-saml WD-lws10-authn-saml-20260803 (Working Draft, 2026-08-03)",
+      "posture": "track",
+      "family": "saml"
+    },
+    {
+      "id": "lws10-authn-ssi-cid",
+      "label": "LWS 1.0 Authentication Suite: Self-signed Identity using Controlled Identifiers",
+      "status": "current",
+      "revision": "lws10-authn-ssi-cid WD-lws10-authn-ssi-cid-20260921 (Working Draft, 2026-09-21)",
+      "posture": "track",
+      "family": "cid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Linked Web Storage Protocol 1.0",
+      "url": "https://www.w3.org/TR/lws10-core/",
+      "status": "Working Draft",
+      "revision": "lws10-core WD-lws10-core-20260921 (Working Draft, 2026-10-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "LWS 1.0 Authentication Suite: OpenID Connect",
+      "url": "https://www.w3.org/TR/lws10-authn-openid/",
+      "status": "Working Draft",
+      "revision": "lws10-authn-openid WD-lws10-authn-openid-20260803 (Working Draft, 2026-08-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "LWS 1.0 Authentication Suite: SAML 2.0",
+      "url": "https://www.w3.org/TR/lws10-authn-saml/",
+      "status": "Working Draft",
+      "revision": "lws10-authn-saml WD-lws10-authn-saml-20260803 (Working Draft, 2026-08-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "LWS 1.0 Authentication Suite: Self-signed Identity using Controlled Identifiers",
+      "url": "https://www.w3.org/TR/lws10-authn-ssi-cid/",
+      "status": "Working Draft",
+      "revision": "lws10-authn-ssi-cid WD-lws10-authn-ssi-cid-20260921 (Working Draft, 2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Linked Web Storage Use Cases",
+      "url": "https://www.w3.org/TR/lws-ucs/",
+      "status": "Draft Note",
+      "revision": "lws-ucs (Draft Note, 2026-02-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Linked Web Storage Vocabulary",
+      "url": "https://www.w3.org/TR/lws10-vocab/",
+      "status": "Draft Note",
+      "revision": "lws10-vocab (Draft Note, 2026-07-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

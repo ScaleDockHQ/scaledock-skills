@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers HTML Living Standard. HTML Living Standard is current; HTML 5.2 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "living",
+      "label": "HTML Living Standard",
+      "status": "current",
+      "revision": "Review Draft 2026-07 (Review Draft, 2026-07)"
+    },
+    {
+      "id": "html52",
+      "label": "HTML 5.2",
+      "status": "legacy",
+      "revision": "REC-html52-20171214 (Retired Recommendation, 2017-12-14)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "HTML Living Standard",
+      "url": "https://html.spec.whatwg.org/review-drafts/2026-07/",
+      "status": "Review Draft",
+      "revision": "Review Draft 2026-07 (Review Draft, 2026-07)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "HTML 5.2",
+      "url": "https://www.w3.org/TR/2017/REC-html52-20171214/",
+      "status": "Retired Recommendation",
+      "revision": "REC-html52-20171214 (Retired Recommendation, 2017-12-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

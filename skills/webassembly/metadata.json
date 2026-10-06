@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebAssembly. WebAssembly Core Specification Level 1 is current; WebAssembly Core Specification Level 2.0 is preview; WebAssembly JavaScript Interface Level 1 is current; WebAssembly JavaScript Interface Level 2.0 is preview; WebAssembly Web API Level 1 is current; WebAssembly Web API Level 2.0 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "wasm-core-1",
+      "label": "WebAssembly Core Specification Level 1",
+      "status": "current",
+      "revision": "wasm-core-1 REC-wasm-core-1-20191205 (Recommendation, 2019-12-05)",
+      "family": "core"
+    },
+    {
+      "id": "wasm-core-2-preview",
+      "label": "WebAssembly Core Specification Level 2.0",
+      "status": "preview",
+      "revision": "wasm-core-2 CRD-wasm-core-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "posture": "build",
+      "family": "core"
+    },
+    {
+      "id": "wasm-js-api-1",
+      "label": "WebAssembly JavaScript Interface Level 1",
+      "status": "current",
+      "revision": "wasm-js-api-1 REC-wasm-js-api-1-20191205 (Recommendation, 2019-12-05)",
+      "family": "js-api"
+    },
+    {
+      "id": "wasm-js-api-2-preview",
+      "label": "WebAssembly JavaScript Interface Level 2.0",
+      "status": "preview",
+      "revision": "wasm-js-api-2 CRD-wasm-js-api-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "posture": "build",
+      "family": "js-api"
+    },
+    {
+      "id": "wasm-web-api-1",
+      "label": "WebAssembly Web API Level 1",
+      "status": "current",
+      "revision": "wasm-web-api-1 REC-wasm-web-api-1-20191205 (Recommendation, 2019-12-05)",
+      "family": "web-api"
+    },
+    {
+      "id": "wasm-web-api-2-preview",
+      "label": "WebAssembly Web API Level 2.0",
+      "status": "preview",
+      "revision": "wasm-web-api-2 CRD-wasm-web-api-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "posture": "build",
+      "family": "web-api"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WebAssembly Core Specification",
+      "url": "https://www.w3.org/TR/wasm-core-1/",
+      "status": "Recommendation",
+      "revision": "wasm-core-1 REC-wasm-core-1-20191205 (Recommendation, 2019-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly Core Specification",
+      "url": "https://www.w3.org/TR/wasm-core-2/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "wasm-core-2 CRD-wasm-core-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly JavaScript Interface",
+      "url": "https://www.w3.org/TR/wasm-js-api-1/",
+      "status": "Recommendation",
+      "revision": "wasm-js-api-1 REC-wasm-js-api-1-20191205 (Recommendation, 2019-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly JavaScript Interface",
+      "url": "https://www.w3.org/TR/wasm-js-api-2/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "wasm-js-api-2 CRD-wasm-js-api-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly Web API",
+      "url": "https://www.w3.org/TR/wasm-web-api-1/",
+      "status": "Recommendation",
+      "revision": "wasm-web-api-1 REC-wasm-web-api-1-20191205 (Recommendation, 2019-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly Web API",
+      "url": "https://www.w3.org/TR/wasm-web-api-2/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "wasm-web-api-2 CRD-wasm-web-api-2-20261003 (Candidate Recommendation Draft, 2026-10-03)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

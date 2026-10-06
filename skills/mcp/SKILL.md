@@ -17,7 +17,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -113,6 +113,8 @@ The Model Context Protocol connects LLM applications (hosts and their clients) t
 
 - `mcp-authorization`: OAuth authorization for HTTP MCP servers and clients. Install with `npx skills add ScaleDockHQ/scaledock-skills --skill mcp-authorization`.
 - `mcp-apps`: interactive UI for MCP servers (the `io.modelcontextprotocol/ui` extension), once published. Install with `npx skills add ScaleDockHQ/scaledock-skills --skill mcp-apps`.
+- `json-rpc`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill json-rpc`
+- `server-sent-events`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill server-sent-events`
 
 ## Sources
 

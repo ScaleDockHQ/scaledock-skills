@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Protocol Buffers. proto3 is current; proto2 is legacy; Protobuf Editions is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "proto3",
+      "label": "proto3",
+      "status": "current",
+      "revision": "proto3 guide, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "family": "syntax"
+    },
+    {
+      "id": "proto2",
+      "label": "proto2",
+      "status": "legacy",
+      "revision": "proto2 guide, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "family": "syntax"
+    },
+    {
+      "id": "protobuf-editions",
+      "label": "Protobuf Editions",
+      "status": "current",
+      "revision": "Protobuf editions, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "family": "editions"
+    }
+  ],
+  "sources": [
+    {
+      "title": "proto3",
+      "url": "https://protobuf.dev/programming-guides/proto3/",
+      "status": "Language guide",
+      "revision": "proto3 guide, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "proto2",
+      "url": "https://protobuf.dev/programming-guides/proto2/",
+      "status": "Language guide",
+      "revision": "proto2 guide, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Protobuf Editions",
+      "url": "https://protobuf.dev/editions/",
+      "status": "Language guide",
+      "revision": "Protobuf editions, fetched 2026-10-06 (Language guide, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

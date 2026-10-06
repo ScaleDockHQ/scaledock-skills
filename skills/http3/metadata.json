@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers HTTP/3. RFC 9114 HTTP/3 is current; RFC 9000 QUIC: A UDP-Based Multiplexed and Secure Transport is current; RFC 9001 Using TLS to Secure QUIC is current; RFC 9002 QUIC Loss Detection and Congestion Control is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc9114",
+      "label": "RFC 9114 HTTP/3",
+      "status": "current",
+      "revision": "RFC 9114 (PROPOSED STANDARD, June 2022)",
+      "family": "http3"
+    },
+    {
+      "id": "rfc9000",
+      "label": "RFC 9000 QUIC: A UDP-Based Multiplexed and Secure Transport",
+      "status": "current",
+      "revision": "RFC 9000 (PROPOSED STANDARD, May 2021)",
+      "family": "quic"
+    },
+    {
+      "id": "rfc9001",
+      "label": "RFC 9001 Using TLS to Secure QUIC",
+      "status": "current",
+      "revision": "RFC 9001 (PROPOSED STANDARD, May 2021)",
+      "family": "quic-tls"
+    },
+    {
+      "id": "rfc9002",
+      "label": "RFC 9002 QUIC Loss Detection and Congestion Control",
+      "status": "current",
+      "revision": "RFC 9002 (PROPOSED STANDARD, May 2021)",
+      "family": "quic-recovery"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9114 HTTP/3",
+      "url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9114 (PROPOSED STANDARD, June 2022)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9000 QUIC: A UDP-Based Multiplexed and Secure Transport",
+      "url": "https://www.rfc-editor.org/rfc/rfc9000.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9000 (PROPOSED STANDARD, May 2021)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9001 Using TLS to Secure QUIC",
+      "url": "https://www.rfc-editor.org/rfc/rfc9001.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9001 (PROPOSED STANDARD, May 2021)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9002 QUIC Loss Detection and Congestion Control",
+      "url": "https://www.rfc-editor.org/rfc/rfc9002.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9002 (PROPOSED STANDARD, May 2021)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

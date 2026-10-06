@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JavaScript Object Notation (JSON) Patch. RFC 6902 JavaScript Object Notation (JSON) Patch is current; RFC 7396 JSON Merge Patch is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc6902",
+      "label": "RFC 6902 JavaScript Object Notation (JSON) Patch",
+      "status": "current",
+      "revision": "RFC 6902 (PROPOSED STANDARD, April 2013)",
+      "family": "patch"
+    },
+    {
+      "id": "rfc7396",
+      "label": "RFC 7396 JSON Merge Patch",
+      "status": "current",
+      "revision": "RFC 7396 (PROPOSED STANDARD, October 20)",
+      "family": "merge"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6902 JavaScript Object Notation (JSON) Patch",
+      "url": "https://www.rfc-editor.org/rfc/rfc6902.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6902 (PROPOSED STANDARD, April 2013)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 7396 JSON Merge Patch",
+      "url": "https://www.rfc-editor.org/rfc/rfc7396.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 7396 (PROPOSED STANDARD, October 20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

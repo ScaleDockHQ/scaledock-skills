@@ -8,7 +8,7 @@ An agent skill that gives AI agents least-privilege, auditable access in a Scale
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-agent-permissions
 ```
 
-It asks you to install the spec skills it builds on: `owasp-agentic` and `opentelemetry-genai`, the surfaces you use (`a2a`, `webmcp`, `ag-ui`, `ap2`, `web-bot-auth`), and `ocsf`, `eu-ai-act`, `openfeature` and `cedar` when they apply, plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`). Optional, per surface: `mcp` and `mcp-apps` (MCP), `a2ui` (agent UI), `x402`, `ucp` and `agentic-commerce-protocol` (payments and checkout), `ciba` (approvals), `robots-txt`, `aipref` and `c2pa` (bot traffic and content), and `owasp-llm`, `mitre-atlas` and `nist-ai-rmf` (threat model and governance).
+It asks you to install the spec skills it builds on: `owasp-agentic` and `opentelemetry-genai`, the surfaces you use (`a2a`, `webmcp`, `ag-ui`, `ap2`, `web-bot-auth`), and `ocsf`, `eu-ai-act`, `openfeature`, `cedar`, `privacy-pass`, `webdriver` and `prompt-api` when they apply, plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`). Optional, per surface: `mcp` and `mcp-apps` (MCP), `a2ui` (agent UI), `x402`, `ucp` and `agentic-commerce-protocol` (payments and checkout), `ciba` (approvals), `robots-txt`, `aipref` and `c2pa` (bot traffic and content), and `owasp-llm`, `mitre-atlas` and `nist-ai-rmf` (threat model and governance).
 
 Then ask your agent to "let our AI agent call these tools safely", "publish an A2A Agent Card", "add human approval to agent payments", or "review our agents against the OWASP agentic top 10".
 

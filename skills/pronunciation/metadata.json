@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Pronunciation. Explainer: Improving Spoken Presentation on the Web is current; Pronunciation Lexicon Specification (PLS) Version 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "pronunciation-explainer",
+      "label": "Explainer: Improving Spoken Presentation on the Web",
+      "status": "current",
+      "revision": "pronunciation-explainer WD-pronunciation-explainer-20200310 (First Public Working Draft, 2020-03-10)",
+      "posture": "track",
+      "family": "explainer"
+    },
+    {
+      "id": "pronunciation-lexicon",
+      "label": "Pronunciation Lexicon Specification (PLS) Version 1.0",
+      "status": "current",
+      "revision": "pronunciation-lexicon REC-pronunciation-lexicon-20081014 (Recommendation, 2008-10-14)",
+      "family": "lexicon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Explainer: Improving Spoken Presentation on the Web",
+      "url": "https://www.w3.org/TR/pronunciation-explainer/",
+      "status": "First Public Working Draft",
+      "revision": "pronunciation-explainer WD-pronunciation-explainer-20200310 (First Public Working Draft, 2020-03-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pronunciation Lexicon Specification (PLS) Version 1.0",
+      "url": "https://www.w3.org/TR/pronunciation-lexicon/",
+      "status": "Recommendation",
+      "revision": "pronunciation-lexicon REC-pronunciation-lexicon-20081014 (Recommendation, 2008-10-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pronunciation Gap Analysis",
+      "url": "https://www.w3.org/TR/pronunciation-gap-analysis/",
+      "status": "Draft Note",
+      "revision": "pronunciation-gap-analysis (Draft Note, 2025-08-07)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pronunciation Use Cases",
+      "url": "https://www.w3.org/TR/pronunciation-use-cases/",
+      "status": "Draft Note",
+      "revision": "pronunciation-use-cases (Draft Note, 2025-08-07)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

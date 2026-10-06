@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile. RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile is current; RFC 6960 X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP is current; RFC 9162 Certificate Transparency Version 2.0 is current; RFC 6962 Certificate Transparency is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc5280",
+      "label": "RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile",
+      "status": "current",
+      "revision": "RFC 5280 (PROPOSED STANDARD, May 2008)",
+      "family": "pkix"
+    },
+    {
+      "id": "rfc6960",
+      "label": "RFC 6960 X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP",
+      "status": "current",
+      "revision": "RFC 6960 (PROPOSED STANDARD, June 2013)",
+      "family": "ocsp"
+    },
+    {
+      "id": "rfc9162",
+      "label": "RFC 9162 Certificate Transparency Version 2.0",
+      "status": "current",
+      "revision": "RFC 9162 (EXPERIMENTAL, December 2)",
+      "family": "ct"
+    },
+    {
+      "id": "rfc6962",
+      "label": "RFC 6962 Certificate Transparency",
+      "status": "legacy",
+      "revision": "RFC 6962 (EXPERIMENTAL, June 2013)",
+      "family": "ct"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile",
+      "url": "https://www.rfc-editor.org/rfc/rfc5280.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 5280 (PROPOSED STANDARD, May 2008)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6960 X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP",
+      "url": "https://www.rfc-editor.org/rfc/rfc6960.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6960 (PROPOSED STANDARD, June 2013)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9162 Certificate Transparency Version 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+      "status": "EXPERIMENTAL",
+      "revision": "RFC 9162 (EXPERIMENTAL, December 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6962 Certificate Transparency",
+      "url": "https://www.rfc-editor.org/rfc/rfc6962.html",
+      "status": "EXPERIMENTAL",
+      "revision": "RFC 6962 (EXPERIMENTAL, June 2013)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

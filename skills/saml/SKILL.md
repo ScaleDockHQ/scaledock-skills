@@ -18,7 +18,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.2"
   kind: standard
 ---
 
@@ -107,6 +107,7 @@ Cites: Core, Bind, Prof, Meta, Sec and Conf are the six SAML 2.0 documents; En i
 
 - `openid-connect` for single sign-on with OpenID Connect instead of SAML: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect`.
 - `scim` for provisioning the users and groups that SAML authenticates: `npx skills add ScaleDockHQ/scaledock-skills --skill scim`.
+- `xml-signature`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill xml-signature`
 
 ## Sources
 

@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Scalable Vector Graphics (SVG). Scalable Vector Graphics (SVG) 2 is current; Scalable Vector Graphics (SVG) 1.1 (Second Edition) is legacy; SVG Accessibility API Mappings Level 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "svg2",
+      "label": "Scalable Vector Graphics (SVG) 2",
+      "status": "current",
+      "revision": "SVG2 CR-SVG2-20181004 (Candidate Recommendation Snapshot, 2018-10-04)",
+      "posture": "build",
+      "family": "svg"
+    },
+    {
+      "id": "svg11",
+      "label": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+      "status": "legacy",
+      "revision": "SVG11 REC-SVG11-20110816 (Recommendation, 2011-08-16)",
+      "family": "svg"
+    },
+    {
+      "id": "svg-aam-1.0",
+      "label": "SVG Accessibility API Mappings Level 1.0",
+      "status": "current",
+      "revision": "svg-aam-1.0 WD-svg-aam-1.0-20260923 (Working Draft, 2026-09-24)",
+      "posture": "track",
+      "family": "svg-aam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scalable Vector Graphics (SVG) 2",
+      "url": "https://www.w3.org/TR/SVG2/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "SVG2 CR-SVG2-20181004 (Candidate Recommendation Snapshot, 2018-10-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+      "url": "https://www.w3.org/TR/SVG11/",
+      "status": "Recommendation",
+      "revision": "SVG11 REC-SVG11-20110816 (Recommendation, 2011-08-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SVG Accessibility API Mappings",
+      "url": "https://www.w3.org/TR/svg-aam-1.0/",
+      "status": "Working Draft",
+      "revision": "svg-aam-1.0 WD-svg-aam-1.0-20260923 (Working Draft, 2026-09-24)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

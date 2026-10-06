@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers R2RML. R2RML: RDB to RDF Mapping Language is current; A Direct Mapping of Relational Data to RDF is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "r2rml",
+      "label": "R2RML: RDB to RDF Mapping Language",
+      "status": "current",
+      "revision": "r2rml REC-r2rml-20120927 (Recommendation, 2012-09-27)",
+      "family": "r2rml"
+    },
+    {
+      "id": "rdb-direct-mapping",
+      "label": "A Direct Mapping of Relational Data to RDF",
+      "status": "current",
+      "revision": "rdb-direct-mapping REC-rdb-direct-mapping-20120927 (Recommendation, 2012-09-27)",
+      "family": "direct-mapping"
+    }
+  ],
+  "sources": [
+    {
+      "title": "R2RML: RDB to RDF Mapping Language",
+      "url": "https://www.w3.org/TR/r2rml/",
+      "status": "Recommendation",
+      "revision": "r2rml REC-r2rml-20120927 (Recommendation, 2012-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "A Direct Mapping of Relational Data to RDF",
+      "url": "https://www.w3.org/TR/rdb-direct-mapping/",
+      "status": "Recommendation",
+      "revision": "rdb-direct-mapping REC-rdb-direct-mapping-20120927 (Recommendation, 2012-09-27)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ An agent skill that builds or reviews a ScaleDock HTTP API whose contract, OpenA
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-http-api
 ```
 
-It asks you to install the spec skills it builds on: `http-semantics`, `openapi`, `json-schema`, `openapi-overlay`, `problem-details`, `ratelimit-headers` and `standard-schema` (optionally `openapi-arazzo`, `asyncapi`, `typespec`, `standard-webhooks`, `http-message-signatures`, `http-cookies`, `owasp-api-security` and `owasp-asvs`), plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
+It asks you to install the spec skills it builds on: `http-semantics`, `openapi`, `json-schema`, `openapi-overlay`, `problem-details`, `ratelimit-headers`, `standard-schema`, `json`, `json-patch`, `jsonpath`, `uuid`, `well-known-uris`, `tls` and `sarif` (optionally `openapi-arazzo`, `asyncapi`, `typespec`, `standard-webhooks`, `http-message-signatures`, `http-cookies`, `owasp-api-security` and `owasp-asvs`), plus PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
 
 Then ask your agent to "add an endpoint to the API", "publish our OpenAPI document with security schemes", or "make our API errors and 429s standard".
 

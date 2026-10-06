@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenPGP. RFC 9580 OpenPGP is current; RFC 4880 OpenPGP Message Format is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc9580",
+      "label": "RFC 9580 OpenPGP",
+      "status": "current",
+      "revision": "RFC 9580 (PROPOSED STANDARD, July 2024)"
+    },
+    {
+      "id": "rfc4880",
+      "label": "RFC 4880 OpenPGP Message Format",
+      "status": "legacy",
+      "revision": "RFC 4880 (PROPOSED STANDARD, November 2)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9580 OpenPGP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9580.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9580 (PROPOSED STANDARD, July 2024)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4880 OpenPGP Message Format",
+      "url": "https://www.rfc-editor.org/rfc/rfc4880.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 4880 (PROPOSED STANDARD, November 2)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

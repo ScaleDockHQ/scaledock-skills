@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Nostr. NIP-01 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "nip-01",
+      "label": "NIP-01",
+      "status": "current",
+      "revision": "NIP-01 on nostr-protocol/nips master (NIP, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NIP-01",
+      "url": "https://raw.githubusercontent.com/nostr-protocol/nips/master/01.md",
+      "status": "NIP",
+      "revision": "NIP-01 on nostr-protocol/nips master (NIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

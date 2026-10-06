@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DIDComm Messaging. DIDComm Messaging 2.1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "didcomm-2.1",
+      "label": "DIDComm Messaging 2.1",
+      "status": "current",
+      "revision": "DIDComm Messaging v2.1, fetched 2026-10-06 (DIF specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "DIDComm Messaging 2.1",
+      "url": "https://identity.foundation/didcomm-messaging/spec/v2.1/",
+      "status": "DIF specification",
+      "revision": "DIDComm Messaging v2.1, fetched 2026-10-06 (DIF specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

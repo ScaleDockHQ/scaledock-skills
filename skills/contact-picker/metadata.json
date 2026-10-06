@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Contact Picker API. Contact Picker API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "contact-picker",
+      "label": "Contact Picker API",
+      "status": "current",
+      "revision": "contact-picker WD-contact-picker-20240708 (Working Draft, 2024-07-08)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Contact Picker API",
+      "url": "https://www.w3.org/TR/contact-picker/",
+      "status": "Working Draft",
+      "revision": "contact-picker WD-contact-picker-20240708 (Working Draft, 2024-07-08)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

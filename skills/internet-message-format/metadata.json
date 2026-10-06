@@ -1,0 +1,137 @@
+{
+  "version": "1.1.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Internet Message Format. RFC 5322 Internet Message Format is current; RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies is current; RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types is current; RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text is current; RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures is current; RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc5322",
+      "label": "RFC 5322 Internet Message Format",
+      "status": "current",
+      "revision": "RFC 5322 (DRAFT STANDARD, October 20)",
+      "family": "message"
+    },
+    {
+      "id": "rfc2045",
+      "label": "RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies",
+      "status": "current",
+      "revision": "RFC 2045 (DRAFT STANDARD, November 1)",
+      "family": "mime"
+    },
+    {
+      "id": "rfc2046",
+      "label": "RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types",
+      "status": "current",
+      "revision": "RFC 2046 (DRAFT STANDARD, November 1)",
+      "family": "mime-media"
+    },
+    {
+      "id": "rfc2047",
+      "label": "RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text",
+      "status": "current",
+      "revision": "RFC 2047 (DRAFT STANDARD, November 1)",
+      "family": "mime-headers"
+    },
+    {
+      "id": "rfc2048",
+      "label": "RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+      "status": "legacy",
+      "revision": "RFC 2048 (Best Current Practice, November 1996). Obsoleted by RFC 4288 and RFC 4289.",
+      "family": "mime-registration"
+    },
+    {
+      "id": "rfc2049",
+      "label": "RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples",
+      "status": "current",
+      "revision": "RFC 2049 (DRAFT STANDARD, November 1)",
+      "family": "mime-conformance"
+    },
+    {
+      "id": "rfc4288",
+      "label": "RFC 4288 Media Type Specifications and Registration Procedures",
+      "status": "legacy",
+      "family": "mime-registration",
+      "revision": "RFC 4288, Best Current Practice, December 2005. Obsoletes RFC 2048. Obsoleted by RFC 6838."
+    },
+    {
+      "id": "rfc6838",
+      "label": "RFC 6838 Media Type Specifications and Registration Procedures",
+      "status": "current",
+      "family": "mime-registration",
+      "revision": "RFC 6838, Best Current Practice, January 2013. Obsoletes RFC 4288. Defines media type registration for HTTP, MIME and other protocols."
+    },
+    {
+      "id": "rfc4289",
+      "label": "RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+      "status": "current",
+      "family": "mime-external",
+      "revision": "RFC 4289, Best Current Practice, December 2005. Obsoletes RFC 2048 for IANA registration of MIME external body access types and content-transfer-encodings."
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 5322 Internet Message Format",
+      "url": "https://www.rfc-editor.org/rfc/rfc5322.html",
+      "status": "DRAFT STANDARD",
+      "revision": "RFC 5322 (DRAFT STANDARD, October 20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies",
+      "url": "https://www.rfc-editor.org/rfc/rfc2045.html",
+      "status": "DRAFT STANDARD",
+      "revision": "RFC 2045 (DRAFT STANDARD, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types",
+      "url": "https://www.rfc-editor.org/rfc/rfc2046.html",
+      "status": "DRAFT STANDARD",
+      "revision": "RFC 2046 (DRAFT STANDARD, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text",
+      "url": "https://www.rfc-editor.org/rfc/rfc2047.html",
+      "status": "DRAFT STANDARD",
+      "revision": "RFC 2047 (DRAFT STANDARD, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc2048.html",
+      "status": "BEST CURRENT PRACTICE",
+      "revision": "RFC 2048 (BEST CURRENT PRACTICE, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples",
+      "url": "https://www.rfc-editor.org/rfc/rfc2049.html",
+      "status": "DRAFT STANDARD",
+      "revision": "RFC 2049 (DRAFT STANDARD, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4288 Media Type Specifications and Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc4288",
+      "status": "Best Current Practice",
+      "revision": "RFC 4288, December 2005",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4289 MIME Part Four: Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc4289",
+      "status": "Best Current Practice",
+      "revision": "RFC 4289, December 2005",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6838 Media Type Specifications and Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc6838",
+      "status": "Best Current Practice",
+      "revision": "RFC 6838, January 2013",
+      "checked": "2026-10-06"
+    }
+  ]
+}

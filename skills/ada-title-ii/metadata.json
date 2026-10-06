@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers 28 CFR Part 35 as fetched from the current eCFR text. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "cfr-28-part-35",
+      "label": "28 CFR Part 35",
+      "status": "current",
+      "revision": "eCFR current, fetched 2026-10-06"
+    }
+  ],
+  "sources": [
+    {
+      "title": "28 CFR Part 35",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-28?part=35",
+      "status": "eCFR",
+      "revision": "current title 28 part 35, fetched 2026-10-06",
+      "checked": "2026-10-06"
+    }
+  ]
+}

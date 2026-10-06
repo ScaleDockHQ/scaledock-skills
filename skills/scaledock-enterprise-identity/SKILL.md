@@ -4,7 +4,7 @@ description: Make a ScaleDock product enterprise-ready with SCIM 2.0 provisionin
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # ScaleDock enterprise identity
@@ -27,7 +27,7 @@ Enterprise customers expect their identity provider to sign users in, provision 
 ## Skills to install
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect --skill saml --skill webauthn --skill scim --skill shared-signals
+npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect --skill saml --skill webauthn --skill scim --skill shared-signals --skill fedcm --skill credential-management --skill dbsc --skill fido-ctap --skill digital-credentials
 npx skills add ScaleDockHQ/scaledock-skills --skill nist-800-63 --skill ciba --skill fapi --skill spiffe --skill wimse   # only when selected
 npx skills add ScaleDockHQ/PermDock
 ```

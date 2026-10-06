@@ -16,7 +16,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -98,6 +98,8 @@ JSON Schema, published by the JSON Schema organization at json-schema.org, is a 
 
 - `openapi` for OpenAPI 3.1 and later, whose Schema Object is a superset of JSON Schema 2020-12 with its own dialect and `jsonSchemaDialect`: `npx skills add ScaleDockHQ/scaledock-skills --skill openapi`.
 - `standard-schema` for generating JSON Schema (draft-2020-12, draft-07) from validator libraries through Standard JSON Schema: `npx skills add ScaleDockHQ/scaledock-skills --skill standard-schema`.
+- `json`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill json`
+- `json-pointer`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill json-pointer`
 
 ## Sources
 

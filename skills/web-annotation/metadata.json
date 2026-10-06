@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Annotation. Web Annotation Data Model is current; Web Annotation Protocol is current; Web Annotation Vocabulary is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "annotation-model",
+      "label": "Web Annotation Data Model",
+      "status": "current",
+      "revision": "annotation-model REC-annotation-model-20170223 (Recommendation, 2017-02-23)",
+      "family": "model"
+    },
+    {
+      "id": "annotation-protocol",
+      "label": "Web Annotation Protocol",
+      "status": "current",
+      "revision": "annotation-protocol REC-annotation-protocol-20170223 (Recommendation, 2017-02-23)",
+      "family": "protocol"
+    },
+    {
+      "id": "annotation-vocab",
+      "label": "Web Annotation Vocabulary",
+      "status": "current",
+      "revision": "annotation-vocab REC-annotation-vocab-20170223 (Recommendation, 2017-02-23)",
+      "family": "vocabulary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Annotation Data Model",
+      "url": "https://www.w3.org/TR/annotation-model/",
+      "status": "Recommendation",
+      "revision": "annotation-model REC-annotation-model-20170223 (Recommendation, 2017-02-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Annotation Protocol",
+      "url": "https://www.w3.org/TR/annotation-protocol/",
+      "status": "Recommendation",
+      "revision": "annotation-protocol REC-annotation-protocol-20170223 (Recommendation, 2017-02-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Annotation Vocabulary",
+      "url": "https://www.w3.org/TR/annotation-vocab/",
+      "status": "Recommendation",
+      "revision": "annotation-vocab REC-annotation-vocab-20170223 (Recommendation, 2017-02-23)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

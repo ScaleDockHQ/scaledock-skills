@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web of Things. Web of Things (WoT) Architecture 1.1 is current; Web of Things (WoT) Architecture Level 1.0 is legacy; Web of Things (WoT) Thing Description 1.1 is current; Web of Things (WoT) Thing Description 2.0 is preview; Web of Things (WoT) Thing Description Level 1.0 is legacy; Web of Things (WoT) Discovery is current; Web of Things (WoT) Profiles is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "wot-architecture11",
+      "label": "Web of Things (WoT) Architecture 1.1",
+      "status": "current",
+      "revision": "wot-architecture11 REC-wot-architecture-20200409 (Recommendation, 2023-12-05)",
+      "family": "architecture"
+    },
+    {
+      "id": "wot-architecture10",
+      "label": "Web of Things (WoT) Architecture Level 1.0",
+      "status": "legacy",
+      "revision": "wot-architecture10 CR-wot-architecture-20190516 (Recommendation, 2020-04-09)",
+      "family": "architecture"
+    },
+    {
+      "id": "wot-thing-description11",
+      "label": "Web of Things (WoT) Thing Description 1.1",
+      "status": "current",
+      "revision": "wot-thing-description11 REC-wot-thing-description-20200409 (Recommendation, 2023-12-05)",
+      "family": "thing-description"
+    },
+    {
+      "id": "wot-thing-description-2.0-preview",
+      "label": "Web of Things (WoT) Thing Description 2.0",
+      "status": "preview",
+      "revision": "wot-thing-description-2.0 REC-wot-thing-description11-20231205 (First Public Working Draft, 2025-11-04)",
+      "posture": "track",
+      "family": "thing-description"
+    },
+    {
+      "id": "wot-thing-description10",
+      "label": "Web of Things (WoT) Thing Description Level 1.0",
+      "status": "legacy",
+      "revision": "wot-thing-description10 REC-wot-thing-description-20200409 (Recommendation, 2020-04-09)",
+      "family": "thing-description"
+    },
+    {
+      "id": "wot-discovery",
+      "label": "Web of Things (WoT) Discovery",
+      "status": "current",
+      "revision": "wot-discovery REC-wot-discovery-20231205 (Recommendation, 2023-12-05)",
+      "family": "discovery"
+    },
+    {
+      "id": "wot-profile",
+      "label": "Web of Things (WoT) Profiles",
+      "status": "current",
+      "revision": "wot-profile WD-wot-profile-20251104 (Working Draft, 2025-11-04)",
+      "posture": "track",
+      "family": "profile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web of Things (WoT) Architecture 1.1",
+      "url": "https://www.w3.org/TR/wot-architecture11/",
+      "status": "Recommendation",
+      "revision": "wot-architecture11 REC-wot-architecture-20200409 (Recommendation, 2023-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Architecture",
+      "url": "https://www.w3.org/TR/wot-architecture10/",
+      "status": "Recommendation",
+      "revision": "wot-architecture10 CR-wot-architecture-20190516 (Recommendation, 2020-04-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Thing Description 1.1",
+      "url": "https://www.w3.org/TR/wot-thing-description11/",
+      "status": "Recommendation",
+      "revision": "wot-thing-description11 REC-wot-thing-description-20200409 (Recommendation, 2023-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Thing Description 2.0",
+      "url": "https://www.w3.org/TR/wot-thing-description-2.0/",
+      "status": "First Public Working Draft",
+      "revision": "wot-thing-description-2.0 REC-wot-thing-description11-20231205 (First Public Working Draft, 2025-11-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Thing Description",
+      "url": "https://www.w3.org/TR/wot-thing-description10/",
+      "status": "Recommendation",
+      "revision": "wot-thing-description10 REC-wot-thing-description-20200409 (Recommendation, 2020-04-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Discovery",
+      "url": "https://www.w3.org/TR/wot-discovery/",
+      "status": "Recommendation",
+      "revision": "wot-discovery REC-wot-discovery-20231205 (Recommendation, 2023-12-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Profiles",
+      "url": "https://www.w3.org/TR/wot-profile/",
+      "status": "Working Draft",
+      "revision": "wot-profile WD-wot-profile-20251104 (Working Draft, 2025-11-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web of Things (WoT) Binding Registry",
+      "url": "https://www.w3.org/TR/wot-binding-registry/",
+      "status": "Draft Registry",
+      "revision": "wot-binding-registry (Draft Registry, 2025-11-04)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

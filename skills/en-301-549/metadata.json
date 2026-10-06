@@ -1,0 +1,37 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers EN 301 549. EN 301 549 V4.1.1 is current; EN 301 549 V3.2.1 is supported. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "en-4.1.1",
+      "label": "EN 301 549 V4.1.1",
+      "status": "current",
+      "revision": "EN 301 549 V4.1.1 (2026-09), fetched 2026-10-06 (Harmonised European Standard, 2026-10-06)"
+    },
+    {
+      "id": "en-3.2.1",
+      "label": "EN 301 549 V3.2.1",
+      "status": "supported",
+      "revision": "EN 301 549 V3.2.1 (2021-03), fetched 2026-10-06 (Harmonised European Standard, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "EN 301 549 V4.1.1",
+      "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+      "status": "Harmonised European Standard",
+      "revision": "EN 301 549 V4.1.1 (2026-09), fetched 2026-10-06 (Harmonised European Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EN 301 549 V3.2.1",
+      "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+      "status": "Harmonised European Standard",
+      "revision": "EN 301 549 V3.2.1 (2021-03), fetched 2026-10-06 (Harmonised European Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

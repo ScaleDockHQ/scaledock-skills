@@ -4,7 +4,7 @@ description: Build or review a ScaleDock HTTP API that follows HTTP Semantics (R
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # ScaleDock HTTP API
@@ -24,7 +24,7 @@ An API whose contract, document, errors and limits all follow open specs, with P
 ## Skills to install
 
 ```bash
-npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics --skill openapi --skill json-schema --skill openapi-overlay --skill problem-details --skill ratelimit-headers --skill standard-schema
+npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics --skill openapi --skill json-schema --skill openapi-overlay --skill problem-details --skill ratelimit-headers --skill standard-schema --skill json --skill json-patch --skill jsonpath --skill uuid --skill well-known-uris --skill tls --skill sarif
 npx skills add ScaleDockHQ/PermDock
 ```
 

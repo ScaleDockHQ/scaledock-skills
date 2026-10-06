@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Geolocation. Geolocation API 2016 is legacy; Geolocation is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "geolocation-2016",
+      "label": "Geolocation API 2016",
+      "status": "legacy",
+      "revision": "geolocation-2016 REC-geolocation-API-20161108 (Recommendation, 2016-11-08)"
+    },
+    {
+      "id": "geolocation",
+      "label": "Geolocation",
+      "status": "current",
+      "revision": "geolocation CR-geolocation-20260326 (Candidate Recommendation Snapshot, 2026-03-26)",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Geolocation API 2016",
+      "url": "https://www.w3.org/TR/2016/REC-geolocation-API-20161108/",
+      "status": "Recommendation",
+      "revision": "geolocation-2016 REC-geolocation-API-20161108 (Recommendation, 2016-11-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Geolocation",
+      "url": "https://www.w3.org/TR/geolocation/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "geolocation CR-geolocation-20260326 (Candidate Recommendation Snapshot, 2026-03-26)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

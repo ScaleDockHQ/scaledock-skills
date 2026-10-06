@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Profiles Vocabulary. The Profiles Vocabulary 1.0 is current; Content Negotiation by Profile is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "dx-prof-1.0",
+      "label": "The Profiles Vocabulary 1.0",
+      "status": "current",
+      "revision": "dx-prof-1.0 NOTE-dx-prof-20191218 (Working Draft, 2026-09-15)",
+      "posture": "track",
+      "family": "profile"
+    },
+    {
+      "id": "dx-prof-conneg",
+      "label": "Content Negotiation by Profile",
+      "status": "current",
+      "revision": "dx-prof-conneg WD-dx-prof-conneg-20260921 (Working Draft, 2026-09-21)",
+      "posture": "track",
+      "family": "conneg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Profiles Vocabulary 1.0",
+      "url": "https://www.w3.org/TR/dx-prof-1.0/",
+      "status": "Working Draft",
+      "revision": "dx-prof-1.0 NOTE-dx-prof-20191218 (Working Draft, 2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Content Negotiation by Profile",
+      "url": "https://www.w3.org/TR/dx-prof-conneg/",
+      "status": "Working Draft",
+      "revision": "dx-prof-conneg WD-dx-prof-conneg-20260921 (Working Draft, 2026-09-21)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

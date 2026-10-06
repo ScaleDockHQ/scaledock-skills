@@ -1,0 +1,25 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Digital Credentials API. Digital Credentials is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "digital-credentials",
+      "label": "Digital Credentials",
+      "status": "current",
+      "revision": "digital-credentials WD-digital-credentials-20260904 (Working Draft, 2026-09-04)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Digital Credentials",
+      "url": "https://www.w3.org/TR/digital-credentials/",
+      "status": "Working Draft",
+      "revision": "digital-credentials WD-digital-credentials-20260904 (Working Draft, 2026-09-04)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

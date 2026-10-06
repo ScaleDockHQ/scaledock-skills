@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "organization": "ScaleDock",
   "date": "October 2026",
   "abstract": "Give AI agents least-privilege, auditable access in a ScaleDock product: PermDock decides every tool call, delegation and human approval across the AI SDK, Claude Agent SDK, OpenAI Agents SDK, Eve, MCP, A2A, WebMCP, AG-UI, A2UI, MCP Apps, AP2, x402, UCP and ACP, Web Bot Auth fills the actor for HTTP bots, and decisions are recorded through OpenTelemetry GenAI spans and OCSF for EU AI Act and NIST AI RMF record-keeping. It installs the matching spec skills, lists optional ones per surface (including CIBA approvals, robots.txt, aipref, C2PA, the OWASP LLM Top 10 and MITRE ATLAS), and defers to them on protocol details; references/stack.md maps each one onto PermDock.",

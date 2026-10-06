@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Regulation (EU) 2023/2854 as published in the Official Journal. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "reg-2023-2854",
+      "label": "Regulation (EU) 2023/2854",
+      "status": "current",
+      "revision": "Official Journal, 13 December 2023 act"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Regulation (EU) 2023/2854",
+      "url": "http://publications.europa.eu/resource/oj/L_202302854.ENG",
+      "status": "Official Journal",
+      "revision": "Official Journal, 13 December 2023 act",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Ethereum EIPs. ERC-20 is current; EIP-712 is current; ERC-4337 is current; EIP-1193 is current; ERC-8004 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "erc-20",
+      "label": "ERC-20",
+      "status": "current",
+      "revision": "EIP-20, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "family": "erc-20"
+    },
+    {
+      "id": "eip-712",
+      "label": "EIP-712",
+      "status": "current",
+      "revision": "EIP-712, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "family": "eip-712"
+    },
+    {
+      "id": "erc-4337",
+      "label": "ERC-4337",
+      "status": "current",
+      "revision": "EIP-4337, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "family": "erc-4337"
+    },
+    {
+      "id": "eip-1193",
+      "label": "EIP-1193",
+      "status": "current",
+      "revision": "EIP-1193, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "family": "eip-1193"
+    },
+    {
+      "id": "erc-8004",
+      "label": "ERC-8004",
+      "status": "current",
+      "revision": "EIP-8004, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "family": "erc-8004"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ERC-20",
+      "url": "https://eips.ethereum.org/EIPS/eip-20",
+      "status": "EIP",
+      "revision": "EIP-20, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EIP-712",
+      "url": "https://eips.ethereum.org/EIPS/eip-712",
+      "status": "EIP",
+      "revision": "EIP-712, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ERC-4337",
+      "url": "https://eips.ethereum.org/EIPS/eip-4337",
+      "status": "EIP",
+      "revision": "EIP-4337, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EIP-1193",
+      "url": "https://eips.ethereum.org/EIPS/eip-1193",
+      "status": "EIP",
+      "revision": "EIP-1193, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ERC-8004",
+      "url": "https://eips.ethereum.org/EIPS/eip-8004",
+      "status": "EIP",
+      "revision": "EIP-8004, fetched 2026-10-06 (EIP, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

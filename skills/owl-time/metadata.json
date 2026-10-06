@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OWL Time. Time Ontology in OWL is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "owl-time",
+      "label": "Time Ontology in OWL",
+      "status": "current",
+      "revision": "owl-time CR-owl-time-20200326 (Candidate Recommendation Draft, 2022-11-15)",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Time Ontology in OWL",
+      "url": "https://www.w3.org/TR/owl-time/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "owl-time CR-owl-time-20200326 (Candidate Recommendation Draft, 2022-11-15)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

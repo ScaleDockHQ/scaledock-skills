@@ -8,7 +8,7 @@ An agent skill that makes a ScaleDock product enterprise-ready: OIDC and SAML SS
 npx skills add ScaleDockHQ/scaledock-skills --skill scaledock-enterprise-identity
 ```
 
-It asks you to install the spec skills it builds on: `openid-connect`, `saml`, `webauthn`, `scim` and `shared-signals`, plus `nist-800-63`, `ciba`, `fapi`, `spiffe` and `wimse` when selected, and PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
+It asks you to install the spec skills it builds on: `openid-connect`, `saml`, `webauthn`, `scim`, `shared-signals`, `fedcm`, `credential-management`, `dbsc`, `fido-ctap` and `digital-credentials`, plus `nist-800-63`, `ciba`, `fapi`, `spiffe` and `wimse` when selected, and PermDock's skills (`npx skills add ScaleDockHQ/PermDock`).
 
 Then ask your agent to "add SCIM provisioning for Okta", "add SAML SSO and passkeys", "revoke sessions when Entra says so", or "make this API FAPI 2.0 compliant".
 

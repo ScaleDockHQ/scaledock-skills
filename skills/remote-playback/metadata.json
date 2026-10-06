@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Remote Playback API. Remote Playback API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "remote-playback",
+      "label": "Remote Playback API",
+      "status": "current",
+      "revision": "remote-playback CRD-remote-playback-20240430 (Candidate Recommendation Draft, 2024-04-30)",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Remote Playback API",
+      "url": "https://www.w3.org/TR/remote-playback/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "remote-playback CRD-remote-playback-20240430 (Candidate Recommendation Draft, 2024-04-30)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

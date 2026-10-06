@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers NIST Privacy Framework. Privacy Framework 1.0 is current; Privacy Framework 1.1 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "privacy-framework-1.0",
+      "label": "Privacy Framework 1.0",
+      "status": "current",
+      "revision": "Privacy Framework 1.0, fetched 2026-10-06 (NIST CSWP, 2026-10-06)"
+    },
+    {
+      "id": "privacy-framework-1.1-preview",
+      "label": "Privacy Framework 1.1",
+      "status": "preview",
+      "revision": "Privacy Framework 1.1 concept paper, fetched 2026-10-06 (Concept paper, 2026-10-06)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Privacy Framework 1.0",
+      "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf",
+      "status": "NIST CSWP",
+      "revision": "Privacy Framework 1.0, fetched 2026-10-06 (NIST CSWP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Privacy Framework 1.1",
+      "url": "https://www.nist.gov/system/files/documents/2024/06/18/Privacy%20Framework%201.1%20Concept%20Paper%20%286.18.24%29.pdf",
+      "status": "Concept paper",
+      "revision": "Privacy Framework 1.1 concept paper, fetched 2026-10-06 (Concept paper, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

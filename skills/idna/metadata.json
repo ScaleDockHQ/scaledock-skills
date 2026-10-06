@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers IDNA (UTS #46). UTS #46 is current; RFC 5890 IDNA is current; RFC 5891 IDNA protocol is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "uts46",
+      "label": "UTS #46",
+      "status": "current",
+      "revision": "UTS #46 (Unicode Technical Standard, 2026-10-06)",
+      "family": "uts46"
+    },
+    {
+      "id": "rfc5890",
+      "label": "RFC 5890 IDNA",
+      "status": "current",
+      "revision": "RFC 5890 (RFC, 2010-08)",
+      "family": "idna"
+    },
+    {
+      "id": "rfc5891",
+      "label": "RFC 5891 IDNA protocol",
+      "status": "current",
+      "revision": "RFC 5891 (RFC, 2010-08)",
+      "family": "protocol"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UTS #46",
+      "url": "https://www.unicode.org/reports/tr46/",
+      "status": "Unicode Technical Standard",
+      "revision": "UTS #46 (Unicode Technical Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 5890 IDNA",
+      "url": "https://www.rfc-editor.org/rfc/rfc5890.html",
+      "status": "RFC",
+      "revision": "RFC 5890 (RFC, 2010-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 5891 IDNA protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc5891.html",
+      "status": "RFC",
+      "revision": "RFC 5891 (RFC, 2010-08)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

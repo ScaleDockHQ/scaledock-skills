@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the QTI 3.0.1 ASI information model, Final Release of 1 September 2024. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "qti-3-0-1",
+      "label": "QTI 3.0.1",
+      "status": "current",
+      "revision": "1EdTech Final Release, 1 September 2024"
+    }
+  ],
+  "sources": [
+    {
+      "title": "QTI 3.0.1 ASI information model",
+      "url": "https://www.imsglobal.org/sites/default/files/spec/qti/v3/info/imsqti_asi_v3p0p1_infomodel_v1p0.html",
+      "status": "1EdTech Final Release",
+      "revision": "Version 3.0.1, 1 September 2024",
+      "checked": "2026-10-06"
+    }
+  ]
+}

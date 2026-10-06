@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Common Format and MIME Type for Comma-Separated Values (CSV) Files. RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc4180",
+      "label": "RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files",
+      "status": "current",
+      "revision": "RFC 4180 (INFORMATIONAL, October 20)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files",
+      "url": "https://www.rfc-editor.org/rfc/rfc4180.html",
+      "status": "INFORMATIONAL",
+      "revision": "RFC 4180 (INFORMATIONAL, October 20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

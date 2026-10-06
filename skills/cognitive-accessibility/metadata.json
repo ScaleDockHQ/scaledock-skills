@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Making Content Usable for People with Cognitive and Learning Disabilities. Making Content Usable for People with Cognitive and Learning Disabilities is current; Cognitive Accessibility Roadmap and Gap Analysis is current; Cognitive Accessibility User Research is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "coga-usable",
+      "label": "Making Content Usable for People with Cognitive and Learning Disabilities",
+      "status": "current",
+      "revision": "coga-usable NOTE-coga-usable-20210429 (Note, 2021-04-29)",
+      "posture": "track",
+      "family": "usable"
+    },
+    {
+      "id": "coga-gap-analysis",
+      "label": "Cognitive Accessibility Roadmap and Gap Analysis",
+      "status": "current",
+      "revision": "coga-gap-analysis WD-coga-gap-analysis-20171207 (Working Draft, 2018-12-11)",
+      "posture": "track",
+      "family": "gap-analysis"
+    },
+    {
+      "id": "coga-user-research",
+      "label": "Cognitive Accessibility User Research",
+      "status": "current",
+      "revision": "coga-user-research WD-coga-user-research-20150115 (First Public Working Draft, 2015-01-15)",
+      "posture": "track",
+      "family": "user-research"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
+      "url": "https://www.w3.org/TR/coga-usable/",
+      "status": "Note",
+      "revision": "coga-usable NOTE-coga-usable-20210429 (Note, 2021-04-29)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Roadmap and Gap Analysis",
+      "url": "https://www.w3.org/TR/coga-gap-analysis/",
+      "status": "Working Draft",
+      "revision": "coga-gap-analysis WD-coga-gap-analysis-20171207 (Working Draft, 2018-12-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility User Research",
+      "url": "https://www.w3.org/TR/coga-user-research/",
+      "status": "First Public Working Draft",
+      "revision": "coga-user-research WD-coga-user-research-20150115 (First Public Working Draft, 2015-01-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Research Modules",
+      "url": "https://www.w3.org/TR/coga-research-modules/",
+      "status": "Draft Note",
+      "revision": "coga-research-modules (Draft Note, 2026-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Research Modules - Online Safety and Wellbeing (Algorithms and Data)",
+      "url": "https://www.w3.org/TR/coga-safety/",
+      "status": "Draft Note",
+      "revision": "coga-safety (Draft Note, 2026-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Research Modules - Supported Decision-Making Online",
+      "url": "https://www.w3.org/TR/coga-sdm/",
+      "status": "Draft Note",
+      "revision": "coga-sdm (Draft Note, 2026-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Research Modules - Voice Systems and Conversational Interfaces",
+      "url": "https://www.w3.org/TR/coga-voice/",
+      "status": "Draft Note",
+      "revision": "coga-voice (Draft Note, 2026-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cognitive Accessibility Research Modules - Technology Assisted Indoor Navigation / Wayfinding",
+      "url": "https://www.w3.org/TR/coga-wayfinding/",
+      "status": "Draft Note",
+      "revision": "coga-wayfinding (Draft Note, 2026-02-05)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Authoring Tool Accessibility Guidelines (ATAG). Authoring Tool Accessibility Guidelines (ATAG) 2.0 is current; Authoring Tool Accessibility Guidelines 1.0 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "atag20",
+      "label": "Authoring Tool Accessibility Guidelines (ATAG) 2.0",
+      "status": "current",
+      "revision": "ATAG20 NOTE-IMPLEMENTING-ATAG20-20150924 (Recommendation, 2015-09-24)"
+    },
+    {
+      "id": "atag10",
+      "label": "Authoring Tool Accessibility Guidelines 1.0",
+      "status": "legacy",
+      "revision": "ATAG10 REC-ATAG10-20000203 (Recommendation, 2000-02-03)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Authoring Tool Accessibility Guidelines (ATAG) 2.0",
+      "url": "https://www.w3.org/TR/ATAG20/",
+      "status": "Recommendation",
+      "revision": "ATAG20 NOTE-IMPLEMENTING-ATAG20-20150924 (Recommendation, 2015-09-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Authoring Tool Accessibility Guidelines 1.0",
+      "url": "https://www.w3.org/TR/ATAG10/",
+      "status": "Recommendation",
+      "revision": "ATAG10 REC-ATAG10-20000203 (Recommendation, 2000-02-03)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

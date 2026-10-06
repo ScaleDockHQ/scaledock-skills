@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Media Capture. Media Capture and Streams is current; MediaStream Image Capture is current; MediaStream Recording is current; Media Capture from DOM Elements is current; MediaStreamTrack Insertable Media Processing using Streams is current; MediaStreamTrack Content Hints is current; Region Capture is current; Viewport Capture is current; Screen Capture is current; Capture Handle - Bootstrapping Collaboration when Screensharing is current; Audio Output Devices API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "mediacapture-streams",
+      "label": "Media Capture and Streams",
+      "status": "current",
+      "revision": "mediacapture-streams CRD-mediacapture-streams-20251009 (Candidate Recommendation Draft, 2025-10-09)",
+      "posture": "build",
+      "family": "streams"
+    },
+    {
+      "id": "image-capture",
+      "label": "MediaStream Image Capture",
+      "status": "current",
+      "revision": "image-capture WD-image-capture-20250423 (Working Draft, 2025-04-23)",
+      "posture": "track",
+      "family": "image-capture"
+    },
+    {
+      "id": "mediastream-recording",
+      "label": "MediaStream Recording",
+      "status": "current",
+      "revision": "mediastream-recording WD-mediastream-recording-20260316 (Working Draft, 2026-03-16)",
+      "posture": "track",
+      "family": "recording"
+    },
+    {
+      "id": "mediacapture-fromelement",
+      "label": "Media Capture from DOM Elements",
+      "status": "current",
+      "revision": "mediacapture-fromelement WD-mediacapture-fromelement-20250212 (Working Draft, 2025-02-12)",
+      "posture": "track",
+      "family": "from-element"
+    },
+    {
+      "id": "mediacapture-transform",
+      "label": "MediaStreamTrack Insertable Media Processing using Streams",
+      "status": "current",
+      "revision": "mediacapture-transform WD-mediacapture-transform-20260416 (Working Draft, 2026-04-16)",
+      "posture": "track",
+      "family": "transform"
+    },
+    {
+      "id": "mst-content-hint",
+      "label": "MediaStreamTrack Content Hints",
+      "status": "current",
+      "revision": "mst-content-hint WD-mst-content-hint-20250919 (Working Draft, 2025-09-19)",
+      "posture": "track",
+      "family": "content-hints"
+    },
+    {
+      "id": "mediacapture-region",
+      "label": "Region Capture",
+      "status": "current",
+      "revision": "mediacapture-region WD-mediacapture-region-20230712 (Working Draft, 2023-07-12)",
+      "posture": "track",
+      "family": "region"
+    },
+    {
+      "id": "mediacapture-viewport",
+      "label": "Viewport Capture",
+      "status": "current",
+      "revision": "mediacapture-viewport WD-mediacapture-viewport-20241009 (Working Draft, 2024-10-09)",
+      "posture": "track",
+      "family": "viewport"
+    },
+    {
+      "id": "screen-capture",
+      "label": "Screen Capture",
+      "status": "current",
+      "revision": "screen-capture WD-screen-capture-20260827 (Working Draft, 2026-08-27)",
+      "posture": "track",
+      "family": "screen"
+    },
+    {
+      "id": "capture-handle-identity",
+      "label": "Capture Handle - Bootstrapping Collaboration when Screensharing",
+      "status": "current",
+      "revision": "capture-handle-identity WD-capture-handle-identity-20250306 (Working Draft, 2025-03-06)",
+      "posture": "track",
+      "family": "capture-handle"
+    },
+    {
+      "id": "audio-output",
+      "label": "Audio Output Devices API",
+      "status": "current",
+      "revision": "audio-output CRD-audio-output-20251009 (Candidate Recommendation Draft, 2025-10-09)",
+      "posture": "build",
+      "family": "audio-output"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Media Capture and Streams",
+      "url": "https://www.w3.org/TR/mediacapture-streams/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "mediacapture-streams CRD-mediacapture-streams-20251009 (Candidate Recommendation Draft, 2025-10-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MediaStream Image Capture",
+      "url": "https://www.w3.org/TR/image-capture/",
+      "status": "Working Draft",
+      "revision": "image-capture WD-image-capture-20250423 (Working Draft, 2025-04-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MediaStream Recording",
+      "url": "https://www.w3.org/TR/mediastream-recording/",
+      "status": "Working Draft",
+      "revision": "mediastream-recording WD-mediastream-recording-20260316 (Working Draft, 2026-03-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Media Capture from DOM Elements",
+      "url": "https://www.w3.org/TR/mediacapture-fromelement/",
+      "status": "Working Draft",
+      "revision": "mediacapture-fromelement WD-mediacapture-fromelement-20250212 (Working Draft, 2025-02-12)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MediaStreamTrack Insertable Media Processing using Streams",
+      "url": "https://www.w3.org/TR/mediacapture-transform/",
+      "status": "Working Draft",
+      "revision": "mediacapture-transform WD-mediacapture-transform-20260416 (Working Draft, 2026-04-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MediaStreamTrack Content Hints",
+      "url": "https://www.w3.org/TR/mst-content-hint/",
+      "status": "Working Draft",
+      "revision": "mst-content-hint WD-mst-content-hint-20250919 (Working Draft, 2025-09-19)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Region Capture",
+      "url": "https://www.w3.org/TR/mediacapture-region/",
+      "status": "Working Draft",
+      "revision": "mediacapture-region WD-mediacapture-region-20230712 (Working Draft, 2023-07-12)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Viewport Capture",
+      "url": "https://www.w3.org/TR/mediacapture-viewport/",
+      "status": "Working Draft",
+      "revision": "mediacapture-viewport WD-mediacapture-viewport-20241009 (Working Draft, 2024-10-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Screen Capture",
+      "url": "https://www.w3.org/TR/screen-capture/",
+      "status": "Working Draft",
+      "revision": "screen-capture WD-screen-capture-20260827 (Working Draft, 2026-08-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Capture Handle - Bootstrapping Collaboration when Screensharing",
+      "url": "https://www.w3.org/TR/capture-handle-identity/",
+      "status": "Working Draft",
+      "revision": "capture-handle-identity WD-capture-handle-identity-20250306 (Working Draft, 2025-03-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Audio Output Devices API",
+      "url": "https://www.w3.org/TR/audio-output/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "audio-output CRD-audio-output-20251009 (Candidate Recommendation Draft, 2025-10-09)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV). RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) is current; RFC 4791 Calendaring Extensions to WebDAV (CalDAV) is current; RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc4918",
+      "label": "RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)",
+      "status": "current",
+      "revision": "RFC 4918 (PROPOSED STANDARD, June 2007)",
+      "family": "webdav"
+    },
+    {
+      "id": "rfc4791",
+      "label": "RFC 4791 Calendaring Extensions to WebDAV (CalDAV)",
+      "status": "current",
+      "revision": "RFC 4791 (PROPOSED STANDARD, March 2007)",
+      "family": "caldav"
+    },
+    {
+      "id": "rfc6352",
+      "label": "RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)",
+      "status": "current",
+      "revision": "RFC 6352 (PROPOSED STANDARD, August 201)",
+      "family": "carddav"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)",
+      "url": "https://www.rfc-editor.org/rfc/rfc4918.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 4918 (PROPOSED STANDARD, June 2007)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4791 Calendaring Extensions to WebDAV (CalDAV)",
+      "url": "https://www.rfc-editor.org/rfc/rfc4791.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 4791 (PROPOSED STANDARD, March 2007)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)",
+      "url": "https://www.rfc-editor.org/rfc/rfc6352.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6352 (PROPOSED STANDARD, August 201)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

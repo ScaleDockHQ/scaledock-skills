@@ -4,7 +4,7 @@ description: "MCP authorization: secure MCP servers with OAuth 2.1 as resource s
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.3.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The Model Context Protocol (MCP) authorization specification defines how an HTTP
 - Transport: Streamable HTTP or another HTTP transport (this skill applies), or STDIO (it does not; credentials come from the environment).
 - Enterprise: whether an enterprise identity provider (IdP) must control access, which brings in Enterprise-Managed Authorization.
 - User presence: whether a user authorizes access, or the client runs with no user (a service, pipeline or daemon), which brings in the Draft OAuth Client Credentials extension.
-- Target version: MCP 2026-07-28 (current, the default; the revision the MCP Versioning page marks Current). MCP 2025-11-25 and MCP 2025-06-18 are supported: keep their behaviour only for a named peer on that revision. MCP 2025-03-26 is legacy: read it and upgrade from it, never author it. The MCP draft is a preview (posture: track): never emit it. Revision 2024-11-05 had no authorization. See [`references/versions.md`](references/versions.md).
+- Target version: MCP 2026-07-28 (current, the default; the revision the MCP Versioning page marks Current). MCP 2025-11-25 and MCP 2025-06-18 are supported: keep their behaviour only for a named peer on that revision. MCP 2025-03-26 is legacy: read it and upgrade from it, never author it. The MCP draft is a preview (posture: track): never emit it. OAuth 2.1 (draft-ietf-oauth-v2-1-16) and OAuth Client ID Metadata Document (draft-ietf-oauth-client-id-metadata-document-02) are previews (posture: track). Revision 2024-11-05 had no authorization. See [`references/versions.md`](references/versions.md).
 - Sources: when refreshing this skill or when a rule looks out of date, re-read the MCP Versioning page for a newer Current revision, then the changelog and Deprecated Features page of that revision, then every URL in [Sources](#sources). Update the pins and bump the version.
 
 ## Invariants
@@ -141,8 +141,8 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [TypeScript SDK: OAuth (client)](https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/docs/clients/oauth.md): Released, v2.2.0, checked 2026-10-02.
 - [TypeScript SDK: Machine authentication](https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/docs/clients/machine-auth.md): Released, v2.2.0, checked 2026-10-02.
 - [TypeScript SDK: client auth source](https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.2.0/packages/client/src/client/auth.ts): Released, v2.2.0, checked 2026-10-02.
-- [The OAuth 2.1 Authorization Framework](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-13): Internet-Draft (WG document), draft-ietf-oauth-v2-1-13 as pinned by MCP (latest is -16); Draft posture: build at -13, checked 2026-10-02.
-- [OAuth Client ID Metadata Document](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-00): Internet-Draft (WG document), draft-ietf-oauth-client-id-metadata-document-00 as pinned by MCP (latest is -02); Draft posture: build at -00, checked 2026-10-02.
+- [The OAuth 2.1 Authorization Framework](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16): Internet-Draft (WG document), draft-ietf-oauth-v2-1-16, published 3 September 2026, checked 2026-10-06. MCP 2026-07-28 cited -13.
+- [OAuth Client ID Metadata Document](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-02): Internet-Draft (WG document), draft-ietf-oauth-client-id-metadata-document-02, published 6 July 2026, checked 2026-10-06. MCP 2026-07-28 cited -00.
 - [Identity Assertion JWT Authorization Grant](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-identity-assertion-authz-grant-04): Internet-Draft (WG document), draft-ietf-oauth-identity-assertion-authz-grant-04 (latest); Draft posture: build at -04 through the Stable extension, checked 2026-10-02.
 - [RFC 9728: OAuth 2.0 Protected Resource Metadata](https://www.rfc-editor.org/rfc/rfc9728): RFC (Proposed Standard), RFC 9728, checked 2026-10-02.
 - [RFC 8414: OAuth 2.0 Authorization Server Metadata](https://www.rfc-editor.org/rfc/rfc8414): RFC (Proposed Standard), RFC 8414, checked 2026-10-02.

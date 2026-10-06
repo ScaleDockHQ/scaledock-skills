@@ -1,0 +1,24 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Server-sent events. Server-sent events is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "living",
+      "label": "Server-sent events",
+      "status": "current",
+      "revision": "HTML Living Standard Review Draft 2026-07, server-sent events (HTML Living Standard, 2026-07)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Server-sent events",
+      "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+      "status": "HTML Living Standard",
+      "revision": "HTML Living Standard Review Draft 2026-07, server-sent events (HTML Living Standard, 2026-07)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

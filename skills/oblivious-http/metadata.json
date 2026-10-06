@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Oblivious HTTP. RFC 9458 Oblivious HTTP is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc9458",
+      "label": "RFC 9458 Oblivious HTTP",
+      "status": "current",
+      "revision": "RFC 9458 (PROPOSED STANDARD, January 20)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9458 Oblivious HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9458 (PROPOSED STANDARD, January 20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

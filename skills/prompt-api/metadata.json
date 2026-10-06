@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Prompt API. Prompt API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "cg",
+      "label": "Prompt API",
+      "status": "current",
+      "revision": "WebML CG Draft Community Group Report (Draft Community Group Report, 2026-10-06)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Prompt API",
+      "url": "https://webmachinelearning.github.io/prompt-api/",
+      "status": "Draft Community Group Report",
+      "revision": "WebML CG Draft Community Group Report (Draft Community Group Report, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Versions and upgrades
+
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+
+## Version lines
+
+| Id                    | Line                      | Status  | Revision                                                                          | Posture | Publisher                 |
+| --------------------- | ------------------------- | ------- | --------------------------------------------------------------------------------- | ------- | ------------------------- |
+| `annotation-model`    | Web Annotation Data Model | current | annotation-model REC-annotation-model-20170223 (Recommendation, 2017-02-23)       |         | Recommendation 2017-02-23 |
+| `annotation-protocol` | Web Annotation Protocol   | current | annotation-protocol REC-annotation-protocol-20170223 (Recommendation, 2017-02-23) |         | Recommendation 2017-02-23 |
+| `annotation-vocab`    | Web Annotation Vocabulary | current | annotation-vocab REC-annotation-vocab-20170223 (Recommendation, 2017-02-23)       |         | Recommendation 2017-02-23 |
+
+Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
+
+## Which version to use
+
+- Default to the current line of the relevant family.
+- Drop to a supported line only for a named consumer that cannot read the current one.
+- Treat a legacy document as input to an upgrade.
+- Emit nothing from a preview unless its posture is build and the user opted in.
+
+## What changed
+
+### Web Annotation Data Model
+
+- Publisher status on 2026-10-06: Recommendation (2017-02-23).
+- Pinned text: https://www.w3.org/TR/annotation-model/
+- Revision token: annotation-model REC-annotation-model-20170223 (Recommendation, 2017-02-23)
+
+### Web Annotation Protocol
+
+- Publisher status on 2026-10-06: Recommendation (2017-02-23).
+- Pinned text: https://www.w3.org/TR/annotation-protocol/
+- Revision token: annotation-protocol REC-annotation-protocol-20170223 (Recommendation, 2017-02-23)
+
+### Web Annotation Vocabulary
+
+- Publisher status on 2026-10-06: Recommendation (2017-02-23).
+- Pinned text: https://www.w3.org/TR/annotation-vocab/
+- Revision token: annotation-vocab REC-annotation-vocab-20170223 (Recommendation, 2017-02-23)
+
+## Upgrading
+
+There is no older line to upgrade from.
+
+## Preview
+
+No preview line is listed. The pinned current text is the newest line this skill tracks.

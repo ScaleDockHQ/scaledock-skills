@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Device Posture API. Device Posture API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "device-posture",
+      "label": "Device Posture API",
+      "status": "current",
+      "revision": "device-posture CRD-device-posture-20260520 (Candidate Recommendation Draft, 2026-05-20)",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Device Posture API",
+      "url": "https://www.w3.org/TR/device-posture/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "device-posture CRD-device-posture-20260520 (Candidate Recommendation Draft, 2026-05-20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers XML Encryption. XML Encryption Syntax and Processing Version 1.1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "xmlenc-core1",
+      "label": "XML Encryption Syntax and Processing Version 1.1",
+      "status": "current",
+      "revision": "xmlenc-core1 REC-xmlenc-core1-20130411 (Recommendation, 2013-04-11)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "XML Encryption Syntax and Processing Version 1.1",
+      "url": "https://www.w3.org/TR/xmlenc-core1/",
+      "status": "Recommendation",
+      "revision": "xmlenc-core1 REC-xmlenc-core1-20130411 (Recommendation, 2013-04-11)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

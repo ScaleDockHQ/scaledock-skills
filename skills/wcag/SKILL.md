@@ -17,7 +17,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -104,6 +104,9 @@ The Web Content Accessibility Guidelines (WCAG), published by the W3C Accessibil
 ## Related skills
 
 - `wai-aria`, for roles, states and properties when native HTML elements cannot provide name, role and value: `npx skills add ScaleDockHQ/scaledock-skills --skill wai-aria`
+- `act-rules-format`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill act-rules-format`
+- `atag`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill atag`
+- `en-301-549`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill en-301-549`
 
 ## Sources
 
@@ -125,3 +128,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Understanding Techniques for WCAG 2.2 Success Criteria](https://www.w3.org/WAI/WCAG22/Understanding/understanding-techniques): informative, updated 26 July 2026, checked 2026-10-05.
 - [Understanding Test Rules for WCAG 2 Success Criteria](https://www.w3.org/WAI/WCAG22/Understanding/understanding-act-rules): informative, updated 10 August 2026, checked 2026-10-05.
 - [How to Meet WCAG (Quick Reference)](https://www.w3.org/WAI/WCAG22/quickref/): informative, updated 22 September 2025, checked 2026-10-05.
+- [Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)](https://www.w3.org/TR/wcag2ict/): W3C Group Note, 11 December 2025 (NOTE-wcag2ict-22-20251211), checked 2026-10-06.
+- [WCAG Evaluation Methodology (WCAG-EM) 2.0](https://www.w3.org/TR/WCAG-EM/): W3C Group Note, 23 July 2026 (NOTE-wcag-em-2-20260723), checked 2026-10-06.
+- [Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)](https://www.w3.org/TR/wcag2mobile/): W3C Group Draft Note, 6 May 2025 (DNOTE-wcag2mobile-22-20250506), checked 2026-10-06.
+- [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/): W3C Group Note, 21 September 2023 (NOTE-UNDERSTANDING-WCAG20-20230921), checked 2026-10-06.

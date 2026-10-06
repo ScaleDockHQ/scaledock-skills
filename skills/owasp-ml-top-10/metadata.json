@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OWASP ML Top 10. OWASP ML Top 10 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "ml-top-10",
+      "label": "OWASP ML Top 10",
+      "status": "current",
+      "revision": "OWASP ML Security Top 10, fetched 2026-10-06 (Project, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP ML Top 10",
+      "url": "https://owasp.org/www-project-machine-learning-security-top-ten/",
+      "status": "Project",
+      "revision": "OWASP ML Security Top 10, fetched 2026-10-06 (Project, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

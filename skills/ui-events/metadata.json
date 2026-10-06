@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers UI Events. UI Events is current; UI Events (uievents-old) is legacy; UI Events KeyboardEvent key Values is current; UI Events KeyboardEvent code Values is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "uievents",
+      "label": "UI Events",
+      "status": "current",
+      "revision": "uievents WD-uievents-20260221 (Working Draft, 2026-02-21)",
+      "posture": "track",
+      "family": "events"
+    },
+    {
+      "id": "uievents-old",
+      "label": "UI Events (uievents-old)",
+      "status": "legacy",
+      "revision": "uievents-old WD-uievents-20260221 (Working Draft, 2014-06-12)",
+      "family": "events"
+    },
+    {
+      "id": "uievents-key",
+      "label": "UI Events KeyboardEvent key Values",
+      "status": "current",
+      "revision": "uievents-key REC-uievents-key-20250422 (Recommendation, 2025-04-22)",
+      "family": "key"
+    },
+    {
+      "id": "uievents-code",
+      "label": "UI Events KeyboardEvent code Values",
+      "status": "current",
+      "revision": "uievents-code REC-uievents-code-20250422 (Recommendation, 2025-04-22)",
+      "family": "code"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UI Events",
+      "url": "https://www.w3.org/TR/uievents/",
+      "status": "Working Draft",
+      "revision": "uievents WD-uievents-20260221 (Working Draft, 2026-02-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "UI Events KeyboardEvent key Values",
+      "url": "https://www.w3.org/TR/uievents-key/",
+      "status": "Recommendation",
+      "revision": "uievents-key REC-uievents-key-20250422 (Recommendation, 2025-04-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "UI Events KeyboardEvent code Values",
+      "url": "https://www.w3.org/TR/uievents-code/",
+      "status": "Recommendation",
+      "revision": "uievents-code REC-uievents-code-20250422 (Recommendation, 2025-04-22)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

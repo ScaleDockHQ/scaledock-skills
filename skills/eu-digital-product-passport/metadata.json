@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Regulation (EU) 2024/1781 as published in the Official Journal, including its digital product passport provisions. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "reg-2024-1781",
+      "label": "Regulation (EU) 2024/1781",
+      "status": "current",
+      "revision": "Official Journal, 13 June 2024 act"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Regulation (EU) 2024/1781",
+      "url": "http://publications.europa.eu/resource/oj/L_202401781.ENG",
+      "status": "Official Journal",
+      "revision": "Official Journal, 13 June 2024 act",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+---
+name: madr
+description: >-
+  MADR: About MADR | MADR Skip to main content Link Menu Expand (external link) Document Search Copy Copied MADR About MADR Covers MADR. Use when writing an architecture decision record. Triggers: MADR, ADR.
+license: MIT
+metadata:
+  author: ScaleDockHQ
+  version: "1.0.0"
+  kind: standard
+---
+
+# MADR
+
+About MADR | MADR Skip to main content Link Menu Expand (external link) Document Search Copy Copied MADR About MADR
+
+The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when writing an architecture decision record.
+
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+
+## Inputs (fill in, or ask before starting)
+
+- Role: producer or consumer of this specification.
+- Target version: MADR (default). See [`references/versions.md`](references/versions.md).
+- Revision: the pinned revision in [Sources](#sources), unless the user names another.
+- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
+
+## Invariants
+
+1. **Overview.** "It should be as easy as possible to a) write down the decisions and b) to version the decisions."
+2. **Overview.** "Since we believe that any (important) decision should be captured in a structured way, we offer the MADR template to capture any decision."
+3. **Full template.** "--> ## More Information {You might want to provide additional evidence/confidence for the decision outcome here and/or document the team agreement on the decision and/or define when/how this decision the decision should be realized and if/when it should be re-visited."
+
+## Workflow
+
+1. **Pick the version.** Use the current line unless a named consumer needs a supported one. Do not author a legacy line. Emit a preview only when its posture is build and the user asked for that draft.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The target version is recorded, and it is not a legacy line.
+2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
+   -> [`references/requirements.md`](references/requirements.md)
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
+   -> [`references/versions.md`](references/versions.md)
+   ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.
+
+## Verify before done
+
+- [ ] The artifact cites the target line's revision from [Sources](#sources).
+- [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
+
+## Reference index
+
+- **`references/versions.md`**: every version line, which one to use, and how to upgrade. Load for steps 1 and 3.
+- **`references/requirements.md`**: quotes taken from the pinned specification. Load for step 2.
+
+## Related skills
+
+Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+
+## Sources
+
+Status uses the publishing body's own maturity term. Checked is the date the source was last read.
+
+- [MADR](https://adr.github.io/madr/): Template, MADR, fetched 2026-10-06 (Template, 2026-10-06), checked 2026-10-06.

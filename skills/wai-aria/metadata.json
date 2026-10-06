@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -54,6 +54,35 @@
       "revision": "W3C Recommendation 2026-08-11",
       "family": "html-aria",
       "reference": "references/aria-in-html.md"
+    },
+    {
+      "id": "graphics-aria-1.0",
+      "label": "Graphics ARIA 1.0",
+      "status": "current",
+      "revision": "W3C Recommendation, 2 October 2018 (REC-graphics-aria-1.0-20181002)",
+      "family": "graphics-aria"
+    },
+    {
+      "id": "dpub-aria-1.1",
+      "label": "DPUB-ARIA 1.1",
+      "status": "current",
+      "revision": "W3C Recommendation, 12 June 2025 (REC-dpub-aria-1.1-20250612)",
+      "family": "dpub-aria"
+    },
+    {
+      "id": "svg-aam-1.0",
+      "label": "SVG-AAM",
+      "status": "current",
+      "posture": "track",
+      "family": "svg-aam",
+      "revision": "W3C Working Draft, 24 September 2026 (WD-svg-aam-1.0-20260924)"
+    },
+    {
+      "id": "dpub-aam-1.0",
+      "label": "DPub-AAM 1.0",
+      "status": "current",
+      "family": "dpub-aam",
+      "revision": "W3C Recommendation, 14 December 2017 (REC-dpub-aam-1.0-20171214)"
     }
   ],
   "sources": [
@@ -231,6 +260,48 @@
       "status": "W3C WAI resource",
       "revision": "as read 2026-10-05",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "WAI-ARIA Graphics Module",
+      "url": "https://www.w3.org/TR/graphics-aria-1.0/",
+      "status": "W3C Recommendation",
+      "revision": "REC-graphics-aria-1.0-20181002 (2 October 2018)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Digital Publishing WAI-ARIA Module 1.1",
+      "url": "https://www.w3.org/TR/dpub-aria-1.1/",
+      "status": "W3C Recommendation",
+      "revision": "REC-dpub-aria-1.1-20250612 (12 June 2025)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Core Accessibility API Mappings 1.2",
+      "url": "https://www.w3.org/TR/core-aam-1.2/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "CRD-core-aam-1.2-20260923 (23 September 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "HTML Accessibility API Mappings 1.0",
+      "url": "https://www.w3.org/TR/html-aam-1.0/",
+      "status": "W3C Working Draft",
+      "revision": "WD-html-aam-1.0-20261005 (5 October 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SVG Accessibility API Mappings",
+      "url": "https://www.w3.org/TR/svg-aam-1.0/",
+      "status": "W3C Working Draft",
+      "revision": "WD-svg-aam-1.0-20260924 (24 September 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Digital Publishing Accessibility API Mappings",
+      "url": "https://www.w3.org/TR/dpub-aam-1.0/",
+      "status": "W3C Recommendation",
+      "revision": "REC-dpub-aam-1.0-20171214 (14 December 2017)",
+      "checked": "2026-10-06"
     }
   ]
 }

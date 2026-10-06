@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SPARQL. SPARQL 1.1 Query Language is current; SPARQL Query Language for RDF is legacy; SPARQL 1.1 Protocol is current; SPARQL Protocol for RDF is legacy; SPARQL 1.1 Update is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sparql11-query",
+      "label": "SPARQL 1.1 Query Language",
+      "status": "current",
+      "revision": "sparql11-query REC-sparql11-query-20130321 (Recommendation, 2013-03-21)",
+      "family": "query"
+    },
+    {
+      "id": "sparql10-query",
+      "label": "SPARQL Query Language for RDF",
+      "status": "legacy",
+      "revision": "sparql10-query REC-rdf-sparql-query-20080115 (Recommendation, 2008-01-15)",
+      "family": "query"
+    },
+    {
+      "id": "sparql11-protocol",
+      "label": "SPARQL 1.1 Protocol",
+      "status": "current",
+      "revision": "sparql11-protocol REC-sparql11-protocol-20130321 (Recommendation, 2013-03-21)",
+      "family": "protocol"
+    },
+    {
+      "id": "sparql10-protocol",
+      "label": "SPARQL Protocol for RDF",
+      "status": "legacy",
+      "revision": "sparql10-protocol REC-rdf-sparql-protocol-20080115 (Recommendation, 2008-01-15)",
+      "family": "protocol"
+    },
+    {
+      "id": "sparql11-update",
+      "label": "SPARQL 1.1 Update",
+      "status": "current",
+      "revision": "sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)",
+      "family": "update"
+    },
+    {
+      "id": "sparql12-query-preview",
+      "label": "SPARQL 1.2 Query Language",
+      "status": "preview",
+      "posture": "track",
+      "family": "query",
+      "revision": "W3C Working Draft 04 October 2026 (sparql12-query)"
+    },
+    {
+      "id": "sparql12-protocol-preview",
+      "label": "SPARQL 1.2 Protocol",
+      "status": "preview",
+      "posture": "track",
+      "family": "protocol",
+      "revision": "W3C Working Draft 23 July 2026 (sparql12-protocol)"
+    },
+    {
+      "id": "sparql12-update-preview",
+      "label": "SPARQL 1.2 Update",
+      "status": "preview",
+      "posture": "track",
+      "family": "update",
+      "revision": "W3C Working Draft 12 June 2026 (sparql12-update)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SPARQL 1.1 Query Language",
+      "url": "https://www.w3.org/TR/sparql11-query/",
+      "status": "Recommendation",
+      "revision": "sparql11-query REC-sparql11-query-20130321 (Recommendation, 2013-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL Query Language for RDF",
+      "url": "https://www.w3.org/TR/rdf-sparql-query/",
+      "status": "Recommendation",
+      "revision": "sparql10-query REC-rdf-sparql-query-20080115 (Recommendation, 2008-01-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.1 Protocol",
+      "url": "https://www.w3.org/TR/sparql11-protocol/",
+      "status": "Recommendation",
+      "revision": "sparql11-protocol REC-sparql11-protocol-20130321 (Recommendation, 2013-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL Protocol for RDF",
+      "url": "https://www.w3.org/TR/rdf-sparql-protocol/",
+      "status": "Recommendation",
+      "revision": "sparql10-protocol REC-rdf-sparql-protocol-20080115 (Recommendation, 2008-01-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.1 Update",
+      "url": "https://www.w3.org/TR/sparql11-update/",
+      "status": "Recommendation",
+      "revision": "sparql11-update REC-sparql11-update-20130321 (Recommendation, 2013-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Query Language",
+      "url": "https://www.w3.org/TR/sparql12-query/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 04 October 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Protocol",
+      "url": "https://www.w3.org/TR/sparql12-protocol/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 23 July 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SPARQL 1.2 Update",
+      "url": "https://www.w3.org/TR/sparql12-update/",
+      "status": "Working Draft",
+      "revision": "W3C Working Draft 12 June 2026",
+      "checked": "2026-10-06"
+    }
+  ]
+}

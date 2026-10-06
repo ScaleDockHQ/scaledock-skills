@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Sign in with Apple. Sign in with Apple is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sign-in-with-apple",
+      "label": "Sign in with Apple",
+      "status": "current",
+      "revision": "Sign in with Apple, fetched 2026-10-06 (Documentation, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sign in with Apple",
+      "url": "https://developer.apple.com/documentation/signinwithapple",
+      "status": "Documentation",
+      "revision": "Sign in with Apple, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

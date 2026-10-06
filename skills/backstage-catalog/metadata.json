@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Backstage catalog. Backstage catalog descriptor is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "backstage-catalog",
+      "label": "Backstage catalog descriptor",
+      "status": "current",
+      "revision": "Backstage catalog descriptor format, fetched 2026-10-06 (Documentation, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Backstage catalog descriptor",
+      "url": "https://backstage.io/docs/features/software-catalog/descriptor-format/",
+      "status": "Documentation",
+      "revision": "Backstage catalog descriptor format, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

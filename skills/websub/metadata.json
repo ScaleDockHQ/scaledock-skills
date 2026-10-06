@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebSub. WebSub is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "websub",
+      "label": "WebSub",
+      "status": "current",
+      "revision": "websub REC-websub-20260602 (Recommendation, 2026-06-02)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WebSub",
+      "url": "https://www.w3.org/TR/websub/",
+      "status": "Recommendation",
+      "revision": "websub REC-websub-20260602 (Recommendation, 2026-06-02)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

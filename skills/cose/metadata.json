@@ -1,0 +1,67 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers CBOR Object Signing and Encryption (COSE): Structures and Process. RFC 9052 CBOR Object Signing and Encryption (COSE): Structures and Process is current; RFC 9053 CBOR Object Signing and Encryption (COSE): Initial Algorithms is current; RFC 9360 CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates is current; RFC 9964 ML-DSA for JSON Object Signing and Encryption (JOSE) and CBOR Object Signing and Encryption (COSE) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc9052",
+      "label": "RFC 9052 CBOR Object Signing and Encryption (COSE): Structures and Process",
+      "status": "current",
+      "revision": "RFC 9052 (INTERNET STANDARD, August 202)",
+      "family": "cose"
+    },
+    {
+      "id": "rfc9053",
+      "label": "RFC 9053 CBOR Object Signing and Encryption (COSE): Initial Algorithms",
+      "status": "current",
+      "revision": "RFC 9053 (INFORMATIONAL, August 202)",
+      "family": "algorithms"
+    },
+    {
+      "id": "rfc9360",
+      "label": "RFC 9360 CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates",
+      "status": "current",
+      "revision": "RFC 9360 (PROPOSED STANDARD, February 2)",
+      "family": "countersign"
+    },
+    {
+      "id": "rfc9964",
+      "label": "RFC 9964 ML-DSA for JSON Object Signing and Encryption (JOSE) and CBOR Object Signing and Encryption (COSE)",
+      "status": "current",
+      "revision": "RFC 9964 (PROPOSED STANDARD, May 2026)",
+      "family": "ml-dsa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 9052 CBOR Object Signing and Encryption (COSE): Structures and Process",
+      "url": "https://www.rfc-editor.org/rfc/rfc9052.html",
+      "status": "INTERNET STANDARD",
+      "revision": "RFC 9052 (INTERNET STANDARD, August 202)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9053 CBOR Object Signing and Encryption (COSE): Initial Algorithms",
+      "url": "https://www.rfc-editor.org/rfc/rfc9053.html",
+      "status": "INFORMATIONAL",
+      "revision": "RFC 9053 (INFORMATIONAL, August 202)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9360 CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates",
+      "url": "https://www.rfc-editor.org/rfc/rfc9360.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9360 (PROPOSED STANDARD, February 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9964 ML-DSA for JSON Object Signing and Encryption (JOSE) and CBOR Object Signing and Encryption (COSE)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9964.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9964 (PROPOSED STANDARD, May 2026)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Subresource Integrity (SRI). Subresource Integrity Level 1 is current; Subresource Integrity Level 2 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sri-1",
+      "label": "Subresource Integrity Level 1",
+      "status": "current",
+      "revision": "sri-1 WD-sri-2-20260320 (Recommendation, 2016-06-23)"
+    },
+    {
+      "id": "sri-2-preview",
+      "label": "Subresource Integrity Level 2",
+      "status": "preview",
+      "revision": "sri-2 WD-sri-2-20260320 (Working Draft, 2026-03-20)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Subresource Integrity",
+      "url": "https://www.w3.org/TR/SRI/",
+      "status": "Recommendation",
+      "revision": "sri-1 WD-sri-2-20260320 (Recommendation, 2016-06-23)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Subresource Integrity",
+      "url": "https://www.w3.org/TR/sri-2/",
+      "status": "Working Draft",
+      "revision": "sri-2 WD-sri-2-20260320 (Working Draft, 2026-03-20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

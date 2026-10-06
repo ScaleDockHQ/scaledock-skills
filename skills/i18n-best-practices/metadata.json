@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Internationalization best practices. Character Model for the World Wide Web 1.0: Fundamentals is current; Character Model for the World Wide Web: String Matching is preview; Strings on the Web: Language and Direction Metadata is current; Internationalization Tag Set (ITS) Version 2.0 is current; Ruby Annotation is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "charmod",
+      "label": "Character Model for the World Wide Web 1.0: Fundamentals",
+      "status": "current",
+      "revision": "charmod REC-charmod-20050215 (Recommendation, 2005-02-15)",
+      "family": "charmod"
+    },
+    {
+      "id": "charmod-norm-preview",
+      "label": "Character Model for the World Wide Web: String Matching",
+      "status": "preview",
+      "revision": "charmod-norm WD-charmod-norm-20260716 (First Public Working Draft, 2026-07-16)",
+      "posture": "track",
+      "family": "charmod"
+    },
+    {
+      "id": "string-meta",
+      "label": "Strings on the Web: Language and Direction Metadata",
+      "status": "current",
+      "revision": "string-meta WD-string-meta-20260716 (First Public Working Draft, 2026-07-16)",
+      "posture": "track",
+      "family": "string-meta"
+    },
+    {
+      "id": "its20",
+      "label": "Internationalization Tag Set (ITS) Version 2.0",
+      "status": "current",
+      "revision": "its20 REC-its20-20131029 (Recommendation, 2013-10-29)",
+      "family": "its"
+    },
+    {
+      "id": "ruby",
+      "label": "Ruby Annotation",
+      "status": "current",
+      "revision": "ruby REC-ruby-20010531 (Recommendation, 2001-05-31)",
+      "family": "ruby"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Character Model for the World Wide Web 1.0: Fundamentals",
+      "url": "https://www.w3.org/TR/charmod/",
+      "status": "Recommendation",
+      "revision": "charmod REC-charmod-20050215 (Recommendation, 2005-02-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Character Model for the World Wide Web: String Matching",
+      "url": "https://www.w3.org/TR/charmod-norm/",
+      "status": "First Public Working Draft",
+      "revision": "charmod-norm WD-charmod-norm-20260716 (First Public Working Draft, 2026-07-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Strings on the Web: Language and Direction Metadata",
+      "url": "https://www.w3.org/TR/string-meta/",
+      "status": "First Public Working Draft",
+      "revision": "string-meta WD-string-meta-20260716 (First Public Working Draft, 2026-07-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Internationalization Tag Set (ITS) Version 2.0",
+      "url": "https://www.w3.org/TR/its20/",
+      "status": "Recommendation",
+      "revision": "its20 REC-its20-20131029 (Recommendation, 2013-10-29)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Ruby Annotation",
+      "url": "https://www.w3.org/TR/ruby/",
+      "status": "Recommendation",
+      "revision": "ruby REC-ruby-20010531 (Recommendation, 2001-05-31)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Working with Time and Timezones",
+      "url": "https://www.w3.org/TR/timezone/",
+      "status": "Draft Note",
+      "revision": "timezone (Draft Note, 2025-07-26)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Developing Localizable Manifests",
+      "url": "https://www.w3.org/TR/localizable-manifests/",
+      "status": "Note",
+      "revision": "localizable-manifests (Note, 2025-02-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

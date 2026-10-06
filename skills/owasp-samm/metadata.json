@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OWASP SAMM. OWASP SAMM is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "samm",
+      "label": "OWASP SAMM",
+      "status": "current",
+      "revision": "OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWASP SAMM",
+      "url": "https://owasp.org/www-project-samm/",
+      "status": "Project",
+      "revision": "OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

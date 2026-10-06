@@ -1,0 +1,77 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers FIDO CTAP. CTAP 2.3 is current; CTAP 2.2 is supported; CTAP 2.1 is supported; U2F 1.2 is legacy; CTAP 2.3.1 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "ctap-2.3",
+      "label": "CTAP 2.3",
+      "status": "current",
+      "revision": "CTAP 2.3 Proposed Standard 2026-02-26 (Proposed Standard, 2026-02-26)"
+    },
+    {
+      "id": "ctap-2.2",
+      "label": "CTAP 2.2",
+      "status": "supported",
+      "revision": "CTAP 2.2 Proposed Standard 2025-07-14 (Proposed Standard, 2025-07-14)"
+    },
+    {
+      "id": "ctap-2.1",
+      "label": "CTAP 2.1",
+      "status": "supported",
+      "revision": "CTAP 2.1 Proposed Standard 2021-06-15 (Proposed Standard, 2021-06-15)"
+    },
+    {
+      "id": "u2f-1.2",
+      "label": "U2F 1.2",
+      "status": "legacy",
+      "revision": "U2F 1.2 raw message formats (Proposed Standard, 2017-04-11)"
+    },
+    {
+      "id": "ctap-2.3.1-preview",
+      "label": "CTAP 2.3.1",
+      "status": "preview",
+      "revision": "CTAP 2.3.1 Working Draft 2026-05-29 (Working Draft, 2026-05-29)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "CTAP 2.3",
+      "url": "https://fidoalliance.org/specs/fido-v2.3-ps-20260226/fido-client-to-authenticator-protocol-v2.3-ps-20260226.html",
+      "status": "Proposed Standard",
+      "revision": "CTAP 2.3 Proposed Standard 2026-02-26 (Proposed Standard, 2026-02-26)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CTAP 2.2",
+      "url": "https://fidoalliance.org/specs/fido-v2.2-ps-20250714/fido-client-to-authenticator-protocol-v2.2-ps-20250714.html",
+      "status": "Proposed Standard",
+      "revision": "CTAP 2.2 Proposed Standard 2025-07-14 (Proposed Standard, 2025-07-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CTAP 2.1",
+      "url": "https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html",
+      "status": "Proposed Standard",
+      "revision": "CTAP 2.1 Proposed Standard 2021-06-15 (Proposed Standard, 2021-06-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "U2F 1.2",
+      "url": "https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-raw-message-formats-v1.2-ps-20170411.html",
+      "status": "Proposed Standard",
+      "revision": "U2F 1.2 raw message formats (Proposed Standard, 2017-04-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CTAP 2.3.1",
+      "url": "https://fidoalliance.org/specs/fido-v2.3.1-wd-20260529/fido-client-to-authenticator-protocol-v2.3.1-wd-20260529.html",
+      "status": "Working Draft",
+      "revision": "CTAP 2.3.1 Working Draft 2026-05-29 (Working Draft, 2026-05-29)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

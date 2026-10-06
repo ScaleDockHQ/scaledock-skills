@@ -22,19 +22,31 @@ Then ask your agent to "add ETags and If-Match to our update endpoints", "pick t
 
 ## Versions
 
-| Line                       | Status                |
-| -------------------------- | --------------------- |
-| RFC 9110 and RFC 9111      | current               |
-| RFC 7230-7235              | legacy (upgrade from) |
-| Idempotency-Key draft-07   | preview (track)       |
-| RFC 10008 QUERY            | current               |
-| RFC 9651 Structured Fields | current               |
-| RFC 8941 Structured Fields | legacy (upgrade from) |
-| RFC 8288 Web Linking       | current               |
-| RFC 9745 Deprecation       | current               |
-| RFC 8594 Sunset            | current               |
-| RFC 9727 api-catalog       | current               |
-| RFC 7240 Prefer            | current               |
+| Line                                      | Status                |
+| ----------------------------------------- | --------------------- |
+| RFC 9110 and RFC 9111                     | current               |
+| RFC 7230-7235                             | legacy (upgrade from) |
+| Idempotency-Key draft-07                  | preview (track)       |
+| RFC 10008 QUERY                           | current               |
+| RFC 9651 Structured Fields                | current               |
+| RFC 8941 Structured Fields                | legacy (upgrade from) |
+| RFC 8288 Web Linking                      | current               |
+| RFC 9745 Deprecation                      | current               |
+| RFC 8594 Sunset                           | current               |
+| RFC 9727 api-catalog                      | current               |
+| RFC 7240 Prefer                           | current               |
+| RFC 7838 Alt-Svc                          | current               |
+| RFC 8297 Early Hints                      | current               |
+| RFC 8942 Client Hints                     | current               |
+| RFC 9211 Cache-Status                     | current               |
+| RFC 9209 Proxy-Status                     | current               |
+| RFC 9213 Targeted Cache-Control           | current               |
+| RFC 9218 Priority                         | current               |
+| RFC 5789 PATCH                            | current               |
+| RFC 7578 multipart/form-data              | current               |
+| RFC 9652 Link-Template                    | current               |
+| RFC 9842 Compression Dictionary Transport | current               |
+| Resumable Uploads draft-12                | current (track)       |
 
 `references/versions.md` says which line to use per family, what changed from RFC 7230-7235 and RFC 8941, how to upgrade and how to adopt QUERY, and what the Idempotency-Key preview means.
 

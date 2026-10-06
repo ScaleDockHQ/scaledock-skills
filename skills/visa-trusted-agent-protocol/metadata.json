@@ -1,0 +1,24 @@
+{
+  "version": "1.0.1",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Trusted Agent Protocol. Trusted Agent Protocol is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "tap",
+      "label": "Trusted Agent Protocol",
+      "status": "current",
+      "revision": "Trusted Agent Protocol README, fetched 2026-10-06 (Repository document, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Trusted Agent Protocol",
+      "url": "https://raw.githubusercontent.com/visa/trusted-agent-protocol/main/README.md",
+      "status": "Repository document",
+      "revision": "Trusted Agent Protocol README, fetched 2026-10-06 (Repository document, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

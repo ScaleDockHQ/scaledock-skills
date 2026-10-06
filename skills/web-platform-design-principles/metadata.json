@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Platform Design Principles. Web Platform Design Principles is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "design-principles",
+      "label": "Web Platform Design Principles",
+      "status": "current",
+      "revision": "design-principles NOTE-design-principles-20260914 (Note, 2026-09-14)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Platform Design Principles",
+      "url": "https://www.w3.org/TR/design-principles/",
+      "status": "Note",
+      "revision": "design-principles NOTE-design-principles-20260914 (Note, 2026-09-14)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Self-Review Questionnaire: Security and Privacy",
+      "url": "https://www.w3.org/TR/security-privacy-questionnaire/",
+      "status": "Note",
+      "revision": "security-privacy-questionnaire (Note, 2025-04-18)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Self-Review Questionnaire: Societal Impact",
+      "url": "https://www.w3.org/TR/societal-impact-questionnaire/",
+      "status": "Draft Note",
+      "revision": "societal-impact-questionnaire (Draft Note, 2026-03-19)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Mitigating Browser Fingerprinting in Web Specifications",
+      "url": "https://www.w3.org/TR/fingerprinting-guidance/",
+      "status": "Note",
+      "revision": "fingerprinting-guidance (Note, 2025-09-25)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

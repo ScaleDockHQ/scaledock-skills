@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers CDS Hooks. CDS Hooks 2.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "cds-hooks-2.0",
+      "label": "CDS Hooks 2.0",
+      "status": "current",
+      "revision": "CDS Hooks 2.0 (Specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "CDS Hooks 2.0",
+      "url": "https://cds-hooks.hl7.org/2.0/",
+      "status": "Specification",
+      "revision": "CDS Hooks 2.0 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

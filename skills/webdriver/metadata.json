@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WebDriver. WebDriver Level 1 is current; WebDriver Level 2 is preview; WebDriver BiDi is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "webdriver1",
+      "label": "WebDriver Level 1",
+      "status": "current",
+      "revision": "webdriver1 REC-webdriver1-20180605 (Recommendation, 2018-06-05)",
+      "family": "classic"
+    },
+    {
+      "id": "webdriver2-preview",
+      "label": "WebDriver Level 2",
+      "status": "preview",
+      "revision": "webdriver2 WD-webdriver2-20260702 (Working Draft, 2026-07-02)",
+      "posture": "track",
+      "family": "classic"
+    },
+    {
+      "id": "webdriver-bidi",
+      "label": "WebDriver BiDi",
+      "status": "current",
+      "revision": "webdriver-bidi WD-webdriver-bidi-20260930 (Working Draft, 2026-09-30)",
+      "posture": "track",
+      "family": "bidi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WebDriver",
+      "url": "https://www.w3.org/TR/webdriver1/",
+      "status": "Recommendation",
+      "revision": "webdriver1 REC-webdriver1-20180605 (Recommendation, 2018-06-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebDriver",
+      "url": "https://www.w3.org/TR/webdriver2/",
+      "status": "Working Draft",
+      "revision": "webdriver2 WD-webdriver2-20260702 (Working Draft, 2026-07-02)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebDriver BiDi",
+      "url": "https://www.w3.org/TR/webdriver-bidi/",
+      "status": "Working Draft",
+      "revision": "webdriver-bidi WD-webdriver-bidi-20260930 (Working Draft, 2026-09-30)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

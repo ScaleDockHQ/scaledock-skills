@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Audio API. Web Audio API Level 1.0 is current; Web Audio API 1.1 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "webaudio-1.0",
+      "label": "Web Audio API Level 1.0",
+      "status": "current",
+      "revision": "webaudio-1.0 REC-webaudio-20210617 (Recommendation, 2021-06-17)"
+    },
+    {
+      "id": "webaudio-1.1-preview",
+      "label": "Web Audio API 1.1",
+      "status": "preview",
+      "revision": "webaudio-1.1 WD-webaudio-1.1-20260922 (Working Draft, 2026-09-22)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Audio API",
+      "url": "https://www.w3.org/TR/webaudio-1.0/",
+      "status": "Recommendation",
+      "revision": "webaudio-1.0 REC-webaudio-20210617 (Recommendation, 2021-06-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Audio API 1.1",
+      "url": "https://www.w3.org/TR/webaudio-1.1/",
+      "status": "Working Draft",
+      "revision": "webaudio-1.1 WD-webaudio-1.1-20260922 (Working Draft, 2026-09-22)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

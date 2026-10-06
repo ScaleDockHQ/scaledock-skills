@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers REUSE. REUSE is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "reuse",
+      "label": "REUSE",
+      "status": "current",
+      "revision": "REUSE specification, fetched 2026-10-06 (Specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "REUSE",
+      "url": "https://reuse.software/spec/",
+      "status": "Specification",
+      "revision": "REUSE specification, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

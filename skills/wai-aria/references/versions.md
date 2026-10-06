@@ -4,17 +4,21 @@ Read this when choosing which WAI-ARIA, AccName or ARIA in HTML text to author a
 
 ## Version lines
 
-Three families are tracked. WAI-ARIA itself has no family name; AccName (`accname`) and ARIA in HTML (`html-aria`) are separately versioned companion specifications from the same Working Group.
+Seven families are tracked. Graphics ARIA (`graphics-aria`) and DPUB-ARIA (`dpub-aria`) are modules with one current line each. WAI-ARIA itself has no family name; AccName (`accname`) and ARIA in HTML (`html-aria`) are separately versioned companion specifications from the same Working Group.
 
-| Id                    | Line         | Status  | Revision                                                | Posture | Summary                                                                                                         |
-| --------------------- | ------------ | ------- | ------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
-| `1.3-preview`         | WAI-ARIA 1.3 | preview | W3C Working Draft 2026-06-04; editor's draft 2026-10-02 | name    | Adds comment, mark, suggestion, sectionheader, sectionfooter and image roles, aria-description, braille labels. |
-| `1.2`                 | WAI-ARIA 1.2 | current | W3C Recommendation 2023-06-06                           |         | The default target. New combobox pattern, generic and text-level roles, name-prohibited roles.                  |
-| `1.1`                 | WAI-ARIA 1.1 | legacy  | W3C Recommendation 2017-12-14                           |         | Superseded by 1.2. Container-style combobox; introduced aria-modal, none, switch, table and cell.               |
-| `1.0`                 | WAI-ARIA 1.0 | legacy  | W3C Recommendation 2014-03-20                           |         | Superseded by 1.1. Combobox on the text field owning its listbox through aria-owns.                             |
-| `accname-1.2-preview` | AccName 1.2  | preview | W3C Working Draft 2026-10-02                            | build   | The algorithm WAI-ARIA 1.2 normatively cites; adds aria-description, shadow roots and slots, name prohibited.   |
-| `accname-1.1`         | AccName 1.1  | current | W3C Recommendation 2018-12-18                           |         | The latest AccName Recommendation.                                                                              |
-| `html-aria`           | ARIA in HTML | current | W3C Recommendation 2026-08-11                           |         | Which roles and aria-\* attributes authors may use on each HTML element, and the implicit semantics.            |
+| Id                    | Line              | Status  | Revision                                                | Posture | Summary                                                                                                         |
+| --------------------- | ----------------- | ------- | ------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| `1.3-preview`         | WAI-ARIA 1.3      | preview | W3C Working Draft 2026-06-04; editor's draft 2026-10-02 | name    | Adds comment, mark, suggestion, sectionheader, sectionfooter and image roles, aria-description, braille labels. |
+| `1.2`                 | WAI-ARIA 1.2      | current | W3C Recommendation 2023-06-06                           |         | The default target. New combobox pattern, generic and text-level roles, name-prohibited roles.                  |
+| `1.1`                 | WAI-ARIA 1.1      | legacy  | W3C Recommendation 2017-12-14                           |         | Superseded by 1.2. Container-style combobox; introduced aria-modal, none, switch, table and cell.               |
+| `1.0`                 | WAI-ARIA 1.0      | legacy  | W3C Recommendation 2014-03-20                           |         | Superseded by 1.1. Combobox on the text field owning its listbox through aria-owns.                             |
+| `accname-1.2-preview` | AccName 1.2       | preview | W3C Working Draft 2026-10-02                            | build   | The algorithm WAI-ARIA 1.2 normatively cites; adds aria-description, shadow roots and slots, name prohibited.   |
+| `accname-1.1`         | AccName 1.1       | current | W3C Recommendation 2018-12-18                           |         | The latest AccName Recommendation.                                                                              |
+| `html-aria`           | ARIA in HTML      | current | W3C Recommendation 2026-08-11                           |         | Which roles and aria-\* attributes authors may use on each HTML element, and the implicit semantics.            |
+| `graphics-aria-1.0`   | Graphics ARIA 1.0 | current | W3C Recommendation, 2 October 2018                      |         | A WAI-ARIA module of roles, states and properties for graphics.                                                 |
+| `dpub-aria-1.1`       | DPUB-ARIA 1.1     | current | W3C Recommendation, 12 June 2025                        |         | Roles for long-form document structure.                                                                         |
+| `svg-aam-1.0`         | SVG-AAM           | current | W3C Working Draft, 24 September 2026                    | track   | Accessibility API mappings for SVG. The only line is a draft, so the posture is track.                          |
+| `dpub-aam-1.0`        | DPub-AAM 1.0      | current | W3C Recommendation, 14 December 2017                    |         | Accessibility API mappings for digital publishing.                                                              |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. No WAI-ARIA line is supported: WAI-ARIA is backwards compatible in the user agent (1.2 keeps deprecated features "allowed in the conformance model and expected to be supported by user agents", 1.2 §3.5), so there is no consumer that needs 1.1 markup.
 

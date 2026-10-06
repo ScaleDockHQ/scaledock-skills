@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DID methods. did:web is current; did:key is current; did:jwk is current; did:webvh is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "did-web",
+      "label": "did:web",
+      "status": "current",
+      "revision": "did:web method, fetched 2026-10-06 (Unofficial draft, 2026-10-06)",
+      "family": "did-web"
+    },
+    {
+      "id": "did-key",
+      "label": "did:key",
+      "status": "current",
+      "revision": "did:key method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "family": "did-key"
+    },
+    {
+      "id": "did-jwk",
+      "label": "did:jwk",
+      "status": "current",
+      "revision": "did:jwk method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "family": "did-jwk"
+    },
+    {
+      "id": "did-webvh",
+      "label": "did:webvh",
+      "status": "current",
+      "revision": "did:webvh v1.0, fetched 2026-10-06 (DIF specification, 2026-10-06)",
+      "family": "did-webvh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "did:web",
+      "url": "https://w3c-ccg.github.io/did-method-web/",
+      "status": "Unofficial draft",
+      "revision": "did:web method, fetched 2026-10-06 (Unofficial draft, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "did:key",
+      "url": "https://raw.githubusercontent.com/w3c-ccg/did-method-key/main/README.md",
+      "status": "Community draft",
+      "revision": "did:key method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "did:jwk",
+      "url": "https://raw.githubusercontent.com/quartzjer/did-jwk/main/spec.md",
+      "status": "Community draft",
+      "revision": "did:jwk method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "did:webvh",
+      "url": "https://identity.foundation/didwebvh/v1.0/",
+      "status": "DIF specification",
+      "revision": "did:webvh v1.0, fetched 2026-10-06 (DIF specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

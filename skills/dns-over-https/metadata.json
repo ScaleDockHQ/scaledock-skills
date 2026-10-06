@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DNS Queries over HTTPS (DoH). RFC 8484 DNS Queries over HTTPS (DoH) is current; RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc8484",
+      "label": "RFC 8484 DNS Queries over HTTPS (DoH)",
+      "status": "current",
+      "revision": "RFC 8484 (PROPOSED STANDARD, October 20)",
+      "family": "doh"
+    },
+    {
+      "id": "rfc9460",
+      "label": "RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)",
+      "status": "current",
+      "revision": "RFC 9460 (PROPOSED STANDARD, November 2)",
+      "family": "svcb"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 8484 DNS Queries over HTTPS (DoH)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8484.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8484 (PROPOSED STANDARD, October 20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9460.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9460 (PROPOSED STANDARD, November 2)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

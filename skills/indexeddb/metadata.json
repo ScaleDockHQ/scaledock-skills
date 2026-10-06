@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Indexed Database API. Indexed Database API 2.0 is current; Indexed Database API is legacy; Indexed Database API 3.0 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "indexeddb-2",
+      "label": "Indexed Database API 2.0",
+      "status": "current",
+      "revision": "IndexedDB-2 REC-IndexedDB-2-20180130 (Recommendation, 2018-01-30)"
+    },
+    {
+      "id": "indexeddb",
+      "label": "Indexed Database API",
+      "status": "legacy",
+      "revision": "IndexedDB WD-IndexedDB-3-20250813 (Recommendation, 2015-01-08)"
+    },
+    {
+      "id": "indexeddb-3-preview",
+      "label": "Indexed Database API 3.0",
+      "status": "preview",
+      "revision": "IndexedDB-3 WD-IndexedDB-3-20250813 (Working Draft, 2025-08-13)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Indexed Database API 2.0",
+      "url": "https://www.w3.org/TR/IndexedDB-2/",
+      "status": "Recommendation",
+      "revision": "IndexedDB-2 REC-IndexedDB-2-20180130 (Recommendation, 2018-01-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Indexed Database API",
+      "url": "https://www.w3.org/TR/IndexedDB/",
+      "status": "Recommendation",
+      "revision": "IndexedDB WD-IndexedDB-3-20250813 (Recommendation, 2015-01-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Indexed Database API 3.0",
+      "url": "https://www.w3.org/TR/IndexedDB-3/",
+      "status": "Working Draft",
+      "revision": "IndexedDB-3 WD-IndexedDB-3-20250813 (Working Draft, 2025-08-13)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

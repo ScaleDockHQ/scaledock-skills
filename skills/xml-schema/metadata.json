@@ -1,0 +1,81 @@
+{
+  "version": "1.1.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers XML Schema. W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures is current; XML Schema Part 1: Structures Second Edition is legacy; W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes is current; XML Schema Part 2: Datatypes Second Edition is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "xmlschema11-1",
+      "label": "W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures",
+      "status": "current",
+      "revision": "xmlschema11-1 REC-xmlschema11-1-20120405 (Recommendation, 2012-04-05)",
+      "family": "structures"
+    },
+    {
+      "id": "xmlschema-1",
+      "label": "XML Schema Part 1: Structures Second Edition",
+      "status": "legacy",
+      "revision": "xmlschema-1 REC-xmlschema-1-20041028 (Recommendation, 2004-10-28)",
+      "family": "structures"
+    },
+    {
+      "id": "xmlschema11-2",
+      "label": "W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes",
+      "status": "current",
+      "revision": "xmlschema11-2 REC-xmlschema11-2-20120405 (Recommendation, 2012-04-05)",
+      "family": "datatypes"
+    },
+    {
+      "id": "xmlschema-2",
+      "label": "XML Schema Part 2: Datatypes Second Edition",
+      "status": "legacy",
+      "revision": "xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28)",
+      "family": "datatypes"
+    },
+    {
+      "id": "xmlschema-0",
+      "label": "XML Schema Part 0: Primer Second Edition",
+      "status": "legacy",
+      "family": "structures",
+      "revision": "W3C Recommendation 28 October 2004. Non-normative primer for XML Schema 1.0."
+    }
+  ],
+  "sources": [
+    {
+      "title": "W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures",
+      "url": "https://www.w3.org/TR/xmlschema11-1/",
+      "status": "Recommendation",
+      "revision": "xmlschema11-1 REC-xmlschema11-1-20120405 (Recommendation, 2012-04-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Schema Part 1: Structures Second Edition",
+      "url": "https://www.w3.org/TR/xmlschema-1/",
+      "status": "Recommendation",
+      "revision": "xmlschema-1 REC-xmlschema-1-20041028 (Recommendation, 2004-10-28)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes",
+      "url": "https://www.w3.org/TR/xmlschema11-2/",
+      "status": "Recommendation",
+      "revision": "xmlschema11-2 REC-xmlschema11-2-20120405 (Recommendation, 2012-04-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Schema Part 2: Datatypes Second Edition",
+      "url": "https://www.w3.org/TR/xmlschema-2/",
+      "status": "Recommendation",
+      "revision": "xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Schema Part 0: Primer Second Edition",
+      "url": "https://www.w3.org/TR/xmlschema-0/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 28 October 2004",
+      "checked": "2026-10-06"
+    }
+  ]
+}

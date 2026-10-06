@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Streams. Streams Living Standard is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "living",
+      "label": "Streams Living Standard",
+      "status": "current",
+      "revision": "Review Draft 2026-08 (Review Draft, 2026-08)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Streams Living Standard",
+      "url": "https://streams.spec.whatwg.org/review-drafts/2026-08/",
+      "status": "Review Draft",
+      "revision": "Review Draft 2026-08 (Review Draft, 2026-08)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

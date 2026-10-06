@@ -41,6 +41,10 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/): W3C Working Draft, 10 September 2026, with the [Editor's Draft](https://w3c.github.io/wcag3/guidelines/) (2 October 2026), the [Explainer](https://www.w3.org/TR/wcag-3.0-explainer/) (Group Note Draft), the [WCAG 3 Introduction](https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/) and the [WCAG 3 Support Material](https://www.w3.org/WAI/WCAG3/informative/).
 - [What's New in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/), [WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/) and [WCAG 2 FAQ](https://www.w3.org/WAI/standards-guidelines/wcag/faq/): WAI resources.
 - [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/), [Understanding Techniques](https://www.w3.org/WAI/WCAG22/Understanding/understanding-techniques), [Understanding Test Rules](https://www.w3.org/WAI/WCAG22/Understanding/understanding-act-rules) and the [Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/): informative.
+- [WCAG2ICT](https://www.w3.org/TR/wcag2ict/): W3C Group Note, 11 December 2025.
+- [WCAG-EM 2.0](https://www.w3.org/TR/WCAG-EM/): W3C Group Note, 23 July 2026.
+- [WCAG2Mobile](https://www.w3.org/TR/wcag2mobile/): W3C Group Draft Note, 6 May 2025.
+- [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/): W3C Group Note, 21 September 2023.
 
 ## License
 

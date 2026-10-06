@@ -52,3 +52,10 @@ The skill was written from these sources, pinned in `metadata.json`:
 ## License
 
 MIT
+
+- [Graphics ARIA 1.0](https://www.w3.org/TR/graphics-aria-1.0/): W3C Recommendation, 2 October 2018.
+- [DPUB-ARIA 1.1](https://www.w3.org/TR/dpub-aria-1.1/): W3C Recommendation, 12 June 2025.
+- [Core-AAM 1.2](https://www.w3.org/TR/core-aam-1.2/): W3C Candidate Recommendation Draft, 23 September 2026.
+- [HTML-AAM 1.0](https://www.w3.org/TR/html-aam-1.0/): W3C Working Draft, 5 October 2026.
+- [SVG-AAM](https://www.w3.org/TR/svg-aam-1.0/): W3C Working Draft, 24 September 2026.
+- [DPub-AAM 1.0](https://www.w3.org/TR/dpub-aam-1.0/): W3C Recommendation, 14 December 2017.

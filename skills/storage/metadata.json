@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Storage. Storage Living Standard is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "living",
+      "label": "Storage Living Standard",
+      "status": "current",
+      "revision": "Review Draft 2026-02 (Review Draft, 2026-02)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Storage Living Standard",
+      "url": "https://storage.spec.whatwg.org/review-drafts/2026-02/",
+      "status": "Review Draft",
+      "revision": "Review Draft 2026-02 (Review Draft, 2026-02)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

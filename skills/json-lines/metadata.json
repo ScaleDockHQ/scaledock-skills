@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JSON Lines. JSON Lines is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "json-lines",
+      "label": "JSON Lines",
+      "status": "current",
+      "revision": "JSON Lines, fetched 2026-10-06 (Specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JSON Lines",
+      "url": "https://jsonlines.org/",
+      "status": "Specification",
+      "revision": "JSON Lines, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
