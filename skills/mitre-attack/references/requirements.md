@@ -2,10 +2,11 @@
 
 These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
 
-## MITRE ATT&CK
+## ATT&CK v19.2
 
-Source: https://attack.mitre.org/
+Source: https://attack.mitre.org/resources/versions/
 
-ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Register in person or register virtually . See the FAQ for hotel and venue details.
+The overall ATT&CK catalog is versioned using a major.minor version schema. The ATT&CK releases listed on the updates pages increment the major version number. The minor version number increments for our other small releases, which include typo and data corrections but not typically new content.
 
-- **abstract.** ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Register in person or register virtually . See the FAQ for hotel and venue details.
+- **version schema.** The overall ATT&CK catalog is versioned using a major.minor version schema.
+- **current line.** The version history page lists ATT&CK v19.2, April 28, 2026, as current.

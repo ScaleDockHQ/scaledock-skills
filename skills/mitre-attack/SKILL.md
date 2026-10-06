@@ -1,17 +1,17 @@
 ---
 name: mitre-attack
 description: >-
-  MITRE ATT&CK: ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Covers MITRE ATT&CK. Use when mapping adversary behavior. Triggers: ATT&CK.
+  MITRE ATT&CK: versioned adversary behavior knowledge base. Covers ATT&CK v19.2. Use when mapping adversary behavior. Triggers: ATT&CK.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
 # MITRE ATT&CK
 
-ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Register in person or register virtually . See the FAQ for hotel and venue details.
+The overall ATT&CK catalog is versioned using a major.minor version schema. The version history page lists ATT&CK v19.2, dated April 28, 2026, as current.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when mapping adversary behavior.
 
@@ -20,13 +20,13 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: MITRE ATT&CK (default). See [`references/versions.md`](references/versions.md).
+- Target version: ATT&CK v19.2 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **abstract.** "ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Register in person or register virtually . See the FAQ for hotel and venue details."
+1. **version schema.** "The overall ATT&CK catalog is versioned using a major.minor version schema. The ATT&CK releases listed on the updates pages increment the major version number."
 
 ## Workflow
 
@@ -59,4 +59,5 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [MITRE ATT&CK](https://attack.mitre.org/): Knowledge base, MITRE ATT&CK, fetched 2026-10-06 (Knowledge base, 2026-10-06), checked 2026-10-06.
+- [ATT&CK version history](https://attack.mitre.org/resources/versions/): Version history, ATT&CK v19.2 (April 28, 2026, current), checked 2026-10-06.
+- [MITRE ATT&CK](https://attack.mitre.org/): Knowledge base, ATT&CK v19.2 (April 28, 2026, current), checked 2026-10-06.

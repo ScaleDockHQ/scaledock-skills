@@ -1,23 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers MITRE ATT&CK. MITRE ATT&CK is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers MITRE ATT&CK. ATT&CK v19.2 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
   "versions": [
     {
-      "id": "mitre-attack",
-      "label": "MITRE ATT&CK",
+      "id": "attack-19.2",
+      "label": "ATT&CK v19.2",
       "status": "current",
-      "revision": "MITRE ATT&CK, fetched 2026-10-06 (Knowledge base, 2026-10-06)"
+      "revision": "ATT&CK v19.2 (April 28, 2026, current on the version history page)"
     }
   ],
   "sources": [
     {
+      "title": "ATT&CK version history",
+      "url": "https://attack.mitre.org/resources/versions/",
+      "status": "Version history",
+      "revision": "ATT&CK v19.2 (April 28, 2026, current on the version history page)",
+      "checked": "2026-10-06"
+    },
+    {
       "title": "MITRE ATT&CK",
       "url": "https://attack.mitre.org/",
       "status": "Knowledge base",
-      "revision": "MITRE ATT&CK, fetched 2026-10-06 (Knowledge base, 2026-10-06)",
+      "revision": "ATT&CK v19.2 (April 28, 2026, current on the version history page)",
       "checked": "2026-10-06"
     }
   ]

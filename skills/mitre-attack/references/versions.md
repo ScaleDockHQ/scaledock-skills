@@ -4,9 +4,9 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id             | Line         | Status  | Revision                                                      | Posture | Publisher                 |
-| -------------- | ------------ | ------- | ------------------------------------------------------------- | ------- | ------------------------- |
-| `mitre-attack` | MITRE ATT&CK | current | MITRE ATT&CK, fetched 2026-10-06 (Knowledge base, 2026-10-06) |         | Knowledge base 2026-10-06 |
+| Id            | Line         | Status  | Revision                                                           | Posture | Publisher                  |
+| ------------- | ------------ | ------- | ------------------------------------------------------------------ | ------- | -------------------------- |
+| `attack-19.2` | ATT&CK v19.2 | current | ATT&CK v19.2 (April 28, 2026, current on the version history page) |         | Version history 2026-10-06 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
@@ -19,11 +19,11 @@ Statuses: **current** is the default target; **supported** is released and still
 
 ## What changed
 
-### MITRE ATT&CK
+### ATT&CK v19.2
 
-- Publisher status on 2026-10-06: Knowledge base (2026-10-06).
-- Pinned text: https://attack.mitre.org/
-- Revision token: MITRE ATT&CK, fetched 2026-10-06 (Knowledge base, 2026-10-06)
+- Publisher status on 2026-10-06: current (April 28, 2026).
+- Pinned text: https://attack.mitre.org/resources/versions/
+- Revision token: ATT&CK v19.2 (April 28, 2026, current on the version history page)
 
 ## Upgrading
 
