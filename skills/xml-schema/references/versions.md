@@ -10,6 +10,7 @@ Read this when choosing a target version, reading a document written for an olde
 | `xmlschema-1`   | XML Schema Part 1: Structures Second Edition                    | legacy  | xmlschema-1 REC-xmlschema-1-20041028 (Recommendation, 2004-10-28)     |         | Recommendation 2004-10-28 |
 | `xmlschema11-2` | W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes  | current | xmlschema11-2 REC-xmlschema11-2-20120405 (Recommendation, 2012-04-05) |         | Recommendation 2012-04-05 |
 | `xmlschema-2`   | XML Schema Part 2: Datatypes Second Edition                     | legacy  | xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28)     |         | Recommendation 2004-10-28 |
+| `xmlschema-0`   | XML Schema Part 0: Primer Second Edition                        | legacy  | W3C Recommendation 28 October 2004                                    |         | Recommendation 2004-10-28 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 

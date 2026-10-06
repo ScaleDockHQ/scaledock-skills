@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -32,6 +32,13 @@
       "status": "legacy",
       "revision": "xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28)",
       "family": "datatypes"
+    },
+    {
+      "id": "xmlschema-0",
+      "label": "XML Schema Part 0: Primer Second Edition",
+      "status": "legacy",
+      "family": "structures",
+      "revision": "W3C Recommendation 28 October 2004. Non-normative primer for XML Schema 1.0."
     }
   ],
   "sources": [
@@ -61,6 +68,13 @@
       "url": "https://www.w3.org/TR/xmlschema-2/",
       "status": "Recommendation",
       "revision": "xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Schema Part 0: Primer Second Edition",
+      "url": "https://www.w3.org/TR/xmlschema-0/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 28 October 2004",
       "checked": "2026-10-06"
     }
   ]

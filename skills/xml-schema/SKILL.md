@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures (default); XML Schema Part 1: Structures Second Edition (legacy: read and upgrade, never author); W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes (default); XML Schema Part 2: Datatypes Second Edition (legacy: read and upgrade, never author). See [`references/versions.md`](references/versions.md).
+- Target version: W3C XML Schema Definition Language (XSD) 1.1 Part 1: Structures (default); XML Schema Part 1: Structures Second Edition (legacy: read and upgrade, never author); W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes (default); XML Schema Part 2: Datatypes Second Edition (legacy: read and upgrade, never author). XML Schema Part 0: Primer Second Edition is the non-normative XML Schema 1.0 primer, W3C Recommendation 28 October 2004, and is legacy. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -70,3 +70,4 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [XML Schema Part 1: Structures Second Edition](https://www.w3.org/TR/xmlschema-1/): Recommendation, xmlschema-1 REC-xmlschema-1-20041028 (Recommendation, 2004-10-28), checked 2026-10-06.
 - [W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes](https://www.w3.org/TR/xmlschema11-2/): Recommendation, xmlschema11-2 REC-xmlschema11-2-20120405 (Recommendation, 2012-04-05), checked 2026-10-06.
 - [XML Schema Part 2: Datatypes Second Edition](https://www.w3.org/TR/xmlschema-2/): Recommendation, xmlschema-2 REC-xmlschema-2-20041028 (Recommendation, 2004-10-28), checked 2026-10-06.
+- [XML Schema Part 0: Primer Second Edition](https://www.w3.org/TR/xmlschema-0/): Recommendation, W3C Recommendation 28 October 2004, checked 2026-10-06.
