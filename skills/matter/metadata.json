@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Matter data-model XML in project-chip/connectedhomeip for Matter 1.6.1, with 1.5, 1.4 and the 1.7 draft. Requirements are quotes from the cluster XML.",
+  "versions": [
+    {
+      "id": "matter-1-6",
+      "label": "Matter 1.6",
+      "status": "current",
+      "revision": "data_model/1.6.1, spec tag 1.6.1-attempt-4, spec sha 49f70c101b"
+    },
+    {
+      "id": "matter-1-5",
+      "label": "Matter 1.5",
+      "status": "supported",
+      "revision": "data_model/1.5.1, spec tag 1.5.1, spec sha aaf6d680e3"
+    },
+    {
+      "id": "matter-1-4",
+      "label": "Matter 1.4",
+      "status": "supported",
+      "revision": "data_model/1.4.2, spec tag 1.4.2-mve-1, spec sha e2c3ff019a"
+    },
+    {
+      "id": "matter-1-3",
+      "label": "Matter 1.3 and earlier",
+      "status": "legacy",
+      "revision": "data_model/1.0 to 1.3"
+    },
+    {
+      "id": "matter-1-7-preview",
+      "label": "Matter 1.7",
+      "status": "preview",
+      "revision": "data_model/1.7, spec tag 0.9-1.7-winter2027, spec sha 214e40c9d5",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "connectedhomeip data_model README",
+      "url": "https://raw.githubusercontent.com/project-chip/connectedhomeip/bd73b5141729af92f3d021aeecaa53d9e0cadb89/data_model/README.md",
+      "status": "Project CHIP SDK documentation",
+      "revision": "commit bd73b51, 2026-09-15",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Matter 1.6.1 Basic Information Cluster XML",
+      "url": "https://raw.githubusercontent.com/project-chip/connectedhomeip/bd73b5141729af92f3d021aeecaa53d9e0cadb89/data_model/1.6.1/clusters/BasicInformationCluster.xml",
+      "status": "CSA data model (SDK copy)",
+      "revision": "data_model/1.6.1, cluster revision 6",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Matter 1.6.1 General Commissioning Cluster XML",
+      "url": "https://raw.githubusercontent.com/project-chip/connectedhomeip/bd73b5141729af92f3d021aeecaa53d9e0cadb89/data_model/1.6.1/clusters/GeneralCommissioningCluster.xml",
+      "status": "CSA data model (SDK copy)",
+      "revision": "data_model/1.6.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Matter 1.6.1 Operational Credentials Cluster XML",
+      "url": "https://raw.githubusercontent.com/project-chip/connectedhomeip/bd73b5141729af92f3d021aeecaa53d9e0cadb89/data_model/1.6.1/clusters/OperationalCredentialCluster.xml",
+      "status": "CSA data model (SDK copy)",
+      "revision": "data_model/1.6.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Matter 1.6.1 On/Off Cluster XML",
+      "url": "https://raw.githubusercontent.com/project-chip/connectedhomeip/bd73b5141729af92f3d021aeecaa53d9e0cadb89/data_model/1.6.1/clusters/OnOff.xml",
+      "status": "CSA data model (SDK copy)",
+      "revision": "data_model/1.6.1",
+      "checked": "2026-10-06"
+    }
+  ]
+}

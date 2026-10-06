@@ -606,6 +606,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`opc-ua`](skills/opc-ua)                                         | OPC UA 1.05 (OPC 10000-2, -3, -4, -6): secure channels, sessions, application instance certificates, encodings and address space rules, with 1.04 as legacy.                                                                                                                                            |
 | [`openadr`](skills/openadr)                                       | OpenADR 3.1.0 and 3.0.1 OpenAPI definition: programs, events, reports, subscriptions, VENs, OAuth2 client credentials and notifiers.                                                                                                                                                                    |
 | [`ocpp`](skills/ocpp)                                             | OCPP 2.1, 2.0.1 and 1.6 JSON message schemas between charging stations and a CSMS: boot, transactions, meter values, device model and certificates.                                                                                                                                                     |
+| [`matter`](skills/matter)                                         | Matter 1.6 data model XML (with 1.5, 1.4 and the 1.7 draft): cluster IDs, attributes, commands, access privileges and status codes for commissioning, Basic Information and On/Off.                                                                                                                     |
 
 ## Development
 
