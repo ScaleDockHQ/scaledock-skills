@@ -452,6 +452,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`json-lines`](skills/json-lines)                             | JSON Lines: This page describes the JSON Lines text format, also called newline-delimited JSON. Covers JSON Lines. Use when reading newline-delimited JSON                                                                                                                                     |
 | [`madr`](skills/madr)                                         | MADR: About MADR \| MADR Skip to main content Link Menu Expand (external link) Document Search Copy Copied MADR About MADR Covers MADR. Use when writing an architecture decision record                                                                                                       |
 | [`reuse`](skills/reuse)                                       | REUSE: REUSE Covers REUSE. Use when adding machine-readable license information                                                                                                                                                                                                                |
+| [`contributor-covenant`](skills/contributor-covenant)         | Contributor Covenant: We are committed to fostering an environment that respects and promotes the dignity, rights, and contributions of all individuals, regardless of characteristics including race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disabilit       |
 
 #### Domain verticals
 
