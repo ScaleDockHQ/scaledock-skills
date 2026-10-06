@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers MathML. MathML Core is current; Mathematical Markup Language (MathML) Version 4.0 is preview; Mathematical Markup Language (MathML) Version 3.0 2nd Edition is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "mathml-core",
+      "label": "MathML Core",
+      "status": "current",
+      "revision": "mathml-core CR-mathml-core-20250624 (Candidate Recommendation Snapshot, 2025-06-24)",
+      "posture": "build"
+    },
+    {
+      "id": "mathml4-preview",
+      "label": "Mathematical Markup Language (MathML) Version 4.0",
+      "status": "preview",
+      "revision": "mathml4 WD-mathml4-20261002 (Working Draft, 2026-10-02)",
+      "posture": "track"
+    },
+    {
+      "id": "mathml3",
+      "label": "Mathematical Markup Language (MathML) Version 3.0 2nd Edition",
+      "status": "legacy",
+      "revision": "MathML3 REC-MathML3-20140410 (Recommendation, 2014-04-10)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MathML Core",
+      "url": "https://www.w3.org/TR/mathml-core/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "mathml-core CR-mathml-core-20250624 (Candidate Recommendation Snapshot, 2025-06-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Mathematical Markup Language (MathML) Version 4.0",
+      "url": "https://www.w3.org/TR/mathml4/",
+      "status": "Working Draft",
+      "revision": "mathml4 WD-mathml4-20261002 (Working Draft, 2026-10-02)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Mathematical Markup Language (MathML) Version 3.0 2nd Edition",
+      "url": "https://www.w3.org/TR/MathML3/",
+      "status": "Recommendation",
+      "revision": "MathML3 REC-MathML3-20140410 (Recommendation, 2014-04-10)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
