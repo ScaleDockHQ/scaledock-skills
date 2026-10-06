@@ -4,7 +4,7 @@ description: "A2A protocol: publish Agent Cards and talk agent to agent over the
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -84,6 +84,8 @@ The Agent2Agent (A2A) protocol is an open standard for communication between ind
 - `ap2` for agent payments carried over A2A (intent, cart and payment mandates): `npx skills add ScaleDockHQ/scaledock-skills --skill ap2`.
 - `owasp-agentic` for reviewing inter-agent communication and delegated identity against the OWASP Top 10 for Agentic Applications: `npx skills add ScaleDockHQ/scaledock-skills --skill owasp-agentic`.
 - `ag-ui` for the agent-to-user-interface event stream that complements A2A: `npx skills add ScaleDockHQ/scaledock-skills --skill ag-ui`.
+- `json-rpc`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill json-rpc`
+- `server-sent-events`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill server-sent-events`
 
 ## Sources
 
