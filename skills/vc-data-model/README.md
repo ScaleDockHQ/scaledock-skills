@@ -20,16 +20,23 @@ Then ask your agent to "issue a VC Data Model 2.0 credential secured as vc+jwt w
 
 ## Versions
 
-| Line                      | Status                |
-| ------------------------- | --------------------- |
-| VC Data Model 2.0         | current               |
-| VC JOSE COSE              | current               |
-| VC Data Integrity 1.0     | current               |
-| Bitstring Status List 1.0 | current               |
-| VC Data Model 1.1         | legacy (upgrade from) |
-| VC Data Model 2.1         | preview (track)       |
-| VC Data Integrity 1.1     | preview (track)       |
-| Bitstring Status List 1.1 | preview (track)       |
+| Line                        | Status                |
+| --------------------------- | --------------------- |
+| VC Data Model 2.0           | current               |
+| VC JOSE COSE                | current               |
+| VC Data Integrity 1.0       | current               |
+| Bitstring Status List 1.0   | current               |
+| VC Data Model 1.1           | legacy (upgrade from) |
+| VC Data Model 2.1           | preview (track)       |
+| VC Data Integrity 1.1       | preview (track)       |
+| Bitstring Status List 1.1   | preview (track)       |
+| Controlled Identifiers v1.0 | current               |
+| VC JSON Schema              | current (build)       |
+| VC Barcodes                 | current (track)       |
+| VC Rendering Methods        | current (track)       |
+| VC Confidence Methods       | current (track)       |
+| VC Forgery Defense          | current (track)       |
+| VCALM                       | current (track)       |
 
 The data model, the two securing mechanisms and the status list are separate families, each with its own current line. The EdDSA, ECDSA and BBS cryptosuites are part of the VC Data Integrity 1.0 line. `references/versions.md` says what changed, how to upgrade from 1.1, and what the drafts would change.
 

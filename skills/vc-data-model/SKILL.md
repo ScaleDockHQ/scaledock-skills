@@ -1,22 +1,25 @@
 ---
 name: vc-data-model
 description: >-
-  W3C Verifiable Credentials Data Model 2.0: build, secure, verify and validate
-  verifiable credentials and presentations. Use when issuing or checking a VC or VP,
-  writing @context (https://www.w3.org/ns/credentials/v2), type, issuer,
-  credentialSubject, validFrom, validUntil, credentialStatus, credentialSchema,
-  relatedResource, refreshService, termsOfUse or evidence, wrapping credentials as
-  EnvelopedVerifiableCredential, choosing application/vc or application/vp, deciding
-  between JSON-LD and plain JSON processing, or reviewing VC privacy and security. Covers VC JOSE COSE (vc+jwt, vc+sd-jwt, vc+cose), VC Data Integrity 1.0
-  with DataIntegrityProof and the eddsa-rdfc-2022, eddsa-jcs-2022, ecdsa-rdfc-2019,
-  ecdsa-jcs-2019, ecdsa-sd-2023 and bbs-2023 cryptosuites, and Bitstring Status List 1.0
-  revocation and suspension. Upgrades VC Data Model 1.1 (issuanceDate, expirationDate,
-  vc and vp JWT claims) and tracks the VC Data Model 2.1, VC Data Integrity 1.1 and
-  Bitstring Status List 1.1 drafts.
+  W3C Verifiable Credentials Data Model 2.0: build, secure, verify and
+  validate verifiable credentials and presentations. Use when issuing or
+  checking a VC or VP, writing @context
+  (https://www.w3.org/ns/credentials/v2), type, issuer, credentialSubject,
+  validFrom, validUntil, credentialStatus, credentialSchema, relatedResource,
+  refreshService, termsOfUse or evidence, wrapping credentials as
+  EnvelopedVerifiableCredential, choosing application/vc or application/vp,
+  deciding between JSON-LD and plain JSON processing, or reviewing VC privacy
+  and security. Covers VC JOSE COSE (vc+jwt, vc+sd-jwt, vc+cose), VC Data
+  Integrity 1.0, and Bitstring Status List 1.0 revocation and suspension.
+  Upgrades VC Data Model 1.1 (issuanceDate, expirationDate, vc and vp JWT
+  claims) and tracks the VC Data Model 2.1, VC Data Integrity 1.1 and
+  Bitstring Status List 1.1 drafts. Also Controlled Identifiers v1.0, VC JSON
+  Schema, VC Barcodes, VC Rendering Methods, VC Confidence Methods, VC Forgery
+  Defense and VCALM.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -29,7 +32,7 @@ The W3C Verifiable Credentials Data Model v2.0 (VCDM) defines how an issuer expr
 ## Inputs (fill in, or ask before starting)
 
 - Role: issuer, holder (wallet), verifier, status list publisher, or the author of a credential type or extension context.
-- Target version: VC Data Model 2.0 (current, the default), secured with VC JOSE COSE or VC Data Integrity 1.0, with status from Bitstring Status List 1.0; each is the current line of its own family. VC Data Model 1.1 is legacy: read it and upgrade from it, never author it. VC Data Model 2.1, VC Data Integrity 1.1 and Bitstring Status List 1.1 are previews (posture: track): never emit anything only they define. See [`references/versions.md`](references/versions.md).
+- Target version: VC Data Model 2.0 (current, the default), secured with VC JOSE COSE or VC Data Integrity 1.0, with status from Bitstring Status List 1.0; each is the current line of its own family. VC Data Model 1.1 is legacy: read it and upgrade from it, never author it. VC Data Model 2.1, VC Data Integrity 1.1 and Bitstring Status List 1.1 are previews (posture: track): never emit anything only they define. Controlled Identifiers v1.0 is current. VC JSON Schema is current with posture build. VC Barcodes, VC Rendering Methods, VC Confidence Methods, VC Forgery Defense and VCALM are each current with posture track, because each family's only text is a Working Draft. See [`references/versions.md`](references/versions.md).
 - Securing mechanism: enveloping (JWT, SD-JWT or COSE through VC JOSE COSE) or embedded (a Data Integrity cryptosuite). Name the cryptosuite or the `typ`.
 - Processing mode: general JSON-LD processing (a JSON-LD library, required by the `-rdfc-` and SD cryptosuites) or type-specific credential processing (plain JSON against a fixed, hashed set of contexts).
 - Disclosure needs: full disclosure, selective disclosure (SD-JWT, `ecdsa-sd-2023`, `bbs-2023`) or unlinkable disclosure (`bbs-2023`).
@@ -129,3 +132,10 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Bitstring Status List v1.1](https://www.w3.org/TR/vc-bitstring-status-list-1.1/): W3C First Public Working Draft, 24 September 2026 (WD-vc-bitstring-status-list-1.1-20260924), checked 2026-10-05. Draft posture: track.
 - [Data Integrity EdDSA Cryptosuites v1.1](https://www.w3.org/TR/vc-di-eddsa-1.1/): W3C First Public Working Draft, 16 April 2026 (WD-vc-di-eddsa-1.1-20260416), checked 2026-10-05. Draft posture: track.
 - [Data Integrity ECDSA Cryptosuites v1.1](https://www.w3.org/TR/vc-di-ecdsa-1.1/): W3C Working Draft, 16 September 2026 (WD-vc-di-ecdsa-1.1-20260916), checked 2026-10-05. Draft posture: track.
+- [Controlled Identifiers v1.0](https://www.w3.org/TR/cid-1.0/): W3C Recommendation, 15 May 2025 (REC-cid-1.0-20250515), checked 2026-10-06.
+- [Verifiable Credentials JSON Schema Specification](https://www.w3.org/TR/vc-json-schema/): W3C Candidate Recommendation Draft, 4 February 2025 (CRD-vc-json-schema-20250204), checked 2026-10-06. Posture: build.
+- [Verifiable Credential Barcodes v1.0](https://www.w3.org/TR/vc-barcodes/): W3C Working Draft, 22 August 2026 (WD-vc-barcodes-1.0-20260822), checked 2026-10-06. Posture: track.
+- [Verifiable Credential Rendering Methods v1.0](https://www.w3.org/TR/vc-render-method/): W3C Working Draft, 29 September 2026 (WD-vc-render-method-20260929), checked 2026-10-06. Posture: track.
+- [Verifiable Credential Confidence Methods v1.0](https://www.w3.org/TR/vc-confidence-method/): W3C Working Draft, 10 September 2026 (WD-vc-confidence-method-20260910), checked 2026-10-06. Its abstract defines mechanisms that increase a verifier's confidence that a presenter is appropriately related for the credential's use. Posture: track.
+- [VC Forgery Defense](https://www.w3.org/TR/vc-forgery-defense/): W3C Working Draft, 25 August 2026 (WD-vc-forgery-defense-1.0-20260825), checked 2026-10-06. Posture: track.
+- [VCALM](https://www.w3.org/TR/vcalm/): W3C Working Draft, 21 August 2026 (WD-vcalm-1.0-20260821), checked 2026-10-06. Posture: track.

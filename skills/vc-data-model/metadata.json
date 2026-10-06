@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -67,6 +67,61 @@
       "family": "status",
       "revision": "W3C Recommendation, 15 May 2025 (REC-vc-bitstring-status-list-20250515)",
       "reference": "references/status-lists.md"
+    },
+    {
+      "id": "cid-1.0",
+      "label": "Controlled Identifiers v1.0",
+      "status": "current",
+      "family": "controlled-identifiers",
+      "revision": "W3C Recommendation, 15 May 2025 (REC-cid-1.0-20250515)"
+    },
+    {
+      "id": "vc-json-schema",
+      "label": "VC JSON Schema",
+      "status": "current",
+      "family": "vc-json-schema",
+      "revision": "W3C Candidate Recommendation Draft, 4 February 2025 (CRD-vc-json-schema-20250204)",
+      "posture": "build"
+    },
+    {
+      "id": "vc-barcodes",
+      "label": "VC Barcodes",
+      "status": "current",
+      "family": "barcodes",
+      "revision": "W3C Working Draft, 22 August 2026 (WD-vc-barcodes-1.0-20260822)",
+      "posture": "track"
+    },
+    {
+      "id": "vc-render-method",
+      "label": "VC Rendering Methods",
+      "status": "current",
+      "family": "render",
+      "revision": "W3C Working Draft, 29 September 2026 (WD-vc-render-method-20260929)",
+      "posture": "track"
+    },
+    {
+      "id": "vc-confidence-method",
+      "label": "VC Confidence Methods",
+      "status": "current",
+      "family": "confidence",
+      "revision": "W3C Working Draft, 10 September 2026 (WD-vc-confidence-method-20260910)",
+      "posture": "track"
+    },
+    {
+      "id": "vc-forgery-defense",
+      "label": "VC Forgery Defense",
+      "status": "current",
+      "family": "forgery-defense",
+      "revision": "W3C Working Draft, 25 August 2026 (WD-vc-forgery-defense-1.0-20260825)",
+      "posture": "track"
+    },
+    {
+      "id": "vcalm",
+      "label": "VCALM",
+      "status": "current",
+      "family": "vcalm",
+      "revision": "W3C Working Draft, 21 August 2026 (WD-vcalm-1.0-20260821)",
+      "posture": "track"
     }
   ],
   "sources": [
@@ -167,6 +222,55 @@
       "status": "W3C Working Draft",
       "revision": "16 September 2026, https://www.w3.org/TR/2026/WD-vc-di-ecdsa-1.1-20260916/",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "Controlled Identifiers v1.0",
+      "url": "https://www.w3.org/TR/cid-1.0/",
+      "status": "W3C Recommendation",
+      "revision": "REC-cid-1.0-20250515 (15 May 2025)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VC JSON Schema",
+      "url": "https://www.w3.org/TR/vc-json-schema/",
+      "status": "W3C Candidate Recommendation Draft",
+      "revision": "CRD-vc-json-schema-20250204 (4 February 2025)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VC Barcodes",
+      "url": "https://www.w3.org/TR/vc-barcodes/",
+      "status": "W3C Working Draft",
+      "revision": "WD-vc-barcodes-1.0-20260822 (22 August 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VC Rendering Methods",
+      "url": "https://www.w3.org/TR/vc-render-method/",
+      "status": "W3C Working Draft",
+      "revision": "WD-vc-render-method-20260929 (29 September 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VC Confidence Methods",
+      "url": "https://www.w3.org/TR/vc-confidence-method/",
+      "status": "W3C Working Draft",
+      "revision": "WD-vc-confidence-method-20260910 (10 September 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VC Forgery Defense",
+      "url": "https://www.w3.org/TR/vc-forgery-defense/",
+      "status": "W3C Working Draft",
+      "revision": "WD-vc-forgery-defense-1.0-20260825 (25 August 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "VCALM",
+      "url": "https://www.w3.org/TR/vcalm/",
+      "status": "W3C Working Draft",
+      "revision": "WD-vcalm-1.0-20260821 (21 August 2026)",
+      "checked": "2026-10-06"
     }
   ]
 }
