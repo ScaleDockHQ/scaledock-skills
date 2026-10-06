@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Permissions. Permissions is current; Permissions Policy Level 1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "permissions",
+      "label": "Permissions",
+      "status": "current",
+      "revision": "permissions WD-permissions-20251006 (Working Draft, 2025-10-06)",
+      "posture": "track",
+      "family": "permissions"
+    },
+    {
+      "id": "permissions-policy-1",
+      "label": "Permissions Policy Level 1",
+      "status": "current",
+      "revision": "permissions-policy-1 WD-permissions-policy-1-20260922 (Working Draft, 2026-09-22)",
+      "posture": "track",
+      "family": "permissions-policy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Permissions",
+      "url": "https://www.w3.org/TR/permissions/",
+      "status": "Working Draft",
+      "revision": "permissions WD-permissions-20251006 (Working Draft, 2025-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Permissions Policy",
+      "url": "https://www.w3.org/TR/permissions-policy-1/",
+      "status": "Working Draft",
+      "revision": "permissions-policy-1 WD-permissions-policy-1-20260922 (Working Draft, 2026-09-22)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

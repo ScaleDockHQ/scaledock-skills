@@ -192,6 +192,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`subresource-integrity`](skills/subresource-integrity)     | Subresource Integrity (SRI): This specification defines a mechanism by which user agents may verify that a fetched resource has been delivered without unexpected manipulation. Covers Subresource Integrity Level 1, Subresource Integrity Level 2 (track preview). Use when setting or |
 | [`referrer-policy`](skills/referrer-policy)                 | Referrer Policy: This document describes how an author can set a referrer policy for documents they create, and the impact of such a policy on the Referer HTTP header for outgoing requests and navigations. Covers Referrer Policy (build). Use when choosing or applying a referrer p |
 | [`secure-contexts`](skills/secure-contexts)                 | Secure Contexts: This specification defines "secure contexts", thereby allowing user agent implementers and specification authors to enable certain features only when certain minimum standards of authentication and confidentiality are met. Covers Secure Contexts (build), Mixed Co |
+| [`permissions`](skills/permissions)                         | Permissions: This specification defines common infrastructure that other specifications can use to interact with browser permissions. Covers Permissions (track), Permissions Policy Level 1 (track). Use when querying, requesting or specifying a powerful feature permission          |
 
 #### Web application APIs
 
