@@ -208,6 +208,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`notary-project`](skills/notary-project)               | Notary Project: - **[Signature Envelope](#signature-envelope)**: Describes the structure of the Notary Project signature. Covers Notation signature specification. Use when signing OCI artifacts with Notation                                                                          |
 | [`security-insights`](skills/security-insights)         | Security Insights: SecurityInsights defines a schema that projects can use to report information about their security in a machine-processable way. Covers Security Insights. Use when publishing a SECURITY_INSIGHTS.yml file                                                           |
 | [`gittuf`](skills/gittuf)                               | gittuf: [attacks targeting Git metadata](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias). Covers gittuf. Use when verifying Git repository policy                                                                                       |
+| [`model-signing`](skills/model-signing)                 | Model signing: Statement](https://github.com/in-toto/attestation/blob/80e7efeca762e8276ed5e04e6d8bc796a4a19170/spec/v1/statement.md) Covers Model signing. Use when signing machine-learning models                                                                                      |
 
 #### Observability and operations
 
