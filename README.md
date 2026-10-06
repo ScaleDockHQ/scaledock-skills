@@ -263,6 +263,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`urlpattern`](skills/urlpattern)                           | URL Pattern: The URL Pattern Standard provides a web platform primitive for matching URLs based on a convenient pattern syntax. Covers URL Pattern Living Standard. Use when matching URLs with a pattern                                                                                |
 | [`streams`](skills/streams)                                 | Streams: This specification provides APIs for creating, composing, and consuming streams of data that map efficiently to low-level I/O primitives. Covers Streams Living Standard. Use when reading or writing streams                                                                   |
 | [`encoding`](skills/encoding)                               | Encoding: The Encoding Standard defines encodings and their JavaScript API. Covers Encoding Living Standard. Use when encoding or decoding text                                                                                                                                          |
+| [`storage`](skills/storage)                                 | Storage: The Storage Standard defines an API for persistent storage and quota estimates, as well as the platform storage architecture. Covers Storage Living Standard. Use when using the Storage standard                                                                               |
 
 #### CSS, graphics and media
 
