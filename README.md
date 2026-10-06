@@ -217,6 +217,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webdriver`](skills/webdriver)                             | WebDriver: WebDriver is a remote control interface that enables introspection and control of user agents. Covers WebDriver Level 1, WebDriver Level 2 (track preview), WebDriver BiDi (track). Use when writing or reviewing a WebDriver classic or BiDi implementation                  |
 | [`prompt-api`](skills/prompt-api)                           | Prompt API: The prompt API gives web pages the ability to directly prompt a language model Covers Prompt API (track). Use when a browser exposes an on-device language model to a page                                                                                                   |
 | [`writing-assistance-apis`](skills/writing-assistance-apis) | Writing Assistance APIs: The summarizer, writer, and rewriter APIs provide high-level interfaces to call on a browser or operating system’s built-in language model to help with writing tasks. Covers Writing Assistance APIs (track), Translator and Language Detector APIs (track). U |
+| [`web-app-manifest`](skills/web-app-manifest)               | Web Application Manifest: This specification defines a JSON-based file format that provides developers with a centralized place to put metadata associated with a web application. Covers Web Application Manifest (track). Use when writing or parsing a web app manifest               |
 
 #### CSS, graphics and media
 
