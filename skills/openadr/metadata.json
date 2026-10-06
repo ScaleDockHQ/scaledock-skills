@@ -27,7 +27,7 @@
       "id": "openadr-2-0b",
       "label": "OpenADR 2.0b",
       "status": "legacy",
-      "revision": "OpenADR 2.0b Profile Specification (XML over HTTP or XMPP; not pinned)"
+      "revision": "OpenADR 2.0b Profile Specification (not pinned)"
     }
   ],
   "sources": [
