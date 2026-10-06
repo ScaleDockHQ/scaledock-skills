@@ -485,9 +485,10 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Regulations
 
-| Skill                             | Description                                                                                                                                                                                                                |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`en-301-549`](skills/en-301-549) | EN 301 549: B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements |
+| Skill                               | Description                                                                                                                                                                                                                |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`en-301-549`](skills/en-301-549)   | EN 301 549: B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements |
+| [`section-508`](skills/section-508) | Section 508: Federal government websites often end in .gov or .mil. Covers Revised 508 Standards. Use when applying the Revised 508 Standards                                                                              |
 
 #### Developer conventions
 
