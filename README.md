@@ -315,6 +315,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`xml`](skills/xml)                                                       | XML: The Extensible Markup Language (XML) is a subset of SGML that is completely described in this document. Covers Extensible Markup Language (XML) 1.0 (Fifth Edition), Namespaces in XML 1.0 (Third Edition), XML Inclusions (XInclude) Version 1.0 (Second Edition), XML Base (Secon |
 | [`xml-schema`](skills/xml-schema)                                         | XML Schema: This document specifies the XML Schema Definition Language, which offers facilities for describing the structure and constraining the contents of XML documents, including those which exploit the XML Namespace facility. Covers W3C XML Schema Definition Language (XSD) 1 |
 | [`xpath-xquery`](skills/xpath-xquery)                                     | XPath and XQuery: XPath 3.1 is an expression language that allows the processing of values conforming to the data model defined in [XQuery and XPath Data Model (XDM) 3.1] . Covers XML Path Language (XPath) 3.1, XML Path Language (XPath) 3.0 (supported), XQuery 4.0 (track preview) |
+| [`xslt`](skills/xslt)                                                     | XSLT: This specification defines the syntax and semantics of XSLT 3.0 , a language designed primarily for transforming XML documents into other XML documents. Covers XSLT 4.0 (track preview), XSL Transformations (XSLT) Version 3.0, XSL Transformations (XSLT) Version 2.0 (Second E |
 
 #### Documents and publishing
 
