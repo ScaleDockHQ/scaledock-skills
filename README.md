@@ -604,6 +604,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`eclipse-dataspace-protocol`](skills/eclipse-dataspace-protocol) | Dataspace Protocol: interoperable data sharing with usage control. Covers Dataspace Protocol 2025-1. Use when publishing or negotiating access to a dataset. Triggers: Dataspace Protocol, DSP.                                                                                                         |
 | [`gaia-x`](skills/gaia-x)                                         | Gaia-X (Architecture Document 3.1, ICAM 25.11, Compliance Document 4.0.0): VC-JWT Gaia-X Credentials, did:web keys with x5c chains, SHACL validation and Trust Anchors.                                                                                                                                 |
 | [`opc-ua`](skills/opc-ua)                                         | OPC UA 1.05 (OPC 10000-2, -3, -4, -6): secure channels, sessions, application instance certificates, encodings and address space rules, with 1.04 as legacy.                                                                                                                                            |
+| [`openadr`](skills/openadr)                                       | OpenADR 3.1.0 and 3.0.1 OpenAPI definition: programs, events, reports, subscriptions, VENs, OAuth2 client credentials and notifiers.                                                                                                                                                                    |
 
 ## Development
 
