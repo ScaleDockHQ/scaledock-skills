@@ -268,6 +268,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webcodecs`](skills/webcodecs)                                   | WebCodecs: This specification defines interfaces to codecs for encoding and decoding of audio, video, and images. Covers WebCodecs (track). Use when encoding or decoding media in the browser                                                                                           |
 | [`web-audio`](skills/web-audio)                                   | Web Audio API: This specification describes a high-level Web API for processing and synthesizing audio in web applications. Covers Web Audio API Level 1.0, Web Audio API 1.1 (track preview). Use when processing or synthesizing audio                                                 |
 | [`web-midi`](skills/web-midi)                                     | Web MIDI API: Some user agents have music devices, such as synthesizers, keyboard and other controllers, and drum machines connected to their host computer or device. Covers Web MIDI API (track). Use when talking to MIDI devices                                                     |
+| [`html-media-capture`](skills/html-media-capture)                 | HTML Media Capture: The HTML Media Capture specification defines an HTML form extension that facilitates user access to a device's media capture mechanism , such as a camera, or microphone, from within a file upload control. Covers HTML Media Capture. Use when capturing media fro |
 
 #### Data and semantics
 
