@@ -458,6 +458,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`compose-spec`](skills/compose-spec)                         | Compose specification: > Find more information about the [key features and use cases of Docker Compose](/compose/intro/features-uses/) or [try the quickstart guide](/compose/gettingstarted/). Covers Compose file. Use when writing a Compose file                                           |
 | [`diataxis`](skills/diataxis)                                 | Diátaxis: It prescribes approaches to content, architecture and form that emerge from a systematic approach to understanding the needs of documentation users. Covers Diátaxis. Use when structuring documentation                                                                             |
 | [`citation-cff`](skills/citation-cff)                         | Citation File Format: You are using an outdated browser. Covers Citation File Format. Use when writing a CITATION.cff file                                                                                                                                                                     |
+| [`c4-model`](skills/c4-model)                                 | C4 model: Home \| C4 model Skip to main content Link Menu Expand (external link) Document Search Copy Copied C4 model Home Covers C4 model. Use when drawing software architecture diagrams                                                                                                    |
 
 #### Domain verticals
 
