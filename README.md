@@ -228,6 +228,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`file-api`](skills/file-api)                               | File API: This specification provides an API for representing file objects in web applications, as well as programmatically selecting them and accessing their data. Covers File API (track). Use when reading local files in the browser                                                |
 | [`indexeddb`](skills/indexeddb)                             | Indexed Database API: This document defines APIs for a database of records holding simple values and hierarchical objects. Covers Indexed Database API 2.0, Indexed Database API 3.0 (track preview). Use when storing structured data in IndexedDB                                      |
 | [`geolocation`](skills/geolocation)                         | Geolocation: Geolocation provides access to geographical location information associated with the hosting device. Covers Geolocation (build). Use when reading a device position                                                                                                         |
+| [`screen-orientation`](skills/screen-orientation)           | Screen Orientation: The Screen Orientation specification standardizes the types and angles for a device's screen orientation, and provides a means for locking and unlocking it. Covers Screen Orientation (track). Use when reading or locking screen orientation                       |
 
 #### CSS, graphics and media
 
