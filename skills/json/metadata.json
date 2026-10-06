@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers The JavaScript Object Notation (JSON) Data Interchange Format. RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format is current; RFC 7493 The I-JSON Message Format is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc8259",
+      "label": "RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format",
+      "status": "current",
+      "revision": "RFC 8259 (INTERNET STANDARD, December 2)"
+    },
+    {
+      "id": "rfc7493",
+      "label": "RFC 7493 The I-JSON Message Format",
+      "status": "current",
+      "revision": "RFC 7493 (PROPOSED STANDARD, March 2015)",
+      "family": "i-json"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format",
+      "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+      "status": "INTERNET STANDARD",
+      "revision": "RFC 8259 (INTERNET STANDARD, December 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 7493 The I-JSON Message Format",
+      "url": "https://www.rfc-editor.org/rfc/rfc7493.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 7493 (PROPOSED STANDARD, March 2015)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
