@@ -475,6 +475,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`test-anything-protocol`](skills/test-anything-protocol)     | Test Anything Protocol: TestPoint := ("not ")? "ok" (" " Number)? ((" -")? (" " Description) )? (" " Directive)? "\n" (YAMLBlock)? Covers TAP 14. Use when emitting TAP output                                                                                                                 |
 | [`buildpacks`](skills/buildpacks)                             | Cloud Native Buildpacks: A platform orchestrates a lifecycle to make buildpack functionality available to end-users such as application developers. Covers Buildpacks platform API, Buildpack API. Use when implementing a buildpack or platform                                               |
 | [`devfile`](skills/devfile)                                   | Devfile: 2.3.0 Search docs Theme Registry Docs Get Started API reference Devfile schema Search docs Covers Devfile 2.3. Use when writing a devfile                                                                                                                                             |
+| [`cnab`](skills/cnab)                                         | CNAB: The Cloud Native Application Bundle (CNAB) is a _standard packaging format_ for multi-component distributed applications. Covers CNAB 1.2.0. Use when packaging a cloud native application bundle                                                                                        |
 
 #### Domain verticals
 
