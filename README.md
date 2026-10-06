@@ -599,6 +599,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`en-16931`](skills/en-16931)                                     | EN 16931: the semantic data model of the core elements of an electronic invoice. Covers EN 16931-1:2017+A1:2019. Use when mapping a core invoice. Triggers: EN 16931, e-invoicing.                                                                                                                      |
 | [`ocpi`](skills/ocpi)                                             | OCPI: Open Charge Point Interface version 2.2.1. Covers OCPI 2.2.1. Use when exchanging charge-point roaming data. Triggers: OCPI, OCPI 2.2.1.                                                                                                                                                          |
 | [`eclipse-dataspace-protocol`](skills/eclipse-dataspace-protocol) | Dataspace Protocol: interoperable data sharing with usage control. Covers Dataspace Protocol 2025-1. Use when publishing or negotiating access to a dataset. Triggers: Dataspace Protocol, DSP.                                                                                                         |
+| [`gaia-x`](skills/gaia-x)                                         | Gaia-X (Architecture Document 3.1, ICAM 25.11, Compliance Document 4.0.0): VC-JWT Gaia-X Credentials, did:web keys with x5c chains, SHACL validation and Trust Anchors.                                                                                                                                 |
 
 ## Development
 
