@@ -148,6 +148,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`presentation-exchange`](skills/presentation-exchange)       | Presentation Exchange: specification and not yet on a standards track, the concept of “decentralized web nodes” Covers Presentation Exchange 2.1.1, Presentation Exchange 2.1.0 (supported). Use when requesting and submitting verifiable presentations                                 |
 | [`didcomm`](skills/didcomm)                                   | DIDComm Messaging: Contributors: Sam Curren (Indicio), Tobias Looker (MATTR), Oliver Terbu (ConsenSys), Kyle Den Hartog (MATTR), Baha Shaaban (SecureKey), Drummond Reed (Evernym), Steve McCown (Anonyome Labs), Troy Ronda (SecureKey), George Aristy (SecureKey), Vyacheslav Gudkov ( |
 | [`did-methods`](skills/did-methods)                           | DID methods: "@context": ["https://www.w3.org/ns/did/v1", "https://w3id.org/security/suites/secp256k1recovery-2020/v2"], Covers did:web, did:key, did:jwk, did:webvh. Use when resolving did:web, did:key, did:jwk, or did:webvh                                                         |
+| [`anoncreds`](skills/anoncreds)                               | AnonCreds: The AnonCreds (Anonymous Credentials) specification is based on the open source verifiable credential Covers AnonCreds 1.0. Use when issuing or verifying anonymous credentials                                                                                               |
 
 #### Security and supply chain
 
