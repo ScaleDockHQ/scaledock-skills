@@ -205,13 +205,14 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Observability and operations
 
-| Skill                                               | Description                                                                                                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`ocsf`](skills/ocsf)                               | OCSF 1.9 (1.8 supported): map audit logs to OCSF events, upgrade from any earlier 1.x release, and track the 1.10 preview.                        |
-| [`openfeature`](skills/openfeature)                 | OpenFeature 0.9 (0.8 supported): evaluate feature flags with providers, hooks, events and tracking, with upgrades from older 0.x releases.        |
-| [`opentelemetry`](skills/opentelemetry)             | OpenTelemetry Specification 1.61.0: traces, metrics and logs with semconv 1.44.0 and OTLP 1.11.1, with upgrades from pre-stable HTTP conventions. |
-| [`opentelemetry-genai`](skills/opentelemetry-genai) | OpenTelemetry GenAI conventions (development): instrument models, tools and agents with `gen_ai.*`, and upgrade v1.36.0 instrumentations.         |
-| [`trace-context`](skills/trace-context)             | W3C Trace Context Level 1 and Baggage: parse, validate and propagate traceparent, tracestate and baggage, with the Level 2 preview.               |
+| Skill                                               | Description                                                                                                                                                                                                                |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`ocsf`](skills/ocsf)                               | OCSF 1.9 (1.8 supported): map audit logs to OCSF events, upgrade from any earlier 1.x release, and track the 1.10 preview.                                                                                                 |
+| [`openfeature`](skills/openfeature)                 | OpenFeature 0.9 (0.8 supported): evaluate feature flags with providers, hooks, events and tracking, with upgrades from older 0.x releases.                                                                                 |
+| [`opentelemetry`](skills/opentelemetry)             | OpenTelemetry Specification 1.61.0: traces, metrics and logs with semconv 1.44.0 and OTLP 1.11.1, with upgrades from pre-stable HTTP conventions.                                                                          |
+| [`opentelemetry-genai`](skills/opentelemetry-genai) | OpenTelemetry GenAI conventions (development): instrument models, tools and agents with `gen_ai.*`, and upgrade v1.36.0 instrumentations.                                                                                  |
+| [`trace-context`](skills/trace-context)             | W3C Trace Context Level 1 and Baggage: parse, validate and propagate traceparent, tracestate and baggage, with the Level 2 preview.                                                                                        |
+| [`openmetrics`](skills/openmetrics)                 | OpenMetrics: target: https://github.com/protocolbuffers/protobuf/blob/2f6a7546e4539499bc08abc6900dc929782f5dcd/src/google/protobuf/timestamp.proto Covers OpenMetrics. Use when exposing metrics in the OpenMetrics format |
 
 #### Compliance and governance
 
