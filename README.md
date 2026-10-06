@@ -229,6 +229,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`indexeddb`](skills/indexeddb)                             | Indexed Database API: This document defines APIs for a database of records holding simple values and hierarchical objects. Covers Indexed Database API 2.0, Indexed Database API 3.0 (track preview). Use when storing structured data in IndexedDB                                      |
 | [`geolocation`](skills/geolocation)                         | Geolocation: Geolocation provides access to geographical location information associated with the hosting device. Covers Geolocation (build). Use when reading a device position                                                                                                         |
 | [`screen-orientation`](skills/screen-orientation)           | Screen Orientation: The Screen Orientation specification standardizes the types and angles for a device's screen orientation, and provides a means for locking and unlocking it. Covers Screen Orientation (track). Use when reading or locking screen orientation                       |
+| [`window-management`](skills/window-management)             | Window Management: This document defines a web platform API that allows script to query the device for information about its screens, and place content on specific screens. Covers Window Management (track). Use when placing windows on multiple screens                              |
 
 #### CSS, graphics and media
 
