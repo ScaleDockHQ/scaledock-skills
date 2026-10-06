@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers PROV. PROV-DM: The PROV Data Model is current; PROV-O: The PROV Ontology is current; PROV-N: The Provenance Notation is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "prov-dm",
+      "label": "PROV-DM: The PROV Data Model",
+      "status": "current",
+      "revision": "prov-dm REC-prov-dm-20130430 (Recommendation, 2013-04-30)",
+      "family": "dm"
+    },
+    {
+      "id": "prov-o",
+      "label": "PROV-O: The PROV Ontology",
+      "status": "current",
+      "revision": "prov-o REC-prov-o-20130430 (Recommendation, 2013-04-30)",
+      "family": "o"
+    },
+    {
+      "id": "prov-n",
+      "label": "PROV-N: The Provenance Notation",
+      "status": "current",
+      "revision": "prov-n REC-prov-n-20130430 (Recommendation, 2013-04-30)",
+      "family": "n"
+    }
+  ],
+  "sources": [
+    {
+      "title": "PROV-DM: The PROV Data Model",
+      "url": "https://www.w3.org/TR/prov-dm/",
+      "status": "Recommendation",
+      "revision": "prov-dm REC-prov-dm-20130430 (Recommendation, 2013-04-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "PROV-O: The PROV Ontology",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "status": "Recommendation",
+      "revision": "prov-o REC-prov-o-20130430 (Recommendation, 2013-04-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "PROV-N: The Provenance Notation",
+      "url": "https://www.w3.org/TR/prov-n/",
+      "status": "Recommendation",
+      "revision": "prov-n REC-prov-n-20130430 (Recommendation, 2013-04-30)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
