@@ -226,6 +226,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`mitre-attack`](skills/mitre-attack)                   | MITRE ATT&CK: ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Covers MITRE ATT&CK. Use when mapping adversary behavior                                                                                                                       |
 | [`epss`](skills/epss)                                   | EPSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers EPSS. Use when estimating exploit probability                                                                                                                                          |
 | [`ssvc`](skills/ssvc)                                   | SSVC: This section assumes that you are already familiar with SSVC and want to look up specific details. Covers SSVC. Use when prioritizing vulnerabilities with SSVC                                                                                                                    |
+| [`cisa-kev`](skills/cisa-kev)                           | CISA KEV: A .gov website belongs to an official government organization in the United States. Covers CISA KEV. Use when checking the Known Exploited Vulnerabilities catalog                                                                                                             |
 
 #### Observability and operations
 
