@@ -237,6 +237,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-animations`](skills/web-animations)                   | Web Animations: This specification defines a model for synchronization and timing of changes to the presentation of a Web page. Covers Web Animations Module Level 2 (track). Use when animating with the Web Animations API                                                             |
 | [`pointer-events`](skills/pointer-events)                   | Pointer Events: The features in this specification extend or modify those found in Pointer Events, a W3C Recommendation that describes events and related interfaces for handling hardware-agnostic pointer input from devices including a mouse, pen, or touchscreen. Covers Pointer Ev |
 | [`ui-events`](skills/ui-events)                             | UI Events: This specification defines UI Events which extend the DOM Event objects defined in [DOM] . Covers UI Events (track), UI Events KeyboardEvent key Values, UI Events KeyboardEvent code Values. Use when handling keyboard and mouse UI events                                  |
+| [`input-events`](skills/input-events)                       | Input Events: This specification defines additions to events for text and related input to allow for the monitoring and manipulation of default browser behavior in the context of text editor applications and other applications that deal with text input and text formatting. Covers |
 
 #### CSS, graphics and media
 
