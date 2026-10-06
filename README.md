@@ -324,6 +324,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`activitypub`](skills/activitypub)                                       | ActivityPub: The ActivityPub protocol is a decentralized social networking protocol based upon the [ ActivityStreams ] 2.0 data format. Covers ActivityPub, Activity Streams 2.0, Activity Vocabulary. Use when implementing ActivityPub                                                 |
 | [`websub`](skills/websub)                                                 | WebSub: WebSub provides a common mechanism for communication between publishers of any kind of Web content and their subscribers, based on HTTP web hooks. Covers WebSub. Use when publishing or subscribing to webhooks with WebSub                                                     |
 | [`webmention`](skills/webmention)                                         | Webmention: Webmention is a simple way to notify any URL when you mention it on your site. Covers Webmention. Use when sending or receiving a webmention                                                                                                                                 |
+| [`micropub`](skills/micropub)                                             | Micropub: The Micropub protocol is used to create, update and delete posts on one's own domain using third-party clients. Covers Micropub. Use when creating posts with Micropub                                                                                                         |
 
 #### Documents and publishing
 
