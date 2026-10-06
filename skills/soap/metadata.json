@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SOAP. SOAP Version 1.2 Part 1: Messaging Framework (Second Edition) is current; SOAP Version 1.2 Part 2: Adjuncts (Second Edition) is current; Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language is current; Web Services Addressing 1.0 - Core is current; SOAP over Java Message Service 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "soap12-part1",
+      "label": "SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)",
+      "status": "current",
+      "revision": "soap12-part1 REC-soap12-part1-20070427 (Recommendation, 2007-04-27)",
+      "family": "soap"
+    },
+    {
+      "id": "soap12-part2",
+      "label": "SOAP Version 1.2 Part 2: Adjuncts (Second Edition)",
+      "status": "current",
+      "revision": "soap12-part2 REC-soap12-part2-20070427 (Recommendation, 2007-04-27)",
+      "family": "soap-adjuncts"
+    },
+    {
+      "id": "wsdl20",
+      "label": "Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language",
+      "status": "current",
+      "revision": "wsdl20 REC-wsdl20-adjuncts-20070626 (Recommendation, 2007-06-26)",
+      "family": "wsdl"
+    },
+    {
+      "id": "ws-addr-core",
+      "label": "Web Services Addressing 1.0 - Core",
+      "status": "current",
+      "revision": "ws-addr-core REC-xml-infoset-20040204 (Recommendation, 2006-05-09)",
+      "family": "addressing"
+    },
+    {
+      "id": "soapjms",
+      "label": "SOAP over Java Message Service 1.0",
+      "status": "current",
+      "revision": "soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16)",
+      "family": "jms"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)",
+      "url": "https://www.w3.org/TR/soap12-part1/",
+      "status": "Recommendation",
+      "revision": "soap12-part1 REC-soap12-part1-20070427 (Recommendation, 2007-04-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SOAP Version 1.2 Part 2: Adjuncts (Second Edition)",
+      "url": "https://www.w3.org/TR/soap12-part2/",
+      "status": "Recommendation",
+      "revision": "soap12-part2 REC-soap12-part2-20070427 (Recommendation, 2007-04-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language",
+      "url": "https://www.w3.org/TR/wsdl20/",
+      "status": "Recommendation",
+      "revision": "wsdl20 REC-wsdl20-adjuncts-20070626 (Recommendation, 2007-06-26)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Services Addressing 1.0 - Core",
+      "url": "https://www.w3.org/TR/ws-addr-core/",
+      "status": "Recommendation",
+      "revision": "ws-addr-core REC-xml-infoset-20040204 (Recommendation, 2006-05-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SOAP over Java Message Service 1.0",
+      "url": "https://www.w3.org/TR/soapjms/",
+      "status": "Recommendation",
+      "revision": "soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
