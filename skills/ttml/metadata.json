@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Timed Text Markup Language (TTML). Timed Text Markup Language 2 (TTML2) (2nd Edition) is current; Timed Text Markup Language 1 (TTML1) (Third Edition) is current; IMSC Text Profile 1.3 is current; TTML Profiles for Internet Media Subtitles and Captions 1.2 is supported; TTML Profiles for Internet Media Subtitles and Captions 1.1 is supported; TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1) is supported; Dubbing and Audio description Profiles of TTML2 is current; IMSC Hypothetical Render Model is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "ttml2",
+      "label": "Timed Text Markup Language 2 (TTML2) (2nd Edition)",
+      "status": "current",
+      "revision": "ttml2 REC-ttml2-20181108 (Candidate Recommendation Snapshot, 2021-03-09)",
+      "posture": "build",
+      "family": "ttml2"
+    },
+    {
+      "id": "ttml1",
+      "label": "Timed Text Markup Language 1 (TTML1) (Third Edition)",
+      "status": "current",
+      "revision": "ttml1 REC-ttml1-20181108 (Recommendation, 2018-11-08)",
+      "family": "ttml1"
+    },
+    {
+      "id": "ttml-imsc1.3",
+      "label": "IMSC Text Profile 1.3",
+      "status": "current",
+      "revision": "ttml-imsc1.3 REC-ttml1-20181108 (Recommendation, 2026-05-21)",
+      "family": "imsc"
+    },
+    {
+      "id": "ttml-imsc1.2",
+      "label": "TTML Profiles for Internet Media Subtitles and Captions 1.2",
+      "status": "supported",
+      "revision": "ttml-imsc1.2 REC-ttml1-20181108 (Recommendation, 2020-08-04)",
+      "family": "imsc"
+    },
+    {
+      "id": "ttml-imsc1.1",
+      "label": "TTML Profiles for Internet Media Subtitles and Captions 1.1",
+      "status": "supported",
+      "revision": "ttml-imsc1.1 REC-ttml2-20181108 (Recommendation, 2018-11-08)",
+      "family": "imsc"
+    },
+    {
+      "id": "ttml-imsc1.0.1",
+      "label": "TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1)",
+      "status": "supported",
+      "revision": "ttml-imsc1.0.1 REC-ttml-imsc1.0.1-20180424 (Recommendation, 2018-04-24)",
+      "family": "imsc"
+    },
+    {
+      "id": "dapt",
+      "label": "Dubbing and Audio description Profiles of TTML2",
+      "status": "current",
+      "revision": "dapt CRD-dapt-20260626 (Candidate Recommendation Draft, 2026-06-26)",
+      "posture": "build",
+      "family": "dapt"
+    },
+    {
+      "id": "imsc-hrm",
+      "label": "IMSC Hypothetical Render Model",
+      "status": "current",
+      "revision": "imsc-hrm REC-ttml2-20181108 (Recommendation, 2024-04-25)",
+      "family": "hrm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Timed Text Markup Language 2 (TTML2) (2nd Edition)",
+      "url": "https://www.w3.org/TR/ttml2/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "ttml2 REC-ttml2-20181108 (Candidate Recommendation Snapshot, 2021-03-09)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Timed Text Markup Language 1 (TTML1) (Third Edition)",
+      "url": "https://www.w3.org/TR/ttml1/",
+      "status": "Recommendation",
+      "revision": "ttml1 REC-ttml1-20181108 (Recommendation, 2018-11-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "IMSC Text Profile 1.3",
+      "url": "https://www.w3.org/TR/ttml-imsc1.3/",
+      "status": "Recommendation",
+      "revision": "ttml-imsc1.3 REC-ttml1-20181108 (Recommendation, 2026-05-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "TTML Profiles for Internet Media Subtitles and Captions 1.2",
+      "url": "https://www.w3.org/TR/ttml-imsc1.2/",
+      "status": "Recommendation",
+      "revision": "ttml-imsc1.2 REC-ttml1-20181108 (Recommendation, 2020-08-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "TTML Profiles for Internet Media Subtitles and Captions 1.1",
+      "url": "https://www.w3.org/TR/ttml-imsc1.1/",
+      "status": "Recommendation",
+      "revision": "ttml-imsc1.1 REC-ttml2-20181108 (Recommendation, 2018-11-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1)",
+      "url": "https://www.w3.org/TR/ttml-imsc1.0.1/",
+      "status": "Recommendation",
+      "revision": "ttml-imsc1.0.1 REC-ttml-imsc1.0.1-20180424 (Recommendation, 2018-04-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Dubbing and Audio description Profiles of TTML2",
+      "url": "https://www.w3.org/TR/dapt/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "dapt CRD-dapt-20260626 (Candidate Recommendation Draft, 2026-06-26)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "IMSC Hypothetical Render Model",
+      "url": "https://www.w3.org/TR/imsc-hrm/",
+      "status": "Recommendation",
+      "revision": "imsc-hrm REC-ttml2-20181108 (Recommendation, 2024-04-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "TTML Media Type Definition and Profile Registry",
+      "url": "https://www.w3.org/TR/ttml-profile-registry/",
+      "status": "Note",
+      "revision": "ttml-profile-registry (Note, 2026-07-02)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
