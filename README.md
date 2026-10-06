@@ -97,6 +97,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webfinger`](skills/webfinger)                             | WebFinger: WebFinger Covers RFC 7033 WebFinger. Use when discovering a resource with WebFinger                                                                                                                                                                                           |
 | [`coap`](skills/coap)                                       | The Constrained Application Protocol (CoAP): The Constrained Application Protocol (CoAP) Covers RFC 7252 The Constrained Application Protocol (CoAP). Use when speaking the Constrained Application Protocol                                                                             |
 | [`webdav`](skills/webdav)                                   | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV): HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) Covers RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV), RFC 4791 Calendaring Extensions to WebDAV (CalDAV),  |
+| [`odata`](skills/odata)                                     | OData: https://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.docx Covers OData 4.01, OData 4.0 (supported). Use when serving or querying an OData service                                                                                        |
 
 #### Events and data
 
