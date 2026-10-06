@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OWL 2. OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) is current; OWL 2 Web Ontology Language Direct Semantics (Second Edition) is current; OWL 2 Web Ontology Language Document Overview (Second Edition) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "owl2-syntax",
+      "label": "OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition)",
+      "status": "current",
+      "revision": "owl2-syntax REC-owl2-syntax-20121211 (Recommendation, 2012-12-11)",
+      "family": "syntax"
+    },
+    {
+      "id": "owl2-direct-semantics",
+      "label": "OWL 2 Web Ontology Language Direct Semantics (Second Edition)",
+      "status": "current",
+      "revision": "owl2-direct-semantics REC-owl2-direct-semantics-20121211 (Recommendation, 2012-12-11)",
+      "family": "direct"
+    },
+    {
+      "id": "owl2-overview",
+      "label": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
+      "status": "current",
+      "revision": "owl2-overview REC-owl2-overview-20121211 (Recommendation, 2012-12-11)",
+      "family": "overview"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition)",
+      "url": "https://www.w3.org/TR/owl2-syntax/",
+      "status": "Recommendation",
+      "revision": "owl2-syntax REC-owl2-syntax-20121211 (Recommendation, 2012-12-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OWL 2 Web Ontology Language Direct Semantics (Second Edition)",
+      "url": "https://www.w3.org/TR/owl2-direct-semantics/",
+      "status": "Recommendation",
+      "revision": "owl2-direct-semantics REC-owl2-direct-semantics-20121211 (Recommendation, 2012-12-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "status": "Recommendation",
+      "revision": "owl2-overview REC-owl2-overview-20121211 (Recommendation, 2012-12-11)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

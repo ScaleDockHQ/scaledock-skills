@@ -291,6 +291,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`rdf`](skills/rdf)                                                   | RDF: The Resource Description Framework (RDF) is a framework for representing information in the Web. Covers RDF 1.1 Concepts and Abstract Syntax, RDF 1.2 Concepts and Abstract Data Model (build preview), RDF 1.1 N-Triples, RDF 1.2 N-Triples (track preview), RDF 1.1 N-Quads, RDF  |
 | [`sparql`](skills/sparql)                                             | SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update. Use when querying RDF with SPARQL                                                                                |
 | [`shacl`](skills/shacl)                                               | SHACL: This document defines the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions. Covers Shapes Constraint Language (SHACL), SHACL 1.2 Core (track preview). Use when validating an RDF graph with shapes                             |
+| [`owl`](skills/owl)                                                   | OWL 2: The OWL 2 Web Ontology Language, informally OWL 2, is an ontology language for the Semantic Web with formally defined meaning. Covers OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition), OWL 2 Web Ontology Language Direct Seman |
 
 #### Documents and publishing
 
