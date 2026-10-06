@@ -442,6 +442,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | Skill                   | Description                                                                                                                                                                                                                                                                              |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`tosca`](skills/tosca) | TOSCA: The Topology and Orchestration Specification for Cloud Applications (TOSCA) provides a language for describing application components and their relationships by means of a service topology, and for specifying the lifecycle management procedures for creation or modification |
+| [`ubl`](skills/ubl)     | UBL: This stage: https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.html https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.pdf https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.xml Covers UBL 2.4. Use when exchanging business documents                                            |
 
 ## Development
 

@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers UBL. UBL 2.4 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "ubl-2.4",
+      "label": "UBL 2.4",
+      "status": "current",
+      "revision": "UBL 2.4, fetched 2026-10-06 (OASIS Standard, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UBL 2.4",
+      "url": "https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.html",
+      "status": "OASIS Standard",
+      "revision": "UBL 2.4, fetched 2026-10-06 (OASIS Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
