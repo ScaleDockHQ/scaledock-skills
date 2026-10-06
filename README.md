@@ -268,6 +268,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`console`](skills/console)                                 | Console: This specification defines APIs for console debugging facilities. Covers Console Living Standard. Use when writing console methods                                                                                                                                              |
 | [`compression`](skills/compression)                         | Compression: This document defines a set of JavaScript APIs to compress and decompress streams of binary data. Covers Compression Living Standard. Use when compressing or decompressing bytes                                                                                           |
 | [`mimesniff`](skills/mimesniff)                             | MIME Sniffing: The MIME Sniffing standard defines sniffing resources. Covers MIME Sniffing Living Standard. Use when sniffing a MIME type                                                                                                                                                |
+| [`infra`](skills/infra)                                     | Infra: The Infra Standard aims to define the fundamental concepts upon which standards are built. Covers Infra Living Standard. Use when using the Infra primitives in a spec or implementation                                                                                          |
 
 #### CSS, graphics and media
 
