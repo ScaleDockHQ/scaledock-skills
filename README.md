@@ -173,6 +173,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`x509-pkix`](skills/x509-pkix)                         | Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile Covers RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certific |
 | [`eat`](skills/eat)                                     | The Entity Attestation Token (EAT): An Entity Attestation Token (EAT) provides an attested claims set that describes the state and characteristics of an entity, a device such as a smartphone, an Internet of Things (IoT) device, network equipment, or such. Covers RFC 9711 The Enti |
 | [`dns-over-https`](skills/dns-over-https)               | DNS Queries over HTTPS (DoH): DNS Queries over HTTPS (DoH) Covers RFC 8484 DNS Queries over HTTPS (DoH), RFC 9460 Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records). Use when resolving DNS over HTTPS                                           |
+| [`privacy-pass`](skills/privacy-pass)                   | The Privacy Pass Architecture: This document specifies the Privacy Pass architecture and requirements for its constituent protocols used for authorization based on privacy-preserving authentication mechanisms. Covers RFC 9576 The Privacy Pass Architecture, RFC 9577 The Privacy Pa |
 
 #### Observability and operations
 
