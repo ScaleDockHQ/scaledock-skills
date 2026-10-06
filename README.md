@@ -95,6 +95,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`http3`](skills/http3)                                     | HTTP/3: The QUIC transport protocol has several features that are desirable in a transport for HTTP, such as stream multiplexing, per-stream flow control, and low-latency connection establishment. Covers RFC 9114 HTTP/3, RFC 9000 QUIC: A UDP-Based Multiplexed and Secure Transport |
 | [`websocket`](skills/websocket)                             | The WebSocket Protocol: The WebSocket Protocol Covers RFC 6455 The WebSocket Protocol, RFC 8441 Bootstrapping WebSockets with HTTP/2. Use when speaking the WebSocket protocol                                                                                                           |
 | [`webfinger`](skills/webfinger)                             | WebFinger: WebFinger Covers RFC 7033 WebFinger. Use when discovering a resource with WebFinger                                                                                                                                                                                           |
+| [`coap`](skills/coap)                                       | The Constrained Application Protocol (CoAP): The Constrained Application Protocol (CoAP) Covers RFC 7252 The Constrained Application Protocol (CoAP). Use when speaking the Constrained Application Protocol                                                                             |
 
 #### Events and data
 
