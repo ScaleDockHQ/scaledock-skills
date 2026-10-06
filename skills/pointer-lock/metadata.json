@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Pointer Lock. Pointer Lock is current; Pointer Lock 2.0 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "pointerlock",
+      "label": "Pointer Lock",
+      "status": "current",
+      "revision": "pointerlock WD-pointerlock-2-20260225 (Recommendation, 2016-10-27)"
+    },
+    {
+      "id": "pointerlock-2-preview",
+      "label": "Pointer Lock 2.0",
+      "status": "preview",
+      "revision": "pointerlock-2 WD-pointerlock-2-20260225 (Working Draft, 2026-02-25)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pointer Lock",
+      "url": "https://www.w3.org/TR/pointerlock/",
+      "status": "Recommendation",
+      "revision": "pointerlock WD-pointerlock-2-20260225 (Recommendation, 2016-10-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pointer Lock 2.0",
+      "url": "https://www.w3.org/TR/pointerlock-2/",
+      "status": "Working Draft",
+      "revision": "pointerlock-2 WD-pointerlock-2-20260225 (Working Draft, 2026-02-25)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
