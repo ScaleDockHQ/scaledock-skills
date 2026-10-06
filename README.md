@@ -248,6 +248,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`vibration`](skills/vibration)                             | Vibration API: This specification defines an API that provides access to the vibration mechanism of the hosting device. Covers Vibration API (build). Use when vibrating a device                                                                                                        |
 | [`device-memory`](skills/device-memory)                     | Device Memory API: This document defines a HTTP Client Hint header and a JavaScript API to surface device capability for memory (device RAM) in order to enable web apps to customize content depending on device memory constraints. Covers Device Memory API Level 1 (track). Use when |
 | [`compute-pressure`](skills/compute-pressure)               | Compute Pressure API: The Compute Pressure API provides a way for websites to react to changes in the CPU pressure of the target device, such that websites can trade off resources for an improved user experience. Covers Compute Pressure Level 1 (build). Use when observing CPU pre |
+| [`audio-session`](skills/audio-session)                     | Audio Session: This API defines an API surface for controlling how audio is rendered and interacts with other audio playing applications. Covers Audio Session (track). Use when managing an audio session                                                                               |
 
 #### CSS, graphics and media
 
