@@ -231,15 +231,16 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Compliance and governance
 
-| Skill                               | Description                                                                                                                                                                       |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`c2pa`](skills/c2pa)               | C2PA 2.4 Content Credentials: build, sign and validate manifests, claims and assertions, with upgrades from 2.3, 2.2, 2.1, 2.0 and 1.x.                                           |
-| [`eu-ai-act`](skills/eu-ai-act)     | EU AI Act (consolidated text of 27 July 2026, with the Digital Omnibus): classify AI systems and update plans built on the original dates.                                        |
-| [`eu-cra`](skills/eu-cra)           | EU Cyber Resilience Act, 2024 OJ text: scoping, Annex I, SBOMs, Art. 14 reporting and CE marking, tracking two amending proposals.                                                |
-| [`nist-ai-rmf`](skills/nist-ai-rmf) | NIST AI RMF 1.0: build AI risk programs, profiles and control maps across GOVERN, MAP, MEASURE and MANAGE, plus the AI 600-1 Generative AI Profile.                               |
-| [`nist-csf`](skills/nist-csf)       | NIST CSF: This publication is available free of charge from: https://doi.org/10.6028/NIST.CSWP.29 Covers CSF 2.0. Use when applying the Cybersecurity Framework                   |
-| [`nist-800-53`](skills/nist-800-53) | NIST SP 800-53: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-53 Rev 5. Use when selecting security and privacy controls |
-| [`oscal`](skills/oscal)             | OSCAL: OSCAL Covers OSCAL. Use when exchanging control assessment data                                                                                                            |
+| Skill                                 | Description                                                                                                                                                                         |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`c2pa`](skills/c2pa)                 | C2PA 2.4 Content Credentials: build, sign and validate manifests, claims and assertions, with upgrades from 2.3, 2.2, 2.1, 2.0 and 1.x.                                             |
+| [`eu-ai-act`](skills/eu-ai-act)       | EU AI Act (consolidated text of 27 July 2026, with the Digital Omnibus): classify AI systems and update plans built on the original dates.                                          |
+| [`eu-cra`](skills/eu-cra)             | EU Cyber Resilience Act, 2024 OJ text: scoping, Annex I, SBOMs, Art. 14 reporting and CE marking, tracking two amending proposals.                                                  |
+| [`nist-ai-rmf`](skills/nist-ai-rmf)   | NIST AI RMF 1.0: build AI risk programs, profiles and control maps across GOVERN, MAP, MEASURE and MANAGE, plus the AI 600-1 Generative AI Profile.                                 |
+| [`nist-csf`](skills/nist-csf)         | NIST CSF: This publication is available free of charge from: https://doi.org/10.6028/NIST.CSWP.29 Covers CSF 2.0. Use when applying the Cybersecurity Framework                     |
+| [`nist-800-53`](skills/nist-800-53)   | NIST SP 800-53: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-53 Rev 5. Use when selecting security and privacy controls   |
+| [`oscal`](skills/oscal)               | OSCAL: OSCAL Covers OSCAL. Use when exchanging control assessment data                                                                                                              |
+| [`nist-800-207`](skills/nist-800-207) | NIST SP 800-207: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-207, SP 800-207A. Use when applying zero trust architecture |
 
 #### Email
 
