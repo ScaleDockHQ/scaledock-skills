@@ -145,6 +145,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`fido-metadata-service`](skills/fido-metadata-service)       | FIDO Metadata Service: The FIDO Authenticator Metadata Specification defines so-called "Authenticator Metadata" statements. Covers FIDO Metadata Service 3.1.1, FIDO Metadata Service 3.1 (supported). Use when publishing or consuming FIDO authenticator metadata                      |
 | [`fido-credential-exchange`](skills/fido-credential-exchange) | FIDO Credential Exchange: This document defines the data structures and format of credentials being passed or referenced between two applications during credential exchange. Covers Credential Exchange Format 1.0, Credential Exchange Protocol 1.0 (build). Use when exchanging passk |
 | [`uma`](skills/uma)                                           | User-Managed Access: This specification defines a means for a client, representing a requesting party, to use a permission ticket to request an OAuth 2.0 access token to gain access to a protected resource asynchronously from the time a resource owner authorizes access. Covers UM |
+| [`presentation-exchange`](skills/presentation-exchange)       | Presentation Exchange: specification and not yet on a standards track, the concept of “decentralized web nodes” Covers Presentation Exchange 2.1.1, Presentation Exchange 2.1.0 (supported). Use when requesting and submitting verifiable presentations                                 |
 
 #### Security and supply chain
 
