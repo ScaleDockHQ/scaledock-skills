@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OpenChain. OpenChain ISO 5230 is current; OpenChain ISO 18974 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "openchain-iso-5230",
+      "label": "OpenChain ISO 5230",
+      "status": "current",
+      "revision": "OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "family": "license"
+    },
+    {
+      "id": "openchain-iso-18974",
+      "label": "OpenChain ISO 18974",
+      "status": "current",
+      "revision": "OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "family": "security"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenChain ISO 5230",
+      "url": "https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/ISO-5230-2020/en/ISO-5230-2020.md",
+      "status": "Public text",
+      "revision": "OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OpenChain ISO 18974",
+      "url": "https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/main/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md",
+      "status": "Public text",
+      "revision": "OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
