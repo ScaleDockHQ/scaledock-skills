@@ -267,6 +267,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`encrypted-media-extensions`](skills/encrypted-media-extensions) | Encrypted Media Extensions: This proposal extends HTMLMediaElement [ HTML51 ] providing APIs to control playback of encrypted content. Covers Encrypted Media Extensions Level 1, Encrypted Media Extensions Level 2 (track preview). Use when playing encrypted media                   |
 | [`webcodecs`](skills/webcodecs)                                   | WebCodecs: This specification defines interfaces to codecs for encoding and decoding of audio, video, and images. Covers WebCodecs (track). Use when encoding or decoding media in the browser                                                                                           |
 | [`web-audio`](skills/web-audio)                                   | Web Audio API: This specification describes a high-level Web API for processing and synthesizing audio in web applications. Covers Web Audio API Level 1.0, Web Audio API 1.1 (track preview). Use when processing or synthesizing audio                                                 |
+| [`web-midi`](skills/web-midi)                                     | Web MIDI API: Some user agents have music devices, such as synthesizers, keyboard and other controllers, and drum machines connected to their host computer or device. Covers Web MIDI API (track). Use when talking to MIDI devices                                                     |
 
 #### Data and semantics
 
