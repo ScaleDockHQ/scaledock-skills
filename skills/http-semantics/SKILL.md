@@ -1,7 +1,7 @@
 ---
 name: http-semantics
 description: >-
-  HTTP Semantics RFC 9110 and Caching RFC 9111: methods, status codes,
+  HTTP Semantics RFC 9110, Caching RFC 9111 and RFC 9112 HTTP/1.1: methods, status codes,
   conditional requests, caching and extension fields. Covers RFC 9110 and RFC
   9111, RFC 10008 QUERY, RFC 9651 Structured Fields, RFC 8288 Web Linking, RFC
   9745 Deprecation, RFC 8594 Sunset, RFC 9727 api-catalog, RFC 7240 Prefer,
@@ -14,7 +14,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -28,7 +28,7 @@ RFC 9110 (HTTP Semantics) and RFC 9111 (HTTP Caching), published by the IETF as 
 
 - Role: origin server or API, client, intermediary or cache, or author of a new header field.
 - Target version, per family (see [`references/versions.md`](references/versions.md)):
-  - Core: RFC 9110 and RFC 9111 (current, default). RFC 7230-7235 is legacy: read it and upgrade from it, never author against it. Idempotency-Key draft-07 is a preview (posture: track): do not add it to new APIs.
+  - Core: RFC 9110 and RFC 9111 (current, default). RFC 9112 HTTP/1.1 is current for message syntax and connection management; it obsoletes portions of RFC 7230. RFC 7230-7235 is legacy: read it and upgrade from it, never author against it. Idempotency-Key draft-07 is a preview (posture: track): do not add it to new APIs.
   - Query: RFC 10008 QUERY (current).
   - Structured fields: RFC 9651 Structured Fields (current). RFC 8941 Structured Fields is legacy, kept only for fields already defined against it.
   - Lifecycle and discovery: RFC 8288 Web Linking, RFC 9745 Deprecation, RFC 8594 Sunset, RFC 9727 api-catalog and RFC 7240 Prefer (each current, the only line of its family).
@@ -125,7 +125,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 
 - [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110): RFC (Internet Standard, STD 97), RFC 9110, checked 2026-10-05.
 - [RFC 9111: HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111): RFC (Internet Standard, STD 98), RFC 9111, checked 2026-10-05.
-- [RFC 9112: HTTP/1.1](https://www.rfc-editor.org/rfc/rfc9112): RFC (Internet Standard, STD 99, updated by RFC 9931), RFC 9112, checked 2026-10-05.
+- [RFC 9112: HTTP/1.1](https://www.rfc-editor.org/rfc/rfc9112): RFC (Internet Standard, STD 99, updated by RFC 9931), RFC 9112, checked 2026-10-06.
 - [RFC 7230: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing](https://www.rfc-editor.org/rfc/rfc7230): RFC (Proposed Standard, obsoleted by RFC 9110 and RFC 9112), RFC 7230, checked 2026-10-05.
 - [RFC 7231: Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content](https://www.rfc-editor.org/rfc/rfc7231): RFC (Proposed Standard, obsoleted by RFC 9110), RFC 7231, checked 2026-10-05.
 - [RFC 7232: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests](https://www.rfc-editor.org/rfc/rfc7232): RFC (Proposed Standard, obsoleted by RFC 9110), RFC 7232, checked 2026-10-05.

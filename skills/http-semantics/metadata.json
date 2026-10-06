@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -11,6 +11,13 @@
       "status": "current",
       "revision": "RFC 9110 (STD 97) and RFC 9111 (STD 98), June 2022",
       "family": "core"
+    },
+    {
+      "id": "rfc9112",
+      "label": "RFC 9112 HTTP/1.1",
+      "status": "current",
+      "family": "http11",
+      "revision": "RFC 9112, Internet Standard, June 2022. Specifies HTTP/1.1 message syntax and obsoletes portions of RFC 7230."
     },
     {
       "id": "rfc7230-7235",
@@ -198,7 +205,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9112",
       "status": "RFC (Internet Standard, STD 99, updated by RFC 9931)",
       "revision": "RFC 9112",
-      "checked": "2026-10-05"
+      "checked": "2026-10-06"
     },
     {
       "title": "RFC 7230: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing",
