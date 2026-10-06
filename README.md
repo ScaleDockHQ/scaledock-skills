@@ -446,6 +446,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`keep-a-changelog`](skills/keep-a-changelog)                 | Keep a Changelog: Keep a Changelog Version 1.1 1.0 0.3 Language (28) العربية (n/a) Čeština Dansk Deutsch English Español Français Hrvatski (n/a) Indonesia (n/a) Italiano 日本語 Norsk (Bokmål) Nederlands polski Português (BR) română Pyccкий Slovenčina (n/a) ქართული (n/a) Slovenščina     |
 | [`commonmark`](skills/commonmark)                             | CommonMark: <p>[foo<a href="https://example.com/?search=%5D(uri)">https://example.com/?search=](uri)</a></p> Covers CommonMark 0.31.2. Use when parsing CommonMark                                                                                                                             |
 | [`github-flavored-markdown`](skills/github-flavored-markdown) | GitHub Flavored Markdown: non-whitespace character after the list marker. Covers GitHub Flavored Markdown. Use when parsing GitHub Flavored Markdown                                                                                                                                           |
+| [`yaml`](skills/yaml)                                         | YAML: YAML Covers YAML 1.2.2. Use when parsing YAML                                                                                                                                                                                                                                            |
 
 #### Domain verticals
 

@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers YAML. YAML 1.2.2 is current; YAML 1.1 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "yaml-1.2.2",
+      "label": "YAML 1.2.2",
+      "status": "current",
+      "revision": "YAML 1.2.2, fetched 2026-10-06 (Specification, 2026-10-06)"
+    },
+    {
+      "id": "yaml-1.1",
+      "label": "YAML 1.1",
+      "status": "legacy",
+      "revision": "YAML 1.1, fetched 2026-10-06 (Specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "YAML 1.2.2",
+      "url": "https://yaml.org/spec/1.2.2/",
+      "status": "Specification",
+      "revision": "YAML 1.2.2, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "YAML 1.1",
+      "url": "https://yaml.org/spec/1.1/",
+      "status": "Specification",
+      "revision": "YAML 1.1, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
