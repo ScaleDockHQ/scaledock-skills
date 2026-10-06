@@ -572,6 +572,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`open-banking-uk`](skills/open-banking-uk)   | Open Banking UK: the Read-Write API profile for accounts, payments and pagination. Covers Open Banking UK 4.0. Use when calling the UK Open Banking Read-Write API.                                                                                                                                     |
 | [`lwm2m`](skills/lwm2m)                       | LwM2M: the OMA Lightweight M2M core protocol for device management. Covers LwM2M 1.2. Use when managing a device with LwM2M.                                                                                                                                                                            |
 | [`nostr`](skills/nostr)                       | Nostr: This NIP defines the basic protocol that should be implemented by everybody. Covers NIP-01. Use when implementing a Nostr client or relay.                                                                                                                                                       |
+| [`xapi`](skills/xapi)                         | xAPI: Experience API statements with an actor, verb and object. Covers Experience API. Use when recording a learning activity statement.                                                                                                                                                                |
 
 ## Development
 
