@@ -250,6 +250,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`compute-pressure`](skills/compute-pressure)               | Compute Pressure API: The Compute Pressure API provides a way for websites to react to changes in the CPU pressure of the target device, such that websites can trade off resources for an improved user experience. Covers Compute Pressure Level 1 (build). Use when observing CPU pre |
 | [`audio-session`](skills/audio-session)                     | Audio Session: This API defines an API surface for controlling how audio is rendered and interacts with other audio playing applications. Covers Audio Session (track). Use when managing an audio session                                                                               |
 | [`autoplay-detection`](skills/autoplay-detection)           | Autoplay Policy Detection: This specification provides web developers the ability to detect if automatically starting the playback of a media file is allowed in different situations. Covers Autoplay Policy Detection (track). Use when detecting whether autoplay is allowed          |
+| [`webtransport`](skills/webtransport)                       | WebTransport: This document defines a set of ECMAScript APIs in WebIDL to allow data to be sent and received between a browser and server, utilizing [WEB-TRANSPORT-OVERVIEW] . Covers WebTransport (build). Use when sending unreliable or bidirectional data to a server               |
 
 #### CSS, graphics and media
 
