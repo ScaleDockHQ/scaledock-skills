@@ -560,6 +560,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`hls`](skills/hls)                     | HLS: RFC 8216: HTTP Live Streaming \| RFC Editor Your browser has JavaScript disabled. Covers RFC 8216. Use when serving HTTP Live Streaming                                                                                                                                             |
 | [`gbfs`](skills/gbfs)                   | GBFS: This document explains the types of files and data that comprise the General Bikeshare Feed Specification (GBFS) and defines the fields used in all of those files. Covers GBFS 3.0. Use when publishing bike-share data                                                           |
 | [`smart-on-fhir`](skills/smart-on-fhir) | SMART App Launch: launch apps against a FHIR server. Covers SMART App Launch 2.2. Use when launching a SMART on FHIR app.                                                                                                                                                                |
+| [`cds-hooks`](skills/cds-hooks)         | CDS Hooks: This is the current published release of the CDS Hooks specification. Covers CDS Hooks 2.0. Use when a clinical system calls decision support.                                                                                                                                |
 
 ## Development
 
