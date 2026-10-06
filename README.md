@@ -216,6 +216,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`s2c2f`](skills/s2c2f)                                 | S2C2F: This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. Covers S2C2F. Use when assessing a secure supply chain                                                      |
 | [`openchain`](skills/openchain)                         | OpenChain: Learn More: [htttps://www.openchainproject.org](htttps://www.openchainproject.org) Covers OpenChain ISO 5230, OpenChain ISO 18974. Use when conforming to OpenChain license or security assurance                                                                             |
 | [`trusted-publishing`](skills/trusted-publishing)       | Trusted publishing: Trusted publishing for npm packages \| npm Docs Skip to search Skip to content npm Docs npmjs.com Status Support Covers npm trusted publishing, PyPI trusted publishing. Use when publishing packages with OIDC trusted publishers                                   |
+| [`nist-pqc`](skills/nist-pqc)                           | NIST PQC: Laurie E. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography                                                                                                                                                                |
 
 #### Observability and operations
 
