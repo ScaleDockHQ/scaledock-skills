@@ -199,12 +199,13 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Email
 
-| Skill                                         | Description                                                                                                                                       |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`dkim`](skills/dkim)                         | DKIM RFC 6376: sign and verify email with DKIM-Signature headers and _domainkey key records, with upgrades from RFC 4871.                         |
-| [`dmarc`](skills/dmarc)                       | DMARC RFC 9989: publish, evaluate and report on `_dmarc` records with tree-walk alignment and RFC 9990/9991 reports, with upgrades from RFC 7489. |
-| [`list-unsubscribe`](skills/list-unsubscribe) | RFC 2369 with RFC 8058: write List-Unsubscribe headers, one-click POST endpoints and receiver handling, with upgrades from RFC 2369-only lists.   |
-| [`spf`](skills/spf)                           | RFC 7208 SPF: write, check and debug v=spf1 sender records within the 10 DNS lookup limit, and record results, with upgrades from RFC 4408.       |
+| Skill                                         | Description                                                                                                                                                                                                                 |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`dkim`](skills/dkim)                         | DKIM RFC 6376: sign and verify email with DKIM-Signature headers and _domainkey key records, with upgrades from RFC 4871.                                                                                                   |
+| [`dmarc`](skills/dmarc)                       | DMARC RFC 9989: publish, evaluate and report on `_dmarc` records with tree-walk alignment and RFC 9990/9991 reports, with upgrades from RFC 7489.                                                                           |
+| [`list-unsubscribe`](skills/list-unsubscribe) | RFC 2369 with RFC 8058: write List-Unsubscribe headers, one-click POST endpoints and receiver handling, with upgrades from RFC 2369-only lists.                                                                             |
+| [`spf`](skills/spf)                           | RFC 7208 SPF: write, check and debug v=spf1 sender records within the 10 DNS lookup limit, and record results, with upgrades from RFC 4408.                                                                                 |
+| [`mta-sts`](skills/mta-sts)                   | SMTP MTA Strict Transport Security (MTA-STS): SMTP MTA Strict Transport Security (MTA-STS) Covers RFC 8461 SMTP MTA Strict Transport Security (MTA-STS), RFC 8460 SMTP TLS Reporting. Use when publishing an MTA-STS policy |
 
 #### Web platform
 
