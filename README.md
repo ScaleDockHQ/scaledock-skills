@@ -223,6 +223,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cvss`](skills/cvss)                                   | CVSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers CVSS 4.0, CVSS 3.1 (supported). Use when scoring vulnerability severity                                                                                                                |
 | [`cve-json`](skills/cve-json)                           | CVE Record Format: [cve_secretariat]: https://www.cve.org/ResourcesSupport/Glossary?activeTerm=glossarySecretariat Covers CVE Record Format 5.2.0, CVE Record Format 5.1.0 (supported). Use when publishing CVE records as JSON                                                          |
 | [`cwe`](skills/cwe)                                     | CWE: This view is intended to facilitate research into weaknesses, including their inter-dependencies, and can be leveraged to systematically identify theoretical gaps within CWE. Covers CWE. Use when classifying software weaknesses                                                 |
+| [`mitre-attack`](skills/mitre-attack)                   | MITRE ATT&CK: ATT&CKcon 7.0 registration is open! Join us October 27-28, 2026 in McLean, VA or virtually. Covers MITRE ATT&CK. Use when mapping adversary behavior                                                                                                                       |
 
 #### Observability and operations
 
