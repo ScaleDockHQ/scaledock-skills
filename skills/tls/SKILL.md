@@ -1,11 +1,11 @@
 ---
 name: tls
 description: >-
-  The Transport Layer Security (TLS) Protocol Version 1.3: The Transport Layer Security (TLS) Protocol Version 1.3 Covers RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3, RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 (supported), RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS), RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens, TLS Encrypted Client Hello (track preview). Use when configuring TLS. Triggers: TLS 1.3, TLS 1.2, RFC 8446.
+  TLS 1.3: prevent eavesdropping, tampering and message forgery. Covers RFC 9846 The Transport Layer Security (TLS) Protocol Version 1.3, RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS), RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens, and TLS Encrypted Client Hello. Use when configuring TLS. Triggers: TLS 1.3, RFC 9846.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3 (default); RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 (supported); RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) (default); RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens (default); TLS Encrypted Client Hello (preview, posture track: emit only when the user opts in and the posture is build). See [`references/versions.md`](references/versions.md).
+- Target version: RFC 9846 The Transport Layer Security (TLS) Protocol Version 1.3 (default); RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3 (legacy); RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 (legacy); RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) (default); RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens (default); TLS Encrypted Client Hello (preview, posture track: emit only when the user opts in and the posture is build). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -66,6 +66,7 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
+- [RFC 9846 The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc9846): Proposed Standard, RFC 9846, July 2026, checked 2026-10-06.
 - [RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc8446.html): PROPOSED STANDARD, RFC 8446 (PROPOSED STANDARD, August 201), checked 2026-10-06.
 - [RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2](https://www.rfc-editor.org/rfc/rfc5246.html): PROPOSED STANDARD, RFC 5246 (PROPOSED STANDARD, August 200), checked 2026-10-06.
 - [RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)](https://www.rfc-editor.org/rfc/rfc9325.html): BEST CURRENT PRACTICE, RFC 9325 (BEST CURRENT PRACTICE, November 2), checked 2026-10-06.

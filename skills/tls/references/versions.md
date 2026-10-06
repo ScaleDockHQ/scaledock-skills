@@ -4,13 +4,14 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id            | Line                                                                                                                   | Status    | Revision                                      | Posture | Publisher                        |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------------- | ------- | -------------------------------- |
-| `rfc8446`     | RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3                                                       | current   | RFC 8446 (PROPOSED STANDARD, August 201)      |         | PROPOSED STANDARD August 201     |
-| `rfc5246`     | RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2                                                       | supported | RFC 5246 (PROPOSED STANDARD, August 200)      |         | PROPOSED STANDARD August 200     |
-| `rfc9325`     | RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) | current   | RFC 9325 (BEST CURRENT PRACTICE, November 2)  |         | BEST CURRENT PRACTICE November 2 |
-| `rfc8705`     | RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens                                | current   | RFC 8705 (PROPOSED STANDARD, February 2)      |         | PROPOSED STANDARD February 2     |
-| `ech-preview` | TLS Encrypted Client Hello                                                                                             | preview   | draft-ietf-tls-esni-25 (WG draft, 2026-10-06) | track   | WG draft 2026-10-06              |
+| Id            | Line                                                                                                                   | Status  | Revision                                              | Posture | Publisher                        |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------- | ------- | -------------------------------- |
+| `rfc9846`     | RFC 9846 The Transport Layer Security (TLS) Protocol Version 1.3                                                       | current | RFC 9846, July 2026. Obsoletes RFC 8446 and RFC 5246. |         | July 2026                        |
+| `rfc8446`     | RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3                                                       | legacy  | Obsoleted by RFC 9846                                 |         | PROPOSED STANDARD August 2018    |
+| `rfc5246`     | RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2                                                       | legacy  | Obsoleted by RFC 9846                                 |         | PROPOSED STANDARD August 2008    |
+| `rfc9325`     | RFC 9325 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) | current | RFC 9325 (BEST CURRENT PRACTICE, November 2)          |         | BEST CURRENT PRACTICE November 2 |
+| `rfc8705`     | RFC 8705 OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens                                | current | RFC 8705 (PROPOSED STANDARD, February 2)              |         | PROPOSED STANDARD February 2     |
+| `ech-preview` | TLS Encrypted Client Hello                                                                                             | preview | draft-ietf-tls-esni-25 (WG draft, 2026-10-06)         | track   | WG draft 2026-10-06              |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
