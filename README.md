@@ -453,6 +453,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`madr`](skills/madr)                                         | MADR: About MADR \| MADR Skip to main content Link Menu Expand (external link) Document Search Copy Copied MADR About MADR Covers MADR. Use when writing an architecture decision record                                                                                                       |
 | [`reuse`](skills/reuse)                                       | REUSE: REUSE Covers REUSE. Use when adding machine-readable license information                                                                                                                                                                                                                |
 | [`contributor-covenant`](skills/contributor-covenant)         | Contributor Covenant: We are committed to fostering an environment that respects and promotes the dignity, rights, and contributions of all individuals, regardless of characteristics including race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disabilit       |
+| [`editorconfig`](skills/editorconfig)                         | EditorConfig: considered literally. Covers EditorConfig. Use when defining editor settings                                                                                                                                                                                                     |
 
 #### Domain verticals
 
