@@ -558,6 +558,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`ethereum-eips`](skills/ethereum-eips) | Ethereum EIPs: Fabian Vogelsteller < fabian@ethereum.org >, Vitalik Buterin < vitalik.buterin@ethereum.org > Covers ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004. Use when implementing ERC-20, EIP-712, ERC-4337, EIP-1193, or ERC-8004                                                |
 | [`xmpp`](skills/xmpp)                   | XMPP: RFC 6120: Extensible Messaging and Presence Protocol (XMPP): Core \| RFC Editor Your browser has JavaScript disabled. Covers RFC 6120. Use when implementing XMPP                                                                                                                  |
 | [`hls`](skills/hls)                     | HLS: RFC 8216: HTTP Live Streaming \| RFC Editor Your browser has JavaScript disabled. Covers RFC 8216. Use when serving HTTP Live Streaming                                                                                                                                             |
+| [`gbfs`](skills/gbfs)                   | GBFS: This document explains the types of files and data that comprise the General Bikeshare Feed Specification (GBFS) and defines the fields used in all of those files. Covers GBFS 3.0. Use when publishing bike-share data                                                           |
 
 ## Development
 
