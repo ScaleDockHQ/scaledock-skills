@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Credential Management. Credential Management Level 1 is current; A Well-Known URL for Changing Passwords is current; A Well-Known URL for Relying Party Passkey Endpoints Level 1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "credential-management-1",
+      "label": "Credential Management Level 1",
+      "status": "current",
+      "revision": "credential-management-1 WD-credential-management-1-20260903 (Working Draft, 2026-09-03)",
+      "posture": "track",
+      "family": "credentials"
+    },
+    {
+      "id": "change-password-url",
+      "label": "A Well-Known URL for Changing Passwords",
+      "status": "current",
+      "revision": "change-password-url WD-change-password-url-20240603 (Working Draft, 2024-06-03)",
+      "posture": "track",
+      "family": "change-password"
+    },
+    {
+      "id": "passkey-endpoints-1",
+      "label": "A Well-Known URL for Relying Party Passkey Endpoints Level 1",
+      "status": "current",
+      "revision": "passkey-endpoints-1 WD-passkey-endpoints-1-20260114 (Working Draft, 2026-01-14)",
+      "posture": "track",
+      "family": "passkey-endpoints"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Credential Management Level 1",
+      "url": "https://www.w3.org/TR/credential-management-1/",
+      "status": "Working Draft",
+      "revision": "credential-management-1 WD-credential-management-1-20260903 (Working Draft, 2026-09-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "A Well-Known URL for Changing Passwords",
+      "url": "https://www.w3.org/TR/change-password-url/",
+      "status": "Working Draft",
+      "revision": "change-password-url WD-change-password-url-20240603 (Working Draft, 2024-06-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "A Well-Known URL for Relying Party Passkey Endpoints",
+      "url": "https://www.w3.org/TR/passkey-endpoints-1/",
+      "status": "Working Draft",
+      "revision": "passkey-endpoints-1 WD-passkey-endpoints-1-20260114 (Working Draft, 2026-01-14)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
