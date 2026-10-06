@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Trusted publishing. npm trusted publishing is current; PyPI trusted publishing is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "trusted-publishing-npm",
+      "label": "npm trusted publishing",
+      "status": "current",
+      "revision": "npm trusted publishers, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "npm"
+    },
+    {
+      "id": "trusted-publishing-pypi",
+      "label": "PyPI trusted publishing",
+      "status": "current",
+      "revision": "PyPI trusted publishers, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "pypi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "npm trusted publishing",
+      "url": "https://docs.npmjs.com/trusted-publishers",
+      "status": "Documentation",
+      "revision": "npm trusted publishers, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "PyPI trusted publishing",
+      "url": "https://docs.pypi.org/trusted-publishers/",
+      "status": "Documentation",
+      "revision": "PyPI trusted publishers, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
