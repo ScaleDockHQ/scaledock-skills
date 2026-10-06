@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OPC UA 1.05 Parts 2, 3, 4 and 6 from the OPC Foundation online reference. Requirements are quotes from those texts.",
+  "versions": [
+    {
+      "id": "opc-ua-1-05",
+      "label": "OPC UA 1.05",
+      "status": "current",
+      "revision": "Part 2 and Part 3 1.05.06 (2025-10-22), Part 4 and Part 6 1.05.07 (2026-04-15)"
+    },
+    {
+      "id": "opc-ua-1-04",
+      "label": "OPC UA 1.04",
+      "status": "legacy",
+      "revision": "OPC 10000 v1.04 (online reference)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OPC 10000-2: Security Model",
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-2/v1.05.06",
+      "status": "OPC Foundation Specification",
+      "revision": "Version 1.05.06, 2025-10-22",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OPC 10000-3: Address Space Model",
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-3/v1.05.06",
+      "status": "OPC Foundation Specification",
+      "revision": "Version 1.05.06, 2025-10-22",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OPC 10000-4: Services",
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-4/v1.05.07",
+      "status": "OPC Foundation Specification",
+      "revision": "Version 1.05.07, 2026-04-15",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OPC 10000-6: Mappings",
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-6/v1.05.07",
+      "status": "OPC Foundation Specification",
+      "revision": "Version 1.05.07, 2026-04-15",
+      "checked": "2026-10-06"
+    }
+  ]
+}
