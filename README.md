@@ -385,6 +385,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`csv`](skills/csv)                                                       | Common Format and MIME Type for Comma-Separated Values (CSV) Files: Common Format and MIME Type for Comma-Separated Values (CSV) Files Covers RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files. Use when reading or writing CSV                               |
 | [`unicode`](skills/unicode)                                               | Unicode Standard: STATUS: This is a preliminary draft page for an upcoming release. Covers Unicode 18.0.0, Unicode 17.0.0 (supported), Unicode 16.0.0 (supported). Use when handling Unicode text against a published version                                                            |
 | [`unicode-normalization`](skills/unicode-normalization)                   | Unicode Normalization (UAX #15): When implementations keep strings in a normalized form, they can be assured that equivalent Covers UAX #15. Use when normalizing Unicode text                                                                                                           |
+| [`unicode-segmentation`](skills/unicode-segmentation)                     | Unicode Text Segmentation (UAX #29): implementations can produce these divisions. Covers UAX #29. Use when splitting text into graphemes, words or sentences                                                                                                                             |
 
 #### Documents and publishing
 
