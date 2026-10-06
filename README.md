@@ -256,6 +256,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webxr`](skills/webxr)                                     | WebXR: This specification describes support for accessing virtual reality (VR) and augmented reality (AR) devices, including sensors and head-mounted displays, on the Web. Covers WebXR Device API (build), WebXR Augmented Reality Module - Level 1 (build), WebXR Depth Sensing Modul |
 | [`html`](skills/html)                                       | HTML Living Standard: This is a Review Draft. Covers HTML Living Standard. Use when writing HTML, including forms, dialog, popover, workers, storage, canvas and import maps                                                                                                             |
 | [`server-sent-events`](skills/server-sent-events)           | Server-sent events: ← 9 Communication — Table of Contents — 9.3 Cross-document messaging → 9.2 Server-sent events 9.2.1 Introduction 9.2.2 The EventSource interface 9.2.3 Processing model 9.2.4 The `Last-Event-ID` header 9.2.5 Parsing an event stream 9.2.6 Interpreting an event   |
+| [`websockets-api`](skills/websockets-api)                   | WebSockets API: This specification provides APIs to enable web applications to maintain bidirectional communications with server-side processes. Covers WebSockets Living Standard. Use when opening a WebSocket from a page                                                             |
 
 #### CSS, graphics and media
 
