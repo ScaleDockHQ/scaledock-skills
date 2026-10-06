@@ -101,6 +101,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`json-rpc`](skills/json-rpc)                               | JSON-RPC: JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. Covers JSON-RPC 2.0. Use when calling procedures over JSON-RPC 2.0                                                                                                                                 |
 | [`grpc`](skills/grpc)                                       | gRPC: This document serves as a detailed description for an implementation of gRPC carried over HTTP2 framing . Covers gRPC over HTTP/2. Use when speaking the gRPC over HTTP/2 protocol                                                                                                 |
 | [`protobuf`](skills/protobuf)                               | Protocol Buffers: Covers how to use the proto3 revision of the Protocol Buffers language in your project. Covers proto3, Protobuf Editions. Use when defining Protocol Buffer messages                                                                                                   |
+| [`serverless-workflow`](skills/serverless-workflow)         | Serverless Workflow: This document proposes the creation of a Domain Specific Language (DSL) for the Open Workflow Specification, designed for building platform agnostic workflows. Covers Serverless Workflow DSL. Use when writing a serverless workflow                              |
 
 #### Events and data
 
