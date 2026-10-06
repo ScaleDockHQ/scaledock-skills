@@ -83,6 +83,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`typespec`](skills/typespec)                               | TypeSpec 1.x: design APIs in TypeSpec and emit OpenAPI 3.0, 3.1 or 3.2, with upgrades from pre-1.0 TypeSpec and Cadl.                                                                                                                                                                   |
 | [`json`](skills/json)                                       | The JavaScript Object Notation (JSON) Data Interchange Format: The JavaScript Object Notation (JSON) Data Interchange Format Covers RFC 8259 The JavaScript Object Notation (JSON) Data Interchange Format, RFC 7493 The I-JSON Message Format. Use when producing or parsing JSON text |
 | [`json-pointer`](skills/json-pointer)                       | JavaScript Object Notation (JSON) Pointer: JavaScript Object Notation (JSON) Pointer Covers RFC 6901 JavaScript Object Notation (JSON) Pointer. Use when evaluating a JSON Pointer                                                                                                      |
+| [`json-patch`](skills/json-patch)                           | JavaScript Object Notation (JSON) Patch: JavaScript Object Notation (JSON) Patch Covers RFC 6902 JavaScript Object Notation (JSON) Patch, RFC 7396 JSON Merge Patch. Use when applying a JSON Patch or a merge patch                                                                    |
 
 #### Events and data
 
