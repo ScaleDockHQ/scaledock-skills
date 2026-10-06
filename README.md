@@ -235,6 +235,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`owasp-mastg`](skills/owasp-mastg)                           | OWASP MASTG: MASWE-0021: Fallback to Non-biometric Credentials Allowed for Sensitive Transactions Covers OWASP MASTG. Use when testing mobile application security                                                                                                                       |
 | [`owasp-proactive-controls`](skills/owasp-proactive-controls) | OWASP Proactive Controls: Insecure software is undermining our financial, healthcare, defense, energy, and other critical infrastructure worldwide. Covers OWASP Proactive Controls. Use when applying proactive security controls                                                       |
 | [`owasp-scvs`](skills/owasp-scvs)                             | OWASP SCVS: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP SCVS. Use when verifying software components                                                                                                                                  |
+| [`owasp-ci-cd-top-10`](skills/owasp-ci-cd-top-10)             | OWASP CI/CD Top 10: OWASP Top 10 CI/CD Security Risks \| OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP CI/CD Top 10. Use when reviewing CI/CD security risks                                                           |
 
 #### Observability and operations
 
