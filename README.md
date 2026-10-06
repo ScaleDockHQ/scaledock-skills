@@ -269,6 +269,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`compression`](skills/compression)                         | Compression: This document defines a set of JavaScript APIs to compress and decompress streams of binary data. Covers Compression Living Standard. Use when compressing or decompressing bytes                                                                                           |
 | [`mimesniff`](skills/mimesniff)                             | MIME Sniffing: The MIME Sniffing standard defines sniffing resources. Covers MIME Sniffing Living Standard. Use when sniffing a MIME type                                                                                                                                                |
 | [`infra`](skills/infra)                                     | Infra: The Infra Standard aims to define the fundamental concepts upon which standards are built. Covers Infra Living Standard. Use when using the Infra primitives in a spec or implementation                                                                                          |
+| [`xhr`](skills/xhr)                                         | XMLHttpRequest: The XMLHttpRequest Standard defines an API that provides scripted client functionality for transferring data between a client and a server. Covers XMLHttpRequest Living Standard. Use when maintaining an XMLHttpRequest client                                         |
 
 #### CSS, graphics and media
 
