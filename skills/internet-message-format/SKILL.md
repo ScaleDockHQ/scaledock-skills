@@ -1,11 +1,11 @@
 ---
 name: internet-message-format
 description: >-
-  Internet Message Format: Internet Message Format Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text, RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures, RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples. Use when parsing an email message or a MIME body. Triggers: RFC 5322, MIME, RFC 2045.
+  Internet Message Format: Internet Message Format Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text, RFC 6838 Media Type Specifications and Registration Procedures, RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures, RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples. Use when parsing an email message or a MIME body. Triggers: RFC 5322, MIME, RFC 2045.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: RFC 5322 Internet Message Format (default); RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies (default); RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types (default); RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text (default); RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures (default); RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples (default). See [`references/versions.md`](references/versions.md).
+- Target version: RFC 5322 Internet Message Format (default); RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies (default); RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types (default); RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text (default); RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures (legacy); RFC 4288 Media Type Specifications and Registration Procedures (legacy); RFC 6838 Media Type Specifications and Registration Procedures (default); RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures (default); RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -71,4 +71,7 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types](https://www.rfc-editor.org/rfc/rfc2046.html): DRAFT STANDARD, RFC 2046 (DRAFT STANDARD, November 1), checked 2026-10-06.
 - [RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text](https://www.rfc-editor.org/rfc/rfc2047.html): DRAFT STANDARD, RFC 2047 (DRAFT STANDARD, November 1), checked 2026-10-06.
 - [RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures](https://www.rfc-editor.org/rfc/rfc2048.html): BEST CURRENT PRACTICE, RFC 2048 (BEST CURRENT PRACTICE, November 1), checked 2026-10-06.
+- [RFC 4288 Media Type Specifications and Registration Procedures](https://www.rfc-editor.org/rfc/rfc4288): Best Current Practice, RFC 4288, December 2005, checked 2026-10-06.
+- [RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures](https://www.rfc-editor.org/rfc/rfc4289): Best Current Practice, RFC 4289, December 2005, checked 2026-10-06.
+- [RFC 6838 Media Type Specifications and Registration Procedures](https://www.rfc-editor.org/rfc/rfc6838): Best Current Practice, RFC 6838, January 2013, checked 2026-10-06.
 - [RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples](https://www.rfc-editor.org/rfc/rfc2049.html): DRAFT STANDARD, RFC 2049 (DRAFT STANDARD, November 1), checked 2026-10-06.

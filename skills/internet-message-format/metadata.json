@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -36,8 +36,8 @@
     {
       "id": "rfc2048",
       "label": "RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
-      "status": "current",
-      "revision": "RFC 2048 (BEST CURRENT PRACTICE, November 1)",
+      "status": "legacy",
+      "revision": "RFC 2048 (Best Current Practice, November 1996). Obsoleted by RFC 4288 and RFC 4289.",
       "family": "mime-registration"
     },
     {
@@ -46,6 +46,27 @@
       "status": "current",
       "revision": "RFC 2049 (DRAFT STANDARD, November 1)",
       "family": "mime-conformance"
+    },
+    {
+      "id": "rfc4288",
+      "label": "RFC 4288 Media Type Specifications and Registration Procedures",
+      "status": "legacy",
+      "family": "mime-registration",
+      "revision": "RFC 4288, Best Current Practice, December 2005. Obsoletes RFC 2048. Obsoleted by RFC 6838."
+    },
+    {
+      "id": "rfc6838",
+      "label": "RFC 6838 Media Type Specifications and Registration Procedures",
+      "status": "current",
+      "family": "mime-registration",
+      "revision": "RFC 6838, Best Current Practice, January 2013. Obsoletes RFC 4288. Defines media type registration for HTTP, MIME and other protocols."
+    },
+    {
+      "id": "rfc4289",
+      "label": "RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+      "status": "current",
+      "family": "mime-external",
+      "revision": "RFC 4289, Best Current Practice, December 2005. Obsoletes RFC 2048 for IANA registration of MIME external body access types and content-transfer-encodings."
     }
   ],
   "sources": [
@@ -89,6 +110,27 @@
       "url": "https://www.rfc-editor.org/rfc/rfc2049.html",
       "status": "DRAFT STANDARD",
       "revision": "RFC 2049 (DRAFT STANDARD, November 1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4288 Media Type Specifications and Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc4288",
+      "status": "Best Current Practice",
+      "revision": "RFC 4288, December 2005",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 4289 MIME Part Four: Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc4289",
+      "status": "Best Current Practice",
+      "revision": "RFC 4289, December 2005",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 6838 Media Type Specifications and Registration Procedures",
+      "url": "https://www.rfc-editor.org/rfc/rfc6838",
+      "status": "Best Current Practice",
+      "revision": "RFC 6838, January 2013",
       "checked": "2026-10-06"
     }
   ]

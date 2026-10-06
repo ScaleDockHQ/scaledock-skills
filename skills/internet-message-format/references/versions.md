@@ -4,14 +4,17 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id        | Line                                                                                                           | Status  | Revision                                     | Posture | Publisher                        |
-| --------- | -------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------- | ------- | -------------------------------- |
-| `rfc5322` | RFC 5322 Internet Message Format                                                                               | current | RFC 5322 (DRAFT STANDARD, October 20)        |         | DRAFT STANDARD October 20        |
-| `rfc2045` | RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies              | current | RFC 2045 (DRAFT STANDARD, November 1)        |         | DRAFT STANDARD November 1        |
-| `rfc2046` | RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types                                    | current | RFC 2046 (DRAFT STANDARD, November 1)        |         | DRAFT STANDARD November 1        |
-| `rfc2047` | RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text | current | RFC 2047 (DRAFT STANDARD, November 1)        |         | DRAFT STANDARD November 1        |
-| `rfc2048` | RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures                       | current | RFC 2048 (BEST CURRENT PRACTICE, November 1) |         | BEST CURRENT PRACTICE November 1 |
-| `rfc2049` | RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples             | current | RFC 2049 (DRAFT STANDARD, November 1)        |         | DRAFT STANDARD November 1        |
+| Id        | Line                                                                                                           | Status  | Revision                              | Posture | Publisher                           |
+| --------- | -------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------- | ------- | ----------------------------------- |
+| `rfc5322` | RFC 5322 Internet Message Format                                                                               | current | RFC 5322 (DRAFT STANDARD, October 20) |         | DRAFT STANDARD October 20           |
+| `rfc2045` | RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies              | current | RFC 2045 (DRAFT STANDARD, November 1) |         | DRAFT STANDARD November 1           |
+| `rfc2046` | RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types                                    | current | RFC 2046 (DRAFT STANDARD, November 1) |         | DRAFT STANDARD November 1           |
+| `rfc2047` | RFC 2047 MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text | current | RFC 2047 (DRAFT STANDARD, November 1) |         | DRAFT STANDARD November 1           |
+| `rfc2048` | RFC 2048 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures                       | legacy  | Obsoleted by RFC 4288 and RFC 4289    |         | BEST CURRENT PRACTICE November 1996 |
+| `rfc4288` | RFC 4288 Media Type Specifications and Registration Procedures                                                 | legacy  | Obsoleted by RFC 6838, December 2005  |         | Best Current Practice December 2005 |
+| `rfc6838` | RFC 6838 Media Type Specifications and Registration Procedures                                                 | current | RFC 6838, January 2013                |         | Best Current Practice January 2013  |
+| `rfc4289` | RFC 4289 Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures                       | current | RFC 4289, December 2005               |         | Best Current Practice December 2005 |
+| `rfc2049` | RFC 2049 Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples             | current | RFC 2049 (DRAFT STANDARD, November 1) |         | DRAFT STANDARD November 1           |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
