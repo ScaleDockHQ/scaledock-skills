@@ -231,6 +231,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`screen-orientation`](skills/screen-orientation)           | Screen Orientation: The Screen Orientation specification standardizes the types and angles for a device's screen orientation, and provides a means for locking and unlocking it. Covers Screen Orientation (track). Use when reading or locking screen orientation                       |
 | [`window-management`](skills/window-management)             | Window Management: This document defines a web platform API that allows script to query the device for information about its screens, and place content on specific screens. Covers Window Management (track). Use when placing windows on multiple screens                              |
 | [`clipboard-api`](skills/clipboard-api)                     | Clipboard API: This document describes APIs for accessing data on the system clipboard. Covers Clipboard API and events (track). Use when reading or writing the system clipboard                                                                                                        |
+| [`selection-api`](skills/selection-api)                     | Selection API: This document is a preliminary draft of a specification for the Selection API and selection related functionality. Covers Selection API (track). Use when reading the current text selection                                                                              |
 
 #### CSS, graphics and media
 
