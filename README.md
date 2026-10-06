@@ -243,6 +243,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`accessibility-maturity-model`](skills/accessibility-maturity-model)       | Accessibility Maturity Model: The Accessibility Maturity Model (AMM) provides a framework that offers individuals and organizations of all sizes a roadmap, including benchmarks, to develop, deploy, and maintain the accessibility of both internal and external digital resources ove |
 | [`uaag`](skills/uaag)                                                       | User Agent Accessibility Guidelines (UAAG): UAAG 2.0 guides developers in designing user agents that make the web more accessible to people with disabilities. Covers User Agent Accessibility Guidelines (UAAG) 2.0 (track), User Agent Accessibility Guidelines 1.0. Use when reviewin |
 | [`pronunciation`](skills/pronunciation)                                     | Pronunciation: The objective of the Pronunciation Task Force is to develop normative specifications and best practices guidance collaborating with other W3C groups as appropriate, to provide for proper pronunciation in HTML content when using text to speech (TTS) synthesis. Cover |
+| [`ecmascript`](skills/ecmascript)                                           | ECMAScript: + 5 Notational Conventions + 5.1 Syntactic and Lexical Grammars 5.1.1 Context-Free Grammars Covers ECMAScript 2026, ECMAScript 2025 (supported), ECMAScript 2024 (supported), ECMAScript 2027 (track preview). Use when writing JavaScript against a published ECMAScript ed |
 
 #### Web application APIs
 
