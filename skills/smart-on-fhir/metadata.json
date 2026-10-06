@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -9,7 +9,7 @@
       "id": "smart-2.2",
       "label": "SMART App Launch 2.2",
       "status": "current",
-      "revision": "SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06)"
+      "revision": "SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5."
     }
   ],
   "sources": [
@@ -17,7 +17,7 @@
       "title": "SMART App Launch 2.2",
       "url": "https://hl7.org/fhir/smart-app-launch/STU2.2/",
       "status": "Standard for Trial Use",
-      "revision": "SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06)",
+      "revision": "SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5.",
       "checked": "2026-10-06"
     }
   ]

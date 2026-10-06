@@ -27,7 +27,7 @@ Then ask the agent to apply SMART App Launch.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [SMART App Launch 2.2](https://hl7.org/fhir/smart-app-launch/STU2.2/): Standard for Trial Use, SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06).
+- [SMART App Launch 2.2](https://hl7.org/fhir/smart-app-launch/STU2.2/): Standard for Trial Use, SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5..
 
 ## License
 

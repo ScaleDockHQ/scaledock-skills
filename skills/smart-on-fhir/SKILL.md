@@ -6,7 +6,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -60,4 +60,4 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [SMART App Launch 2.2](https://hl7.org/fhir/smart-app-launch/STU2.2/): Standard for Trial Use, SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06), checked 2026-10-06.
+- [SMART App Launch 2.2](https://hl7.org/fhir/smart-app-launch/STU2.2/): Standard for Trial Use, SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5., checked 2026-10-06.

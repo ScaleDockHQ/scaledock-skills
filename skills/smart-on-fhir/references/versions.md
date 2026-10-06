@@ -4,9 +4,9 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id          | Line                 | Status  | Revision                                                     | Posture | Publisher                         |
-| ----------- | -------------------- | ------- | ------------------------------------------------------------ | ------- | --------------------------------- |
-| `smart-2.2` | SMART App Launch 2.2 | current | SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06) |         | Standard for Trial Use 2026-10-06 |
+| Id          | Line                 | Status  | Revision                                                                                                                                                        | Posture | Publisher                         |
+| ----------- | -------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------------------------- |
+| `smart-2.2` | SMART App Launch 2.2 | current | SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5. |         | Standard for Trial Use 2026-10-06 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
@@ -23,7 +23,7 @@ Statuses: **current** is the default target; **supported** is released and still
 
 - Publisher status on 2026-10-06: Standard for Trial Use (2026-10-06).
 - Pinned text: https://hl7.org/fhir/smart-app-launch/STU2.2/
-- Revision token: SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06)
+- Revision token: SMART App Launch v2.2.0 (Standard for Trial Use, 2026-10-06). The guide page says it is based on FHIR R4; the FHIR package list's latest release edition is R5.
 
 ## Upgrading
 
