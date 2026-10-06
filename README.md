@@ -229,6 +229,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cisa-kev`](skills/cisa-kev)                           | CISA KEV: A .gov website belongs to an official government organization in the United States. Covers CISA KEV. Use when checking the Known Exploited Vulnerabilities catalog                                                                                                             |
 | [`cpe`](skills/cpe)                                     | CPE: The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology Covers CPE 2.3. Use when naming IT products with CPE                                                                                                                              |
 | [`swid`](skills/swid)                                   | SWID: Willie May, Under Secretary of Commerce for Standards and Technology and Director Covers NIST IR 8060. Use when tagging software with SWID                                                                                                                                         |
+| [`cisa-secure-by-design`](skills/cisa-secure-by-design) | Secure by Design: A .gov website belongs to an official government organization in the United States. Covers Secure by Design. Use when applying CISA Secure by Design                                                                                                                   |
 
 #### Observability and operations
 
