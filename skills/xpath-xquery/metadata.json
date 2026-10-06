@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers XPath and XQuery. XML Path Language (XPath) 3.1 is current; XML Path Language (XPath) 3.0 is supported; XQuery 4.0 is preview; XQuery 3.1: An XML Query Language is current; XQuery 3.0: An XML Query Language is supported; XPath and XQuery Functions and Operators 3.1 is current; XQuery and XPath Data Model 3.1 is current; XQueryX 3.1 is current; XQuery and XPath Full Text 3.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "xpath-31",
+      "label": "XML Path Language (XPath) 3.1",
+      "status": "current",
+      "revision": "xpath-31 REC-xpath-31-20170321 (Recommendation, 2017-03-21)",
+      "family": "xpath"
+    },
+    {
+      "id": "xpath-30",
+      "label": "XML Path Language (XPath) 3.0",
+      "status": "supported",
+      "revision": "xpath-30 REC-xpath-30-20140408 (Recommendation, 2014-04-08)",
+      "family": "xpath"
+    },
+    {
+      "id": "xquery-40-preview",
+      "label": "XQuery 4.0",
+      "status": "preview",
+      "revision": "xquery-40-preview REC-xquery-31-20170321 (Community Group draft, 2026-10-05)",
+      "posture": "track",
+      "family": "xquery"
+    },
+    {
+      "id": "xquery-31",
+      "label": "XQuery 3.1: An XML Query Language",
+      "status": "current",
+      "revision": "xquery-31 REC-xquery-31-20170321 (Recommendation, 2017-03-21)",
+      "family": "xquery"
+    },
+    {
+      "id": "xquery-30",
+      "label": "XQuery 3.0: An XML Query Language",
+      "status": "supported",
+      "revision": "xquery-30 REC-xquery-30-20140408 (Recommendation, 2014-04-08)",
+      "family": "xquery"
+    },
+    {
+      "id": "xpath-functions-31",
+      "label": "XPath and XQuery Functions and Operators 3.1",
+      "status": "current",
+      "revision": "xpath-functions-31 REC-xpath-functions-31-20170321 (Recommendation, 2017-03-21)",
+      "family": "functions"
+    },
+    {
+      "id": "xpath-datamodel-31",
+      "label": "XQuery and XPath Data Model 3.1",
+      "status": "current",
+      "revision": "xpath-datamodel-31 REC-xpath-datamodel-31-20170321 (Recommendation, 2017-03-21)",
+      "family": "datamodel"
+    },
+    {
+      "id": "xqueryx-31",
+      "label": "XQueryX 3.1",
+      "status": "current",
+      "revision": "xqueryx-31 REC-xqueryx-31-20170321 (Recommendation, 2017-03-21)",
+      "family": "xqueryx"
+    },
+    {
+      "id": "xpath-full-text-30",
+      "label": "XQuery and XPath Full Text 3.0",
+      "status": "current",
+      "revision": "xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24)",
+      "family": "full-text"
+    }
+  ],
+  "sources": [
+    {
+      "title": "XML Path Language (XPath) 3.1",
+      "url": "https://www.w3.org/TR/xpath-31/",
+      "status": "Recommendation",
+      "revision": "xpath-31 REC-xpath-31-20170321 (Recommendation, 2017-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Path Language (XPath) 3.0",
+      "url": "https://www.w3.org/TR/xpath-30/",
+      "status": "Recommendation",
+      "revision": "xpath-30 REC-xpath-30-20140408 (Recommendation, 2014-04-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery 4.0",
+      "url": "https://qt4cg.org/specifications/xquery-40/xquery-40.html",
+      "status": "Community Group draft",
+      "revision": "xquery-40-preview REC-xquery-31-20170321 (Community Group draft, 2026-10-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery 3.1: An XML Query Language",
+      "url": "https://www.w3.org/TR/xquery-31/",
+      "status": "Recommendation",
+      "revision": "xquery-31 REC-xquery-31-20170321 (Recommendation, 2017-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery 3.0: An XML Query Language",
+      "url": "https://www.w3.org/TR/xquery-30/",
+      "status": "Recommendation",
+      "revision": "xquery-30 REC-xquery-30-20140408 (Recommendation, 2014-04-08)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XPath and XQuery Functions and Operators 3.1",
+      "url": "https://www.w3.org/TR/xpath-functions-31/",
+      "status": "Recommendation",
+      "revision": "xpath-functions-31 REC-xpath-functions-31-20170321 (Recommendation, 2017-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery and XPath Data Model 3.1",
+      "url": "https://www.w3.org/TR/xpath-datamodel-31/",
+      "status": "Recommendation",
+      "revision": "xpath-datamodel-31 REC-xpath-datamodel-31-20170321 (Recommendation, 2017-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQueryX 3.1",
+      "url": "https://www.w3.org/TR/xqueryx-31/",
+      "status": "Recommendation",
+      "revision": "xqueryx-31 REC-xqueryx-31-20170321 (Recommendation, 2017-03-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XQuery and XPath Full Text 3.0",
+      "url": "https://www.w3.org/TR/xpath-full-text-30/",
+      "status": "Recommendation",
+      "revision": "xpath-full-text-30 REC-xpath-full-text-30-20151124 (Recommendation, 2015-11-24)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
