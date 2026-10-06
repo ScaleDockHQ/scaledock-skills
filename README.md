@@ -259,6 +259,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`websockets-api`](skills/websockets-api)                   | WebSockets API: This specification provides APIs to enable web applications to maintain bidirectional communications with server-side processes. Covers WebSockets Living Standard. Use when opening a WebSocket from a page                                                             |
 | [`dom`](skills/dom)                                         | DOM: DOM defines a platform-neutral model for events, aborting activities, and node trees. Covers DOM Living Standard. Use when walking or mutating the DOM                                                                                                                              |
 | [`fetch`](skills/fetch)                                     | Fetch: The Fetch standard defines requests, responses, and the process that binds them: fetching. Covers Fetch Living Standard. Use when fetching resources, including CORS                                                                                                              |
+| [`url`](skills/url)                                         | URL: The URL Standard defines URLs, domains, IP addresses, the application/x-www-form-urlencoded format, and their API. Covers URL Living Standard. Use when parsing or serializing URLs                                                                                                 |
 
 #### CSS, graphics and media
 
