@@ -67,6 +67,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`x402`](skills/x402)                                           | x402 v2: build HTTP 402 payment servers, clients and facilitators over HTTP, MCP and A2A, with upgrades from x402 v1.                                                                                                |
 | [`agntcy-oasf`](skills/agntcy-oasf)                             | Open Agentic Schema Framework: ![GitHub Release (latest by date)](https://img.shields.io/github/v/release/agntcy/oasf) Covers OASF 1.1.0, OASF 1.2 (track preview). Use when describing agent capabilities with OASF |
 | [`langchain-agent-protocol`](skills/langchain-agent-protocol)   | Agent Protocol: Agent Protocol is our attempt at codifying the framework-agnostic APIs that are needed to serve LLM agents in production. Covers Agent Protocol. Use when implementing the LangChain Agent Protocol  |
+| [`open-agent-spec`](skills/open-agent-spec)                     | Open Agent Specification: [![AgentSpec](docs/pyagentspec/source/_static/agentspec-dark.svg)][website-agentspec] Covers Open Agent Specification. Use when describing agents with Agent Spec                          |
 
 #### APIs and HTTP
 
