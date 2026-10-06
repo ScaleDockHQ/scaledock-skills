@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the EU age verification technical specification and its Annex A profile, pinned to commit 8b97287. Requirements are quotes from those files.",
+  "versions": [
+    {
+      "id": "eu-av-2026-09-02",
+      "label": "EU Age Verification 2026-09-02",
+      "status": "current",
+      "revision": "commit 8b97287, 2026-09-02",
+      "posture": "build"
+    },
+    {
+      "id": "eu-av-1-0-6",
+      "label": "EU Age Verification v1.0.6",
+      "status": "legacy",
+      "revision": "tag v1.0.6, 2025-07-10"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Age verification: Operational, Security, Product, and Architecture Specifications",
+      "url": "https://raw.githubusercontent.com/eu-digital-identity-wallet/av-doc-technical-specification/8b9728752bd8d8eede6077ade4be8900949de2d9/docs/architecture-and-technical-specifications.md",
+      "status": "European Commission technical specification",
+      "revision": "commit 8b97287, 2026-09-02",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Age verification Annex A: Age Verification Profile",
+      "url": "https://raw.githubusercontent.com/eu-digital-identity-wallet/av-doc-technical-specification/8b9728752bd8d8eede6077ade4be8900949de2d9/docs/annexes/annex-A/annex-A-av-profile.md",
+      "status": "European Commission technical specification",
+      "revision": "commit 8b97287, 2026-09-02",
+      "checked": "2026-10-06"
+    }
+  ]
+}
