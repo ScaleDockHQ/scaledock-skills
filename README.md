@@ -232,6 +232,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`window-management`](skills/window-management)             | Window Management: This document defines a web platform API that allows script to query the device for information about its screens, and place content on specific screens. Covers Window Management (track). Use when placing windows on multiple screens                              |
 | [`clipboard-api`](skills/clipboard-api)                     | Clipboard API: This document describes APIs for accessing data on the system clipboard. Covers Clipboard API and events (track). Use when reading or writing the system clipboard                                                                                                        |
 | [`selection-api`](skills/selection-api)                     | Selection API: This document is a preliminary draft of a specification for the Selection API and selection related functionality. Covers Selection API (track). Use when reading the current text selection                                                                              |
+| [`edit-context`](skills/edit-context)                       | EditContext API: EditContext is an API that allows authors to more directly participate in the text input process. Covers EditContext API (track). Use when implementing a custom text editor                                                                                            |
 
 #### CSS, graphics and media
 
