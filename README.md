@@ -564,6 +564,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`dicom`](skills/dicom)                 | DICOM: PS3.1 introduction and overview of medical image exchange. Covers DICOM PS3.1. Use when exchanging medical images.                                                                                                                                                                               |
 | [`openehr`](skills/openehr)             | openEHR: The openEHR Foundation is an independent, non-profit foundation, facilitating the sharing of health records by consumers and clinicians via open specifications, clinical models and open platform implementations. Covers openEHR Architecture Overview. Use when modeling an openEHR record. |
 | [`open-badges`](skills/open-badges)     | Open Badges: This specification is a new version of the 1EdTech Open Badges Specification that aligns with the conventions of the Verifiable Credentials Data Model v2.0 for the use cases of Defined Achievement Claim and a Skill Claim . Covers Open Badges 3.0. Use when issuing an Open Badge.     |
+| [`oneroster`](skills/oneroster)         | OneRoster: The IMS OneRoster (OR) standard addresses the exchange of student data (primarily about people, courses, enrollments and grades) between different educational systems for the specific needs of K-12. Covers OneRoster 1.2. Use when exchanging roster data.                                |
 
 ## Development
 
