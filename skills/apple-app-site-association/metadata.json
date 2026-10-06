@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers apple-app-site-association. apple-app-site-association is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "aasa",
+      "label": "apple-app-site-association",
+      "status": "current",
+      "revision": "Associated domains, fetched 2026-10-06 (Documentation, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "apple-app-site-association",
+      "url": "https://developer.apple.com/documentation/xcode/supporting-associated-domains",
+      "status": "Documentation",
+      "revision": "Associated domains, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
