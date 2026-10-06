@@ -4,9 +4,10 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id            | Line        | Status  | Revision                                                     | Posture | Publisher                 |
-| ------------- | ----------- | ------- | ------------------------------------------------------------ | ------- | ------------------------- |
-| `sarif-2.1.0` | SARIF 2.1.0 | current | SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06) |         | OASIS Standard 2026-10-06 |
+| Id                  | Line        | Status  | Revision                                                                                | Posture | Publisher                                        |
+| ------------------- | ----------- | ------- | --------------------------------------------------------------------------------------- | ------- | ------------------------------------------------ |
+| `sarif-2.1.0`       | SARIF 2.1.0 | current | SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06)                            |         | OASIS Standard 2026-10-06                        |
+| `sarif-2.2-preview` | SARIF 2.2   | preview | SARIF 2.2 Committee Specification Draft 01, 2026-03-05 (editor draft at commit adbb670) | track   | OASIS SARIF TC, Committee Specification Draft 01 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
@@ -25,10 +26,16 @@ Statuses: **current** is the default target; **supported** is released and still
 - Pinned text: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html
 - Revision token: SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06)
 
+### SARIF 2.2 (preview)
+
+- Publisher status on 2026-10-06: Committee Specification Draft 01 (2026-03-05), kept in the TC repository `oasis-tcs/sarif-spec`; `docs.oasis-open.org/sarif/sarif/v2.2/` is not published yet.
+- Pinned text: https://raw.githubusercontent.com/oasis-tcs/sarif-spec/adbb670c018335b0f384e6dd8819f4ea055d7ee1/sarif-2.2/prose/share/sarif-v2.2-draft.md
+- Revision token: SARIF 2.2 Committee Specification Draft 01, 2026-03-05 (editor draft at commit adbb670)
+
 ## Upgrading
 
 There is no older line to upgrade from.
 
 ## Preview
 
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+SARIF 2.2 is a Committee Specification Draft with posture track: watch it, do not emit it. The draft's § 3.13.2 still says the `version` property "**SHALL** have the value `"2.1.0"`", while its examples use `"version": "2.2"` and the `$schema` `https://docs.oasis-open.org/sarif/sarif/v2.2/schema/sarif.json`. Keep writing SARIF 2.1.0 logs until OASIS publishes 2.2 as a Committee Specification or OASIS Standard.

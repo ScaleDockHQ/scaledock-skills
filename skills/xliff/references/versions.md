@@ -4,9 +4,10 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id          | Line      | Status  | Revision                                                   | Posture | Publisher                 |
-| ----------- | --------- | ------- | ---------------------------------------------------------- | ------- | ------------------------- |
-| `xliff-2.1` | XLIFF 2.1 | current | XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06) |         | OASIS Standard 2026-10-06 |
+| Id                  | Line      | Status  | Revision                                                   | Posture | Publisher                                  |
+| ------------------- | --------- | ------- | ---------------------------------------------------------- | ------- | ------------------------------------------ |
+| `xliff-2.1`         | XLIFF 2.1 | current | XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06) |         | OASIS Standard 2026-10-06                  |
+| `xliff-2.2-preview` | XLIFF 2.2 | preview | XLIFF 2.2 Committee Specification 01, 2025-03-13           | build   | OASIS XLIFF TC, Committee Specification 01 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
@@ -25,10 +26,19 @@ Statuses: **current** is the default target; **supported** is released and still
 - Pinned text: https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html
 - Revision token: XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06)
 
+### XLIFF 2.2 (preview)
+
+- Publisher status on 2026-10-06: Committee Specification 01 (2025-03-13); no OASIS Standard yet.
+- Pinned text: https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-core-v2.2-cs01-part1.html and https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-extended-v2.2-cs01-part2.html
+- Revision token: XLIFF 2.2 Committee Specification 01, 2025-03-13
+- Part 1 § 1.1: "XLIFF 2.2 is presented in two separate documents". Part 1 holds the core; Part 2 holds the core and the optional modules, including the new Plural, Gender, and Select Module.
+- Part 1 § 1.1: "Note that all changes introduced in version 2.2 were designed to maintain compatibility with versions 2.0 and 2.1."
+- Part 1 § 4: conformant documents validate against `https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs/schemas/xliff_core_2.2.xsd`.
+
 ## Upgrading
 
-There is no older line to upgrade from.
+There is no older line to upgrade from. Moving a 2.1 document to the 2.2 preview keeps it valid by design (Part 1 § 1.1); validate it against the 2.2 core schema and use Part 2 for any module.
 
 ## Preview
 
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+XLIFF 2.2 is an OASIS Committee Specification with posture build: write 2.2 documents only when the user asks for 2.2 or needs the Plural, Gender, and Select Module. Otherwise write XLIFF 2.1.

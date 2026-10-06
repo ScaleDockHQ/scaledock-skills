@@ -1,15 +1,22 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers XLIFF. XLIFF 2.1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers XLIFF. XLIFF 2.1 is current and XLIFF 2.2 is a preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
   "versions": [
     {
       "id": "xliff-2.1",
       "label": "XLIFF 2.1",
       "status": "current",
       "revision": "XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06)"
+    },
+    {
+      "id": "xliff-2.2-preview",
+      "label": "XLIFF 2.2",
+      "status": "preview",
+      "revision": "XLIFF 2.2 Committee Specification 01, 2025-03-13",
+      "posture": "build"
     }
   ],
   "sources": [
@@ -18,6 +25,20 @@
       "url": "https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html",
       "status": "OASIS Standard",
       "revision": "XLIFF 2.1, fetched 2026-10-06 (OASIS Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XLIFF 2.2 Part 1: Core",
+      "url": "https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-core-v2.2-cs01-part1.html",
+      "status": "Committee Specification",
+      "revision": "XLIFF 2.2 Committee Specification 01, 2025-03-13",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XLIFF 2.2 Part 2: Extended",
+      "url": "https://docs.oasis-open.org/xliff/xliff-core/v2.2/cs01/xliff-extended-v2.2-cs01-part2.html",
+      "status": "Committee Specification",
+      "revision": "XLIFF 2.2 Committee Specification 01, 2025-03-13",
       "checked": "2026-10-06"
     }
   ]

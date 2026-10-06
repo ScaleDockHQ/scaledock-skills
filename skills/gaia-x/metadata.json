@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Gaia-X Architecture Document 3.1, ICAM 25.11 and Compliance Document 4.0.0. Requirements are quotes from those Markdown sources.",
+  "versions": [
+    {
+      "id": "gaia-x-architecture-3-1",
+      "label": "Architecture Document 3.1",
+      "status": "current",
+      "revision": "tag 3.1, 2026-07-06",
+      "family": "architecture"
+    },
+    {
+      "id": "gaia-x-architecture-25-11",
+      "label": "Architecture Document 25.11",
+      "status": "legacy",
+      "revision": "tag 25.11, 2025-11-11",
+      "family": "architecture"
+    },
+    {
+      "id": "gaia-x-icam-25-11",
+      "label": "ICAM 25.11",
+      "status": "current",
+      "revision": "tag 25.11, 2025-11-11",
+      "family": "icam"
+    },
+    {
+      "id": "gaia-x-compliance-4-0-0",
+      "label": "Compliance Document 4.0.0",
+      "status": "current",
+      "revision": "tag 4.0.0, 2026-09-28",
+      "family": "compliance"
+    },
+    {
+      "id": "gaia-x-compliance-3-1-0",
+      "label": "Compliance Document 3.1.0",
+      "status": "legacy",
+      "revision": "tag 3.1.0, 2026-07-09",
+      "family": "compliance"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Gaia-X Architecture Document: technical compatibility specifications",
+      "url": "https://gitlab.com/gaia-x/technical-committee/architecture-working-group/architecture-document/-/raw/3.1/docs/gaia-x_technical_compatibility_specifications.md",
+      "status": "Gaia-X Architecture Document",
+      "revision": "tag 3.1, 2026-07-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Gaia-X ICAM: Gaia-X Credentials",
+      "url": "https://gitlab.com/gaia-x/technical-committee/identity-credentials-and-access-management-working-group/icam/-/raw/25.11/docs/gaia-x_credentials.md",
+      "status": "Gaia-X ICAM specification",
+      "revision": "tag 25.11, 2025-11-11",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Gaia-X ICAM: Digital identities",
+      "url": "https://gitlab.com/gaia-x/technical-committee/identity-credentials-and-access-management-working-group/icam/-/raw/25.11/docs/digital_identities.md",
+      "status": "Gaia-X ICAM specification",
+      "revision": "tag 25.11, 2025-11-11",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Gaia-X Compliance Document: Trust Anchors",
+      "url": "https://gitlab.com/gaia-x/policy-rules-committee/compliance-document/-/raw/4.0.0/docs/Gaia-X_Trust_Anchors.md",
+      "status": "Gaia-X Compliance Document",
+      "revision": "tag 4.0.0, 2026-09-28",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Gaia-X Compliance Document: overarching rules",
+      "url": "https://gitlab.com/gaia-x/policy-rules-committee/compliance-document/-/raw/4.0.0/docs/overarching_rules.md",
+      "status": "Gaia-X Compliance Document",
+      "revision": "tag 4.0.0, 2026-09-28",
+      "checked": "2026-10-06"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 ---
 name: sarif
 description: >-
-  SARIF: https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/sarif-v2.1.0-errata01-os-complete.docx Covers SARIF 2.1.0. Use when exchanging static analysis results. Triggers: SARIF, static analysis results.
+  SARIF: write and read Static Analysis Results Interchange Format logs. Covers SARIF 2.1.0 (current) and tracks the SARIF 2.2 Committee Specification Draft as a preview. Use when exchanging static analysis results. Triggers: SARIF, static analysis results.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: SARIF 2.1.0 (default). See [`references/versions.md`](references/versions.md).
+- Target version: SARIF 2.1.0 (default); SARIF 2.2 (preview, posture: track). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -67,3 +67,4 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
 - [SARIF 2.1.0](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html): OASIS Standard, SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06), checked 2026-10-06.
+- [SARIF 2.2 draft](https://raw.githubusercontent.com/oasis-tcs/sarif-spec/adbb670c018335b0f384e6dd8819f4ea055d7ee1/sarif-2.2/prose/share/sarif-v2.2-draft.md): Committee Specification Draft, SARIF 2.2 Committee Specification Draft 01, 2026-03-05 (editor draft at commit adbb670), checked 2026-10-06.

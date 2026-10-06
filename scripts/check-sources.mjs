@@ -10,6 +10,9 @@ const STALE_AFTER_DAYS = 90;
 const TIMEOUT_MS = 20_000;
 const CONCURRENCY = 8;
 const DAY_MS = 24 * 60 * 60 * 1000;
+// Some publishers (Berlin Group, BSI) reject non-browser user agents.
+const USER_AGENT =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36 scaledock-skills-sources-check";
 
 const only = process.argv.slice(2);
 
@@ -34,7 +37,7 @@ async function probe(url) {
         method,
         redirect: "follow",
         signal: AbortSignal.timeout(TIMEOUT_MS),
-        headers: { "user-agent": "scaledock-skills sources:check" },
+        headers: { "user-agent": USER_AGENT },
       });
       if (response.ok) return { ok: true, status: response.status };
       // Some hosts reject HEAD; retry with GET before reporting.

@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the OpenADR 3 OpenAPI definition (3.1.0 and 3.0.1) and the OpenADR Alliance enumeration schemas. Requirements are quotes from the YAML descriptions.",
+  "versions": [
+    {
+      "id": "openadr-3-1-0",
+      "label": "OpenADR 3.1.0",
+      "status": "current",
+      "revision": "OpenADR 3.1.0 Final Specification (upstream oadr3-org/specification commit ddd2cc5, 2025-08-07)"
+    },
+    {
+      "id": "openadr-3-0-1",
+      "label": "OpenADR 3.0.1",
+      "status": "supported",
+      "revision": "OpenADR 3.0.1 (upstream commit a35682b, 2024-11-26)"
+    },
+    {
+      "id": "openadr-3-0-0",
+      "label": "OpenADR 3.0.0",
+      "status": "legacy",
+      "revision": "OpenADR 3.0.0 (upstream commit 4907836, 2024-11-26)"
+    },
+    {
+      "id": "openadr-2-0b",
+      "label": "OpenADR 2.0b",
+      "status": "legacy",
+      "revision": "OpenADR 2.0b Profile Specification (not pinned)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenADR 3.1.0 OpenAPI definition (openadr3.yaml)",
+      "url": "https://raw.githubusercontent.com/grid-coordination/openadr3-specification/17b91725e0f07203574ddc946e28def31cb11e44/3.1.0/openadr3.yaml",
+      "status": "OpenADR Alliance Final Specification, public copy",
+      "revision": "OpenADR 3.1.0, mirror commit 17b9172",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OpenADR 3.0.1 OpenAPI definition (openadr3.yaml)",
+      "url": "https://raw.githubusercontent.com/grid-coordination/openadr3-specification/17b91725e0f07203574ddc946e28def31cb11e44/3.0.1/openadr3.yaml",
+      "status": "OpenADR Alliance release, public copy",
+      "revision": "OpenADR 3.0.1, mirror commit 17b9172",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OpenADR 3 enumeration schemas: event interval payloads",
+      "url": "https://raw.githubusercontent.com/oadr3-org/openadr3-schemas/80b67b43e698a70256ae76298935396b3c9fe13e/OpenADR_Alliance/event-interval-payloads.schema.yaml",
+      "status": "OpenADR Alliance repository",
+      "revision": "oadr3-org/openadr3-schemas commit 80b67b4, 2026-10-05",
+      "checked": "2026-10-06"
+    }
+  ]
+}
