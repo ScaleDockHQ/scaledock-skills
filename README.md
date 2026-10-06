@@ -276,6 +276,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`css`](skills/css)                                               | CSS Snapshot: This document collects together into one definition all the specs that together form the current state of Cascading Style Sheets (CSS) as of 2026. Covers CSS Snapshot 2026 (track), CSS Snapshot 2025 (supported), CSS Snapshot 2024 (supported). Use when writing or rev |
 | [`svg`](skills/svg)                                               | Scalable Vector Graphics (SVG): This specification defines the features and syntax for Scalable Vector Graphics (SVG) Version 2. Covers Scalable Vector Graphics (SVG) 2 (build), SVG Accessibility API Mappings Level 1.0 (track). Use when authoring or processing SVG                 |
 | [`mathml`](skills/mathml)                                         | MathML: This specification defines a core subset of Mathematical Markup Language, or MathML, that is suitable for browser implementation. Covers MathML Core (build), Mathematical Markup Language (MathML) Version 4.0 (track preview). Use when authoring mathematical markup          |
+| [`png`](skills/png)                                               | Portable Network Graphics (PNG): This document describes PNG (Portable Network Graphics), an extensible file format for the lossless , portable, well-compressed storage of static and animated raster images. Covers Portable Network Graphics (PNG) Specification (Third Edition) Leve |
 
 #### Data and semantics
 
