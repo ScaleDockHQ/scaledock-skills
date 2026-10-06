@@ -210,6 +210,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`internet-message-format`](skills/internet-message-format) | Internet Message Format: Internet Message Format Covers RFC 5322 Internet Message Format, RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies, RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, RFC 2047 MIME  |
 | [`jmap`](skills/jmap)                                       | The JSON Meta Application Protocol (JMAP): The JSON Meta Application Protocol (JMAP) Covers RFC 8620 The JSON Meta Application Protocol (JMAP), RFC 8621 The JSON Meta Application Protocol (JMAP) for Mail. Use when synchronizing mail with JMAP                                       |
 | [`icalendar`](skills/icalendar)                             | Internet Calendaring and Scheduling Core Object Specification (iCalendar): Internet Calendaring and Scheduling Core Object Specification (iCalendar) Covers RFC 5545 Internet Calendaring and Scheduling Core Object Specification (iCalendar), RFC 7265 jCal: The JSON Format for iCale |
+| [`vcard`](skills/vcard)                                     | vCard Format Specification: vCard Format Specification Covers RFC 6350 vCard Format Specification, RFC 7095 jCard: The JSON Format for vCard, RFC 9553 JSContact: A JSON Representation of Contact Data. Use when reading or writing contact data                                        |
 
 #### Web platform
 

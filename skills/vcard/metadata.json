@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers vCard Format Specification. RFC 6350 vCard Format Specification is current; RFC 7095 jCard: The JSON Format for vCard is current; RFC 9553 JSContact: A JSON Representation of Contact Data is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc6350",
+      "label": "RFC 6350 vCard Format Specification",
+      "status": "current",
+      "revision": "RFC 6350 (PROPOSED STANDARD, August 201)",
+      "family": "vcard"
+    },
+    {
+      "id": "rfc7095",
+      "label": "RFC 7095 jCard: The JSON Format for vCard",
+      "status": "current",
+      "revision": "RFC 7095 (PROPOSED STANDARD, January 20)",
+      "family": "jcard"
+    },
+    {
+      "id": "rfc9553",
+      "label": "RFC 9553 JSContact: A JSON Representation of Contact Data",
+      "status": "current",
+      "revision": "RFC 9553 (PROPOSED STANDARD, May 2024)",
+      "family": "jscontact"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6350 vCard Format Specification",
+      "url": "https://www.rfc-editor.org/rfc/rfc6350.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 6350 (PROPOSED STANDARD, August 201)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 7095 jCard: The JSON Format for vCard",
+      "url": "https://www.rfc-editor.org/rfc/rfc7095.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 7095 (PROPOSED STANDARD, January 20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9553 JSContact: A JSON Representation of Contact Data",
+      "url": "https://www.rfc-editor.org/rfc/rfc9553.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9553 (PROPOSED STANDARD, May 2024)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
