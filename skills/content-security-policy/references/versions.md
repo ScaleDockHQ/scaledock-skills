@@ -4,21 +4,22 @@ Read this when choosing which CSP level to write, reading a policy written for a
 
 ## Version lines
 
-The skill covers four families. CSP has three levels; Trusted Types, Permissions Policy and Fetch Metadata are separately versioned W3C specifications with one line each.
+The skill covers five families. Embedded Enforcement is its own family. CSP has three levels; Trusted Types, Permissions Policy and Fetch Metadata are separately versioned W3C specifications with one line each.
 
-| Id                   | Line                           | Status    | Revision                                      | Posture | Summary                                                                                                         |
-| -------------------- | ------------------------------ | --------- | --------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
-| `csp3`               | CSP Level 3                    | current   | W3C Working Draft, 16 September 2026          | build   | Rewritten on Fetch; `'strict-dynamic'`, `'unsafe-hashes'`, `report-to`, `worker-src`, `-elem` and `-attr`.      |
-| `csp2`               | CSP Level 2                    | supported | W3C Recommendation, 15 December 2016          |         | Nonces, hashes, `frame-ancestors`, `base-uri`, `form-action`, `child-src`, paths. CSP Level 3 will obsolete it. |
-| `csp1`               | CSP 1.0                        | legacy    | W3C Note, 19 February 2015 (CR of 2012)       |         | Work discontinued. Host lists only, no nonces or hashes. Shipped as `X-Content-Security-Policy`/`X-WebKit-CSP`. |
-| `trusted-types`      | Trusted Types                  | current   | W3C Working Draft, 23 June 2026               | build   | `require-trusted-types-for 'script'`, `trusted-types`, policies and the default policy.                         |
-| `permissions-policy` | Permissions Policy             | current   | W3C Working Draft, 22 September 2026          | build   | `Permissions-Policy` Structured Fields header, `allow` attribute, report-only header.                           |
-| `feature-policy`     | Feature Policy                 | legacy    | W3C First Public Working Draft, 16 April 2019 |         | The earlier name of Permissions Policy, with the `Feature-Policy` header and a different syntax.                |
-| `fetch-metadata`     | Fetch Metadata Request Headers | current   | W3C Working Draft, 21 September 2026          | build   | `Sec-Fetch-Dest`, `Sec-Fetch-Mode`, `Sec-Fetch-Site`, `Sec-Fetch-User` request headers.                         |
+| Id                         | Line                           | Status    | Revision                                      | Posture | Summary                                                                                                                |
+| -------------------------- | ------------------------------ | --------- | --------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `csp3`                     | CSP Level 3                    | current   | W3C Working Draft, 16 September 2026          | build   | Rewritten on Fetch; `'strict-dynamic'`, `'unsafe-hashes'`, `report-to`, `worker-src`, `-elem` and `-attr`.             |
+| `csp2`                     | CSP Level 2                    | supported | W3C Recommendation, 15 December 2016          |         | Nonces, hashes, `frame-ancestors`, `base-uri`, `form-action`, `child-src`, paths. CSP Level 3 will obsolete it.        |
+| `csp1`                     | CSP 1.0                        | legacy    | W3C Note, 19 February 2015 (CR of 2012)       |         | Work discontinued. Host lists only, no nonces or hashes. Shipped as `X-Content-Security-Policy`/`X-WebKit-CSP`.        |
+| `trusted-types`            | Trusted Types                  | current   | W3C Working Draft, 23 June 2026               | build   | `require-trusted-types-for 'script'`, `trusted-types`, policies and the default policy.                                |
+| `permissions-policy`       | Permissions Policy             | current   | W3C Working Draft, 22 September 2026          | build   | `Permissions-Policy` Structured Fields header, `allow` attribute, report-only header.                                  |
+| `feature-policy`           | Feature Policy                 | legacy    | W3C First Public Working Draft, 16 April 2019 |         | The earlier name of Permissions Policy, with the `Feature-Policy` header and a different syntax.                       |
+| `fetch-metadata`           | Fetch Metadata Request Headers | current   | W3C Working Draft, 21 September 2026          | build   | `Sec-Fetch-Dest`, `Sec-Fetch-Mode`, `Sec-Fetch-Site`, `Sec-Fetch-User` request headers.                                |
+| `csp-embedded-enforcement` | CSP Embedded Enforcement       | current   | W3C Working Draft, 7 May 2026                 | track   | A page embeds a document only if it agrees to enforce restrictions. The only line is a draft, so the posture is track. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows.
 
-Posture **build** on the current lines: CSP Level 3, Trusted Types, Permissions Policy and Fetch Metadata are all W3C Working Drafts "intended to become a W3C Recommendation" (status sections of each), yet they are the texts the platform implements. Build to them now, and keep the CSP Level 2 fallbacks so older browsers degrade safely. No preview line is listed: no CSP Level 4 or Trusted Types Level 2 draft was published at the time of checking.
+Posture **build** on the current lines: CSP Level 3, Trusted Types, Permissions Policy and Fetch Metadata are all W3C Working Drafts "intended to become a W3C Recommendation" (status sections of each), yet they are the texts the platform implements. Build to them now, and keep the CSP Level 2 fallbacks so older browsers degrade safely. CSP Level 2 stays supported: it is a W3C Recommendation, and CSP Level 3 is still a Working Draft. No CSP Level 4 draft was published. CSP Embedded Enforcement is current with posture track.
 
 ## Which version to use
 

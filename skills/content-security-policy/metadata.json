@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -58,6 +58,14 @@
       "family": "fetch-metadata",
       "revision": "W3C Working Draft, 21 September 2026 (WD-fetch-metadata-20260921)",
       "reference": "references/fetch-metadata.md"
+    },
+    {
+      "id": "csp-embedded-enforcement",
+      "label": "CSP Embedded Enforcement",
+      "status": "current",
+      "posture": "track",
+      "family": "embedded-enforcement",
+      "revision": "W3C Working Draft, 7 May 2026 (WD-csp-embedded-enforcement-20260507)"
     }
   ],
   "sources": [
@@ -151,6 +159,13 @@
       "status": "W3C Working Draft",
       "revision": "WD-reporting-1-20250611 (11 June 2025)",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "Content Security Policy: Embedded Enforcement",
+      "url": "https://www.w3.org/TR/csp-embedded-enforcement/",
+      "status": "W3C Working Draft",
+      "revision": "WD-csp-embedded-enforcement-20260507 (7 May 2026)",
+      "checked": "2026-10-06"
     }
   ]
 }

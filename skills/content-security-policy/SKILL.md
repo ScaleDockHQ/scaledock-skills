@@ -1,20 +1,25 @@
 ---
 name: content-security-policy
 description: >-
-  Content Security Policy Level 3: write strict CSP headers, plus the W3C Trusted Types, Permissions Policy and
-  Fetch Metadata Request Headers a server sets and checks to lock down documents. Covers CSP Level 3 (current,
-  Working Draft) with CSP Level 2 supported and CSP 1.0, X-Content-Security-Policy and X-WebKit-CSP legacy:
-  directives, source lists, nonces and hashes, 'strict-dynamic', 'unsafe-hashes', report-to, report-uri,
-  Report-Only, frame-ancestors and upgrade-insecure-requests. Trusted Types: require-trusted-types-for 'script'
-  and the default policy. Permissions Policy: the structured header, allowlists and the iframe allow attribute,
-  with Feature-Policy legacy. Fetch Metadata: Sec-Fetch-Site, -Mode, -Dest and -User for a resource isolation
-  policy. Use when writing, reviewing or debugging security response headers, mitigating XSS, DOM XSS,
-  clickjacking, CSRF or cross-site leaks, reading CSP violation reports, or migrating from 'unsafe-inline',
-  X-Frame-Options or Feature-Policy.
+  Content Security Policy Level 3: write strict CSP headers, plus the W3C
+  Trusted Types, Permissions Policy and Fetch Metadata Request Headers a
+  server sets and checks to lock down documents. Covers CSP Level 3 (current,
+  Working Draft) with CSP Level 2 supported and CSP 1.0,
+  X-Content-Security-Policy and X-WebKit-CSP legacy: directives, source lists,
+  nonces and hashes, 'strict-dynamic', 'unsafe-hashes', report-to, report-uri,
+  Report-Only, frame-ancestors and upgrade-insecure-requests. Trusted Types:
+  require-trusted-types-for 'script' and the default policy. Permissions
+  Policy: the structured header, allowlists and the iframe allow attribute,
+  with Feature-Policy legacy. Fetch Metadata: Sec-Fetch-Site, -Mode, -Dest and
+  -User for a resource isolation policy. Use when writing, reviewing or
+  debugging security response headers, mitigating XSS, clickjacking, CSRF or
+  cross-site leaks, reading CSP violation reports, or migrating from
+  'unsafe-inline', X-Frame-Options or Feature-Policy. Also CSP Embedded
+  Enforcement.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -27,7 +32,7 @@ Content Security Policy (CSP), published by the W3C Web Application Security Wor
 ## Inputs (fill in, or ask before starting)
 
 - Role: server that sets the headers (an app, a framework middleware, a reverse proxy or CDN), reviewer of an existing policy, or collector of violation reports.
-- Target version: CSP Level 3 (default, posture: build). CSP Level 2 is supported for a named consumer that cannot parse Level 3 keywords. CSP 1.0 and its `X-Content-Security-Policy` and `X-WebKit-CSP` headers are legacy: read and upgrade, never author. Trusted Types, Permissions Policy and Fetch Metadata Request Headers each have one current line (posture: build); Feature Policy and its `Feature-Policy` header are legacy. No preview line exists. See [`references/versions.md`](references/versions.md).
+- Target version: CSP Level 3 (default, posture: build). CSP Level 2 is supported for a named consumer that cannot parse Level 3 keywords. CSP 1.0 and its `X-Content-Security-Policy` and `X-WebKit-CSP` headers are legacy: read and upgrade, never author. Trusted Types, Permissions Policy and Fetch Metadata Request Headers each have one current line (posture: build); Feature Policy and its `Feature-Policy` header are legacy. CSP Embedded Enforcement is the current line of its family, with posture track, because its only text is a Working Draft. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the W3C TR pages for a newer Working Draft, Candidate Recommendation or Recommendation, and update the pins.
 - Page inventory: how scripts reach the page (server templates, a bundler, third-party tags), whether HTML responses are cached, which origins frame the page, and which browser features the page or its iframes use.
@@ -127,3 +132,4 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Upgrade Insecure Requests](https://www.w3.org/TR/upgrade-insecure-requests/): W3C Candidate Recommendation, CR-upgrade-insecure-requests-20151008 (8 October 2015), checked 2026-10-05.
 - [Mixed Content](https://www.w3.org/TR/mixed-content/): W3C Candidate Recommendation Draft, CRD-mixed-content-20230223 (23 February 2023), checked 2026-10-05.
 - [Reporting API](https://www.w3.org/TR/reporting-1/): W3C Working Draft, WD-reporting-1-20250611 (11 June 2025), checked 2026-10-05.
+- [Content Security Policy: Embedded Enforcement](https://www.w3.org/TR/csp-embedded-enforcement/): W3C Working Draft, 7 May 2026 (WD-csp-embedded-enforcement-20260507), checked 2026-10-06. Posture: track. Its abstract defines a way for a page to embed a document only if that document agrees to enforce a set of restrictions.

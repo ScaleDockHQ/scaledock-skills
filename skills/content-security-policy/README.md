@@ -30,6 +30,7 @@ Then ask your agent to "add a strict Content-Security-Policy to our HTML respons
 | Permissions Policy             | current (build)       |
 | Feature Policy                 | legacy (upgrade from) |
 | Fetch Metadata Request Headers | current (build)       |
+| CSP Embedded Enforcement       | current (track)       |
 
 The current lines are W3C Working Drafts that browsers implement, so they carry the build posture. `references/versions.md` says which line to use and how to upgrade between them.
 
