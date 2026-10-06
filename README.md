@@ -551,6 +551,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`tosca`](skills/tosca) | TOSCA: The Topology and Orchestration Specification for Cloud Applications (TOSCA) provides a language for describing application components and their relationships by means of a service topology, and for specifying the lifecycle management procedures for creation or modification |
 | [`ubl`](skills/ubl)     | UBL: This stage: https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.html https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.pdf https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.xml Covers UBL 2.4. Use when exchanging business documents                                            |
 | [`fhir`](skills/fhir)   | FHIR: This page is part of the FHIR Specification (v5.0.0: R5 - STU ). Covers FHIR R5, FHIR R4 (supported), FHIR R4B (supported), FHIR draft (track preview). Use when exchanging healthcare data                                                                                        |
+| [`lti`](skills/lti)     | LTI: The IMS Learning Tools Interoperability (LTI)® specification allows Learning Management Systems (LMS) or platforms to integrate remote tools and content in a standard way. Covers LTI 1.3. Use when integrating a learning tool                                                    |
 
 ## Development
 
