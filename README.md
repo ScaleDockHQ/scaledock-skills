@@ -166,6 +166,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`xacml`](skills/xacml)                                           | XACML: http://www.oasis-open.org/committees/download.php/43799/xacml-3.0-core-spec-csprd03-en.zip Covers XACML 3.0, XACML JSON Profile 1.1. Use when writing or evaluating attribute-based access policies                                                                               |
 | [`digital-asset-links`](skills/digital-asset-links)               | Digital Asset Links: The Digital Asset Links protocol and API enable an app or website to make public, Covers Digital Asset Links. Use when publishing an assetlinks.json statement                                                                                                      |
 | [`apple-app-site-association`](skills/apple-app-site-association) | apple-app-site-association: Please turn on JavaScript in your browser and refresh the page to view its content. Covers apple-app-site-association. Use when associating an app with a website                                                                                            |
+| [`sign-in-with-apple`](skills/sign-in-with-apple)                 | Sign in with Apple: Please turn on JavaScript in your browser and refresh the page to view its content. Covers Sign in with Apple. Use when signing users in with Apple                                                                                                                  |
 
 #### Security and supply chain
 
