@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -100,6 +100,7 @@ Unicode MessageFormat, developed as MessageFormat 2.0 (MF2), is Part 9 of Unicod
 
 - `ecmascript-temporal` for the date and time values passed to `:datetime`, `:date` and `:time`: `npx skills add ScaleDockHQ/scaledock-skills --skill ecmascript-temporal`.
 - `wcag` for accessible presentation of the formatted text, including language and direction: `npx skills add ScaleDockHQ/scaledock-skills --skill wcag`.
+- `cldr`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill cldr`
 
 ## Sources
 
