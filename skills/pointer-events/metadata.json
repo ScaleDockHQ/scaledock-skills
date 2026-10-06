@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Pointer Events. Pointer Events Level 3 is current; Pointer Events Level 4 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "pointerevents3",
+      "label": "Pointer Events Level 3",
+      "status": "current",
+      "revision": "pointerevents3 REC-pointerevents3-20260630 (Recommendation, 2026-06-30)"
+    },
+    {
+      "id": "pointerevents4-preview",
+      "label": "Pointer Events Level 4",
+      "status": "preview",
+      "revision": "pointerevents4 WD-pointerevents4-20260826 (Working Draft, 2026-10-05)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pointer Events",
+      "url": "https://www.w3.org/TR/pointerevents3/",
+      "status": "Recommendation",
+      "revision": "pointerevents3 REC-pointerevents3-20260630 (Recommendation, 2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Pointer Events",
+      "url": "https://www.w3.org/TR/pointerevents4/",
+      "status": "Working Draft",
+      "revision": "pointerevents4 WD-pointerevents4-20260826 (Working Draft, 2026-10-05)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
