@@ -89,6 +89,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`uri`](skills/uri)                                         | Uniform Resource Identifier (URI): Generic Syntax: Uniform Resource Identifier (URI): Generic Syntax Covers RFC 3986 Uniform Resource Identifier (URI): Generic Syntax, RFC 3987 Internationalized Resource Identifiers (IRIs), RFC 8141 Uniform Resource Names (URNs), RFC 6570 URI Tem |
 | [`language-tags`](skills/language-tags)                     | Tags for Identifying Languages: Tags for Identifying Languages Covers RFC 5646 Tags for Identifying Languages, RFC 4647 Matching of Language Tags. Use when matching BCP 47 language tags                                                                                                |
 | [`well-known-uris`](skills/well-known-uris)                 | Well-Known Uniform Resource Identifiers (URIs): Well-Known Uniform Resource Identifiers (URIs) Covers RFC 8615 Well-Known Uniform Resource Identifiers (URIs). Use when publishing a /.well-known/ resource                                                                              |
+| [`base-encodings`](skills/base-encodings)                   | The Base16, Base32, and Base64 Data Encodings: The Base16, Base32, and Base64 Data Encodings Covers RFC 4648 The Base16, Base32, and Base64 Data Encodings. Use when encoding or decoding base16, base32 or base64                                                                       |
 
 #### Events and data
 
