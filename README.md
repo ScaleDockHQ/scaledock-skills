@@ -542,6 +542,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`mdx`](skills/mdx)                                               | MDX: These docs explain the core concepts of MDX. Covers MDX. Use when writing MDX                                                                                                                                                                                                             |
 | [`dockerfile`](skills/dockerfile)                                 | Dockerfile: \| :------------------------------------- \| :---------------------------------------------------------- \| Covers Dockerfile. Use when writing a Dockerfile                                                                                                                       |
 | [`arc42`](skills/arc42)                                           | arc42: You are using an outdated browser. Covers arc42. Use when writing an arc42 architecture document                                                                                                                                                                                        |
+| [`asciidoc`](skills/asciidoc)                                     | AsciiDoc: AsciiDoc is a lightweight, semantic markup language primarily designed for writing technical documentation. Covers AsciiDoc. Use when writing AsciiDoc                                                                                                                               |
 
 #### Domain verticals
 
