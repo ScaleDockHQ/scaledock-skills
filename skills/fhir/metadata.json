@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers FHIR. FHIR R5 is current; FHIR R4 is supported; FHIR R4B is supported; FHIR draft is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "fhir-r5",
+      "label": "FHIR R5",
+      "status": "current",
+      "revision": "FHIR R5, fetched 2026-10-06 (Standard, 2026-10-06)"
+    },
+    {
+      "id": "fhir-r4",
+      "label": "FHIR R4",
+      "status": "supported",
+      "revision": "FHIR R4, fetched 2026-10-06 (Standard, 2026-10-06)"
+    },
+    {
+      "id": "fhir-r4b",
+      "label": "FHIR R4B",
+      "status": "supported",
+      "revision": "FHIR R4B, fetched 2026-10-06 (Standard, 2026-10-06)"
+    },
+    {
+      "id": "fhir-draft-preview",
+      "label": "FHIR draft",
+      "status": "preview",
+      "revision": "FHIR continuous build, fetched 2026-10-06 (Continuous build, 2026-10-06)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "FHIR R5",
+      "url": "https://www.hl7.org/fhir/R5/",
+      "status": "Standard",
+      "revision": "FHIR R5, fetched 2026-10-06 (Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "FHIR R4",
+      "url": "https://www.hl7.org/fhir/R4/",
+      "status": "Standard",
+      "revision": "FHIR R4, fetched 2026-10-06 (Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "FHIR R4B",
+      "url": "https://www.hl7.org/fhir/R4B/",
+      "status": "Standard",
+      "revision": "FHIR R4B, fetched 2026-10-06 (Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "FHIR draft",
+      "url": "https://build.fhir.org/",
+      "status": "Continuous build",
+      "revision": "FHIR continuous build, fetched 2026-10-06 (Continuous build, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
