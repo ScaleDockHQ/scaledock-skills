@@ -415,6 +415,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`epub`](skills/epub)                                 | EPUB: EPUB® 3 defines a distribution and interchange format for digital publications and documents. Covers EPUB 3.3, EPUB 3.4 (build preview), EPUB Reading Systems 3.3, EPUB Reading Systems 3.4 (build preview), EPUB Accessibility 1.1, EPUB Accessibility 1.2 (build preview). Use w |
 | [`publication-manifest`](skills/publication-manifest) | Publication Manifest: This specification defines a general manifest format for expressing information about a digital publication. Covers Publication Manifest, Audiobooks. Use when writing a publication manifest or audiobook                                                         |
+| [`xliff`](skills/xliff)                               | XLIFF: http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.pdf http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.xml Covers XLIFF 2.1. Use when exchanging localizable content                                                                   |
 
 #### Payments and commerce
 
