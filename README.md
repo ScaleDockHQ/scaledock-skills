@@ -221,6 +221,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`nist-800-204`](skills/nist-800-204)                   | NIST SP 800-204: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices                                                                         |
 | [`nist-key-management`](skills/nist-key-management)     | NIST key management: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-57 Part 1 Rev 5, SP 800-131A Rev 2, SP 800-132. Use when managing cryptographic keys                                                                         |
 | [`cvss`](skills/cvss)                                   | CVSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers CVSS 4.0, CVSS 3.1 (supported). Use when scoring vulnerability severity                                                                                                                |
+| [`cve-json`](skills/cve-json)                           | CVE Record Format: [cve_secretariat]: https://www.cve.org/ResourcesSupport/Glossary?activeTerm=glossarySecretariat Covers CVE Record Format 5.2.0, CVE Record Format 5.1.0 (supported). Use when publishing CVE records as JSON                                                          |
 
 #### Observability and operations
 
