@@ -206,6 +206,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cognitive-accessibility`](skills/cognitive-accessibility)                 | Making Content Usable for People with Cognitive and Learning Disabilities: This document is for people who make web content (web pages) and web applications. Covers Making Content Usable for People with Cognitive and Learning Disabilities (track), Cognitive Accessibility Roadmap  |
 | [`accessibility-maturity-model`](skills/accessibility-maturity-model)       | Accessibility Maturity Model: The Accessibility Maturity Model (AMM) provides a framework that offers individuals and organizations of all sizes a roadmap, including benchmarks, to develop, deploy, and maintain the accessibility of both internal and external digital resources ove |
 | [`uaag`](skills/uaag)                                                       | User Agent Accessibility Guidelines (UAAG): UAAG 2.0 guides developers in designing user agents that make the web more accessible to people with disabilities. Covers User Agent Accessibility Guidelines (UAAG) 2.0 (track), User Agent Accessibility Guidelines 1.0. Use when reviewin |
+| [`pronunciation`](skills/pronunciation)                                     | Pronunciation: The objective of the Pronunciation Task Force is to develop normative specifications and best practices guidance collaborating with other W3C groups as appropriate, to provide for proper pronunciation in HTML content when using text to speech (TTS) synthesis. Cover |
 
 #### Web application APIs
 
