@@ -569,6 +569,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`ogc-api-features`](skills/ogc-api-features) | OGC API Features: Part 1 Core for publishing geospatial features. Covers OGC API Features Part 1. Use when publishing geospatial features.                                                                                                                                                              |
 | [`peppol-bis`](skills/peppol-bis)             | Peppol BIS Billing: Please note that all element names are inhereted from EN16931 and naming use the term invoice, but this covers both invoice and credit notes. Covers Peppol BIS Billing 3.0. Use when sending a Peppol invoice.                                                                     |
 | [`gs1-digital-link`](skills/gs1-digital-link) | GS1 Digital Link: Enabling consistent representation of GS1 identification keys within web addresses to link to online information and services Covers GS1 Digital Link URI Syntax. Use when encoding a GS1 identifier in a URI.                                                                        |
+| [`open-banking-uk`](skills/open-banking-uk)   | Open Banking UK: the Read-Write API profile for accounts, payments and pagination. Covers Open Banking UK 4.0. Use when calling the UK Open Banking Read-Write API.                                                                                                                                     |
 
 ## Development
 

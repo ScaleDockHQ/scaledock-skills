@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Open Banking UK. Open Banking UK 4.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "open-banking-uk-4.0",
+      "label": "Open Banking UK 4.0",
+      "status": "current",
+      "revision": "Open Banking Read-Write API Profile v4.0 (Specification, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Banking UK 4.0",
+      "url": "https://openbankinguk.github.io/read-write-api-site3/v4.0/profiles/read-write-data-api-profile.html",
+      "status": "Specification",
+      "revision": "Open Banking Read-Write API Profile v4.0 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
