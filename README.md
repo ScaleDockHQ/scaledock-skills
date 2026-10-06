@@ -261,6 +261,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`fetch`](skills/fetch)                                     | Fetch: The Fetch standard defines requests, responses, and the process that binds them: fetching. Covers Fetch Living Standard. Use when fetching resources, including CORS                                                                                                              |
 | [`url`](skills/url)                                         | URL: The URL Standard defines URLs, domains, IP addresses, the application/x-www-form-urlencoded format, and their API. Covers URL Living Standard. Use when parsing or serializing URLs                                                                                                 |
 | [`urlpattern`](skills/urlpattern)                           | URL Pattern: The URL Pattern Standard provides a web platform primitive for matching URLs based on a convenient pattern syntax. Covers URL Pattern Living Standard. Use when matching URLs with a pattern                                                                                |
+| [`streams`](skills/streams)                                 | Streams: This specification provides APIs for creating, composing, and consuming streams of data that map efficiently to low-level I/O primitives. Covers Streams Living Standard. Use when reading or writing streams                                                                   |
 
 #### CSS, graphics and media
 
