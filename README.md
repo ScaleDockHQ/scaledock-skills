@@ -250,6 +250,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`owasp-dsomm`](skills/owasp-dsomm)                           | OWASP DSOMM: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP DSOMM. Use when assessing DevSecOps maturity                                                                                                                                 |
 | [`owasp-aivss`](skills/owasp-aivss)                           | OWASP AIVSS: For full functionality of this site it is necessary to enable JavaScript. Covers OWASP AIVSS. Use when scoring AI vulnerability severity                                                                                                                                    |
 | [`owasp-cheat-sheets`](skills/owasp-cheat-sheets)             | OWASP Cheat Sheet Series: The OWASP Cheat Sheet Series was created to provide a concise collection of high value information on specific application security topics. Covers OWASP Cheat Sheet Series. Use when applying an OWASP cheat sheet                                            |
+| [`bsi-tr-03183`](skills/bsi-tr-03183)                         | BSI TR-03183 (Part 1 1.0.0, Part 2 2.1.0, Part 3 1.0.0): CRA risk assessment, CycloneDX or SPDX SBOM content, and security.txt, CVD policy and vulnerability report handling.                                                                                                            |
 
 #### Observability and operations
 

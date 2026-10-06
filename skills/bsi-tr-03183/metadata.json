@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers BSI TR-03183 Parts 1, 2 and 3. Requirements are quotes from the English PDFs.",
+  "versions": [
+    {
+      "id": "tr-03183-1-1-0-0",
+      "label": "TR-03183-1 1.0.0",
+      "status": "current",
+      "revision": "Version 1.0.0, 2025-07-31",
+      "family": "part-1"
+    },
+    {
+      "id": "tr-03183-2-2-1-0",
+      "label": "TR-03183-2 2.1.0",
+      "status": "current",
+      "revision": "Version 2.1.0, 2025-08-20",
+      "family": "part-2"
+    },
+    {
+      "id": "tr-03183-2-2-0-0",
+      "label": "TR-03183-2 2.0.0",
+      "status": "legacy",
+      "revision": "Version 2.0.0, 2024-09-20",
+      "family": "part-2"
+    },
+    {
+      "id": "tr-03183-2-1-1",
+      "label": "TR-03183-2 1.1",
+      "status": "legacy",
+      "revision": "Version 1.1, 2023-11-28",
+      "family": "part-2"
+    },
+    {
+      "id": "tr-03183-3-1-0-0",
+      "label": "TR-03183-3 1.0.0",
+      "status": "current",
+      "revision": "Version 1.0.0, 2025-08-20",
+      "family": "part-3"
+    }
+  ],
+  "sources": [
+    {
+      "title": "BSI TR-03183-1: General requirements",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-1_v1_0_0.pdf?__blob=publicationFile",
+      "status": "Technical Guideline",
+      "revision": "Version 1.0.0, 2025-07-31",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "BSI TR-03183-2: Software Bill of Materials (SBOM)",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2_v2_1_0.pdf?__blob=publicationFile",
+      "status": "Technical Guideline",
+      "revision": "Version 2.1.0, 2025-08-20",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "BSI TR-03183-3: Vulnerability Reports and Notifications",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-3_v1_0_0.pdf?__blob=publicationFile",
+      "status": "Technical Guideline",
+      "revision": "Version 1.0.0, 2025-08-20",
+      "checked": "2026-10-06"
+    }
+  ]
+}
