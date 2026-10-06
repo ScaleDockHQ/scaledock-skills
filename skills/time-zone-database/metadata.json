@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Procedures for Maintaining the Time Zone Database. RFC 6557 Procedures for Maintaining the Time Zone Database is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc6557",
+      "label": "RFC 6557 Procedures for Maintaining the Time Zone Database",
+      "status": "current",
+      "revision": "RFC 6557 (BEST CURRENT PRACTICE, February 2)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 6557 Procedures for Maintaining the Time Zone Database",
+      "url": "https://www.rfc-editor.org/rfc/rfc6557.html",
+      "status": "BEST CURRENT PRACTICE",
+      "revision": "RFC 6557 (BEST CURRENT PRACTICE, February 2)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

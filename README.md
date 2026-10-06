@@ -90,6 +90,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`language-tags`](skills/language-tags)                     | Tags for Identifying Languages: Tags for Identifying Languages Covers RFC 5646 Tags for Identifying Languages, RFC 4647 Matching of Language Tags. Use when matching BCP 47 language tags                                                                                                |
 | [`well-known-uris`](skills/well-known-uris)                 | Well-Known Uniform Resource Identifiers (URIs): Well-Known Uniform Resource Identifiers (URIs) Covers RFC 8615 Well-Known Uniform Resource Identifiers (URIs). Use when publishing a /.well-known/ resource                                                                              |
 | [`base-encodings`](skills/base-encodings)                   | The Base16, Base32, and Base64 Data Encodings: The Base16, Base32, and Base64 Data Encodings Covers RFC 4648 The Base16, Base32, and Base64 Data Encodings. Use when encoding or decoding base16, base32 or base64                                                                       |
+| [`time-zone-database`](skills/time-zone-database)           | Procedures for Maintaining the Time Zone Database: Procedures for Maintaining the Time Zone Database Covers RFC 6557 Procedures for Maintaining the Time Zone Database. Use when using the IANA time zone database                                                                       |
 
 #### Events and data
 
