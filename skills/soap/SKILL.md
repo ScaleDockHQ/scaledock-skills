@@ -1,11 +1,11 @@
 ---
 name: soap
 description: >-
-  SOAP: SOAP Version 1.2 is a lightweight protocol intended for exchanging structured information in a decentralized, distributed environment. Covers SOAP Version 1.2 Part 1: Messaging Framework (Second Edition), SOAP Version 1.2 Part 2: Adjuncts (Second Edition), Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language, Web Services Addressing 1.0 - Core, SOAP over Java Message Service 1.0. Use when building a SOAP service. Triggers: SOAP 1.2, WSDL 2.0.
+  SOAP: SOAP Version 1.2 is a lightweight protocol intended for exchanging structured information in a decentralized, distributed environment. Covers SOAP Version 1.2 Part 0: Primer (Second Edition), SOAP Version 1.2 Part 1: Messaging Framework (Second Edition), SOAP Version 1.2 Part 2: Adjuncts (Second Edition), Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language, Web Services Addressing 1.0 - Core, SOAP over Java Message Service 1.0. Use when building a SOAP service. Triggers: SOAP 1.2, WSDL 2.0.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: SOAP Version 1.2 Part 1: Messaging Framework (Second Edition) (default); SOAP Version 1.2 Part 2: Adjuncts (Second Edition) (default); Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language (default); Web Services Addressing 1.0 - Core (default); SOAP over Java Message Service 1.0 (default). See [`references/versions.md`](references/versions.md).
+- Target version: SOAP Version 1.2 Part 1: Messaging Framework (Second Edition) (default); SOAP Version 1.2 Part 2: Adjuncts (Second Edition) (default); Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language (default); Web Services Addressing 1.0 - Core (default); SOAP over Java Message Service 1.0 (default). SOAP Version 1.2 Part 0: Primer (Second Edition) is the non-normative tutorial, W3C Recommendation 27 April 2007. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -71,3 +71,4 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language](https://www.w3.org/TR/wsdl20/): Recommendation, wsdl20 REC-wsdl20-adjuncts-20070626 (Recommendation, 2007-06-26), checked 2026-10-06.
 - [Web Services Addressing 1.0 - Core](https://www.w3.org/TR/ws-addr-core/): Recommendation, ws-addr-core REC-xml-infoset-20040204 (Recommendation, 2006-05-09), checked 2026-10-06.
 - [SOAP over Java Message Service 1.0](https://www.w3.org/TR/soapjms/): Recommendation, soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16), checked 2026-10-06.
+- [SOAP Version 1.2 Part 0: Primer (Second Edition)](https://www.w3.org/TR/soap12-part0/): Recommendation, W3C Recommendation 27 April 2007, checked 2026-10-06.

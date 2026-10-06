@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -39,6 +39,13 @@
       "status": "current",
       "revision": "soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16)",
       "family": "jms"
+    },
+    {
+      "id": "soap12-part0",
+      "label": "SOAP Version 1.2 Part 0: Primer (Second Edition)",
+      "status": "current",
+      "family": "soap-primer",
+      "revision": "W3C Recommendation 27 April 2007. Non-normative tutorial for SOAP Version 1.2, including MTOM."
     }
   ],
   "sources": [
@@ -75,6 +82,13 @@
       "url": "https://www.w3.org/TR/soapjms/",
       "status": "Recommendation",
       "revision": "soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SOAP Version 1.2 Part 0: Primer (Second Edition)",
+      "url": "https://www.w3.org/TR/soap12-part0/",
+      "status": "Recommendation",
+      "revision": "W3C Recommendation 27 April 2007",
       "checked": "2026-10-06"
     }
   ]

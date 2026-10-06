@@ -11,6 +11,7 @@ Read this when choosing a target version, reading a document written for an olde
 | `wsdl20`       | Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language | current | wsdl20 REC-wsdl20-adjuncts-20070626 (Recommendation, 2007-06-26)    |         | Recommendation 2007-06-26 |
 | `ws-addr-core` | Web Services Addressing 1.0 - Core                                         | current | ws-addr-core REC-xml-infoset-20040204 (Recommendation, 2006-05-09)  |         | Recommendation 2006-05-09 |
 | `soapjms`      | SOAP over Java Message Service 1.0                                         | current | soapjms REC-soapjms-20120216 (Recommendation, 2012-02-16)           |         | Recommendation 2012-02-16 |
+| `soap12-part0` | SOAP Version 1.2 Part 0: Primer (Second Edition)                           | current | W3C Recommendation 27 April 2007                                    |         | Recommendation 2007-04-27 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
