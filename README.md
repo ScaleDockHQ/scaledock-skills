@@ -301,6 +301,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`owl-time`](skills/owl-time)                                             | OWL Time: OWL-Time is an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources in the world or described in Web pages. Covers Time Ontology in OWL (build). Use when describing time in OWL                                                        |
 | [`r2rml`](skills/r2rml)                                                   | R2RML: This document describes R2RML, a language for expressing customized mappings from relational databases to RDF datasets. Covers R2RML: RDB to RDF Mapping Language, A Direct Mapping of Relational Data to RDF. Use when mapping relational data to RDF                            |
 | [`rdfa`](skills/rdfa)                                                     | RDFa: The current Web is primarily made up of an enormous number of documents that have been created using HTML. Covers RDFa Core 1.1 - Third Edition, RDFa Lite 1.1 - Second Edition, HTML+RDFa 1.1 - Second Edition. Use when embedding RDF in HTML                                    |
+| [`profiles-vocabulary`](skills/profiles-vocabulary)                       | Profiles Vocabulary: The Profiles Vocabulary is an RDF vocabulary created to allow the machine-readable description of profiles of standards for information resources. Covers The Profiles Vocabulary 1.0 (track), Content Negotiation by Profile (track). Use when negotiating or desc |
 
 #### Documents and publishing
 
