@@ -218,6 +218,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`trusted-publishing`](skills/trusted-publishing)       | Trusted publishing: Trusted publishing for npm packages \| npm Docs Skip to search Skip to content npm Docs npmjs.com Status Support Covers npm trusted publishing, PyPI trusted publishing. Use when publishing packages with OIDC trusted publishers                                   |
 | [`nist-pqc`](skills/nist-pqc)                           | NIST PQC: Laurie E. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography                                                                                                                                                                |
 | [`nist-800-190`](skills/nist-800-190)                   | NIST SP 800-190: Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director Covers SP 800-190. Use when securing application containers                                                                                                          |
+| [`nist-800-204`](skills/nist-800-204)                   | NIST SP 800-204: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices                                                                         |
 
 #### Observability and operations
 
