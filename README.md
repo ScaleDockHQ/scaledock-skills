@@ -444,6 +444,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`semver`](skills/semver)                             | Semantic Versioning: ^(?P<major>0\|[1-9]\d*)\.(?P<minor>0\|[1-9]\d*)\.(?P<patch>0\|[1-9]\d*)(?:-(?P<prerelease>(?:0\|[1-9]\d*\|\d*[a-zA-Z-][0-9a-zA-Z-]_)(?:\.(?:0\|[1-9]\d_\|\d*[a-zA-Z-][0-9a-zA-Z-]_))_))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$ Covers SemVer 2.0.0. |
 | [`conventional-commits`](skills/conventional-commits) | Conventional Commits: The Conventional Commits specification is a lightweight convention on top of commit messages. Covers Conventional Commits 1.0.0. Use when writing commit messages                                                                                                        |
 | [`keep-a-changelog`](skills/keep-a-changelog)         | Keep a Changelog: Keep a Changelog Version 1.1 1.0 0.3 Language (28) العربية (n/a) Čeština Dansk Deutsch English Español Français Hrvatski (n/a) Indonesia (n/a) Italiano 日本語 Norsk (Bokmål) Nederlands polski Português (BR) română Pyccкий Slovenčina (n/a) ქართული (n/a) Slovenščina     |
+| [`commonmark`](skills/commonmark)                     | CommonMark: <p>[foo<a href="https://example.com/?search=%5D(uri)">https://example.com/?search=](uri)</a></p> Covers CommonMark 0.31.2. Use when parsing CommonMark                                                                                                                             |
 
 #### Domain verticals
 
