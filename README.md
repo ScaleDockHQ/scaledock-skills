@@ -190,6 +190,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`wai-aria`](skills/wai-aria)                               | WAI-ARIA 1.2: roles, states, accessible names, ARIA in HTML and APG patterns, with upgrades from 1.1 and 1.0.                                                                                                                                                                            |
 | [`wcag`](skills/wcag)                                       | WCAG 2.2, 2.1 and 2.0: build, test and claim conformance at A, AA or AAA, and build to the WCAG 3.0 draft on opt-in.                                                                                                                                                                     |
 | [`subresource-integrity`](skills/subresource-integrity)     | Subresource Integrity (SRI): This specification defines a mechanism by which user agents may verify that a fetched resource has been delivered without unexpected manipulation. Covers Subresource Integrity Level 1, Subresource Integrity Level 2 (track preview). Use when setting or |
+| [`referrer-policy`](skills/referrer-policy)                 | Referrer Policy: This document describes how an author can set a referrer policy for documents they create, and the impact of such a policy on the Referer HTTP header for outgoing requests and navigations. Covers Referrer Policy (build). Use when choosing or applying a referrer p |
 
 #### Web application APIs
 
