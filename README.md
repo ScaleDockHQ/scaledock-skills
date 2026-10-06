@@ -204,6 +204,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`wai-adapt`](skills/wai-adapt)                                             | WAI-Adapt: This specification provides web content authors a standard approach to support web users with various cognitive and learning disabilities who: Customarily communicate using symbolic languages generally known as Augmentative and Alternative Communications ( AAC ); Need  |
 | [`accessibility-user-requirements`](skills/accessibility-user-requirements) | W3C accessibility user requirements: This document presents the accessibility requirements users with disabilities have with respect to audio and video on the web. Covers Media Accessibility User Requirements (track), XR Accessibility User Requirements (track), RTC Accessibility  |
 | [`cognitive-accessibility`](skills/cognitive-accessibility)                 | Making Content Usable for People with Cognitive and Learning Disabilities: This document is for people who make web content (web pages) and web applications. Covers Making Content Usable for People with Cognitive and Learning Disabilities (track), Cognitive Accessibility Roadmap  |
+| [`accessibility-maturity-model`](skills/accessibility-maturity-model)       | Accessibility Maturity Model: The Accessibility Maturity Model (AMM) provides a framework that offers individuals and organizations of all sizes a roadmap, including benchmarks, to develop, deploy, and maintain the accessibility of both internal and external digital resources ove |
 
 #### Web application APIs
 
