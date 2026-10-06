@@ -109,6 +109,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`google-aip`](skills/google-aip)                                       | AIP: AIP Covers AIPs. Use when designing an API with Google AIP guidance                                                                                                                                                                                                                 |
 | [`microsoft-rest-api-guidelines`](skills/microsoft-rest-api-guidelines) | Microsoft REST API Guidelines: > This document has been deprecated and has been moved to the [Microsoft REST API Guidelines deprecated](./graph/Guidelines-deprecated.md). Covers Microsoft REST API Guidelines. Use when designing a REST API                                           |
 | [`language-server-protocol`](skills/language-server-protocol)           | Language Server Protocol: This document describes the previous 3.17.x version of the language server protocol. Covers LSP 3.17, LSP 3.18 (track preview). Use when implementing a language server                                                                                        |
+| [`debug-adapter-protocol`](skills/debug-adapter-protocol)               | Debug Adapter Protocol: The Debug Adapter Protocol defines the protocol used between an editor or IDE and a debugger or runtime. Covers Debug Adapter Protocol. Use when implementing a debug adapter                                                                                    |
 
 #### Events and data
 
