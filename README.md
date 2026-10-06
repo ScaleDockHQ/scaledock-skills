@@ -254,6 +254,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webassembly`](skills/webassembly)                         | WebAssembly: This document describes version 1.0 of the core WebAssembly standard, a safe, portable, low-level code format designed for efficient execution and compact representation. Covers WebAssembly Core Specification Level 1, WebAssembly Core Specification Level 2.0 (build p |
 | [`webgpu`](skills/webgpu)                                   | WebGPU: WebGPU exposes an API for performing operations, such as rendering and computation, on a Graphics Processing Unit. Covers WebGPU (build), WebGPU Shading Language (build). Use when rendering or computing with WebGPU or WGSL                                                   |
 | [`webxr`](skills/webxr)                                     | WebXR: This specification describes support for accessing virtual reality (VR) and augmented reality (AR) devices, including sensors and head-mounted displays, on the Web. Covers WebXR Device API (build), WebXR Augmented Reality Module - Level 1 (build), WebXR Depth Sensing Modul |
+| [`html`](skills/html)                                       | HTML Living Standard: This is a Review Draft. Covers HTML Living Standard. Use when writing HTML, including forms, dialog, popover, workers, storage, canvas and import maps                                                                                                             |
 
 #### CSS, graphics and media
 
