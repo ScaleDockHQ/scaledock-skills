@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers UML 2.5.1, formal/2017-12-05. Requirements are quotes from that PDF.",
+  "versions": [
+    {
+      "id": "uml-2-5-1",
+      "label": "UML 2.5.1",
+      "status": "current",
+      "revision": "formal/2017-12-05, December 2017"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UML 2.5.1",
+      "url": "https://www.omg.org/spec/UML/2.5.1/PDF",
+      "status": "OMG formal specification",
+      "revision": "formal/2017-12-05, December 2017",
+      "checked": "2026-10-06"
+    }
+  ]
+}
