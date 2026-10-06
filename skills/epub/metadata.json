@@ -1,0 +1,119 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers EPUB. EPUB 3.3 is current; EPUB 3.4 is preview; EPUB Reading Systems 3.3 is current; EPUB Reading Systems 3.4 is preview; EPUB Accessibility 1.1 is current; EPUB Accessibility 1.2 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "epub-33",
+      "label": "EPUB 3.3",
+      "status": "current",
+      "revision": "epub-33 REC-epub-33-20260113 (Recommendation, 2026-01-13)",
+      "family": "epub"
+    },
+    {
+      "id": "epub-34-preview",
+      "label": "EPUB 3.4",
+      "status": "preview",
+      "revision": "epub-34 CRD-epub-34-20261002 (Candidate Recommendation Draft, 2026-10-02)",
+      "posture": "build",
+      "family": "epub"
+    },
+    {
+      "id": "epub-rs-33",
+      "label": "EPUB Reading Systems 3.3",
+      "status": "current",
+      "revision": "epub-rs-33 REC-epub-rs-33-20241017 (Recommendation, 2024-10-17)",
+      "family": "reading-systems"
+    },
+    {
+      "id": "epub-rs-34-preview",
+      "label": "EPUB Reading Systems 3.4",
+      "status": "preview",
+      "revision": "epub-rs-34 CRD-epub-rs-34-20260721 (Candidate Recommendation Draft, 2026-07-21)",
+      "posture": "build",
+      "family": "reading-systems"
+    },
+    {
+      "id": "epub-a11y-11",
+      "label": "EPUB Accessibility 1.1",
+      "status": "current",
+      "revision": "epub-a11y-11 REC-epub-a11y-11-20241017 (Recommendation, 2024-10-17)",
+      "family": "accessibility"
+    },
+    {
+      "id": "epub-a11y-12-preview",
+      "label": "EPUB Accessibility 1.2",
+      "status": "preview",
+      "revision": "epub-a11y-12 CRD-epub-a11y-12-20260912 (Candidate Recommendation Draft, 2026-09-12)",
+      "posture": "build",
+      "family": "accessibility"
+    }
+  ],
+  "sources": [
+    {
+      "title": "EPUB 3.3",
+      "url": "https://www.w3.org/TR/epub-33/",
+      "status": "Recommendation",
+      "revision": "epub-33 REC-epub-33-20260113 (Recommendation, 2026-01-13)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB 3.4",
+      "url": "https://www.w3.org/TR/epub-34/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "epub-34 CRD-epub-34-20261002 (Candidate Recommendation Draft, 2026-10-02)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Reading Systems 3.3",
+      "url": "https://www.w3.org/TR/epub-rs-33/",
+      "status": "Recommendation",
+      "revision": "epub-rs-33 REC-epub-rs-33-20241017 (Recommendation, 2024-10-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Reading Systems 3.4",
+      "url": "https://www.w3.org/TR/epub-rs-34/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "epub-rs-34 CRD-epub-rs-34-20260721 (Candidate Recommendation Draft, 2026-07-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Accessibility 1.1",
+      "url": "https://www.w3.org/TR/epub-a11y-11/",
+      "status": "Recommendation",
+      "revision": "epub-a11y-11 REC-epub-a11y-11-20241017 (Recommendation, 2024-10-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Accessibility 1.2",
+      "url": "https://www.w3.org/TR/epub-a11y-12/",
+      "status": "Candidate Recommendation Draft",
+      "revision": "epub-a11y-12 CRD-epub-a11y-12-20260912 (Candidate Recommendation Draft, 2026-09-12)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Accessibility Techniques 1.1",
+      "url": "https://www.w3.org/TR/epub-a11y-tech-11/",
+      "status": "Note",
+      "revision": "epub-a11y-tech-11 (Note, 2025-03-13)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB 3 Multiple-Rendition Publications 1.1",
+      "url": "https://www.w3.org/TR/epub-multi-rend-11/",
+      "status": "Note",
+      "revision": "epub-multi-rend-11 (Note, 2026-01-20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "EPUB Accessibility - EU Accessibility Act Mapping",
+      "url": "https://www.w3.org/TR/epub-a11y-eaa-mapping/",
+      "status": "Note",
+      "revision": "epub-a11y-eaa-mapping (Note, 2025-08-28)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

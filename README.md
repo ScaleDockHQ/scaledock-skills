@@ -291,7 +291,9 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Documents and publishing
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                 | Description                                                                                                                                                                                                                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`epub`](skills/epub) | EPUB: EPUB® 3 defines a distribution and interchange format for digital publications and documents. Covers EPUB 3.3, EPUB 3.4 (build preview), EPUB Reading Systems 3.3, EPUB Reading Systems 3.4 (build preview), EPUB Accessibility 1.1, EPUB Accessibility 1.2 (build preview). Use w |
 
 #### Payments and commerce
 
