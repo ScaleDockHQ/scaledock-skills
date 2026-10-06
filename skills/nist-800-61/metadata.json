@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers NIST SP 800-61. SP 800-61 Rev 3 is current; SP 800-61 Rev 2 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sp-800-61r3",
+      "label": "SP 800-61 Rev 3",
+      "status": "current",
+      "revision": "SP 800-61 Rev 3, fetched 2026-10-06 (NIST SP, 2026-10-06)"
+    },
+    {
+      "id": "sp-800-61r2",
+      "label": "SP 800-61 Rev 2",
+      "status": "legacy",
+      "revision": "SP 800-61 Rev 2, fetched 2026-10-06 (NIST SP, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SP 800-61 Rev 3",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf",
+      "status": "NIST SP",
+      "revision": "SP 800-61 Rev 3, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SP 800-61 Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+      "status": "NIST SP",
+      "revision": "SP 800-61 Rev 2, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
