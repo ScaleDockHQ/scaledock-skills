@@ -567,6 +567,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`oneroster`](skills/oneroster)               | OneRoster: The IMS OneRoster (OR) standard addresses the exchange of student data (primarily about people, courses, enrollments and grades) between different educational systems for the specific needs of K-12. Covers OneRoster 1.2. Use when exchanging roster data.                                |
 | [`caliper`](skills/caliper)                   | Caliper: 1EdTech Caliper Analytics® is a technical specification that describes a structured set of vocabulary that assists institutions in collecting learning and usage data from digital resources and learning tools. Covers Caliper 1.2. Use when sending learning analytics events.               |
 | [`ogc-api-features`](skills/ogc-api-features) | OGC API Features: Part 1 Core for publishing geospatial features. Covers OGC API Features Part 1. Use when publishing geospatial features.                                                                                                                                                              |
+| [`peppol-bis`](skills/peppol-bis)             | Peppol BIS Billing: Please note that all element names are inhereted from EN16931 and naming use the term invoice, but this covers both invoice and credit notes. Covers Peppol BIS Billing 3.0. Use when sending a Peppol invoice.                                                                     |
 
 ## Development
 
