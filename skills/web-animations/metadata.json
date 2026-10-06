@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Animations. Web Animations Module Level 2 is current; Web Animations Level 1 is legacy. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "web-animations-2",
+      "label": "Web Animations Module Level 2",
+      "status": "current",
+      "revision": "web-animations-2 WD-web-animations-2-20251120 (Working Draft, 2025-11-20)",
+      "posture": "track"
+    },
+    {
+      "id": "web-animations-1",
+      "label": "Web Animations Level 1",
+      "status": "legacy",
+      "revision": "web-animations-1 WD-web-animations-1-20230605 (Working Draft, 2023-06-05)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Animations Module Level 2",
+      "url": "https://www.w3.org/TR/web-animations-2/",
+      "status": "Working Draft",
+      "revision": "web-animations-2 WD-web-animations-2-20251120 (Working Draft, 2025-11-20)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Animations",
+      "url": "https://www.w3.org/TR/web-animations-1/",
+      "status": "Working Draft",
+      "revision": "web-animations-1 WD-web-animations-1-20230605 (Working Draft, 2023-06-05)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

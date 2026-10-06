@@ -234,6 +234,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`selection-api`](skills/selection-api)                     | Selection API: This document is a preliminary draft of a specification for the Selection API and selection related functionality. Covers Selection API (track). Use when reading the current text selection                                                                              |
 | [`edit-context`](skills/edit-context)                       | EditContext API: EditContext is an API that allows authors to more directly participate in the text input process. Covers EditContext API (track). Use when implementing a custom text editor                                                                                            |
 | [`intersection-observer`](skills/intersection-observer)     | Intersection Observer: This specification describes an API that can be used to understand the visibility and position of DOM elements ("targets") relative to a containing element or to the top-level viewport ("root"). Covers Intersection Observer (track). Use when observing eleme |
+| [`web-animations`](skills/web-animations)                   | Web Animations: This specification defines a model for synchronization and timing of changes to the presentation of a Web page. Covers Web Animations Module Level 2 (track). Use when animating with the Web Animations API                                                             |
 
 #### CSS, graphics and media
 
