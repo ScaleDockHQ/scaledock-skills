@@ -339,6 +339,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`xhr`](skills/xhr)                                         | XMLHttpRequest: The XMLHttpRequest Standard defines an API that provides scripted client functionality for transferring data between a client and a server. Covers XMLHttpRequest Living Standard. Use when maintaining an XMLHttpRequest client                                         |
 | [`fullscreen`](skills/fullscreen)                           | Fullscreen API: The Fullscreen API standard defines an API for elements to display themselves fullscreen. Covers Fullscreen API Living Standard. Use when entering fullscreen                                                                                                            |
 | [`webidl`](skills/webidl)                                   | Web IDL: This standard defines an interface definition language, Web IDL, that can be used to describe interfaces that are intended to be implemented in web browsers. Covers Web IDL Living Standard. Use when writing or checking Web IDL                                              |
+| [`wasi`](skills/wasi)                                       | WASI: The [WebAssembly Interface Type (WIT)][wit] definitions for the proposals included in this Covers WASI 0.2.12, WASI 0.3.1 (track preview), WebAssembly Component Model. Use when targeting the WebAssembly System Interface                                                        |
 
 #### CSS, graphics and media
 

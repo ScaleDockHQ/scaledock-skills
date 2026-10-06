@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers WASI. WASI 0.2.12 is current; WASI 0.3.1 is preview; WebAssembly Component Model is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "wasi-0.2.12",
+      "label": "WASI 0.2.12",
+      "status": "current",
+      "revision": "WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "family": "wasi"
+    },
+    {
+      "id": "wasi-0.3.1-preview",
+      "label": "WASI 0.3.1",
+      "status": "preview",
+      "revision": "WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "posture": "track",
+      "family": "wasi"
+    },
+    {
+      "id": "wasi-component-model",
+      "label": "WebAssembly Component Model",
+      "status": "current",
+      "revision": "Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06)",
+      "family": "component-model"
+    }
+  ],
+  "sources": [
+    {
+      "title": "WASI 0.2.12",
+      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.2.12/Overview.md",
+      "status": "Specification",
+      "revision": "WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WASI 0.3.1",
+      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.3.1/Overview.md",
+      "status": "Specification",
+      "revision": "WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WebAssembly Component Model",
+      "url": "https://raw.githubusercontent.com/WebAssembly/component-model/main/design/mvp/Explainer.md",
+      "status": "Explainer",
+      "revision": "Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
