@@ -229,9 +229,10 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Payments and commerce
 
-| Skill                                       | Description                                                                                                                                                                                                                                                                              |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`payment-request`](skills/payment-request) | Payment Request API: This specification standardizes an API to allow merchants (i.e. Covers Payment Request API (build), Payment Method Identifiers, Web-based Payment Handler API (track). Use when building a checkout that uses Payment Request, a payment method identifier, or a we |
+| Skill                                                               | Description                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`payment-request`](skills/payment-request)                         | Payment Request API: This specification standardizes an API to allow merchants (i.e. Covers Payment Request API (build), Payment Method Identifiers, Web-based Payment Handler API (track). Use when building a checkout that uses Payment Request, a payment method identifier, or a we |
+| [`secure-payment-confirmation`](skills/secure-payment-confirmation) | Secure Payment Confirmation (SPC): Secure Payment Confirmation (SPC) is a Web API to support streamlined authentication during a payment transaction. Covers Secure Payment Confirmation (build). Use when confirming a payment with a passkey in the browser                            |
 
 #### Regulations
 
