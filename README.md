@@ -307,6 +307,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`linked-data-notifications`](skills/linked-data-notifications)           | Linked Data Notifications: Linked Data Notifications is a protocol that describes how servers (receivers) can have messages pushed to them by applications (senders), as well as how other applications (consumers) may retrieve those messages. Covers Linked Data Notifications. Use w |
 | [`web-of-things`](skills/web-of-things)                                   | Web of Things: The W3C Web of Things (WoT) enables interoperability across IoT platforms and application domains. Covers Web of Things (WoT) Architecture 1.1, Web of Things (WoT) Thing Description 1.1, Web of Things (WoT) Thing Description 2.0 (track preview), Web of Things (WoT) |
 | [`scxml`](skills/scxml)                                                   | SCXML: This document describes SCXML, or the "State Chart extensible Markup Language". Covers State Chart XML (SCXML): State Machine Notation for Control Abstraction. Use when writing a state machine in SCXML                                                                         |
+| [`rif`](skills/rif)                                                       | RIF: This document, developed by the Rule Interchange Format (RIF) Working Group , specifies RIF-Core, a common subset of RIF-BLD and RIF-PRD based on RIF-DTB 1.0. Covers RIF Core Dialect (Second Edition), RIF Basic Logic Dialect (Second Edition), RIF Production Rule Dialect (Sec |
 
 #### Documents and publishing
 

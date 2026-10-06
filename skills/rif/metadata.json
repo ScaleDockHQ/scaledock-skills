@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RIF. RIF Core Dialect (Second Edition) is current; RIF Basic Logic Dialect (Second Edition) is current; RIF Production Rule Dialect (Second Edition) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rif-core",
+      "label": "RIF Core Dialect (Second Edition)",
+      "status": "current",
+      "revision": "rif-core REC-rif-core-20130205 (Recommendation, 2013-02-05)",
+      "family": "core"
+    },
+    {
+      "id": "rif-bld",
+      "label": "RIF Basic Logic Dialect (Second Edition)",
+      "status": "current",
+      "revision": "rif-bld REC-rif-bld-20130205 (Recommendation, 2013-02-05)",
+      "family": "bld"
+    },
+    {
+      "id": "rif-prd",
+      "label": "RIF Production Rule Dialect (Second Edition)",
+      "status": "current",
+      "revision": "rif-prd REC-rif-prd-20130205 (Recommendation, 2013-02-05)",
+      "family": "prd"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RIF Core Dialect (Second Edition)",
+      "url": "https://www.w3.org/TR/rif-core/",
+      "status": "Recommendation",
+      "revision": "rif-core REC-rif-core-20130205 (Recommendation, 2013-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RIF Basic Logic Dialect (Second Edition)",
+      "url": "https://www.w3.org/TR/rif-bld/",
+      "status": "Recommendation",
+      "revision": "rif-bld REC-rif-bld-20130205 (Recommendation, 2013-02-05)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RIF Production Rule Dialect (Second Edition)",
+      "url": "https://www.w3.org/TR/rif-prd/",
+      "status": "Recommendation",
+      "revision": "rif-prd REC-rif-prd-20130205 (Recommendation, 2013-02-05)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
