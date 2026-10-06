@@ -227,6 +227,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`epss`](skills/epss)                                   | EPSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers EPSS. Use when estimating exploit probability                                                                                                                                          |
 | [`ssvc`](skills/ssvc)                                   | SSVC: This section assumes that you are already familiar with SSVC and want to look up specific details. Covers SSVC. Use when prioritizing vulnerabilities with SSVC                                                                                                                    |
 | [`cisa-kev`](skills/cisa-kev)                           | CISA KEV: A .gov website belongs to an official government organization in the United States. Covers CISA KEV. Use when checking the Known Exploited Vulnerabilities catalog                                                                                                             |
+| [`cpe`](skills/cpe)                                     | CPE: The Information Technology Laboratory (ITL) at the National Institute of Standards and Technology Covers CPE 2.3. Use when naming IT products with CPE                                                                                                                              |
 
 #### Observability and operations
 
