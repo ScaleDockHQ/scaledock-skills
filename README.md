@@ -91,6 +91,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`well-known-uris`](skills/well-known-uris)                 | Well-Known Uniform Resource Identifiers (URIs): Well-Known Uniform Resource Identifiers (URIs) Covers RFC 8615 Well-Known Uniform Resource Identifiers (URIs). Use when publishing a /.well-known/ resource                                                                              |
 | [`base-encodings`](skills/base-encodings)                   | The Base16, Base32, and Base64 Data Encodings: The Base16, Base32, and Base64 Data Encodings Covers RFC 4648 The Base16, Base32, and Base64 Data Encodings. Use when encoding or decoding base16, base32 or base64                                                                       |
 | [`time-zone-database`](skills/time-zone-database)           | Procedures for Maintaining the Time Zone Database: Procedures for Maintaining the Time Zone Database Covers RFC 6557 Procedures for Maintaining the Time Zone Database. Use when using the IANA time zone database                                                                       |
+| [`http2`](skills/http2)                                     | HTTP/2: This specification describes an optimized expression of the semantics of the Hypertext Transfer Protocol (HTTP), referred to as HTTP version 2 (HTTP/2). Covers RFC 9113 HTTP/2. Use when speaking HTTP/2                                                                        |
 
 #### Events and data
 
