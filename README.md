@@ -160,6 +160,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`spdx`](skills/spdx)                                   | SPDX 3.0.1: write and validate SBOMs, license expressions and SPDX-License-Identifier tags, with upgrades from SPDX 2.3 and 2.2.                                                                                                                                                         |
 | [`json-canonicalization`](skills/json-canonicalization) | JSON Canonicalization Scheme (JCS): Cryptographic operations like hashing and signing need the data to be expressed in an invariant format so that the operations are reliably repeatable. Covers RFC 8785 JSON Canonicalization Scheme (JCS). Use when canonicalizing JSON for signing  |
 | [`cbor`](skills/cbor)                                   | Concise Binary Object Representation (CBOR): The Concise Binary Object Representation (CBOR) is a data format whose design goals include the possibility of extremely small code size, fairly small message size, and extensibility without the need for version negotiation. Covers RFC |
+| [`cose`](skills/cose)                                   | CBOR Object Signing and Encryption (COSE): Structures and Process: Concise Binary Object Representation (CBOR) is a data format designed for small code size and small message size. Covers RFC 9052 CBOR Object Signing and Encryption (COSE): Structures and Process, RFC 9053 CBOR Ob |
 
 #### Observability and operations
 
