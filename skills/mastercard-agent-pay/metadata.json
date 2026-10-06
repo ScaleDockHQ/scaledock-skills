@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Mastercard Agent Pay merchant guidance from the Mastercard Developers agentic commerce playbook. Requirements are quotes from the guide pages.",
+  "versions": [
+    {
+      "id": "mastercard-agent-pay-2026",
+      "label": "Mastercard Agent Pay (2026 playbook)",
+      "status": "current",
+      "revision": "Developer Playbook on Preparing for Agentic Commerce, pages read 2026-10-06"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Developer Playbook on Preparing for Agentic Commerce",
+      "url": "https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/index.md",
+      "status": "Mastercard Developers guide",
+      "revision": "Overview page, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Level 1 Agentic Commerce - Enable Agent Support with Minimal Changes",
+      "url": "https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/21/index.md",
+      "status": "Mastercard Developers guide",
+      "revision": "Level 1 page, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Level 3 Agentic Commerce - Advanced Programmatic Checkout",
+      "url": "https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/23/index.md",
+      "status": "Mastercard Developers guide",
+      "revision": "Level 3 page, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Preparing for Agentic Commerce: Testing, Validation, and Reference Guide",
+      "url": "https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/24/index.md",
+      "status": "Mastercard Developers guide",
+      "revision": "Reference page, read 2026-10-06",
+      "checked": "2026-10-06"
+    }
+  ]
+}

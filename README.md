@@ -501,6 +501,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`secure-payment-confirmation`](skills/secure-payment-confirmation) | Secure Payment Confirmation (SPC): Secure Payment Confirmation (SPC) is a Web API to support streamlined authentication during a payment transaction. Covers Secure Payment Confirmation (build). Use when confirming a payment with a passkey in the browser                            |
 | [`visa-trusted-agent-protocol`](skills/visa-trusted-agent-protocol) | Trusted Agent Protocol: _Establishing a universal standard of trust between AI agents and merchants for the next phase of agentic commerce._ Covers Trusted Agent Protocol. Use when identifying an agent to a merchant                                                                  |
 | [`berlin-group-nextgenpsd2`](skills/berlin-group-nextgenpsd2)       | Berlin Group NextGenPSD2 (PSD2 Compliance V2 Suite, IG 2.4.2, Security 2.4.1): XS2A payment initiation, account information, SCA approaches and signed requests.                                                                                                                         |
+| [`mastercard-agent-pay`](skills/mastercard-agent-pay)               | Mastercard Agent Pay merchant acceptance from the Mastercard agentic commerce playbook: Web Bot Auth verification, the Agent-pay-auth tag, replay limits, agentic tokens and payment object checks.                                                                                      |
 
 #### Regulations
 
