@@ -197,6 +197,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-cryptography`](skills/web-cryptography)                             | Web Cryptography API: This specification describes a JavaScript API for performing basic cryptographic operations in web applications, such as hashing, signature generation and verification, and encryption and decryption. Covers Web Cryptography API Level 1, Web Cryptography Leve |
 | [`privacy-principles`](skills/privacy-principles)                         | Privacy Principles: Privacy is an essential part of the web. Covers Privacy Principles (track), Ethical Web Principles (track). Use when reviewing a web feature against the W3C privacy and ethical principles                                                                          |
 | [`web-platform-design-principles`](skills/web-platform-design-principles) | Web Platform Design Principles: This document contains a set of design principles to be used when designing web platform technologies. Covers Web Platform Design Principles (track). Use when designing or reviewing a web platform feature                                             |
+| [`attribution`](skills/attribution)                                       | Attribution API: This specifies a browser API for attribution. Covers Attribution Level 1 (track). Use when measuring conversions without cross-site identifiers                                                                                                                         |
 
 #### Web application APIs
 
