@@ -220,6 +220,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`nist-800-190`](skills/nist-800-190)                   | NIST SP 800-190: Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director Covers SP 800-190. Use when securing application containers                                                                                                          |
 | [`nist-800-204`](skills/nist-800-204)                   | NIST SP 800-204: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices                                                                         |
 | [`nist-key-management`](skills/nist-key-management)     | NIST key management: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-57 Part 1 Rev 5, SP 800-131A Rev 2, SP 800-132. Use when managing cryptographic keys                                                                         |
+| [`cvss`](skills/cvss)                                   | CVSS: Building a CTI program and team Program maturity stages CTI Maturity model - Stage 1 Covers CVSS 4.0, CVSS 3.1 (supported). Use when scoring vulnerability severity                                                                                                                |
 
 #### Observability and operations
 
