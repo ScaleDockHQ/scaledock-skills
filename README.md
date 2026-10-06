@@ -322,6 +322,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`soap`](skills/soap)                                                     | SOAP: SOAP Version 1.2 is a lightweight protocol intended for exchanging structured information in a decentralized, distributed environment. Covers SOAP Version 1.2 Part 1: Messaging Framework (Second Edition), SOAP Version 1.2 Part 2: Adjuncts (Second Edition), Web Services Desc |
 | [`i18n-best-practices`](skills/i18n-best-practices)                       | Internationalization best practices: This Architectural Specification provides authors of specifications, software developers, and content developers with a common reference for interoperable text manipulation on the World Wide Web, building on the Universal Character Set, define |
 | [`activitypub`](skills/activitypub)                                       | ActivityPub: The ActivityPub protocol is a decentralized social networking protocol based upon the [ ActivityStreams ] 2.0 data format. Covers ActivityPub, Activity Streams 2.0, Activity Vocabulary. Use when implementing ActivityPub                                                 |
+| [`websub`](skills/websub)                                                 | WebSub: WebSub provides a common mechanism for communication between publishers of any kind of Web content and their subscribers, based on HTTP web hooks. Covers WebSub. Use when publishing or subscribing to webhooks with WebSub                                                     |
 
 #### Documents and publishing
 
