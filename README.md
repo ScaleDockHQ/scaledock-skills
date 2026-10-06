@@ -219,6 +219,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`nist-pqc`](skills/nist-pqc)                           | NIST PQC: Laurie E. Covers FIPS 203, FIPS 204, FIPS 205, SP 800-227. Use when implementing NIST post-quantum cryptography                                                                                                                                                                |
 | [`nist-800-190`](skills/nist-800-190)                   | NIST SP 800-190: Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director Covers SP 800-190. Use when securing application containers                                                                                                          |
 | [`nist-800-204`](skills/nist-800-204)                   | NIST SP 800-204: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-204, SP 800-204A, SP 800-204B, SP 800-204C, SP 800-204D. Use when securing microservices                                                                         |
+| [`nist-key-management`](skills/nist-key-management)     | NIST key management: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-57 Part 1 Rev 5, SP 800-131A Rev 2, SP 800-132. Use when managing cryptographic keys                                                                         |
 
 #### Observability and operations
 

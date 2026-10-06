@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers NIST key management. SP 800-57 Part 1 Rev 5 is current; SP 800-131A Rev 2 is current; SP 800-132 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sp-800-57pt1r5",
+      "label": "SP 800-57 Part 1 Rev 5",
+      "status": "current",
+      "revision": "SP 800-57 Part 1 Rev 5, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "family": "57"
+    },
+    {
+      "id": "sp-800-131ar2",
+      "label": "SP 800-131A Rev 2",
+      "status": "current",
+      "revision": "SP 800-131A Rev 2, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "family": "131a"
+    },
+    {
+      "id": "sp-800-132",
+      "label": "SP 800-132",
+      "status": "current",
+      "revision": "SP 800-132, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "family": "132"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SP 800-57 Part 1 Rev 5",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+      "status": "NIST SP",
+      "revision": "SP 800-57 Part 1 Rev 5, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SP 800-131A Rev 2",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf",
+      "status": "NIST SP",
+      "revision": "SP 800-131A Rev 2, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SP 800-132",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf",
+      "status": "NIST SP",
+      "revision": "SP 800-132, fetched 2026-10-06 (NIST SP, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
