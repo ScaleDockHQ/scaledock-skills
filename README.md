@@ -201,6 +201,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openc2`](skills/openc2)                               | OpenC2: https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.md (Authoritative) Covers OpenC2 Language 1.0. Use when sending cybersecurity commands                                                                                                                        |
 | [`pkcs11`](skills/pkcs11)                               | PKCS #11: https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/cs01/pkcs11-spec-v3.1-cs01.pdf Covers PKCS #11 3.1. Use when using a cryptographic token interface                                                                                                                         |
 | [`tuf`](skills/tuf)                                     | TUF: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework with subject line “ [TUF] … message topic … ” Covers TUF specification. Use when securing a software update repository                                                                                        |
+| [`oci`](skills/oci)                                     | OCI: This specification defines an OCI Image, consisting of an [image manifest](manifest.md), an [image index](image-index.md) (optional), a set of [filesystem layers](layer.md), and a [configuration](config.md). Covers OCI Image Spec 1.1.1, OCI Distribution Spec 1.1.1, OCI Runti |
 
 #### Observability and operations
 
