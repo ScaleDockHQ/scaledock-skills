@@ -353,6 +353,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webmention`](skills/webmention)                                         | Webmention: Webmention is a simple way to notify any URL when you mention it on your site. Covers Webmention. Use when sending or receiving a webmention                                                                                                                                 |
 | [`micropub`](skills/micropub)                                             | Micropub: The Micropub protocol is used to create, update and delete posts on one's own domain using third-party clients. Covers Micropub. Use when creating posts with Micropub                                                                                                         |
 | [`geojson`](skills/geojson)                                               | The GeoJSON Format: The GeoJSON Format Covers RFC 7946 The GeoJSON Format. Use when reading or writing GeoJSON                                                                                                                                                                           |
+| [`csv`](skills/csv)                                                       | Common Format and MIME Type for Comma-Separated Values (CSV) Files: Common Format and MIME Type for Comma-Separated Values (CSV) Files Covers RFC 4180 Common Format and MIME Type for Comma-Separated Values (CSV) Files. Use when reading or writing CSV                               |
 
 #### Documents and publishing
 
