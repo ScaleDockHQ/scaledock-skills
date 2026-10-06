@@ -243,6 +243,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`gamepad`](skills/gamepad)                                 | Gamepad: The Gamepad specification defines a low-level interface that represents gamepad devices. Covers Gamepad (track). Use when reading gamepad input                                                                                                                                 |
 | [`generic-sensor`](skills/generic-sensor)                   | Generic Sensor API: This specification defines a framework for exposing sensor data to the Open Web Platform in a consistent way. Covers Generic Sensor API (build), Accelerometer (build), Gyroscope (build), Magnetometer (track), Orientation Sensor (track), Ambient Light Sensor (t |
 | [`device-orientation`](skills/device-orientation)           | Device Orientation and Motion: This specification defines events that represent the physical orientation and motion of a hosting device. Covers Device Orientation and Motion (build). Use when reading device orientation or motion events                                              |
+| [`device-posture`](skills/device-posture)                   | Device Posture API: This document specifies an API that allows web applications to request and be notified of changes of the posture of a device. Covers Device Posture API (build). Use when reading a foldable device posture                                                          |
 
 #### CSS, graphics and media
 
