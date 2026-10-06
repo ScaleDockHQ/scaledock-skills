@@ -539,6 +539,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`score`](skills/score)                                           | Score: The Score Specification is a YAML file that contains the following top-level reference definitions. Covers Score specification. Use when writing a Score workload spec                                                                                                                  |
 | [`opengitops`](skills/opengitops)                                 | OpenGitOps: OpenGitOps is a set of open-source standards, best practices, and community-focused education to help organizations adopt a structured, standardized approach to implementing GitOps . Covers OpenGitOps. Use when applying the OpenGitOps principles                              |
 | [`kubernetes-api-conventions`](skills/kubernetes-api-conventions) | Kubernetes API conventions: An introduction to using resources with kubectl can be found in [the object management overview](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/).* Covers Kubernetes API conventions. Use when designing a Kubernetes        |
+| [`mdx`](skills/mdx)                                               | MDX: These docs explain the core concepts of MDX. Covers MDX. Use when writing MDX                                                                                                                                                                                                             |
 
 #### Domain verticals
 
