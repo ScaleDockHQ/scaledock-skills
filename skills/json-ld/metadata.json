@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers JSON-LD. JSON-LD 1.1 is current; JSON-LD 1.0 is legacy; CBOR-LD 1.0 is current; YAML-LD 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "json-ld11",
+      "label": "JSON-LD 1.1",
+      "status": "current",
+      "revision": "json-ld11 REC-json-ld-20140116 (Recommendation, 2020-07-16)",
+      "family": "json-ld"
+    },
+    {
+      "id": "json-ld",
+      "label": "JSON-LD 1.0",
+      "status": "legacy",
+      "revision": "json-ld REC-json-ld-20140116 (Retired, 2020-11-03)",
+      "family": "json-ld"
+    },
+    {
+      "id": "cbor-ld-10",
+      "label": "CBOR-LD 1.0",
+      "status": "current",
+      "revision": "cbor-ld-10 WD-cbor-ld-10-20260916 (Working Draft, 2026-09-28)",
+      "posture": "track",
+      "family": "cbor-ld"
+    },
+    {
+      "id": "yaml-ld-10",
+      "label": "YAML-LD 1.0",
+      "status": "current",
+      "revision": "yaml-ld-10 WD-yaml-ld-10-20261001 (Working Draft, 2026-10-05)",
+      "posture": "track",
+      "family": "yaml-ld"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JSON-LD 1.1",
+      "url": "https://www.w3.org/TR/json-ld11/",
+      "status": "Recommendation",
+      "revision": "json-ld11 REC-json-ld-20140116 (Recommendation, 2020-07-16)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "JSON-LD 1.0",
+      "url": "https://www.w3.org/TR/json-ld/",
+      "status": "Retired",
+      "revision": "json-ld REC-json-ld-20140116 (Retired, 2020-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CBOR-LD 1.0",
+      "url": "https://www.w3.org/TR/cbor-ld-10/",
+      "status": "Working Draft",
+      "revision": "cbor-ld-10 WD-cbor-ld-10-20260916 (Working Draft, 2026-09-28)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "YAML-LD 1.0",
+      "url": "https://www.w3.org/TR/yaml-ld-10/",
+      "status": "Working Draft",
+      "revision": "yaml-ld-10 WD-yaml-ld-10-20261001 (Working Draft, 2026-10-05)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

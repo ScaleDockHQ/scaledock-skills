@@ -199,7 +199,9 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Data and semantics
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                       | Description                                                                                                                                                                                                           |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`json-ld`](skills/json-ld) | JSON-LD: JSON is a useful data serialization and messaging format. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD |
 
 #### Documents and publishing
 
