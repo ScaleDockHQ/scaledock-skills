@@ -239,6 +239,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`nist-ai-rmf`](skills/nist-ai-rmf) | NIST AI RMF 1.0: build AI risk programs, profiles and control maps across GOVERN, MAP, MEASURE and MANAGE, plus the AI 600-1 Generative AI Profile.                               |
 | [`nist-csf`](skills/nist-csf)       | NIST CSF: This publication is available free of charge from: https://doi.org/10.6028/NIST.CSWP.29 Covers CSF 2.0. Use when applying the Cybersecurity Framework                   |
 | [`nist-800-53`](skills/nist-800-53) | NIST SP 800-53: Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology Covers SP 800-53 Rev 5. Use when selecting security and privacy controls |
+| [`oscal`](skills/oscal)             | OSCAL: OSCAL Covers OSCAL. Use when exchanging control assessment data                                                                                                            |
 
 #### Email
 
