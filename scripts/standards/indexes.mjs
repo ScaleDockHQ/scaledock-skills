@@ -351,6 +351,16 @@ function publisherW3c(w3c, skills, tokenMap) {
         const blob = versionBlob(skill);
         for (const level of levels) {
           if (ignoredW3cLevel(level) || levelMentioned(blob, level)) continue;
+          // A source pinned as a dependency is not a missing level when another
+          // skill already teaches that shortname. Series versions such as "1.0"
+          // are not used here, so a mention of "1.0" elsewhere cannot hide a
+          // real level.
+          const ownedElsewhere = skills.some(
+            (other) =>
+              other.name !== skillName &&
+              mentions(versionBlob(other), level.shortname),
+          );
+          if (ownedElsewhere) continue;
           if (
             shortnames.some(
               (name) => name.toLowerCase() === level.shortname.toLowerCase(),
