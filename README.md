@@ -556,6 +556,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`matrix`](skills/matrix)               | Matrix: The key words &ldquo;MUST&rdquo;, &ldquo;MUST NOT&rdquo;, &ldquo;REQUIRED&rdquo;, &ldquo;SHALL&rdquo;, &ldquo;SHALL NOT&rdquo;, &ldquo;SHOULD&rdquo;, Covers Matrix 1.14. Use when implementing a Matrix client or server                                                        |
 | [`at-protocol`](skills/at-protocol)     | AT Protocol: The Authenticated Transfer Protocol ("AT Protocol" or "atproto") is a network protocol for building open social web applications. Covers AT Protocol. Use when implementing the AT Protocol                                                                                 |
 | [`ethereum-eips`](skills/ethereum-eips) | Ethereum EIPs: Fabian Vogelsteller < fabian@ethereum.org >, Vitalik Buterin < vitalik.buterin@ethereum.org > Covers ERC-20, EIP-712, ERC-4337, EIP-1193, ERC-8004. Use when implementing ERC-20, EIP-712, ERC-4337, EIP-1193, or ERC-8004                                                |
+| [`xmpp`](skills/xmpp)                   | XMPP: RFC 6120: Extensible Messaging and Presence Protocol (XMPP): Core \| RFC Editor Your browser has JavaScript disabled. Covers RFC 6120. Use when implementing XMPP                                                                                                                  |
 
 ## Development
 
