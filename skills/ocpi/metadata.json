@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers OCPI 2.2.1 modules fetched from the 2.2.1 tag. Requirements are quotes from those files.",
+  "versions": [
+    {
+      "id": "ocpi-2-2-1",
+      "label": "OCPI 2.2.1",
+      "status": "current",
+      "revision": "tag 2.2.1, fetched 2026-10-06"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OCPI 2.2.1 locations",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_locations.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCPI 2.2.1 sessions",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_sessions.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCPI 2.2.1 tokens",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_tokens.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCPI 2.2.1 CDRs",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_cdrs.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCPI 2.2.1 commands",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_commands.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCPI 2.2.1 tariffs",
+      "url": "https://raw.githubusercontent.com/ocpi/ocpi/2.2.1/mod_tariffs.asciidoc",
+      "status": "Specification",
+      "revision": "OCPI 2.2.1",
+      "checked": "2026-10-06"
+    }
+  ]
+}
