@@ -233,6 +233,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`clipboard-api`](skills/clipboard-api)                     | Clipboard API: This document describes APIs for accessing data on the system clipboard. Covers Clipboard API and events (track). Use when reading or writing the system clipboard                                                                                                        |
 | [`selection-api`](skills/selection-api)                     | Selection API: This document is a preliminary draft of a specification for the Selection API and selection related functionality. Covers Selection API (track). Use when reading the current text selection                                                                              |
 | [`edit-context`](skills/edit-context)                       | EditContext API: EditContext is an API that allows authors to more directly participate in the text input process. Covers EditContext API (track). Use when implementing a custom text editor                                                                                            |
+| [`intersection-observer`](skills/intersection-observer)     | Intersection Observer: This specification describes an API that can be used to understand the visibility and position of DOM elements ("targets") relative to a containing element or to the top-level viewport ("root"). Covers Intersection Observer (track). Use when observing eleme |
 
 #### CSS, graphics and media
 
