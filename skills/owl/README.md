@@ -17,11 +17,12 @@ Then ask the agent to apply OWL 2.
 
 ## Versions
 
-| Line                                                                                              | Status  |
-| ------------------------------------------------------------------------------------------------- | ------- |
-| OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) | current |
-| OWL 2 Web Ontology Language Direct Semantics (Second Edition)                                     | current |
-| OWL 2 Web Ontology Language Document Overview (Second Edition)                                    | current |
+| Line                                                                                              | Status                |
+| ------------------------------------------------------------------------------------------------- | --------------------- |
+| OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) | current               |
+| OWL 2 Web Ontology Language Direct Semantics (Second Edition)                                     | current               |
+| OWL Web Ontology Language Semantics and Abstract Syntax                                           | legacy (upgrade from) |
+| OWL 2 Web Ontology Language Document Overview (Second Edition)                                    | current               |
 
 `references/versions.md` says which line to use and how to upgrade between them.
 

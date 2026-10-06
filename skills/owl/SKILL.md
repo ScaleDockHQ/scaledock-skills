@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -20,7 +20,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Inputs (fill in, or ask before starting)
 
 - Role: producer or consumer of this specification.
-- Target version: OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) (default); OWL 2 Web Ontology Language Direct Semantics (Second Edition) (default); OWL 2 Web Ontology Language Document Overview (Second Edition) (default). See [`references/versions.md`](references/versions.md).
+- Target version: OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) (default); OWL 2 Web Ontology Language Direct Semantics (Second Edition) (default); OWL 2 Web Ontology Language Document Overview (Second Edition) (default). OWL Web Ontology Language Semantics and Abstract Syntax is legacy: the 10 February 2004 Recommendation says OWL 2 is the new version. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
@@ -69,3 +69,4 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition)](https://www.w3.org/TR/owl2-syntax/): Recommendation, owl2-syntax REC-owl2-syntax-20121211 (Recommendation, 2012-12-11), checked 2026-10-06.
 - [OWL 2 Web Ontology Language Direct Semantics (Second Edition)](https://www.w3.org/TR/owl2-direct-semantics/): Recommendation, owl2-direct-semantics REC-owl2-direct-semantics-20121211 (Recommendation, 2012-12-11), checked 2026-10-06.
 - [OWL 2 Web Ontology Language Document Overview (Second Edition)](https://www.w3.org/TR/owl2-overview/): Recommendation, owl2-overview REC-owl2-overview-20121211 (Recommendation, 2012-12-11), checked 2026-10-06.
+- [OWL Web Ontology Language Semantics and Abstract Syntax](https://www.w3.org/TR/owl-semantics/): Recommendation, W3C Recommendation 10 February 2004, checked 2026-10-06.

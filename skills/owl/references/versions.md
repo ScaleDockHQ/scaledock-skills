@@ -9,6 +9,7 @@ Read this when choosing a target version, reading a document written for an olde
 | `owl2-syntax`           | OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) | current | owl2-syntax REC-owl2-syntax-20121211 (Recommendation, 2012-12-11)                     |         | Recommendation 2012-12-11 |
 | `owl2-direct-semantics` | OWL 2 Web Ontology Language Direct Semantics (Second Edition)                                     | current | owl2-direct-semantics REC-owl2-direct-semantics-20121211 (Recommendation, 2012-12-11) |         | Recommendation 2012-12-11 |
 | `owl2-overview`         | OWL 2 Web Ontology Language Document Overview (Second Edition)                                    | current | owl2-overview REC-owl2-overview-20121211 (Recommendation, 2012-12-11)                 |         | Recommendation 2012-12-11 |
+| `owl-semantics`         | OWL Web Ontology Language Semantics and Abstract Syntax                                           | legacy  | W3C Recommendation 10 February 2004                                                   |         | Recommendation 2004-02-10 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
