@@ -251,6 +251,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`audio-session`](skills/audio-session)                     | Audio Session: This API defines an API surface for controlling how audio is rendered and interacts with other audio playing applications. Covers Audio Session (track). Use when managing an audio session                                                                               |
 | [`autoplay-detection`](skills/autoplay-detection)           | Autoplay Policy Detection: This specification provides web developers the ability to detect if automatically starting the playback of a media file is allowed in different situations. Covers Autoplay Policy Detection (track). Use when detecting whether autoplay is allowed          |
 | [`webtransport`](skills/webtransport)                       | WebTransport: This document defines a set of ECMAScript APIs in WebIDL to allow data to be sent and received between a browser and server, utilizing [WEB-TRANSPORT-OVERVIEW] . Covers WebTransport (build). Use when sending unreliable or bidirectional data to a server               |
+| [`webassembly`](skills/webassembly)                         | WebAssembly: This document describes version 1.0 of the core WebAssembly standard, a safe, portable, low-level code format designed for efficient execution and compact representation. Covers WebAssembly Core Specification Level 1, WebAssembly Core Specification Level 2.0 (build p |
 
 #### CSS, graphics and media
 
