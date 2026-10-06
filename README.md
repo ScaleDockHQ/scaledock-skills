@@ -505,6 +505,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`uk-online-safety-act`](skills/uk-online-safety-act) | Online Safety Act 2023: 2023 CHAPTER 50 An Act to make provision for and in connection with the regulation by OFCOM of certain internet services; for and in connection with communications offences; and for connected purposes. Covers Online Safety Act 2023. Use when applying the U |
 | [`coppa`](skills/coppa)                               | COPPA: From the Federal Register Online via the Government Publishing Office [ www.gpo.gov ] Covers COPPA Rule 2025. Use when applying the Children's Online Privacy Protection Rule                                                                                                     |
 | [`ccpa-cpra`](skills/ccpa-cpra)                       | CCPA: California Consumer Privacy Act (CCPA) \| State of California - Department of Justice - Office of the Attorney General Covers CCPA. Use when applying the California Consumer Privacy Act                                                                                          |
+| [`iab-tcf`](skills/iab-tcf)                           | IAB TCF: JavaScript is disabled in your browser. Covers TCF 2.2. Use when encoding a TCF consent string                                                                                                                                                                                  |
 
 #### Developer conventions
 
