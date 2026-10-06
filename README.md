@@ -239,6 +239,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`owasp-mobile-top-10`](skills/owasp-mobile-top-10)           | OWASP Mobile Top 10: OWASP Mobile Top 10 \| OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP Mobile Top 10. Use when reviewing mobile security risks                                                                      |
 | [`owasp-ml-top-10`](skills/owasp-ml-top-10)                   | OWASP ML Top 10: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP ML Top 10. Use when reviewing machine learning security risks                                                                                                            |
 | [`owasp-ai-exchange`](skills/owasp-ai-exchange)               | OWASP AI Exchange: 300+ pages of free, constantly-evolving, practical guidance on securing AI systems. Covers OWASP AI Exchange. Use when applying the OWASP AI Exchange                                                                                                                 |
+| [`owasp-dsomm`](skills/owasp-dsomm)                           | OWASP DSOMM: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP DSOMM. Use when assessing DevSecOps maturity                                                                                                                                 |
 
 #### Observability and operations
 
