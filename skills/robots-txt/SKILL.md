@@ -18,7 +18,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -104,6 +104,7 @@ RFC 9309, an IETF Standards Track RFC from September 2022, specifies the Robots 
 - `aipref` for the AI usage preference vocabulary and attaching preferences with `Content-Usage`: `npx skills add ScaleDockHQ/scaledock-skills --skill aipref`.
 - `web-bot-auth` for crawlers that prove their identity with HTTP Message Signatures instead of a spoofable User-Agent: `npx skills add ScaleDockHQ/scaledock-skills --skill web-bot-auth`.
 - `http-semantics` for status codes, redirects and RFC 9111 caching used when serving and fetching `/robots.txt`: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
+- `sitemaps`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill sitemaps`
 
 ## Sources
 
