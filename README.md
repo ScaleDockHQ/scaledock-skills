@@ -187,6 +187,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`privacy-pass`](skills/privacy-pass)                   | The Privacy Pass Architecture: This document specifies the Privacy Pass architecture and requirements for its constituent protocols used for authorization based on privacy-preserving authentication mechanisms. Covers RFC 9576 The Privacy Pass Architecture, RFC 9577 The Privacy Pa |
 | [`oblivious-http`](skills/oblivious-http)               | Oblivious HTTP: This document describes Oblivious HTTP, a protocol for forwarding encrypted HTTP messages. Covers RFC 9458 Oblivious HTTP. Use when sending a request through an oblivious relay                                                                                         |
 | [`unicode-security`](skills/unicode-security)           | Unicode Security Mechanisms (UTS #39): the General Profile for Identifiers shall do so by conforming to either UTS-39-C1-1 or UTS-39-C1-2 . Covers UTS #39. Use when detecting confusable or restricted Unicode text                                                                     |
+| [`sarif`](skills/sarif)                                 | SARIF: https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/sarif-v2.1.0-errata01-os-complete.docx Covers SARIF 2.1.0. Use when exchanging static analysis results                                                                                                                 |
 
 #### Observability and operations
 

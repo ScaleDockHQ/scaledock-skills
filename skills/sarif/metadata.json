@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SARIF. SARIF 2.1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sarif-2.1.0",
+      "label": "SARIF 2.1.0",
+      "status": "current",
+      "revision": "SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SARIF 2.1.0",
+      "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+      "status": "OASIS Standard",
+      "revision": "SARIF 2.1.0, fetched 2026-10-06 (OASIS Standard, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
