@@ -4,7 +4,7 @@ description: "AP2 Agent Payments Protocol: authorize AI agent payments with sign
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.2.1"
   kind: standard
 ---
 
@@ -93,6 +93,7 @@ Draft posture: **build**, pinned to AP2 v0.2 (repository tag `v0.2.0`, 28 April 
 - `ucp` for the Universal Commerce Protocol and its AP2 mandates extension, which carries AP2 through checkout: `npx skills add ScaleDockHQ/scaledock-skills --skill ucp`.
 - `agentic-commerce-protocol` for ACP agent checkouts and delegated payment tokens: `npx skills add ScaleDockHQ/scaledock-skills --skill agentic-commerce-protocol`.
 - `sd-jwt` for the SD-JWT format, disclosures and key binding JWTs that AP2 mandates use: `npx skills add ScaleDockHQ/scaledock-skills --skill sd-jwt`.
+- `visa-trusted-agent-protocol`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill visa-trusted-agent-protocol`
 
 ## Sources
 
