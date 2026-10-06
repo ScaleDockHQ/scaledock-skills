@@ -199,9 +199,10 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Data and semantics
 
-| Skill                       | Description                                                                                                                                                                                                           |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`json-ld`](skills/json-ld) | JSON-LD: JSON is a useful data serialization and messaging format. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD |
+| Skill                                                                 | Description                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`json-ld`](skills/json-ld)                                           | JSON-LD: JSON is a useful data serialization and messaging format. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD                                                                    |
+| [`rdf-dataset-canonicalization`](skills/rdf-dataset-canonicalization) | RDF Dataset Canonicalization (RDFC-1.0): RDF [ RDF11-CONCEPTS ] describes a graph-based data model for making claims about the world and provides the foundation for reasoning upon that graph of information. Covers RDF Dataset Canonicalization. Use when canonicalizing an RDF datas |
 
 #### Documents and publishing
 
