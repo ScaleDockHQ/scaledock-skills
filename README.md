@@ -163,6 +163,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`cose`](skills/cose)                                   | CBOR Object Signing and Encryption (COSE): Structures and Process: Concise Binary Object Representation (CBOR) is a data format designed for small code size and small message size. Covers RFC 9052 CBOR Object Signing and Encryption (COSE): Structures and Process, RFC 9053 CBOR Ob |
 | [`hpke`](skills/hpke)                                   | Hybrid Public Key Encryption: This document describes a scheme for hybrid public key encryption (HPKE). Covers RFC 9180 Hybrid Public Key Encryption. Use when using hybrid public key encryption                                                                                        |
 | [`hotp-totp`](skills/hotp-totp)                         | HOTP: An HMAC-Based One-Time Password Algorithm: HOTP: An HMAC-Based One-Time Password Algorithm Covers RFC 4226 HOTP: An HMAC-Based One-Time Password Algorithm, RFC 6238 TOTP: Time-Based One-Time Password Algorithm. Use when verifying a one-time password                          |
+| [`openpgp`](skills/openpgp)                             | OpenPGP: This document specifies the message formats used in OpenPGP. Covers RFC 9580 OpenPGP. Use when signing or encrypting with OpenPGP                                                                                                                                               |
 
 #### Observability and operations
 
