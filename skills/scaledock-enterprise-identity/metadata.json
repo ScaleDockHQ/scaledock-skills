@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "organization": "ScaleDock",
   "date": "October 2026",
   "abstract": "Make a ScaleDock product enterprise-ready: OpenID Connect and SAML 2.0 SSO, WebAuthn passkeys, SCIM 2.0 provisioning, Shared Signals and Back-Channel Logout revocation, NIST SP 800-63-4 assurance levels, CIBA and FAPI 2.0 when required, and SPIFFE or WIMSE workload identity, with PermDock turning directory groups and roles into permissions and invalidating access immediately. It installs the matching spec skills and defers to them on protocol details; references/stack.md maps each spec onto the ScaleDock stack.",
