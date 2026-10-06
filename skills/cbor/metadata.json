@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Concise Binary Object Representation (CBOR). RFC 8949 Concise Binary Object Representation (CBOR) is current; RFC 8610 Concise Data Definition Language (CDDL): A Notational Convention to Express Concise Binary Object Representation (CBOR) and JSON Data Structures is current; RFC 9165 Additional Control Operators for the Concise Data Definition Language (CDDL) is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc8949",
+      "label": "RFC 8949 Concise Binary Object Representation (CBOR)",
+      "status": "current",
+      "revision": "RFC 8949 (INTERNET STANDARD, December 2)",
+      "family": "cbor"
+    },
+    {
+      "id": "rfc8610",
+      "label": "RFC 8610 Concise Data Definition Language (CDDL): A Notational Convention to Express Concise Binary Object Representation (CBOR) and JSON Data Structures",
+      "status": "current",
+      "revision": "RFC 8610 (PROPOSED STANDARD, June 2019)",
+      "family": "cddl"
+    },
+    {
+      "id": "rfc9165",
+      "label": "RFC 9165 Additional Control Operators for the Concise Data Definition Language (CDDL)",
+      "status": "current",
+      "revision": "RFC 9165 (PROPOSED STANDARD, December 2)",
+      "family": "cddl-control"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 8949 Concise Binary Object Representation (CBOR)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8949.html",
+      "status": "INTERNET STANDARD",
+      "revision": "RFC 8949 (INTERNET STANDARD, December 2)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 8610 Concise Data Definition Language (CDDL): A Notational Convention to Express Concise Binary Object Representation (CBOR) and JSON Data Structures",
+      "url": "https://www.rfc-editor.org/rfc/rfc8610.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8610 (PROPOSED STANDARD, June 2019)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9165 Additional Control Operators for the Concise Data Definition Language (CDDL)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9165.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9165 (PROPOSED STANDARD, December 2)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
