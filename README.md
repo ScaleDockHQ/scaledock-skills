@@ -298,6 +298,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`csvw`](skills/csvw)                                                     | CSV on the Web: Tabular data is routinely transferred on the web in a variety of formats, including variants on CSV, tab-delimited files, fixed field formats, spreadsheets, HTML tables, and SQL dumps. Covers Model for Tabular Data and Metadata on the Web, Metadata Vocabulary for  |
 | [`data-on-the-web-best-practices`](skills/data-on-the-web-best-practices) | Data on the Web Best Practices: This document provides Best Practices related to the publication and usage of data on the Web designed to help support a self-sustaining ecosystem. Covers Data on the Web Best Practices. Use when publishing data on the web                           |
 | [`ssn-sosa`](skills/ssn-sosa)                                             | SSN and SOSA: The Semantic Sensor Network (SSN) ontology is an ontology for describing sensors and their observations, the involved procedures, the studied features of interest, the samples used to do so, and the observed properties, as well as actuators. Covers Semantic Sensor N |
+| [`owl-time`](skills/owl-time)                                             | OWL Time: OWL-Time is an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources in the world or described in Web pages. Covers Time Ontology in OWL (build). Use when describing time in OWL                                                        |
 
 #### Documents and publishing
 
