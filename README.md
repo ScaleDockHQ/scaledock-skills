@@ -541,6 +541,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`kubernetes-api-conventions`](skills/kubernetes-api-conventions) | Kubernetes API conventions: An introduction to using resources with kubectl can be found in [the object management overview](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/).* Covers Kubernetes API conventions. Use when designing a Kubernetes        |
 | [`mdx`](skills/mdx)                                               | MDX: These docs explain the core concepts of MDX. Covers MDX. Use when writing MDX                                                                                                                                                                                                             |
 | [`dockerfile`](skills/dockerfile)                                 | Dockerfile: \| :------------------------------------- \| :---------------------------------------------------------- \| Covers Dockerfile. Use when writing a Dockerfile                                                                                                                       |
+| [`arc42`](skills/arc42)                                           | arc42: You are using an outdated browser. Covers arc42. Use when writing an arc42 architecture document                                                                                                                                                                                        |
 
 #### Domain verticals
 
