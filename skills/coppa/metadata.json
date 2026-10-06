@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers COPPA. COPPA Rule 2025 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "coppa-2025",
+      "label": "COPPA Rule 2025",
+      "status": "current",
+      "revision": "Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "COPPA Rule 2025",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-04-22/html/2025-05904.htm",
+      "status": "Federal Register",
+      "revision": "Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}

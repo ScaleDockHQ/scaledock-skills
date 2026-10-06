@@ -490,6 +490,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`en-301-549`](skills/en-301-549)                     | EN 301 549: B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements                                                               |
 | [`section-508`](skills/section-508)                   | Section 508: Federal government websites often end in .gov or .mil. Covers Revised 508 Standards. Use when applying the Revised 508 Standards                                                                                                                                            |
 | [`uk-online-safety-act`](skills/uk-online-safety-act) | Online Safety Act 2023: 2023 CHAPTER 50 An Act to make provision for and in connection with the regulation by OFCOM of certain internet services; for and in connection with communications offences; and for connected purposes. Covers Online Safety Act 2023. Use when applying the U |
+| [`coppa`](skills/coppa)                               | COPPA: From the Federal Register Online via the Government Publishing Office [ www.gpo.gov ] Covers COPPA Rule 2025. Use when applying the Children's Online Privacy Protection Rule                                                                                                     |
 
 #### Developer conventions
 
