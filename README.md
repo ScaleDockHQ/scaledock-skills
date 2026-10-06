@@ -194,6 +194,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`sarif`](skills/sarif)                                 | SARIF: https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/sarif-v2.1.0-errata01-os-complete.docx Covers SARIF 2.1.0. Use when exchanging static analysis results                                                                                                                 |
 | [`stix-taxii`](skills/stix-taxii)                       | STIX and TAXII: https://docs.oasis-open.org/cti/stix/v2.1/errata01/csd01/stix-v2.1-errata01-csd01-complete.md Covers STIX 2.1, TAXII 2.1. Use when sharing cyber threat intelligence                                                                                                     |
 | [`cacao`](skills/cacao)                                 | CACAO: https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.docx (Authoritative) Covers CACAO 2.0. Use when writing security playbooks                                                                                                            |
+| [`kmip`](skills/kmip)                                   | KMIP: https://docs.oasis-open.org/kmip/kmip-spec/v3.0/csd02/kmip-spec-v3.0-csd02.docx (Authoritative) Covers KMIP 3.0. Use when managing cryptographic keys over KMIP                                                                                                                    |
 
 #### Observability and operations
 
