@@ -473,6 +473,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`citation-cff`](skills/citation-cff)                         | Citation File Format: You are using an outdated browser. Covers Citation File Format. Use when writing a CITATION.cff file                                                                                                                                                                     |
 | [`c4-model`](skills/c4-model)                                 | C4 model: Home \| C4 model Skip to main content Link Menu Expand (external link) Document Search Copy Copied C4 model Home Covers C4 model. Use when drawing software architecture diagrams                                                                                                    |
 | [`test-anything-protocol`](skills/test-anything-protocol)     | Test Anything Protocol: TestPoint := ("not ")? "ok" (" " Number)? ((" -")? (" " Description) )? (" " Directive)? "\n" (YAMLBlock)? Covers TAP 14. Use when emitting TAP output                                                                                                                 |
+| [`buildpacks`](skills/buildpacks)                             | Cloud Native Buildpacks: A platform orchestrates a lifecycle to make buildpack functionality available to end-users such as application developers. Covers Buildpacks platform API, Buildpack API. Use when implementing a buildpack or platform                                               |
 
 #### Domain verticals
 
