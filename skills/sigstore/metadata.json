@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Sigstore. Sigstore bundle is current; Sigstore Rekor is current; Sigstore Fulcio is current; Sigstore cosign is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "sigstore-bundle",
+      "label": "Sigstore bundle",
+      "status": "current",
+      "revision": "Sigstore bundle, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "bundle"
+    },
+    {
+      "id": "sigstore-rekor",
+      "label": "Sigstore Rekor",
+      "status": "current",
+      "revision": "Rekor transparency log, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "rekor"
+    },
+    {
+      "id": "sigstore-fulcio",
+      "label": "Sigstore Fulcio",
+      "status": "current",
+      "revision": "Fulcio certificate authority, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "fulcio"
+    },
+    {
+      "id": "sigstore-cosign",
+      "label": "Sigstore cosign",
+      "status": "current",
+      "revision": "cosign signing, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "family": "cosign"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sigstore bundle",
+      "url": "https://docs.sigstore.dev/about/bundle/",
+      "status": "Documentation",
+      "revision": "Sigstore bundle, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Sigstore Rekor",
+      "url": "https://docs.sigstore.dev/logging/overview/",
+      "status": "Documentation",
+      "revision": "Rekor transparency log, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Sigstore Fulcio",
+      "url": "https://docs.sigstore.dev/certificate_authority/overview/",
+      "status": "Documentation",
+      "revision": "Fulcio certificate authority, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Sigstore cosign",
+      "url": "https://docs.sigstore.dev/cosign/signing/overview/",
+      "status": "Documentation",
+      "revision": "cosign signing, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
