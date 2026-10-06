@@ -477,6 +477,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`devfile`](skills/devfile)                                   | Devfile: 2.3.0 Search docs Theme Registry Docs Get Started API reference Devfile schema Search docs Covers Devfile 2.3. Use when writing a devfile                                                                                                                                             |
 | [`cnab`](skills/cnab)                                         | CNAB: The Cloud Native Application Bundle (CNAB) is a _standard packaging format_ for multi-component distributed applications. Covers CNAB 1.2.0. Use when packaging a cloud native application bundle                                                                                        |
 | [`backstage-catalog`](skills/backstage-catalog)               | Backstage catalog: Descriptor Format of Catalog Entities \| Backstage Software Catalog and Developer Platform Covers Backstage catalog descriptor. Use when describing a Backstage catalog entity                                                                                              |
+| [`score`](skills/score)                                       | Score: The Score Specification is a YAML file that contains the following top-level reference definitions. Covers Score specification. Use when writing a Score workload spec                                                                                                                  |
 
 #### Domain verticals
 
