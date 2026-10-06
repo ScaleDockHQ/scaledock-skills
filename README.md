@@ -195,6 +195,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`stix-taxii`](skills/stix-taxii)                       | STIX and TAXII: https://docs.oasis-open.org/cti/stix/v2.1/errata01/csd01/stix-v2.1-errata01-csd01-complete.md Covers STIX 2.1, TAXII 2.1. Use when sharing cyber threat intelligence                                                                                                     |
 | [`cacao`](skills/cacao)                                 | CACAO: https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.docx (Authoritative) Covers CACAO 2.0. Use when writing security playbooks                                                                                                            |
 | [`kmip`](skills/kmip)                                   | KMIP: https://docs.oasis-open.org/kmip/kmip-spec/v3.0/csd02/kmip-spec-v3.0-csd02.docx (Authoritative) Covers KMIP 3.0. Use when managing cryptographic keys over KMIP                                                                                                                    |
+| [`openc2`](skills/openc2)                               | OpenC2: https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.md (Authoritative) Covers OpenC2 Language 1.0. Use when sending cybersecurity commands                                                                                                                        |
 
 #### Observability and operations
 
