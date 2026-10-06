@@ -4,7 +4,7 @@ description: "OpenID4VC: issue and verify verifiable credentials over OAuth. Use
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.2.1"
   kind: standard
 ---
 
@@ -107,6 +107,8 @@ OpenID for Verifiable Credentials is the OpenID Foundation's family of protocols
 - `vc-data-model` for the W3C Verifiable Credentials Data Model 2.0 behind `jwt_vc_json`, `jwt_vc_json-ld` and `ldp_vc`, with VC JOSE COSE, Data Integrity and Bitstring Status List: `npx skills add ScaleDockHQ/scaledock-skills --skill vc-data-model`.
 - `did` for W3C DIDs, DID documents and resolution behind `did:<method>` binding methods and the `decentralized_identifier:` client identifier prefix: `npx skills add ScaleDockHQ/scaledock-skills --skill did`.
 - `eudi-wallet` for the EU Digital Identity Wallet ARF, which profiles OpenID4VCI, OpenID4VP and HAIP for PID and attestation issuers, wallets and relying parties: `npx skills add ScaleDockHQ/scaledock-skills --skill eudi-wallet`.
+- `digital-credentials`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill digital-credentials`
+- `fedcm`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill fedcm`
 
 ## Sources
 
