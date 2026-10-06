@@ -438,9 +438,10 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Developer conventions
 
-| Skill                               | Description                                                                                                                                                                                            |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`source-maps`](skills/source-maps) | Source maps (ECMA-426): + 4 Notational Conventions + 4.1 Algorithm Conventions + 4.1.1 Implicit Completions 4.1.1.1 GetTheAnswer ( input ) Covers ECMA-426. Use when writing or consuming a source map |
+| Skill                               | Description                                                                                                                                                                                                                                                                                    |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`source-maps`](skills/source-maps) | Source maps (ECMA-426): + 4 Notational Conventions + 4.1 Algorithm Conventions + 4.1.1 Implicit Completions 4.1.1.1 GetTheAnswer ( input ) Covers ECMA-426. Use when writing or consuming a source map                                                                                         |
+| [`semver`](skills/semver)           | Semantic Versioning: ^(?P<major>0\|[1-9]\d*)\.(?P<minor>0\|[1-9]\d*)\.(?P<patch>0\|[1-9]\d*)(?:-(?P<prerelease>(?:0\|[1-9]\d*\|\d*[a-zA-Z-][0-9a-zA-Z-]_)(?:\.(?:0\|[1-9]\d_\|\d*[a-zA-Z-][0-9a-zA-Z-]_))_))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$ Covers SemVer 2.0.0. |
 
 #### Domain verticals
 
