@@ -168,6 +168,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`tls`](skills/tls)                                     | The Transport Layer Security (TLS) Protocol Version 1.3: The Transport Layer Security (TLS) Protocol Version 1.3 Covers RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3, RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 (supported), RFC 9325 Recomme |
 | [`acme`](skills/acme)                                   | Automatic Certificate Management Environment (ACME): Automatic Certificate Management Environment (ACME) Covers RFC 8555 Automatic Certificate Management Environment (ACME), RFC 9773 ACME Renewal Information (ARI) Extension. Use when issuing certificates with ACME                 |
 | [`x509-pkix`](skills/x509-pkix)                         | Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile Covers RFC 5280 Internet X.509 Public Key Infrastructure Certificate and Certific |
+| [`eat`](skills/eat)                                     | The Entity Attestation Token (EAT): An Entity Attestation Token (EAT) provides an attested claims set that describes the state and characteristics of an entity, a device such as a smartphone, an Internet of Things (IoT) device, network equipment, or such. Covers RFC 9711 The Enti |
 
 #### Observability and operations
 
