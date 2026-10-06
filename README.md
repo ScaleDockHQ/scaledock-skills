@@ -255,6 +255,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`webgpu`](skills/webgpu)                                   | WebGPU: WebGPU exposes an API for performing operations, such as rendering and computation, on a Graphics Processing Unit. Covers WebGPU (build), WebGPU Shading Language (build). Use when rendering or computing with WebGPU or WGSL                                                   |
 | [`webxr`](skills/webxr)                                     | WebXR: This specification describes support for accessing virtual reality (VR) and augmented reality (AR) devices, including sensors and head-mounted displays, on the Web. Covers WebXR Device API (build), WebXR Augmented Reality Module - Level 1 (build), WebXR Depth Sensing Modul |
 | [`html`](skills/html)                                       | HTML Living Standard: This is a Review Draft. Covers HTML Living Standard. Use when writing HTML, including forms, dialog, popover, workers, storage, canvas and import maps                                                                                                             |
+| [`server-sent-events`](skills/server-sent-events)           | Server-sent events: ← 9 Communication — Table of Contents — 9.3 Cross-document messaging → 9.2 Server-sent events 9.2.1 Introduction 9.2.2 The EventSource interface 9.2.3 Processing model 9.2.4 The `Last-Event-ID` header 9.2.5 Parsing an event stream 9.2.6 Interpreting an event   |
 
 #### CSS, graphics and media
 
