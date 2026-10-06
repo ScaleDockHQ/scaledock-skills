@@ -292,6 +292,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`sparql`](skills/sparql)                                             | SPARQL: RDF is a directed, labeled graph data format for representing information in the Web. Covers SPARQL 1.1 Query Language, SPARQL 1.1 Protocol, SPARQL 1.1 Update. Use when querying RDF with SPARQL                                                                                |
 | [`shacl`](skills/shacl)                                               | SHACL: This document defines the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions. Covers Shapes Constraint Language (SHACL), SHACL 1.2 Core (track preview). Use when validating an RDF graph with shapes                             |
 | [`owl`](skills/owl)                                                   | OWL 2: The OWL 2 Web Ontology Language, informally OWL 2, is an ontology language for the Semantic Web with formally defined meaning. Covers OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition), OWL 2 Web Ontology Language Direct Seman |
+| [`dcat`](skills/dcat)                                                 | DCAT: DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. Covers Data Catalog Vocabulary (DCAT) - Version 3. Use when describing a data catalog                                                                                |
 
 #### Documents and publishing
 

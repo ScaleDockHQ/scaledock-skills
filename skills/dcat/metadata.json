@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DCAT. Data Catalog Vocabulary (DCAT) - Version 3 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "vocab-dcat-3",
+      "label": "Data Catalog Vocabulary (DCAT) - Version 3",
+      "status": "current",
+      "revision": "vocab-dcat-3 REC-vocab-dcat-3-20200204 (Recommendation, 2024-08-22)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Data Catalog Vocabulary (DCAT) - Version 3",
+      "url": "https://www.w3.org/TR/vocab-dcat-3/",
+      "status": "Recommendation",
+      "revision": "vocab-dcat-3 REC-vocab-dcat-3-20200204 (Recommendation, 2024-08-22)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
