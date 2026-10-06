@@ -258,6 +258,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`server-sent-events`](skills/server-sent-events)           | Server-sent events: ← 9 Communication — Table of Contents — 9.3 Cross-document messaging → 9.2 Server-sent events 9.2.1 Introduction 9.2.2 The EventSource interface 9.2.3 Processing model 9.2.4 The `Last-Event-ID` header 9.2.5 Parsing an event stream 9.2.6 Interpreting an event   |
 | [`websockets-api`](skills/websockets-api)                   | WebSockets API: This specification provides APIs to enable web applications to maintain bidirectional communications with server-side processes. Covers WebSockets Living Standard. Use when opening a WebSocket from a page                                                             |
 | [`dom`](skills/dom)                                         | DOM: DOM defines a platform-neutral model for events, aborting activities, and node trees. Covers DOM Living Standard. Use when walking or mutating the DOM                                                                                                                              |
+| [`fetch`](skills/fetch)                                     | Fetch: The Fetch standard defines requests, responses, and the process that binds them: fetching. Covers Fetch Living Standard. Use when fetching resources, including CORS                                                                                                              |
 
 #### CSS, graphics and media
 
