@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Language Server Protocol. LSP 3.17 is current; LSP 3.18 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "lsp-3.17",
+      "label": "LSP 3.17",
+      "status": "current",
+      "revision": "LSP 3.17, fetched 2026-10-06 (Specification, 2026-10-06)"
+    },
+    {
+      "id": "lsp-3.18-preview",
+      "label": "LSP 3.18",
+      "status": "preview",
+      "revision": "LSP 3.18, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "LSP 3.17",
+      "url": "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/",
+      "status": "Specification",
+      "revision": "LSP 3.17, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "LSP 3.18",
+      "url": "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/",
+      "status": "Specification",
+      "revision": "LSP 3.18, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
