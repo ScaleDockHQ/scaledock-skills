@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers XML Signature. XML Signature Syntax and Processing Version 1.1 is current; XML Signature Syntax and Processing (Second Edition) is legacy; Canonical XML Version 1.1 is current; Canonical XML Version 1.0 is legacy; Exclusive XML Canonicalization Version 1.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "xmldsig-core1",
+      "label": "XML Signature Syntax and Processing Version 1.1",
+      "status": "current",
+      "revision": "xmldsig-core1 REC-xmldsig-core1-20130411 (Recommendation, 2013-04-11)",
+      "family": "signature"
+    },
+    {
+      "id": "xmldsig-core",
+      "label": "XML Signature Syntax and Processing (Second Edition)",
+      "status": "legacy",
+      "revision": "xmldsig-core REC-xmldsig-core1-20130411 (Recommendation, 2008-06-10)",
+      "family": "signature"
+    },
+    {
+      "id": "xml-c14n11",
+      "label": "Canonical XML Version 1.1",
+      "status": "current",
+      "revision": "xml-c14n11 REC-xml-c14n11-20080502 (Recommendation, 2008-05-02)",
+      "family": "c14n"
+    },
+    {
+      "id": "xml-c14n10",
+      "label": "Canonical XML Version 1.0",
+      "status": "legacy",
+      "revision": "xml-c14n10 REC-xml-c14n11-20080502 (Recommendation, 2001-03-15)",
+      "family": "c14n"
+    },
+    {
+      "id": "xml-exc-c14n",
+      "label": "Exclusive XML Canonicalization Version 1.0",
+      "status": "current",
+      "revision": "xml-exc-c14n REC-xml-exc-c14n-20020718 (Recommendation, 2002-07-18)",
+      "family": "exclusive-c14n"
+    }
+  ],
+  "sources": [
+    {
+      "title": "XML Signature Syntax and Processing Version 1.1",
+      "url": "https://www.w3.org/TR/xmldsig-core1/",
+      "status": "Recommendation",
+      "revision": "xmldsig-core1 REC-xmldsig-core1-20130411 (Recommendation, 2013-04-11)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "XML Signature Syntax and Processing (Second Edition)",
+      "url": "https://www.w3.org/TR/xmldsig-core/",
+      "status": "Recommendation",
+      "revision": "xmldsig-core REC-xmldsig-core1-20130411 (Recommendation, 2008-06-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Canonical XML Version 1.1",
+      "url": "https://www.w3.org/TR/xml-c14n11/",
+      "status": "Recommendation",
+      "revision": "xml-c14n11 REC-xml-c14n11-20080502 (Recommendation, 2008-05-02)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Canonical XML Version 1.0",
+      "url": "https://www.w3.org/TR/xml-c14n/",
+      "status": "Recommendation",
+      "revision": "xml-c14n10 REC-xml-c14n11-20080502 (Recommendation, 2001-03-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Exclusive XML Canonicalization Version 1.0",
+      "url": "https://www.w3.org/TR/xml-exc-c14n/",
+      "status": "Recommendation",
+      "revision": "xml-exc-c14n REC-xml-exc-c14n-20020718 (Recommendation, 2002-07-18)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
