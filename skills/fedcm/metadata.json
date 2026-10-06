@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Federated Credential Management (FedCM). Federated Credential Management API Level 1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "fedcm-1",
+      "label": "Federated Credential Management API Level 1",
+      "status": "current",
+      "revision": "fedcm-1 WD-fedcm-1-20240820 (First Public Working Draft, 2024-08-20)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Federated Credential Management API",
+      "url": "https://www.w3.org/TR/fedcm-1/",
+      "status": "First Public Working Draft",
+      "revision": "fedcm-1 WD-fedcm-1-20240820 (First Public Working Draft, 2024-08-20)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
