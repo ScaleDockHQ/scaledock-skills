@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Open Screen Protocol. Open Screen Network Protocol is current; Open Screen Application Protocol is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "openscreen-network",
+      "label": "Open Screen Network Protocol",
+      "status": "current",
+      "revision": "openscreen-network WD-openscreen-network-20260210 (Working Draft, 2026-02-10)",
+      "posture": "track",
+      "family": "network"
+    },
+    {
+      "id": "openscreen-application",
+      "label": "Open Screen Application Protocol",
+      "status": "current",
+      "revision": "openscreen-application WD-openscreen-application-20260210 (Working Draft, 2026-02-10)",
+      "posture": "track",
+      "family": "application"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Screen Network Protocol",
+      "url": "https://www.w3.org/TR/openscreen-network/",
+      "status": "Working Draft",
+      "revision": "openscreen-network WD-openscreen-network-20260210 (Working Draft, 2026-02-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Open Screen Application Protocol",
+      "url": "https://www.w3.org/TR/openscreen-application/",
+      "status": "Working Draft",
+      "revision": "openscreen-application WD-openscreen-application-20260210 (Working Draft, 2026-02-10)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
