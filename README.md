@@ -472,6 +472,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`schema-org`](skills/schema-org)                                         | Schema.org: An abstract is a short description that summarizes a CreativeWork . Covers Schema.org. Use when marking up structured data                                                                                                                                                   |
 | [`sitemaps`](skills/sitemaps)                                             | Sitemaps: The Sitemap protocol format consists of XML tags. Covers Sitemaps 0.9. Use when publishing a sitemap                                                                                                                                                                           |
 | [`open-graph`](skills/open-graph)                                         | Open Graph: og:image:alt - A description of what is in the image (not a caption). Covers Open Graph. Use when adding Open Graph metadata                                                                                                                                                 |
+| [`oembed`](skills/oembed)                                                 | oEmbed: oEmbed is a format for allowing an embedded representation of a URL on third party sites. Covers oEmbed. Use when embedding a resource with oEmbed                                                                                                                               |
 
 #### Documents and publishing
 
