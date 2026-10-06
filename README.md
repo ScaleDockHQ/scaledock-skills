@@ -295,6 +295,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`dcat`](skills/dcat)                                                 | DCAT: DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. Covers Data Catalog Vocabulary (DCAT) - Version 3. Use when describing a data catalog                                                                                |
 | [`prov`](skills/prov)                                                 | PROV: Provenance is information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness. Covers PROV-DM: The PROV Data Model, PROV-O: The PROV Ontology, PROV-N:  |
 | [`odrl`](skills/odrl)                                                 | ODRL: The Open Digital Rights Language (ODRL) is a policy expression language that provides a flexible and interoperable information model, vocabulary, and encoding mechanisms for representing statements about the usage of content and services. Covers ODRL Information Model 2.2,  |
+| [`csvw`](skills/csvw)                                                 | CSV on the Web: Tabular data is routinely transferred on the web in a variety of formats, including variants on CSV, tab-delimited files, fixed field formats, spreadsheets, HTML tables, and SQL dumps. Covers Model for Tabular Data and Metadata on the Web, Metadata Vocabulary for  |
 
 #### Documents and publishing
 

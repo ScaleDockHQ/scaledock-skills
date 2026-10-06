@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers CSV on the Web. Model for Tabular Data and Metadata on the Web is current; Metadata Vocabulary for Tabular Data is current; Generating JSON from Tabular Data on the Web is current; Generating RDF from Tabular Data on the Web is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "tabular-data-model",
+      "label": "Model for Tabular Data and Metadata on the Web",
+      "status": "current",
+      "revision": "tabular-data-model REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "family": "model"
+    },
+    {
+      "id": "tabular-metadata",
+      "label": "Metadata Vocabulary for Tabular Data",
+      "status": "current",
+      "revision": "tabular-metadata REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "family": "metadata"
+    },
+    {
+      "id": "csv2json",
+      "label": "Generating JSON from Tabular Data on the Web",
+      "status": "current",
+      "revision": "csv2json REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "family": "csv2json"
+    },
+    {
+      "id": "csv2rdf",
+      "label": "Generating RDF from Tabular Data on the Web",
+      "status": "current",
+      "revision": "csv2rdf REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "family": "csv2rdf"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Model for Tabular Data and Metadata on the Web",
+      "url": "https://www.w3.org/TR/tabular-data-model/",
+      "status": "Recommendation",
+      "revision": "tabular-data-model REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Metadata Vocabulary for Tabular Data",
+      "url": "https://www.w3.org/TR/tabular-metadata/",
+      "status": "Recommendation",
+      "revision": "tabular-metadata REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Generating JSON from Tabular Data on the Web",
+      "url": "https://www.w3.org/TR/csv2json/",
+      "status": "Recommendation",
+      "revision": "csv2json REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Generating RDF from Tabular Data on the Web",
+      "url": "https://www.w3.org/TR/csv2rdf/",
+      "status": "Recommendation",
+      "revision": "csv2rdf REC-tabular-data-model-20151217 (Recommendation, 2015-12-17)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
