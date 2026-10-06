@@ -96,6 +96,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`websocket`](skills/websocket)                             | The WebSocket Protocol: The WebSocket Protocol Covers RFC 6455 The WebSocket Protocol, RFC 8441 Bootstrapping WebSockets with HTTP/2. Use when speaking the WebSocket protocol                                                                                                           |
 | [`webfinger`](skills/webfinger)                             | WebFinger: WebFinger Covers RFC 7033 WebFinger. Use when discovering a resource with WebFinger                                                                                                                                                                                           |
 | [`coap`](skills/coap)                                       | The Constrained Application Protocol (CoAP): The Constrained Application Protocol (CoAP) Covers RFC 7252 The Constrained Application Protocol (CoAP). Use when speaking the Constrained Application Protocol                                                                             |
+| [`webdav`](skills/webdav)                                   | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV): HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) Covers RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV), RFC 4791 Calendaring Extensions to WebDAV (CalDAV),  |
 
 #### Events and data
 
