@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Directive (EU) 2019/882 as published in the Official Journal. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "dir-2019-882",
+      "label": "Directive (EU) 2019/882",
+      "status": "current",
+      "revision": "OJ L 151, 7 June 2019"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Directive (EU) 2019/882",
+      "url": "https://publications.europa.eu/resource/celex/32019L0882.ENG",
+      "status": "Official Journal",
+      "revision": "OJ L 151, 7 June 2019",
+      "checked": "2026-10-06"
+    }
+  ]
+}
