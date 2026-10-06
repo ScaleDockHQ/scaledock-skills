@@ -166,6 +166,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`openpgp`](skills/openpgp)                             | OpenPGP: This document specifies the message formats used in OpenPGP. Covers RFC 9580 OpenPGP. Use when signing or encrypting with OpenPGP                                                                                                                                               |
 | [`mls`](skills/mls)                                     | The Messaging Layer Security (MLS) Protocol: Messaging applications are increasingly making use of end-to-end security mechanisms to ensure that messages are only accessible to the communicating endpoints, and not to any servers involved in delivering messages. Covers RFC 9420 Th |
 | [`tls`](skills/tls)                                     | The Transport Layer Security (TLS) Protocol Version 1.3: The Transport Layer Security (TLS) Protocol Version 1.3 Covers RFC 8446 The Transport Layer Security (TLS) Protocol Version 1.3, RFC 5246 The Transport Layer Security (TLS) Protocol Version 1.2 (supported), RFC 9325 Recomme |
+| [`acme`](skills/acme)                                   | Automatic Certificate Management Environment (ACME): Automatic Certificate Management Environment (ACME) Covers RFC 8555 Automatic Certificate Management Environment (ACME), RFC 9773 ACME Renewal Information (ARI) Extension. Use when issuing certificates with ACME                 |
 
 #### Observability and operations
 

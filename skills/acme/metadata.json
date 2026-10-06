@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Automatic Certificate Management Environment (ACME). RFC 8555 Automatic Certificate Management Environment (ACME) is current; RFC 9773 ACME Renewal Information (ARI) Extension is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rfc8555",
+      "label": "RFC 8555 Automatic Certificate Management Environment (ACME)",
+      "status": "current",
+      "revision": "RFC 8555 (PROPOSED STANDARD, March 2019)",
+      "family": "acme"
+    },
+    {
+      "id": "rfc9773",
+      "label": "RFC 9773 ACME Renewal Information (ARI) Extension",
+      "status": "current",
+      "revision": "RFC 9773 (PROPOSED STANDARD, June 2025)",
+      "family": "ari"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RFC 8555 Automatic Certificate Management Environment (ACME)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8555.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 8555 (PROPOSED STANDARD, March 2019)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RFC 9773 ACME Renewal Information (ARI) Extension",
+      "url": "https://www.rfc-editor.org/rfc/rfc9773.html",
+      "status": "PROPOSED STANDARD",
+      "revision": "RFC 9773 (PROPOSED STANDARD, June 2025)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
