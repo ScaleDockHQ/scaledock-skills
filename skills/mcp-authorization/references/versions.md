@@ -6,13 +6,15 @@ Read this when choosing which MCP revision's authorization rules to build to, re
 
 MCP versions are date strings, the last date backwards-incompatible changes were made; a revision marked Current may still receive backwards-compatible changes, and past revisions are Final (Versioning, Revisions).
 
-| Id              | Line           | Status    | Revision                                   | Posture | Summary                                                                                                 |
-| --------------- | -------------- | --------- | ------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
-| `draft-preview` | MCP draft      | preview   | `/specification/draft`, checked 2026-10-05 | track   | The next revision in progress. Its authorization page matches 2026-07-28 and its changelog is empty.    |
-| `2026-07-28`    | MCP 2026-07-28 | current   | 2026-07-28 (Current)                       |         | Stateless MCP; `iss` validation, issuer-bound credentials, deprecated DCR, split authorization pages.   |
-| `2025-11-25`    | MCP 2025-11-25 | supported | 2025-11-25 (Final)                         |         | OpenID Connect Discovery, Client ID Metadata Documents, optional `WWW-Authenticate`, scope step-up.     |
-| `2025-06-18`    | MCP 2025-06-18 | supported | 2025-06-18 (Final)                         |         | MCP servers become OAuth resource servers with RFC 9728 metadata and RFC 8707 resource indicators.      |
-| `2025-03-26`    | MCP 2025-03-26 | legacy    | 2025-03-26 (Final)                         |         | First authorization spec: the MCP server is, or fronts, the authorization server; no resource metadata. |
+| Id                                       | Line                              | Status    | Revision                                                     | Posture | Summary                                                                                                 |
+| ---------------------------------------- | --------------------------------- | --------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
+| `draft-preview`                          | MCP draft                         | preview   | `/specification/draft`, checked 2026-10-05                   | track   | The next revision in progress. Its authorization page matches 2026-07-28 and its changelog is empty.    |
+| `oauth-v2-1-16-preview`                  | OAuth 2.1                         | preview   | draft-ietf-oauth-v2-1-16, 3 September 2026                   | track   | Replaces RFC 6749 and RFC 6750. MCP 2026-07-28 cited -13.                                               |
+| `client-id-metadata-document-02-preview` | OAuth Client ID Metadata Document | preview   | draft-ietf-oauth-client-id-metadata-document-02, 6 July 2026 | track   | A URL client_id whose document carries client metadata. MCP 2026-07-28 cited -00.                       |
+| `2026-07-28`                             | MCP 2026-07-28                    | current   | 2026-07-28 (Current)                                         |         | Stateless MCP; `iss` validation, issuer-bound credentials, deprecated DCR, split authorization pages.   |
+| `2025-11-25`                             | MCP 2025-11-25                    | supported | 2025-11-25 (Final)                                           |         | OpenID Connect Discovery, Client ID Metadata Documents, optional `WWW-Authenticate`, scope step-up.     |
+| `2025-06-18`                             | MCP 2025-06-18                    | supported | 2025-06-18 (Final)                                           |         | MCP servers become OAuth resource servers with RFC 9728 metadata and RFC 8707 resource indicators.      |
+| `2025-03-26`                             | MCP 2025-03-26                    | legacy    | 2025-03-26 (Final)                                           |         | First authorization spec: the MCP server is, or fronts, the authorization server; no resource metadata. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows.
 

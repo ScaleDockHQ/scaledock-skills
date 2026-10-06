@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -35,6 +35,20 @@
       "label": "MCP 2025-03-26",
       "status": "legacy",
       "revision": "2025-03-26 (Final)"
+    },
+    {
+      "id": "oauth-v2-1-16-preview",
+      "label": "OAuth 2.1",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-oauth-v2-1-16, published 3 September 2026, intended status Standards Track, expires 7 March 2027. Replaces RFC 6749 and RFC 6750."
+    },
+    {
+      "id": "client-id-metadata-document-02-preview",
+      "label": "OAuth Client ID Metadata Document",
+      "status": "preview",
+      "posture": "track",
+      "revision": "draft-ietf-oauth-client-id-metadata-document-02, published 6 July 2026, intended status Standards Track, expires 7 January 2027."
     }
   ],
   "sources": [
@@ -236,17 +250,17 @@
     },
     {
       "title": "The OAuth 2.1 Authorization Framework",
-      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-13",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-16",
       "status": "Internet-Draft (WG document)",
-      "revision": "draft-ietf-oauth-v2-1-13 as pinned by MCP (latest is -16); Draft posture: build at -13",
-      "checked": "2026-10-02"
+      "revision": "draft-ietf-oauth-v2-1-16 (3 September 2026). MCP 2026-07-28 cited -13.",
+      "checked": "2026-10-06"
     },
     {
       "title": "OAuth Client ID Metadata Document",
-      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-00",
+      "url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-client-id-metadata-document-02",
       "status": "Internet-Draft (WG document)",
-      "revision": "draft-ietf-oauth-client-id-metadata-document-00 as pinned by MCP (latest is -02); Draft posture: build at -00",
-      "checked": "2026-10-02"
+      "revision": "draft-ietf-oauth-client-id-metadata-document-02 (6 July 2026). MCP 2026-07-28 cited -00.",
+      "checked": "2026-10-06"
     },
     {
       "title": "Identity Assertion JWT Authorization Grant",
