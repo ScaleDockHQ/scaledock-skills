@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -101,6 +101,11 @@ Web Authentication, published by the W3C Web Authentication Working Group, defin
 - `openid-connect`, when passkeys sign users in to an OpenID Provider that then issues ID tokens: `npx skills add ScaleDockHQ/scaledock-skills --skill openid-connect`
 - `oauth`, when a WebAuthn sign-in sits inside an OAuth authorization server's login step: `npx skills add ScaleDockHQ/scaledock-skills --skill oauth`
 - `nist-800-63`, for mapping passkeys and security keys to authenticator assurance levels: `npx skills add ScaleDockHQ/scaledock-skills --skill nist-800-63`
+- `credential-management`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill credential-management`
+- `dbsc`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill dbsc`
+- `secure-payment-confirmation`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill secure-payment-confirmation`
+- `digital-credentials`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill digital-credentials`
+- `fido-ctap`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill fido-ctap`
 
 ## Sources
 
