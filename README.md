@@ -223,6 +223,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-share`](skills/web-share)                             | Web Share API: This specification defines an API for sharing text, links and other content to an arbitrary destination of the user's choice. Covers Web Share API. Use when sharing data from a page to another app                                                                      |
 | [`badging`](skills/badging)                                 | Badging API: This specification defines an API that allows installed web applications to set an application badge, which is usually shown alongside the application's icon on the device's home screen or application dock. Covers Badging API (track). Use when setting an application  |
 | [`web-locks`](skills/web-locks)                             | Web Locks API: This document defines a web platform API that allows script to asynchronously acquire a lock over a resource, hold it while work is performed, then release it. Covers Web Locks API (track). Use when coordinating exclusive work across tabs                            |
+| [`screen-wake-lock`](skills/screen-wake-lock)               | Screen Wake Lock API: This document specifies an API that allows web applications to request a screen wake lock. Covers Screen Wake Lock API (track). Use when keeping the screen awake                                                                                                  |
 
 #### CSS, graphics and media
 
