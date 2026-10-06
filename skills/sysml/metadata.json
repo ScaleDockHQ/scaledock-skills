@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers SysML 2.0 (formal/2026-03-02) as the current line and SysML 1.7 (formal/24-01-07) as legacy. Requirements are quotes from those PDFs.",
+  "versions": [
+    {
+      "id": "sysml-2-0",
+      "label": "SysML 2.0",
+      "status": "current",
+      "revision": "formal/2026-03-02, March 2026",
+      "family": "sysml"
+    },
+    {
+      "id": "sysml-1-7",
+      "label": "SysML 1.7",
+      "status": "legacy",
+      "revision": "formal/24-01-07, January 2024",
+      "family": "sysml"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SysML 2.0 Language",
+      "url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+      "status": "OMG formal specification",
+      "revision": "formal/2026-03-02, March 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SysML 1.7",
+      "url": "https://www.omg.org/spec/SysML/1.7/PDF",
+      "status": "OMG formal specification",
+      "revision": "formal/24-01-07, January 2024",
+      "checked": "2026-10-06"
+    }
+  ]
+}
