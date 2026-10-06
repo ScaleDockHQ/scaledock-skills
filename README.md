@@ -506,6 +506,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`coppa`](skills/coppa)                               | COPPA: From the Federal Register Online via the Government Publishing Office [ www.gpo.gov ] Covers COPPA Rule 2025. Use when applying the Children's Online Privacy Protection Rule                                                                                                     |
 | [`ccpa-cpra`](skills/ccpa-cpra)                       | CCPA: California Consumer Privacy Act (CCPA) \| State of California - Department of Justice - Office of the Attorney General Covers CCPA. Use when applying the California Consumer Privacy Act                                                                                          |
 | [`iab-tcf`](skills/iab-tcf)                           | IAB TCF: JavaScript is disabled in your browser. Covers TCF 2.2. Use when encoding a TCF consent string                                                                                                                                                                                  |
+| [`iab-gpp`](skills/iab-gpp)                           | IAB GPP: This document is one of the IAB Tech Lab Global Privacy Protocol Specifications. Covers Global Privacy Platform. Use when encoding a Global Privacy Platform string                                                                                                             |
 
 #### Developer conventions
 
