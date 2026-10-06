@@ -571,6 +571,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`gs1-digital-link`](skills/gs1-digital-link) | GS1 Digital Link: Enabling consistent representation of GS1 identification keys within web addresses to link to online information and services Covers GS1 Digital Link URI Syntax. Use when encoding a GS1 identifier in a URI.                                                                        |
 | [`open-banking-uk`](skills/open-banking-uk)   | Open Banking UK: the Read-Write API profile for accounts, payments and pagination. Covers Open Banking UK 4.0. Use when calling the UK Open Banking Read-Write API.                                                                                                                                     |
 | [`lwm2m`](skills/lwm2m)                       | LwM2M: the OMA Lightweight M2M core protocol for device management. Covers LwM2M 1.2. Use when managing a device with LwM2M.                                                                                                                                                                            |
+| [`nostr`](skills/nostr)                       | Nostr: This NIP defines the basic protocol that should be implemented by everybody. Covers NIP-01. Use when implementing a Nostr client or relay.                                                                                                                                                       |
 
 ## Development
 
