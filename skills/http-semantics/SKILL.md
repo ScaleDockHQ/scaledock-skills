@@ -1,23 +1,20 @@
 ---
 name: http-semantics
 description: >-
-  HTTP Semantics RFC 9110 and Caching RFC 9111: build HTTP APIs and servers
-  with correct methods, status codes, conditional requests, content
-  negotiation, range requests and caching. Use when designing, implementing or
-  reviewing an HTTP API or server: method safety and idempotency (GET, HEAD,
-  POST, PUT, DELETE, OPTIONS, and QUERY from RFC 10008), choosing 200, 201,
-  202, 204, 304, 404, 405, 409, 412, 415 or 422, ETag, If-Match,
-  If-None-Match, lost updates, 304 Not Modified, 412 Precondition Failed,
-  Accept and Vary, Range and 206, Cache-Control (max-age, no-cache, no-store,
-  private, s-maxage, stale-while-revalidate). Also covers the HTTP extension
-  fields APIs use: Structured Fields RFC 9651, Link RFC 8288, Deprecation RFC
-  9745, Sunset RFC 8594, api-catalog RFC 9727 and Prefer RFC 7240, and tracks
-  the Idempotency-Key draft-07 preview. Upgrades from RFC 7230-7235 and RFC
-  8941.
+  HTTP Semantics RFC 9110 and Caching RFC 9111: methods, status codes,
+  conditional requests, caching and extension fields. Covers RFC 9110 and RFC
+  9111, RFC 10008 QUERY, RFC 9651 Structured Fields, RFC 8288 Web Linking, RFC
+  9745 Deprecation, RFC 8594 Sunset, RFC 9727 api-catalog, RFC 7240 Prefer,
+  RFC 7838 Alt-Svc, RFC 8297 Early Hints, RFC 8942 Client Hints, RFC 9211
+  Cache-Status, RFC 9209 Proxy-Status, RFC 9213 Targeted Cache-Control, RFC
+  9218 Priority, RFC 5789 PATCH, RFC 7578 multipart/form-data, RFC 9652
+  Link-Template and RFC 9842 Compression Dictionary Transport. Tracks
+  Idempotency-Key draft-07 and Resumable Uploads draft-12. Use when designing
+  or reviewing an HTTP API. Upgrades from RFC 7230-7235.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -35,6 +32,7 @@ RFC 9110 (HTTP Semantics) and RFC 9111 (HTTP Caching), published by the IETF as 
   - Query: RFC 10008 QUERY (current).
   - Structured fields: RFC 9651 Structured Fields (current). RFC 8941 Structured Fields is legacy, kept only for fields already defined against it.
   - Lifecycle and discovery: RFC 8288 Web Linking, RFC 9745 Deprecation, RFC 8594 Sunset, RFC 9727 api-catalog and RFC 7240 Prefer (each current, the only line of its family).
+  - Extensions, each the current line of its family: RFC 7838 Alt-Svc, RFC 8297 Early Hints, RFC 8942 Client Hints, RFC 9211 Cache-Status, RFC 9209 Proxy-Status, RFC 9213 Targeted Cache-Control, RFC 9218 Priority, RFC 5789 PATCH, RFC 7578 multipart/form-data, RFC 9652 Link-Template and RFC 9842 Compression Dictionary Transport. Resumable Uploads draft-12 is current with posture track: do not emit it.
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check each RFC's RFC Editor entry for errata and "obsoleted by" or "updated by", check the datatracker for a new Idempotency-Key revision or RFC, and update the pins.
 - Caches in the path: browser only, or shared caches (CDN, reverse proxy) too. This decides `private`, `s-maxage` and Vary.
@@ -118,6 +116,8 @@ RFC 9110 (HTTP Semantics) and RFC 9111 (HTTP Caching), published by the IETF as 
 - `problem-details` for `application/problem+json` error bodies on 4xx and 5xx responses: `npx skills add ScaleDockHQ/scaledock-skills --skill problem-details`.
 - `ratelimit-headers` for RateLimit and RateLimit-Policy fields with 429 and Retry-After: `npx skills add ScaleDockHQ/scaledock-skills --skill ratelimit-headers`.
 - `openapi` for describing these methods, status codes and headers in an OpenAPI document: `npx skills add ScaleDockHQ/scaledock-skills --skill openapi`.
+- `http-cookies`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill http-cookies`
+- `hsts`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill hsts`
 
 ## Sources
 
@@ -144,3 +144,15 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [RFC 7240: Prefer Header for HTTP](https://www.rfc-editor.org/rfc/rfc7240): RFC (Proposed Standard, updated by RFC 8144), RFC 7240, checked 2026-10-05.
 - [RFC 8144: Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)](https://www.rfc-editor.org/rfc/rfc8144): RFC (Proposed Standard), RFC 8144, checked 2026-10-05.
 - [draft-ietf-httpapi-idempotency-key-header-07: The Idempotency-Key HTTP Header Field](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-idempotency-key-header-07): Internet-Draft (Expired, WG Document), -07, checked 2026-10-05.
+- [RFC 7838: HTTP Alternative Services](https://www.rfc-editor.org/rfc/rfc7838): RFC (Standards Track), April 2016, checked 2026-10-06.
+- [RFC 8297: An HTTP Status Code for Indicating Hints](https://www.rfc-editor.org/rfc/rfc8297): RFC (Experimental), December 2017, checked 2026-10-06.
+- [RFC 8942: HTTP Client Hints](https://www.rfc-editor.org/rfc/rfc8942): RFC (Experimental), February 2021, checked 2026-10-06.
+- [RFC 9211: The Cache-Status HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc9211): RFC (Standards Track), June 2022, checked 2026-10-06.
+- [RFC 9209: The Proxy-Status HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc9209): RFC (Standards Track), June 2022, checked 2026-10-06.
+- [RFC 9213: Targeted HTTP Cache Control](https://www.rfc-editor.org/rfc/rfc9213): RFC (Standards Track), June 2022, checked 2026-10-06.
+- [RFC 9218: Extensible Prioritization Scheme for HTTP](https://www.rfc-editor.org/rfc/rfc9218): RFC (Standards Track), June 2022, checked 2026-10-06.
+- [RFC 5789: PATCH Method for HTTP](https://www.rfc-editor.org/rfc/rfc5789): RFC (Standards Track), March 2010, checked 2026-10-06.
+- [RFC 7578: Returning Values from Forms: multipart/form-data](https://www.rfc-editor.org/rfc/rfc7578): RFC (Standards Track), July 2015, obsoletes RFC 2388, checked 2026-10-06.
+- [RFC 9652: The Link-Template HTTP Header Field](https://www.rfc-editor.org/rfc/rfc9652): RFC (Standards Track), September 2024, checked 2026-10-06.
+- [RFC 9842: Compression Dictionary Transport](https://www.rfc-editor.org/rfc/rfc9842): RFC (Standards Track), September 2025, checked 2026-10-06.
+- [draft-ietf-httpbis-resumable-upload-12: Resumable Uploads for HTTP](https://www.ietf.org/archive/id/draft-ietf-httpbis-resumable-upload-12.html): Internet-Draft, 6 July 2026, expires 7 January 2027, intended status Standards Track, checked 2026-10-06. Posture: track.
