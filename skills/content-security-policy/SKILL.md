@@ -11,15 +11,13 @@ description: >-
   require-trusted-types-for 'script' and the default policy. Permissions
   Policy: the structured header, allowlists and the iframe allow attribute,
   with Feature-Policy legacy. Fetch Metadata: Sec-Fetch-Site, -Mode, -Dest and
-  -User for a resource isolation policy. Use when writing, reviewing or
-  debugging security response headers, mitigating XSS, clickjacking, CSRF or
-  cross-site leaks, reading CSP violation reports, or migrating from
-  'unsafe-inline', X-Frame-Options or Feature-Policy. Also CSP Embedded
-  Enforcement.
+  -User for a resource isolation policy. Use when writing or reviewing
+  security headers. Also CSP Embedded Enforcement, Mixed Content, Reporting
+  API and Upgrade Insecure Requests.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -32,7 +30,7 @@ Content Security Policy (CSP), published by the W3C Web Application Security Wor
 ## Inputs (fill in, or ask before starting)
 
 - Role: server that sets the headers (an app, a framework middleware, a reverse proxy or CDN), reviewer of an existing policy, or collector of violation reports.
-- Target version: CSP Level 3 (default, posture: build). CSP Level 2 is supported for a named consumer that cannot parse Level 3 keywords. CSP 1.0 and its `X-Content-Security-Policy` and `X-WebKit-CSP` headers are legacy: read and upgrade, never author. Trusted Types, Permissions Policy and Fetch Metadata Request Headers each have one current line (posture: build); Feature Policy and its `Feature-Policy` header are legacy. CSP Embedded Enforcement is the current line of its family, with posture track, because its only text is a Working Draft. See [`references/versions.md`](references/versions.md).
+- Target version: CSP Level 3 (default, posture: build). CSP Level 2 is supported for a named consumer that cannot parse Level 3 keywords. CSP 1.0 and its `X-Content-Security-Policy` and `X-WebKit-CSP` headers are legacy: read and upgrade, never author. Trusted Types, Permissions Policy and Fetch Metadata Request Headers each have one current line (posture: build); Feature Policy and its `Feature-Policy` header are legacy. CSP Embedded Enforcement is the current line of its family, with posture track, because its only text is a Working Draft. Mixed Content (Candidate Recommendation Draft, 23 February 2023) and Upgrade Insecure Requests (Candidate Recommendation, 8 October 2015) are current with posture build. Reporting API (Working Draft, 11 June 2025) is current with posture track. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill or when a rule looks out of date, re-read every URL in [Sources](#sources) first, check the W3C TR pages for a newer Working Draft, Candidate Recommendation or Recommendation, and update the pins.
 - Page inventory: how scripts reach the page (server templates, a bundler, third-party tags), whether HTML responses are cached, which origins frame the page, and which browser features the page or its iframes use.
