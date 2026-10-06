@@ -209,6 +209,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`security-insights`](skills/security-insights)         | Security Insights: SecurityInsights defines a schema that projects can use to report information about their security in a machine-processable way. Covers Security Insights. Use when publishing a SECURITY_INSIGHTS.yml file                                                           |
 | [`gittuf`](skills/gittuf)                               | gittuf: [attacks targeting Git metadata](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias). Covers gittuf. Use when verifying Git repository policy                                                                                       |
 | [`model-signing`](skills/model-signing)                 | Model signing: Statement](https://github.com/in-toto/attestation/blob/80e7efeca762e8276ed5e04e6d8bc796a4a19170/spec/v1/statement.md) Covers Model signing. Use when signing machine-learning models                                                                                      |
+| [`s2c2f`](skills/s2c2f)                                 | S2C2F: This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. Covers S2C2F. Use when assessing a secure supply chain                                                      |
 
 #### Observability and operations
 
