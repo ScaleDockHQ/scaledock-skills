@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
@@ -143,6 +143,34 @@
       "status": "Informative",
       "revision": "updated 22 September 2025",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)",
+      "url": "https://www.w3.org/TR/wcag2ict/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-wcag2ict-22-20251211 (11 December 2025)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "WCAG Evaluation Methodology (WCAG-EM) 2.0",
+      "url": "https://www.w3.org/TR/WCAG-EM/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-wcag-em-2-20260723 (23 July 2026)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)",
+      "url": "https://www.w3.org/TR/wcag2mobile/",
+      "status": "W3C Group Draft Note",
+      "revision": "DNOTE-wcag2mobile-22-20250506 (6 May 2025)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Understanding WCAG 2.0",
+      "url": "https://www.w3.org/TR/UNDERSTANDING-WCAG20/",
+      "status": "W3C Group Note",
+      "revision": "NOTE-UNDERSTANDING-WCAG20-20230921 (21 September 2023)",
+      "checked": "2026-10-06"
     }
   ]
 }
