@@ -288,6 +288,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`json-ld`](skills/json-ld)                                           | JSON-LD: JSON is a useful data serialization and messaging format. Covers JSON-LD 1.1, CBOR-LD 1.0 (track), YAML-LD 1.0 (track). Use when expanding, compacting or framing linked data, or reading CBOR-LD or YAML-LD                                                                    |
 | [`rdf-dataset-canonicalization`](skills/rdf-dataset-canonicalization) | RDF Dataset Canonicalization (RDFC-1.0): RDF [ RDF11-CONCEPTS ] describes a graph-based data model for making claims about the world and provides the foundation for reasoning upon that graph of information. Covers RDF Dataset Canonicalization. Use when canonicalizing an RDF datas |
+| [`rdf`](skills/rdf)                                                   | RDF: The Resource Description Framework (RDF) is a framework for representing information in the Web. Covers RDF 1.1 Concepts and Abstract Syntax, RDF 1.2 Concepts and Abstract Data Model (build preview), RDF 1.1 N-Triples, RDF 1.2 N-Triples (track preview), RDF 1.1 N-Quads, RDF  |
 
 #### Documents and publishing
 

@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers RDF. RDF 1.1 Concepts and Abstract Syntax is current; RDF 1.2 Concepts and Abstract Data Model is preview; Resource Description Framework (RDF): Concepts and Abstract Syntax Level 10 is legacy; RDF 1.1 N-Triples is current; RDF 1.2 N-Triples is preview; RDF 1.1 N-Quads is current; RDF 1.2 N-Quads is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "rdf11-concepts",
+      "label": "RDF 1.1 Concepts and Abstract Syntax",
+      "status": "current",
+      "revision": "rdf11-concepts REC-rdf11-concepts-20140225 (Recommendation, 2014-02-25)",
+      "family": "concepts"
+    },
+    {
+      "id": "rdf12-concepts-preview",
+      "label": "RDF 1.2 Concepts and Abstract Data Model",
+      "status": "preview",
+      "revision": "rdf12-concepts REC-rdf12-concepts-20140225 (Candidate Recommendation Snapshot, 2026-04-07)",
+      "posture": "build",
+      "family": "concepts"
+    },
+    {
+      "id": "rdf-concepts-10",
+      "label": "Resource Description Framework (RDF): Concepts and Abstract Syntax Level 10",
+      "status": "legacy",
+      "revision": "rdf-concepts-10 REC-rdf11-concepts-20140225 (Recommendation, 2004-02-10)",
+      "family": "concepts"
+    },
+    {
+      "id": "rdf11-n-triples",
+      "label": "RDF 1.1 N-Triples",
+      "status": "current",
+      "revision": "rdf11-n-triples REC-n-triples-20140225 (Recommendation, 2014-02-25)",
+      "family": "n-triples"
+    },
+    {
+      "id": "rdf12-n-triples-preview",
+      "label": "RDF 1.2 N-Triples",
+      "status": "preview",
+      "revision": "rdf12-n-triples WD-rdf12-n-triples-20260723 (Working Draft, 2026-09-24)",
+      "posture": "track",
+      "family": "n-triples"
+    },
+    {
+      "id": "rdf11-n-quads",
+      "label": "RDF 1.1 N-Quads",
+      "status": "current",
+      "revision": "rdf11-n-quads REC-n-quads-20140225 (Recommendation, 2014-02-25)",
+      "family": "n-quads"
+    },
+    {
+      "id": "rdf12-n-quads-preview",
+      "label": "RDF 1.2 N-Quads",
+      "status": "preview",
+      "revision": "rdf12-n-quads WD-rdf12-n-quads-20260612 (Working Draft, 2026-07-23)",
+      "posture": "track",
+      "family": "n-quads"
+    }
+  ],
+  "sources": [
+    {
+      "title": "RDF 1.1 Concepts and Abstract Syntax",
+      "url": "https://www.w3.org/TR/rdf11-concepts/",
+      "status": "Recommendation",
+      "revision": "rdf11-concepts REC-rdf11-concepts-20140225 (Recommendation, 2014-02-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RDF 1.2 Concepts and Abstract Data Model",
+      "url": "https://www.w3.org/TR/rdf12-concepts/",
+      "status": "Candidate Recommendation Snapshot",
+      "revision": "rdf12-concepts REC-rdf12-concepts-20140225 (Candidate Recommendation Snapshot, 2026-04-07)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Resource Description Framework (RDF): Concepts and Abstract Syntax",
+      "url": "https://www.w3.org/TR/rdf-concepts/",
+      "status": "Recommendation",
+      "revision": "rdf-concepts-10 REC-rdf11-concepts-20140225 (Recommendation, 2004-02-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RDF 1.1 N-Triples",
+      "url": "https://www.w3.org/TR/n-triples/",
+      "status": "Recommendation",
+      "revision": "rdf11-n-triples REC-n-triples-20140225 (Recommendation, 2014-02-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RDF 1.2 N-Triples",
+      "url": "https://www.w3.org/TR/rdf12-n-triples/",
+      "status": "Working Draft",
+      "revision": "rdf12-n-triples WD-rdf12-n-triples-20260723 (Working Draft, 2026-09-24)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RDF 1.1 N-Quads",
+      "url": "https://www.w3.org/TR/n-quads/",
+      "status": "Recommendation",
+      "revision": "rdf11-n-quads REC-n-quads-20140225 (Recommendation, 2014-02-25)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "RDF 1.2 N-Quads",
+      "url": "https://www.w3.org/TR/rdf12-n-quads/",
+      "status": "Working Draft",
+      "revision": "rdf12-n-quads WD-rdf12-n-quads-20260612 (Working Draft, 2026-07-23)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
