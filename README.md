@@ -253,9 +253,10 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### CSS, graphics and media
 
-| Skill                     | Description                                                                                                                                                                                                                                                                              |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`webrtc`](skills/webrtc) | WebRTC: This document defines a set of ECMAScript APIs in WebIDL to allow media and generic application data to be sent to and received from another browser or device implementing the appropriate set of real-time protocols. Covers WebRTC: Real-Time Communication in Browsers, Iden |
+| Skill                                   | Description                                                                                                                                                                                                                                                                              |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`webrtc`](skills/webrtc)               | WebRTC: This document defines a set of ECMAScript APIs in WebIDL to allow media and generic application data to be sent to and received from another browser or device implementing the appropriate set of real-time protocols. Covers WebRTC: Real-Time Communication in Browsers, Iden |
+| [`media-capture`](skills/media-capture) | Media Capture: This document defines a set of JavaScript APIs that allow local media, including audio and video, to be requested from a platform. Covers Media Capture and Streams (build), MediaStream Image Capture (track), MediaStream Recording (track), Media Capture from DOM Ele |
 
 #### Data and semantics
 
