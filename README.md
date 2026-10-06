@@ -392,6 +392,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`unicode-emoji`](skills/unicode-emoji)                                   | Unicode Emoji (UTS #51): Please submit corrigenda and other comments with the online reporting form [ Feedback ]. Covers UTS #51. Use when handling emoji sequences                                                                                                                      |
 | [`unicode-bidi`](skills/unicode-bidi)                                     | Unicode Bidirectional Algorithm (UAX #9): This annex describes specifications for the positioning of characters in text containing characters flowing from right Covers UAX #9. Use when ordering bidirectional text                                                                     |
 | [`unicode-collation`](skills/unicode-collation)                           | Unicode Collation Algorithm (UTS #10): supplies the Default Unicode Collation Element Table (DUCET) as the data specifying Covers UTS #10. Use when sorting Unicode text                                                                                                                 |
+| [`cldr`](skills/cldr)                                                     | Unicode Locale Data Markup Language (UTS #35): This document describes an XML format ( vocabulary ) for the exchange of structured locale data. Covers UTS #35 LDML. Use when reading CLDR locale data                                                                                   |
 
 #### Documents and publishing
 
