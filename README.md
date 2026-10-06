@@ -470,6 +470,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`unicode-collation`](skills/unicode-collation)                           | Unicode Collation Algorithm (UTS #10): supplies the Default Unicode Collation Element Table (DUCET) as the data specifying Covers UTS #10. Use when sorting Unicode text                                                                                                                 |
 | [`cldr`](skills/cldr)                                                     | Unicode Locale Data Markup Language (UTS #35): This document describes an XML format ( vocabulary ) for the exchange of structured locale data. Covers UTS #35 LDML. Use when reading CLDR locale data                                                                                   |
 | [`schema-org`](skills/schema-org)                                         | Schema.org: An abstract is a short description that summarizes a CreativeWork . Covers Schema.org. Use when marking up structured data                                                                                                                                                   |
+| [`sitemaps`](skills/sitemaps)                                             | Sitemaps: The Sitemap protocol format consists of XML tags. Covers Sitemaps 0.9. Use when publishing a sitemap                                                                                                                                                                           |
 
 #### Documents and publishing
 
