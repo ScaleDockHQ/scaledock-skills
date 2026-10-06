@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Cryptography API. Web Cryptography API Level 1 is current; Web Cryptography Level 2 is preview. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "webcrypto-1",
+      "label": "Web Cryptography API Level 1",
+      "status": "current",
+      "revision": "webcrypto-1 WD-webcrypto-2-20250422 (Recommendation, 2017-01-26)"
+    },
+    {
+      "id": "webcrypto-2-preview",
+      "label": "Web Cryptography Level 2",
+      "status": "preview",
+      "revision": "webcrypto-2 WD-webcrypto-2-20250422 (First Public Working Draft, 2025-04-22)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Cryptography API",
+      "url": "https://www.w3.org/TR/WebCryptoAPI/",
+      "status": "Recommendation",
+      "revision": "webcrypto-1 WD-webcrypto-2-20250422 (Recommendation, 2017-01-26)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Web Cryptography Level 2",
+      "url": "https://www.w3.org/TR/webcrypto-2/",
+      "status": "First Public Working Draft",
+      "revision": "webcrypto-2 WD-webcrypto-2-20250422 (First Public Working Draft, 2025-04-22)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
