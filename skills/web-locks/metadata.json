@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Web Locks API. Web Locks API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "versions": [
+    {
+      "id": "web-locks",
+      "label": "Web Locks API",
+      "status": "current",
+      "revision": "web-locks WD-web-locks-20250924 (Working Draft, 2025-09-24)",
+      "posture": "track"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Web Locks API",
+      "url": "https://www.w3.org/TR/web-locks/",
+      "status": "Working Draft",
+      "revision": "web-locks WD-web-locks-20250924 (Working Draft, 2025-09-24)",
+      "checked": "2026-10-06"
+    }
+  ]
+}
