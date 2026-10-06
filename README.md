@@ -195,6 +195,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`permissions`](skills/permissions)                         | Permissions: This specification defines common infrastructure that other specifications can use to interact with browser permissions. Covers Permissions (track), Permissions Policy Level 1 (track). Use when querying, requesting or specifying a powerful feature permission          |
 | [`reporting-api`](skills/reporting-api)                     | Reporting API: This document defines a generic reporting framework which allows web developers to associate a set of named reporting endpoints with an origin. Covers Reporting API Level 1 (track), Network Error Logging (track). Use when generating, delivering or collecting browse |
 | [`web-cryptography`](skills/web-cryptography)               | Web Cryptography API: This specification describes a JavaScript API for performing basic cryptographic operations in web applications, such as hashing, signature generation and verification, and encryption and decryption. Covers Web Cryptography API Level 1, Web Cryptography Leve |
+| [`privacy-principles`](skills/privacy-principles)           | Privacy Principles: Privacy is an essential part of the web. Covers Privacy Principles (track), Ethical Web Principles (track). Use when reviewing a web feature against the W3C privacy and ethical principles                                                                          |
 
 #### Web application APIs
 
