@@ -485,7 +485,9 @@ Neutral skills, one per specification or family of specifications from one publi
 
 #### Regulations
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                             | Description                                                                                                                                                                                                                |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`en-301-549`](skills/en-301-549) | EN 301 549: B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE Covers EN 301 549 V4.1.1, EN 301 549 V3.2.1 (supported). Use when applying European ICT accessibility requirements |
 
 #### Developer conventions
 
