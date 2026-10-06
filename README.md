@@ -259,6 +259,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`media-capture`](skills/media-capture)           | Media Capture: This document defines a set of JavaScript APIs that allow local media, including audio and video, to be requested from a platform. Covers Media Capture and Streams (build), MediaStream Image Capture (track), MediaStream Recording (track), Media Capture from DOM Ele |
 | [`media-session`](skills/media-session)           | Media Session: This specification enables web developers to show customized media metadata on platform UI, customize available platform media controls, and access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in n |
 | [`media-capabilities`](skills/media-capabilities) | Media Capabilities: This specification intends to provide APIs to allow websites to make an optimal decision when picking media content for the user. Covers Media Capabilities (track). Use when querying decoding or encoding support                                                  |
+| [`picture-in-picture`](skills/picture-in-picture) | Picture-in-Picture: This specification provides APIs to allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device. Covers Picture-in-Pict |
 
 #### Data and semantics
 
