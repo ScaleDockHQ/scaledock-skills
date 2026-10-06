@@ -386,6 +386,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`unicode`](skills/unicode)                                               | Unicode Standard: STATUS: This is a preliminary draft page for an upcoming release. Covers Unicode 18.0.0, Unicode 17.0.0 (supported), Unicode 16.0.0 (supported). Use when handling Unicode text against a published version                                                            |
 | [`unicode-normalization`](skills/unicode-normalization)                   | Unicode Normalization (UAX #15): When implementations keep strings in a normalized form, they can be assured that equivalent Covers UAX #15. Use when normalizing Unicode text                                                                                                           |
 | [`unicode-segmentation`](skills/unicode-segmentation)                     | Unicode Text Segmentation (UAX #29): implementations can produce these divisions. Covers UAX #29. Use when splitting text into graphemes, words or sentences                                                                                                                             |
+| [`unicode-identifiers`](skills/unicode-identifiers)                       | Unicode Identifier and Pattern Syntax (UAX #31): for the use of Unicode in the definitions of general-purpose identifiers, immutable identifiers, hashtag identifiers, and in Covers UAX #31. Use when deciding which characters are identifiers                                         |
 
 #### Documents and publishing
 
