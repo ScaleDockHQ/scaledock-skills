@@ -455,6 +455,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`contributor-covenant`](skills/contributor-covenant)         | Contributor Covenant: We are committed to fostering an environment that respects and promotes the dignity, rights, and contributions of all individuals, regardless of characteristics including race, ethnicity, caste, color, age, physical characteristics, neurodiversity, disabilit       |
 | [`editorconfig`](skills/editorconfig)                         | EditorConfig: considered literally. Covers EditorConfig. Use when defining editor settings                                                                                                                                                                                                     |
 | [`devcontainer`](skills/devcontainer)                         | Development Containers: The purpose of the Development Container Specification is to provide a way to enrich containers with the content and metadata necessary to enable development inside them. Covers Development Containers. Use when writing a devcontainer.json                         |
+| [`compose-spec`](skills/compose-spec)                         | Compose specification: > Find more information about the [key features and use cases of Docker Compose](/compose/intro/features-uses/) or [try the quickstart guide](/compose/gettingstarted/). Covers Compose file. Use when writing a Compose file                                           |
 
 #### Domain verticals
 
