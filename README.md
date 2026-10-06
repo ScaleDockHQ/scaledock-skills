@@ -237,6 +237,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`owasp-scvs`](skills/owasp-scvs)                             | OWASP SCVS: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP SCVS. Use when verifying software components                                                                                                                                  |
 | [`owasp-ci-cd-top-10`](skills/owasp-ci-cd-top-10)             | OWASP CI/CD Top 10: OWASP Top 10 CI/CD Security Risks \| OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP CI/CD Top 10. Use when reviewing CI/CD security risks                                                           |
 | [`owasp-mobile-top-10`](skills/owasp-mobile-top-10)           | OWASP Mobile Top 10: OWASP Mobile Top 10 \| OWASP Foundation OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP Mobile Top 10. Use when reviewing mobile security risks                                                                      |
+| [`owasp-ml-top-10`](skills/owasp-ml-top-10)                   | OWASP ML Top 10: OWASP Foundation Home Projects Chapters Events Meetings News About Sign in Donate Covers OWASP ML Top 10. Use when reviewing machine learning security risks                                                                                                            |
 
 #### Observability and operations
 
