@@ -201,6 +201,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`web-sustainability-guidelines`](skills/web-sustainability-guidelines)   | Web Sustainability Guidelines (WSG): Web Sustainability Guidelines ( WSG ) provide actionable recommendations to help digital teams make informed, sustainable decisions. Covers Web Sustainability Guidelines (WSG) (track). Use when reviewing a site or product against the Web Susta |
 | [`atag`](skills/atag)                                                     | Authoring Tool Accessibility Guidelines (ATAG): The Authoring Tool Accessibility Guidelines (ATAG) 2.0 provides guidelines for designing web content authoring tools that are both more accessible to authors with disabilities (Part A) and designed to enable, support, and promote th |
 | [`act-rules-format`](skills/act-rules-format)                             | Accessibility Conformance Testing (ACT) Rules Format: Accessibility Conformance Testing (ACT) Rules Format 1.1 defines a format for writing accessibility test rules. Covers Accessibility Conformance Testing (ACT) Rules Format 1.1. Use when writing or running an ACT rule           |
+| [`wai-adapt`](skills/wai-adapt)                                           | WAI-Adapt: This specification provides web content authors a standard approach to support web users with various cognitive and learning disabilities who: Customarily communicate using symbolic languages generally known as Augmentative and Alternative Communications ( AAC ); Need  |
 
 #### Web application APIs
 
