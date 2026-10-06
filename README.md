@@ -439,7 +439,9 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 
 #### Domain verticals
 
-Specifications in this group are tracked in [docs/standards-inventory.md](docs/standards-inventory.md).
+| Skill                   | Description                                                                                                                                                                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`tosca`](skills/tosca) | TOSCA: The Topology and Orchestration Specification for Cloud Applications (TOSCA) provides a language for describing application components and their relationships by means of a service topology, and for specifying the lifecycle management procedures for creation or modification |
 
 ## Development
 
