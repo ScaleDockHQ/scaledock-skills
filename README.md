@@ -457,6 +457,7 @@ Specifications in this group are tracked in [docs/standards-inventory.md](docs/s
 | [`devcontainer`](skills/devcontainer)                         | Development Containers: The purpose of the Development Container Specification is to provide a way to enrich containers with the content and metadata necessary to enable development inside them. Covers Development Containers. Use when writing a devcontainer.json                         |
 | [`compose-spec`](skills/compose-spec)                         | Compose specification: > Find more information about the [key features and use cases of Docker Compose](/compose/intro/features-uses/) or [try the quickstart guide](/compose/gettingstarted/). Covers Compose file. Use when writing a Compose file                                           |
 | [`diataxis`](skills/diataxis)                                 | Diátaxis: It prescribes approaches to content, architecture and form that emerge from a systematic approach to understanding the needs of documentation users. Covers Diátaxis. Use when structuring documentation                                                                             |
+| [`citation-cff`](skills/citation-cff)                         | Citation File Format: You are using an outdated browser. Covers Citation File Format. Use when writing a CITATION.cff file                                                                                                                                                                     |
 
 #### Domain verticals
 
