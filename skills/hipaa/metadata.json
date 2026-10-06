@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers 45 CFR Parts 160 and 164 as fetched from the current eCFR text. Requirements are quotes from that text.",
+  "versions": [
+    {
+      "id": "cfr-45-parts-160-164",
+      "label": "45 CFR Parts 160 and 164",
+      "status": "current",
+      "revision": "eCFR current, fetched 2026-10-06"
+    }
+  ],
+  "sources": [
+    {
+      "title": "45 CFR Part 160",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-45?part=160",
+      "status": "eCFR",
+      "revision": "current title 45 part 160, fetched 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "45 CFR Part 164",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-45?part=164",
+      "status": "eCFR",
+      "revision": "current title 45 part 164, fetched 2026-10-06",
+      "checked": "2026-10-06"
+    }
+  ]
+}
