@@ -527,6 +527,7 @@ Neutral skills, one per specification or family of specifications from one publi
 | [`eu-digital-product-passport`](skills/eu-digital-product-passport)       | Digital product passport: Regulation (EU) 2024/1781 establishes ecodesign requirements and the product passport. Covers Regulation (EU) 2024/1781. Use when applying the digital product passport. Triggers: DPP, ESPR, 2024/1781.                                                       |
 | [`ada-title-ii`](skills/ada-title-ii)                                     | ADA Title II: 28 CFR Part 35 is nondiscrimination on the basis of disability in state and local government services. Covers 28 CFR Part 35. Use when applying ADA Title II. Triggers: ADA Title II, 28 CFR 35.                                                                           |
 | [`hipaa`](skills/hipaa)                                                   | HIPAA: 45 CFR Parts 160 and 164 are the general, privacy, security and breach notification rules. Covers 45 CFR Parts 160 and 164. Use when applying the HIPAA Rules. Triggers: HIPAA, 45 CFR 164.                                                                                       |
+| [`aoda`](skills/aoda)                                                     | Accessibility for Ontarians with Disabilities Act, 2005 and the Integrated Accessibility Standards (O. Reg. 191/11): websites, kiosks, feedback, accessible formats and reports.                                                                                                         |
 
 #### Developer conventions
 

@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the AODA 2005 and O. Reg. 191/11 from Ontario e-Laws. Requirements are quotes from the consolidated law.",
+  "versions": [
+    {
+      "id": "aoda-2005-iasr-2026",
+      "label": "AODA 2005 with O. Reg. 191/11",
+      "status": "current",
+      "revision": "O. Reg. 191/11 consolidated from 2026-03-30 (last amendment O. Reg. 69/26); Act consolidated from 2016-04-19"
+    }
+  ],
+  "sources": [
+    {
+      "title": "O. Reg. 191/11: Integrated Accessibility Standards",
+      "url": "https://www.ontario.ca/laws/regulation/110191",
+      "status": "Ontario regulation (consolidated)",
+      "revision": "Consolidation period from 2026-03-30, last amendment O. Reg. 69/26",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Accessibility for Ontarians with Disabilities Act, 2005, S.O. 2005, c. 11",
+      "url": "https://www.ontario.ca/laws/statute/05a11",
+      "status": "Ontario statute (consolidated)",
+      "revision": "Consolidation period from 2016-04-19, last amendment 2016, c. 5, Sched. 1",
+      "checked": "2026-10-06"
+    }
+  ]
+}
