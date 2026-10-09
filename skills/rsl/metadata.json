@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Really Simple Licensing (RSL) 1.0, the RSL Technical Steering Committee's XML vocabulary for machine-readable AI usage, licensing, payment, reporting and legal terms, pinned to RSL-SPEC-1.0 (Recommendation, 2025-12-10) with errata through 2026-08-07. RSL 1.0 is the current line and the RSL 0.9 draft is legacy with an upgrade checklist. SKILL.md holds the invariants and workflow; references split out versions, the document vocabulary and conflict rules, discovery and association mechanisms, and the optional OLP, CAP and EMS protocols.",
+  "versions": [
+    {
+      "id": "1.0",
+      "label": "RSL 1.0",
+      "status": "current",
+      "revision": "RSL-SPEC-1.0 (2025-12-10), errata to 2026-08-07"
+    },
+    {
+      "id": "0.9",
+      "label": "RSL 0.9",
+      "status": "legacy",
+      "revision": "0.9 draft (last updated 2025-09-16)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Really Simple Licensing (RSL) 1.0 Specification",
+      "url": "https://rslstandard.org/rsl",
+      "status": "Recommendation (RSL TSC)",
+      "revision": "RSL-SPEC-1.0 (2025-12-10)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RSL 1.0 Specification: Errata and Change History",
+      "url": "https://rslstandard.org/rsl/errata",
+      "status": "Errata log",
+      "revision": "latest entry 2026-08-07",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RSL latest version pointer",
+      "url": "https://rslstandard.org/rsl/latest/",
+      "status": "Version index",
+      "revision": "points to 1.0",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RSL Default Access Terms",
+      "url": "https://rslstandard.org/rsl/default-terms",
+      "status": "Referenced terms document",
+      "revision": "unversioned page",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Really Simple Licensing (RSL) 0.9 Specification",
+      "url": "https://rslstandard.org/rsl/0.9/",
+      "status": "Draft, superseded",
+      "revision": "0.9 (last updated 2025-09-16)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9309: Robots Exclusion Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9309 (September 2022)",
+      "checked": "2026-10-09"
+    }
+  ]
+}
