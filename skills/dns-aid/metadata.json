@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers DNS-AID (DNS for AI Discovery), draft-mozleywilliams-dnsop-dnsaid-02: publishing AI agents as SVCB RRsets at their primary owner names, one record per agent protocol, AliasMode for _agents and DNS-SD names, the _index._agents organization index, DANE TLSA, DNSSEC, mandatory= downgrade rules, the proposed cap, cap-sha256, bap, policy, realm and well-known SvcParamKeys as private-use keys, and the consumer rules for discovery, trust, integrity and privacy. It lists two version lines: draft-mozleywilliams-dnsop-dnsaid-02 (current, posture name) and draft-mozleywilliams-dnsop-dnsaid-01 (legacy, with -00, upgraded from). SKILL.md holds the invariants and workflow; references split out versions, publishing records, and discovery.",
+  "versions": [
+    {
+      "id": "dnsaid-02",
+      "label": "draft-mozleywilliams-dnsop-dnsaid-02",
+      "status": "current",
+      "revision": "draft-mozleywilliams-dnsop-dnsaid-02 (2026-05-27)",
+      "posture": "name"
+    },
+    {
+      "id": "dnsaid-01",
+      "label": "draft-mozleywilliams-dnsop-dnsaid-01",
+      "status": "legacy",
+      "revision": "draft-mozleywilliams-dnsop-dnsaid-01 (2026-03-02), with -00 (2026-02-23)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "draft-mozleywilliams-dnsop-dnsaid-02: DNS for AI Discovery",
+      "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-02.txt",
+      "status": "Individual Internet-Draft, intended Standards Track",
+      "revision": "-02 (2026-05-27), expires 2026-11-28",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-mozleywilliams-dnsop-dnsaid datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/",
+      "status": "Active, I-D Exists",
+      "revision": "latest -02",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-mozleywilliams-dnsop-dnsaid-01",
+      "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-01.txt",
+      "status": "Individual Internet-Draft, superseded",
+      "revision": "-01 (2026-03-02)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-mozleywilliams-dnsop-dnsaid-00",
+      "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-dnsaid-00.txt",
+      "status": "Individual Internet-Draft, superseded",
+      "revision": "-00 (2026-02-23)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-mozleywilliams-dnsop-bandaid-00: Brokered Agent Network for DNS AI Discovery",
+      "url": "https://www.ietf.org/archive/id/draft-mozleywilliams-dnsop-bandaid-00.txt",
+      "status": "Individual Internet-Draft, expired, replaced by draft-mozleywilliams-dnsop-dnsaid",
+      "revision": "-00 (2025-10-16)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "DNS-AID project site",
+      "url": "https://dns-aid.org/",
+      "status": "Project site, informative",
+      "revision": "as of 2026-10-09",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "dns-aid/dns-aid-core",
+      "url": "https://github.com/dns-aid/dns-aid-core",
+      "status": "Reference implementation, informative",
+      "revision": "release v0.28.1 (2026-08-09); main at c4944f511e85cc58ed606ca186371c33d35478fe (2026-09-20)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9460: Service Binding and Parameter Specification via the DNS (SVCB and HTTPS RRs)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9460",
+      "status": "Proposed Standard",
+      "revision": "RFC 9460",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 6698: The DNS-Based Authentication of Named Entities (DANE) TLSA protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc6698",
+      "status": "Proposed Standard",
+      "revision": "RFC 6698",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 7671: The DANE Protocol: Updates and Operational Guidance",
+      "url": "https://www.rfc-editor.org/rfc/rfc7671",
+      "status": "Proposed Standard",
+      "revision": "RFC 7671",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9364: DNS Security Extensions (DNSSEC)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9364",
+      "status": "Best Current Practice",
+      "revision": "BCP 237",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 8552: Scoped Interpretation of DNS Resource Records through Underscored Naming of Attribute Leaves",
+      "url": "https://www.rfc-editor.org/rfc/rfc8552",
+      "status": "Best Current Practice",
+      "revision": "BCP 222",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 8484: DNS Queries over HTTPS (DoH)",
+      "url": "https://www.rfc-editor.org/rfc/rfc8484",
+      "status": "Proposed Standard",
+      "revision": "RFC 8484",
+      "checked": "2026-10-09"
+    }
+  ]
+}
