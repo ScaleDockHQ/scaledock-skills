@@ -4,7 +4,7 @@ description: "EU AI Act, Regulation (EU) 2024/1689: classify AI systems and turn
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.1"
+  version: "1.1.2"
   kind: standard
 ---
 
@@ -94,6 +94,9 @@ Regulation (EU) 2024/1689, the Artificial Intelligence Act, lays down harmonised
 - `eu-cra` for the Cyber Resilience Act obligations on products with digital elements: `npx skills add ScaleDockHQ/scaledock-skills --skill eu-cra`.
 - `c2pa` for Content Credentials that mark AI-generated content: `npx skills add ScaleDockHQ/scaledock-skills --skill c2pa`.
 - `nist-ai-rmf` for structuring an AI risk management program with the NIST AI RMF: `npx skills add ScaleDockHQ/scaledock-skills --skill nist-ai-rmf`.
+- `tdmrep` for machine-readable text and data mining reservations, one way a GPAI copyright policy can identify Art. 4(3) Directive (EU) 2019/790 reservations of rights under Art. 53(1)(c); the Act names no specific protocol: `npx skills add ScaleDockHQ/scaledock-skills --skill tdmrep`.
+- `rsl` for machine-readable AI licensing terms that a GPAI crawler can read when applying its Art. 53(1)(c) copyright policy: `npx skills add ScaleDockHQ/scaledock-skills --skill rsl`.
+- `content-signals` for robots.txt `Content-Signal` preferences (search, ai-input, ai-train) that a GPAI crawler can read when applying its Art. 53(1)(c) copyright policy: `npx skills add ScaleDockHQ/scaledock-skills --skill content-signals`.
 
 ## Sources
 

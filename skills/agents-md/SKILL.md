@@ -13,7 +13,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -99,6 +99,7 @@ AGENTS.md is "a simple, open format for guiding coding agents", published at age
 - `agent-skills` for task-specific `SKILL.md` skills, which complement repository-wide AGENTS.md instructions: `npx skills add ScaleDockHQ/scaledock-skills --skill agent-skills`.
 - `llms-txt` for publishing an `/llms.txt` index of documentation for language models: `npx skills add ScaleDockHQ/scaledock-skills --skill llms-txt`.
 - `mcp` for connecting agents to tools and data with the Model Context Protocol: `npx skills add ScaleDockHQ/scaledock-skills --skill mcp`.
+- `agent-client-protocol` for connecting coding agents to editors with the Agent Client Protocol: `npx skills add ScaleDockHQ/scaledock-skills --skill agent-client-protocol`.
 
 ## Sources
 

@@ -17,7 +17,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 
@@ -115,6 +115,7 @@ The Model Context Protocol connects LLM applications (hosts and their clients) t
 - `mcp-apps`: interactive UI for MCP servers (the `io.modelcontextprotocol/ui` extension), once published. Install with `npx skills add ScaleDockHQ/scaledock-skills --skill mcp-apps`.
 - `json-rpc`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill json-rpc`
 - `server-sent-events`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill server-sent-events`
+- `agent-client-protocol` for the Agent Client Protocol between editors and coding agents, which can pass MCP server configurations to the agent: `npx skills add ScaleDockHQ/scaledock-skills --skill agent-client-protocol`.
 
 ## Sources
 

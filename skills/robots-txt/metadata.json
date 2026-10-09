@@ -1,9 +1,9 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers RFC 9309, the Robots Exclusion Protocol: the /robots.txt location and format, user-agent groups and product tokens, group merging and the * fallback, allow and disallow rules with longest-match precedence, the * and $ special characters, percent-encoding, other records such as Sitemap, fetch outcomes (4xx allow all, 5xx or unreachable disallow all, at least five redirects), 24-hour caching, the 500 KiB parsing limit and the security considerations, plus addressing AI crawlers by the product tokens their operators document and how robots.txt relates to AI usage preferences. Version lines: RFC 9309 is current, the 1994 A Standard for Robot Exclusion and the 1996 draft-koster-robots-00 are legacy with upgrade steps, and draft-ietf-aipref-attach-05 (the Content-Usage rule) is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions and upgrades, syntax and matching, fetching and caching, and crawlers and AI.",
+  "abstract": "Covers RFC 9309, the Robots Exclusion Protocol: the /robots.txt location and format, user-agent groups and product tokens, group merging and the * fallback, allow and disallow rules with longest-match precedence, the * and $ special characters, percent-encoding, other records such as Sitemap, fetch outcomes (4xx allow all, 5xx or unreachable disallow all, at least five redirects), 24-hour caching, the 500 KiB parsing limit and the security considerations, plus addressing AI crawlers by the product tokens their operators document and how robots.txt relates to AI usage preferences, and how parsers tolerate non-RFC extension lines such as the Content Signals Policy's Content-Signal and RSL's License directive. Version lines: RFC 9309 is current, the 1994 A Standard for Robot Exclusion and the 1996 draft-koster-robots-00 are legacy with upgrade steps, and draft-ietf-aipref-attach-05 (the Content-Usage rule) is tracked as a preview. SKILL.md holds the invariants and workflow; references split out versions and upgrades, syntax and matching, fetching and caching, and crawlers and AI.",
   "versions": [
     {
       "id": "aipref-attach-preview",
@@ -108,6 +108,27 @@
       "status": "Crawler operator documentation",
       "revision": "undated",
       "checked": "2026-10-05"
+    },
+    {
+      "title": "Perplexity Crawlers",
+      "url": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "status": "Crawler operator documentation",
+      "revision": "undated",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Giving users choice with Cloudflare's new Content Signals Policy",
+      "url": "https://blog.cloudflare.com/content-signals-policy/",
+      "status": "Cloudflare announcement and policy text (CC0)",
+      "revision": "24 September 2025",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Really Simple Licensing (RSL) 1.0 Specification",
+      "url": "https://rslstandard.org/rsl",
+      "status": "Recommendation (RSL TSC)",
+      "revision": "RSL-SPEC-1.0 (2025-12-10), § 4.4",
+      "checked": "2026-10-09"
     }
   ]
 }

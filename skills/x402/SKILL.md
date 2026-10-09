@@ -17,7 +17,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.0.2"
   kind: standard
 ---
 
@@ -113,6 +113,7 @@ x402 is an open standard for internet-native payments, maintained in the x402 Fo
 - `agentic-commerce-protocol` for agent checkout flows: `npx skills add ScaleDockHQ/scaledock-skills --skill agentic-commerce-protocol`.
 - `ucp` for the Universal Commerce Protocol: `npx skills add ScaleDockHQ/scaledock-skills --skill ucp`.
 - `ethereum-eips`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill ethereum-eips`
+- `machine-payments-protocol` for the Machine Payments Protocol, another HTTP 402 payment protocol for agents: `npx skills add ScaleDockHQ/scaledock-skills --skill machine-payments-protocol`.
 
 ## Sources
 

@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Make a ScaleDock website agent-ready: all meaning in the first HTML payload, an explicit per-crawler AI policy in robots.txt, llms.txt, markdown twins served at .md URLs and through Accept: text/markdown negotiation with Vary: Accept (RFC 9110, RFC 7763), one schema.org JSON-LD @graph per page, /.well-known/api-catalog (RFC 9727), WebMCP tools that mirror plain HTTP endpoints, an A2A Agent Card, consistent content rights across aipref, Content Signals, RSL and TDMRep, Web Bot Auth instead of User-Agent trust, sitemaps, security.txt and no hidden instructions to agents. It installs and defers to the matching spec skills; references/checklist.md has a curl check per invariant and references/content-negotiation.md covers the markdown twins.",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc9110",
+    "https://www.rfc-editor.org/rfc/rfc7763",
+    "https://www.rfc-editor.org/rfc/rfc9727",
+    "https://www.rfc-editor.org/rfc/rfc9309",
+    "https://www.rfc-editor.org/rfc/rfc9116",
+    "https://llmstxt.org/",
+    "https://schema.org/version/latest/",
+    "https://www.sitemaps.org/protocol.html",
+    "https://webmachinelearning.github.io/webmcp/",
+    "https://a2a-protocol.org/latest/specification/",
+    "https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/",
+    "https://blog.cloudflare.com/content-signals-policy/",
+    "https://rslstandard.org/rsl",
+    "https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/",
+    "https://datatracker.ietf.org/doc/draft-ietf-webbotauth-httpsig-protocol/"
+  ]
+}
