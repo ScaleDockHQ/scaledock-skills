@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ The Push API enables sending of a push message to a web application via a push s
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when subscribing to or delivering a web push message.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **3.4.** "It MUST be the absolute URL exposed by the push service where the application server can send push messages to."
-2. **3.4.** "A push endpoint MUST uniquely identify the push subscription ."
-3. **3.4.** "When set, it MUST be the time, in milliseconds since 00:00:00 UTC on 1 January 1970, at which the subscription will be deactivated ."
-4. **3.4.** "The user agent SHOULD attempt to refresh the push subscription before the subscription expires."
-5. **3.4.** "If the user agent has to change the keys of a push subscription for any reason and the push subscription 's associated service worker registration is non-null, it MUST refresh the push subscription ."
-6. **3.4.2.** "When this happens, the user agent MUST run the steps to create a push subscription given the PushSubscriptionOptions that were provided for creating the current push subscription , and set the new push subscription 's scope to the original subscription's scope ."
-7. **3.4.2.** "The new push subscription MUST have a key pair that's different from the original subscription."
-8. **3.4.2.** "When successful, user agent then MUST fire the " pushsubscriptionchange " event with the service worker registration associated with the push subscription as registration , a PushSubscription instance representing the initial push subscription as oldSubscription and a PushSubscription instance representing the new push subscription as newSubscription ."
+1. **§ 3.4.** "A push endpoint MUST uniquely identify the push subscription."
+2. **§ 3.4.3.** "When a push subscription is deactivated, both the user agent and the push service MUST delete any stored copies of its details."
+3. **§ 4.** "The push endpoint MUST NOT expose information about the user to be derived by actors other than the push service, such as the user's device, identity or location."
+4. **§ 7.** "User agents MUST support the aes128gcm content coding defined in [RFC8291], and MAY support content codings defined in previous versions of the draft for compatibility reasons."
+5. **§ 7.2.** "If present, the value of applicationServerKey MUST include a point on the P-256 elliptic curve [DSS], encoded in the uncompressed form described in [ANSI-X9-62] Annex A (that is, 65 octets, starting with an 0x04 octet)."
+6. **RFC 8030 § 3.** "The push service MUST use HTTP over Transport Layer Security (TLS) [RFC2818] following the recommendations in [RFC7525]."
+7. **RFC 8030 § 5.2.** "An application server MUST include the TTL (Time-To-Live) header field in its request for push message delivery."
+8. **RFC 8291 § 3.2.** "A user agent MUST generate and provide a hard-to-guess sequence of 16 octets that is used for authentication of push messages."
+9. **RFC 8291 § 4.** "An application server MUST encrypt a push message with a single record."
+10. **RFC 8292 § 2.** "The signature MUST use ECDSA on the NIST P-256 curve [FIPS186], which is identified as "ES256" [RFC7518]."
+11. **RFC 8292 § 3.2.** "An application server MUST select a different private key for the key exchange [RFC8291] and signing the authentication token."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

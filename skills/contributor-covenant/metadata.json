@@ -1,36 +1,36 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Contributor Covenant. Contributor Covenant 3.0 is current; Contributor Covenant 2.1 is supported. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers Contributor Covenant 3.0 and 2.1 from EthicalSource/contributor_covenant. The text has no MUST or SHALL keywords; requirements are its defining rules, quoted as written.",
   "versions": [
     {
       "id": "contributor-covenant-3.0",
       "label": "Contributor Covenant 3.0",
       "status": "current",
-      "revision": "Contributor Covenant 3.0, fetched 2026-10-06 (Code of conduct, 2026-10-06)"
+      "revision": "Version 3.0, release branch at commit 7255a28"
     },
     {
       "id": "contributor-covenant-2.1",
       "label": "Contributor Covenant 2.1",
       "status": "supported",
-      "revision": "Contributor Covenant 2.1, fetched 2026-10-06 (Code of conduct, 2026-10-06)"
+      "revision": "Version 2.1, release branch at commit 7255a28"
     }
   ],
   "sources": [
     {
-      "title": "Contributor Covenant 3.0",
-      "url": "https://www.contributor-covenant.org/version/3/0/code_of_conduct/",
-      "status": "Code of conduct",
-      "revision": "Contributor Covenant 3.0, fetched 2026-10-06 (Code of conduct, 2026-10-06)",
+      "title": "Contributor Covenant 3.0 Code of Conduct",
+      "url": "https://raw.githubusercontent.com/EthicalSource/contributor_covenant/7255a28d23d5bc296de2e4e4e9bb5ee1126f1345/content/version/3/0/code_of_conduct.md",
+      "status": "Released version",
+      "revision": "Version 3.0, release branch at commit 7255a28",
       "checked": "2026-10-06"
     },
     {
-      "title": "Contributor Covenant 2.1",
-      "url": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/",
-      "status": "Code of conduct",
-      "revision": "Contributor Covenant 2.1, fetched 2026-10-06 (Code of conduct, 2026-10-06)",
+      "title": "Contributor Covenant 2.1 Code of Conduct",
+      "url": "https://raw.githubusercontent.com/EthicalSource/contributor_covenant/7255a28d23d5bc296de2e4e4e9bb5ee1126f1345/content/version/2/1/code_of_conduct.md",
+      "status": "Released version",
+      "revision": "Version 2.1, release branch at commit 7255a28",
       "checked": "2026-10-06"
     }
   ]

@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id     | Line       | Status  | Revision                                             | Posture | Publisher          |
-| ------ | ---------- | ------- | ---------------------------------------------------- | ------- | ------------------ |
-| `samm` | OWASP SAMM | current | OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06) |         | Project 2026-10-06 |
+| Id     | Line       | Status  | Revision                    | Posture | Summary                                                                                                          |
+| ------ | ---------- | ------- | --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| `samm` | OWASP SAMM | current | Release v2.2.0 (2026-07-06) |         | SAMM v2 core model: 5 business functions, 15 security practices, 2 streams per practice, maturity levels 1 to 3. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### OWASP SAMM
-
-- Publisher status on 2026-10-06: Project (2026-10-06).
-- Pinned text: https://owasp.org/www-project-samm/
-- Revision token: OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06)
+SAMM v2 releases are versioned as tags of the `owaspsamm/core` model repository; pin the tag in [Sources](../SKILL.md#sources). SAMM 1.x (2009 to 2017) used a different practice structure and is not covered here. Activity ids read as practice, level and stream: `G-SM-1-A` is Strategy and Metrics, level 1, stream A.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+This skill has one published line. There is no older line here to upgrade from.

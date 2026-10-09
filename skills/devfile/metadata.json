@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Devfile. Devfile 2.3 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers Devfile 2.3.0: the JSON schema from devfile/api v2.3.0 and the 2.3.0 authoring guides from devfile/devfile-web. Requirements are quotes from the schema descriptions and the guides.",
   "versions": [
     {
       "id": "devfile-2.3",
       "label": "Devfile 2.3",
       "status": "current",
-      "revision": "Devfile 2.3 schema, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "Devfile schema 2.3.0 (devfile/api v2.3.0, commit c088cf3)"
     }
   ],
   "sources": [
     {
-      "title": "Devfile 2.3",
-      "url": "https://devfile.io/docs/2.3.0/devfile-schema",
+      "title": "Devfile schema 2.3.0",
+      "url": "https://raw.githubusercontent.com/devfile/api/c088cf36a78ddadb8a45b951a2e7214a2ef2da26/schemas/latest/devfile.json",
       "status": "Specification",
-      "revision": "Devfile 2.3 schema, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Devfile schema 2.3.0 (devfile/api v2.3.0, commit c088cf3)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Adding components",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/adding-components.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Creating devfiles",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/create-devfiles.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Adding a command group",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/adding-a-command-group.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Adding an exec command",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/adding-an-exec-command.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Adding a container component",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/adding-a-container-component.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Adding projects",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/adding-projects.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Defining starter projects",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/defining-starter-projects.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Defining endpoints",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/defining-endpoints.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Devfile 2.3.0 docs: Referring to a parent devfile",
+      "url": "https://raw.githubusercontent.com/devfile/devfile-web/5e4115c7cb868fc52e9898268dd0c93e6292c445/libs/docs/src/docs/2.3.0/referring-to-a-parent-devfile.md",
+      "status": "Documentation",
+      "revision": "2.3.0 docs (devfile-web main at commit 5e4115c, 2026-09-27)",
       "checked": "2026-10-06"
     }
   ]

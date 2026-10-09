@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # SWID
 
-Willie May, Under Secretary of Commerce for Standards and Technology and Director
+Software identification (SWID) tags as profiled by NIST IR 8060, Guidelines for the Creation of Interoperable Software Identification (SWID) Tags: numbered guidelines for corpus, primary, patch and supplemental tags on top of ISO/IEC 19770-2:2015.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when tagging software with SWID.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: authoritative tag creator (software provider), non-authoritative tag creator (discovery tool), or tag consumer.
 - Target version: NIST IR 8060 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this report are to be interpreted as described in Request for Comment (RFC) 2119 [RFC 2119]."
-2. **document.** "When these words appear in regular case, such as “should” or “may”, they are not intended to be interpreted as RFC 2119 key words."
-3. **document.** "A key requirement of the labeling process is that when the same unit of software is discovered on different devices, it must be assigned the same label."
-4. **document.** "This report helps software consumers understand the benefits of software NISTIR 8060 GUIDELINES FOR THE CREATION OF INTEROPERABLE SWID TAGS 5 products that are delivered with SWID tags, and why they should encourage software providers to deliver products with SWID tags that meet their anticipated usage scenarios."
-5. **document.** "In all cases, an installation procedure must be run to cause the software contained in an installation package to be unpacked and deployed on a target device."
-6. **document.** "Patch 2 has @rel=requires Patch 1, since Patch 1 must be installed before Patch 2."
-7. **document.** "Section 2.3.1 describes how and where SWID tags should be deployed as the result of installing new software, applying a patch, or performing an update to existing software."
-8. **document.** "Any NISTIR 8060 GUIDELINES FOR THE CREATION OF INTEROPERABLE SWID TAGS 15 payload information provided must reference files using a relative path of the location where the SWID tag is stored."
+1. **GEN-1.** "When producing SWID tags, tag creators MUST produce SWID tags that conform to all requirements defined in the ISO/IEC 19770-2:2015 specification."
+2. **GEN-4.** "Every `<Entity>` element MUST provide an explicit (i.e., non-default) @regid attribute value."
+3. **GEN-19.** "Whenever a `<Payload>` element is included in a tag, every `<File>` element contained therein MUST provide a hash value based on the SHA-256 hash function."
+4. **GEN-26.** "When it is necessary to update a tag to correct errors in or add data elements to that tag, the tag's `<SoftwareIdentity>` @tagVersion attribute MUST be changed."
+5. **PRI-1.** "To indicate that a tag is a primary tag, the `<SoftwareIdentity>` @corpus, @patch, and @supplemental attributes MUST be set to "false"."
 
 ## Workflow
 

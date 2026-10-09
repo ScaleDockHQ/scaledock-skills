@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ The Open Digital Rights Language (ODRL) is a policy expression language that pro
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when expressing permissions and obligations.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **1.2 Conformance.** "The key words MAY , MUST , MUST NOT , RECOMMENDED , SHOULD , and SHOULD NOT are to be interpreted as described in [ RFC2119 ]."
-2. **2. ODRL Information Model.** "The Permission MAY also have the duty property that expresses an agreed Action that MUST be exercised (as a pre-condition to be granted the Permission)."
-3. **2.1 Policy Class.** "The Policy class has the following properties: A Policy MUST have one uid property value (of type IRI [ rfc3987 ]) to identify the Policy."
-4. **2.1 Policy Class.** "A Policy MUST have at least one permission , prohibition , or obligation property values of type Rule."
-5. **2.1 Policy Class.** "In the latter case, the profile property MUST be used to indicate the IRIs of the ODRL Profile(s)."
-6. **2.1 Policy Class.** "(The Examples in this document will use ODRL Profile identifiers for illustrative purposes only.) An ODRL Policy MAY be subclassed to more precisely describe the context of use of the Policy that MAY include additional constraints that ODRL processors MUST understand."
-7. **2.1 Policy Class.** "A Policy class MUST be disjoint will all Policy subclasses (except for Set)."
-8. **2.1.2 Offer Class.** "An ODRL Policy of subclass Offer : MUST have one assigner property value (of type Party) to indicate the functional role in the same Rules."
+1. **§ 2.1.** "A Policy MUST have one uid property value (of type IRI [rfc3987]) to identify the Policy."
+2. **§ 2.1.** "A Policy MUST have at least one permission, prohibition, or obligation property values of type Rule."
+3. **§ 2.5.** "When multiple Constraints apply to the same Rule, Action, Party/Asset Collection, then they are interpreted as conjunction and all MUST be satisfied."
+4. **§ 2.5.1.** "Only one of rightOperand or rightOperandReference MUST appear in the Constraint."
+5. **§ 2.6.** "A Rule MUST have one action property value of type Action."
+6. **§ 2.6.1.** "A Permission MUST have one target property value of type Asset."
+7. **§ 2.8.** "If a Policy has the dc:isReplacedBy property, then a processor MUST consider the first Policy void and MUST retrieve and process the identified Policy."
+8. **§ 2.10.** "If a Policy has multiple conflict property values (for example, after a Policy merge or inheritance) and there are conflicting Rules then the entire Policy MUST be void."
+9. **§ 3.2.** "If the ODRL Processing system does not recognise the ODRL Profile identifier(s) then it MUST stop processing the policy."
+10. **§ 3.2.1.** "An Agreement Policy MUST contain at least one Permission or Prohibition rule, a Party with Assigner function, and a Party with Assignee function (in the same Permission or Prohibition)."
+11. **§ 5.** "Implementations of ODRL expressions must be serialised using the UTF-8 character encoding."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

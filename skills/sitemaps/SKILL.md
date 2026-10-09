@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ The Sitemap protocol format consists of XML tags. All data values in a Sitemap m
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when publishing a sitemap.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "All data values in a Sitemap must be entity-escaped ."
-2. **document.** "The Sitemap must: Begin with an opening < urlset > tag and end with a closing </urlset> tag."
-3. **document.** "Also, all URLs in a Sitemap must be from a single host, such as www.example.com or store.example.com."
-4. **document.** "This URL must begin with the protocol (such as http) and end with a trailing slash, if your web server requires it."
-5. **document.** "This value must be less than 2,048 characters."
-6. **document.** "This date should be in W3C Datetime format."
-7. **document.** "Note that the date must be set to the date the linked page was last modified, not when the sitemap is generated."
-8. **document.** "Valid values are: always hourly daily weekly monthly yearly never The value "always" should be used to describe documents that change each time they are accessed."
+1. **Sitemaps XML format.** "All data values in a Sitemap must be entity-escaped."
+2. **Sitemaps XML format.** "The file itself must be UTF-8 encoded."
+3. **Sitemaps XML format.** "The Sitemap must: Begin with an opening `<urlset>` tag and end with a closing `</urlset>` tag."
+4. **Sitemaps XML format.** "Also, all URLs in a Sitemap must be from a single host, such as www.example.com or store.example.com."
+5. **XML tag definitions, loc.** "This value must be less than 2,048 characters."
+6. **XML tag definitions, lastmod.** "Note that the date must be set to the date the linked page was last modified, not when the sitemap is generated."
+7. **Using Sitemap index files.** "You can provide multiple Sitemap files, but each Sitemap file that you provide must have no more than 50,000 URLs and must be no larger than 50MB (52,428,800 bytes)."
+8. **Using Sitemap index files.** "If you would like, you may compress your Sitemap files using gzip to reduce your bandwidth requirement; however the sitemap file once uncompressed must be no larger than 50MB."
+9. **Using Sitemap index files.** "Sitemap index files may not list more than 50,000 Sitemaps and must be no larger than 50MB (52,428,800 bytes) and can be compressed."
+10. **Sitemap file location.** "Note that this means that all URLs listed in the Sitemap must use the same protocol (http, in this example) and reside on the same host as the Sitemap."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

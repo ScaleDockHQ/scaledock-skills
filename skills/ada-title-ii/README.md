@@ -12,7 +12,7 @@ Then ask your agent to apply ADA Title II.
 
 ## What it covers
 
-- 28 CFR Part 35, Nondiscrimination on the Basis of Disability in State and Local Government Services, as served by the eCFR renderer for the current title 28 text.
+- 28 CFR Part 35: nondiscrimination, program accessibility, new construction, effective communication, and the subpart H web content and mobile app requirements (WCAG 2.1 Level AA).
 
 ## Versions
 

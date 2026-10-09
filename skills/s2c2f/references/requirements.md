@@ -1,18 +1,68 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned source on 2026-10-06. S2C2F has no MUST or SHALL keywords: each requirement is a short imperative title in the framework's requirements table, quoted as written. Each is labelled with its requirement id and its maturity level (L1 is the entry level, L4 is aspirational). Implement every requirement at or below the target level.
 
-## S2C2F
+## Practice 1: Ingest It
 
-Source: https://raw.githubusercontent.com/ossf/s2c2f/main/specification/framework.md
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
 
-This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.
+- **ING-1 (L1).** Use public package managers trusted by your organization (i.e. NuGet.org, npmjs.com, PyPi.org, etc.)
+- **ING-2 (L1).** Use an OSS binary repository manager solution (i.e. JFrog Artifactory, Azure Artifacts, etc.)
+- **ING-3 (L3).** Have a Deny List capability to block known malicious OSS from being consumed
+- **ING-4 (L3).** Mirror a copy of all OSS source code to an internal location
 
-- **document.** No real association or connection is intended or should be inferred.
-- **document.** The practices section should be utilized by individuals like Chief Information Security Officers (CISOs) and security, engineering, compliance/risk managers while the implementation guide should be utilized by software developers and other security practitioners.
-- **document.** This helps organizations prioritize which requirements they should implement first.
-- **document.** npm) with no change to the corresponding open source repo and uploads a new malicious version of a package | [Ua-parser-js](https://www.truesec.com/hub/blog/uaparser-js-npm-package-supply-chain-attack-impact-and-response) | AUD-1 ENF-2 SCA-4 | L3 | | Upstream source code re-licensed which may pose legal risk or prevent practical upgrade paths when licenses are incompatible | [node-ipc license…
-- **document.** the _event-stream_ scenario) - A team tries to use an OSS package with a backdoor Once we control all artifact inputs, we must scan all inputs to trust them.
-- **document.** ### _Practice 3: Inventory It_ _I know where OSS artifacts are deployed in production._ **Sample threat scenarios addressed by this job:** - A critical vulnerability is discovered in log4j, and the incident response team wants to know all the production services using log4j so they can appropriately staff and coordinate a response effort Once we have ingested and scanned the artifacts entering…
-- **document.** Given the [SaltStack incident](https://www.helpnetsecurity.com/2020/05/04/saltstack-salt-vulnerabilities/), where a vulnerability was exploited within 3 days after announcement, every organization should aspire to patch vulnerable OSS packages in under 72 hours so that you patch faster than the adversary can operate.
-- **document.** **Sample threat scenarios addressed by this job:** - A well-meaning but misguided developer bypasses the official engineering pipeline to update an OSS package directly in a release; however, this new version contains a known vulnerability - An attacker with network access intentionally bypasses the official engineering pipeline to deploy malware to a service Now that we have ingested, scanned,…
+## Practice 2: Scan It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **SCA-1 (L1).** Scan OSS for known vulnerabilities (i.e. CVEs, GitHub Advisories, etc.)
+- **SCA-2 (L1).** Scan OSS for licenses
+- **SCA-3 (L2).** Scan OSS to determine if its end-of-life
+- **SCA-4 (L3).** Scan OSS for malware
+- **SCA-5 (L3).** Perform proactive security analysis of OSS
+
+## Practice 3: Inventory It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **INV-1 (L1).** Maintain an automated inventory of all OSS used in development
+- **INV-2 (L2).** Have an OSS Incident Response Plan
+
+## Practice 4: Update It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **UPD-1 (L1).** Update vulnerable OSS manually
+- **UPD-2 (L2).** Enable automated OSS updates
+- **UPD-3 (L2).** Display OSS vulnerabilities in developer contribution flow (i.e. Pull Requests).
+
+## Practice 5: Audit It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **AUD-1 (L3).** Verify the provenance of your OSS
+- **AUD-2 (L2).** Audit that developers are consuming OSS through the approved ingestion method
+- **AUD-3 (L2).** Validate integrity of the OSS that you consume into your build
+- **AUD-4 (L4).** Validate SBOMs of OSS that you consume into your build
+
+## Practice 6: Enforce It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **ENF-1 (L2).** Securely configure your package source files (i.e. nuget.config, .npmrc, pip.conf, pom.xml, etc.)
+- **ENF-2 (L3).** Enforce usage of a curated OSS feed that enhances the trust of your OSS
+
+## Practice 7: Rebuild It
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **REB-1 (L4).** Rebuild the OSS in a trusted build environment, or validate that it is reproducibly built.
+- **REB-2 (L4).** Digitally sign the OSS you rebuild
+- **REB-3 (L4).** Generate SBOMs for OSS that you rebuild
+- **REB-4 (L4).** Digitally sign the SBOMs you produce
+
+## Practice 8: Fix It + Upstream
+
+Source: https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md
+
+- **FIX-1 (L4).** Implement a change in the code to address a zero-day vulnerability, rebuild, deploy to your organization, and confidentially contribute the fix to the upstream maintainer

@@ -5,30 +5,30 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # Secure by Design
 
-A .gov website belongs to an official government organization in the United States.
+CISA Secure by Design: the three software product security principles and the secure-by-default approach from the joint guide "Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software" (October 2023), and the seven goals of the Secure by Design Pledge for enterprise software manufacturers.
 
-The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying CISA Secure by Design.
-
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
-- Target version: Secure by Design (default). See [`references/versions.md`](references/versions.md).
+- Role: Software manufacturer: product owner, security lead or engineer deciding product defaults, vulnerability handling and transparency.
+- Target version: Secure by Design (current). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
-- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
+- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher for a newer revision or version line.
 
 ## Invariants
 
-1. **Secure by Design.** "Every technology provider must take ownership at the executive level to ensure their products are secure by design."
-2. **What it Means to Be Secure by Design.** "During the design phase of a product’s development lifecycle, companies should implement Secure by Design principles to significantly decrease the number of exploitable flaws before introducing them to the market for widespread use or consumption."
-3. **What it Means to Be Secure by Design.** "Out-of-the-box, products should be secure with additional security features such as multi-factor authentication (MFA), logging, and single sign-on (SSO) available at no extra cost."
+1. **Principle 1.** "Take ownership of customer security outcomes and evolve products accordingly. The burden of security should not fall solely on the customer."
+2. **Secure by Default.** "A secure configuration should be the default baseline."
+3. **Default passwords.** "At the end of provisioning, only the customer should possess their authentication credentials."
+4. **Vulnerability disclosure policy.** "Within one year of signing the pledge, publish a vulnerability disclosure policy (VDP) that authorizes testing by members of the public on products offered by the manufacturer, commits to not recommending or pursuing legal action against anyone engaging in good faith efforts to follow the VDP, provides a clear channel to report vulnerabilities, and allows for public disclosure of vulnerabilities in line with coordinated vulnerability disclosure best practices and international standards."
+5. **CVEs.** "Demonstrate transparency in vulnerability reporting by including accurate Common Weakness Enumeration (CWE) and Common Platform Enumeration (CPE) fields in every Common Vulnerabilities and Exposures (CVE) record for the manufacturer’s products."
 
 ## Workflow
 
@@ -37,7 +37,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.
@@ -46,19 +46,21 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] The product ships with a secure default configuration and no default passwords, and the manufacturer publishes a vulnerability disclosure policy and complete CVE records with CWE and CPE fields.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index
 
 - **`references/versions.md`**: every version line, which one to use, and how to upgrade. Load for steps 1 and 3.
-- **`references/requirements.md`**: quotes taken from the pinned specification. Load for step 2.
+- **`references/requirements.md`**: quotes taken from the pinned specification, grouped by source. Load for step 2.
 
 ## Related skills
 
-Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`: `nist-ssdf`, `owasp-proactive-controls`, `security-txt`, `cve-json`, `cwe`, `cisa-kev`.
 
 ## Sources
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [Secure by Design](https://www.cisa.gov/securebydesign): Guidance, CISA Secure by Design, fetched 2026-10-06 (Guidance, 2026-10-06), checked 2026-10-06.
+- [Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software](https://www.cisa.gov/sites/default/files/2023-10/SecureByDesign_1025_508c.pdf): CISA joint guidance, October 2023 update (TLP:CLEAR), checked 2026-10-06.
+- [Secure by Design Pledge](https://www.cisa.gov/securebydesign/pledge): CISA voluntary pledge, Pledge launched May 2024, page read 2026-10-06, checked 2026-10-06.

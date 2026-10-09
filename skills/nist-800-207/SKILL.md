@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-207
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+NIST Special Publication 800-207, Zero Trust Architecture: the seven tenets of zero trust, the logical components (policy engine, policy administrator, policy enforcement point) and deployment models, plus SP 800-207A on identity-tier and network-tier policies for cloud-native applications.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying zero trust architecture.
 
@@ -19,21 +19,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: architect or security team designing, migrating to or reviewing a zero trust architecture.
 - Target version: SP 800-207 (default); SP 800-207A (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on f ederal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official."
-3. **document.** "A ZT approach is primarily focused on data and service protection but can and should be expanded to include all enterprise assets (devices, infrastructure components, applications, virtual and cloud components) and subjects (end users, applications and other non- human entities that request information from resources)."
-4. **document.** "In this new paradigm, an enterprise must assume no implicit trust and continually analyze and evaluate the risks to its assets and business functions and then enact protections to mitigate these risks."
-5. **document.** "Organizations should seek to incrementally implement zero trust principles,"
-6. **document.** "NIST SP 800-207 ZERO TRUST ARCHITECTURE 4 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-207 2 Zero Trust Basics Zero trust is a cybersecurity paradigm focused on resource protection and the premise that trust is never granted implicitly but must be continually evaluated."
-7. **document.** "The initial focus should be on restricting resources to those with a need to access and grant only the minimum privileges (e.g., read, write, delete) needed to perform the mission."
-8. **document.** "Access is granted through a policy decision point (PDP) and corresponding policy enforcement point (PEP).3 Figure 1: Zero Trust Access The system must ensure that the subject is authentic and the request is valid."
+1. **§ 1.** "In this new paradigm, an enterprise must assume no implicit trust and continually analyze and evaluate the risks to its assets and business functions and then enact protections to mitigate these risks."
+2. **§ 2.1 tenet 2.** "Access requests from assets located on enterprise-owned network infrastructure (e.g., inside a legacy network perimeter) must meet the same security requirements as access requests and communication from any other nonenterprise-owned network."
+3. **§ 2.1 tenet 3.** "Access to individual enterprise resources is granted on a per-session basis."
+4. **§ 2.1 tenet 6.** "All resource authentication and authorization are dynamic and strictly enforced before access is allowed."
 
 ## Workflow
 

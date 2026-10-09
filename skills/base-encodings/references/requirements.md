@@ -1,16 +1,21 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published RFC text, quoted as written (only line breaks and page breaks from the plain-text layout were joined). Apply the ones that match the role. Each is labelled with the RFC and section it comes from. RFC 4648 states only four BCP 14 requirements, so the list also quotes its defining encoding rules and its lowercase security guidance.
 
 ## RFC 4648 The Base16, Base32, and Base64 Data Encodings
 
 Source: https://www.rfc-editor.org/rfc/rfc4648.html
 
-- **document.** Conventions Used in This Document The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ 2 ].
-- **document.** Implementations MUST NOT add line feeds to base-encoded data unless the specification referring to this document explicitly directs base encoders to add line feeds after a specific number of characters.
-- **document.** Implementations MUST include appropriate pad characters at the end of encoded data unless the specification referring to this document explicitly states otherwise.
-- **document.** Implementations MUST reject the encoded data if it contains characters outside the base alphabet when interpreting base-encoded
-- **document.** These pad bits MUST be set to zero by conforming encoders, which is described in the descriptions on padding below.
-- **document.** Such specifications may instead state, as MIME does, that characters outside the base encoding alphabet should simply be ignored when interpreting data ("be liberal in what you accept").
-- **document.** Here are a few requirements that determine which alphabet should be used: Josefsson Standards Track [Page 4] RFC 4648 Base-N Encodings October 2006 o Handled by humans.
-- **document.** (However, by default it should not; see previous section.) o Encoded into structures that mandate other requirements.
+- **RFC 4648 § 3.1.** Implementations MUST NOT add line feeds to base-encoded data unless the specification referring to this document explicitly directs base encoders to add line feeds after a specific number of characters.
+- **RFC 4648 § 3.2.** Implementations MUST include appropriate pad characters at the end of encoded data unless the specification referring to this document explicitly states otherwise.
+- **RFC 4648 § 3.3.** Implementations MUST reject the encoded data if it contains characters outside the base alphabet when interpreting base-encoded data, unless the specification referring to this document explicitly states otherwise.
+- **RFC 4648 § 3.5.** These pad bits MUST be set to zero by conforming encoders, which is described in the descriptions on padding below.
+- **RFC 4648 § 3.5.** In some environments, the alteration is critical and therefore decoders MAY chose to reject an encoding if the pad bits have not been set to zero.
+- **RFC 4648 § 4.** When fewer than 24 input bits are available in an input group, bits with value zero are added (on the right) to form an integral number of 6-bit groups.
+- **RFC 4648 § 5.** This encoding may be referred to as "base64url". This encoding should not be regarded as the same as the "base64" encoding and should not be referred to as only "base64".
+- **RFC 4648 § 5.** This encoding is technically identical to the previous one, except for the 62:nd and 63:rd alphabet character, as indicated in Table 2.
+- **RFC 4648 § 6.** When a bit stream is encoded via the base 32 encoding, the bit stream must be presumed to be ordered with the most-significant-bit first.
+- **RFC 4648 § 7.** This encoding should not be regarded as the same as the "base32" encoding and should not be referred to as only "base32".
+- **RFC 4648 § 8.** Unlike base 32 and base 64, no special padding is necessary since a full code word is always available.
+- **RFC 4648 § 12.** A decoder should not break on invalid input including, e.g., embedded NUL characters (ASCII 0).
+- **RFC 4648 § 12.** Similarly, when the base 16 and base 32 alphabets are handled case insensitively, alteration of case can be used to leak information or make string equality comparisons fail.

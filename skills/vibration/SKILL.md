@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ This specification defines an API that provides access to the vibration mechanis
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when vibrating a device.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,11 +26,14 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **2. Conformance.** "The key words MAY , MUST , and SHOULD in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **3..** "When the user agent determines that the visibility state of the Document of the top-level browsing context changes, it MUST abort the already running processing"
-3. **4..** "The user agent SHOULD employ global rate limiting to restrict the number of vibration requests made within a certain period (e.g., per minute or hour) to prevent excessive use."
-4. **2. Conformance.** "Implementations that use ECMAScript to implement the APIs defined in this specification must implement them in a manner consistent with the ECMAScript Bindings defined in the Web IDL specification [ WEBIDL-1 ], as this specification uses that specification and terminology."
-5. **3..** "Note For example, an implementation might abort the algorithm because no vibration hardware is present, the user has set a preference indicating that pages at a given origin should never be able to vibrate the device, or an implementation might cap the total amount of time a page may cause the device to vibrate and reject requests in excess of this limit."
+1. **§ 3.** "If the document's visibility state is not visible, then return false and terminate these steps."
+2. **§ 3.** "Let max length have the value 10."
+3. **§ 3.** "If the length of pattern is greater than max length, truncate pattern, leaving only the first max length entries."
+4. **§ 3.** "For each entry in pattern whose value is greater than max duration, set the entry's value to max duration."
+5. **§ 3.** "If global does not have sticky activation, return false and terminate these steps."
+6. **§ 3.** "If another instance of the perform vibration algorithm is already running, run the following substeps: Abort that other instance of the perform vibration algorithm, if any."
+7. **§ 3.** "When the user agent determines that the visibility state of the Document of the top-level browsing context changes, it MUST abort the already running processing vibration patterns algorithm, if any."
+8. **§ 4.** "The user agent SHOULD employ global rate limiting to restrict the number of vibration requests made within a certain period (e.g., per minute or hour) to prevent excessive use."
 
 ## Workflow
 
@@ -39,7 +42,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

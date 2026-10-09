@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id            | Line         | Status  | Revision                                                           | Posture | Publisher                  |
-| ------------- | ------------ | ------- | ------------------------------------------------------------------ | ------- | -------------------------- |
-| `attack-19.2` | ATT&CK v19.2 | current | ATT&CK v19.2 (April 28, 2026, current on the version history page) |         | Version history 2026-10-06 |
+| Id            | Line         | Status  | Revision                                    | Posture | Summary                                                                                       |
+| ------------- | ------------ | ------- | ------------------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| `attack-19.2` | ATT&CK v19.2 | current | Tag v19.2, commit 6cda5ad8462c (2026-08-05) |         | Current release of the Enterprise, Mobile and ICS domains, published as STIX 2.1 collections. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### ATT&CK v19.2
-
-- Publisher status on 2026-10-06: current (April 28, 2026).
-- Pinned text: https://attack.mitre.org/resources/versions/
-- Revision token: ATT&CK v19.2 (April 28, 2026, current on the version history page)
+ATT&CK publishes a major version roughly twice a year and minor versions in between. The version history page lists the v19 line as current from April 28, 2026; the v19.2 STIX bundles in attack-stix-data are dated August 5, 2026. Cite the version (for example `enterprise-attack-19.2.json`), because technique ids, names and relationships change between versions, and objects are deprecated or revoked rather than deleted.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+This skill has one published line. There is no older line here to upgrade from.

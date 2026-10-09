@@ -1,23 +1,121 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP DSOMM. OWASP DSOMM is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP DevSecOps Maturity Model from the DevSecOps-MaturityModel-data repository at release v5.1.0. Requirements quote the measure of selected level 1 activities across the sub-dimensions.",
   "versions": [
     {
       "id": "dsomm",
       "label": "OWASP DSOMM",
       "status": "current",
-      "revision": "OWASP DSOMM, fetched 2026-10-06 (Project, 2026-10-06)"
+      "revision": "Release v5.1.0 (2026-09-21)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP DSOMM",
-      "url": "https://owasp.org/www-project-devsecops-maturity-model/",
-      "status": "Project",
-      "revision": "OWASP DSOMM, fetched 2026-10-06 (Project, 2026-10-06)",
+      "title": "DSOMM Build and Deployment / Build",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/BuildAndDeployment/Build.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Build and Deployment / Deployment",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/BuildAndDeployment/Deployment.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Build and Deployment / Patch Management",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/BuildAndDeployment/PatchManagement.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Culture and Organization / Design",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/CultureAndOrganization/Design.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Culture and Organization / Education and Guidance",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/CultureAndOrganization/EducationAndGuidance.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Culture and Organization / Process",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/CultureAndOrganization/Process.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Implementation / Development and Source Control",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/Implementation/DevelopmentAndSourceControl.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Implementation / Application Hardening",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/Implementation/ApplicationHardening.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Implementation / Identity and Access Management",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/Implementation/IdentityAndAccessManagement.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Implementation / Infrastructure Hardening",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/Implementation/InfrastructureHardening.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Information Gathering / Logging",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/InformationGathering/Logging.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Information Gathering / Monitoring",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/InformationGathering/Monitoring.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Test and Verification / Consolidation",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/TestAndVerification/Consolidation.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Test and Verification / Static depth for infrastructure",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/TestAndVerification/StaticDepthForInfrastructure.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "DSOMM Agentic AI / Isolation",
+      "url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/v5.1.0/src/assets/YAML/default/AgenticAI/Isolation.yaml",
+      "status": "OWASP Project model data",
+      "revision": "Release v5.1.0 (2026-09-21)",
       "checked": "2026-10-06"
     }
   ]

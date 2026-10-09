@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "This specification describes an optimized expression of the semantics of the Hypertext Transfer Protocol (HTTP), referred to as HTTP version 2 (HTTP/2). HTTP/2 enables a more efficient use of network resources and a reduced latency by introducing field compression and allowing multiple concurrent exchanges on the same connection. ¶ This document obsoletes RFCs 7540 and 8740. ¶"
+1. **RFC 9113 § 3.3.** "HTTP/2 connections over TLS MUST use protocol negotiation in TLS [TLS-ALPN]."
+2. **RFC 9113 § 3.4.** "Clients and servers MUST treat an invalid connection preface as a connection error (Section 5.4.1) of type PROTOCOL_ERROR."
+3. **RFC 9113 § 4.1.** "Implementations MUST ignore and discard frames of unknown types."
+4. **RFC 9113 § 4.3.** "Field blocks MUST be transmitted as a contiguous sequence of frames, with no interleaved frames of any other type or from any other stream."
+5. **RFC 9113 § 5.1.1.** "Streams initiated by a client MUST use odd-numbered stream identifiers; those initiated by the server MUST use even-numbered stream identifiers."
+6. **RFC 9113 § 5.2.1.** "A sender MUST respect flow-control limits imposed by a receiver."
+7. **RFC 9113 § 5.5.** "Implementations MUST ignore unknown or unsupported values in all extensible protocol elements."
+8. **RFC 9113 § 8.1.1.** "Malformed requests or responses that are detected MUST be treated as a stream error (Section 5.4.2) of type PROTOCOL_ERROR."
+9. **RFC 9113 § 8.2.** "Field names MUST be converted to lowercase when constructing an HTTP/2 message."
+10. **RFC 9113 § 8.2.2.** "An endpoint MUST NOT generate an HTTP/2 message containing connection-specific header fields."
+11. **RFC 9113 § 9.2.** "Implementations of HTTP/2 MUST use TLS version 1.2 [TLS12] or higher for HTTP/2 over TLS."
+12. **RFC 9113 § 9.2.1.** "A deployment of HTTP/2 over TLS 1.2 MUST disable compression."
 
 ## Workflow
 
@@ -35,7 +46,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "SHOULD be folded to a maximum width of 75 octets, excluding the line break."
-3. **document.** "Multi-octet characters MUST remain contiguous."
-4. **document.** "The folded line MUST contain at least one character."
-5. **document.** "For this reason, implementations SHOULD unfold lines in such a way as to properly restore the original sequence."
-6. **document.** "vcard-entity = 1*vcard vcard = "BEGIN:VCARD" CRLF "VERSION:4.0" CRLF 1*contentline "END:VCARD" CRLF ; A vCard object MUST include the VERSION and FN properties."
-7. **document.** "; VERSION MUST come immediately after BEGIN:VCARD."
-8. **document.** "; When generating a content line, lines longer than 75 ; characters SHOULD be folded according to the folding ; procedure described in Section 3.2 ."
+1. **RFC 6350 § 3.2.** "Content lines SHOULD be folded to a maximum width of 75 octets, excluding the line break."
+2. **RFC 6350 § 3.3.** "A vCard object MUST include the VERSION and FN properties."
+3. **RFC 6350 § 3.4.** "Finally, BACKSLASH characters in values MUST be escaped with a BACKSLASH character."
+4. **RFC 6350 § 3.4.** "NEWLINE (U+000A) characters in values MUST be encoded by two characters: a BACKSLASH followed by either an 'n' (U+006E) or an 'N' (U+004E)."
+5. **RFC 6350 § 5.** "Applications MUST ignore x-param and iana-param values they don't recognize."
+6. **RFC 6350 § 10.1.** ""charset": as defined for text/plain [RFC2046]; encodings other than UTF-8 [RFC3629] MUST NOT be used."
+7. **RFC 7095 § 3.2.** "Although [RFC6350] defines BEGIN and END to be properties, they MUST NOT appear as properties of the jCard."
+8. **RFC 7095 § 3.4.** "The name of the parameter MUST be in lowercase; the original case of the parameter value MUST be preserved."
+9. **RFC 9553 § 1.3.** "All JSContact data MUST be valid according to the constraints given in I-JSON [RFC7493]."
+10. **RFC 9553 § 1.4.3.** "Implementations MUST reject a PatchObject in its entirety if any of its patches are invalid."
+11. **RFC 9553 § 1.8.1.** "Implementations MUST preserve vendor-specific properties in JSContact data, irrespective if they know their use."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

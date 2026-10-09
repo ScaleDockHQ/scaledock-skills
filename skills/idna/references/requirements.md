@@ -1,44 +1,41 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are conformance sentences and processing steps from the published text, quoted as written (only line breaks were joined). Apply the ones that match the role. Each is labelled with the section it comes from in the published document.
 
-## UTS #46
+## UTS #46: Unicode IDNA Compatibility Processing
 
 Source: https://www.unicode.org/reports/tr46/
 
-One of the great strengths of domain names is universality. The URL https://Apple.com goes to Apple's
+- **UTS #46 § 3.** Given a version of Unicode and a Unicode String, a conformant implementation of Nontransitional Processing shall replicate the results given by applying the Nontransitional Processing algorithm specified by Section 4, Processing.
+- **UTS #46 § 4.** Normalize the domain_name string to Unicode Normalization Form C.
+- **UTS #46 § 4.** If the label contains any non-ASCII code point (i.e., a code point greater than U+007F), record that there was an error, and continue with the next label.
+- **UTS #46 § 4.** If the label is empty, or if the label contains only ASCII code points, record that there was an error.
+- **UTS #46 § 4.1.** The label must be in Unicode Normalization Form NFC.
+- **UTS #46 § 4.1.** If CheckHyphens, the label must not contain a U+002D HYPHEN-MINUS character in both the third and fourth positions.
+- **UTS #46 § 4.1.** If not CheckHyphens, the label must not begin with “xn--”.
+- **UTS #46 § 4.1.** The label must not begin with a combining mark, that is: General_Category=Mark.
+- **UTS #46 § 4.1.** For Nontransitional Processing, each value must be either valid or deviation.
+- **UTS #46 § 4.1.** In addition, if UseSTD3ASCIIRules=true and the code point is an ASCII code point (U+0000..U+007F), then it must be a lowercase letter (a-z), a digit (0-9), or a hyphen-minus (U+002D).
+- **UTS #46 § 4.1.** If CheckBidi, and if the domain name is a Bidi domain name, then the label must satisfy all six of the numbered conditions in [IDNA2008] RFC 5893, Section 2.
+- **UTS #46 § 4.2.** The length of the domain name, excluding the root label and its dot, is from 1 to 253.
+- **UTS #46 § 4.2.** If an error was recorded in steps 1-4, then the operation has failed and a failure value is returned. No DNS lookup should be done.
 
-- **Unicode IDNA Compatibility Processing.** Nontransitional Processing, which is fully compatible with IDNA2008, should be used in all cases.
-- **Unicode IDNA Compatibility Processing.** These tactics can be described as follows: Bundling : If two or more labels are different, but confusable, and more than one is registered, the registrant for each must be the same.
-- **Unicode IDNA Compatibility Processing.** However, such unprocessed labels must be handled carefully: Storing the unprocessed label as the sequence of characters that the registrant really wanted to apply for.
-- **Unicode IDNA Compatibility Processing.** 4.1 Validity Criteria Each of the following criteria must be satisfied for a non-empty label: The label must be in Unicode Normalization Form NFC.
-- **Unicode IDNA Compatibility Processing.** If CheckHyphens , the label must not contain a U+002D HYPHEN-MINUS character in both the third and fourth positions.
-- **Unicode IDNA Compatibility Processing.** If CheckHyphens , the label must neither begin nor end with a U+002D HYPHEN-MINUS character.
-- **Unicode IDNA Compatibility Processing.** If not CheckHyphens , the label must not begin with “xn--”.
-- **Unicode IDNA Compatibility Processing.** The label must not begin with a combining mark, that is: General_Category=Mark.
-
-## RFC 5890 IDNA
+## RFC 5890: IDNA Definitions
 
 Source: https://www.rfc-editor.org/rfc/rfc5890.html
 
-- **document.** Normative Language The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [ RFC2119 ].
-- **document.** To allow for future use of mechanisms similar to IDNA, those labels MUST NOT be processed as Klensin Standards Track [Page 8] RFC 5890 IDNA Definitions August 2010 ordinary LDH labels by IDNA-conforming programs and SHOULD NOT be mixed with IDNA labels in the same zone.
-- **document.** These strings MUST contain only characters specified elsewhere in this document series, and only in the contexts indicated as appropriate.
-- **document.** Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.
-- **document.** While they may reiterate fundamental DNS rules and requirements for the convenience of the reader, they make no attempt to be comprehensive about DNS principles and should not be considered as a substitute for a thorough understanding of the DNS protocols and specifications.
-- **document.** Like all DNS labels, its total length must not exceed 63 octets.
-- **document.** Because LDH labels (and, indeed, any DNS label) must not be more than 63 octets in length, the portion of an XN-label derived from the Punycode algorithm is limited to no more than 59 ASCII characters.
-- **document.** Therefore, since a valid A-label is the result of Punycode encoding of a U-label, A-labels should be produced only in lowercase, despite matching other (mixed-case or uppercase) potential labels in the DNS.
+- **RFC 5890 § 2.3.1.** Because LDH labels (and, indeed, any DNS label) must not be more than 63 octets in length, the portion of an XN-label derived from the Punycode algorithm is limited to no more than 59 ASCII characters.
+- **RFC 5890 § 2.3.2.1.** While that constraint may be tested in any of several ways, an A-label A1 must be capable of being produced by conversion from a U-label U1, and that U-label U1 must be capable of being produced by conversion from A-label A1.
 
-## RFC 5891 IDNA protocol
+## RFC 5891: IDNA Protocol
 
 Source: https://www.rfc-editor.org/rfc/rfc5891.html
 
-- **document.** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 , RFC 2119 [ RFC2119 ].
-- **document.** Whenever a domain name is put into a domain name slot that is not IDNA-aware (see Section 2.3.2.6 of the Definitions document [ RFC5890 ]), it MUST contain only ASCII characters (i.e., its labels must be either A-labels or NR-LDH labels), unless the DNS application is not subject to historical recommendations for "hostname"-style names (see RFC 1034 [ RFC1034 ] and Section 3.2.1 ).
-- **document.** Labels MUST be compared using equivalent forms: either both A-label forms or both U-label forms.
-- **document.** A pair of A-labels MUST be compared as case-insensitive ASCII (as with all comparisons of ASCII DNS labels).
-- **document.** U-labels MUST be compared as-is, without case folding or other intermediate steps.
-- **document.** In many cases, not limited to comparison, validation may be important for other reasons and SHOULD be performed.
-- **document.** Labels being registered MUST conform to the requirements of Section 4 .
-- **document.** Labels being looked up and the lookup process MUST conform to the requirements of Section 5 .
+- **RFC 5891 § 3.1.** A pair of A-labels MUST be compared as case-insensitive ASCII (as with all comparisons of ASCII DNS labels).
+- **RFC 5891 § 3.1.** U-labels MUST be compared as-is, without case folding or other intermediate steps.
+- **RFC 5891 § 3.2.** IDNs actually appearing in DNS queries or responses MUST be A-labels.
+- **RFC 5891 § 4.1.** Entities responsible for zone files ("registries") MUST accept only the exact string for which registration is requested, free of any mappings or local adjustments.
+- **RFC 5891 § 4.2.2.** The candidate Unicode string MUST NOT contain characters that appear in the "DISALLOWED" and "UNASSIGNED" lists specified in the Tables document [RFC5892].
+- **RFC 5891 § 4.2.3.1.** The Unicode string MUST NOT contain "--" (two consecutive hyphens) in the third and fourth character positions and MUST NOT start or end with a "-" (hyphen).
+- **RFC 5891 § 5.3.** If the label is converted to Unicode (i.e., to U-label form) using the Punycode decoding algorithm, then the processing specified in those two sections MUST be performed, and the label MUST be rejected if the resulting label is not identical to the original.
+- **RFC 5891 § 5.4.** This requirement means that the application must use a list of unassigned characters that is matched to the version of Unicode that is being used for the other requirements in this section.

@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST Privacy Framework
 
-For more than two decades, the Internet and associated information technologies have driven
+The NIST Privacy Framework Version 1.0 (A Tool for Improving Privacy through Enterprise Risk Management): privacy outcomes in five Functions (Identify-P, Govern-P, Control-P, Communicate-P, Protect-P), broken into Categories and Subcategories, used with Profiles and Tiers to manage privacy risk from data processing.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying the Privacy Framework.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: organization or privacy program owner building a Privacy Framework Current or Target Profile, or mapping data processing to Privacy Framework outcomes.
 - Target version: Privacy Framework 1.0 (default); Privacy Framework 1.1 (preview, posture track: emit only when the user opts in and the posture is build). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Like building a house, where homeowners make layout and design choices while relying on a well-engineered foundation, privacy protection should allow for individual choices, as long as effective privacy risk mitigations are already engineered into products and services."
-2. **document.** "When selecting Tiers, an organization should consider its Target Profile(s) and how achievement may be supported or hampered by its current risk management practices, the degree of integration of privacy risk into its enterprise risk management portfolio, its data"
-3. **document.** "Once an organization can identify the likelihood of any given problem arising from the data processing, which the Privacy Framework refers to as a problematic data action, it can assess the impact should the problematic data action occur."
-4. **document.** "Rather, the Functions should be performed concurrently and continuously to form or enhance an operational culture that addresses the dynamic nature of privacy risk."
-5. **document.** "The variety of ways in which the Privacy Framework can be used by organizations should discourage the notion of “compliance with the Privacy Framework” as a uniform or externally referenceable concept."
-6. **document.** "The privacy outcomes determined by using the Privacy Framework should then serve as a basis for ongoing operation of the system."
-7. **document.** "For example, if a device is being purchased for environmental monitoring of a forest, manageability may be important to support capabilities for minimizing the processing of data about people using the forest and should drive a manufacturer evaluation against applicable Subcategories in the Core (e.g., CT.DP-P4: system or device configurations permit selective collection or disclosure of data elements)."
-8. **document.** "the objective should be to make the best buying decision among multiple suppliers, given a carefully determined list of privacy requirements."
+1. **§ 2.0.** "Rather, the Functions should be performed concurrently and continuously to form or enhance an operational culture that addresses the dynamic nature of privacy risk."
+2. **§ 3.0.** "The variety of ways in which the Privacy Framework can be used by organizations should discourage the notion of "compliance with the Privacy Framework" as a uniform or externally referenceable concept."
+3. **ID.RA-P3.** "Potential problematic data actions and associated problems are identified."
+4. **CT.DM-P5.** "Data are destroyed according to policy."
+5. **CT.DP-P2.** "Data are processed to limit the identification of individuals (e.g., de-identification privacy techniques, tokenization)."
 
 ## Workflow
 

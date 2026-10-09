@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [ 1 ]."
-2. **document.** "WebFinger resources MUST NOT be served with any other URI scheme (such as HTTP)."
-3. **document.** "If the query target contains a "host" portion ( Section 3.2.2 of RFC 3986 ), then the host to which the WebFinger query is issued SHOULD be the same as the "host" portion of the query target, unless the client receives instructions through some out-of-band mechanism to send the query to another host."
-4. **document.** "The path component of a WebFinger URI MUST be the well-known path "/.well-known/webfinger"."
-5. **document.** "A WebFinger URI MUST contain a query component that encodes the query target and optional link relation types as specified in Section 4.1 ."
-6. **document.** "Constructing the Query Component of the Request URI A WebFinger URI MUST contain a query component (see Section 3.4 of RFC 3986 )."
-7. **document.** "The query component MUST contain a "resource" parameter and MAY contain one or more "rel" parameters."
-8. **document.** "Standards Track [Page 7] RFC 7033 WebFinger September 2013 parameter MUST contain the query target (URI), and the "rel" parameters MUST contain encoded link relation types according to the encoding described in this section."
+1. **RFC 7033 § 4.** "The path component of a WebFinger URI MUST be the well-known path "/.well-known/webfinger"."
+2. **RFC 7033 § 4.1.** "The query component MUST contain a "resource" parameter and MAY contain one or more "rel" parameters."
+3. **RFC 7033 § 4.2.** "A client MUST query the WebFinger resource using HTTPS only."
+4. **RFC 7033 § 4.2.** "If the client determines that the resource has an invalid certificate, the resource returns a 4xx or 5xx status code, or if the HTTPS connection cannot be established for any reason, then the client MUST accept that the WebFinger query has failed and MUST NOT attempt to reissue the WebFinger request using HTTP over a non-secure connection."
+5. **RFC 7033 § 4.2.** "A WebFinger resource MUST return a JRD as the representation for the resource if the client requests no other supported format explicitly via the HTTP "Accept" header."
+6. **RFC 7033 § 4.2.** "A WebFinger resource MAY redirect the client; if it does, the redirection MUST only be to an "https" URI and the client MUST perform certificate validation again when redirected."
+7. **RFC 7033 § 4.4.** "When processing a JRD, the client MUST ignore any unknown member and not treat the presence of an unknown member as an error."
+8. **RFC 7033 § 5.** "The current best practice is to make resources available to browsers through Cross-Origin Resource Sharing (CORS) [7], and servers MUST include the Access-Control-Allow-Origin HTTP header in responses."
+9. **RFC 7033 § 9.1.** "Clients MUST verify that the certificate used on an HTTPS connection is valid (as defined in [12]) and accept a response only if the certificate is valid."
+10. **RFC 7033 § 9.2.** "WebFinger MUST NOT be used to provide any personal data unless publishing that data via WebFinger by the relevant service was explicitly authorized by the person whose information is being shared."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

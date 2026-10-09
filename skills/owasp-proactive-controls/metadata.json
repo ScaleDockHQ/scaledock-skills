@@ -1,23 +1,86 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP Proactive Controls. OWASP Proactive Controls is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP Top 10 Proactive Controls 2024. Requirements quote the implementation practices of C1 to C10 from the project's GitHub repository at the v4.0.0 tag.",
   "versions": [
     {
       "id": "proactive-controls",
       "label": "OWASP Proactive Controls",
       "status": "current",
-      "revision": "OWASP Proactive Controls, fetched 2026-10-06 (Guide, 2026-10-06)"
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list"
     }
   ],
   "sources": [
     {
-      "title": "OWASP Proactive Controls",
-      "url": "https://top10proactive.owasp.org/",
-      "status": "Guide",
-      "revision": "OWASP Proactive Controls, fetched 2026-10-06 (Guide, 2026-10-06)",
+      "title": "C1: Implement Access Control",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c1-accesscontrol.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C2: Use Cryptography to Protect Data",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c2-crypto.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C3: Validate all Input & Handle Exceptions",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c3-validate-input-and-handle-exceptions.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4: Address Security from the Start",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c4-secure-architecture.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C5: Secure By Default Configurations",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c5-secure-by-default.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C6: Keep your Components Secure",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c6-use-secure-dependencies.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C7: Secure Digital Identities",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c7-secure-digital-identities.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C8: Leverage Browser Security Features",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c8-leverage-browser-security-features.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C9: Implement Security Logging and Monitoring",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c9-security-logging-and-monitoring.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C10: Stop Server Side Request Forgery",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-proactive-controls/v4.0.0/docs/the-top-10/c10-stop-server-side-request-forgery.md",
+      "status": "OWASP Project document",
+      "revision": "Tag v4.0.0 (2024-10-20), 2024 list",
       "checked": "2026-10-06"
     }
   ]

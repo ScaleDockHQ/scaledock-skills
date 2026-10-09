@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id                | Line                          | Status  | Revision                                                                   | Posture | Publisher             |
-| ----------------- | ----------------------------- | ------- | -------------------------------------------------------------------------- | ------- | --------------------- |
-| `rest-guidelines` | Microsoft REST API Guidelines | current | Microsoft REST API Guidelines, fetched 2026-10-06 (Guidelines, 2026-10-06) |         | Guidelines 2026-10-06 |
+| Id                | Line                          | Status  | Revision                            | Posture | Summary                                                                                                                                                    |
+| ----------------- | ----------------------------- | ------- | ----------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rest-guidelines` | Microsoft REST API Guidelines | current | vNext at commit a7022a2, 2026-08-05 |         | Living guidelines with no release numbers: the Azure and Microsoft Graph documents on the vNext branch. The original combined Guidelines.md is deprecated. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### Microsoft REST API Guidelines
-
-- Publisher status on 2026-10-06: Guidelines (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/microsoft/api-guidelines/vNext/Guidelines.md
-- Revision token: Microsoft REST API Guidelines, fetched 2026-10-06 (Guidelines, 2026-10-06)
+The guidelines have no numbered releases; the Azure document keeps a dated change history at its top. Pin the vNext commit in [Sources](../SKILL.md#sources). Pick the Azure document for Azure services and the Graph document for Microsoft Graph workloads; the older combined Guidelines.md is deprecated and is not a target.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From the deprecated combined Guidelines.md: move to the Azure or the Microsoft Graph document, whichever matches the service, and re-check the rules quoted in [`requirements.md`](requirements.md), in particular API versioning (Azure § API Versioning) and the error model (Graph § Error handling).

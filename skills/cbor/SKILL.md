@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "The Concise Binary Object Representation (CBOR) is a data format whose design goals include the possibility of extremely small code size, fairly small message size, and extensibility without the need for version negotiation. These design goals make it different from earlier binary serializations such as ASN.1 and MessagePack. ¶ This document obsoletes RFC 7049, providing editorial improvements, new details, and errata fixes while keeping full compatibility with the interchange format of RFC 7049. It does not create a new version of the format. ¶"
+1. **RFC 8949 § 3.** "An encoder MUST produce only well-formed encoded data items."
+2. **RFC 8949 § 3.** "A decoder MUST NOT return a decoded data item when it encounters input that is not a well-formed encoded CBOR data item (this does not detract from the usefulness of diagnostic and recovery tools that might make available some information from a damaged encoded CBOR data item)."
+3. **RFC 8949 § 2.2.** "For example, in the generic data model, a valid map MAY have both "0" and "0.0" as keys, and an encoder MUST NOT encode "0.0" as an integer (major type 0, Section 3.1)."
+4. **RFC 8949 § 4.2.1.** "Indefinite-length items MUST NOT appear."
+5. **RFC 8949 § 4.2.1.** "The keys in every map MUST be sorted in the bytewise lexicographic order of their deterministic encodings."
+6. **RFC 8949 § 5.** "CBOR-based protocols MUST specify how their decoders handle invalid and other unexpected data."
+7. **RFC 8949 § 5.** "Encoders for CBOR-based protocols MUST produce only valid items, that is, the protocol cannot be designed to make use of invalid items."
+8. **RFC 8949 § 5.6.** "A CBOR-based protocol MUST define what to do when a receiving application sees multiple identical keys in a map."
+9. **RFC 8610 § 2.2.4.** "There is no special syntax to identify the root of a CDDL data structure definition: that role is simply taken by the first rule defined in the file."
+10. **RFC 9165 § 2.2.** "If the target is a text string, the result of that concatenation MUST be valid UTF-8."
 
 ## Workflow
 
@@ -35,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

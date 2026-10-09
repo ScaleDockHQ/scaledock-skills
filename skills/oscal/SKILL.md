@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # OSCAL
 
-OSCAL
+The Open Security Controls Assessment Language (OSCAL) from NIST: layered models for control catalogs and profiles, component definitions and system security plans, and assessment plans, results and POA&Ms, plus the OSCAL Profile Resolution specification for turning a profile into a resolved catalog.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when exchanging control assessment data.
 
@@ -19,14 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: author or tool producing OSCAL documents, or a profile resolver or validator consuming them.
 - Target version: OSCAL (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **abstract.** ""
+1. **Control Layer Overview.** "Controls used in any other OSCAL model must first be defined in this model."
+2. **Control Layer Overview.** "A control used in the implementation, assessment, and assessment results layers must first be imported by a profile."
+3. **Uniqueness.** "As implied by the category name, locally-unique identifiers must be unique within the current document, whereas globally-unique identifiers are guaranteed to be unique across all other identifiers."
+4. **req-exclude.** "Any control designated to be both included and excluded, MUST be excluded."
+5. **req-multiformat-differ.** "A different serialization format of any given input MUST NOT result in a differing output catalog."
 
 ## Workflow
 
@@ -59,4 +63,6 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [OSCAL](https://pages.nist.gov/OSCAL/concepts/layer/overview/): Documentation, OSCAL layer overview, fetched 2026-10-06 (Documentation, 2026-10-06), checked 2026-10-06.
+- [OSCAL Profile Resolution specification](https://raw.githubusercontent.com/usnistgov/OSCAL/v1.2.3/src/specifications/profile-resolution/profile-resolution-specml.xml): Draft specification, OSCAL v1.2.3 release, 2026-08-07, checked 2026-10-06.
+- [OSCAL concepts: layers and models](https://raw.githubusercontent.com/usnistgov/OSCAL-Pages/4e5c578e1459db44f616a612c01e6e7bbe352935/src/content/learn/concepts/layer/_index.md): Documentation, OSCAL-Pages commit 4e5c578e1459, checked 2026-10-06.
+- [OSCAL concepts: identifier use](https://raw.githubusercontent.com/usnistgov/OSCAL-Pages/4e5c578e1459db44f616a612c01e6e7bbe352935/src/content/learn/concepts/identifier-use/_index.md): Documentation, OSCAL-Pages commit 4e5c578e1459, checked 2026-10-06.

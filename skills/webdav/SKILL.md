@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "All instances of a given live property MUST comply with the definition associated with that property name."
-3. **document.** "extensions because they will still have the data specified in the original schema and MUST ignore elements they do not understand."
-4. **document.** "Servers MUST preserve the following XML Information Items (using the terminology from [ REC-XML-INFOSET ]) in storage and transmission of dead properties: For the property name Element Information Item itself: [namespace name] [local name] [ attributes ] named "xml:lang" or any such attribute in scope [ children ] of type element or character On all Element Information Items in the property…"
-5. **document.** "Servers MUST ignore the XML attribute xml:space if present and never use it to change whitespace handling."
-6. **document.** "Dusseault Standards Track [Page 14] RFC 4918 WebDAV June 2007 All DAV-compliant resources MUST support the HTTP URL namespace model specified herein."
-7. **document.** "A collection MUST contain at most one mapping for a given path segment, i.e., it is illegal to have the same path segment mapped to more than one resource."
-8. **document.** "For all WebDAV-compliant resources A and B, identified by URLs "U" and "V", respectively, such that "V" is equal to "U/SEGMENT", A MUST be a collection that contains a mapping from "SEGMENT" to B."
+1. **RFC 4918 § 6.1.** "A server MUST NOT create conflicting locks on a resource."
+2. **RFC 4918 § 6.4.** "When a locked resource is modified, a server MUST check that the authenticated principal matches the lock creator (in addition to checking for valid lock token submission)."
+3. **RFC 4918 § 6.6.** "Clients MUST assume that locks can arbitrarily disappear at any time, regardless of the value given in the Timeout header."
+4. **RFC 4918 § 8.1.** "Servers MUST return authorization errors in preference to other errors."
+5. **RFC 4918 § 8.2.** "If a server receives XML that is not well-formed, then the server MUST reject the entire request with a 400 (Bad Request)."
+6. **RFC 4918 § 9.2.** "Servers MUST process PROPPATCH instructions in document order (an exception to the normal rule that ordering is irrelevant)."
+7. **RFC 4918 § 17.** "A recipient of a WebDAV message with an XML body MUST NOT validate the XML document according to any hard-coded or dynamically-declared DTD."
+8. **RFC 4918 § 20.1.** "Since Basic authentication for HTTP/1.1 performs essentially clear text transmission of a password, Basic authentication MUST NOT be used to authenticate a WebDAV client to a server unless the connection is secure."
+9. **RFC 4791 § 4.1.** "The UID property value of the calendar components contained in a calendar object resource MUST be unique in the scope of the calendar collection in which they are stored."
+10. **RFC 6352 § 5.1.** "Address object resources contained in address book collections MUST contain a single vCard component only."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

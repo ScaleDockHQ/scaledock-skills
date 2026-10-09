@@ -1,6 +1,6 @@
 # nostr
 
-An agent skill for Nostr.
+An agent skill for Nostr: implementing a Nostr client or relay.
 
 ## Install
 
@@ -8,12 +8,12 @@ An agent skill for Nostr.
 npx skills add ScaleDockHQ/scaledock-skills --skill nostr
 ```
 
-Then ask the agent to apply Nostr.
+Then ask your agent to apply Nostr.
 
 ## What it covers
 
-- when implementing a Nostr client or relay
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- Nostr is a protocol of signed JSON events exchanged between clients and relays over WebSockets. NIP-01 from the nostr-protocol/nips repository defines the basic protocol that every implementation follows: the event structure and how its ID is computed, the standard tags, kind ranges, subscription filters and the messages between clients and relays.
+- Only NIP-01 is pinned. Other NIPs extend it with optional kinds, tags and messages; read them from the same repository when a feature needs one.
 
 ## Versions
 
@@ -27,7 +27,7 @@ Then ask the agent to apply Nostr.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [NIP-01](https://raw.githubusercontent.com/nostr-protocol/nips/master/01.md): NIP, NIP-01 on nostr-protocol/nips master (NIP, 2026-10-06).
+- [NIP-01: Basic protocol flow description](https://raw.githubusercontent.com/nostr-protocol/nips/a79e21d90fce5465b50ef385dd368bba99ec4a0b/01.md): NIP (draft, mandatory), nostr-protocol/nips commit a79e21d, 2026-10-05.
 
 ## License
 

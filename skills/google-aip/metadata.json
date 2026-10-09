@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers AIP. AIPs is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the approved general AIPs 121, 122, 131 to 135, 158, 180 and 193 from aip-dev/google.aip.dev. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "aip",
       "label": "AIPs",
       "status": "current",
-      "revision": "AIPs, fetched 2026-10-06 (Guidance, 2026-10-06)"
+      "revision": "master at commit 23e176e, 2026-08-17"
     }
   ],
   "sources": [
     {
-      "title": "AIPs",
-      "url": "https://google.aip.dev/",
-      "status": "Guidance",
-      "revision": "AIPs, fetched 2026-10-06 (Guidance, 2026-10-06)",
+      "title": "AIP-121: Resource-oriented design",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0121.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-122: Resource names",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0122.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-131: Standard methods: Get",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0131.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-132: Standard methods: List",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0132.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-133: Standard methods: Create",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0133.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-134: Standard methods: Update",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0134.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-135: Standard methods: Delete",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0135.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-158: Pagination",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0158.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-180: Backwards compatibility",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0180.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AIP-193: Errors",
+      "url": "https://raw.githubusercontent.com/aip-dev/google.aip.dev/23e176e7333ea3bc6b085f9950a5da03d2bbfc72/aip/general/0193.md",
+      "status": "Approved AIP",
+      "revision": "master at commit 23e176e, 2026-08-17",
       "checked": "2026-10-06"
     }
   ]

@@ -1,23 +1,37 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Model signing. Model signing is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OpenSSF Model Signing (OMS) specification 1.0 and the model-transparency reference implementation v1.1.1. Requirements are quotes from the pinned texts.",
   "versions": [
     {
       "id": "model-signing",
       "label": "Model signing",
       "status": "current",
-      "revision": "Model signing format, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "OMS Version 1.0, commit 91bf841e8ccf (2026-09-18)"
     }
   ],
   "sources": [
     {
-      "title": "Model signing",
-      "url": "https://raw.githubusercontent.com/sigstore/model-transparency/main/docs/model_signing_format.md",
-      "status": "Specification",
-      "revision": "Model signing format, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "title": "OpenSSF Model Signing (OMS) Specification",
+      "url": "https://raw.githubusercontent.com/ossf/model-signing-spec/91bf841e8ccf97a3ed97309387e9298d1ac18ba2/spec/v1.0.md",
+      "status": "OpenSSF specification",
+      "revision": "Version 1.0, commit 91bf841e8ccf (2026-09-18)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "sigstore/model-transparency README",
+      "url": "https://raw.githubusercontent.com/sigstore/model-transparency/v1.1.1/README.md",
+      "status": "Reference implementation",
+      "revision": "Release v1.1.1 (2025-10-10)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "sigstore/model-transparency: Model Signing Format",
+      "url": "https://raw.githubusercontent.com/sigstore/model-transparency/v1.1.1/docs/model_signing_format.md",
+      "status": "Reference implementation",
+      "revision": "Release v1.1.1 (2025-10-10)",
       "checked": "2026-10-06"
     }
   ]

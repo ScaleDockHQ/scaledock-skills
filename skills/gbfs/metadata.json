@@ -1,15 +1,15 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers GBFS. GBFS 3.0 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers GBFS 3.0 from gbfs.md at the v3.0 tag of MobilityData/gbfs. Requirements are quotes from that text.",
   "versions": [
     {
       "id": "gbfs-3.0",
       "label": "GBFS 3.0",
       "status": "current",
-      "revision": "GBFS 3.0, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "GBFS v3.0 (git tag v3.0)"
     }
   ],
   "sources": [
@@ -17,7 +17,7 @@
       "title": "GBFS 3.0",
       "url": "https://raw.githubusercontent.com/MobilityData/gbfs/v3.0/gbfs.md",
       "status": "Specification",
-      "revision": "GBFS 3.0, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "GBFS v3.0 (git tag v3.0)",
       "checked": "2026-10-06"
     }
   ]

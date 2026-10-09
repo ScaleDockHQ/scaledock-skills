@@ -1,6 +1,6 @@
 # json5
 
-An agent skill for JSON5.
+An agent skill for JSON5: parsing and generating JSON5.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for JSON5.
 npx skills add ScaleDockHQ/scaledock-skills --skill json5
 ```
 
-Then ask the agent to apply JSON5.
+Then ask your agent to apply JSON5.
 
 ## What it covers
 
-- when parsing JSON5
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The JSON5 Data Interchange Format, version 1.0.0, by Aseem Kishore and Jordan Tucker: values, objects, arrays, strings and escapes, numbers, comments, white space, and the parser and generator conformance rules, read from the Ecmarkup source of spec.json5.org.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply JSON5.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [JSON5](https://json5.org/): Specification, JSON5, fetched 2026-10-06 (Specification, 2026-10-06).
+- [The JSON5 Data Interchange Format (src/index.html)](https://raw.githubusercontent.com/json5/json5-spec/d77331d96bc6b74622703e5d009d6124072f04dd/src/index.html): Specification, Version 1.0.0 (json5-spec commit d77331d, 2023-05-15).
 
 ## License
 

@@ -1,6 +1,6 @@
 # indexnow
 
-An agent skill for IndexNow.
+An agent skill for IndexNow: notifying search engines of URL changes.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for IndexNow.
 npx skills add ScaleDockHQ/scaledock-skills --skill indexnow
 ```
 
-Then ask the agent to apply IndexNow.
+Then ask your agent to apply IndexNow.
 
 ## What it covers
 
-- when notifying search engines of URL changes
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- IndexNow is a protocol for telling participating search engines that URLs on a site were added, updated or deleted. A site submits URLs with a GET request or a JSON POST to a search engine's `/indexnow` endpoint and proves ownership of the host with a key file. This skill quotes the protocol documentation published at indexnow.org.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply IndexNow.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [IndexNow](https://www.indexnow.org/documentation): Documentation, IndexNow, fetched 2026-10-06 (Documentation, 2026-10-06).
+- [IndexNow Documentation](https://www.indexnow.org/documentation): Protocol documentation, indexnow.org, read 2026-10-06.
 
 ## License
 

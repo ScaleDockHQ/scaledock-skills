@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [ RFC2119 ]."
-2. **document.** "Operations Operation objects MUST have exactly one "op" member, whose value indicates the operation to perform."
-3. **document.** "Its value MUST be one of "add", "remove", "replace", "move", "copy", or "test"; other values are errors."
-4. **document.** "Additionally, operation objects MUST have exactly one "path" member."
-5. **document.** "Members that are not explicitly defined for the operation in question MUST be ignored (i.e., the operation will complete as if the undefined member did not appear in the object)."
-6. **document.** "The operation object MUST contain a "value" member whose content specifies the value to be added."
-7. **document.** "For example: { "op": "add", "path": "/a/b/c", "value": [ "foo", "bar" ] } When the operation is applied, the target location MUST reference one of: o The root of the target document - whereupon the specified value becomes the entire content of the target document."
-8. **document.** "The specified index MUST NOT be greater than the number of elements in the array."
+1. **RFC 6902 § 4.** "Operation objects MUST have exactly one "op" member, whose value indicates the operation to perform."
+2. **RFC 6902 § 4.** "Its value MUST be one of "add", "remove", "replace", "move", "copy", or "test"; other values are errors."
+3. **RFC 6902 § 4.** "Additionally, operation objects MUST have exactly one "path" member."
+4. **RFC 6902 § 4.** "Members that are not explicitly defined for the operation in question MUST be ignored (i.e., the operation will complete as if the undefined member did not appear in the object)."
+5. **RFC 6902 § 4.1.** "The specified index MUST NOT be greater than the number of elements in the array."
+6. **RFC 6902 § 4.2.** "The target location MUST exist for the operation to be successful."
+7. **RFC 6902 § 4.4.** "The "from" location MUST NOT be a proper prefix of the "path" location; i.e., a location cannot be moved into one of its children."
+8. **RFC 6902 § 4.6.** "The target location MUST be equal to the "value" value for the operation to be considered successful."
+9. **RFC 6902 § 5.** "If a normative requirement is violated by a JSON Patch document, or if an operation is not successful, evaluation of the JSON Patch document SHOULD terminate and application of the entire patch document SHALL NOT be deemed successful."
+10. **RFC 7396 § 1.** "Null values in the merge patch are given special meaning to indicate the removal of existing values in the target."
+11. **RFC 7396 § 2.** "If the patch is anything other than an object, the result will always be to replace the entire target with the entire patch."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

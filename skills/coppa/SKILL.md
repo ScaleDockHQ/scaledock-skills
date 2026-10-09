@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # COPPA
 
-From the Federal Register Online via the Government Publishing Office [ www.gpo.gov ]
+The Children's Online Privacy Protection Rule (COPPA Rule), 16 CFR Part 312, issued by the U.S. Federal Trade Commission: notice, verifiable parental consent, parental review, data minimisation, security, retention and safe harbor programs for operators of websites and online services directed to children under 13, or that knowingly collect personal information from them. The pinned text is the codified rule as amended by the 2025 final rule (90 FR 16977).
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying the Children's Online Privacy Protection Rule.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: operator of a website or online service directed to children, or one with actual knowledge that it collects personal information from a child.
 - Target version: COPPA Rule 2025 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "The Commission also asked a question about what types of services should be considered to have an educational purpose."
-2. **document.** "The Commission's Proposal Regarding `Mixed Audience Website or Online Service'' The Commission proposed a new stand-alone definition for `mixed audience website or online service'' as ``a website or online service that is directed to children under the criteria set forth in paragraph (1) of the definition of website or online service directed to children, but that does not target children as…"
-3. **document.** "--------------------------------------------------------------------------- A number of commenters asked for additional guidance about when websites and online services will be considered general audience, primarily child-directed, or mixed audience.\32\ The Commission directs these commenters to earlier staff guidance, which explains that operators should analyze who their intended audience is,…"
-4. **document.** "--------------------------------------------------------------------------- One commenter urged the Commission to state that general audience and mixed audience websites and online services containing ``kid- friendly portions'' of content or services are not primarily child- directed.\35\ This request for clarification is somewhat unclear, as it is not apparent to the Commission what the…"
-5. **document.** "Another industry commenter contended that a general audience website or online service ``should not become a mixed audience property just because the property does not include mature content and is presented as appropriate for children.'' \37\ In response, the Commission notes that it agrees that a general audience website or online service, or portion thereof, is not necessarily child-directed…"
-6. **document.** "of information, which the commenter indicated should not be necessary to achieve the goal of determining users' ages; the commenter favored alternative age verification strategies that avoid retention of age information.\40\ In response, the Commission notes that it disagrees that collection of age information necessarily requires retention of the exact age of a visitor or user,\41\ or that…"
-7. **document.** "Another commenter argued the Commission should require the use of ``privacy-protected age estimation methods to determine the likely age of users'' rather than including an age verification requirement that would require additional personal data collection and management.\42\ Other commenters suggested the Rule should require additional methods of verification when operators of mixed audience…"
-8. **document.** "\43\ See, e.g., Motley Rice, at 13 (suggesting Commission should require COPPA-compliant measures to corroborate self-declarations of age because of falsification risks)."
+1. **§ 312.4(a).** "It shall be the obligation of the operator to provide notice and obtain verifiable parental consent prior to collecting, using, or disclosing personal information from children."
+2. **§ 312.5(a)(1).** "An operator is required to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change in the collection, use, or disclosure practices to which the parent has previously consented."
+3. **§ 312.7.** "An operator is prohibited from conditioning a child's participation in a game, the offering of a prize, or another activity on the child's disclosing more personal information than is reasonably necessary to participate in such activity."
+4. **§ 312.8(b).** "At a minimum, the operator must establish, implement, and maintain a written information security program that contains safeguards that are appropriate to the sensitivity of the personal information collected from children and the operator's size, complexity, and nature and scope of activities."
+5. **§ 312.10.** "An operator of a website or online service shall retain personal information collected online from a child for only as long as is reasonably necessary to fulfill the specific purpose(s) for which the information was collected."
 
 ## Workflow
 
@@ -66,4 +63,4 @@ Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-s
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [COPPA Rule 2025](https://www.govinfo.gov/content/pkg/FR-2025-04-22/html/2025-05904.htm): Federal Register, Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06), checked 2026-10-06.
+- [16 CFR Part 312 (COPPA Rule)](https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?chapter=I&subchapter=C&part=312): eCFR, current title 16 part 312, as amended at 90 FR 16977 (2025-04-22), up to date as of 2026-10-02, checked 2026-10-06.

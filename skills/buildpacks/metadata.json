@@ -1,38 +1,38 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Cloud Native Buildpacks. Buildpacks platform API is current; Buildpack API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the Cloud Native Buildpacks Platform API 0.15 and Buildpack API 0.12 from buildpacks/spec. Requirements are quotes from the two interface specifications.",
   "versions": [
     {
       "id": "buildpacks-platform",
       "label": "Buildpacks platform API",
       "status": "current",
-      "revision": "Buildpacks platform specification, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Platform API 0.15 (main at commit b745fcf, 2025-12-11)",
       "family": "platform"
     },
     {
       "id": "buildpacks-buildpack",
       "label": "Buildpack API",
       "status": "current",
-      "revision": "Buildpack specification, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Buildpack API 0.12 (main at commit b745fcf, 2025-12-11)",
       "family": "buildpack"
     }
   ],
   "sources": [
     {
-      "title": "Buildpacks platform API",
-      "url": "https://raw.githubusercontent.com/buildpacks/spec/main/platform.md",
+      "title": "Platform Interface Specification",
+      "url": "https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/platform.md",
       "status": "Specification",
-      "revision": "Buildpacks platform specification, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Platform API 0.15 (main at commit b745fcf, 2025-12-11)",
       "checked": "2026-10-06"
     },
     {
-      "title": "Buildpack API",
-      "url": "https://raw.githubusercontent.com/buildpacks/spec/main/buildpack.md",
+      "title": "Buildpack Interface Specification",
+      "url": "https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/buildpack.md",
       "status": "Specification",
-      "revision": "Buildpack specification, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Buildpack API 0.12 (main at commit b745fcf, 2025-12-11)",
       "checked": "2026-10-06"
     }
   ]

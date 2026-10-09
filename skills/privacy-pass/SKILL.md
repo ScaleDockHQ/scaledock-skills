@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "This document specifies the Privacy Pass architecture and requirements for its constituent protocols used for authorization based on privacy-preserving authentication mechanisms. It describes the conceptual model of Privacy Pass and its protocols, its security and privacy goals, practical deployment models, and recommendations for each deployment model, to help ensure that the desired security and privacy goals are fulfilled. ¶"
+1. **RFC 9576 § 3.5.** "The issuance protocol MUST NOT reveal anything about the Client's private input, including the challenge and nonce, to the Attester or Issuer, regardless of the hardness assumptions of the underlying cryptographic protocol(s)."
+2. **RFC 9576 § 3.5.** "The issuance protocol MUST NOT allow malicious Clients or Attesters (acting as Clients) to forge tokens offline or otherwise without interacting with the Issuer directly."
+3. **RFC 9577 § 2.1.1.** "All token challenges MUST begin with a 2-octet integer that defines the token type, in network byte order."
+4. **RFC 9577 § 2.1.1.** "Clients MUST ignore challenges with token types they do not support."
+5. **RFC 9577 § 2.1.3.** "If validation fails, the Client MUST NOT fetch or redeem a token based on the challenge."
+6. **RFC 9577 § 2.2.1.** "A token is a structure that begins with a 2-octet field that indicates a token type, which MUST match the token_type in the TokenChallenge structure."
+7. **RFC 9577 § 2.2.2.** "Origins SHOULD implement some form of double-spend prevention that prevents a token with the same nonce from being redeemed twice."
+8. **RFC 9577 § 5.1.** "All random values in the challenge and token MUST be generated using a cryptographically secure source of randomness [RFC4086]."
+9. **RFC 9578 § 4.** "If an Issuer wants to service multiple different Issuer directories, they MUST create unique subdomains for each directory so the TokenChallenge defined in Section 2.1 of [AUTHSCHEME] can be differentiated correctly."
+10. **RFC 9578 § 5.5.** "These keys MUST NOT be reused in other protocols."
 
 ## Workflow
 
@@ -35,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

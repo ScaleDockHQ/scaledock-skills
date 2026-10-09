@@ -1,23 +1,44 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP AI Exchange. OWASP AI Exchange is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP AI Exchange. Requirements quote control descriptions from its general controls, threats through use, development-time threats and runtime application security threats sections, at a pinned commit of the project's GitHub repository.",
   "versions": [
     {
       "id": "ai-exchange",
       "label": "OWASP AI Exchange",
       "status": "current",
-      "revision": "OWASP AI Exchange, fetched 2026-10-06 (Guide, 2026-10-06)"
+      "revision": "Commit e894338312f9 (2026-10-04)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP AI Exchange",
-      "url": "https://owaspai.org/",
-      "status": "Guide",
-      "revision": "OWASP AI Exchange, fetched 2026-10-06 (Guide, 2026-10-06)",
+      "title": "OWASP AI Exchange: 1. General controls",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-ai-security-and-privacy-guide/e894338312f9a9f448bfd7ece3e412cfbce890ce/content/ai_exchange/content/docs/1_general_controls.md",
+      "status": "OWASP Project document",
+      "revision": "Commit e894338312f9 (2026-10-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OWASP AI Exchange: 2. Threats through use",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-ai-security-and-privacy-guide/e894338312f9a9f448bfd7ece3e412cfbce890ce/content/ai_exchange/content/docs/2_threats_through_use.md",
+      "status": "OWASP Project document",
+      "revision": "Commit e894338312f9 (2026-10-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OWASP AI Exchange: 3. Development-time threats",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-ai-security-and-privacy-guide/e894338312f9a9f448bfd7ece3e412cfbce890ce/content/ai_exchange/content/docs/3_development_time_threats.md",
+      "status": "OWASP Project document",
+      "revision": "Commit e894338312f9 (2026-10-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OWASP AI Exchange: 4. Runtime application security threats",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-ai-security-and-privacy-guide/e894338312f9a9f448bfd7ece3e412cfbce890ce/content/ai_exchange/content/docs/4_runtime_application_security_threats.md",
+      "status": "OWASP Project document",
+      "revision": "Commit e894338312f9 (2026-10-04)",
       "checked": "2026-10-06"
     }
   ]

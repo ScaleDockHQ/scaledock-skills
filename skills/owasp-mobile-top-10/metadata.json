@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP Mobile Top 10. OWASP Mobile Top 10 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP Mobile Top 10 2023 list. Requirements quote each risk's prevention guidance from the project's GitHub repository at a pinned commit.",
   "versions": [
     {
       "id": "mobile-top-10",
       "label": "OWASP Mobile Top 10",
       "status": "current",
-      "revision": "OWASP Mobile Top 10, fetched 2026-10-06 (Project, 2026-10-06)"
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list"
     }
   ],
   "sources": [
     {
-      "title": "OWASP Mobile Top 10",
-      "url": "https://owasp.org/www-project-mobile-top-10/",
-      "status": "Project",
-      "revision": "OWASP Mobile Top 10, fetched 2026-10-06 (Project, 2026-10-06)",
+      "title": "M1: Improper Credential Usage",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m1-improper-credential-usage.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M2: Inadequate Supply Chain Security",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m2-inadequate-supply-chain-security.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M3: Insecure Authentication/Authorization",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m3-insecure-authentication-authorization.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M4: Insufficient Input/Output Validation",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m4-insufficient-input-output-validation.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M5: Insecure Communication",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m5-insecure-communication.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M6: Inadequate Privacy Controls",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m6-inadequate-privacy-controls.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M7: Insufficient Binary Protection",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m7-insufficient-binary-protection.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M8: Security Misconfiguration",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m8-security-misconfiguration.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M9: Insecure Data Storage",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m9-insecure-data-storage.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "M10: Insufficient Cryptography",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-mobile-top-10/f2dc2d6607f3da069e8b91c7a44825fd85c74555/2023-risks/m10-insufficient-cryptography.md",
+      "status": "OWASP Project document",
+      "revision": "Commit f2dc2d6607f3 (2025-10-08), 2023 list",
       "checked": "2026-10-06"
     }
   ]

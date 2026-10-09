@@ -1,23 +1,72 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP Cheat Sheet Series. OWASP Cheat Sheet Series is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers eight core cheat sheets of the OWASP Cheat Sheet Series. Requirements quote their guidance, labelled by cheat sheet and section, from the CheatSheetSeries GitHub repository at a pinned commit.",
   "versions": [
     {
       "id": "cheat-sheets",
       "label": "OWASP Cheat Sheet Series",
       "status": "current",
-      "revision": "OWASP Cheat Sheet Series, fetched 2026-10-06 (Series, 2026-10-06)"
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP Cheat Sheet Series",
-      "url": "https://cheatsheetseries.owasp.org/",
-      "status": "Series",
-      "revision": "OWASP Cheat Sheet Series, fetched 2026-10-06 (Series, 2026-10-06)",
+      "title": "Authentication Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Authentication_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Password Storage Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Password_Storage_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Session Management Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Session_Management_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Input Validation Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Input_Validation_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cross Site Scripting Prevention Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "SQL Injection Prevention Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Cross-Site Request Forgery Prevention Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Secrets Management Cheat Sheet",
+      "url": "https://raw.githubusercontent.com/OWASP/CheatSheetSeries/29994dd8a2e6f50fa3d5607b046b54d7c6945afd/cheatsheets/Secrets_Management_Cheat_Sheet.md",
+      "status": "OWASP Cheat Sheet",
+      "revision": "Commit 29994dd8a2e6 (2026-10-06)",
       "checked": "2026-10-06"
     }
   ]

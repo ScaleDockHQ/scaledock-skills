@@ -1,39 +1,67 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published text, quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with the nearest section, clause or article in the published document.
 
-## OCI Image Spec 1.1.1
+## Image Format Specification
 
-Source: https://raw.githubusercontent.com/opencontainers/image-spec/v1.1.1/spec.md
+Source: https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/spec.md
 
-This specification defines an OCI Image, consisting of an [image manifest](manifest.md), an [image index](image-index.md) (optional), a set of [filesystem layers](layer.md), and a [configuration](config.md).
+- **Notational Conventions.** An implementation is compliant if it satisfies all the MUST, MUST NOT, REQUIRED, SHALL, and SHALL NOT requirements for the protocols it implements.
 
-- **document.** An implementation is not compliant if it fails to satisfy one or more of the MUST, MUST NOT, REQUIRED, SHALL, or SHALL NOT requirements for the protocols it implements.
-- **document.** An implementation is compliant if it satisfies all the MUST, MUST NOT, REQUIRED, SHALL, and SHALL NOT requirements for the protocols it implements.
-- **document.** ### Table of Contents - [Notational Conventions](#notational-conventions) - [Overview](#overview) - [Understanding the Specification](#understanding-the-specification) - [Media Types](media-types.md) - [Content Descriptors](descriptor.md) - [Image Layout](image-layout.md) - [Image Manifest](manifest.md) - [Image Index](image-index.md) - [Filesystem Layers](layer.md) - [Image…
-- **document.** - [Image Manifest](manifest.md) - a document describing the components that make up a container image - [Image Index](image-index.md) - an annotated list of manifests - [Image Layout](image-layout.md) - a filesystem layout representing the contents of an image - [Filesystem Layer](layer.md) - a changeset that describes a container's filesystem - [Image Configuration](config.md) - a document…
+## Image Manifest
 
-## OCI Distribution Spec 1.1.1
+Source: https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/manifest.md
 
-Source: https://raw.githubusercontent.com/opencontainers/distribution-spec/v1.1.1/spec.md
+- **Image Manifest Property Descriptions, schemaVersion.** For this version of the specification, this MUST be `2` to ensure backward compatibility with older versions of Docker.
+- **Image Manifest Property Descriptions, mediaType.** When used, this field MUST contain the media type `application/vnd.oci.image.manifest.v1+json`.
+- **Image Manifest Property Descriptions, layers.** Implementations storing or copying image manifests MUST NOT error on encountering a `mediaType` that is unknown to the implementation.
+- **Guidelines for Artifact Usage.** If the `config.mediaType` is set to the empty value, the `artifactType` MUST be defined.
 
-The **Open Container Initiative Distribution Specification** (a.k.a. "OCI Distribution Spec") defines an API protocol to facilitate and standardize the distribution of content.
+## Content Descriptors
 
-- **document.** These headers are OPTIONAL and clients SHOULD NOT depend on them.
-- **document.** These error codes are OPTIONAL and clients SHOULD NOT depend on them.
-- **document.** ## Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119) (Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997).
-- **document.** **Content Management** - Clients are able to control the full life-cycle of the content stored in the registry All registries conforming to this specification MUST support, at a minimum, all APIs in the **Pull** category.
-- **document.** Registries SHOULD also support the **Push**, **Content Discovery**, and **Content Management** categories.
-- **document.** A registry claiming conformance with one of these specification categories MUST implement all APIs in the claimed category.
-- **document.** ` ` MUST be either (a) the digest of the manifest or (b) a tag.
-- **document.** The ` ` MUST NOT be in any other format.
+Source: https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/descriptor.md
 
-## OCI Runtime Spec 1.2.1
+- **Digests, Verification.** Before consuming content targeted by a descriptor from untrusted sources, the byte content SHOULD be verified against the digest string.
+- **Registered algorithms, SHA-256.** Implementations MUST implement SHA-256 digest verification for use in descriptors.
+- **Registered algorithms, SHA-256.** When the _algorithm identifier_ is `sha256`, the _encoded_ portion MUST match `/[a-f0-9]{64}/`.
+- **Embedded Content.** Implementations MUST NOT populate the `data` field in situations where doing so would modify existing content identifiers.
 
-Source: https://raw.githubusercontent.com/opencontainers/runtime-spec/v1.2.1/spec.md
+## Image Index
 
-The [Open Container Initiative][oci] develops specifications for standards on Operating System process and application containers.
+Source: https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/image-index.md
 
-- **document.** An implementation is not compliant for a given CPU architecture if it fails to satisfy one or more of the MUST, REQUIRED, or SHALL requirements for the [platforms](#platforms) it implements.
-- **document.** An implementation is compliant for a given CPU architecture if it satisfies all the MUST, REQUIRED, and SHALL requirements for the [platforms](#platforms) it implements.
-- **document.** # Table of Contents - [Introduction](spec.md) - [Notational Conventions](#notational-conventions) - [Container Principles](principles.md) - [Filesystem Bundle](bundle.md) - [Runtime and Lifecycle](runtime.md) - [Linux-specific Runtime and Lifecycle](runtime-linux.md) - [Configuration](config.md) - [Linux-specific Configuration](config-linux.md) - [Solaris-specific…
+- **Image Index Property Descriptions, manifests.** An encountered `mediaType` that is unknown to the implementation MUST NOT generate an error.
+
+## Image Layer Filesystem Changeset
+
+Source: https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/layer.md
+
+- **Whiteouts, Opaque Whiteout.** Implementations SHOULD generate layers using _explicit whiteout_ files, but MUST accept both.
+
+## Distribution Specification
+
+Source: https://raw.githubusercontent.com/opencontainers/distribution-spec/a139cc423184af6078077b9b7ee336eddbd03f8f/spec.md
+
+- **Conformance, Requirements.** All registries conforming to this specification MUST support, at a minimum, all APIs in the **Pull** category.
+- **Pull, Pulling manifests.** `<name>` refers to the namespace of the repository. `<reference>` MUST be either (a) the digest of the manifest or (b) a tag.
+- **Push, Pushing a blob in chunks.** Chunks MUST be uploaded in order, with the first byte of a chunk being the last chunk's `<end-of-range>` plus one.
+- **Push, Pushing a blob in chunks.** The closing `PUT` request MUST include the `<digest>` of the whole blob (not the final chunk) as a query parameter.
+- **Push, Pushing Manifests.** If a manifest includes a `mediaType` field, clients MUST set the `Content-Type` header to the value specified by the `mediaType` field.
+- **Push, Pushing Manifests.** The registry MUST store the manifest in the exact byte representation provided by the client.
+- **Content Discovery, Listing Referrers.** If the registry supports the referrers API, the registry MUST NOT return a `404 Not Found` to a referrers API requests.
+- **Backwards Compatibility.** Client implementations MUST support registries that implement partial or older versions of the OCI Distribution Spec.
+
+## Runtime Specification: runtime and lifecycle
+
+Source: https://raw.githubusercontent.com/opencontainers/runtime-spec/524fc0e1b8ab0180e2fc9abd31837a0f4ed1fd6b/runtime.md
+
+- **Errors.** Unless otherwise stated, generating an error MUST leave the state of the environment as if the operation were never attempted - modulo any possible trivial ancillary changes such as logging.
+- **Operations, Start.** This operation MUST generate an error if `process` was not set.
+
+## Runtime Specification: configuration
+
+Source: https://raw.githubusercontent.com/opencontainers/runtime-spec/524fc0e1b8ab0180e2fc9abd31837a0f4ed1fd6b/config.md
+
+- **Root.** A directory MUST exist at the path declared by the field.
+- **Mounts.** The runtime MUST mount entries in the listed order.
+- **POSIX-platform Hooks.** Hooks MUST be called in the listed order.

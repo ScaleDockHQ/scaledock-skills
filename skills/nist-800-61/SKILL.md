@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-61
 
-Craig Burkhardt, Acting Under Secretary of Commerce for Standards and Technology and Acting NIST Director
+NIST Special Publication 800-61 Revision 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management: a CSF 2.0 Community Profile that maps incident response recommendations (R), considerations (C) and notes (N) to CSF 2.0 Functions, Categories and Subcategories.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when handling computer security incidents.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: incident response team, SOC or security program owner building or reviewing an incident response capability.
 - Target version: SP 800-61 Rev 3 (default); SP 800-61 Rev 2 (legacy: read and upgrade, never author). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official."
-3. **document.** "Incident response life cycle model based on CSF 2.0 Functions ..................................................5 NIST SP 800-61r3 Incident Response Recommendations and April 2025 Considerations for Cyber Risk Management 1 Executive Summary Incident response is a critical part of cybersecurity risk management and should be integrated across organizational operations."
-4. **document.** "Organizations should use the incident response life cycle framework or model that suits them best."
-5. **document.** "Regardless of the incident response life cycle framework or model used, every organization should take incident response into consideration throughout their cybersecurity risk management activities."
-6. **document.** "Incident response is now considered a critical part of cybersecurity risk management that should be integrated across organizational operations."
-7. **document.** "The lessons learned during incident response should often be shared as soon as they are identified, not delayed until after recovery concludes."
-8. **document.** "Previous incident response life cycle model’s phases and corresponding CSF 2.0 Functions Previous Incident Response Life Cycle Model Phase CSF 2.0 Functions Preparation Govern Identify (all Categories) Protect Detection & Analysis Detect Identify (Improvement Category) Containment, Eradication & Recovery Respond Recover Identify (Improvement Category) Post-Incident Activity Identify (Improvement…"
+1. **§ 2.** "Incident response is now considered a critical part of cybersecurity risk management that should be integrated across organizational operations."
+2. **DE.AE-08 R1.** "Apply incident criteria to known and assumed characteristics of analyzed activity, and consider known false positives to determine whether an incident should be declared."
+3. **RS.CO-02 R2.** "Follow established procedures concerning incident coordination that include what must be reported to whom and at what times (e.g., initial notification, regular status updates)."
+4. **RC.RP-03 R1.** "Check restoration assets for indicators of compromise, file corruption, and other integrity issues before use."
+5. **RC.RP-06 R1.** "Prepare an after-action report that documents the incident itself, the response and recovery actions taken, and lessons learned."
 
 ## Workflow
 

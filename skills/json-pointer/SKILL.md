@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.2"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,13 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "Standards Track [Page 3] RFC 6901 JSON Pointer April 2013 o If the currently referenced value is a JSON array, the reference token MUST contain either: * characters comprised of digits (see ABNF below; note that leading zeros are not allowed) that represent an unsigned base-10 integer value, making the new referenced value the array element with the zero-based index identified by the token, or *…"
-3. **document.** "Per [RFC4627], Section 2.5 , all instances of quotation mark '"' (%x22), reverse solidus '\' (%x5C), and control (%x00-1F) characters MUST be escaped."
-4. **document.** "An application of JSON Pointer SHOULD specify the impact and handling of each type of error."
-5. **document.** "Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License."
-6. **document.** "Note that before processing a JSON string as a JSON Pointer, backslash escape sequences must be unescaped."
-7. **document.** "Therefore, applications using JSON Pointer should anticipate this situation by defining how a pointer that does not resolve ought to be handled."
+1. **RFC 6901 § 3.** "Because the characters '~' (%x7E) and '/' (%x2F) have special meanings in JSON Pointer, '~' needs to be encoded as '~0' and '/' needs to be encoded as '~1' when these characters appear in a reference token."
+2. **RFC 6901 § 3.** "It is an error condition if a JSON Pointer value does not conform to this syntax (see Section 7)."
+3. **RFC 6901 § 4.** "Evaluation of each reference token begins by decoding any escaped character sequence. This is performed by first transforming any occurrence of the sequence '~1' to '/', and then transforming any occurrence of the sequence '~0' to '~'."
+4. **RFC 6901 § 4.** "The member name is equal to the token if it has the same number of Unicode characters as the token and their code points are byte-by-byte equal."
+5. **RFC 6901 § 4.** "No Unicode character normalization is performed."
+6. **RFC 6901 § 4.** "If the currently referenced value is a JSON array, the reference token MUST contain either: * characters comprised of digits (see ABNF below; note that leading zeros are not allowed) that represent an unsigned base-10 integer value, making the new referenced value the array element with the zero-based index identified by the token, or * exactly the single character "-", making the new referenced value the (nonexistent) member after the last array element."
+7. **RFC 6901 § 4.** "Implementations will evaluate each reference token against the document's contents and will raise an error condition if it fails to resolve a concrete value for any of the JSON pointer's reference tokens."
+8. **RFC 6901 § 4.** "Any error condition for which a specific action is not defined by the JSON Pointer application results in termination of evaluation."
+9. **RFC 6901 § 5.** "Per [RFC4627], Section 2.5, all instances of quotation mark '"' (%x22), reverse solidus '\' (%x5C), and control (%x00-1F) characters MUST be escaped."
+10. **RFC 6901 § 7.** "An application of JSON Pointer SHOULD specify the impact and handling of each type of error."
 
 ## Workflow
 
@@ -41,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

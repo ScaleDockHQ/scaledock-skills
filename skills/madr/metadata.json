@@ -1,23 +1,30 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers MADR. MADR is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers MADR 4.0.0 (template and project documentation at the 4.0.0 tag). Requirements are quotes from the template guidance and the documentation.",
   "versions": [
     {
       "id": "madr",
       "label": "MADR",
       "status": "current",
-      "revision": "MADR, fetched 2026-10-06 (Template, 2026-10-06)"
+      "revision": "MADR 4.0.0 (commit 2475fe1, released 2024-09-17)"
     }
   ],
   "sources": [
     {
-      "title": "MADR",
-      "url": "https://adr.github.io/madr/",
-      "status": "Template",
-      "revision": "MADR, fetched 2026-10-06 (Template, 2026-10-06)",
+      "title": "MADR 4.0.0 full template (template/adr-template.md)",
+      "url": "https://raw.githubusercontent.com/adr/madr/2475fe1973f66a12aaf58a91d8fa7b42c0f5ea3d/template/adr-template.md",
+      "status": "Release",
+      "revision": "MADR 4.0.0 (commit 2475fe1, released 2024-09-17)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MADR documentation (docs/index.md)",
+      "url": "https://raw.githubusercontent.com/adr/madr/2475fe1973f66a12aaf58a91d8fa7b42c0f5ea3d/docs/index.md",
+      "status": "Release",
+      "revision": "MADR 4.0.0 (commit 2475fe1, released 2024-09-17)",
       "checked": "2026-10-06"
     }
   ]

@@ -1,23 +1,51 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers apple-app-site-association. apple-app-site-association is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the apple-app-site-association file and the Associated Domains Entitlement from Apple's developer documentation. Requirements are quotes from the documentation pages.",
   "versions": [
     {
       "id": "aasa",
       "label": "apple-app-site-association",
       "status": "current",
-      "revision": "Associated domains, fetched 2026-10-06 (Documentation, 2026-10-06)"
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06"
     }
   ],
   "sources": [
     {
-      "title": "apple-app-site-association",
-      "url": "https://developer.apple.com/documentation/xcode/supporting-associated-domains",
-      "status": "Documentation",
-      "revision": "Associated domains, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "title": "Supporting associated domains",
+      "url": "https://developer.apple.com/tutorials/data/documentation/xcode/supporting-associated-domains.json",
+      "status": "Apple Developer Documentation",
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "applinks.Details.Components",
+      "url": "https://developer.apple.com/tutorials/data/documentation/bundleresources/applinks/details-swift.dictionary/components-swift.dictionary.json",
+      "status": "Apple Developer Documentation",
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "applinks.Defaults",
+      "url": "https://developer.apple.com/tutorials/data/documentation/bundleresources/applinks/defaults-swift.dictionary.json",
+      "status": "Apple Developer Documentation",
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Associated Domains Entitlement",
+      "url": "https://developer.apple.com/tutorials/data/documentation/bundleresources/entitlements/com.apple.developer.associated-domains.json",
+      "status": "Apple Developer Documentation",
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Supporting universal links in your app",
+      "url": "https://developer.apple.com/tutorials/data/documentation/xcode/supporting-universal-links-in-your-app.json",
+      "status": "Apple Developer Documentation",
+      "revision": "Apple Developer Documentation JSON, read 2026-10-06",
       "checked": "2026-10-06"
     }
   ]

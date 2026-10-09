@@ -1,23 +1,23 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Citation File Format. Citation File Format is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers Citation File Format 1.2.0 (schema-guide.md at the 1.2.0 tag). Requirements are quotes from the schema guide.",
   "versions": [
     {
       "id": "citation-cff",
       "label": "Citation File Format",
       "status": "current",
-      "revision": "Citation File Format, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "CFF 1.2.0 (commit 396f738, released 2021-08-09)"
     }
   ],
   "sources": [
     {
-      "title": "Citation File Format",
-      "url": "https://citation-file-format.github.io/",
-      "status": "Specification",
-      "revision": "Citation File Format, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "title": "Guide to Citation File Format schema version 1.2.0",
+      "url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/396f738fb025b1d8acdb02a56ffc923f95dc8999/schema-guide.md",
+      "status": "Release",
+      "revision": "CFF 1.2.0 (commit 396f738, released 2021-08-09)",
       "checked": "2026-10-06"
     }
   ]

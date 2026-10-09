@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "These terms should not be mistaken as an assumption that an identifier defines or embodies the identity of what is referenced, though that may be the case for some identifiers."
-2. **document.** "Nor should it be assumed that a system using URIs will access the resource identified: in many cases, URIs are used to denote resources without any intention that they be accessed."
-3. **document.** "However, an action made on the basis of that reference will take place in relation to the end-user's context, which implies that an action intended to refer to a globally unique thing must use a URI that distinguishes that resource from all other things."
-4. **document.** "URIs that identify in relation to the end-user's local context should only be used when the context itself is a defining aspect of the resource,"
-5. **document.** "Future specifications and related documentation should use the general term "URI" rather than the more restrictive terms"
-6. **document.** "o A URI might be transcribed from a non-network source and thus should consist of characters that are most likely able to be entered into a computer, within the constraints imposed by keyboards (and related input devices) across languages and locales."
-7. **document.** "Such a definition should specify the character encoding used to map those characters to octets prior to being percent-encoded for the URI."
-8. **document.** "As relative references can only be used within the context of a hierarchical URI, designers of new URI schemes should use a syntax consistent with the generic syntax's hierarchical components unless there are compelling reasons to forbid relative referencing within that scheme."
+1. **RFC 3986 § 2.2.** "If data for a URI component would conflict with a reserved character's purpose as a delimiter, then the conflicting data must be percent-encoded before the URI is formed."
+2. **RFC 3986 § 2.4.** "Implementations must not percent-encode or decode the same string more than once, as decoding an already decoded string might lead to misinterpreting a percent data octet as the beginning of a percent-encoding, or vice versa in the case of percent-encoding an already percent-encoded string."
+3. **RFC 3986 § 3.** "When authority is present, the path must either be empty or begin with a slash ("/") character."
+4. **RFC 3986 § 5.1.** "A base URI must be established by the parser prior to parsing URI references that might be relative."
+5. **RFC 3986 § 6.1.** "In testing for equivalence, applications should not directly compare relative references; the references should be converted to their respective target URIs before comparison."
+6. **RFC 3986 § 6.2.2.1.** "When a URI uses components of the generic syntax, the component syntax equivalence rules always apply; namely, that the scheme and host are case-insensitive and therefore should be normalized to lowercase."
+7. **RFC 3987 § 3.2.** "Conversions from URIs to IRIs MUST NOT use any character encoding other than UTF-8 in steps 3 and 4, even if it might be possible to guess from the context that another character encoding than UTF-8 was used in the URI."
+8. **RFC 3987 § 5.1.** "Applications using IRIs as identity tokens with no relationship to a protocol MUST use the Simple String Comparison (see section 5.3.1)."
+9. **RFC 8141 § 3.1.** "If an r-component, q-component, or f-component (or any combination thereof) is included in a URN, it MUST be ignored for purposes of determining URN-equivalence."
+10. **RFC 6570 § 1.6.** "Likewise, when non-ASCII data that represents readable strings is pct-encoded for use in a URI reference, a template processor MUST first encode the string as UTF-8 [RFC3629] and then pct-encode any octets that are not allowed in a URI reference."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "Character Encoding All requests and responses sent via HTTP by ACME clients, ACME servers, and validation servers as well as any inputs for digest computations MUST be encoded using the UTF-8 character set [ RFC3629 ]."
-3. **document.** "ACME servers SHOULD follow the recommendations of [ RFC7525 ] when configuring their TLS implementations."
-4. **document.** "ACME clients MUST send a User-Agent header field, in accordance with [ RFC7231 ]."
-5. **document.** "This header field SHOULD include the name and version of the ACME software in addition to the name and version of the underlying HTTP client software."
-6. **document.** "Standards Track [Page 10] RFC 8555 ACME March 2019 ACME clients SHOULD send an Accept-Language header field in accordance with [ RFC7231 ] to enable localization of error messages."
-7. **document.** "Such servers SHOULD set the Access-Control-Allow-Origin header field to the value "*"."
-8. **document.** "Trailing '=' characters MUST be stripped."
+1. **RFC 8555 § 6.2.** "All ACME requests with a non-empty body MUST encapsulate their payload in a JSON Web Signature (JWS) [RFC7515] object, signed using the account's private key unless otherwise specified."
+2. **RFC 8555 § 6.2.** "An ACME server MUST implement the "ES256" signature algorithm [RFC7518] and SHOULD implement the "EdDSA" signature algorithm using the "Ed25519" variant (indicated by "crv") [RFC8037]."
+3. **RFC 8555 § 6.5.** "Every JWS sent by an ACME client MUST include, in its protected header, the "nonce" header parameter, with contents as defined in Section 6.5.2."
+4. **RFC 8555 § 6.5.** "Once a nonce value has appeared in an ACME request, the server MUST consider it invalid, in the same way as a value it had never issued."
+5. **RFC 8555 § 7.1.** "The server MUST provide "directory" and "newNonce" resources."
+6. **RFC 8555 § 7.4.** "The CSR MUST indicate the exact same set of requested identifiers as the initial newOrder request."
+7. **RFC 8555 § 11.1.** "Clients MUST generate a fresh account key for every account creation or rollover operation."
+8. **RFC 8555 § 11.1.** "In particular, when a server receives a finalize request, it MUST verify that the public key in a CSR is not the same as the public key of the account key pair used to authenticate that request."
+9. **RFC 9773 § 4.2.** "Clients MUST attempt renewal at a time of their choosing based on the suggested renewal window."
+10. **RFC 9773 § 5.** "Clients SHOULD include this field in newOrder requests if there is a clear predecessor certificate, as is the case for most certificate renewals."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -1,44 +1,38 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published text, quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with the section it comes from in the publication named in the group heading.
 
-## SP 800-57 Part 1 Rev 5
+## SP 800-57 Part 1 Rev 5: Recommendation for Key Management: Part 1 – General
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+- **§ 4.2.** Symmetric keys are often known by more than one entity; however, the key shall be generated using a random process and shall not be disclosed to entities that are not authorized access to the data protected by that algorithm and key.
+- **§ 5.2.** In general, a single key shall be used for only one purpose (e.g., encryption, integrity authentication, key wrapping, random bit generation, or digital signatures).
+- **§ 5.3.1.** If a key is compromised, its cryptoperiod shall no longer be considered valid.
+- **§ 5.3.5.** A symmetric key shall not be used to provide protection after the end of the originator-usage period.
+- **§ 5.3.7.** An RBG seed shall be destroyed immediately after use.
+- **§ 5.4.3.** Assurance of public-key validity shall be obtained on all public keys before using them.
+- **§ 5.5.1.** When a key is compromised, all use of the key to apply cryptographic protection to information (e.g., compute a digital signature or encrypt information) shall cease, and the compromised key shall be revoked (see Section 8.3.5).
+- **§ 5.5.2.** A compromise-recovery plan shall be documented and easily accessible.
+- **§ 5.6.2.** The agencies shall either select algorithms and key sizes that are expected to be secure during the entire system lifetime or should ensure that the algorithms and key sizes can be easily updated.
+- **§ 6.1.** Integrity protection shall be provided for all key information.
+- **§ 6.1.1.** Symmetric keys and private keys shall be destroyed at the end of their period of protection (see Sections 8.3.4 and 9.4).
+- **§ 6.2.** For keys that are in use, the keys shall reside (and be used) within appropriate cryptographic modules; note that a key being in use does not preclude that key from also being simultaneously in transit and/or in storage.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpre ted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** Consequently, organizations must ensure that clear guidance and oversight is provided for the proper management of keys , as well as controls to ensure that the guidance is being properly followed and implemented.
-- **document.** Shall: This term is used to indicate a requirement of a FIPS or a requirement that must be fulfilled to claim conformance to this Recommendation.
-- **document.** Note that should may be coupled with not to become should not.
-- **document.** The reader should be aware that the terms used in this Recommendation might be defined differently in other documents.
-- **document.** 5 RECOMMENDATION FOR KEY MANAGEMENT: PART 1 – GENERAL 5 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-57pt1r5 protection requirements should be of particular interest to cryptographic module vendors and application implementers.
-- **document.** This section should be of particular interest to cryptographic module vendors and developers of cryptographic infrastructure services.
-
-## SP 800-131A Rev 2
+## SP 800-131A Rev 2: Transitioning the Use of Cryptographic Algorithms and Key Lengths
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-131Ar2.pdf
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+- **§ 2.** Three-key TDEA may continue to be used for encryption in existing applications but shall not be used for encryption in new applications.
+- **§ 3.** Private-key lengths providing less than 112 bits of security shall not be used to generate digital signatures.
+- **§ 3.** The length of the modulus n shall be 2048 bits or more to meet the minimum security-strength requirement of 112 bits for Federal Government use.
+- **§ 8.** The length of the key-derivation key shall be at least 112 bits.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official.
-- **document.** The processing of this already-protected data at the lower security strength is allowed, but a certain amount of risk must be accepted9.
-- **document.** • Deprecated means that the algori thm and key length may be used , but the user must accept some security risk.
-- **document.** After December 31, 2020, the use of these schemes is disallowed (i.e., all finite field DH and MQV schemes must conform to SP 800-56A).
-
-## SP 800-132
+## SP 800-132: Recommendation for Password-Based Key Derivation, Part 1: Storage Applications
 
 Source: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-132.pdf
 
-This Recommendation specifies techniques for the derivation of master keys from passwords or
-
-- **document.** (Attribution would be appreciated by NIST.) Nothing in this document should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be in terpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** Shall This term is used to indicate a requirement that must be fulfilled to claim conformance to this Recommendation.
-- **document.** For the security of electronically stored data, passwords should be strong enough so that it is infeasible for attackers to gain access by guessing the password.
-- **document.** user’s name, phone number, and date of birth, should not be used directly as a password.
-- **document.** The number of iterations should be set as high as can be tolerated for the environment, while maintaining acceptable performance.
-- **document.** This suggests that th e iteration count should not add more than a quarter of a second on the target machine.
+- **§ 5.** Since most user-chosen passwords have low entropy and weak randomness properties, as discussed in Appendix A.1, these passwords shall not be used directly as cryptographic keys.
+- **§ 5.1.** All or a portion of the salt shall be generated using an approved Random Bit Generator (e.g., see [5]).
+- **§ 5.1.** The length of the randomly-generated portion of the salt shall be at least 128 bits.
+- **§ 5.2.** The iteration count shall be selected as large as possible, as long as the time required to generate the key using the entered password is acceptable for the users.

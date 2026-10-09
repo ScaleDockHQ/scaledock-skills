@@ -1,23 +1,30 @@
 {
-  "version": "1.0.2",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Trusted Agent Protocol. Trusted Agent Protocol is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the Visa Trusted Agent Protocol Merchant Specifications page and the visa/trusted-agent-protocol README pinned at a commit. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "tap",
       "label": "Trusted Agent Protocol",
       "status": "current",
-      "revision": "Trusted Agent Protocol README, fetched 2026-10-06 (Repository document, 2026-10-06)"
+      "revision": "Merchant Specifications page read 2026-10-06 (unversioned); repository README at commit 16d59bd, 2025-10-28"
     }
   ],
   "sources": [
     {
-      "title": "Trusted Agent Protocol",
-      "url": "https://raw.githubusercontent.com/visa/trusted-agent-protocol/main/README.md",
+      "title": "Trusted Agent Protocol: Merchant Specifications",
+      "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications",
+      "status": "Visa Developer specification",
+      "revision": "Unversioned page, read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Trusted Agent Protocol README",
+      "url": "https://raw.githubusercontent.com/visa/trusted-agent-protocol/16d59bdf3f8a542bc538d0962edbb80ea30a02af/README.md",
       "status": "Repository document",
-      "revision": "Trusted Agent Protocol README, fetched 2026-10-06 (Repository document, 2026-10-06)",
+      "revision": "commit 16d59bd, 2025-10-28",
       "checked": "2026-10-06"
     }
   ]

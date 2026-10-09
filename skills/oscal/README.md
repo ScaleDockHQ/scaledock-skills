@@ -12,7 +12,7 @@ Then ask the agent to apply OSCAL.
 
 ## What it covers
 
-- when exchanging control assessment data
+- OSCAL layers and models, identifier rules, and the Profile Resolution specification for resolving a profile into a catalog.
 - The version lines in the table below, pinned to the revisions in `metadata.json`.
 
 ## Versions
@@ -27,7 +27,9 @@ Then ask the agent to apply OSCAL.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [OSCAL](https://pages.nist.gov/OSCAL/concepts/layer/overview/): Documentation, OSCAL layer overview, fetched 2026-10-06 (Documentation, 2026-10-06).
+- [OSCAL Profile Resolution specification](https://raw.githubusercontent.com/usnistgov/OSCAL/v1.2.3/src/specifications/profile-resolution/profile-resolution-specml.xml): Draft specification, OSCAL v1.2.3 release, 2026-08-07.
+- [OSCAL concepts: layers and models](https://raw.githubusercontent.com/usnistgov/OSCAL-Pages/4e5c578e1459db44f616a612c01e6e7bbe352935/src/content/learn/concepts/layer/_index.md): Documentation, OSCAL-Pages commit 4e5c578e1459.
+- [OSCAL concepts: identifier use](https://raw.githubusercontent.com/usnistgov/OSCAL-Pages/4e5c578e1459db44f616a612c01e6e7bbe352935/src/content/learn/concepts/identifier-use/_index.md): Documentation, OSCAL-Pages commit 4e5c578e1459.
 
 ## License
 

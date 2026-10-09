@@ -1,24 +1,24 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers xRegistry. xRegistry 1.0-rc4 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the xRegistry core specification 1.0-rc4 from xregistry/spec. Requirements are quotes from that text.",
   "versions": [
     {
       "id": "xregistry-1.0-rc4",
       "label": "xRegistry 1.0-rc4",
       "status": "current",
-      "revision": "xRegistry 1.0-rc4, fetched 2026-10-06 (Release candidate, 2026-10-06)",
+      "revision": "1.0-rc4 (tagged v1.0-rc4, 2026-08-19), main at commit 508cd27",
       "posture": "build"
     }
   ],
   "sources": [
     {
-      "title": "xRegistry 1.0-rc4",
-      "url": "https://raw.githubusercontent.com/xregistry/spec/main/core/spec.md",
+      "title": "xRegistry Service - Version 1.0-rc4",
+      "url": "https://raw.githubusercontent.com/xregistry/spec/508cd2760a3c5b74adf61acac1e94654f9852f34/core/spec.md",
       "status": "Release candidate",
-      "revision": "xRegistry 1.0-rc4, fetched 2026-10-06 (Release candidate, 2026-10-06)",
+      "revision": "1.0-rc4 (tagged v1.0-rc4, 2026-08-19), main at commit 508cd27",
       "checked": "2026-10-06"
     }
   ]

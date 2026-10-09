@@ -1,42 +1,43 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published RFC text, quoted as written (only line breaks and page breaks from the plain-text layout were joined). Apply the ones that match the role. Each is labelled with the RFC and section it comes from.
 
 ## RFC 4918 HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)
 
 Source: https://www.rfc-editor.org/rfc/rfc4918.html
 
-- **document.** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ].
-- **document.** All instances of a given live property MUST comply with the definition associated with that property name.
-- **document.** extensions because they will still have the data specified in the original schema and MUST ignore elements they do not understand.
-- **document.** Servers MUST preserve the following XML Information Items (using the terminology from [ REC-XML-INFOSET ]) in storage and transmission of dead properties: For the property name Element Information Item itself: [namespace name] [local name] [ attributes ] named "xml:lang" or any such attribute in scope [ children ] of type element or character On all Element Information Items in the property…
-- **document.** Servers MUST ignore the XML attribute xml:space if present and never use it to change whitespace handling.
-- **document.** Dusseault Standards Track [Page 14] RFC 4918 WebDAV June 2007 All DAV-compliant resources MUST support the HTTP URL namespace model specified herein.
-- **document.** A collection MUST contain at most one mapping for a given path segment, i.e., it is illegal to have the same path segment mapped to more than one resource.
-- **document.** For all WebDAV-compliant resources A and B, identified by URLs "U" and "V", respectively, such that "V" is equal to "U/SEGMENT", A MUST be a collection that contains a mapping from "SEGMENT" to B.
+- **RFC 4918 § 4.3.** Servers MUST ignore the XML attribute xml:space if present and never use it to change whitespace handling.
+- **RFC 4918 § 5.2.** Wherever a server produces a URL referring to a collection, the server SHOULD include the trailing slash.
+- **RFC 4918 § 6.1.** A server MUST NOT create conflicting locks on a resource.
+- **RFC 4918 § 6.4.** When a locked resource is modified, a server MUST check that the authenticated principal matches the lock creator (in addition to checking for valid lock token submission).
+- **RFC 4918 § 6.5.** Lock token URIs MUST be unique across all resources for all time.
+- **RFC 4918 § 6.6.** Clients MUST assume that locks can arbitrarily disappear at any time, regardless of the value given in the Timeout header.
+- **RFC 4918 § 8.1.** Servers MUST return authorization errors in preference to other errors.
+- **RFC 4918 § 8.2.** Implementations MUST accept both text/xml and application/xml in request and response bodies.
+- **RFC 4918 § 8.2.** If a server receives XML that is not well-formed, then the server MUST reject the entire request with a 400 (Bad Request).
+- **RFC 4918 § 8.5.** The server MUST do authorization checks before checking any HTTP conditional header.
+- **RFC 4918 § 9.1.** A client MUST submit a Depth header with a value of "0", "1", or "infinity" with a PROPFIND request.
+- **RFC 4918 § 9.1.** An empty PROPFIND request body MUST be treated as if it were an 'allprop' request.
+- **RFC 4918 § 9.2.** Servers MUST process PROPPATCH instructions in document order (an exception to the normal rule that ordering is irrelevant).
+- **RFC 4918 § 9.3.** When the MKCOL operation creates a new collection resource, all ancestors MUST already exist, or the method MUST fail with a 409 (Conflict) status code.
+- **RFC 4918 § 9.6.1.** The DELETE method on a collection MUST act as if a "Depth: infinity" header was used on it.
+- **RFC 4918 § 9.8.4.** If a COPY request has an Overwrite header with a value of "F", and a resource exists at the Destination URL, the server MUST fail the request.
+- **RFC 4918 § 9.9.1.** Dead properties MUST be moved along with the resource.
+- **RFC 4918 § 17.** A recipient of a WebDAV message with an XML body MUST NOT validate the XML document according to any hard-coded or dynamically-declared DTD.
+- **RFC 4918 § 20.1.** Since Basic authentication for HTTP/1.1 performs essentially clear text transmission of a password, Basic authentication MUST NOT be used to authenticate a WebDAV client to a server unless the connection is secure.
 
 ## RFC 4791 Calendaring Extensions to WebDAV (CalDAV)
 
 Source: https://www.rfc-editor.org/rfc/rfc4791.html
 
-- **document.** Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ].
-- **document.** XML elements defined by individual implementations MUST NOT use the "urn:ietf:params:xml:ns:caldav" namespace, and instead should use a namespace that they control.
-- **document.** Processing of XML by CalDAV clients and servers MUST follow the rules described in [ RFC2518 ]; in particular, Section 14 , and Appendix 3 of that specification.
-- **document.** If a method precondition or postcondition for a request is not satisfied, the response status of the request MUST either be 403 (Forbidden), if the request should not be repeated because it will always fail, or 409 (Conflict), if it is expected that the user might be able to resolve the conflict and resubmit the request.
-- **document.** When a particular precondition is not satisfied or a particular postcondition cannot be achieved, the appropriate XML element MUST be returned as the child of a top-level DAV:error element in the response body, unless otherwise negotiated by the request.
-- **document.** To advertise support for CalDAV, a server: o MUST support iCalendar [ RFC2445 ] as a media type for the calendar object resource format; o MUST support WebDAV Class 1 [ RFC2518 ] (note that [ rfc2518bis ] describes clarifications to [ RFC2518 ] that aid interoperability); o MUST support WebDAV ACL [ RFC3744 ] with the additional privilege defined in Section 6.1 of this document; o MUST support…
-- **document.** Standards Track [Page 6] RFC 4791 CalDAV March 2007 o MUST support all calendaring reports defined in Section 7 of this document; and o MUST advertise support on all calendar collections and calendar object resources for the calendaring reports in the DAV:supported- report-set property, as defined in Versioning Extensions to WebDAV [ RFC3253 ].
-- **document.** In addition, a server: o SHOULD support the MKCALENDAR method defined in Section 5.3.1 of this document.
+- **RFC 4791 § 4.1.** Calendar object resources contained in calendar collections MUST NOT specify the iCalendar METHOD property.
+- **RFC 4791 § 4.1.** The UID property value of the calendar components contained in a calendar object resource MUST be unique in the scope of the calendar collection in which they are stored.
+- **RFC 4791 § 5.1.** A server supporting the features described in this document MUST include "calendar-access" as a field in the DAV response header from an OPTIONS request on any resource that supports any calendar properties, reports, method, or privilege.
 
 ## RFC 6352 CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)
 
 Source: https://www.rfc-editor.org/rfc/rfc6352.html
 
-- **document.** Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ].
-- **document.** XML elements defined by individual implementations MUST NOT use the "urn:ietf:params:xml:ns:carddav" namespace, and instead should use a namespace that they control.
-- **document.** o MUST support vCard v3 [ RFC2426 ] as a media type for the address object resource format; o MUST support WebDAV Class 3 [ RFC4918 ]; o MUST support WebDAV ACL [ RFC3744 ]; o MUST support secure transport as defined in [ RFC2818 ] using Transport Layer Security (TLS) [ RFC5246 ] and using the certificate validation procedures described in [ RFC5280 ]; o MUST support ETags [ RFC2616 ] with…
-- **document.** In addition, a server: o SHOULD support vCard v4 [ RFC6350 ] as a media type for the address object resource format; o SHOULD support the extended MKCOL method [ RFC5689 ] to create address book collections as defined in Section 6.3.1 of this document.
-- **document.** o SHOULD support the DAV:current-user-principal-URL property as defined in [ RFC5397 ] to give clients a fast way to locate user principals.
-- **document.** Address object resources contained in address book collections MUST contain a single vCard component only.
-- **document.** vCard components in an address book collection MUST have a UID property value that MUST be unique in the scope of the address book collection in which it is contained.
-- **document.** When that happens, the server MUST return the CARDDAV:supported-address-data-conversion precondition (see below) in the response body (when the failure to convert applies to the entire response) or use that same precondition code in the DAV:response XML element in the response for the targeted address object resource when one of the REPORTs defined below is used.
+- **RFC 6352 § 5.1.** Address object resources contained in address book collections MUST contain a single vCard component only.
+- **RFC 6352 § 6.1.** A server supporting the features described in this document MUST include "addressbook" as a field in the DAV response header from an OPTIONS request on any resource that supports any address book properties, reports, or methods.
+- **RFC 6352 § 6.3.2.3.** The DAV:getetag property MUST be defined and set to a strong entity tag on all address object resources.

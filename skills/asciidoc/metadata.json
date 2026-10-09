@@ -1,23 +1,93 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers AsciiDoc. AsciiDoc is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the AsciiDoc Language documentation (pre-spec, asciidoc-lang commit 68ed0b2). Requirements are quotes from its pages.",
   "versions": [
     {
       "id": "asciidoc",
       "label": "AsciiDoc",
       "status": "current",
-      "revision": "AsciiDoc, fetched 2026-10-06 (Language, 2026-10-06)"
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)"
     }
   ],
   "sources": [
     {
-      "title": "AsciiDoc",
-      "url": "https://docs.asciidoctor.org/asciidoc/latest/",
-      "status": "Language",
-      "revision": "AsciiDoc, fetched 2026-10-06 (Language, 2026-10-06)",
+      "title": "AsciiDoc Language, Document Structure",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/ROOT/pages/document-structure.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Key Concepts",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/ROOT/pages/key-concepts.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Document Header",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/document/pages/header.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Section Titles and Levels",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/sections/pages/titles-and-levels.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Blocks",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/blocks/pages/index.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Delimited Blocks",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/blocks/pages/delimited.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Attribute Entries",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/attributes/pages/attribute-entries.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Attribute Entry Names and Values",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/attributes/pages/names-and-values.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Unordered Lists",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/lists/pages/unordered.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Text Formatting and Punctuation",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/text/pages/index.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "AsciiDoc Language, Includes",
+      "url": "https://gitlab.eclipse.org/eclipse/asciidoc-lang/asciidoc-lang/-/raw/68ed0b22e8d9b919897542d8ae14f03e7dbdd2e4/docs/modules/directives/pages/include.adoc",
+      "status": "Documentation",
+      "revision": "AsciiDoc Language documentation, pre-spec (asciidoc-lang commit 68ed0b2, 2026-08-22)",
       "checked": "2026-10-06"
     }
   ]

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "Concise Binary Object Representation (CBOR) is a data format designed for small code size and small message size. There is a need to be able to define basic security services for this data format. This document defines the CBOR Object Signing and Encryption (COSE) protocol. This specification describes how to create and process signatures, message authentication codes, and encryption using CBOR for serialization. This specification additionally describes how to represent cryptographic keys using CBOR. ¶ This document, along with RFC 9053, obsoletes RFC 8152. ¶"
+1. **RFC 9052 § 3.** "When processing messages, if a label appears multiple times, the message MUST be rejected as malformed."
+2. **RFC 9052 § 3.** "If the message is not rejected as malformed, attributes MUST be obtained from the protected bucket, and only if an attribute is not found in the protected bucket can that attribute be obtained from the unprotected bucket."
+3. **RFC 9052 § 3.1.** "When present, the "crit" header parameter MUST be placed in the protected-header-parameters bucket."
+4. **RFC 9052 § 7.1.** "Implementations MUST verify that the key type is appropriate for the algorithm being processed."
+5. **RFC 9052 § 8.3.** "The message content MUST NOT be used if the decryption does not validate."
+6. **RFC 9052 § 9.** "Encoding MUST be done using definite lengths, and the length of the (encoded) argument MUST be the minimum possible length."
+7. **RFC 9053 § 4.1.1.** "The key and nonce pair MUST be unique for every message encrypted."
+8. **RFC 9053 § 7.1.** "Applications MUST check that the curve and the key type are consistent and reject a key if they are not."
+9. **RFC 9360 § 2.** "The trust mechanism MUST process any certificates in this parameter as untrusted input."
+10. **RFC 9360 § 5.** "In any event, both the signature validation and the certificate validation MUST be completed successfully before acting on any requests."
+11. **RFC 9964 § 3.** "The priv parameter contains private information and MUST NOT be present in public keys."
 
 ## Workflow
 
@@ -35,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

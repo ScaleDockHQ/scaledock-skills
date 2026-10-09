@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers arc42. arc42 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the arc42 template (release 2026.10.2). Requirements are quotes from the help texts of the English template sections.",
   "versions": [
     {
       "id": "arc42",
       "label": "arc42",
       "status": "current",
-      "revision": "arc42 overview, fetched 2026-10-06 (Template, 2026-10-06)"
+      "revision": "Template release 2026.10.2 (commit 32fd461)"
     }
   ],
   "sources": [
     {
-      "title": "arc42",
-      "url": "https://arc42.org/overview",
+      "title": "arc42 template, Section 1: Introduction and Goals",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/01_introduction_and_goals.adoc",
       "status": "Template",
-      "revision": "arc42 overview, fetched 2026-10-06 (Template, 2026-10-06)",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 2: Architecture Constraints",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/02_architecture_constraints.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 3: Context and Scope",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/03_context_and_scope.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 4: Solution Strategy",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/04_solution_strategy.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 5: Building Block View",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/05_building_block_view.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 8: Cross-cutting Concepts",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/08_concepts.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 9: Architecture Decisions",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/09_architecture_decisions.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 10: Quality Requirements",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/10_quality_requirements.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 11: Risks and Technical Debts",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/11_technical_risks.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "arc42 template, Section 12: Glossary",
+      "url": "https://raw.githubusercontent.com/arc42/arc42-template/32fd461c91b184777e14f7d66b4e46db936fd3e5/EN/adoc/12_glossary.adoc",
+      "status": "Template",
+      "revision": "Template release 2026.10.2 (commit 32fd461)",
       "checked": "2026-10-06"
     }
   ]

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "The formal ABNF for the AAR header field is: arc-info = instance [CFWS] ";" authres-payload arc-authres-header = "ARC-Authentication-Results:" [CFWS] arc-info Because there is only one AAR allowed per ARC Set, the AAR MUST contain the combined authres-payload with all of the authentication results from within the participating ADMD, regardless of how many Authentication-Results header fields are…"
-3. **document.** "As required for undefined tags (in [ RFC6376 ]), if seen, a version tag MUST be ignored; and o the "i" (Agent or User Identifier (AUID)) tag is not imported from DKIM; instead, this tag is replaced by the instance tag as defined in Section 4.2.1 ."
-4. **document.** "AMS header fields SHOULD be attached so that any modifications made by the ADMD are included in the signature of the AMS header field."
-5. **document.** "o Authentication-Results header fields MUST NOT be included in AMS signatures as they are likely to be deleted by downstream ADMDs (per [RFC8601], Section 5 )."
-6. **document.** "o ARC-related header fields (ARC-Authentication-Results, ARC- Message-Signature, and ARC-Seal) MUST NOT be included in the list of header fields covered by the signature of the AMS header field."
-7. **document.** "To preserve the ability to verify the integrity of a message, the signature of the AMS header field SHOULD include any DKIM-Signature header fields already present in the message."
-8. **document.** "Note especially that the DKIM "h" tag is NOT allowed and, if found, MUST result in a cv status of "fail" (for more information, see Section 5.1.1 ); and o an additional tag, "cv" ("seal-cv-tag" in the ARC-Seal ABNF definition), is used to communicate the Chain Validation Status to subsequent ADMDs."
+1. **RFC 8617 § 4.1.1.** "Because there is only one AAR allowed per ARC Set, the AAR MUST contain the combined authres-payload with all of the authentication results from within the participating ADMD, regardless of how many Authentication-Results header fields are attached to the message."
+2. **RFC 8617 § 4.1.2.** "Authentication-Results header fields MUST NOT be included in AMS signatures as they are likely to be deleted by downstream ADMDs (per [RFC8601], Section 5)."
+3. **RFC 8617 § 4.1.2.** "ARC-related header fields (ARC-Authentication-Results, ARC-Message-Signature, and ARC-Seal) MUST NOT be included in the list of header fields covered by the signature of the AMS header field."
+4. **RFC 8617 § 4.1.3.** "Note especially that the DKIM "h" tag is NOT allowed and, if found, MUST result in a cv status of "fail" (for more information, see Section 5.1.1); and"
+5. **RFC 8617 § 5.1.** "All message modifications (including adding a DKIM-Signature header field(s)) MUST be performed before sealing."
+6. **RFC 8617 § 5.1.2.** "In the case of a failed Authenticated Received Chain, the header fields included in the signature scope of the AS header field b= value MUST only include the ARC Set header fields created by the MTA that detected the malformed chain, as if this newest ARC Set was the only set present."
+7. **RFC 8617 § 5.2.** "Each ARC Set MUST contain exactly one each of the three ARC header fields (AAR, AMS, and AS)."
+8. **RFC 8617 § 5.2.** "The instance values of the ARC Sets MUST form a continuous sequence from 1..N with no gaps or repetition."
+9. **RFC 8617 § 5.2.** "The "cv" value for all ARC-Seal header fields MUST NOT be "fail"."
+10. **RFC 8617 § 5.2.** "As with a DKIM signature ([RFC6376], Section 6.3) that fails verification, a message with an Authenticated Received Chain with a Chain Validation Status of "fail" MUST be treated the same as a message with no Authenticated Received Chain."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

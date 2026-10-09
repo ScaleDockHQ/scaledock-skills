@@ -1,78 +1,48 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. These guides mostly recommend with "should" and occasionally require with "must"; the sentences are quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with its strategy or recommendation identifier where the guide assigns one, otherwise with its section.
 
-## SP 800-204
+## SP 800-204: Security Strategies for Microservices-based Application Systems
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+- **MS-SS-1.** Authentication to microservices APIs that have access to sensitive data should not be done simply by using API keys.
+- **MS-SS-1.** (a) the token expiry times should be as short as possible since they determine the duration of the session and an active session cannot be revoked, and (b) the token secret key must not be a part of the library code; it must be a dynamic variable represented by an environmental variable or specified in an environment data file.
+- **MS-SS-4.** Client to API gateway as well as Service to Service communication should take place after mutual authentication and be encrypted (e.g., using mutual TLS (mTLS) protocol).
+- **MS-SS-8.** For high security microservices, replay detection must be implemented.
+- **MS-SS-10.** Internal authorization tokens must not be provided back to the user, and the user's session tokens must not be passed beyond the gateway for use in policy decisions.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** 2.2 Microservices: Design Principles The design of a microservice is based on the following drivers [4]: • Each microservice must be managed, replicated, scaled, upgraded, and deployed independently of other microservices.
-- **document.** • Each microservice must have a single function and operate in a bounded context (i.e., have limited responsibility and dependence on other services).
-- **document.** • All microservices should be designed for constant failure and recovery and must therefore be as stateless as possible.
-- **document.** NIST SP 800-204 SECURITY STRATEGIES FOR MICROSERVICES-BASED APPLICATION SYSTEMS 4 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-204 • One should reuse existing trusted services (e.g., databases, caches, directories) for state
-- **document.** • Scalability: applications must be highly scalable to maintain availability in the face of an increasing number of users and/or increased rate of usage from the existing user base.
-- **document.** • The microservice making the request must ensure that the request has been successfully delivered to the target microservice.
-
-## SP 800-204A
+## SP 800-204A: Building Secure Microservices-based Applications Using Service-Mesh Architecture
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+- **SM-DR1.** By default, a service proxy should not allow traffic except as specified by this configuration.
+- **SM-DR2.** The set of services that a service proxy can reach must be limited.
+- **SM-DR6.** Further, service proxies should only communicate with each other by setting up a mutual TLS (mTLS) session where every exchanged data packet is encrypted.
+- **SM-DR8.** Access to external resources or services outside of the mesh should be disabled by default and only allowed by an explicit policy that restricts access to specified destinations.
+- **SM-DR12.** Instead, the signing certificate used by the mesh's control plane should always be rooted in the enterprise's existing PKI's root of trust and provided securely to the Service Mesh control plane at startup.
+- **SM-DR13.** The lifetime of a microservice's identity certificate should be as short as is manageable within the infrastructure—preferably on the order of hours.
+- **SM-DR15.** Certificates used to identify microservices should not be signing certificates.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** The supporting services (e.g., authentication/authorization, security monitoring, etc.) for a microservices-based application must be tightly coordinated through a dedicated infrastructure, such as the Service Mesh.
-- **document.** ● All microservices must be treated as non-trustworthy.
-- **document.** 1.1 Why Service Mesh Due to the security requirements for microservices-based applications stated above, the infrastructure that supports the application and that infrastructure’s associated services (e.g., security) should be tightly coordinated.
-- **document.** There are multiple microservices, and the authentication policies should be defined to provide coverage for all of them.
-- **document.** Further authorization modules covering resources in all microservices must be built to provide fine-grained authorization in all service requests.
-- **document.** 2.3 Improving Availability through Network Resilience Techniques ● Load balancing: There is a need to have multiple instances of the same service, and the loads on these instances must be evenly distributed to avoid delayed responses or service crashes due to overload.
-
-## SP 800-204B
+## SP 800-204B: Attribute-based Access Control for Microservices-based Applications Using a Service Mesh
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204B.pdf
 
-James K. Olthoff, Performing the Non-Exclusive Functions and Duties of the Under Secretary of Commerce
+- **AHLC-SR-1.** Containers and applications should not be run as root (thus becoming privileged containers).
+- **AHLC-SR-4.** Explicitly prevent privilege escalation for containers.
+- **§ 5.2.1.** Service-to-service requests must be authorized based on the identity of the calling and called services.
+- **APE-SR-3.** A default policy should be authored in the system that rejects all requests that are unauthenticated, mandates that service and end-user credentials be present on every request, restricts all communication to services within the application's own namespace, and allows service communication across namespaces only through an explicit policy.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on f ederal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official.
-- **document.** They are: ● Multiple, loosely coupled microservices communicate through network calls, and these communication links must be protected.
-- **document.** ● The logging data that pertains to each microservice must be consolidated to obtain a security profile in order for forensics, audits, and analytics to assess the overall health of the application.
-- **document.** When implemented within the service mesh, the critical requirements of this framework are: ● The code that is part of this framework should be verifiable and non-bypassable (always invoked), thus satisfying the requirements of a security kernel.
-- **document.** ● The framework should provide authentication and authorization services at both the service level and end-user level.
-- **document.** ● The framework should be able to support a diverse set of authorization policies.
-- **document.** Every Kubernetes container within a pod has a separate log, and hence a custom solution over Kubernetes must be implemented to capture and consolidate them.
-
-## SP 800-204C
+## SP 800-204C: Implementation of DevSecOps for a Microservices-based Application with Service Mesh
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204C.pdf
 
-James K. Olthoff, Performing the Non-Exclusive Functions and Duties of the Under Secretary of Commerce
+- **§ 4.8.1.** Container images should be scanned for vulnerabilities.
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official.
-- **document.** It should be noted that there is no community-wide consensus on the term “DevSecOps.” As already stated, the term was primarily coined to emphasize the fact that security must be tested and incorporated in all stages of the software development life cycle (i.e., build, test, package, deploy, and operate).
-- **document.** A portion of the community continues to use the term “DevOps” based on the argument that there is no need to define a new term since security must be an integral part of any software life cycle process.
-- **document.** Every Kubernetes container within a pod has a separate log, and a custom solution over Kubernetes must be implemented to capture and consolidate them.
-- **document.** While the development team should be overall aware of the security and management details of deployment of their code, the automation of the above mentioned services provides more time to them to concentrate their efforts on efficient development paradigms, such as code modularity and structuring.
-- **document.** It should be noted that an organization has the option to continue the build process when a test fails.
-- **document.** In the fail-closed event, the developer gets the test outcome report, must fix the issues, and restart the CI process.
-
-## SP 800-204D
+## SP 800-204D: Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204D.pdf
 
-Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology
-
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** Since the specification of these artifacts, their mandatory constituents, and the requirements that processes using them must satisfy are continually evolving through projects in government organizations and various industry forums, they are beyond the scope of this document.
-- **document.** Thus, in the context of cloud-native applications, SSC security assurance measures must be integrated into CI/CD pipelines.
-- **document.** The specification of these artifacts, their mandatory constituents, and the requirements that processes using them must satisfy are continually evolving through projects in government organizations and various industry forums and are, therefore, beyond the scope of this document.
-- **document.** SSC security should also account for discovering and tracking software security defects rather than simply mitigating attacks.
-- **document.** To facilitate this, the software bill of materials (SBOM) must be shared with end users so that they can build inventories of software components.
-- **document.** Developer Environment Developer workstations and their environments present a fundamental risk to the security of an SSC and should not be trusted as part of the build process since they are at risk of compromise.
+- **§ 5.1.1.** The attestations must be cryptographically signed using a secure key.
+- **§ 5.1.1.** The storage location must be tamper-proof and protected using robust access control.
+- **§ 5.1.4.** If open-source modules and libraries are used, dependencies must be enumerated, understood, and evaluated for policy (potentially using appropriate SCA tools).

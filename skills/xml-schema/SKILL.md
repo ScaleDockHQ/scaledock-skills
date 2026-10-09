@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ This document specifies the XML Schema Definition Language, which offers facilit
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when validating XML with XSD.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,15 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **G.1.15 Schema composition.** "Schema processors are now explicitly recommended to provide a user option to control whether the processor attempts to dereference schema locations indicated in schemaLocation attributes in the instance document being validated; this resolves issue 5476 xsi:schemaLocation should be a hint, should be MAY not SHOULD ."
-2. **1.1 Introduction to Version 1.1.** "The Working Group's strategic guidelines for changes between versions 1.0 and 1.1 can be summarized as follows: Support for versioning (acknowledging that this may be slightly disruptive to the XML transfer syntax at the margins) Support for co-occurrence constraints (which will certainly involve additions to the XML transfer syntax, which will not be understood by 1.0 processors) Bug fixes…"
-3. **1.3.1.1 The Schema Namespace ( xs ).** "Users of the namespaces defined here should be aware, as a matter of namespace policy, that more names in this namespace may be given definitions in future versions of this or other specifications."
-4. **1.3.2 Namespaces with Special Status.** "Except as otherwise specified elsewhere in this specification, if components are · present · in a schema, or source declarations are included in an XSD schema document, for components in any of the following namespaces, then the components, or the declarations, should agree with the descriptions given in the relevant specifications and with the declarations given in any applicable XSD schema…"
-5. **1.3.2 Namespaces with Special Status.** "Users who have an interest in such specialized processing should be aware of the attending interoperability problems and should exercise caution."
-6. **1.3.2 Namespaces with Special Status.** "Components and source declarations must not specify http://www.w3.org/2000/xmlns/ as their target namespace."
-7. **1.4 Dependencies on Other Specifications.** "If both are supported, the choice of which datatypes to use in a particular assessment episode should be under user control."
-8. **1.4 Dependencies on Other Specifications.** "It should be noted however that the XML version number is not required to be present in the input to an assessment episode, and in any case the heuristic should be subject to override by users, to support cases where users wish to accept XML 1.1 input but validate it using the 1.0 datatypes, or accept XML 1.0 input and validate it using the 1.1 datatypes."
+1. **Part 1 § 1.5.** "Except as otherwise specified, processors must distinguish error-free (conforming) schemas and schema documents used in ·assessment· from those with errors;"
+2. **Part 1 § 1.5.** "if a schema used in ·assessment· or a schema document used in constructing a schema is in error, processors must report the fact; if more than one is in error, it is ·implementation-dependent· whether more than one is reported as being in error."
+3. **Part 1 § 3.2.3.** "default and fixed must not both be present."
+4. **Part 1 § 3.2.6.4.** "The {target namespace} of an attribute declaration, whether local or top-level, must not match http://www.w3.org/2001/XMLSchema-instance (unless it is one of the four built-in declarations given in the next section)."
+5. **Part 1 § 3.8.6.4.** "A content model must not contain two ·element particles· which ·compete· with each other, nor two ·wildcard particles· which ·compete· with each other."
+6. **Part 1 § 4.2.1.** "The schemaLocation attributes on the `<include>`, `<override>`, and `<redefine>` elements in a schema document, on the other hand, are not hints: conforming processors must attempt to de-reference the schema document named by the attribute."
+7. **Part 2 § 2.4.1.3.** "The ·transitive membership· of a ·union· must not contain the ·union· itself, nor any datatype ·derived· or ·constructed· from the ·union·."
+8. **Part 2 § 2.4.2.** "As normatively specified elsewhere, conforming processors must support all the primitive datatypes defined in this specification; it is ·implementation-defined· whether other primitive datatypes are supported."
+9. **Part 2 § 2.4.3.** "A datatype must not be ·derived· from itself."
 
 ## Workflow
 
@@ -42,7 +43,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

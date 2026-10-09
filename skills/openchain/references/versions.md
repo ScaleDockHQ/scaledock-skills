@@ -1,41 +1,25 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id                    | Line                | Status  | Revision                                                                      | Posture | Publisher              |
-| --------------------- | ------------------- | ------- | ----------------------------------------------------------------------------- | ------- | ---------------------- |
-| `openchain-iso-5230`  | OpenChain ISO 5230  | current | OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)  |         | Public text 2026-10-06 |
-| `openchain-iso-18974` | OpenChain ISO 18974 | current | OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06) |         | Public text 2026-10-06 |
+| Id                    | Line                | Status  | Revision                                                            | Posture | Summary                                                                                                                                      |
+| --------------------- | ------------------- | ------- | ------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `openchain-iso-5230`  | OpenChain ISO 5230  | current | ISO/IEC 5230:2020 (OpenChain 2.1), commit 968092c97da8 (2025-01-08) |         | License compliance program: policy, competence, awareness, scope, bill of materials, compliance artifacts and contributions.                 |
+| `openchain-iso-18974` | OpenChain ISO 18974 | current | ISO/IEC 18974:2023, commit 5bb0a024ce96 (2024-11-08)                |         | Security assurance program: policy, competence, standard practices for known vulnerabilities, SBOM and security assurance of each component. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### OpenChain ISO 5230
-
-- Publisher status on 2026-10-06: Public text (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/ISO-5230-2020/en/ISO-5230-2020.md
-- Revision token: OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)
-
-### OpenChain ISO 18974
-
-- Publisher status on 2026-10-06: Public text (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/main/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md
-- Revision token: OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06)
+The two lines are separate families, not successive versions: ISO/IEC 5230 covers license compliance and ISO/IEC 18974 covers security assurance, and an organization can conform to either or both. The public Markdown texts are the OpenChain Project's own renderings; the project notes they may differ in formatting from the ISO publications but contain the same requirements. Conformance under either lasts 18 months.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+This skill has one published line. There is no older line here to upgrade from.

@@ -1,33 +1,30 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. SP 800-207 states its tenets as defining rules and uses "must" and "should" in the explanation of each; the sentences are quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with its section and tenet number, or with its SP 800-207A recommendation identifier.
 
-## SP 800-207
+## SP 800-207: Zero Trust Architecture
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+- **§ 1.** In this new paradigm, an enterprise must assume no implicit trust and continually analyze and evaluate the risks to its assets and business functions and then enact protections to mitigate these risks.
+- **§ 2.** The system must ensure that the subject is authentic and the request is valid.
+- **§ 2.** To allow the PDP/PEP to be as specific as possible, the implicit trust zone must be as small as possible.
+- **§ 2.1 tenet 1.** All data sources and computing services are considered resources.
+- **§ 2.1 tenet 2.** Access requests from assets located on enterprise-owned network infrastructure (e.g., inside a legacy network perimeter) must meet the same security requirements as access requests and communication from any other nonenterprise-owned network.
+- **§ 2.1 tenet 2.** All communication should be done in the most secure manner available, protect confidentiality and integrity, and provide source authentication.
+- **§ 2.1 tenet 3.** Access to individual enterprise resources is granted on a per-session basis.
+- **§ 2.1 tenet 3.** Access should also be granted with the least privileges needed to complete the task.
+- **§ 2.1 tenet 4.** Access to resources is determined by dynamic policy—including the observable state of client identity, application/service, and the requesting asset—and may include other behavioral and environmental attributes.
+- **§ 2.1 tenet 5.** An enterprise implementing a ZTA should establish a continuous diagnostics and mitigation (CDM) or similar system to monitor the state of devices and applications and should apply patches/fixes as needed.
+- **§ 2.1 tenet 6.** All resource authentication and authorization are dynamic and strictly enforced before access is allowed.
+- **§ 2.1 tenet 7.** The enterprise collects as much information as possible about the current state of assets, network infrastructure and communications and uses it to improve its security posture.
+- **§ 2.2.** Every asset must have its security posture evaluated via a PEP before a request is granted to an enterprise-owned resource (similar to tenet 6 above for assets as well as subjects).
 
-- **document.** Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on f ederal agencies by the Secretary of Commerce under statutory authority.
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official.
-- **document.** A ZT approach is primarily focused on data and service protection but can and should be expanded to include all enterprise assets (devices, infrastructure components, applications, virtual and cloud components) and subjects (end users, applications and other non- human entities that request information from resources).
-- **document.** In this new paradigm, an enterprise must assume no implicit trust and continually analyze and evaluate the risks to its assets and business functions and then enact protections to mitigate these risks.
-- **document.** Organizations should seek to incrementally implement zero trust principles,
-- **document.** NIST SP 800-207 ZERO TRUST ARCHITECTURE 4 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-207 2 Zero Trust Basics Zero trust is a cybersecurity paradigm focused on resource protection and the premise that trust is never granted implicitly but must be continually evaluated.
-- **document.** The initial focus should be on restricting resources to those with a need to access and grant only the minimum privileges (e.g., read, write, delete) needed to perform the mission.
-- **document.** Access is granted through a policy decision point (PDP) and corresponding policy enforcement point (PEP).3 Figure 1: Zero Trust Access The system must ensure that the subject is authentic and the request is valid.
-
-## SP 800-207A
+## SP 800-207A: A Zero Trust Architecture Model for Access Control in Cloud-Native Applications in Multi-Location Environments
 
 Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207A.pdf
 
-Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology
-
-- **document.** N othing in this publication should be taken to contradict the standards and guidelines made mandatory and binding
-- **document.** Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official.
-- **document.** In order to follow zero trust principles, the constituent polices in the framework should consider the following scenario: • There should not be implicit trust in users, services, or devices based exclusively on their network location, affiliation, or ownership.
-- **document.** • To ensure the presence of zero trust principles throughout the entire application, network- tier policies must be augmented with policies that establish trust in the identity of the various participating entities (e.g., users and services) irrespective of the location of the services or applications, whether on-premises or on multiple clouds.
-- **document.** The policy framework should also consist of a comprehensive set of policies that span all critical entities and resources in the application stack, including the network, network devices, users, and services.
-- **document.** • Identifying the infrastructural elements that should be part of the platform in order to configure and implement ZT principles.
-- **document.** • Since APIs play a crucial role in cloud-native applications, proper versioning (to provide backward compatibility), proper input validation techniques (to prevent attacks, such as Structured Query Language (SQL) injection and cross-site scripting), and output encoding must be part of the policy framework in addition to general requirements, such as proper documentation for key areas (e.g., usage instructions).
-- **document.** Rather, they must collectively enforce zero trust principles across all applications in the infrastructure.
+- **ID-SEG-REC-1.** Wherever they are located, communication between any two should be encrypted to ensure eavesdropping protection and message authenticity.
+- **ID-SEG-REC-2.** Each service should present a short-lived cryptographically verifiable identity credential to other services that is authenticated per connection and reauthenticated regularly.
+- **ID-SEG-REC-4.** This system should be used to issue a cryptographically verifiable runtime token that represents the user principal to the rest of the infrastructure (e.g., a JSON Web Token [JWT]), and services should authenticate the credential at each hop.
+- **ID-SEG-REC-5.** The JWT libraries that process the token must be enabled to both decode (base64url encoding) and verify the signature.

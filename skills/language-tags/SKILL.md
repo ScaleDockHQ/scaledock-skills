@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "Formatting of Language Tags At all times, language tags and their subtags, including private use and extensions, are to be treated as case insensitive: there exist conventions for the capitalization of some of the subtags, but these MUST NOT be taken to carry meaning."
-3. **document.** "Implementers SHOULD specify a locale-neutral casing operation to ensure that case folding of subtags does not produce this value, which is illegal in language tags."
-4. **document.** "Sequences of private use and extension subtags MUST occur at the end of the sequence of subtags and MUST NOT be interspersed with subtags defined elsewhere in this document."
-5. **document.** "Future registrations of this type are discouraged: an attempt to register any new proposed primary language MUST be made to the ISO 639 registration authority."
-6. **document.** "Other values MUST NOT be assigned to the primary subtag except by revision or update of this document."
-7. **document.** "In order to avoid instability in the canonical form of tags, if a two-character code is added to ISO 639-1 for a language for which a three-character code was already included in either ISO 639-2 or ISO 639-3, the two-character code MUST NOT be registered."
-8. **document.** "Extended language subtag records MUST include exactly one 'Prefix' field indicating an appropriate subtag or sequence of subtags for that extended language subtag."
+1. **RFC 5646 § 2.1.1.** "At all times, language tags and their subtags, including private use and extensions, are to be treated as case insensitive: there exist conventions for the capitalization of some of the subtags, but these MUST NOT be taken to carry meaning."
+2. **RFC 5646 § 2.2.** "Sequences of private use and extension subtags MUST occur at the end of the sequence of subtags and MUST NOT be interspersed with subtags defined elsewhere in this document."
+3. **RFC 5646 § 2.2.3.** "There MUST be at most one script subtag in a language tag, and the script subtag SHOULD be omitted when it adds no distinguishing value to the tag or when the primary or extended language subtag's record in the subtag registry includes a 'Suppress-Script' field listing the applicable script subtag."
+4. **RFC 5646 § 2.2.5.** "The same variant subtag MUST NOT be used more than once within a language tag."
+5. **RFC 5646 § 2.2.6.** "Each singleton subtag MUST appear at most one time in each tag (other than as a private use subtag)."
+6. **RFC 5646 § 2.2.9.** "Users MUST NOT assign language tags that use subtags that do not appear in the registry other than in private use sequences (such as the subtag 'personal' in the tag "en-x-personal")."
+7. **RFC 5646 § 4.4.1.** "Protocols or specifications that specify limited buffer sizes for language tags MUST allow for language tags of at least 35 characters."
+8. **RFC 5646 § 4.5.** "Since a particular language tag can be used by many processes, language tags SHOULD always be created or generated in canonical form."
+9. **RFC 4647 § 2.** "Matching of language tags to language ranges MUST be done in a case-insensitive manner."
+10. **RFC 4647 § 3.** "Protocols and specifications requiring conformance to this specification MUST clearly indicate the particular mechanism used in selecting or matching language tags."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

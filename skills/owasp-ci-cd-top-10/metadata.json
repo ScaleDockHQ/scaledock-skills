@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP CI/CD Top 10. OWASP CI/CD Top 10 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP Top 10 CI/CD Security Risks. Requirements quote each risk's definition and its recommended controls from the project's GitHub repository at a pinned commit.",
   "versions": [
     {
       "id": "cicd-top-10",
       "label": "OWASP CI/CD Top 10",
       "status": "current",
-      "revision": "OWASP CI/CD Top 10, fetched 2026-10-06 (Project, 2026-10-06)"
+      "revision": "Commit 74b2c790d551 (2025-11-03)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP CI/CD Top 10",
-      "url": "https://owasp.org/www-project-top-10-ci-cd-security-risks/",
-      "status": "Project",
-      "revision": "OWASP CI/CD Top 10, fetched 2026-10-06 (Project, 2026-10-06)",
+      "title": "CICD-SEC-1: Insufficient Flow Control Mechanisms",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-01-Insufficient-Flow-Control-Mechanisms.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-2: Inadequate Identity and Access Management",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-02-Inadequate-Identity-And-Access-Management.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-3: Dependency Chain Abuse",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-03-Dependency-Chain-Abuse.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-4: Poisoned Pipeline Execution (PPE)",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-04-Poisoned-Pipeline-Execution.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-5: Insufficient PBAC (Pipeline-Based Access Controls)",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-05-Insufficient-PBAC.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-6: Insufficient Credential Hygiene",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-06-Insufficient-Credential-Hygiene.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-7: Insecure System Configuration",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-07-Insecure-System-Configuration.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-8: Ungoverned Usage of 3rd Party Services",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-08-Ungoverned-Usage-of-3rd-Party-Services.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-9: Improper Artifact Integrity Validation",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-09-Improper-Artifact-Integrity-Validation.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "CICD-SEC-10: Insufficient Logging and Visibility",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-top-10-ci-cd-security-risks/74b2c790d5512998f232480dde61d4d42fa692ae/CICD-SEC-10-Insufficient-Logging-And-Visibility.md",
+      "status": "OWASP Project document",
+      "revision": "Commit 74b2c790d551 (2025-11-03)",
       "checked": "2026-10-06"
     }
   ]

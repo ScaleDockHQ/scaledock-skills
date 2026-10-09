@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Implementations are REQUIRED to derive the same results but are not required to use the specified procedures."
-2. **document.** "However, conforming implementations that use the algorithms identified in [ RFC3279 ], [ RFC4055 ], and [ RFC4491 ] MUST identify and encode the public key materials and digital signatures as described in those specifications."
-3. **document.** "The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-4. **document.** "An entry MUST NOT be removed from the CRL until it appears on one regularly scheduled CRL issued beyond the revoked certificate's validity period."
-5. **document.** "Standards Track [Page 16] RFC 5280 PKIX Certificate and CRL Profile May 2008 subjectUniqueID [2] IMPLICIT UniqueIdentifier OPTIONAL, -- If present, version MUST be v2 or v3 extensions [3] EXPLICIT Extensions OPTIONAL -- If present, version MUST be v3 } Version ::= INTEGER { v1(0), v2(1), v3(2) } CertificateSerialNumber ::= INTEGER Validity ::= SEQUENCE { notBefore Time, notAfter Time } Time ::=…"
-6. **document.** "This field MUST contain the same algorithm identifier as the signature field in the sequence tbsCertificate ( Section 4.1.2.3 )."
-7. **document.** "When extensions are used, as expected in this profile, version MUST be 3 (value is 2)."
-8. **document.** "If no extensions are present, but a UniqueIdentifier is present, the version SHOULD be 2 (value is 1); however, the version MAY be 3."
+1. **RFC 5280 § 4.1.2.2.** "Certificate users MUST be able to handle serialNumber values up to 20 octets."
+2. **RFC 5280 § 4.1.2.2.** "Conforming CAs MUST NOT use serialNumber values longer than 20 octets."
+3. **RFC 5280 § 4.1.2.5.** "CAs conforming to this profile MUST always encode certificate validity dates through the year 2049 as UTCTime; certificate validity dates in 2050 or later MUST be encoded as GeneralizedTime."
+4. **RFC 5280 § 4.2.** "A certificate-using system MUST reject the certificate if it encounters a critical extension it does not recognize or a critical extension that contains information that it cannot process."
+5. **RFC 5280 § 4.2.1.3.** "If the keyCertSign bit is asserted, then the cA bit in the basic constraints extension (Section 4.2.1.9) MUST also be asserted."
+6. **RFC 5280 § 4.2.1.9.** "If the basic constraints extension is not present in a version 3 certificate, or the extension is present but the cA boolean is not asserted, then the certified public key MUST NOT be used to verify certificate signatures."
+7. **RFC 5280 § 5.2.** "If a CRL contains a critical extension that the application cannot process, then the application MUST NOT use that CRL to determine the status of certificates."
+8. **RFC 5280 § 6.1.** "A certificate MUST NOT appear more than once in a prospective certification path."
+9. **RFC 6960 § 2.2.** "All definitive response messages SHALL be digitally signed."
+10. **RFC 6960 § 4.2.2.2.** "Systems or applications that rely on OCSP responses MUST be capable of detecting and enforcing the use of the id-kp-OCSPSigning value as described above."
+11. **RFC 9162 § 8.1.1.** "If a TLS server includes the transparency_info TLS extension when resuming a TLS session, the TLS client MUST abort the handshake."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

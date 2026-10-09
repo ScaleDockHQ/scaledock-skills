@@ -1,23 +1,37 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Digital Asset Links. Digital Asset Links is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers Digital Asset Links from the Asset Links specification (google/digitalassetlinks) and Google's statement list guides. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "digital-asset-links",
       "label": "Digital Asset Links",
       "status": "current",
-      "revision": "Digital Asset Links, fetched 2026-10-06 (Documentation, 2026-10-06)"
+      "revision": "Asset Links specification at commit d893749 (2017-09-14); Google guides read 2026-10-06"
     }
   ],
   "sources": [
     {
-      "title": "Digital Asset Links",
-      "url": "https://developers.google.com/digital-asset-links/v1/getting-started",
-      "status": "Documentation",
-      "revision": "Digital Asset Links, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "title": "Asset Links Specification (google/digitalassetlinks, well-known/details.md)",
+      "url": "https://raw.githubusercontent.com/google/digitalassetlinks/d893749ee3c84b31f72b552a7ed333789c3235d3/well-known/details.md",
+      "status": "Specification",
+      "revision": "Commit d893749, 2017-09-14",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Creating a Statement List",
+      "url": "https://developers.google.com/digital-asset-links/v1/create-statement",
+      "status": "Google developer guide",
+      "revision": "Read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Statement List Syntax",
+      "url": "https://developers.google.com/digital-asset-links/v1/statements",
+      "status": "Google developer reference",
+      "revision": "Read 2026-10-06",
       "checked": "2026-10-06"
     }
   ]

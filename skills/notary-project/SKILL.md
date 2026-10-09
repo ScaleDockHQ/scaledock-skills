@@ -5,35 +5,30 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # Notary Project
 
-- **[Signature Envelope](#signature-envelope)**: Describes the structure of the Notary Project signature.
+The Notary Project specifications for signing OCI artifacts: the signature specification (envelope, signed and unsigned attributes, signature manifest, certificate requirements), the trust store and trust policy specification, and the signing and verification workflow, read from the notaryproject/specifications repository at release v1.1.0.
 
-The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when signing OCI artifacts with Notation.
-
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
-- Target version: Notation signature specification (default). See [`references/versions.md`](references/versions.md).
+- Role: Signer that produces Notary Project signatures, or verifier (such as Notation or an admission controller) that evaluates them against a trust policy.
+- Target version: Notation signature specification (current). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
-- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
+- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "- For OCI artifacts, this MUST be a valid [OCI descriptor][oci-descriptor]."
-2. **document.** "- Descriptor MUST contain `mediaType`, `digest`, and `size` fields."
-3. **document.** "- Descriptor MAY contain `annotations` and if present it MUST follow the [annotation rules][annotation-rules]."
-4. **document.** "- For Blob artifacts, the descriptor MUST describe the blob that is being signed - Descriptor MUST contain `mediaType`, `digest`, and `size` fields."
-5. **document.** "- `digest` MUST be in the format of `:`."
-6. **document.** "Example: `sha256:2f3a23b6373afb134ddcd864be8e037e34a662d090d33ee849471ff73c873345` - `digest algorithm` MUST be deduced from signing certificate's public key."
-7. **document.** "An example can be `application/octet-stream` - `size` MUST be the raw size of the blob in bytes."
-8. **document.** "- Blob descriptors MAY optionally contain `annotations` and if present it MUST follow the [annotation rules][annotation-rules]."
+1. **Extended attributes.** "These attributes MAY be marked critical, i.e. the attribute MUST be understood and processed by a verifier, unknown critical attributes MUST cause signature verification to fail."
+2. **Unsigned Attributes.** "The certificate chain MUST be authenticated against a trust store as part of signature validation."
+3. **Other requirements.** "Any certificate in the certificate chain MUST NOT use SHA1WithRSA and ECDSAWithSHA1 signatures."
+4. **Selecting a trust policy to verify a signed OCI artifact.** "If there exists a trust policy whose scope contains the artifact's repository URI then the aforementioned policy MUST be used for signature evaluation."
+5. **Verification Prerequisites.** "The user must resolve the `latest` tag to a digest and construct a new artifact reference using the resolved digest `wabbit-networks.io/software@sha256:${digest}`."
 
 ## Workflow
 
@@ -42,7 +37,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.
@@ -51,19 +46,22 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Each verified artifact is referenced by digest, and the trust policy that applies to its repository names a trust store and trusted identities.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index
 
 - **`references/versions.md`**: every version line, which one to use, and how to upgrade. Load for steps 1 and 3.
-- **`references/requirements.md`**: quotes taken from the pinned specification. Load for step 2.
+- **`references/requirements.md`**: quotes taken from the pinned specification, grouped by source. Load for step 2.
 
 ## Related skills
 
-Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`: `oci`, `x509-pkix`, `cose`, `sigstore`.
 
 ## Sources
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [Notation signature specification](https://raw.githubusercontent.com/notaryproject/specifications/main/specs/signature-specification.md): Specification, Notation signature specification, fetched 2026-10-06 (Specification, 2026-10-06), checked 2026-10-06.
+- [Notary Project Signature Specification](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/signature-specification.md): Specification, Release v1.1.0 (2024-08-13), checked 2026-10-06.
+- [Notary Project Trust Store and Trust Policy Specification](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/trust-store-trust-policy.md): Specification, Release v1.1.0 (2024-08-13), checked 2026-10-06.
+- [Notary Project Signing and Verification Workflow](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/signing-and-verification-workflow.md): Specification, Release v1.1.0 (2024-08-13), checked 2026-10-06.

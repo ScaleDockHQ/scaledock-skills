@@ -1,23 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers xAPI. Experience API is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the Experience API from xAPI-Data.md and xAPI-Communication.md in adlnet/xAPI-Spec, pinned at a commit. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "experience-api",
       "label": "Experience API",
       "status": "current",
-      "revision": "xAPI-Data.md on adlnet/xAPI-Spec master (Specification, 2026-10-06)"
+      "revision": "adlnet/xAPI-Spec commit ca782a1, 2025-07-03 (the 1.0.x text; examples use version 1.0.3)"
     }
   ],
   "sources": [
     {
-      "title": "Experience API",
-      "url": "https://raw.githubusercontent.com/adlnet/xAPI-Spec/master/xAPI-Data.md",
+      "title": "Experience API, Part Two: Data",
+      "url": "https://raw.githubusercontent.com/adlnet/xAPI-Spec/ca782a1129bc6ae848640ff4e8e262334bdd0ba5/xAPI-Data.md",
       "status": "Specification",
-      "revision": "xAPI-Data.md on adlnet/xAPI-Spec master (Specification, 2026-10-06)",
+      "revision": "adlnet/xAPI-Spec commit ca782a1, 2025-07-03 (the 1.0.x text; examples use version 1.0.3)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Experience API, Part Three: Data Processing, Validation, and Security",
+      "url": "https://raw.githubusercontent.com/adlnet/xAPI-Spec/ca782a1129bc6ae848640ff4e8e262334bdd0ba5/xAPI-Communication.md",
+      "status": "Specification",
+      "revision": "adlnet/xAPI-Spec commit ca782a1, 2025-07-03 (the 1.0.x text; examples use version 1.0.3)",
       "checked": "2026-10-06"
     }
   ]

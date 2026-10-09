@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-171
 
-Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology
+NIST Special Publication 800-171 Revision 3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations: 97 security requirements in 17 families, numbered 03.01.01 to 03.17.03, for systems that process, store or transmit CUI.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when protecting controlled unclassified information.
 
@@ -19,19 +19,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: nonfederal organization or contractor protecting CUI, or an assessor checking the security requirements.
 - Target version: SP 800-171 Rev 3 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the"
-3. **document.** "To maintain a consistent level of protection, the security requirements for safeguarding CUI in nonfederal systems and organizations must comply with Federal Information Processing"
-4. **document.** "The requirements do not apply to nonfederal organizations that are collecting or maintaining information on behalf of a federal agency or using or operating a system on behalf of an agency.8 8 Nonfederal organizations that collect or maintain information on behalf of a federal agency or that use or operate a system on behalf of an agency must comply with the requirements in FISMA [9]."
-5. **document.** "If ODP values for selected security requirements are not formally established or assigned by a federal agency or a consortium of federal agencies, nonfederal organizations must assign those values to complete the requirements."
-6. **document.** "If a federal agency or a consortium of agencies do not specify a particular value or range of values for an ODP, nonfederal organizations must assign the value or values to complete the security requirement."
+1. **§ 2.2.** "If ODP values for selected security requirements are not formally established or assigned by a federal agency or a consortium of federal agencies, nonfederal organizations must assign those values to complete the requirements."
+2. **03.05.03.** "Implement multi-factor authentication for access to privileged and non-privileged accounts."
+3. **03.05.07.** "Store passwords in a cryptographically protected form."
+4. **03.13.08.** "Implement cryptographic mechanisms to prevent the unauthorized disclosure of CUI during transmission and while in storage."
 
 ## Workflow
 
@@ -49,6 +47,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Every organization-defined parameter in an applied requirement has a value, assigned by the agency or, if none was given, by the organization.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index

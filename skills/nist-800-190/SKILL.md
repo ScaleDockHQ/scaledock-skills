@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-190
 
-Kent Rochford, Acting Under Secretary of Commerce for Standards and Technology and Acting Director
+NIST Special Publication 800-190, Application Container Security Guide: the major risks to images, registries, orchestrators, containers and host OSs (Section 3), and the countermeasures for each (Section 4).
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when securing application containers.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: team building, deploying or operating containerized apps, or reviewing a container platform.
 - Target version: SP 800-190 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official."
-3. **document.** "Figure 1: Container Technology Architecture Tiers and Components Organizations should follow these recommendations to help ensure the security of their container technology implementations and usage: Tailor the organization’s operational culture and technical processes to support the new way of developing, running, and supporting applications made possible by containers."
-4. **document.** "be encouraged to embrace the recommended practices for securely building and operating apps within containers, as covered in this guide, and the organization should be willing to rethink existing procedures to take advantage of containers."
-5. **document.** "Education and training covering both the technology and the operational approach should be offered to anyone involved in the software development lifecycle."
-6. **document.** "Accordingly, whenever possible, organizations should use container-specific host OSs to reduce their risk."
-7. **document.** "In larger-scale environments with hundreds of hosts and thousands of containers, this grouping must be automated to be practical to operationalize."
-8. **document.** "Organizations should use tools that take the declarative, step-by-step build approach and immutable nature of containers and images into their design to provide more actionable and reliable results."
+1. **§ 4.1.4.** "Secrets should be stored outside of images and provided dynamically at runtime as needed."
+2. **§ 4.1.5.** "Organizations should maintain a set of trusted images and registries and ensure that only images from this set are allowed to run in their environment, thus mitigating the risk of untrusted or malicious components being deployed."
+3. **§ 4.4.3.** "Organizations should automate compliance with container runtime configuration standards."
+4. **§ 4.4.4.** "Containers should also be run with their root filesystems in read-only mode."
+5. **§ 4.5.5.** "In no case should containers be able to mount sensitive directories on a host's file system, especially those containing configuration settings for the operating system."
 
 ## Workflow
 
