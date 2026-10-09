@@ -1,0 +1,144 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Machine Payments Protocol (MPP) by Tempo and Stripe: the \"Payment\" HTTP authentication scheme of draft-httpauth-payment-01 (402 challenges in WWW-Authenticate, HMAC challenge binding over JCS-serialized requests, credentials in Authorization or Payment-Authorization, Payment-Receipt, Accept-Payment, RFC 9457 problem types and 402/401/403 semantics), the charge and subscription intents, method-defined session intents, OpenAPI discovery with x-payment-info, the JSON-RPC and MCP transport, reconciliation and security. It lists one version line, draft-httpauth-payment-01 (current, posture build), with the companion documents pinned to paymentauth.org at mpp-specs commit 50309c8. SKILL.md holds the invariants and workflow; references split out versions, the core protocol, and intents, discovery and transports.",
+  "versions": [
+    {
+      "id": "httpauth-payment-01",
+      "label": "draft-httpauth-payment-01",
+      "status": "current",
+      "revision": "draft-httpauth-payment-01 (2026-09-09)",
+      "posture": "build"
+    }
+  ],
+  "sources": [
+    {
+      "title": "draft-httpauth-payment-01: The \"Payment\" HTTP Authentication Scheme",
+      "url": "https://www.ietf.org/archive/id/draft-httpauth-payment-01.txt",
+      "status": "Individual Internet-Draft, intended Standards Track",
+      "revision": "-01 (2026-09-09)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-httpauth-payment datatracker page",
+      "url": "https://datatracker.ietf.org/doc/draft-httpauth-payment/",
+      "status": "Active, I-D Exists",
+      "revision": "latest -01, expires 2027-03-13",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-httpauth-payment-00",
+      "url": "https://www.ietf.org/archive/id/draft-httpauth-payment-00.txt",
+      "status": "Individual Internet-Draft, superseded",
+      "revision": "-00 (2026-06-19)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-ryan-httpauth-payment-01",
+      "url": "https://www.ietf.org/archive/id/draft-ryan-httpauth-payment-01.txt",
+      "status": "Individual Internet-Draft, superseded",
+      "revision": "-01 (2026-03-18)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-ryan-httpauth-payment-00",
+      "url": "https://www.ietf.org/archive/id/draft-ryan-httpauth-payment-00.txt",
+      "status": "Individual Internet-Draft, superseded",
+      "revision": "-00 (2026-02-15)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Machine Payments Protocol Specifications (paymentauth.org)",
+      "url": "https://paymentauth.org",
+      "status": "Specification index",
+      "revision": "build of tempoxyz/mpp-specs 50309c8 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-payment-intent-charge-00: Charge Intent for HTTP Payment Authentication",
+      "url": "https://paymentauth.org/draft-payment-intent-charge-00.txt",
+      "status": "Internet-Draft format, intended Informational, published on paymentauth.org only",
+      "revision": "-00 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-payment-intent-subscription-00: Subscription Intent for HTTP Payment Authentication",
+      "url": "https://paymentauth.org/draft-payment-intent-subscription-00.txt",
+      "status": "Internet-Draft format, intended Informational, published on paymentauth.org only",
+      "revision": "-00 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-payment-discovery-01: Service Discovery for HTTP Payment Authentication",
+      "url": "https://paymentauth.org/draft-payment-discovery-01.txt",
+      "status": "Internet-Draft format, intended Informational, published on paymentauth.org only",
+      "revision": "-01 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-payment-transport-mcp-00: Payment Authentication Scheme: JSON-RPC & MCP Transport",
+      "url": "https://paymentauth.org/draft-payment-transport-mcp-00.txt",
+      "status": "Internet-Draft format, intended Informational, published on paymentauth.org only",
+      "revision": "-00 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "draft-tempo-session-00: Tempo Session Intent for HTTP Payment Authentication",
+      "url": "https://paymentauth.org/draft-tempo-session-00.txt",
+      "status": "Payment method specification, intended Informational",
+      "revision": "-00 (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "tempoxyz/mpp-specs",
+      "url": "https://github.com/tempoxyz/mpp-specs",
+      "status": "Specification source repository",
+      "revision": "commit 50309c8e67e6d64b5547f1cc354fb327bda1301e (2026-10-05)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Machine Payments Protocol documentation (mpp.dev)",
+      "url": "https://mpp.dev/",
+      "status": "Protocol site, informative",
+      "revision": "as of 2026-10-09",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Introducing the Machine Payments Protocol",
+      "url": "https://stripe.com/blog/machine-payments-protocol",
+      "status": "Announcement, informative",
+      "revision": "2026-03-18",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Stripe docs: Accept machine payments with MPP",
+      "url": "https://docs.stripe.com/payments/machine/mpp",
+      "status": "Vendor documentation, informative",
+      "revision": "as of 2026-10-09",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9110: HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "status": "Internet Standard",
+      "revision": "RFC 9110 (STD 97)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 8785: JSON Canonicalization Scheme",
+      "url": "https://www.rfc-editor.org/rfc/rfc8785",
+      "status": "Informational",
+      "revision": "RFC 8785",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9457: Problem Details for HTTP APIs",
+      "url": "https://www.rfc-editor.org/rfc/rfc9457",
+      "status": "Proposed Standard",
+      "revision": "RFC 9457",
+      "checked": "2026-10-09"
+    }
+  ]
+}

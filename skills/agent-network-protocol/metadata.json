@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Agent Network Protocol (ANP) 1.2 specifications for agent identity, authentication, description, discovery and negotiation: did:wba DIDs with e1_ Ed25519 key-fingerprint paths, eddsa-jcs-2022 DID Document proofs and successorDid key rotation (ANP-03), RFC 9421 and RFC 9530 DID request authentication with DIDWba challenges and Authentication-Info tokens (ANP-02), the plain-JSON Agent Description document (ANP-07), /.well-known/agent-descriptions discovery (ANP-08), and the draft anp.negotiate meta-protocol (ANP-06). It lists two version lines: ANP 1.2 (current, posture track, with 1.1 folded in) and ANP 1.0 (legacy, upgraded from). SKILL.md holds the invariants and workflow; references split out versions, did:wba with authentication, and description, discovery and negotiation.",
+  "versions": [
+    {
+      "id": "anp-1.2",
+      "label": "ANP 1.2",
+      "status": "current",
+      "revision": "tag v1.2, commit 26ff75c634fa032fcc42291b10188174d9d4b4b0 (2026-09-24)",
+      "posture": "track"
+    },
+    {
+      "id": "anp-1.0",
+      "label": "ANP 1.0",
+      "status": "legacy",
+      "revision": "tag V1.0, commit 275339a (2025-05-19)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "AgentNetworkProtocol repository at tag v1.2",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/tree/v1.2",
+      "status": "Community specification set, Apache-2.0",
+      "revision": "tag v1.2, commit 26ff75c634fa032fcc42291b10188174d9d4b4b0 (2026-09-24); main at c6a467b4e690137d237d8068f2c60b48955dbaf6 (2026-10-01) changes only copyright lines in the covered documents",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP-02: ANP DID Authentication Protocol",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/v1.2/02-anp-did-authentication-protocol-specification.md",
+      "status": "Released",
+      "revision": "version 1.2, tag v1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP-03: did:wba Method Specification",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/v1.2/03-did-wba-method-design-specification.md",
+      "status": "Released",
+      "revision": "version 1.2, tag v1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP-06: ANP Agent Communication Meta-Protocol Specification",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/v1.2/06-anp-agent-communication-meta-protocol-specification.md",
+      "status": "Draft",
+      "revision": "document version 1.2, profile anp.meta.negotiation.v1, tag v1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP-07: ANP Agent Description Protocol Specification",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/v1.2/07-anp-agent-description-protocol-specification.md",
+      "status": "Released",
+      "revision": "version 1.2, tag v1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP-08: ANP Agent Discovery Protocol Specification",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/blob/v1.2/08-ANP-Agent-Discovery-Protocol-Specification.md",
+      "status": "Released",
+      "revision": "version 1.2, tag v1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "AgentNetworkProtocol repository at tag v1.1",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/tree/v1.1",
+      "status": "Community specification set, superseded, folded into the 1.2 line",
+      "revision": "tag v1.1, commit 6fc3854 (2026-06-27)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "AgentNetworkProtocol repository at tag V1.0",
+      "url": "https://github.com/agent-network-protocol/AgentNetworkProtocol/tree/V1.0",
+      "status": "Community specification set, legacy, MIT",
+      "revision": "tag V1.0, commit 275339a (2025-05-19)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Agent Network Protocol website",
+      "url": "https://agent-network-protocol.com/",
+      "status": "Project site, informative",
+      "revision": "ANP 1.2 marked latest, as of 2026-10-09",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ANP Agent Description Protocol Specification (website)",
+      "url": "https://agent-network-protocol.com/specs/1.2/agent-description",
+      "status": "Released, rendered mirror of ANP-07",
+      "revision": "version 1.2",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9421: HTTP Message Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421",
+      "status": "Proposed Standard",
+      "revision": "RFC 9421",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9530: Digest Fields",
+      "url": "https://www.rfc-editor.org/rfc/rfc9530",
+      "status": "Proposed Standard",
+      "revision": "RFC 9530",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 7638: JSON Web Key (JWK) Thumbprint",
+      "url": "https://www.rfc-editor.org/rfc/rfc7638",
+      "status": "Proposed Standard",
+      "revision": "RFC 7638",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "IANA Well-Known URIs registry",
+      "url": "https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml",
+      "status": "IANA registry",
+      "revision": "as of 2026-10-09; agent-descriptions not registered",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Decentralized Identifiers (DIDs) v1.0",
+      "url": "https://www.w3.org/TR/did-core/",
+      "status": "W3C Recommendation",
+      "revision": "2022-07-19",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Data Integrity EdDSA Cryptosuites v1.0",
+      "url": "https://www.w3.org/TR/vc-di-eddsa/",
+      "status": "W3C Recommendation",
+      "revision": "defines eddsa-jcs-2022",
+      "checked": "2026-10-09"
+    }
+  ]
+}

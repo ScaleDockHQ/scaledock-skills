@@ -18,7 +18,8 @@ Then ask your agent to "review our robots.txt against RFC 9309", "block AI train
 - Other records such as `Sitemap`, and the reported RFC 9309 errata.
 - Fetch outcomes (4xx allow all, 5xx or unreachable disallow all, redirects), 24-hour caching and the 500 KiB limit.
 - Security considerations: robots.txt is not access control, and User-Agent strings can be spoofed.
-- AI crawler tokens as documented by their operators, and how robots.txt relates to AI usage preferences and the proposed `Content-Usage` rule.
+- AI crawler tokens as documented by their operators (Anthropic, Apple, Common Crawl, Google, OpenAI and Perplexity), and how robots.txt relates to AI usage preferences and the proposed `Content-Usage` rule.
+- Non-RFC extension lines (`Content-Signal` from the Content Signals Policy and RSL's `License` directive): what they mean and why an RFC 9309 parser must not let them end a group.
 
 ## Versions
 
@@ -40,7 +41,9 @@ The skill was written from these sources, pinned in `metadata.json`:
 - [draft-koster-robots-00](https://www.robotstxt.org/norobots-rfc.txt): expired Internet-Draft, December 1996.
 - [draft-ietf-aipref-attach](https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/): Internet-Draft, revision -05.
 - [RFC 5234](https://www.rfc-editor.org/rfc/rfc5234): ABNF, Internet Standard.
-- Crawler operator pages: [Google](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers), [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Apple](https://support.apple.com/en-us/119829) and [Common Crawl](https://commoncrawl.org/ccbot).
+- Crawler operator pages: [Google](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers), [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Apple](https://support.apple.com/en-us/119829), [Common Crawl](https://commoncrawl.org/ccbot) and [Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers).
+- [Content Signals Policy](https://blog.cloudflare.com/content-signals-policy/): Cloudflare announcement and policy text (CC0), 24 September 2025.
+- [RSL 1.0](https://rslstandard.org/rsl): Recommendation, RSL-SPEC-1.0, § 4.4 robots.txt License Association.
 
 ## License
 

@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Content Signals Policy, Cloudflare's CC0 robots.txt addition for stating whether content may be used for search, ai-input and ai-train, pinned to the policy announced on 24 September 2025 and the contentsignals.org generator. The 2025 policy is the only line. SKILL.md holds the invariants and workflow; references split out versions and the syntax, presets, parsing and combining rules.",
+  "versions": [
+    {
+      "id": "policy-2025",
+      "label": "Content Signals Policy 2025",
+      "status": "current",
+      "revision": "policy text of 2025-09-24 (contentsignals.org, unversioned)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Giving users choice with Cloudflare's new Content Signals Policy",
+      "url": "https://blog.cloudflare.com/content-signals-policy/",
+      "status": "Vendor policy announcement (Cloudflare), CC0",
+      "revision": "2025-09-24",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Content Signals (contentsignals.org)",
+      "url": "https://contentsignals.org/",
+      "status": "Vendor policy site and generator",
+      "revision": "unversioned page",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "RFC 9309: Robots Exclusion Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9309",
+      "status": "RFC (Proposed Standard)",
+      "revision": "RFC 9309 (September 2022)",
+      "checked": "2026-10-09"
+    }
+  ]
+}

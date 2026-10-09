@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.1.1"
   kind: standard
 ---
 
@@ -64,6 +64,9 @@ The Open Agentic Schema Framework (OASF) from AGNTCY is a schema system for desc
 ## Related skills
 
 Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`: `a2a`, `mcp`, `open-agent-spec`, `agent-skills`, `json-schema`, `semver`.
+
+- `dns-aid` for discovering agents through DNS records: `npx skills add ScaleDockHQ/scaledock-skills --skill dns-aid`.
+- `agent-network-protocol` for the Agent Network Protocol and its agent descriptions: `npx skills add ScaleDockHQ/scaledock-skills --skill agent-network-protocol`.
 
 ## Sources
 

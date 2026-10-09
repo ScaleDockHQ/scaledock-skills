@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the W3C TDM Reservation Protocol (TDMRep), pinned to the Final Community Group Report of 10 May 2024: the tdm-reservation and tdm-policy properties, the /.well-known/tdmrep.json file, HTTP headers, HTML meta and EPUB/PDF metadata, processing priority, and the ODRL 2.2 TDM Policy profile. The Final Report is the only line; the editor's draft is tracked as a source. SKILL.md holds the invariants and workflow; references split out versions, declaring and applying reservations, and TDM Policies.",
+  "versions": [
+    {
+      "id": "cg-final-2024",
+      "label": "TDMRep Final Report 2024",
+      "status": "current",
+      "revision": "Final Community Group Report, 10 May 2024"
+    }
+  ],
+  "sources": [
+    {
+      "title": "TDM Reservation Protocol (TDMRep), Final Community Group Report",
+      "url": "https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/",
+      "status": "Final Community Group Report (W3C TDMRep CG)",
+      "revision": "10 May 2024",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "TDM Reservation Protocol (TDMRep), editor's draft",
+      "url": "https://w3c-cg.github.io/tdm-reservation-protocol/spec/",
+      "status": "Editor's Draft",
+      "revision": "unchanged in substance from the Final Report",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Directive (EU) 2019/790 (CDSM Directive)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2019/790/oj",
+      "status": "EU Directive",
+      "revision": "OJ L 130 of 17.5.2019",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "AI Act Article 53: Obligations for providers of general-purpose AI models",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53",
+      "status": "European Commission AI Act Service Desk",
+      "revision": "Regulation (EU) 2024/1689, Article 53",
+      "checked": "2026-10-09"
+    }
+  ]
+}

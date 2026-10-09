@@ -1,0 +1,166 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers the Agent Client Protocol (ACP), the JSON-RPC 2.0 protocol between code editors or other UIs (Clients) and AI coding agents (Agents). ACP v1 (protocolVersion 1, schema v1.24.1) is the current line: initialization and version negotiation, capabilities, authentication, session setup, load, resume, list and close, prompt turns and stop reasons, session/update variants, tool calls and permission requests, fs and terminal Client methods, cancellation, error codes, _meta and underscore extensions, absolute paths and 1-based lines, and stdio framing. The ACP v2 draft (schema v2.0.0-alpha.7) is a preview with posture build, to be implemented only behind version negotiation and a feature flag beside v1, with a per-role migration checklist. SKILL.md holds the invariants and workflow; references split out the version lines and upgrade, the v1 lifecycle, tool calls and Client methods, and the v2 draft surface.",
+  "versions": [
+    {
+      "id": "v1",
+      "label": "ACP v1",
+      "status": "current",
+      "revision": "protocolVersion 1, schema-v1.24.1 (2026-09-30)",
+      "reference": "references/lifecycle.md"
+    },
+    {
+      "id": "v2-preview",
+      "label": "ACP v2 draft",
+      "status": "preview",
+      "posture": "build",
+      "revision": "protocolVersion 2, schema-v2.0.0-alpha.7 (2026-09-30), draft announced 2026-07-20",
+      "reference": "references/v2-draft.md"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ACP v1 Overview",
+      "url": "https://agentclientprotocol.com/protocol/v1/overview",
+      "status": "Stable",
+      "revision": "protocolVersion 1, schema v1.24.1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Initialization",
+      "url": "https://agentclientprotocol.com/protocol/v1/initialization",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Authentication",
+      "url": "https://agentclientprotocol.com/protocol/v1/authentication",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Session Setup",
+      "url": "https://agentclientprotocol.com/protocol/v1/session-setup",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Session List",
+      "url": "https://agentclientprotocol.com/protocol/v1/session-list",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Prompt Turn",
+      "url": "https://agentclientprotocol.com/protocol/v1/prompt-turn",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Content",
+      "url": "https://agentclientprotocol.com/protocol/v1/content",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Tool Calls",
+      "url": "https://agentclientprotocol.com/protocol/v1/tool-calls",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 File System",
+      "url": "https://agentclientprotocol.com/protocol/v1/file-system",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Terminals",
+      "url": "https://agentclientprotocol.com/protocol/v1/terminals",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Cancellation",
+      "url": "https://agentclientprotocol.com/protocol/v1/cancellation",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Extensibility",
+      "url": "https://agentclientprotocol.com/protocol/v1/extensibility",
+      "status": "Stable",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Transports",
+      "url": "https://agentclientprotocol.com/protocol/v1/transports",
+      "status": "Stable (stdio; Streamable HTTP in discussion)",
+      "revision": "protocolVersion 1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v1 Schema",
+      "url": "https://agentclientprotocol.com/protocol/v1/schema",
+      "status": "Stable",
+      "revision": "schema v1.24.1",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v2 Overview",
+      "url": "https://agentclientprotocol.com/protocol/v2/overview",
+      "status": "Draft (posture build)",
+      "revision": "protocolVersion 2, schema v2.0.0-alpha.7",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Migrating from v1 (ACP v2 migration guide)",
+      "url": "https://agentclientprotocol.com/protocol/v2/migration",
+      "status": "Draft (posture build)",
+      "revision": "schema v2.0.0-alpha.7",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "ACP v2 is available in Draft",
+      "url": "https://agentclientprotocol.com/announcements/acp-v2-draft",
+      "status": "Announcement",
+      "revision": "published 2026-07-20",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "agentclientprotocol/agent-client-protocol",
+      "url": "https://github.com/agentclientprotocol/agent-client-protocol",
+      "status": "Repository",
+      "revision": "schema/v1 and schema/v2 on main",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Release schema-v1.24.1",
+      "url": "https://github.com/agentclientprotocol/agent-client-protocol/releases/tag/schema-v1.24.1",
+      "status": "Released",
+      "revision": "schema-v1.24.1 (2026-09-30)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Release schema-v2.0.0-alpha.7",
+      "url": "https://github.com/agentclientprotocol/agent-client-protocol/releases/tag/schema-v2.0.0-alpha.7",
+      "status": "Pre-release (posture build)",
+      "revision": "schema-v2.0.0-alpha.7 (2026-09-30)",
+      "checked": "2026-10-09"
+    }
+  ]
+}

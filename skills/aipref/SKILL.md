@@ -15,7 +15,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.0.1"
   kind: standard
 ---
 
@@ -103,6 +103,9 @@ Draft posture: **build** for both families. Neither draft is an RFC, and both ma
 - `robots-txt` for RFC 9309 groups, Allow and Disallow matching and fetching: `npx skills add ScaleDockHQ/scaledock-skills --skill robots-txt`.
 - `web-bot-auth` for crawlers that prove their identity with signed requests, which aipref does not cover: `npx skills add ScaleDockHQ/scaledock-skills --skill web-bot-auth`.
 - `http-semantics` for representation metadata, field combining and caching: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
+- `content-signals` for Cloudflare's `Content-Signal` robots.txt line (search, ai-input, ai-train), a separate vocabulary for similar preferences: `npx skills add ScaleDockHQ/scaledock-skills --skill content-signals`.
+- `rsl` for RSL licenses that attach AI usage and payment terms through the robots.txt `License` directive: `npx skills add ScaleDockHQ/scaledock-skills --skill rsl`.
+- `tdmrep` for W3C TDM Reservation Protocol text and data mining opt-outs: `npx skills add ScaleDockHQ/scaledock-skills --skill tdmrep`.
 
 ## Sources
 

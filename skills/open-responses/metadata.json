@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "kind": "standard",
+  "organization": "ScaleDock",
+  "date": "October 2026",
+  "abstract": "Covers Open Responses, the open, vendor-neutral specification for multi-provider LLM APIs based on the OpenAI Responses API. Release 2026-04-24 is the current line and 2026-01-15 is supported: POST /v1/responses with items as the unit of context, item state machines, content, reasoning, the agentic tool loop with function calls, hosted tools, tool_choice and allowed_tools, previous_response_id, truncation, service_tier and errors; semantic streaming events over server-sent events; WebSocket mode with response.create, connection-local continuation, reconnects and error envelopes; POST /v1/responses/compact; assistant phase; slug-prefixed extension items, tools, events and fields; and the browser and CLI compliance tests. SKILL.md holds the invariants and workflow; references split out the version lines and upgrade, the request, item and tool model, streaming and WebSocket mode, and extensions and compliance.",
+  "versions": [
+    {
+      "id": "2026-04-24",
+      "label": "Open Responses 2026-04-24",
+      "status": "current",
+      "revision": "Specification, reference and OpenAPI 2026-04-24"
+    },
+    {
+      "id": "2026-01-15",
+      "label": "Open Responses 2026-01-15",
+      "status": "supported",
+      "revision": "Specification, reference and OpenAPI 2026-01-15"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Responses Specification 2026-04-24",
+      "url": "https://www.openresponses.org/specification/2026-04-24",
+      "status": "Released (dated specification)",
+      "revision": "2026-04-24",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses API Reference 2026-04-24",
+      "url": "https://www.openresponses.org/reference/2026-04-24",
+      "status": "Released (dated reference)",
+      "revision": "2026-04-24",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses OpenAPI 2026-04-24",
+      "url": "https://www.openresponses.org/openapi/2026-04-24/openapi.json",
+      "status": "Released (immutable dated OpenAPI 3.1 document)",
+      "revision": "info.version 2026-04-24",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses Acceptance Tests",
+      "url": "https://www.openresponses.org/compliance",
+      "status": "Compliance suite",
+      "revision": "10 browser and 7 CLI tests (2026-04-24)",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses Changelog",
+      "url": "https://github.com/openresponses/openresponses/blob/main/CHANGELOG.md",
+      "status": "Changelog",
+      "revision": "latest entry 2026-04-24",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "openresponses/openresponses",
+      "url": "https://github.com/openresponses/openresponses",
+      "status": "Repository",
+      "revision": "main as of 2026-10-09",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses Specification 2026-01-15",
+      "url": "https://www.openresponses.org/specification/2026-01-15",
+      "status": "Released (dated specification)",
+      "revision": "2026-01-15",
+      "checked": "2026-10-09"
+    },
+    {
+      "title": "Open Responses OpenAPI 2026-01-15",
+      "url": "https://www.openresponses.org/openapi/2026-01-15/openapi.json",
+      "status": "Released (immutable dated OpenAPI 3.1 document)",
+      "revision": "info.version 2026-01-15",
+      "checked": "2026-10-09"
+    }
+  ]
+}

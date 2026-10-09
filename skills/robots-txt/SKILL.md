@@ -4,21 +4,22 @@ description: >-
   robots.txt RFC 9309 Robots Exclusion Protocol: write, parse and review
   robots.txt files and crawler logic with correct matching, fetching and
   caching. Use when writing or auditing a site's /robots.txt, building or
-  reviewing a crawler, robots.txt parser or matcher, or deciding how to address
-  AI crawlers: user-agent groups and product tokens, allow and disallow rules,
+  reviewing a crawler or robots.txt parser, or deciding how to address AI
+  crawlers: user-agent groups and product tokens, allow and disallow rules,
   longest-match precedence, the * and $ special characters, percent-encoding,
-  4xx (allow all) versus 5xx (disallow all) handling, redirects, the 24-hour
-  cache, the 500 KiB parsing limit, Sitemap and other records, Crawl-delay, and
-  why robots.txt is not access control. Covers RFC 9309 (current), the 1994 A
-  Standard for Robot Exclusion and the 1996 draft-koster-robots-00 (legacy,
-  upgrade from), and tracks the draft-ietf-aipref-attach Content-Usage rule as
-  a preview. Triggers: robots.txt, robots exclusion protocol, REP, RFC 9309,
-  user-agent, disallow, GPTBot, Google-Extended, ClaudeBot, CCBot,
-  Applebot-Extended, block AI crawlers, Content-Usage.
+  4xx (allow all) vs 5xx (disallow all) handling, redirects, the 24-hour cache,
+  the 500 KiB parsing limit, Sitemap, Content-Signal, RSL License and other
+  records, Crawl-delay, and why robots.txt is not access control. Covers RFC 9309
+  (current), the 1994 A Standard for Robot Exclusion and the 1996
+  draft-koster-robots-00 (legacy, upgrade from), and tracks the
+  draft-ietf-aipref-attach Content-Usage rule as a preview. Triggers:
+  robots.txt, REP, RFC 9309, user-agent, disallow, GPTBot, Google-Extended,
+  ClaudeBot, CCBot, Applebot-Extended, PerplexityBot, block AI crawlers,
+  Content-Usage.
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -66,6 +67,7 @@ RFC 9309, an IETF Standards Track RFC from September 2022, specifies the Robots 
 4. **Address AI crawlers by documented token.** Look up each operator's token and what it controls (training, search, user-initiated fetches), then write a group per token.
    -> [`references/crawlers-and-ai.md`](references/crawlers-and-ai.md)
    ✓ Each token used is spelled as the operator documents it, and the operator page and checked date are recorded.
+   ✓ Any extension line (`Content-Signal`, RSL `License`) sits inside the group it applies to, and the parser keeps the group open across it (§ 2.2.4).
 5. **Serve the file correctly.** Serve `/robots.txt` on every host as UTF-8 `text/plain` with a 2xx, keep it under 500 KiB, and make it return 4xx (not 5xx) when you mean "no rules" (§ 2.3, § 2.3.1, § 2.5).
    -> [`references/fetching-and-caching.md`](references/fetching-and-caching.md)
    ✓ A request for `/robots.txt` on each host returns the intended status, and a 5xx is never the steady state.
@@ -97,7 +99,7 @@ RFC 9309, an IETF Standards Track RFC from September 2022, specifies the Robots 
 - **`references/versions.md`**: RFC 9309, the 1994 convention, the 1996 draft and the draft-ietf-aipref-attach preview, what changed, and upgrade steps. Load for steps 1 and 8.
 - **`references/syntax-and-matching.md`**: the ABNF, groups and merging, product tokens, allow and disallow, longest match, `*` and `$`, percent-encoding, other records, the § 5 examples and reported errata. Load for steps 2, 3 and 6.
 - **`references/fetching-and-caching.md`**: file location, status handling, redirects, caching, the size limit and parser security. Load for steps 5, 6 and 7.
-- **`references/crawlers-and-ai.md`**: addressing AI crawlers by product token as their operators document them, user-initiated fetchers, control-only tokens, and how robots.txt relates to AI usage preferences and `Content-Usage`. Load for step 4.
+- **`references/crawlers-and-ai.md`**: addressing AI crawlers by product token as their operators document them, user-initiated fetchers, control-only tokens, how robots.txt relates to AI usage preferences and `Content-Usage`, and the non-RFC `Content-Signal` and RSL `License` lines. Load for steps 4 and 6.
 
 ## Related skills
 
@@ -105,6 +107,9 @@ RFC 9309, an IETF Standards Track RFC from September 2022, specifies the Robots 
 - `web-bot-auth` for crawlers that prove their identity with HTTP Message Signatures instead of a spoofable User-Agent: `npx skills add ScaleDockHQ/scaledock-skills --skill web-bot-auth`.
 - `http-semantics` for status codes, redirects and RFC 9111 caching used when serving and fetching `/robots.txt`: `npx skills add ScaleDockHQ/scaledock-skills --skill http-semantics`.
 - `sitemaps`, when the work also follows that specification: `npx skills add ScaleDockHQ/scaledock-skills --skill sitemaps`
+- `content-signals` for the `Content-Signal` robots.txt line (search, ai-input, ai-train): `npx skills add ScaleDockHQ/scaledock-skills --skill content-signals`.
+- `rsl` for RSL licenses and the robots.txt `License` directive: `npx skills add ScaleDockHQ/scaledock-skills --skill rsl`.
+- `tdmrep` for text and data mining rights reservations: `npx skills add ScaleDockHQ/scaledock-skills --skill tdmrep`.
 
 ## Sources
 
@@ -121,3 +126,6 @@ Status uses the publishing body's own maturity term. Checked is the date the sou
 - [Does Anthropic crawl data from the web, and how can site owners block the crawler?](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler): crawler operator documentation, April 7, 2026, checked 2026-10-05.
 - [About Applebot](https://support.apple.com/en-us/119829): crawler operator documentation, published September 04, 2026, checked 2026-10-05.
 - [Common Crawl CCBot](https://commoncrawl.org/ccbot): crawler operator documentation, undated, checked 2026-10-05.
+- [Perplexity Crawlers](https://docs.perplexity.ai/docs/resources/perplexity-crawlers): crawler operator documentation, undated, checked 2026-10-09.
+- [Giving users choice with Cloudflare's new Content Signals Policy](https://blog.cloudflare.com/content-signals-policy/): Cloudflare announcement and policy text (CC0), 24 September 2025, checked 2026-10-09.
+- [Really Simple Licensing (RSL) 1.0 Specification](https://rslstandard.org/rsl): Recommendation (RSL TSC), RSL-SPEC-1.0 published 2025-12-10, § 4.4 robots.txt License Association, checked 2026-10-09.
