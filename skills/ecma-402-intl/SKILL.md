@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ metadata:
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when formatting numbers, dates or collation with Intl.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **Software License.** "SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS."
-2. **Software License.** "IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…"
-3. **2 Conformance.** "A conforming implementation of this specification must conform to ECMA-262 , and must provide and support all the objects, properties, functions, and program semantics described in this specification."
-4. **2 Conformance.** "Nothing in this specification is intended to allow behaviour that is otherwise prohibited by ECMA-262 , and any such conflict should be considered an editorial error rather than an override of constraints from ECMA-262 ."
-5. **4.3 API Conventions.** "Every Intl constructor should behave as if defined by a class, throwing a TypeError exception when called as a function (without NewTarget)."
-6. **4.4 Implementation Dependencies.** "In browser implementations the initial set of locales, currencies, calendars, numbering systems, and other enumerable items visible to a particular origin must be the same for all users sharing the same user agent string (engine and platform version)."
-7. **4.4 Implementation Dependencies.** "Furthermore, dynamic changes to these sets must not result in users becoming distinguishable from each other."
-8. **4.4 Implementation Dependencies.** "As a result of this constraint, the first time a browser implementation that allows on-demand locale installation receives a request from a particular origin that could require installing a new locale, it must not reveal whether or not that locale is already installed."
+1. **§ 2.** "A conforming implementation of this specification must conform to ECMA-262, and must provide and support all the objects, properties, functions, and program semantics described in this specification."
+2. **§ 2.** "A conforming implementation is not permitted to add optional arguments to the functions defined in this specification."
+3. **§ 4.4.** "Furthermore, dynamic changes to these sets must not result in users becoming distinguishable from each other."
+4. **§ 6.1.** "No other case folding equivalences are applied."
+5. **§ 6.2.3.** "It must not contain a Unicode locale extension sequence."
+6. **§ 6.5.** "Implementations that adopt this specification must be time zone aware: they must use the IANA Time Zone Database https://www.iana.org/time-zones/ to supply available named time zone identifiers and data used in ECMAScript calculations and formatting."
+7. **§ 6.5.** "For historical reasons, "UTC" must be a primary time zone identifier."
+8. **§ 9.1.** "It must include the value returned by DefaultLocale."
+9. **§ 9.2.1.** "If IsWellFormedLanguageTag(tag) is false, throw a RangeError exception."
+10. **§ 10.3.3.2.** "String values must be interpreted as UTF-16 code unit sequences as described in ECMA-262, 6.1.4, and a surrogate pair (a code unit in the range 0xD800 to 0xDBFF followed by a code unit in the range 0xDC00 to 0xDFFF) within a string must be interpreted as the corresponding code point."
+11. **§ 16.1.3.** "If IsWellFormedCurrencyCode(currency) is false, throw a RangeError exception."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

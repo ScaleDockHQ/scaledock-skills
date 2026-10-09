@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ One of the great strengths of domain names is universality. The URL https://Appl
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when mapping internationalized domain names.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **Unicode IDNA Compatibility Processing.** "Nontransitional Processing, which is fully compatible with IDNA2008, should be used in all cases."
-2. **Unicode IDNA Compatibility Processing.** "These tactics can be described as follows: Bundling : If two or more labels are different, but confusable, and more than one is registered, the registrant for each must be the same."
-3. **Unicode IDNA Compatibility Processing.** "However, such unprocessed labels must be handled carefully: Storing the unprocessed label as the sequence of characters that the registrant really wanted to apply for."
-4. **Unicode IDNA Compatibility Processing.** "4.1 Validity Criteria Each of the following criteria must be satisfied for a non-empty label: The label must be in Unicode Normalization Form NFC."
-5. **Unicode IDNA Compatibility Processing.** "If CheckHyphens , the label must not contain a U+002D HYPHEN-MINUS character in both the third and fourth positions."
-6. **Unicode IDNA Compatibility Processing.** "If CheckHyphens , the label must neither begin nor end with a U+002D HYPHEN-MINUS character."
-7. **Unicode IDNA Compatibility Processing.** "If not CheckHyphens , the label must not begin with “xn--”."
-8. **Unicode IDNA Compatibility Processing.** "The label must not begin with a combining mark, that is: General_Category=Mark."
+1. **UTS #46 § 3.** "Given a version of Unicode and a Unicode String, a conformant implementation of Nontransitional Processing shall replicate the results given by applying the Nontransitional Processing algorithm specified by Section 4, Processing."
+2. **UTS #46 § 4.** "Normalize the domain_name string to Unicode Normalization Form C."
+3. **UTS #46 § 4.1.** "The label must be in Unicode Normalization Form NFC."
+4. **UTS #46 § 4.1.** "If CheckHyphens, the label must not contain a U+002D HYPHEN-MINUS character in both the third and fourth positions."
+5. **UTS #46 § 4.1.** "For Nontransitional Processing, each value must be either valid or deviation."
+6. **UTS #46 § 4.1.** "In addition, if UseSTD3ASCIIRules=true and the code point is an ASCII code point (U+0000..U+007F), then it must be a lowercase letter (a-z), a digit (0-9), or a hyphen-minus (U+002D)."
+7. **UTS #46 § 4.2.** "If an error was recorded in steps 1-4, then the operation has failed and a failure value is returned. No DNS lookup should be done."
+8. **RFC 5890 § 2.3.2.1.** "While that constraint may be tested in any of several ways, an A-label A1 must be capable of being produced by conversion from a U-label U1, and that U-label U1 must be capable of being produced by conversion from A-label A1."
+9. **RFC 5891 § 3.1.** "A pair of A-labels MUST be compared as case-insensitive ASCII (as with all comparisons of ASCII DNS labels)."
+10. **RFC 5891 § 3.2.** "IDNs actually appearing in DNS queries or responses MUST be A-labels."
+11. **RFC 5891 § 4.2.3.1.** "The Unicode string MUST NOT contain "--" (two consecutive hyphens) in the third and fourth character positions and MUST NOT start or end with a "-" (hyphen)."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

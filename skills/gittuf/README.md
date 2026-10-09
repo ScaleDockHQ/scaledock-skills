@@ -1,6 +1,6 @@
 # gittuf
 
-An agent skill for gittuf.
+An agent skill for gittuf: protecting Git repositories with signed gittuf policy, the Reference State Log and verification of who changed which branches and files.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for gittuf.
 npx skills add ScaleDockHQ/scaledock-skills --skill gittuf
 ```
 
-Then ask the agent to apply gittuf.
+Then ask your agent to apply gittuf.
 
 ## What it covers
 
-- when verifying Git repository policy
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- gittuf, an OpenSSF security layer for Git: root of trust and rule file policy metadata in `refs/gittuf/policy`, the Reference State Log (RSL) that records every ref change, and the verification and recovery workflows, read from the gittuf design document at release v0.16.0.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply gittuf.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [gittuf](https://raw.githubusercontent.com/gittuf/gittuf/main/docs/design-document.md): Design document, gittuf design document, fetched 2026-10-06 (Design document, 2026-10-06).
+- [gittuf Design Document](https://raw.githubusercontent.com/gittuf/gittuf/v0.16.0/docs/design-document.md): Design document, Release v0.16.0 (2026-09-04).
 
 ## License
 

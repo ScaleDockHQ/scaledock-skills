@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "This specification defines UUIDs (Universally Unique IDentifiers) -- also known as GUIDs (Globally Unique IDentifiers) -- and a Uniform Resource Name namespace for UUIDs. A UUID is 128 bits long and is intended to guarantee uniqueness across space and time. UUIDs were originally used in the Apollo Network Computing System (NCS), later in the Open Software Foundation's (OSF's) Distributed Computing Environment (DCE), and then in Microsoft Windows platforms. ¶ This specification is derived from the OSF DCE specification with the kind permission of the OSF (now known as "The Open Group"). Information from earlier versions of the OSF DCE specification have been incorporated into this document. T"
+1. **RFC 9562 § 4.1.** "Specifically for UUIDs in this document, bits 64 and 65 of the UUID (bits 0 and 1 of octet 8) MUST be set to 1 and 0 as specified in row 2 of Table 1."
+2. **RFC 9562 § 5.7.** "Implementations SHOULD utilize UUIDv7 instead of UUIDv1 and UUIDv6 if possible."
+3. **RFC 9562 § 5.8.** "UUIDv8's uniqueness will be implementation specific and MUST NOT be assumed."
+4. **RFC 9562 § 6.1.** "If a system overruns the generator by requesting too many UUIDs within a single system-time interval, the UUID service can return an error or stall the UUID generator until the system clock catches up and MUST NOT knowingly return duplicate values due to a counter rollover."
+5. **RFC 9562 § 6.2.** "Counter rollovers MUST be handled by the application to avoid sorting issues."
+6. **RFC 9562 § 6.5.** "UUIDs generated at different times from the same name (using the same canonical format) in the same namespace MUST be equal."
+7. **RFC 9562 § 6.9.** "Implementations SHOULD utilize a cryptographically secure pseudorandom number generator (CSPRNG) to provide values that are both difficult to predict ("unguessable") and have a low likelihood of collision ("unique")."
+8. **RFC 9562 § 6.10.** "After generating the 48-bit fully randomized node value, implementations MUST set the least significant bit of the first octet of the Node ID to 1."
+9. **RFC 9562 § 8.** "Implementations SHOULD NOT assume that UUIDs are hard to guess."
+10. **RFC 9562 § 8.** "MAC addresses pose inherent security risks around privacy and SHOULD NOT be used within a UUID."
 
 ## Workflow
 
@@ -35,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

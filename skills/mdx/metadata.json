@@ -1,23 +1,30 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers MDX. MDX is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers MDX 3 (documentation at the 3.1.1 tag). Requirements are quotes from the What is MDX? and Using MDX pages.",
   "versions": [
     {
       "id": "mdx",
       "label": "MDX",
       "status": "current",
-      "revision": "MDX, fetched 2026-10-06 (Documentation, 2026-10-06)"
+      "revision": "MDX 3.1.1 (commit 50aa8df, released 2025-08-29)"
     }
   ],
   "sources": [
     {
-      "title": "MDX",
-      "url": "https://mdxjs.com/docs/",
+      "title": "What is MDX?",
+      "url": "https://raw.githubusercontent.com/mdx-js/mdx/50aa8df0b027c893dec9f97a2b7c51539e9f1a4b/docs/docs/what-is-mdx.mdx",
       "status": "Documentation",
-      "revision": "MDX, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "revision": "MDX 3.1.1 (commit 50aa8df, released 2025-08-29)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Using MDX",
+      "url": "https://raw.githubusercontent.com/mdx-js/mdx/50aa8df0b027c893dec9f97a2b7c51539e9f1a4b/docs/docs/using-mdx.mdx",
+      "status": "Documentation",
+      "revision": "MDX 3.1.1 (commit 50aa8df, released 2025-08-29)",
       "checked": "2026-10-06"
     }
   ]

@@ -1,23 +1,30 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers NLWeb. NLWeb is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers NLWeb from the NLWeb Specification v0.55 and the reference implementation's REST API document, both pinned at a commit. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "nlweb",
       "label": "NLWeb",
       "status": "current",
-      "revision": "NLWeb REST API, fetched 2026-10-06 (Documentation, 2026-10-06)"
+      "revision": "NLWeb Specification v0.55 (nlweb-ai/website commit 9cd2fd6, 2026-08-11); reference REST API (nlweb-ai/NLWeb commit b423f15, 2026-06-10)"
     }
   ],
   "sources": [
     {
-      "title": "NLWeb",
-      "url": "https://raw.githubusercontent.com/microsoft/NLWeb/main/docs/nlweb-rest-api.md",
+      "title": "NLWeb Specification v0.55",
+      "url": "https://raw.githubusercontent.com/nlweb-ai/website/9cd2fd6ceb9e23c6257db782e7058c0a1655894e/NLWEBSPEC.md",
+      "status": "Specification draft",
+      "revision": "v0.55, nlweb-ai/website commit 9cd2fd6, 2026-08-11",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "NLWeb Rest API (reference implementation)",
+      "url": "https://raw.githubusercontent.com/nlweb-ai/NLWeb/b423f15d9aeaa023ce75993ac9deed2354597043/docs/nlweb-rest-api.md",
       "status": "Documentation",
-      "revision": "NLWeb REST API, fetched 2026-10-06 (Documentation, 2026-10-06)",
+      "revision": "nlweb-ai/NLWeb commit b423f15, 2026-06-10",
       "checked": "2026-10-06"
     }
   ]

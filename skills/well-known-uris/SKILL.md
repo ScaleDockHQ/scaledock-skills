@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,14 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "Applications that wish to mint new well-known URIs MUST register them, following the procedures in Section 5.1 , subject to the following requirements."
-3. **document.** "Registered names MUST conform to the "segment-nz" production in [ RFC3986 ]."
-4. **document.** "Registered names for a specific application SHOULD be correspondingly precise; "squatting" on generic terms is not encouraged."
-5. **document.** "Typically, applications will use the default port for the given scheme; if an alternative port is used, it MUST be explicitly specified by the application in question."
-6. **document.** "Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License."
-7. **document.** "Note that this specification defines neither how to determine the hostname to use to find the well-known URI for a particular application, nor the scope of the metadata discovered by dereferencing the well-known URI; both should be defined by the application itself."
-8. **document.** "Also, this specification does not define a format or media type for the resource located at "/.well-known/", and clients should not expect a resource to exist at that location."
+1. **RFC 8615 § 3.** "A well-known URI is a URI [RFC3986] whose path component begins with the characters "/.well-known/", provided that the scheme is explicitly defined to support well-known URIs."
+2. **RFC 8615 § 1.** "Well-known URIs can also be used with other URI schemes, but only when those schemes' definitions explicitly allow it."
+3. **RFC 8615 § 3.** "Applications that wish to mint new well-known URIs MUST register them, following the procedures in Section 5.1, subject to the following requirements."
+4. **RFC 8615 § 3.** "Registered names MUST conform to the "segment-nz" production in [RFC3986]."
+5. **RFC 8615 § 3.** "Registered names for a specific application SHOULD be correspondingly precise; "squatting" on generic terms is not encouraged."
+6. **RFC 8615 § 3.** "Typically, applications will use the default port for the given scheme; if an alternative port is used, it MUST be explicitly specified by the application in question."
+7. **RFC 8615 § 3.** "Well-known URIs are rooted in the top of the path's hierarchy; they are not well-known by definition in other parts of the path."
+8. **RFC 8615 § 4.1.** "Because well-known locations effectively represent the entire origin, server operators should appropriately control the ability to write to them."
 
 ## Workflow
 
@@ -42,7 +42,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

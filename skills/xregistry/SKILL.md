@@ -5,35 +5,36 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # xRegistry
 
-- [Implicit Creation of Parent Entities](#design-implicit-creation-of-parent-entities)
+The xRegistry core specification from the xRegistry project (a CNCF sandbox project that grew out of the CloudEvents Discovery work), read from `core/spec.md` in the xregistry/spec repository at the v1.0-rc4 release candidate.
 
-The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when managing metadata with xRegistry.
-
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
-- Target version: xRegistry 1.0-rc4 (default, posture build). See [`references/versions.md`](references/versions.md).
+- Role: Registry server implementer, client or tool that reads, writes or exports xRegistry entities, or author of a domain-specific registry model.
+- Target version: xRegistry 1.0-rc4 (current, posture: build). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
-- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
+- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "## Notations and Terminology ### Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119)."
-2. **document.** "Server-unknown extension attributes MUST be silently stored in the backing datastore."
-3. **document.** "Specification-defined attributes and server-known extension attributes MUST generate an error if the corresponding feature is not supported or enabled."
-4. **document.** "In the pseudo JSON format snippets `?` means the preceding item is OPTIONAL, `*` means the preceding item MAY appear zero or more times, and `+` means the preceding item MUST appear at least once."
-5. **document.** "The following are used to denote an instance of one of the associated data types (see [Attributes and Extensions](#attributes-and-extensions) for more information about each data type): - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - ` ` - one of the allowable data type names (MUST be in lower case) listed in [Attributes and…"
-6. **document.** "Each Resource MUST exist under a single Group and, similar to Groups, have a set of Registry metadata."
-7. **document.** "Each Resource MUST have at least one Version associated with it."
-8. **document.** "`http`(./http.md) MUST define at least one REQUIRED mechanism by which the model can be retrieved."
+1. **Notational Conventions.** "Server-unknown extension attributes MUST be silently stored in the backing datastore."
+2. **Version.** "Each Resource MUST have at least one Version associated with it."
+3. **Registry Model.** "Unless otherwise stated in a protocol binding specification, if the processing of a request fails (even during the generation of the response) then an error MUST be generated and the entire request MUST be undone."
+4. **`<SINGULAR>id` (`id`) Attribute.** "This attribute MUST be named `registryid` for the Registry itself, and MUST be named `versionid` for all Version entities."
+5. **`xid` Attribute.** "Unlike `<SINGULAR>id`, which is unique within the scope of its parent, `xid` MUST be unique across the entire Registry, and as such is defined to be a relative URL from the root of the Registry."
+6. **`epoch` Attribute.** "Each time the associated entity is updated, this value MUST be set to a new value that is greater than the current one."
+7. **Registry Capabilities.** "When serializing their supported capabilities, servers MUST include all capabilities (including extensions) since the absence of a capability indicates lack of support for that feature."
+8. **Updating Nested Registry Collections.** "Any error while processing a nested collection entity MUST result in the entire request being rejected."
+9. **Meta Entity.** "Each Resource MUST have a Meta entity, and when the Resource is deleted then the Meta entity MUST also be deleted."
+10. **`defaultversionsticky` Attribute.** "A value of `true` means that `defaultversionid` has been explicitly set and its value MUST NOT automatically change if other Versions are added or removed."
+11. **`ancestorid` Attribute.** "The `ancestorid` attribute MUST be set to the case-sensitive `versionid` of this Version's ancestor."
 
 ## Workflow
 
@@ -42,7 +43,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.
@@ -56,14 +57,14 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 ## Reference index
 
 - **`references/versions.md`**: every version line, which one to use, and how to upgrade. Load for steps 1 and 3.
-- **`references/requirements.md`**: quotes taken from the pinned specification. Load for step 2.
+- **`references/requirements.md`**: quotes taken from the pinned specification, grouped by source. Load for step 2.
 
 ## Related skills
 
-Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`: `cloudevents`, `asyncapi`, `json-schema`, `openapi`, `uri`.
 
 ## Sources
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [xRegistry 1.0-rc4](https://raw.githubusercontent.com/xregistry/spec/main/core/spec.md): Release candidate, xRegistry 1.0-rc4, fetched 2026-10-06 (Release candidate, 2026-10-06), checked 2026-10-06.
+- [xRegistry Service - Version 1.0-rc4](https://raw.githubusercontent.com/xregistry/spec/508cd2760a3c5b74adf61acac1e94654f9852f34/core/spec.md): Release candidate, 1.0-rc4 (tagged v1.0-rc4, 2026-08-19), main at commit 508cd27, checked 2026-10-06.

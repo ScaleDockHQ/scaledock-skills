@@ -1,6 +1,6 @@
 # notary-project
 
-An agent skill for Notary Project.
+An agent skill for Notary Project: signing and verifying OCI artifacts with Notary Project signatures, trust stores and trust policies.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Notary Project.
 npx skills add ScaleDockHQ/scaledock-skills --skill notary-project
 ```
 
-Then ask the agent to apply Notary Project.
+Then ask your agent to apply Notary Project.
 
 ## What it covers
 
-- when signing OCI artifacts with Notation
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The Notary Project specifications for signing OCI artifacts: the signature specification (envelope, signed and unsigned attributes, signature manifest, certificate requirements), the trust store and trust policy specification, and the signing and verification workflow, read from the notaryproject/specifications repository at release v1.1.0.
 
 ## Versions
 
@@ -27,7 +26,9 @@ Then ask the agent to apply Notary Project.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Notation signature specification](https://raw.githubusercontent.com/notaryproject/specifications/main/specs/signature-specification.md): Specification, Notation signature specification, fetched 2026-10-06 (Specification, 2026-10-06).
+- [Notary Project Signature Specification](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/signature-specification.md): Specification, Release v1.1.0 (2024-08-13).
+- [Notary Project Trust Store and Trust Policy Specification](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/trust-store-trust-policy.md): Specification, Release v1.1.0 (2024-08-13).
+- [Notary Project Signing and Verification Workflow](https://raw.githubusercontent.com/notaryproject/specifications/v1.1.0/specs/signing-and-verification-workflow.md): Specification, Release v1.1.0 (2024-08-13).
 
 ## License
 

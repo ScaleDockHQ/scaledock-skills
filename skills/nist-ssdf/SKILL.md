@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-218
 
-James K. Olthoff, Performing the Non-Exclusive Functions and Duties of the Under Secretary of Commerce
+NIST Special Publication 800-218, Secure Software Development Framework (SSDF) Version 1.1: secure development practices in four groups (Prepare the Organization PO, Protect the Software PS, Produce Well-Secured Software PW, Respond to Vulnerabilities RV), each broken into tasks with notional implementation examples.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying the Secure Software Development Framework.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: software producer, development team or acquirer applying or attesting to SSDF practices.
 - Target version: SP 800-218 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on f ederal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other f ederal official."
-3. **document.** "Following such practices should help software producers reduce the number of vulnerabilities in released software, reduce the potential impact of the exploitation of undetected or unaddressed vulnerabilities, and address the root causes of vulnerabilities to prevent future recurrences."
-4. **document.** "Organizations should integrate the SSDF throughout their existing software development practices, express their secure software development requirements to third-party suppliers using SSDF conventions, and acquire software that meets the practices described in the SSDF."
-5. **document.** "Using the SSDF helps organizations to meet the following secure software development recommendations: • Organizations should ensure that their people, processes, and technology are prepared to perform secure software development."
-6. **document.** "• Organizations should protect all components of their software from tampering and unauthorized access."
-7. **document.** "• Organizations should produce well-secured software with minimal security vulnerabilities in its releases."
-8. **document.** "• Organizations should identify residual vulnerabilities in their software releases and respond appropriately to address those vulnerabilities and prevent similar ones from occurring in the future."
+1. **PS.1.1.** "Store all forms of code – including source code, executable code, and configuration-as-code – based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access."
+2. **PS.3.2.** "Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM])."
+3. **PW.4.4.** "Verify that acquired commercial, open-source, and all other third-party software components comply with the requirements, as defined by the organization, throughout their life cycles."
+4. **PW.9.1.** "Define a secure baseline by determining how to configure each setting that has an effect on security or a security-related setting so that the default settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services."
+5. **RV.1.3.** "Have a policy that addresses vulnerability disclosure and remediation, and implement the roles, responsibilities, and processes needed to support that policy."
 
 ## Workflow
 

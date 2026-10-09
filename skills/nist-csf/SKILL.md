@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST CSF
 
-This publication is available free of charge from: https://doi.org/10.6028/NIST.CSWP.29
+The NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29): a taxonomy of cybersecurity outcomes in six Functions (Govern, Identify, Protect, Detect, Respond, Recover), broken into Categories and Subcategories, used to build Current and Target Profiles and to choose Tiers.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying the Cybersecurity Framework.
 
@@ -19,21 +19,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: organization or assessor building a CSF Current or Target Profile, or mapping a security program to CSF 2.0 outcomes.
 - Target version: CSF 2.0 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "The CSF does not prescribe how outcomes should be achieved."
-2. **document.** "Available through the NIST CSF website, the CSF and these supplementary resources from NIST and others should be viewed as a “CSF portfolio” to help manage and reduce risks."
-3. **document.** "Cybersecurity risks are expanding constantly, and managing those risks must be a continuous process."
-4. **document.** "The CSF should be used in conjunction with other resources (e.g., frameworks, standards,"
-5. **document.** "CSF Functions The Functions should be addressed concurrently."
-6. **document.** "Actions that support GOVERN, IDENTIFY, PROTECT, and DETECT should all happen continuously, and actions that support RESPOND and RECOVER should be ready at all times and happen when cybersecurity incidents occur."
-7. **document.** "Determine what types of information the Profile should include for the selected CSF outcomes, and document the needed information."
-8. **document.** "CSF Tiers for cybersecurity risk governance and management Tiers should complement an organization’s cybersecurity risk management methodology rather than replace it."
+1. **Abstract.** "The CSF does not prescribe how outcomes should be achieved."
+2. **§ 2.** "The Functions should be addressed concurrently."
+3. **PR.AA-03.** "Users, services, and hardware are authenticated"
+4. **PR.AA-05.** "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties"
 
 ## Workflow
 
@@ -51,6 +47,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Each Profile entry names a CSF 2.0 Subcategory identifier (for example `PR.AA-05`), not a CSF 1.1 one.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index

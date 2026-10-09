@@ -1,6 +1,6 @@
 # opengitops
 
-An agent skill for OpenGitOps.
+An agent skill for OpenGitOps: applying the GitOps principles to how a system is deployed and operated.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for OpenGitOps.
 npx skills add ScaleDockHQ/scaledock-skills --skill opengitops
 ```
 
-Then ask the agent to apply OpenGitOps.
+Then ask your agent to apply OpenGitOps.
 
 ## What it covers
 
-- when applying the OpenGitOps principles
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The GitOps Principles and the GitOps Glossary from the OpenGitOps project (CNCF), release v1.0.0, read from the open-gitops/documents repository.
 
 ## Versions
 
@@ -27,7 +26,8 @@ Then ask the agent to apply OpenGitOps.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [OpenGitOps](https://opengitops.dev/): Principles, OpenGitOps, fetched 2026-10-06 (Principles, 2026-10-06).
+- [GitOps Principles](https://raw.githubusercontent.com/open-gitops/documents/d36cde829c6ef2c7e5cab662ab98a7173a591a49/PRINCIPLES.md): Release, v1.0.0 (commit d36cde8).
+- [GitOps Glossary](https://raw.githubusercontent.com/open-gitops/documents/d36cde829c6ef2c7e5cab662ab98a7173a591a49/GLOSSARY.md): Release, v1.0.0 (commit d36cde8).
 
 ## License
 

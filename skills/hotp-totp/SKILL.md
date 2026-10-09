@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Requirements Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "R1 - The algorithm MUST be sequence- or counter-based: one of the goals is to have the HOTP algorithm embedded in high-volume devices"
-3. **document.** "R2 - The algorithm SHOULD be economical to implement in hardware by minimizing requirements on battery, number of buttons, computational horsepower, and size of LCD display."
-4. **document.** "R3 - The algorithm MUST work with tokens that do not support any numeric input, but MAY also be used with more sophisticated devices such as secure PIN-pads."
-5. **document.** "R4 - The value displayed on the token MUST be easily read and entered by the user: This requires the HOTP value to be of reasonable length."
-6. **document.** "R5 - There MUST be user-friendly mechanisms available to resynchronize the counter."
-7. **document.** "Section 7.4 and Appendix E.4 details the resynchronization mechanism proposed in this document R6 - The algorithm MUST use a strong shared secret."
-8. **document.** "The length of the shared secret MUST be at least 128 bits."
+1. **RFC 4226 § 4.** "R6 - The algorithm MUST use a strong shared secret. The length of the shared secret MUST be at least 128 bits. This document RECOMMENDs a shared secret length of 160 bits."
+2. **RFC 4226 § 5.3.** "Implementations MUST extract a 6-digit code at a minimum and possibly 7 and 8-digit code."
+3. **RFC 4226 § 7.1.** "This implies that a throttling/lockout scheme is RECOMMENDED on the validation server side."
+4. **RFC 4226 § 7.3.** "The delay or lockout schemes MUST be across login sessions to prevent attacks based on multiple parallel guessing techniques."
+5. **RFC 4226 § 7.5.** "The data store holding the shared secrets MUST be in a secure area, to avoid as much as possible direct attack on the validation system and secrets database."
+6. **RFC 6238 § 3.** "The algorithm MUST use HOTP [RFC4226] as a key building block."
+7. **RFC 6238 § 3.** "The prover and verifier MUST use the same time-step value X."
+8. **RFC 6238 § 4.2.** "The implementation of this algorithm MUST support a time value T larger than a 32-bit integer when it is beyond the year 2038."
+9. **RFC 6238 § 5.2.** "We RECOMMEND that at most one time step is allowed as the network delay."
+10. **RFC 6238 § 5.2.** "We RECOMMEND a default time-step size of 30 seconds."
+11. **RFC 6238 § 5.2.** "The verifier MUST NOT accept the second attempt of the OTP after the successful validation has been issued for the first OTP, which ensures one-time only use of an OTP."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

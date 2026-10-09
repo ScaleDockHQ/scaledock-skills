@@ -1,6 +1,6 @@
 # langchain-agent-protocol
 
-An agent skill for Agent Protocol.
+An agent skill for Agent Protocol: implementing or calling an Agent Protocol server.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Agent Protocol.
 npx skills add ScaleDockHQ/scaledock-skills --skill langchain-agent-protocol
 ```
 
-Then ask the agent to apply Agent Protocol.
+Then ask your agent to apply Agent Protocol.
 
 ## What it covers
 
-- when implementing the LangChain Agent Protocol
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- Agent Protocol from LangChain is a framework-agnostic HTTP API for serving LLM agents: stateless and background runs, threads with state history, agent introspection, a long-term memory store and thread streaming. This skill quotes the repository README and its OpenAPI document (`openapi.json`, API version 0.1.6) at a pinned commit.
 
 ## Versions
 
@@ -27,7 +26,8 @@ Then ask the agent to apply Agent Protocol.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Agent Protocol](https://raw.githubusercontent.com/langchain-ai/agent-protocol/main/README.md): Specification, Agent Protocol README, fetched 2026-10-06 (Specification, 2026-10-06).
+- [Agent Protocol README](https://raw.githubusercontent.com/langchain-ai/agent-protocol/fb81f3e27ee507557926ecf923d0f933a1c76d44/README.md): Specification, commit fb81f3e, 2026-09-22.
+- [Agent Protocol OpenAPI document](https://raw.githubusercontent.com/langchain-ai/agent-protocol/fb81f3e27ee507557926ecf923d0f933a1c76d44/openapi.json): Specification, commit fb81f3e, 2026-09-22, info.version 0.1.6.
 
 ## License
 

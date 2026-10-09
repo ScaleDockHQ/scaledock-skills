@@ -1,23 +1,30 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Agent Protocol. Agent Protocol is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers Agent Protocol from the langchain-ai/agent-protocol README and OpenAPI document at a pinned commit. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "agent-protocol",
       "label": "Agent Protocol",
       "status": "current",
-      "revision": "Agent Protocol README, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "commit fb81f3e (2026-09-22), OpenAPI info.version 0.1.6"
     }
   ],
   "sources": [
     {
-      "title": "Agent Protocol",
-      "url": "https://raw.githubusercontent.com/langchain-ai/agent-protocol/main/README.md",
+      "title": "Agent Protocol README",
+      "url": "https://raw.githubusercontent.com/langchain-ai/agent-protocol/fb81f3e27ee507557926ecf923d0f933a1c76d44/README.md",
       "status": "Specification",
-      "revision": "Agent Protocol README, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "commit fb81f3e, 2026-09-22",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Agent Protocol OpenAPI document",
+      "url": "https://raw.githubusercontent.com/langchain-ai/agent-protocol/fb81f3e27ee507557926ecf923d0f933a1c76d44/openapi.json",
+      "status": "Specification",
+      "revision": "commit fb81f3e, 2026-09-22, info.version 0.1.6",
       "checked": "2026-10-06"
     }
   ]

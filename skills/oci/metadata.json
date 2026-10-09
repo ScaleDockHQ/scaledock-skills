@@ -1,52 +1,87 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OCI. OCI Image Spec 1.1.1 is current; OCI Distribution Spec 1.1.1 is current; OCI Runtime Spec 1.2.1 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers OCI Image Spec 1.1.1, OCI Distribution Spec 1.1.1 and OCI Runtime Spec 1.2.1, pinned to their release tag commits. Requirements are quotes from the image manifest, descriptor, index and layer documents, the distribution spec, and the runtime lifecycle and config documents.",
   "versions": [
     {
       "id": "oci-image-1.1.1",
       "label": "OCI Image Spec 1.1.1",
       "status": "current",
-      "revision": "OCI image-spec v1.1.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
       "family": "image"
     },
     {
       "id": "oci-distribution-1.1.1",
       "label": "OCI Distribution Spec 1.1.1",
       "status": "current",
-      "revision": "OCI distribution-spec v1.1.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "distribution-spec v1.1.1 (commit a139cc4)",
       "family": "distribution"
     },
     {
       "id": "oci-runtime-1.2.1",
       "label": "OCI Runtime Spec 1.2.1",
       "status": "current",
-      "revision": "OCI runtime-spec v1.2.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "runtime-spec v1.2.1 (commit 524fc0e)",
       "family": "runtime"
     }
   ],
   "sources": [
     {
-      "title": "OCI Image Spec 1.1.1",
-      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/v1.1.1/spec.md",
+      "title": "OCI Image Format Specification",
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/spec.md",
       "status": "Release",
-      "revision": "OCI image-spec v1.1.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
       "checked": "2026-10-06"
     },
     {
-      "title": "OCI Distribution Spec 1.1.1",
-      "url": "https://raw.githubusercontent.com/opencontainers/distribution-spec/v1.1.1/spec.md",
+      "title": "OCI Image Manifest Specification",
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/manifest.md",
       "status": "Release",
-      "revision": "OCI distribution-spec v1.1.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
       "checked": "2026-10-06"
     },
     {
-      "title": "OCI Runtime Spec 1.2.1",
-      "url": "https://raw.githubusercontent.com/opencontainers/runtime-spec/v1.2.1/spec.md",
+      "title": "OCI Content Descriptors",
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/descriptor.md",
       "status": "Release",
-      "revision": "OCI runtime-spec v1.2.1, fetched 2026-10-06 (Release, 2026-10-06)",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCI Image Index Specification",
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/image-index.md",
+      "status": "Release",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCI Image Layer Filesystem Changeset",
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/147f9c13cedb47a0c4d9a11a222961073d585877/layer.md",
+      "status": "Release",
+      "revision": "image-spec v1.1.1 (commit 147f9c1)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCI Distribution Specification",
+      "url": "https://raw.githubusercontent.com/opencontainers/distribution-spec/a139cc423184af6078077b9b7ee336eddbd03f8f/spec.md",
+      "status": "Release",
+      "revision": "distribution-spec v1.1.1 (commit a139cc4)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCI Runtime Specification: runtime and lifecycle",
+      "url": "https://raw.githubusercontent.com/opencontainers/runtime-spec/524fc0e1b8ab0180e2fc9abd31837a0f4ed1fd6b/runtime.md",
+      "status": "Release",
+      "revision": "runtime-spec v1.2.1 (commit 524fc0e)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "OCI Runtime Specification: configuration",
+      "url": "https://raw.githubusercontent.com/opencontainers/runtime-spec/524fc0e1b8ab0180e2fc9abd31837a0f4ed1fd6b/config.md",
+      "status": "Release",
+      "revision": "runtime-spec v1.2.1 (commit 524fc0e)",
       "checked": "2026-10-06"
     }
   ]

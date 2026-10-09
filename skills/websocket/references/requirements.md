@@ -1,29 +1,38 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published RFC text, quoted as written (only line breaks and page breaks from the plain-text layout were joined). Apply the ones that match the role. Each is labelled with the RFC and section it comes from.
 
 ## RFC 6455 The WebSocket Protocol
 
 Source: https://www.rfc-editor.org/rfc/rfc6455.html
 
-- **document.** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ].
-- **document.** Requirements phrased in the imperative as part of algorithms (such as "strip any leading space characters" or "return false and abort these steps") are to be interpreted with the meaning of the key word ("MUST", "SHOULD", "MAY", etc.) used in introducing the algorithm.
-- **document.** The "resource-name" (also known as /resource name/ in Section 4.1 ) can be constructed by concatenating the following: o "/" if the path component is empty o the path component o "?" if the query component is non-empty o the query component Fragment identifiers are meaningless in the context of WebSocket URIs and MUST NOT be used on these URIs.
-- **document.** As with any URI scheme, the character "#", when not indicating the start of a fragment, MUST be escaped as %23.
-- **document.** When the client is to _Establish a WebSocket Connection_ given a set of (/host/, /port/, /resource name/, and /secure/ flag), along with a list of /protocols/ and /extensions/ to be used, and an /origin/ in the case of web browsers, it MUST open a connection, send an opening handshake, and read the server's handshake in response.
-- **document.** The components of the WebSocket URI passed into this algorithm (/host/, /port/, /resource name/, and /secure/ flag) MUST be valid according to the specification of WebSocket URIs specified in Section 3 .
-- **document.** If any of the components are invalid, the client MUST _Fail the WebSocket Connection_ and abort these steps.
-- **document.** If the client already has a WebSocket connection to the remote host (IP address) identified by /host/ and port /port/ pair, even if the remote host is known by another name, the client MUST wait until that connection has been established or for that connection to have failed.
+- **RFC 6455 § 3.** Fragment identifiers are meaningless in the context of WebSocket URIs and MUST NOT be used on these URIs.
+- **RFC 6455 § 4.1.** Clients MUST use the Server Name Indication extension in the TLS handshake [RFC6066].
+- **RFC 6455 § 4.1.** The method of the request MUST be GET, and the HTTP version MUST be at least 1.1.
+- **RFC 6455 § 4.1.** The request MUST include a header field with the name |Sec-WebSocket-Key|.
+- **RFC 6455 § 4.1.** The value of this header field MUST be a nonce consisting of a randomly selected 16-byte value that has been base64-encoded (see Section 4 of [RFC4648]).
+- **RFC 6455 § 4.1.** The request MUST include a header field with the name |Origin| [RFC6454] if the request is coming from a browser client.
+- **RFC 6455 § 4.1.** If the response lacks a |Sec-WebSocket-Accept| header field or the |Sec-WebSocket-Accept| contains a value other than the base64-encoded SHA-1 of the concatenation of the |Sec-WebSocket-Key| (as a string, not base64-decoded) with the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" but ignoring any leading and trailing whitespace, the client MUST _Fail the WebSocket Connection_.
+- **RFC 6455 § 9.** A server MUST NOT respond with any extension not requested by the client.
+- **RFC 6455 § 5.1.** To avoid confusing network intermediaries (such as intercepting proxies) and for security reasons that are further discussed in Section 10.3, a client MUST mask all frames that it sends to the server (see Section 5.3 for further details).
+- **RFC 6455 § 5.1.** A server MUST NOT mask any frames that it sends to the client.
+- **RFC 6455 § 5.2.** If an unknown opcode is received, the receiving endpoint MUST _Fail the WebSocket Connection_.
+- **RFC 6455 § 5.2.** Note that in all cases, the minimal number of bytes MUST be used to encode the length, for example, the length of a 124-byte-long string can't be encoded as the sequence 126, 0, 124.
+- **RFC 6455 § 5.3.** When preparing a masked frame, the client MUST pick a fresh masking key from the set of allowed 32-bit values.
+- **RFC 6455 § 5.4.** An endpoint MUST be capable of handling control frames in the middle of a fragmented message.
+- **RFC 6455 § 5.5.** All control frames MUST have a payload length of 125 bytes or less and MUST NOT be fragmented.
+- **RFC 6455 § 5.5.1.** If an endpoint receives a Close frame and did not previously send a Close frame, the endpoint MUST send a Close frame in response.
+- **RFC 6455 § 5.5.2.** Upon receipt of a Ping frame, an endpoint MUST send a Pong frame in response, unless it already received a Close frame.
+- **RFC 6455 § 5.6.** Note that a particular text frame might include a partial UTF-8 sequence; however, the whole message MUST contain valid UTF-8.
+- **RFC 6455 § 7.4.1.** 1005 is a reserved value and MUST NOT be set as a status code in a Close control frame by an endpoint.
+- **RFC 6455 § 8.1.** When an endpoint is to interpret a byte stream as UTF-8 but finds that the byte stream is not, in fact, a valid UTF-8 stream, that endpoint MUST _Fail the WebSocket Connection_.
+- **RFC 6455 § 10.2.** Servers that are not intended to process input from any web page but only for certain sites SHOULD verify the |Origin| field is an origin they expect.
+- **RFC 6455 § 10.4.** Implementations that have implementation-and/or platform-specific limitations regarding the frame size or total message size after reassembly from multiple frames MUST protect themselves against exceeding those limits.
 
 ## RFC 8441 Bootstrapping WebSockets with HTTP/2
 
 Source: https://www.rfc-editor.org/rfc/rfc8441.html
 
-- **document.** Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here.
-- **document.** The value of the parameter MUST be 0 or 1.
-- **document.** A sender MUST NOT send a SETTINGS_ENABLE_CONNECT_PROTOCOL parameter with the value of 0 after previously sending a value of 1.
-- **document.** The pseudo-header field is single valued and contains a value from the "Hypertext Transfer Protocol (HTTP) Upgrade Token Registry" located at < https://www.iana.org/assignments/http-upgrade-tokens/ > o On requests that contain the :protocol pseudo-header field, the :scheme and :path pseudo-header fields of the target URI (see Section 5 ) MUST also be included.
-- **document.** In particular, the server MUST NOT create a tunnel to the host indicated by the :authority as it would with a CONNECT method request that was not modified by this extension.
-- **document.** Using Extended CONNECT to Bootstrap the WebSocket Protocol The :protocol pseudo-header field MUST be included in the CONNECT request, and it MUST have a value of "websocket" to initiate a WebSocket connection on an HTTP/2 stream.
-- **document.** The scheme of the target URI ( Section 5.1 of [RFC7230] ) MUST be "https" for "wss"-schemed WebSockets and "http" for "ws"-schemed WebSockets.
-- **document.** They MUST NOT be included in the CONNECT request defined here.
+- **RFC 8441 § 3.** A sender MUST NOT send a SETTINGS_ENABLE_CONNECT_PROTOCOL parameter with the value of 0 after previously sending a value of 1.
+- **RFC 8441 § 5.** The :protocol pseudo-header field MUST be included in the CONNECT request, and it MUST have a value of "websocket" to initiate a WebSocket connection on an HTTP/2 stream.
+- **RFC 8441 § 5.** The scheme of the target URI (Section 5.1 of [RFC7230]) MUST be "https" for "wss"-schemed WebSockets and "http" for "ws"-schemed WebSockets.

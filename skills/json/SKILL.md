@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.2"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions Used in This Document The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "Values A JSON value MUST be an object, array, number, or string, or one of the following three literal names: false null true The literal names MUST be lowercase."
-3. **document.** "The names within an object SHOULD be unique."
-4. **document.** "All Unicode characters may be placed within the quotation marks, except for the characters that MUST be escaped: quotation mark, reverse solidus, and the control characters (U+0000 through U+001F)."
-5. **document.** "Character Encoding JSON text exchanged between systems that are not part of a closed ecosystem MUST be encoded using UTF-8 [ RFC3629 ]."
-6. **document.** "Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a networked-transmitted JSON text."
-7. **document.** "A JSON parser MUST accept all texts that conform to the JSON grammar."
-8. **document.** "The resulting text MUST strictly conform to the JSON grammar."
+1. **RFC 8259 § 3.** "The literal names MUST be lowercase."
+2. **RFC 8259 § 4.** "The names within an object SHOULD be unique."
+3. **RFC 8259 § 7.** "All Unicode characters may be placed within the quotation marks, except for the characters that MUST be escaped: quotation mark, reverse solidus, and the control characters (U+0000 through U+001F)."
+4. **RFC 8259 § 8.1.** "JSON text exchanged between systems that are not part of a closed ecosystem MUST be encoded using UTF-8 [RFC3629]."
+5. **RFC 8259 § 8.1.** "Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a networked-transmitted JSON text."
+6. **RFC 8259 § 9.** "A JSON parser MUST accept all texts that conform to the JSON grammar."
+7. **RFC 7493 § 2.1.** "Object member names, and string values in arrays and object members, MUST NOT include code points that identify Surrogates or Noncharacters as defined by [UNICODE]."
+8. **RFC 7493 § 2.2.** "I-JSON messages SHOULD NOT include numbers that express greater magnitude or precision than an IEEE 754 double precision number provides, for example, 1E400 or 3.141592653589793238462643383279."
+9. **RFC 7493 § 2.3.** "Objects in I-JSON messages MUST NOT have members with duplicate names."
+10. **RFC 7493 § 4.1.** "For maximum interoperability with such implementations, protocol designers SHOULD NOT use top-level JSON texts that are neither objects nor arrays."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

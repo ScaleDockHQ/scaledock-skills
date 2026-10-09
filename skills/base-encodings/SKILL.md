@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,15 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions Used in This Document The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ 2 ]."
-2. **document.** "Implementations MUST NOT add line feeds to base-encoded data unless the specification referring to this document explicitly directs base encoders to add line feeds after a specific number of characters."
-3. **document.** "Implementations MUST include appropriate pad characters at the end of encoded data unless the specification referring to this document explicitly states otherwise."
-4. **document.** "Implementations MUST reject the encoded data if it contains characters outside the base alphabet when interpreting base-encoded"
-5. **document.** "These pad bits MUST be set to zero by conforming encoders, which is described in the descriptions on padding below."
-6. **document.** "Such specifications may instead state, as MIME does, that characters outside the base encoding alphabet should simply be ignored when interpreting data ("be liberal in what you accept")."
-7. **document.** "Here are a few requirements that determine which alphabet should be used: Josefsson Standards Track [Page 4] RFC 4648 Base-N Encodings October 2006 o Handled by humans."
-8. **document.** "(However, by default it should not; see previous section.) o Encoded into structures that mandate other requirements."
+1. **RFC 4648 § 3.1.** "Implementations MUST NOT add line feeds to base-encoded data unless the specification referring to this document explicitly directs base encoders to add line feeds after a specific number of characters."
+2. **RFC 4648 § 3.2.** "Implementations MUST include appropriate pad characters at the end of encoded data unless the specification referring to this document explicitly states otherwise."
+3. **RFC 4648 § 3.3.** "Implementations MUST reject the encoded data if it contains characters outside the base alphabet when interpreting base-encoded data, unless the specification referring to this document explicitly states otherwise."
+4. **RFC 4648 § 3.5.** "These pad bits MUST be set to zero by conforming encoders, which is described in the descriptions on padding below."
+5. **RFC 4648 § 3.5.** "In some environments, the alteration is critical and therefore decoders MAY chose to reject an encoding if the pad bits have not been set to zero."
+6. **RFC 4648 § 4.** "When fewer than 24 input bits are available in an input group, bits with value zero are added (on the right) to form an integral number of 6-bit groups."
+7. **RFC 4648 § 5.** "This encoding may be referred to as "base64url". This encoding should not be regarded as the same as the "base64" encoding and should not be referred to as only "base64"."
+8. **RFC 4648 § 6.** "When a bit stream is encoded via the base 32 encoding, the bit stream must be presumed to be ordered with the most-significant-bit first."
+9. **RFC 4648 § 12.** "A decoder should not break on invalid input including, e.g., embedded NUL characters (ASCII 0)."
 
 ## Workflow
 
@@ -42,7 +43,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

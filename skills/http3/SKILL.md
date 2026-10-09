@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "The QUIC transport protocol has several features that are desirable in a transport for HTTP, such as stream multiplexing, per-stream flow control, and low-latency connection establishment. This document describes a mapping of HTTP semantics over QUIC. This document also identifies HTTP/2 features that are subsumed by QUIC and describes how HTTP/2 extensions can be ported to HTTP/3. ¶"
+1. **RFC 9114 § 3.1.** "Upon receiving a server certificate in the TLS handshake, the client MUST verify that the certificate is an acceptable match for the URI's origin server using the process described in Section 4.3.4 of [HTTP]."
+2. **RFC 9114 § 3.2.** "After the QUIC connection is established, a SETTINGS frame MUST be sent by each endpoint as the initial frame of their respective HTTP control stream."
+3. **RFC 9114 § 4.1.** "Receipt of an invalid sequence of frames MUST be treated as a connection error of type H3_FRAME_UNEXPECTED."
+4. **RFC 9114 § 4.1.2.** "Malformed requests or responses that are detected MUST be treated as a stream error of type H3_MESSAGE_ERROR."
+5. **RFC 9114 § 4.2.** "An endpoint MUST NOT generate an HTTP/3 field section containing connection-specific fields; any message containing connection-specific fields MUST be treated as malformed."
+6. **RFC 9114 § 6.2.1.** "The sender MUST NOT close the control stream, and the receiver MUST NOT request that the sender close the control stream."
+7. **RFC 9114 § 10.9.** "The anti-replay mitigations in [HTTP-REPLAY] MUST be applied when using HTTP/3 with 0-RTT."
+8. **RFC 9000 § 8.1.** "Prior to validating the client address, servers MUST NOT send more than three times as many bytes as the number of bytes they have received."
+9. **RFC 9000 § 8.1.** "Clients MUST ensure that UDP datagrams containing Initial packets have UDP payloads of at least 1200 bytes, adding PADDING frames as necessary."
+10. **RFC 9001 § 4.2.** "Clients MUST NOT offer TLS versions older than 1.3."
+11. **RFC 9001 § 5.6.** "A client therefore MUST NOT use 0-RTT for application data unless specifically requested by the application that is in use."
+12. **RFC 9002 § 6.2.** "A PTO timer expiration event does not indicate packet loss and MUST NOT cause prior unacknowledged packets to be marked as lost."
 
 ## Workflow
 
@@ -35,7 +46,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

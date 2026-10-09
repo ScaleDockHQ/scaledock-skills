@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "This document specifies the message formats used in OpenPGP. OpenPGP provides encryption with public key or symmetric cryptographic algorithms, digital signatures, compression, and key management. ¶ This document is maintained in order to publish all necessary information needed to develop interoperable applications based on the OpenPGP format. It is not a step-by-step cookbook for writing an application. It describes only the format and methods needed to read, check, generate, and write conforming packets crossing any network. It does not deal with storage and implementation questions. It does, however, discuss implementation issues necessary to avoid security flaws. ¶ This document obsolet"
+1. **RFC 9580 § 3.7.2.** "Therefore, when generating an S2K Specifier, an implementation MUST NOT use Simple S2K."
+2. **RFC 9580 § 4.3.** "If an implementation encounters a critical packet where the packet type is unknown in a packet sequence, it MUST reject the whole packet sequence (see Section 10)."
+3. **RFC 9580 § 5.2.** "An implementation MUST generate a version 6 signature when signing with a version 6 key."
+4. **RFC 9580 § 5.2.5.** "When an implementation encounters such a malformed or unknown signature, it MUST ignore the signature for validation purposes."
+5. **RFC 9580 § 9.1.** "Implementations MUST implement Ed25519 (27) for signatures and X25519 (25) for encryption."
+6. **RFC 9580 § 9.3.** "Implementations MUST NOT encrypt data with IDEA, TripleDES, or CAST5."
+7. **RFC 9580 § 9.5.** "Implementations MUST NOT generate signatures with MD5, SHA-1, or RIPEMD-160."
+8. **RFC 9580 § 9.5.** "Implementations MUST NOT validate any recent signature that depends on MD5, SHA-1, or RIPEMD-160."
+9. **RFC 9580 § 10.3.2.1.** "An implementation processing an Encrypted Message MUST discard any preceding ESK packet with a version that does not align with the version of the payload."
+10. **RFC 9580 § 13.7.** "In the case of AEAD encrypted data, if the authentication tag fails to verify, the implementation MUST NOT attempt to parse nor release decrypted data to the user, and it MUST halt with an error."
+11. **RFC 4880 § 14.** "An implementation MUST treat an MDC failure as a security problem, not merely a data problem."
 
 ## Workflow
 
@@ -35,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

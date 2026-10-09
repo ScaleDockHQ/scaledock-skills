@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id        | Line    | Status  | Revision                                         | Posture | Publisher         |
-| --------- | ------- | ------- | ------------------------------------------------ | ------- | ----------------- |
-| `tcf-2.2` | TCF 2.2 | current | TCF 2.2, fetched 2026-10-06 (Policy, 2026-10-06) |         | Policy 2026-10-06 |
+| Id        | Line    | Status  | Revision                                                                         | Posture | Summary                                                                                                                         |
+| --------- | ------- | ------- | -------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `tcf-2.2` | TCF 2.2 | current | TCF v2 specifications at commit 703fc29 (2026-07-28), policy version 4 and later |         | TC String version 2 with policy version 4 or later; the Disclosed Vendors segment is mandatory since the 2.3 document revision. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### TCF 2.2
-
-- Publisher status on 2026-10-06: Policy (2026-10-06).
-- Pinned text: https://iabeurope.eu/tcf-2-2/
-- Revision token: TCF 2.2, fetched 2026-10-06 (Policy, 2026-10-06)
+The line is named after TCF 2.2, the framework release that set the policy version to 4. The pinned documents carry later revisions of the same v2 string format: document revision 2.3 (April 2025) made the Disclosed Vendors segment mandatory, and 2.4 (May 2026) added `StandardTexts` to the Global Vendor List. TCF v1.1 is deprecated and has no line here.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From TC Strings created before the 2.3 document revision: add the Disclosed Vendors segment, and stop setting the Legitimate Interest bit for vendors that only declare Special Purposes (the consent string spec removed that workaround as of April 2026). From policy version 3: the consent string spec says a TC String with a policy version below 4 created after 30 September 2023 is invalid.

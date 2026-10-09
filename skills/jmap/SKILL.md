@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Notational Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "The client MUST NOT send this property when creating a new object of this type."
-3. **document.** "o "immutable" -- The value MUST NOT change after the object is created."
-4. **document.** "Where "Id" is given as a data type, it means a "String" of at least 1 and a maximum of 255 octets in size, and it MUST only contain characters from the "URL and Filename Safe" base64 alphabet, as defined in Section 5 of [RFC4648] , excluding the pad character ("=")."
-5. **document.** "For maximum safety, servers SHOULD also follow defensive allocation strategies to avoid creating risks where glob completion or data type detection may be present (e.g., on filesystems or in spreadsheets)."
-6. **document.** "Where "UnsignedInt" is given as a data type, it means an "Int" where the value MUST be in the range 0 <= value <= 2^53-1."
-7. **document.** "To ensure a normalised form, the "time-secfrac" MUST always be omitted if zero, and any letters in the string (e.g., "T" and "Z") MUST be uppercase."
-8. **document.** "Where "UTCDate" is given as a type, it means a "Date" where the "time-offset" component MUST be "Z" (i.e., it must be in UTC time)."
+1. **RFC 8620 § 1.5.** "All data sent from the client to the server or from the server to the client (except binary file upload/download) MUST be valid I-JSON according to the RFC and is therefore case sensitive and encoded in UTF-8 [RFC3629]."
+2. **RFC 8620 § 1.7.** "All HTTP requests MUST use the "https://" scheme (HTTP over TLS [RFC2818])."
+3. **RFC 8620 § 1.7.** "All HTTP requests MUST be authenticated."
+4. **RFC 8620 § 1.8.** "The client MUST opt in to use an extension by passing the appropriate capability identifier in the "using" array of the Request object, as described in Section 3.3."
+5. **RFC 8620 § 3.3.** "The method calls MUST be processed sequentially, in order."
+6. **RFC 8620 § 3.6.2.** "If a method encounters an error, the appropriate "error" response MUST be inserted at the current point in the "methodResponses" array and, unless otherwise specified, further processing MUST NOT happen within that method call."
+7. **RFC 8620 § 3.6.2.** "With the exception of when the "serverPartialFail" error is returned, the externally visible state of the server MUST NOT have changed if an error is returned at the method level."
+8. **RFC 8620 § 5.3.** "It is permissible for the server to commit changes to some objects but not others; however, it MUST NOT only commit part of an update to a single record (e.g., update a "name" property but not a "count" property, if both are supplied in the update object)."
+9. **RFC 8620 § 8.1.** "To ensure the confidentiality and integrity of data sent and received via JMAP, all requests MUST use TLS 1.2 [RFC5246] [RFC8446] or later, following the recommendations in [RFC7525]."
+10. **RFC 8620 § 8.1.** "Clients MUST validate TLS certificate chains to protect against man-in-the-middle attacks [RFC5280]."
+11. **RFC 8621 § 7.5.** "The server MUST remove any Bcc header field present on the message during delivery."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

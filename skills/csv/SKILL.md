@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "This header will contain names corresponding to the fields in the file and should contain the same number of fields as the records in the rest of the file (the presence or absence of the header line should be indicated via the optional "header" parameter of this MIME type)."
-2. **document.** "Each line should contain the same number of fields throughout the file."
-3. **document.** "Spaces are considered part of a field and should not be ignored."
-4. **document.** "The last field in the record must not be followed by a comma."
-5. **document.** "Fields containing line breaks (CRLF), double quotes, and commas should be enclosed in double-quotes."
-6. **document.** "If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote."
-7. **document.** "Implementors choosing not to use this parameter must make their own decisions as to whether the header line is present or absent."
-8. **document.** "However, implementors should be aware that some implementations may use other values."
+1. **RFC 4180 § 2.** "Each record is located on a separate line, delimited by a line break (CRLF)."
+2. **RFC 4180 § 2.** "Each line should contain the same number of fields throughout the file."
+3. **RFC 4180 § 2.** "Spaces are considered part of a field and should not be ignored."
+4. **RFC 4180 § 2.** "The last field in the record must not be followed by a comma."
+5. **RFC 4180 § 2.** "Fields containing line breaks (CRLF), double quotes, and commas should be enclosed in double-quotes."
+6. **RFC 4180 § 2.** "If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote."
+7. **RFC 4180 § 2.** "file = [header CRLF] record *(CRLF record) [CRLF]"
+8. **RFC 4180 § 2.** "escaped = DQUOTE *(TEXTDATA / COMMA / CR / LF / 2DQUOTE) DQUOTE"
+9. **RFC 4180 § 3.** "The "header" parameter indicates the presence or absence of the header line. Valid values are "present" or "absent"."
+10. **RFC 4180 § 3.** "As per section 4.1.1. of RFC 2046 [3], this media type uses CRLF to denote line breaks. However, implementors should be aware that some implementations may use other values."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Requirements Language The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "Conventions Used in This Document The ordering of the members of any JSON object defined in this document MUST be considered irrelevant, as specified by [ RFC7159 ]."
-3. **document.** "The value of the member MUST be one of the GeoJSON types."
-4. **document.** "o A GeoJSON object MAY have a "bbox" member, the value of which MUST be a bounding box array (see Section 5 )."
-5. **document.** "o The value of a Geometry object's "type" member MUST be one of the seven geometry types (see Section 1.4 )."
-6. **document.** "Implementations SHOULD NOT extend positions beyond three elements because the semantics of extra elements are unspecified and ambiguous."
-7. **document.** "o The first and last positions are equivalent, and they MUST contain identical values; their representation SHOULD also be identical."
-8. **document.** "o A linear ring MUST follow the right-hand rule with respect to the area it bounds, i.e., exterior rings are counterclockwise, and holes are clockwise."
+1. **RFC 7946 § 3.** "A GeoJSON object has a member with the name "type". The value of the member MUST be one of the GeoJSON types."
+2. **RFC 7946 § 3.1.** "The value of a Geometry object's "type" member MUST be one of the seven geometry types (see Section 1.4)."
+3. **RFC 7946 § 3.1.6.** "The first and last positions are equivalent, and they MUST contain identical values; their representation SHOULD also be identical."
+4. **RFC 7946 § 3.1.6.** "A linear ring MUST follow the right-hand rule with respect to the area it bounds, i.e., exterior rings are counterclockwise, and holes are clockwise."
+5. **RFC 7946 § 3.1.6.** "For Polygons with more than one of these rings, the first MUST be the exterior ring, and any others MUST be interior rings."
+6. **RFC 7946 § 3.1.9.** "Any geometry that crosses the antimeridian SHOULD be represented by cutting it in two such that neither part's representation crosses the antimeridian."
+7. **RFC 7946 § 3.2.** "The value of the geometry member SHALL be either a Geometry object as defined above or, in the case that the Feature is unlocated, a JSON null value."
+8. **RFC 7946 § 5.** "The value of the bbox member MUST be an array of length 2*n where n is the number of dimensions represented in the contained geometries, with all axes of the most southwesterly point followed by all axes of the more northeasterly point."
+9. **RFC 7946 § 7.1.** "Implementations MUST NOT change the semantics of GeoJSON members and types."
+10. **RFC 7946 § 7.1.** "FeatureCollection and Feature objects, respectively, MUST NOT contain a "coordinates" or "geometries" member."
+11. **RFC 7946 § 7.1.** "FeatureCollection and Geometry objects, respectively, MUST NOT contain a "geometry" or "properties" member."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

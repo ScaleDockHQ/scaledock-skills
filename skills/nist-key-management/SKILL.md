@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST key management
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+NIST key management guidance: SP 800-57 Part 1 Rev 5 (general key management, key types, cryptoperiods, protection and compromise), SP 800-131A Rev 2 (transitioning algorithms and key lengths) and SP 800-132 (password-based key derivation for storage applications).
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when managing cryptographic keys.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: developer, architect or key manager generating, storing, using, rotating or destroying cryptographic keys, or reviewing a key management system.
 - Target version: SP 800-57 Part 1 Rev 5 (default); SP 800-131A Rev 2 (default); SP 800-132 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpre ted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official."
-3. **document.** "Consequently, organizations must ensure that clear guidance and oversight is provided for the proper management of keys , as well as controls to ensure that the guidance is being properly followed and implemented."
-4. **document.** "Shall: This term is used to indicate a requirement of a FIPS or a requirement that must be fulfilled to claim conformance to this Recommendation."
-5. **document.** "Note that should may be coupled with not to become should not."
-6. **document.** "The reader should be aware that the terms used in this Recommendation might be defined differently in other documents."
-7. **document.** "5 RECOMMENDATION FOR KEY MANAGEMENT: PART 1 – GENERAL 5 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-57pt1r5 protection requirements should be of particular interest to cryptographic module vendors and application implementers."
-8. **document.** "This section should be of particular interest to cryptographic module vendors and developers of cryptographic infrastructure services."
+1. **§ 5.2.** "In general, a single key shall be used for only one purpose (e.g., encryption, integrity authentication, key wrapping, random bit generation, or digital signatures)."
+2. **§ 5.5.1.** "When a key is compromised, all use of the key to apply cryptographic protection to information (e.g., compute a digital signature or encrypt information) shall cease, and the compromised key shall be revoked (see Section 8.3.5)."
+3. **§ 6.1.** "Integrity protection shall be provided for all key information."
+4. **§ 3.** "Private-key lengths providing less than 112 bits of security shall not be used to generate digital signatures."
+5. **§ 5.** "Since most user-chosen passwords have low entropy and weak randomness properties, as discussed in Appendix A.1, these passwords shall not be used directly as cryptographic keys."
 
 ## Workflow
 

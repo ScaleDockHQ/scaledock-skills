@@ -1,62 +1,28 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id         | Line     | Status  | Revision                                       | Posture | Publisher      |
-| ---------- | -------- | ------- | ---------------------------------------------- | ------- | -------------- |
-| `erc-20`   | ERC-20   | current | EIP-20, fetched 2026-10-06 (EIP, 2026-10-06)   |         | EIP 2026-10-06 |
-| `eip-712`  | EIP-712  | current | EIP-712, fetched 2026-10-06 (EIP, 2026-10-06)  |         | EIP 2026-10-06 |
-| `erc-4337` | ERC-4337 | current | EIP-4337, fetched 2026-10-06 (EIP, 2026-10-06) |         | EIP 2026-10-06 |
-| `eip-1193` | EIP-1193 | current | EIP-1193, fetched 2026-10-06 (EIP, 2026-10-06) |         | EIP 2026-10-06 |
-| `erc-8004` | ERC-8004 | current | EIP-8004, fetched 2026-10-06 (EIP, 2026-10-06) |         | EIP 2026-10-06 |
+| Id         | Line     | Status  | Revision                                        | Posture | Summary                                                                                       |
+| ---------- | -------- | ------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| `erc-20`   | ERC-20   | current | Final, ethereum/ERCs commit 365b4c0, 2026-10-02 |         | Fungible token interface: transfers, allowances and the Transfer and Approval events.         |
+| `eip-712`  | EIP-712  | current | Final, ethereum/EIPs commit 3b5f967, 2026-10-06 |         | Hashing and signing of typed structured data with a domain separator.                         |
+| `erc-4337` | ERC-4337 | current | Final, ethereum/ERCs commit 365b4c0, 2026-10-02 |         | Account abstraction through UserOperations, bundlers, the EntryPoint contract and paymasters. |
+| `eip-1193` | EIP-1193 | current | Final, ethereum/EIPs commit 3b5f967, 2026-10-06 |         | The JavaScript provider API: request, RPC errors and provider events.                         |
+| `erc-8004` | ERC-8004 | current | Draft, ethereum/ERCs commit 365b4c0, 2026-10-02 |         | Identity, reputation and validation registries for trustless agents; still a Draft ERC.       |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### ERC-20
-
-- Publisher status on 2026-10-06: EIP (2026-10-06).
-- Pinned text: https://eips.ethereum.org/EIPS/eip-20
-- Revision token: EIP-20, fetched 2026-10-06 (EIP, 2026-10-06)
-
-### EIP-712
-
-- Publisher status on 2026-10-06: EIP (2026-10-06).
-- Pinned text: https://eips.ethereum.org/EIPS/eip-712
-- Revision token: EIP-712, fetched 2026-10-06 (EIP, 2026-10-06)
-
-### ERC-4337
-
-- Publisher status on 2026-10-06: EIP (2026-10-06).
-- Pinned text: https://eips.ethereum.org/EIPS/eip-4337
-- Revision token: EIP-4337, fetched 2026-10-06 (EIP, 2026-10-06)
-
-### EIP-1193
-
-- Publisher status on 2026-10-06: EIP (2026-10-06).
-- Pinned text: https://eips.ethereum.org/EIPS/eip-1193
-- Revision token: EIP-1193, fetched 2026-10-06 (EIP, 2026-10-06)
-
-### ERC-8004
-
-- Publisher status on 2026-10-06: EIP (2026-10-06).
-- Pinned text: https://eips.ethereum.org/EIPS/eip-8004
-- Revision token: EIP-8004, fetched 2026-10-06 (EIP, 2026-10-06)
+Each proposal is its own family with one line. ERC-20, EIP-712, ERC-4337 and EIP-1193 are Final; ERC-8004 is a Draft and can still change, so re-read it before relying on a rule. ERC-20, ERC-4337 and ERC-8004 live in the ethereum/ERCs repository; EIP-712 and EIP-1193 are in ethereum/EIPs.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+This skill has one published line. There is no older line here to upgrade from.

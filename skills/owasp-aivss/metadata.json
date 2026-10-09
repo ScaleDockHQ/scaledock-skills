@@ -1,23 +1,23 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP AIVSS. OWASP AIVSS is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers OWASP AIVSS v0.8 (AIVSS Scoring System For OWASP Agentic AI Core Security Risks). Requirements quote the scoring method in Part 2 of the PDF, pinned at a commit of the project's GitHub repository.",
   "versions": [
     {
       "id": "aivss",
       "label": "OWASP AIVSS",
       "status": "current",
-      "revision": "OWASP AIVSS, fetched 2026-10-06 (Guide, 2026-10-06)"
+      "revision": "v0.8, commit 84856b290f62 (2026-09-09)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP AIVSS",
-      "url": "https://aivss.owasp.org/",
-      "status": "Guide",
-      "revision": "OWASP AIVSS, fetched 2026-10-06 (Guide, 2026-10-06)",
+      "title": "AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.8",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system/84856b290f62f2327f70eb0027be64351dd2e6de/assets/publications/AIVSS%20Scoring%20System%20For%20OWASP%20Agentic%20AI%20Core%20Security%20Risks%20v0.8.pdf",
+      "status": "OWASP Project document (draft)",
+      "revision": "v0.8, commit 84856b290f62 (2026-09-09)",
       "checked": "2026-10-06"
     }
   ]

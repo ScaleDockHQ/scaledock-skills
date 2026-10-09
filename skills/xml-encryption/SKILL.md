@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ This document specifies a process for encrypting data and representing the resul
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when encrypting XML.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **1.1 Editorial and Conformance Conventions.** "The key words " MUST ", " MUST NOT ", " REQUIRED ", " SHALL ", " SHALL NOT ", " SHOULD ", " SHOULD NOT ", " RECOMMENDED ", " MAY ", and " OPTIONAL " in this specification are to be interpreted as described in [ RFC2119 ]: "They MUST only be used where it is actually required for interoperation or to limit behavior which has potential for causing harm (e.g., limiting retransmissions)"…"
-2. **1.1 Editorial and Conformance Conventions.** "Compliance with the XML-namespace specification [ XML-NAMES ] is described as " REQUIRED "."
-3. **1.3 Versions, Namespaces, URIs, and Identifiers.** "Implementations of this specification MUST use the following XML namespace URIs: URI namespace prefix XML internal entity http://www.w3.org/2001/04/xmlenc# default namespace , xenc: <!ENTITY xenc "http://www.w3.org/2001/04/xmlenc#"> http://www.w3.org/2009/xmlenc11# xenc11: <!ENTITY xenc11 "http://www.w3.org/2009/xmlenc11#"> The http://www.w3.org/2001/04/xmlenc# ( xenc: ) namespace was introduced…"
-4. **2.1.4 Encrypting Arbitrary Data and XML Documents.** "xml version = "1.0" ?> <EncryptedData xmlns = "http://www.w3.org/2001/04/xmlenc#" MimeType = "text/xml" > <CipherData> <CipherValue> A23B45C56 </CipherValue> </CipherData> </EncryptedData> Where appropriate, such as in the case of encrypting an entire EXI stream, the Type attribute SHOULD be provided and indicate the use of EXI."
-5. **3. Encryption Syntax.** "Features described in this section MUST be implemented unless otherwise noted."
-6. **3.1 The EncryptedType Element.** "Implementations MUST generate laxly schema valid [ XMLSCHEMA-1 ], [ XMLSCHEMA-2 ] EncryptedData or EncryptedKey elements as specified by the subsequent schema declarations."
-7. **3.1 The EncryptedType Element.** "(Note the laxly schema valid generation means that the content permitted by xsd:ANY need not be valid.) Implementations SHOULD create these XML structures ( EncryptedType elements and their descendants/content) in Normalization Form C [ NFC ]."
-8. **3.2 The EncryptionMethod Element.** "(We rely upon the ANY schema construct because it is not possible to specify element content based on the value of an attribute.) The presence of any child element under EncryptionMethod that is not permitted by the algorithm or the presence of a KeySize child inconsistent with the algorithm MUST be treated as an error."
+1. **§ 3.2.** "The presence of any child element under EncryptionMethod that is not permitted by the algorithm or the presence of a KeySize child inconsistent with the algorithm MUST be treated as an error."
+2. **§ 4.3.** "If the cleartext is of type element or content, the data MUST be serialized in UTF-8 as specified in [XML10], using Normal Form C [NFC]."
+3. **§ 5.2.4.** "For the purposes of this specification, AES-GCM shall be used with a 96 bit Initialization Vector (IV) and a 128 bit Authentication Tag (T)."
+4. **§ 5.5.2.** "Implementations MUST implement RSA-OAEP for the transport of all key types and sizes that are mandatory to implement for symmetric encryption."
+5. **§ 6.1.3.** "Implementations SHOULD restrict algorithm usage to algorithms known to be secure in the face of chosen-ciphertext attacks (RSA-OAEP, AES-GCM)."
+6. **§ 6.1.3.** "In that case, documents containing RSA-PKCS#1 v1.5 [XMLENC-PKCS15-ATTACK] and AES-CBC [XMLENC-CBC-ATTACK] ciphertexts SHOULD be rejected without decryption."
+7. **§ 6.2.** "While the signature secures plaintext it only covers that which is signed, recipients of encrypted messages must not infer integrity or authenticity of other unsigned information (e.g., headers) within the encrypted envelope, see [XMLDSIG-CORE1], section 8.1.1 Only What is Signed is Secure]."
+8. **§ 6.4.** "For the Galois/Counter Mode (GCM) used by this specification, the IV must not be reused for any key and should be random, but it need not be secret."
+9. **§ 6.7.** "Implementations SHOULD NOT provide detailed error responses related to security algorithm processing."
+10. **§ 6.8.** "Implementers SHOULD ensure that distinct errors detected during security algorithm processing do not consume systematically different amounts of processing time from each other."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

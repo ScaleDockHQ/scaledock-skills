@@ -1,6 +1,6 @@
 # xregistry
 
-An agent skill for xRegistry.
+An agent skill for xRegistry: building and consuming xRegistry metadata registries.
 
 ## Install
 
@@ -8,18 +8,17 @@ An agent skill for xRegistry.
 npx skills add ScaleDockHQ/scaledock-skills --skill xregistry
 ```
 
-Then ask the agent to apply xRegistry.
+Then ask your agent to apply xRegistry.
 
 ## What it covers
 
-- when managing metadata with xRegistry
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The xRegistry core specification from the xRegistry project (a CNCF sandbox project that grew out of the CloudEvents Discovery work), read from `core/spec.md` in the xregistry/spec repository at the v1.0-rc4 release candidate.
 
 ## Versions
 
-| Line              | Status          |
-| ----------------- | --------------- |
-| xRegistry 1.0-rc4 | current (build) |
+| Line              | Status  |
+| ----------------- | ------- |
+| xRegistry 1.0-rc4 | current |
 
 `references/versions.md` says which line to use and how to upgrade between them.
 
@@ -27,7 +26,7 @@ Then ask the agent to apply xRegistry.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [xRegistry 1.0-rc4](https://raw.githubusercontent.com/xregistry/spec/main/core/spec.md): Release candidate, xRegistry 1.0-rc4, fetched 2026-10-06 (Release candidate, 2026-10-06).
+- [xRegistry Service - Version 1.0-rc4](https://raw.githubusercontent.com/xregistry/spec/508cd2760a3c5b74adf61acac1e94654f9852f34/core/spec.md): Release candidate, 1.0-rc4 (tagged v1.0-rc4, 2026-08-19), main at commit 508cd27.
 
 ## License
 

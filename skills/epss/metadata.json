@@ -1,23 +1,37 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers EPSS. EPSS is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers EPSS, currently model v5 (v2026.06.15). Requirements quote the FIRST EPSS pages How EPSS Works, Using EPSS and Get the Data.",
   "versions": [
     {
       "id": "epss",
       "label": "EPSS",
       "status": "current",
-      "revision": "EPSS, fetched 2026-10-06 (Model, 2026-10-06)"
+      "revision": "EPSS v5 (v2026.06.15), publishing since 2026-06-15"
     }
   ],
   "sources": [
     {
-      "title": "EPSS",
-      "url": "https://www.first.org/epss/",
-      "status": "Model",
-      "revision": "EPSS, fetched 2026-10-06 (Model, 2026-10-06)",
+      "title": "How EPSS Works",
+      "url": "https://www.first.org/epss/how-it-works",
+      "status": "FIRST EPSS SIG documentation",
+      "revision": "EPSS v5 (v2026.06.15), page read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Using EPSS",
+      "url": "https://www.first.org/epss/using-epss",
+      "status": "FIRST EPSS SIG documentation",
+      "revision": "EPSS v5 (v2026.06.15), page read 2026-10-06",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Get the Data",
+      "url": "https://www.first.org/epss/data",
+      "status": "FIRST EPSS SIG documentation",
+      "revision": "EPSS v5 (v2026.06.15), page read 2026-10-06",
       "checked": "2026-10-06"
     }
   ]

@@ -1,41 +1,25 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id                 | Line       | Status  | Revision                                                                 | Posture | Publisher              |
-| ------------------ | ---------- | ------- | ------------------------------------------------------------------------ | ------- | ---------------------- |
-| `oasf-1.1.0`       | OASF 1.1.0 | current | OASF 1.1.0, fetched 2026-10-06 (Release, 2026-10-06)                     |         | Release 2026-10-06     |
-| `oasf-1.2-preview` | OASF 1.2   | preview | OASF main development line, fetched 2026-10-06 (Development, 2026-10-06) | track   | Development 2026-10-06 |
+| Id                 | Line       | Status  | Revision                                                      | Posture | Summary                                                                          |
+| ------------------ | ---------- | ------- | ------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------- |
+| `oasf-1.1.0`       | OASF 1.1.0 | current | Tag v1.1.0 (commit f510be0, 2026-07-10), schema version 1.1.0 |         | Released schema; records with skills, domains and modules.                       |
+| `oasf-1.2-preview` | OASF 1.2   | preview | main at commit a2c7e16 (2026-10-06), schema version 1.2.0-dev | track   | Development line on main; read it to anticipate the next schema, do not emit it. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### OASF 1.1.0
-
-- Publisher status on 2026-10-06: Release (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/agntcy/oasf/v1.1.0/README.md
-- Revision token: OASF 1.1.0, fetched 2026-10-06 (Release, 2026-10-06)
-
-### OASF 1.2
-
-- Publisher status on 2026-10-06: Development (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/agntcy/oasf/main/README.md
-- Revision token: OASF main development line, fetched 2026-10-06 (Development, 2026-10-06)
+OASF does not follow semantic versioning: the major and minor version track the schema, and the patch version covers server and API changes only (see the changelog on main). Server-only patch releases on the 1.1 line, such as v1.1.1, do not change the 1.1.0 schema. The OASF schema server and its MCP server are tooling and are not pinned here.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview: OASF 1.2
-
-`oasf-1.2-preview` is a Development dated 2026-10-06, pinned at https://raw.githubusercontent.com/agntcy/oasf/main/README.md. Posture: track. Do not emit it. Read it to see what the publisher is changing. When it becomes a Recommendation, make it current and move the previous current line to supported or legacy.
+From 1.1.0 to the 1.2 development line: compare `schema/version.json` and the changelog's Unreleased section on main, then re-validate records against the target schema version. Do not set `schema_version` to a `-dev` value in published records.

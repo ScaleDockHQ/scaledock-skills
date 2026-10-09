@@ -12,7 +12,7 @@ Then ask the agent to apply COPPA.
 
 ## What it covers
 
-- when applying the Children's Online Privacy Protection Rule
+- The COPPA Rule, 16 CFR Part 312 as amended in 2025: notice, verifiable parental consent, parental review, data minimisation, information security and data retention.
 - The version lines in the table below, pinned to the revisions in `metadata.json`.
 
 ## Versions
@@ -27,7 +27,7 @@ Then ask the agent to apply COPPA.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [COPPA Rule 2025](https://www.govinfo.gov/content/pkg/FR-2025-04-22/html/2025-05904.htm): Federal Register, Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06).
+- [16 CFR Part 312 (COPPA Rule)](https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?chapter=I&subchapter=C&part=312): eCFR, current title 16 part 312, as amended at 90 FR 16977 (2025-04-22), up to date as of 2026-10-02.
 
 ## License
 

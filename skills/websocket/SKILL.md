@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "Requirements phrased in the imperative as part of algorithms (such as "strip any leading space characters" or "return false and abort these steps") are to be interpreted with the meaning of the key word ("MUST", "SHOULD", "MAY", etc.) used in introducing the algorithm."
-3. **document.** "The "resource-name" (also known as /resource name/ in Section 4.1 ) can be constructed by concatenating the following: o "/" if the path component is empty o the path component o "?" if the query component is non-empty o the query component Fragment identifiers are meaningless in the context of WebSocket URIs and MUST NOT be used on these URIs."
-4. **document.** "As with any URI scheme, the character "#", when not indicating the start of a fragment, MUST be escaped as %23."
-5. **document.** "When the client is to _Establish a WebSocket Connection_ given a set of (/host/, /port/, /resource name/, and /secure/ flag), along with a list of /protocols/ and /extensions/ to be used, and an /origin/ in the case of web browsers, it MUST open a connection, send an opening handshake, and read the server's handshake in response."
-6. **document.** "The components of the WebSocket URI passed into this algorithm (/host/, /port/, /resource name/, and /secure/ flag) MUST be valid according to the specification of WebSocket URIs specified in Section 3 ."
-7. **document.** "If any of the components are invalid, the client MUST _Fail the WebSocket Connection_ and abort these steps."
-8. **document.** "If the client already has a WebSocket connection to the remote host (IP address) identified by /host/ and port /port/ pair, even if the remote host is known by another name, the client MUST wait until that connection has been established or for that connection to have failed."
+1. **RFC 6455 § 4.1.** "The request MUST include a header field with the name |Sec-WebSocket-Key|."
+2. **RFC 6455 § 4.1.** "If the response lacks a |Sec-WebSocket-Accept| header field or the |Sec-WebSocket-Accept| contains a value other than the base64-encoded SHA-1 of the concatenation of the |Sec-WebSocket-Key| (as a string, not base64-decoded) with the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" but ignoring any leading and trailing whitespace, the client MUST _Fail the WebSocket Connection_."
+3. **RFC 6455 § 5.1.** "To avoid confusing network intermediaries (such as intercepting proxies) and for security reasons that are further discussed in Section 10.3, a client MUST mask all frames that it sends to the server (see Section 5.3 for further details)."
+4. **RFC 6455 § 5.1.** "A server MUST NOT mask any frames that it sends to the client."
+5. **RFC 6455 § 5.5.** "All control frames MUST have a payload length of 125 bytes or less and MUST NOT be fragmented."
+6. **RFC 6455 § 5.5.1.** "If an endpoint receives a Close frame and did not previously send a Close frame, the endpoint MUST send a Close frame in response."
+7. **RFC 6455 § 5.6.** "Note that a particular text frame might include a partial UTF-8 sequence; however, the whole message MUST contain valid UTF-8."
+8. **RFC 6455 § 10.2.** "Servers that are not intended to process input from any web page but only for certain sites SHOULD verify the |Origin| field is an origin they expect."
+9. **RFC 6455 § 10.4.** "Implementations that have implementation-and/or platform-specific limitations regarding the frame size or total message size after reassembly from multiple frames MUST protect themselves against exceeding those limits."
+10. **RFC 8441 § 5.** "The :protocol pseudo-header field MUST be included in the CONNECT request, and it MUST have a value of "websocket" to initiate a WebSocket connection on an HTTP/2 stream."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -1,6 +1,6 @@
 # serverless-workflow
 
-An agent skill for Serverless Workflow.
+An agent skill for Serverless Workflow: writing workflow definitions and building runtimes for the Serverless Workflow DSL.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Serverless Workflow.
 npx skills add ScaleDockHQ/scaledock-skills --skill serverless-workflow
 ```
 
-Then ask the agent to apply Serverless Workflow.
+Then ask your agent to apply Serverless Workflow.
 
 ## What it covers
 
-- when writing a serverless workflow
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The Serverless Workflow DSL 1.0.3 from the Serverless Workflow project (CNCF): the DSL concepts document and the DSL reference, read from the serverlessworkflow/specification repository at the v1.0.3 release.
 
 ## Versions
 
@@ -27,7 +26,8 @@ Then ask the agent to apply Serverless Workflow.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Serverless Workflow DSL](https://raw.githubusercontent.com/serverlessworkflow/specification/main/dsl.md): Specification, Serverless Workflow DSL, fetched 2026-10-06 (Specification, 2026-10-06).
+- [Serverless Workflow DSL](https://raw.githubusercontent.com/serverlessworkflow/specification/9b5b1da29e9d4fff2358580241e11aab22704a16/dsl.md): Specification, DSL 1.0.3 (v1.0.3, commit 9b5b1da, 2026-07-31).
+- [Serverless Workflow DSL reference](https://raw.githubusercontent.com/serverlessworkflow/specification/9b5b1da29e9d4fff2358580241e11aab22704a16/dsl-reference.md): Specification, DSL 1.0.3 (v1.0.3, commit 9b5b1da, 2026-07-31).
 
 ## License
 

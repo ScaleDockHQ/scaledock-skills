@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id    | Line | Status  | Revision                                            | Posture | Publisher                |
-| ----- | ---- | ------- | --------------------------------------------------- | ------- | ------------------------ |
-| `mdx` | MDX  | current | MDX, fetched 2026-10-06 (Documentation, 2026-10-06) |         | Documentation 2026-10-06 |
+| Id    | Line | Status  | Revision                                        | Posture | Summary                                   |
+| ----- | ---- | ------- | ----------------------------------------------- | ------- | ----------------------------------------- |
+| `mdx` | MDX  | current | MDX 3.1.1 (commit 50aa8df, released 2025-08-29) |         | MDX 3, as implemented by @mdx-js/mdx 3.x. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### MDX
-
-- Publisher status on 2026-10-06: Documentation (2026-10-06).
-- Pinned text: https://mdxjs.com/docs/
-- Revision token: MDX, fetched 2026-10-06 (Documentation, 2026-10-06)
+MDX has no separate language version; the syntax is defined by the @mdx-js/mdx major release. MDX 2 introduced the current syntax (JSX, expressions and ESM, with indented code, autolinks and HTML syntax removed); MDX 3 kept it.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From MDX 1: replace HTML comments with `{/* */}` expression comments, replace autolinks with full links, escape literal `<` and `{`, and remove indented code. These are the MDX syntax rules quoted in the requirements.

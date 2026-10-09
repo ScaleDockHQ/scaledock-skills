@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ] when they appear in ALL CAPS."
-2. **document.** "Implementations of this specification MUST set this field to 1 (01 binary)."
-3. **document.** "Messages with unknown version numbers MUST be silently ignored."
-4. **document.** "Lengths 9-15 are reserved, MUST NOT be sent, and MUST be processed as a message format error."
-5. **document.** "The presence of a marker followed by a zero-length payload MUST be processed as a message format error."
-6. **document.** "Instead of specifying the Option Number directly, the instances MUST"
-7. **document.** "If the field is set to this value but the entire byte is not the payload marker, this MUST be processed as a message format error."
-8. **document.** "If the field is set to this value, it MUST be processed as a message format error."
+1. **RFC 7252 § 3.** "The presence of a marker followed by a zero-length payload MUST be processed as a message format error."
+2. **RFC 7252 § 4.2.** "The Acknowledgement message MUST echo the Message ID of the Confirmable message and MUST carry a response or be Empty (see Sections 5.2.1 and 5.2.2)."
+3. **RFC 7252 § 4.4.** "The same Message ID MUST NOT be reused (in communicating with the same endpoint) within the EXCHANGE_LIFETIME (Section 4.8.2)."
+4. **RFC 7252 § 4.7.** "In order not to cause congestion, clients (including proxies) MUST strictly limit the number of simultaneous outstanding interactions that they maintain to a given server (including proxies) to NSTART."
+5. **RFC 7252 § 5.3.1.** "Every request carries a client-generated token that the server MUST echo (without modification) in any resulting response."
+6. **RFC 7252 § 5.3.2.** "In a piggybacked response, the Message ID of the Confirmable request and the Acknowledgement MUST match, and the tokens of the response and original request MUST match."
+7. **RFC 7252 § 5.4.1.** "Unrecognized options of class "critical" that occur in a Confirmable request MUST cause the return of a 4.02 (Bad Option) response."
+8. **RFC 7252 § 5.7.1.** "A CoAP-to-CoAP proxy MUST forward to the origin server all Safe-to-Forward options that it does not recognize."
+9. **RFC 7252 § 8.1.** "To avoid an implosion of error responses, when a server is aware that a request arrived via multicast, it MUST NOT return a Reset message in reply to a Non-confirmable message."
+10. **RFC 7252 § 9.1.2.** "This means the response to a DTLS secured request MUST always be DTLS secured using the same security session and epoch."
+11. **RFC 7252 § 11.2.** "Unlike the "coap" scheme, responses to "coaps" identified requests are never "public" and thus MUST NOT be reused for shared caching, unless the cache is able to make equivalent access control decisions to the ones that led to the cached entry."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

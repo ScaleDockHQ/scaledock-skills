@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,7 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **abstract.** "An Entity Attestation Token (EAT) provides an attested claims set that describes the state and characteristics of an entity, a device such as a smartphone, an Internet of Things (IoT) device, network equipment, or such. This claims set is used by a relying party, server, or service to determine the type and degree of trust placed in the entity. ¶ An EAT is either a CBOR Web Token (CWT) or a JSON Web Token (JWT) with attestation-oriented claims. ¶"
+1. **RFC 9711 § 3.** "An EAT MUST contain a Claims-Set."
+2. **RFC 9711 § 3.** "An EAT MUST have authenticity and integrity protection."
+3. **RFC 9711 § 4.** "However, in the absence of such requirements, all claims that are not understood by implementations MUST be ignored."
+4. **RFC 9711 § 4.** "All claims in an EAT MUST use the same encoding except where otherwise explicitly stated (e.g., in a CBOR-encoded token, all claims must be encoded with CBOR)."
+5. **RFC 9711 § 4.1.** "An EAT nonce MUST have at least 64 bits of entropy."
+6. **RFC 9711 § 4.2.1.2.** "The consumer of a UEID MUST treat it as a completely opaque string of bytes and MUST NOT make any use of its internal structure."
+7. **RFC 9711 § 4.2.18.1.** "The encoding of a submodule Claims-Set MUST be the same as the encoding of the surrounding EAT, e.g., all submodule Claims-Sets in a CBOR-encoded token must be CBOR encoded."
+8. **RFC 9711 § 4.3.1.** "An EAT token MUST NOT contain an "iat" claim in floating-point format."
+9. **RFC 9711 § 6.2.** "Full profiles MUST be complete such that a complying receiver can decode, verify, and check for freshness for every EAT created by a complying sender."
+10. **RFC 9711 § 9.3.** "All EAT use MUST provide a freshness mechanism to prevent replay and related attacks."
 
 ## Workflow
 
@@ -35,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -1,6 +1,6 @@
 # openchain
 
-An agent skill for OpenChain.
+An agent skill for OpenChain: running an open source license compliance program (ISO/IEC 5230) or a security assurance program (ISO/IEC 18974).
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for OpenChain.
 npx skills add ScaleDockHQ/scaledock-skills --skill openchain
 ```
 
-Then ask the agent to apply OpenChain.
+Then ask your agent to apply OpenChain.
 
 ## What it covers
 
-- when conforming to OpenChain license or security assurance
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The OpenChain Project's two program specifications: ISO/IEC 5230:2020 (OpenChain Specification 2.1, open source license compliance) and ISO/IEC 18974:2023 (OpenChain security assurance), read from the project's public Markdown texts at pinned commits.
 
 ## Versions
 
@@ -28,8 +27,8 @@ Then ask the agent to apply OpenChain.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [OpenChain ISO 5230](https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/ISO-5230-2020/en/ISO-5230-2020.md): Public text, OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06).
-- [OpenChain ISO 18974](https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/main/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md): Public text, OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06).
+- [ISO/IEC 5230:2020, OpenChain Specification 2.1 (public text)](https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/968092c97da81a750f03c7b1becbd25bd088b2cb/ISO-5230-2020/en/ISO-5230-2020.md): International Standard (ISO/IEC 5230:2020), ISO/IEC 5230:2020 (OpenChain 2.1), commit 968092c97da8 (2025-01-08).
+- [ISO/IEC 18974:2023, OpenChain security assurance specification (public text)](https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/5bb0a024ce967720301bfa0e1d4d9e834690066d/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md): International Standard (ISO/IEC 18974:2023), ISO/IEC 18974:2023, commit 5bb0a024ce96 (2024-11-08).
 
 ## License
 

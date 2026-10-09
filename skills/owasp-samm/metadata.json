@@ -1,23 +1,156 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP SAMM. OWASP SAMM is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers OWASP SAMM v2 from the owaspsamm/core model repository at release v2.2.0. Requirements quote each security practice's definition and a selection of level 1 activities.",
   "versions": [
     {
       "id": "samm",
       "label": "OWASP SAMM",
       "status": "current",
-      "revision": "OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06)"
+      "revision": "Release v2.2.0 (2026-07-06)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP SAMM",
-      "url": "https://owasp.org/www-project-samm/",
-      "status": "Project",
-      "revision": "OWASP SAMM, fetched 2026-10-06 (Project, 2026-10-06)",
+      "title": "G-SM: Strategy and Metrics (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/G-Strategy-Metrics.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "G-PC: Policy and Compliance (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/G-Policy-Compliance.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "G-EG: Education and Guidance (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/G-Education-Guidance.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "D-TA: Threat Assessment (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/D-Threat-Assessment.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "D-SR: Security Requirements (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/D-Security-Requirements.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "D-SA: Secure Architecture (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/D-Secure-Architecture.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-SB: Secure Build (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/I-Secure-Build.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-SD: Secure Deployment (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/I-Secure-Deployment.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-DM: Defect Management (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/I-Defect-Management.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "V-AA: Architecture Assessment (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/V-Architecture-Assessment.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "V-RT: Requirements-driven Testing (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/V-Requirements-Testing.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "V-ST: Security Testing (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/V-Security-Testing.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "O-IM: Incident Management (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/O-Incident-Management.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "O-EM: Environment Management (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/O-Environment-Management.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "O-OM: Operational Management (practice)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/security_practices/O-Operational-Management.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "D-TA-1-B: Perform basic threat modeling (activity)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/activities/D-TA-1-B.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-SB-1-B: Identify application dependencies (activity)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/activities/I-SB-1-B.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-SD-1-B: Protect application secrets in configuration and code (activity)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/activities/I-SD-1-B.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "I-DM-1-A: Track security defects centrally (activity)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/activities/I-DM-1-A.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "O-IM-1-B: Create an incident response plan (activity)",
+      "url": "https://raw.githubusercontent.com/owaspsamm/core/v2.2.0/model/activities/O-IM-1-B.yml",
+      "status": "OWASP Flagship Project model",
+      "revision": "Release v2.2.0 (2026-07-06)",
       "checked": "2026-10-06"
     }
   ]

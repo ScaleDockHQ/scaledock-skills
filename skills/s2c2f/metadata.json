@@ -1,23 +1,23 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers S2C2F. S2C2F is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OpenSSF Secure Supply Chain Consumption Framework (S2C2F) version 1.1. Requirements quote every requirement title with its id and maturity level from the framework's GitHub repository at a pinned commit.",
   "versions": [
     {
       "id": "s2c2f",
       "label": "S2C2F",
       "status": "current",
-      "revision": "S2C2F framework, fetched 2026-10-06 (Framework, 2026-10-06)"
+      "revision": "Version 1.1, commit d0f0a7fbbc6c (2025-05-26)"
     }
   ],
   "sources": [
     {
-      "title": "S2C2F",
-      "url": "https://raw.githubusercontent.com/ossf/s2c2f/main/specification/framework.md",
-      "status": "Framework",
-      "revision": "S2C2F framework, fetched 2026-10-06 (Framework, 2026-10-06)",
+      "title": "Secure Supply Chain Consumption Framework (S2C2F) Simplified Requirements",
+      "url": "https://raw.githubusercontent.com/ossf/s2c2f/d0f0a7fbbc6cc6cb6a248cbc9e98c3d8cf3b189a/specification/framework.md",
+      "status": "OpenSSF Community Specification",
+      "revision": "Version 1.1, commit d0f0a7fbbc6c (2025-05-26)",
       "checked": "2026-10-06"
     }
   ]

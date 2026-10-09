@@ -1,30 +1,27 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. The Privacy Framework Core states outcomes rather than requirements, so these are the defining rules and the Subcategory outcome statements quoted as written (only line breaks and hyphenation from PDF layout were joined). The Privacy Framework 1.1 concept paper in Sources is a draft for discussion and has no Core to quote. Apply the ones that match the role. Each is labelled with its Subcategory identifier, or with the section for narrative text.
 
-## Privacy Framework 1.0
+## Privacy Framework 1.0 (NIST CSWP 01162020)
 
 Source: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf
 
-For more than two decades, the Internet and associated information technologies have driven
-
-- **document.** Like building a house, where homeowners make layout and design choices while relying on a well-engineered foundation, privacy protection should allow for individual choices, as long as effective privacy risk mitigations are already engineered into products and services.
-- **document.** When selecting Tiers, an organization should consider its Target Profile(s) and how achievement may be supported or hampered by its current risk management practices, the degree of integration of privacy risk into its enterprise risk management portfolio, its data
-- **document.** Once an organization can identify the likelihood of any given problem arising from the data processing, which the Privacy Framework refers to as a problematic data action, it can assess the impact should the problematic data action occur.
-- **document.** Rather, the Functions should be performed concurrently and continuously to form or enhance an operational culture that addresses the dynamic nature of privacy risk.
-- **document.** The variety of ways in which the Privacy Framework can be used by organizations should discourage the notion of “compliance with the Privacy Framework” as a uniform or externally referenceable concept.
-- **document.** The privacy outcomes determined by using the Privacy Framework should then serve as a basis for ongoing operation of the system.
-- **document.** For example, if a device is being purchased for environmental monitoring of a forest, manageability may be important to support capabilities for minimizing the processing of data about people using the forest and should drive a manufacturer evaluation against applicable Subcategories in the Core (e.g., CT.DP-P4: system or device configurations permit selective collection or disclosure of data elements).
-- **document.** the objective should be to make the best buying decision among multiple suppliers, given a carefully determined list of privacy requirements.
-
-## Privacy Framework 1.1
-
-Source: https://www.nist.gov/system/files/documents/2024/06/18/Privacy%20Framework%201.1%20Concept%20Paper%20%286.18.24%29.pdf
-
-This Concept Paper supports updating the NIST Privacy Framework to Version 1.1. It introduces
-
-- **document.** If not, are there additional focus areas NIST should consider?
-- **document.** Are there other principles or approaches that NIST should consider to increase the efficacy of using the NIST Privacy Framework and Cybersecurity Framework together?
-- **document.** • Apart from addressing alignment between the Privacy Framework and Cybersecurity Framework, are there other updates NIST should make to ensure the Privacy Framework remains responsive to current privacy risk management needs?
-- **document.** To the extent that the CSF 2.0 Subcategory is in a new CSF 2.0 Category, NIST is also interested in whether a similar new PF 1.1 Category is necessary, or whether the new PF 1.1 Subcategory should simply be added to an existing, analogous Category where feasible.
-- **document.** ” This proposal follows the rationale that PF 1.1 revisions should seek to maximize alignment with CSF 2.0 unless there are functional privacy reasons not to do so (see section 3.1 above for a functional privacy example).
+- **§ 2.0.** Rather, the Functions should be performed concurrently and continuously to form or enhance an operational culture that addresses the dynamic nature of privacy risk.
+- **§ 3.0.** The variety of ways in which the Privacy Framework can be used by organizations should discourage the notion of "compliance with the Privacy Framework" as a uniform or externally referenceable concept.
+- **ID.IM-P4.** Data actions of the systems/products/services are inventoried.
+- **ID.IM-P8.** Data processing is mapped, illustrating the data actions and associated data elements for systems/products/services, including components; roles of the component owners/operators; and interactions of individuals or third parties with the systems/products/services.
+- **ID.RA-P2.** Data analytic inputs and outputs are identified and evaluated for bias.
+- **ID.RA-P3.** Potential problematic data actions and associated problems are identified.
+- **ID.DE-P3.** Contracts with data processing ecosystem parties are used to implement appropriate measures designed to meet the objectives of an organization's privacy program.
+- **GV.PO-P5.** Legal, regulatory, and contractual requirements regarding privacy are understood and managed.
+- **GV.MT-P7.** Policies, processes, and procedures for receiving, tracking, and responding to complaints, concerns, and questions from individuals about organizational privacy practices are established and in place.
+- **CT.PO-P1.** Policies, processes, and procedures for authorizing data processing (e.g., organizational decisions, individual consent), revoking authorizations, and maintaining authorizations are established and in place.
+- **CT.DM-P4.** Data elements can be accessed for deletion.
+- **CT.DM-P5.** Data are destroyed according to policy.
+- **CT.DM-P8.** Audit/log records are determined, documented, implemented, and reviewed in accordance with policy and incorporating the principle of data minimization.
+- **CT.DP-P2.** Data are processed to limit the identification of individuals (e.g., de-identification privacy techniques, tokenization).
+- **CT.DP-P4.** System or device configurations permit selective collection or disclosure of data elements.
+- **CM.AW-P4.** Records of data disclosures and sharing are maintained and can be accessed for review or transmission/disclosure.
+- **CM.AW-P7.** Impacted individuals and organizations are notified about a privacy breach or event.
+- **PR.DS-P2.** Data-in-transit are protected.
+- **PR.DS-P5.** Protections against data leaks are implemented.

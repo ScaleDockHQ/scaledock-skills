@@ -1,48 +1,26 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id                     | Line                        | Status  | Revision                                                                  | Posture | Publisher                |
-| ---------------------- | --------------------------- | ------- | ------------------------------------------------------------------------- | ------- | ------------------------ |
-| `wasi-0.2.12`          | WASI 0.2.12                 | current | WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)               |         | Specification 2026-10-06 |
-| `wasi-0.3.1-preview`   | WASI 0.3.1                  | preview | WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)                | track   | Specification 2026-10-06 |
-| `wasi-component-model` | WebAssembly Component Model | current | Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06) |         | Explainer 2026-10-06     |
+| Id                     | Line                        | Status  | Revision                                              | Posture | Summary                                                                                                                                                                                      |
+| ---------------------- | --------------------------- | ------- | ----------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `wasi-0.2.12`          | WASI 0.2.12                 | current | v0.2.12 (released 2026-06-02), main at commit 90105ff |         | Latest 0.2.x point release (WASI Preview 2): wasi:io, random, clocks, sockets, filesystem, cli and http at @0.2.12, with streams and pollables from wasi:io.                                 |
+| `wasi-0.3.1-preview`   | WASI 0.3.1                  | preview | v0.3.1 (released 2026-08-11), main at commit 90105ff  | track   | WASI Preview 3, which the WASI README calls the current preview: drops wasi:io for native Component Model async, future and stream, and requires the map and implements features from 0.3.1. |
+| `wasi-component-model` | WebAssembly Component Model | current | main at commit a25fc0b, 2026-09-28                    |         | The Component Model explainer and WIT format; a living design with emoji-gated features instead of numbered releases.                                                                        |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### WASI 0.2.12
-
-- Publisher status on 2026-10-06: Specification (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.2.12/Overview.md
-- Revision token: WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)
-
-### WASI 0.3.1
-
-- Publisher status on 2026-10-06: Specification (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.3.1/Overview.md
-- Revision token: WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)
-
-### WebAssembly Component Model
-
-- Publisher status on 2026-10-06: Explainer (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/WebAssembly/component-model/main/design/mvp/Explainer.md
-- Revision token: Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06)
+WASI ships point releases on a schedule: 0.2.x and 0.3.x are each pinned at their latest release in the WASI repository. Package versions in WIT follow the spec version (for example `wasi:http@0.2.12`). The Component Model has no release numbers; its features are gated by emoji in the explainer, and WASI 0.3.x lists which gates it requires.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview: WASI 0.3.1
-
-`wasi-0.3.1-preview` is a Specification dated 2026-10-06, pinned at https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.3.1/Overview.md. Posture: track. Do not emit it. Read it to see what the publisher is changing. When it becomes a Recommendation, make it current and move the previous current line to supported or legacy.
+From WASI 0.2 to 0.3: replace wasi:io streams and pollables with Component Model `async` functions and `stream`/`future` types, and make sure the runtime and toolchain support every gate that the 0.3.1 Overview lists (🔀 async, 🗺️ map, 🏷️ implements). WASI 0.1 (Preview 1, witx) is not a target of this skill; move such modules to a 0.2 world.

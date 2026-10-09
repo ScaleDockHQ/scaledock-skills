@@ -1,6 +1,6 @@
 # apple-app-site-association
 
-An agent skill for apple-app-site-association.
+An agent skill for apple-app-site-association: associating an app with a website.
 
 ## Install
 
@@ -8,12 +8,12 @@ An agent skill for apple-app-site-association.
 npx skills add ScaleDockHQ/scaledock-skills --skill apple-app-site-association
 ```
 
-Then ask the agent to apply apple-app-site-association.
+Then ask your agent to apply apple-app-site-association.
 
 ## What it covers
 
-- when associating an app with a website
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The `apple-app-site-association` file is the JSON file a website serves at `/.well-known/apple-app-site-association` to associate its domain with Apple apps for universal links, shared web credentials, Handoff and App Clips. Apple documents it in the Xcode and Bundle Resources documentation; this skill quotes those pages, read from Apple's documentation JSON.
+- Apple publishes this as developer documentation, not as a versioned specification. The pages are JavaScript-rendered; the pins are the documentation JSON that backs them.
 
 ## Versions
 
@@ -27,7 +27,11 @@ Then ask the agent to apply apple-app-site-association.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [apple-app-site-association](https://developer.apple.com/documentation/xcode/supporting-associated-domains): Documentation, Associated domains, fetched 2026-10-06 (Documentation, 2026-10-06).
+- [Supporting associated domains](https://developer.apple.com/tutorials/data/documentation/xcode/supporting-associated-domains.json): Apple Developer Documentation, Apple Developer Documentation JSON, read 2026-10-06.
+- [applinks.Details.Components](https://developer.apple.com/tutorials/data/documentation/bundleresources/applinks/details-swift.dictionary/components-swift.dictionary.json): Apple Developer Documentation, Apple Developer Documentation JSON, read 2026-10-06.
+- [applinks.Defaults](https://developer.apple.com/tutorials/data/documentation/bundleresources/applinks/defaults-swift.dictionary.json): Apple Developer Documentation, Apple Developer Documentation JSON, read 2026-10-06.
+- [Associated Domains Entitlement](https://developer.apple.com/tutorials/data/documentation/bundleresources/entitlements/com.apple.developer.associated-domains.json): Apple Developer Documentation, Apple Developer Documentation JSON, read 2026-10-06.
+- [Supporting universal links in your app](https://developer.apple.com/tutorials/data/documentation/xcode/supporting-universal-links-in-your-app.json): Apple Developer Documentation, Apple Developer Documentation JSON, read 2026-10-06.
 
 ## License
 

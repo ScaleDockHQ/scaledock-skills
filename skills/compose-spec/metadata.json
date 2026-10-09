@@ -1,23 +1,93 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Compose specification. Compose file is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the Compose Specification from the compose-spec/compose-spec repository. Requirements are quotes from its services, networks, volumes, interpolation and merge chapters.",
   "versions": [
     {
       "id": "compose-spec",
       "label": "Compose file",
       "status": "current",
-      "revision": "Compose file reference, fetched 2026-10-06 (Reference, 2026-10-06)"
+      "revision": "main at commit 914ec15, 2026-09-17"
     }
   ],
   "sources": [
     {
-      "title": "Compose file",
-      "url": "https://docs.docker.com/compose/compose-file/",
-      "status": "Reference",
-      "revision": "Compose file reference, fetched 2026-10-06 (Reference, 2026-10-06)",
+      "title": "Compose Specification: application model",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/02-model.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: the Compose file",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/03-compose-file.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: version and name",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/04-version-and-name.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: services",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/05-services.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: networks",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/06-networks.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: volumes",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/07-volumes.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: extensions",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/11-extension.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: interpolation",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/12-interpolation.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: merge and override",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/13-merge.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: include",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/14-include.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Compose Specification: profiles",
+      "url": "https://raw.githubusercontent.com/compose-spec/compose-spec/914ec15d1fa498969c0df5c1d672306db3256089/15-profiles.md",
+      "status": "Specification",
+      "revision": "main at commit 914ec15, 2026-09-17",
       "checked": "2026-10-06"
     }
   ]

@@ -1,23 +1,86 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP ML Top 10. OWASP ML Top 10 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the OWASP Machine Learning Security Top Ten 2023. Requirements quote each risk's description and its prevention controls from the project's GitHub repository at a pinned commit.",
   "versions": [
     {
       "id": "ml-top-10",
       "label": "OWASP ML Top 10",
       "status": "current",
-      "revision": "OWASP ML Security Top 10, fetched 2026-10-06 (Project, 2026-10-06)"
+      "revision": "2023 edition, Commit b3addcd63769 (2026-09-30)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP ML Top 10",
-      "url": "https://owasp.org/www-project-machine-learning-security-top-ten/",
-      "status": "Project",
-      "revision": "OWASP ML Security Top 10, fetched 2026-10-06 (Project, 2026-10-06)",
+      "title": "ML01:2023 Input Manipulation Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML01_2023-Input_Manipulation_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML02:2023 Data Poisoning Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML02_2023-Data_Poisoning_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML03:2023 Model Inversion Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML03_2023-Model_Inversion_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML04:2023 Membership Inference Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML04_2023-Membership_Inference_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML05:2023 Model Theft",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML05_2023-Model_Theft.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML06:2023 AI Supply Chain Attacks",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML06_2023-AI_Supply_Chain_Attacks.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML07:2023 Transfer Learning Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML07_2023-Transfer_Learning_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML08:2023 Model Skewing",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML08_2023-Model_Skewing.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML09:2023 Output Integrity Attack",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML09_2023-Output_Integrity_Attack.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "ML10:2023 Model Poisoning",
+      "url": "https://raw.githubusercontent.com/OWASP/www-project-machine-learning-security-top-10/b3addcd63769cf3176c1ac75ea9a21a6a7e0241d/docs/ML10_2023-Model_Poisoning.md",
+      "status": "OWASP Project document",
+      "revision": "Commit b3addcd63769 (2026-09-30)",
       "checked": "2026-10-06"
     }
   ]

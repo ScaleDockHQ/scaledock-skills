@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id      | Line  | Status  | Revision                                                            | Posture | Publisher                |
-| ------- | ----- | ------- | ------------------------------------------------------------------- | ------- | ------------------------ |
-| `reuse` | REUSE | current | REUSE specification, fetched 2026-10-06 (Specification, 2026-10-06) |         | Specification 2026-10-06 |
+| Id      | Line  | Status  | Revision                                               | Posture | Summary                                                                            |
+| ------- | ----- | ------- | ------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------- |
+| `reuse` | REUSE | current | Version 3.3, 2024-11-14 (reuse-website commit 82e32ee) |         | REUSE Specification 3.3, with `REUSE.toml` as the bulk method and DEP5 deprecated. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### REUSE
-
-- Publisher status on 2026-10-06: Specification (2026-10-06).
-- Pinned text: https://reuse.software/spec/
-- Revision token: REUSE specification, fetched 2026-10-06 (Specification, 2026-10-06)
+Earlier REUSE Specification versions (1.2, 2.0, 3.0, 3.2) are published alongside 3.3 on the website. Version 3.3 is the one reuse.software/spec/ redirects to.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From a project that uses `.reuse/dep5`: move each paragraph into an `[[annotations]]` table in a `REUSE.toml` file at the project root, then delete `.reuse/dep5`. DEP5 is deprecated in 3.3.

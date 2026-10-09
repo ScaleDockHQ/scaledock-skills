@@ -1,6 +1,6 @@
 # citation-cff
 
-An agent skill for Citation File Format.
+An agent skill for Citation File Format: writing CITATION.cff files for software and datasets.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Citation File Format.
 npx skills add ScaleDockHQ/scaledock-skills --skill citation-cff
 ```
 
-Then ask the agent to apply Citation File Format.
+Then ask your agent to apply Citation File Format.
 
 ## What it covers
 
-- when writing a CITATION.cff file
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The Citation File Format (CFF) schema version 1.2.0 from the citation-file-format project: the file name and structure, the top-level keys, credit redirection and the reusable definitions, read from the schema guide at the 1.2.0 release tag.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply Citation File Format.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Citation File Format](https://citation-file-format.github.io/): Specification, Citation File Format, fetched 2026-10-06 (Specification, 2026-10-06).
+- [Guide to Citation File Format schema version 1.2.0](https://raw.githubusercontent.com/citation-file-format/citation-file-format/396f738fb025b1d8acdb02a56ffc923f95dc8999/schema-guide.md): Release, CFF 1.2.0 (commit 396f738, released 2021-08-09).
 
 ## License
 

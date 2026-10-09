@@ -1,34 +1,24 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id    | Line                    | Status  | Revision                                                                         | Posture | Publisher                |
-| ----- | ----------------------- | ------- | -------------------------------------------------------------------------------- | ------- | ------------------------ |
-| `gpp` | Global Privacy Platform | current | GPP consent string specification, fetched 2026-10-06 (Specification, 2026-10-06) |         | Specification 2026-10-06 |
+| Id    | Line                    | Status  | Revision                                                          | Posture | Summary                                                                                                       |
+| ----- | ----------------------- | ------- | ----------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| `gpp` | Global Privacy Platform | current | GPP String version 1 and CMP API 1.1, commit 03fdf03 (2026-08-06) |         | GPP String version 1 (header type 3) with discrete sections; CMP API 1.1 with callback-only `__gpp` commands. |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### Global Privacy Platform
-
-- Publisher status on 2026-10-06: Specification (2026-10-06).
-- Pinned text: https://raw.githubusercontent.com/InteractiveAdvertisingBureau/Global-Privacy-Platform/main/Core/Consent%20String%20Specification.md
-- Revision token: GPP consent string specification, fetched 2026-10-06 (Specification, 2026-10-06)
+The GPP String header carries version 1; the Consent String Specification is document version 1.0 (last updated 3 November 2023). The CMP API is version 1.1 (June 2023), which removed return values in favour of callbacks and dropped the `getGPPData` command. Section versions are set by each section's own specification.
 
 ## Upgrading
 
-There is no older line to upgrade from.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From CMP API 1.0 to 1.1: read results only from the callback, because 1.1 removed return values, and replace `getGPPData` with `ping`, `getSection` and `getField`.

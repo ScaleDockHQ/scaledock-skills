@@ -12,7 +12,7 @@ Then ask the agent to apply EN 301 549.
 
 ## What it covers
 
-- when applying European ICT accessibility requirements
+- EN 301 549 conformance and clause requirements: functional performance criteria, hardware, two-way communication, video, web content, non-web documents and software, and product information.
 - The version lines in the table below, pinned to the revisions in `metadata.json`.
 
 ## Versions

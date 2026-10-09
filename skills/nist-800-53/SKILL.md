@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-53
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+NIST Special Publication 800-53 Revision 5, Security and Privacy Controls for Information Systems and Organizations: a catalog of security and privacy controls organized in 20 families, each control stated as an outcome with organization-defined parameters.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when selecting security and privacy controls.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: organization selecting, tailoring and implementing security and privacy controls for a system, or an assessor checking them.
 - Target version: SP 800-53 Rev 5 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, OMB Director, or any other federal official."
-3. **document.** "5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS _________________________________________________________________________________________________ vi This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5 RISK MANAGEMENT Organizations must exercise due diligence in managing information security and privacy risk."
-4. **document.** "critical infrastructure is outpacing efforts to reduce pervasive vulnerabilities, so that for the next decade at least the United States must lean significantly on deterrence to address the cyber threat posed by the most capable U.S."
-5. **document.** "Prologue “…Through the process of risk management, leaders must consider risk to US interests from adversaries using cyberspace to their advantage and from our own efforts to employ the global nature of cyberspace to achieve objectives in military, intelligence, and business operations… “ “…For operational plans development, the combination of threats, vulnerabilities, and impacts must be…"
-6. **document.** "System designers need to account for individuals as stakeholders in the overall development of the solution.…Designing for privacy must connect individuals’ privacy desires with system requirements and controls in a way that effectively bridges the aspirations with development….” THE NATIONAL PRIVACY RESEARCH STRATEGY NATIONAL SCIENCE AND TECHNOLOGY COUNCIL, NETWORKING AND INFORMATION TECHNOLOGY…"
-7. **document.** "Organizations should answer several key questions when addressing information security and privacy controls: • What security and privacy controls are needed to satisfy security and privacy requirements and to adequately manage mission/business risks or risks to individuals?"
-8. **document.** "It is important that responsible officials understand the security and privacy risks that could adversely affect organizational operations and assets, individuals, other organizations, and the Nation.9 These officials must also understand the current status of their security and privacy programs and the controls planned or in place to protect information, information systems, and organizations in…"
+1. **AC-6.** "Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks."
+2. **IA-2(1).** "Implement multi-factor authentication for access to privileged accounts."
+3. **SC-8.** "Protect the [Selection (one or more): confidentiality; integrity] of transmitted information."
+4. **SC-28.** "Protect the [Selection (one or more): confidentiality; integrity] of the following information at rest: [Assignment: organization-defined information at rest]."
+5. **SI-2.** "Install security-relevant software and firmware updates within [Assignment: organization-defined time period] of the release of the updates; and"
 
 ## Workflow
 
@@ -51,6 +48,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Every organization-defined parameter (`[Assignment: ...]`, `[Selection: ...]`) in an applied control has a recorded value.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index

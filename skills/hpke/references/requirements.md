@@ -1,11 +1,32 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published RFC text, quoted as written (only line breaks and page breaks from the plain-text layout were joined). Apply the ones that match the role. Each is labelled with the RFC and section it comes from.
 
 ## RFC 9180 Hybrid Public Key Encryption
 
 Source: https://www.rfc-editor.org/rfc/rfc9180.html
 
-This document describes a scheme for hybrid public key encryption (HPKE). This scheme provides a variant of public key encryption of arbitrary-sized plaintexts for a recipient public key. It also includes three authenticated variants, including one that authenticates possession of a pre-shared key and two optional ones that authenticate possession of a key encapsulation mechanism (KEM) private key. HPKE works for any combination of an asymmetric KEM, key derivation function (KDF), and authenticated encryption with additional data (AEAD) encryption function. Some authenticated variants may not be supported by all KEMs. We provide instantiations of the scheme using widely used and efficient pr
-
-- **abstract.** This document describes a scheme for hybrid public key encryption (HPKE). This scheme provides a variant of public key encryption of arbitrary-sized plaintexts for a recipient public key. It also includes three authenticated variants, including one that authenticates possession of a pre-shared key and two optional ones that authenticate possession of a key encapsulation mechanism (KEM) private key. HPKE works for any combination of an asymmetric KEM, key derivation function (KDF), and authenticated encryption with additional data (AEAD) encryption function. Some authenticated variants may not be supported by all KEMs. We provide instantiations of the scheme using widely used and efficient pr
+- **RFC 9180 § 4.** If used inside a KEM algorithm, suite_id MUST start with "KEM" and identify this KEM algorithm; if used in the remainder of HPKE, it MUST start with "HPKE" and identify the entire ciphersuite in use.
+- **RFC 9180 § 4.1.** Implementations MUST make sure to use the constants (Nh) and function calls (LabeledExtract and LabeledExpand) of the appropriate KDF when implementing DHKEM.
+- **RFC 9180 § 4.1.** Senders and recipients MUST validate KEM inputs and outputs as described in Section 7.1.
+- **RFC 9180 § 5.1.** The psk and psk_id fields MUST appear together or not at all.
+- **RFC 9180 § 9.5.** In the PSK and AuthPSK modes, the PSK MUST have at least 32 bytes of entropy and SHOULD be of length Nh bytes or longer.
+- **RFC 9180 § 5.2.** Implementations MAY use a sequence number that is shorter than the nonce length (padding on the left with zero), but MUST raise an error if the sequence number overflows.
+- **RFC 9180 § 5.2.** The sender's context MUST NOT be used for decryption. Similarly, the recipient's context MUST NOT be used for encryption.
+- **RFC 9180 § 5.2.** If ContextS.Seal() or ContextR.Open() would cause the seq field to overflow, then the implementation MUST fail with an error.
+- **RFC 9180 § 7.1.2.** If the private key is an integer outside the range [0, order-1], where order is the order of the curve being used, the private key MUST be reduced to its representative in [0, order-1] before being serialized.
+- **RFC 9180 § 7.1.2.** The SerializePrivateKey() function MUST clamp its output and the DeserializePrivateKey() function MUST clamp its input, where _clamping_ refers to the bitwise operations performed on k in the decodeScalar25519() and decodeScalar448() functions defined in Section 5 of [RFC7748].
+- **RFC 9180 § 7.1.2.** To catch invalid keys early on, implementors of DHKEMs SHOULD check that deserialized private keys are not equivalent to 0 (mod order), where order is the order of the DH group.
+- **RFC 9180 § 7.1.3.** For a given KEM, the ikm parameter given to DeriveKeyPair() SHOULD have length at least Nsk, and SHOULD have at least Nsk bytes of entropy.
+- **RFC 9180 § 7.1.4.** The following public keys are subject to validation if the group requires public key validation: the sender MUST validate the recipient's public key pkR; the recipient MUST validate the ephemeral public key pkE; in authenticated modes, the recipient MUST validate the sender's static public key pkS.
+- **RFC 9180 § 7.1.4.** For P-256, P-384, and P-521, senders and recipients MUST perform partial public key validation on all public key inputs, as defined in Section 5.6.2.3.4 of [keyagreement].
+- **RFC 9180 § 7.1.4.** Additionally, senders and recipients MUST ensure the Diffie-Hellman shared secret is not the point at infinity.
+- **RFC 9180 § 7.1.4.** For X25519 and X448, public keys and Diffie-Hellman outputs MUST be validated as described in [RFC7748].
+- **RFC 9180 § 7.1.4.** In particular, recipients MUST check whether the Diffie-Hellman shared secret is the all-zero value and abort if so.
+- **RFC 9180 § 9.1.1.** Applications that require resistance against key-compromise impersonation SHOULD take extra steps to prevent this attack.
+- **RFC 9180 § 9.2.3.** An ikm input to DeriveKeyPair() (Section 7.1.3) MUST NOT be reused elsewhere, in particular not with DeriveKeyPair() of a different KEM.
+- **RFC 9180 § 9.2.3.** The randomness used in Encap() and AuthEncap() to generate the KEM shared secret or its encapsulation MUST NOT be reused elsewhere.
+- **RFC 9180 § 9.7.1.** The primary requirement that HPKE imposes on applications is the requirement that ciphertexts MUST be presented to ContextR.Open() in the same order in which they were generated by ContextS.Seal().
+- **RFC 9180 § 9.7.1.** Whatever information is used to determine the ordering of HPKE-encrypted messages SHOULD be included in the associated data passed to ContextS.Seal() and ContextR.Open().
+- **RFC 9180 § 9.7.1.** Applications MUST be able to detect when a message has been lost.
+- **RFC 9180 § 9.7.1.** When an unrecoverable loss is detected, the application MUST discard any associated HPKE context.

@@ -1,23 +1,37 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers CISA KEV. CISA KEV is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the CISA KEV catalog. Requirements quote the KEV JSON schema at a pinned kev-data commit, BOD 26-04 (which revoked BOD 22-01 on June 10, 2026), and the BOD 22-01 FAQ for the inclusion criteria that BOD 26-04 keeps unchanged.",
   "versions": [
     {
       "id": "cisa-kev",
       "label": "CISA KEV",
       "status": "current",
-      "revision": "CISA KEV catalog, fetched 2026-10-06 (Catalog, 2026-10-06)"
+      "revision": "KEV schema at kev-data Commit b244ed1a6403 (2026-10-04); BOD 26-04 (June 10, 2026)"
     }
   ],
   "sources": [
     {
-      "title": "CISA KEV",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
-      "status": "Catalog",
-      "revision": "CISA KEV catalog, fetched 2026-10-06 (Catalog, 2026-10-06)",
+      "title": "KEV catalog JSON schema (cisagov/kev-data)",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/b244ed1a640323565afba92100d7308d51c6614e/known_exploited_vulnerabilities_schema.json",
+      "status": "CISA data schema",
+      "revision": "Commit b244ed1a6403 (2026-10-04)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "BOD 26-04: Prioritizing Security Updates Based on Risk",
+      "url": "https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk",
+      "status": "Binding Operational Directive",
+      "revision": "Issued June 10, 2026",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "BOD 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities (Revoked)",
+      "url": "https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities",
+      "status": "Binding Operational Directive (revoked)",
+      "revision": "Issued November 3, 2021; revoked June 10, 2026",
       "checked": "2026-10-06"
     }
   ]

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Basic Grammar and Conventions The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [ RFC2119 ]."
-2. **document.** "Lines of text SHOULD NOT be longer than 75 octets, excluding the line"
-3. **document.** "Long content lines SHOULD be split into a multiple line representations using a line "folding" technique."
-4. **document.** "Desruisseaux Standards Track [Page 9] RFC 5545 iCalendar September 2009 When parsing a content line, folded lines MUST first be unfolded according to the unfolding procedure described above."
-5. **document.** "The following notation defines the lines of content in an iCalendar object: contentline = name *(";" param ) ":" value CRLF ; This ABNF is just a general definition for an initial parsing ; of the content line into its property name, parameter list, ; and value string ; When parsing a content line, folded lines MUST first ; be unfolded according to the unfolding procedure ; described above."
-6. **document.** "When generating a content line, lines ; longer than 75 octets SHOULD be folded according to ; the folding procedure described above."
-7. **document.** "Values in a list of values MUST be separated by a COMMA character."
-8. **document.** "These structured property values MUST have their value parts separated by a SEMICOLON character."
+1. **RFC 5545 § 3.1.** "Lines of text SHOULD NOT be longer than 75 octets, excluding the line break."
+2. **RFC 5545 § 3.1.** "When parsing a content line, folded lines MUST first be unfolded according to the unfolding procedure described above."
+3. **RFC 5545 § 3.2.** "Applications MUST ignore x-param and iana-param values they don't recognize."
+4. **RFC 5545 § 3.3.5.** "The "TZID" property parameter MUST NOT be applied to DATE-TIME properties whose time values are specified in UTC."
+5. **RFC 5545 § 3.3.10.** "Compliant applications MUST accept rule parts ordered in any sequence, but to ensure backward compatibility with applications that pre-date this revision of iCalendar the FREQ rule part MUST be the first rule part specified in a RECUR value."
+6. **RFC 5545 § 3.3.11.** "A BACKSLASH character in a "TEXT" property value MUST be escaped with another BACKSLASH character."
+7. **RFC 5545 § 3.6.5.** "An individual "VTIMEZONE" calendar component MUST be specified for each unique "TZID" parameter value specified in the iCalendar object."
+8. **RFC 5545 § 3.8.4.7.** "The "UID" itself MUST be a globally unique identifier."
+9. **RFC 7265 § 3.1.** "When converting from iCalendar to jCal: First, iCalendar lines MUST be unfolded. Afterwards, any iCalendar escaping MUST be unescaped. Finally, JSON escaping, as described in Section 7 of [RFC7159], MUST be applied."
+10. **RFC 8984 § 3.** "A JSCalendar object is a JSON object [RFC8259], which MUST be valid I-JSON (a stricter subset of JSON) [RFC7493]."
+11. **RFC 8984 § 1.4.9.** "Implementations MUST reject a PatchObject in its entirety if any of its patches are invalid."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

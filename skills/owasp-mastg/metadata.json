@@ -1,23 +1,142 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OWASP MASTG. OWASP MASTG is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers OWASP MASTG v2.0.0. Requirements quote the evaluation criteria of MASTG atomic tests across storage, crypto, network, authentication, platform, code, resilience and privacy, from the project's GitHub repository at the v2.0.0 tag.",
   "versions": [
     {
       "id": "mastg",
       "label": "OWASP MASTG",
       "status": "current",
-      "revision": "OWASP MASTG, fetched 2026-10-06 (Guide, 2026-10-06)"
+      "revision": "Tag v2.0.0 (2026-06-30)"
     }
   ],
   "sources": [
     {
-      "title": "OWASP MASTG",
-      "url": "https://mas.owasp.org/MASTG/",
-      "status": "Guide",
-      "revision": "OWASP MASTG, fetched 2026-10-06 (Guide, 2026-10-06)",
+      "title": "MASTG-TEST-0200: Files Written to External Storage (Android, MASWE-0007)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-STORAGE/MASTG-TEST-0200.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0207: Runtime Storage of Unencrypted Data in the App Sandbox (Android, MASWE-0006)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-STORAGE/MASTG-TEST-0207.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0216: Sensitive Data Not Excluded From Backup (Android, MASWE-0004)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-STORAGE/MASTG-TEST-0216.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0300: References to APIs for Storing Unencrypted Data in Private Storage (iOS, MASWE-0006)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/ios/MASVS-STORAGE/MASTG-TEST-0300.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0297: Sensitive Data Exposure Through Logging APIs (iOS, MASWE-0001)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/ios/MASVS-STORAGE/MASTG-TEST-0297.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0204: Insecure Random API Usage (Android, MASWE-0027)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-CRYPTO/MASTG-TEST-0204.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0208: Insufficient Key Sizes (Android, MASWE-0009)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-CRYPTO/MASTG-TEST-0208.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0233: Hardcoded HTTP URLs (Android, MASWE-0050)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-NETWORK/MASTG-TEST-0233.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0234: Missing Implementation of Server Hostname Verification with SSLSockets (Android, MASWE-0052)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-NETWORK/MASTG-TEST-0234.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0242: Missing Certificate Pinning in Network Security Configuration (Android, MASWE-0047)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-NETWORK/MASTG-TEST-0242.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0396: References to URLSessionDelegate Bypassing Certificate Validation (iOS, MASWE-0052)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/ios/MASVS-NETWORK/MASTG-TEST-0396.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0326: References to APIs Allowing Fallback to Non-Biometric Authentication (Android, MASWE-0045)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-AUTH/MASTG-TEST-0326.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0270: References to APIs Detecting Biometric Enrollment Changes (iOS, MASWE-0046)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/ios/MASVS-AUTH/MASTG-TEST-0270.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0226: Debuggable Flag Enabled in the AndroidManifest (Android, MASWE-0067)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-RESILIENCE/MASTG-TEST-0226.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0225: Usage of Insecure APK Signature Key Size (Android, MASWE-0104)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-RESILIENCE/MASTG-TEST-0225.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0324: References to Root Detection Mechanisms (Android, MASWE-0097)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-RESILIENCE/MASTG-TEST-0324.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0338: References to Storage Integrity Check APIs (Android, MASWE-0105)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-RESILIENCE/MASTG-TEST-0338.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "MASTG-TEST-0206: Undeclared PII in Network Traffic Capture (Android, MASWE-0108)",
+      "url": "https://raw.githubusercontent.com/OWASP/owasp-mastg/v2.0.0/tests-beta/android/MASVS-PRIVACY/MASTG-TEST-0206.md",
+      "status": "OWASP Flagship Project guide",
+      "revision": "Tag v2.0.0 (2026-06-30)",
       "checked": "2026-10-06"
     }
   ]

@@ -1,22 +1,22 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers WASI. WASI 0.2.12 is current; WASI 0.3.1 is preview; WebAssembly Component Model is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers WASI 0.2.12 (current) and WASI 0.3.1 (preview) from WebAssembly/WASI, and the Component Model explainer and WIT format from WebAssembly/component-model. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "wasi-0.2.12",
       "label": "WASI 0.2.12",
       "status": "current",
-      "revision": "WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "v0.2.12 (released 2026-06-02), main at commit 90105ff",
       "family": "wasi"
     },
     {
       "id": "wasi-0.3.1-preview",
       "label": "WASI 0.3.1",
       "status": "preview",
-      "revision": "WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "v0.3.1 (released 2026-08-11), main at commit 90105ff",
       "posture": "track",
       "family": "wasi"
     },
@@ -24,30 +24,37 @@
       "id": "wasi-component-model",
       "label": "WebAssembly Component Model",
       "status": "current",
-      "revision": "Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06)",
+      "revision": "main at commit a25fc0b, 2026-09-28",
       "family": "component-model"
     }
   ],
   "sources": [
     {
-      "title": "WASI 0.2.12",
-      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.2.12/Overview.md",
-      "status": "Specification",
-      "revision": "WASI 0.2.12, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "title": "WASI Specification v0.2.12",
+      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/90105ffc2a4eed594909f9df2f473596500b49d2/specifications/wasi-0.2.12/Overview.md",
+      "status": "Released WASI version",
+      "revision": "v0.2.12 (released 2026-06-02), main at commit 90105ff",
       "checked": "2026-10-06"
     },
     {
-      "title": "WASI 0.3.1",
-      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/main/specifications/wasi-0.3.1/Overview.md",
-      "status": "Specification",
-      "revision": "WASI 0.3.1, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "title": "WASI Specification v0.3.1",
+      "url": "https://raw.githubusercontent.com/WebAssembly/WASI/90105ffc2a4eed594909f9df2f473596500b49d2/specifications/wasi-0.3.1/Overview.md",
+      "status": "WASI preview release",
+      "revision": "v0.3.1 (released 2026-08-11), main at commit 90105ff",
       "checked": "2026-10-06"
     },
     {
-      "title": "WebAssembly Component Model",
-      "url": "https://raw.githubusercontent.com/WebAssembly/component-model/main/design/mvp/Explainer.md",
-      "status": "Explainer",
-      "revision": "Component Model MVP explainer, fetched 2026-10-06 (Explainer, 2026-10-06)",
+      "title": "Component Model explainer",
+      "url": "https://raw.githubusercontent.com/WebAssembly/component-model/a25fc0b372dd21f07f0242c46e98bd0f1ea0c0e1/design/mvp/Explainer.md",
+      "status": "Component Model design (explainer)",
+      "revision": "main at commit a25fc0b, 2026-09-28",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "The `wit` format",
+      "url": "https://raw.githubusercontent.com/WebAssembly/component-model/a25fc0b372dd21f07f0242c46e98bd0f1ea0c0e1/design/mvp/WIT.md",
+      "status": "Component Model design (WIT)",
+      "revision": "main at commit a25fc0b, 2026-09-28",
       "checked": "2026-10-06"
     }
   ]

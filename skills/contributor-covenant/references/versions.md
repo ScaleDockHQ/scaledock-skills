@@ -1,46 +1,25 @@
 # Versions and upgrades
 
-Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the specification text of each line, listed in [Sources](../SKILL.md#sources). Statuses follow the publisher index read on 2026-10-06: the latest Recommendation is current, an earlier Recommendation is legacy unless a later phase names a law that still cites it, and a newer Working Draft or Candidate Recommendation is a preview.
+Read this when choosing a target version, reading a document written for an older line, upgrading, or deciding whether to use a preview. Sources: the pinned texts listed in [Sources](../SKILL.md#sources).
 
 ## Version lines
 
-| Id                         | Line                     | Status    | Revision                                                                   | Posture | Publisher                  |
-| -------------------------- | ------------------------ | --------- | -------------------------------------------------------------------------- | ------- | -------------------------- |
-| `contributor-covenant-3.0` | Contributor Covenant 3.0 | current   | Contributor Covenant 3.0, fetched 2026-10-06 (Code of conduct, 2026-10-06) |         | Code of conduct 2026-10-06 |
-| `contributor-covenant-2.1` | Contributor Covenant 2.1 | supported | Contributor Covenant 2.1, fetched 2026-10-06 (Code of conduct, 2026-10-06) |         | Code of conduct 2026-10-06 |
+| Id                         | Line                     | Status    | Revision                                      | Posture | Summary                                                                                                                            |
+| -------------------------- | ------------------------ | --------- | --------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `contributor-covenant-3.0` | Contributor Covenant 3.0 | current   | Version 3.0, release branch at commit 7255a28 |         | Current text: encouraged and restricted behaviors, reporting, and an enforcement ladder that pairs each consequence with a repair. |
+| `contributor-covenant-2.1` | Contributor Covenant 2.1 | supported | Version 2.1, release branch at commit 7255a28 |         | Previous text, still widely adopted: standards, enforcement responsibilities and the four-step Community Impact Guidelines.        |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
 ## Which version to use
 
-- Default to the current line of the relevant family.
+- Default to the current line.
 - Drop to a supported line only for a named consumer that cannot read the current one.
 - Treat a legacy document as input to an upgrade.
-- Emit nothing from a preview unless its posture is build and the user opted in.
+- Emit nothing from a preview unless its posture is build.
 
-## What changed
-
-### Contributor Covenant 3.0
-
-- Publisher status on 2026-10-06: Code of conduct (2026-10-06).
-- Pinned text: https://www.contributor-covenant.org/version/3/0/code_of_conduct/
-- Revision token: Contributor Covenant 3.0, fetched 2026-10-06 (Code of conduct, 2026-10-06)
-
-### Contributor Covenant 2.1
-
-- Publisher status on 2026-10-06: Code of conduct (2026-10-06).
-- Pinned text: https://www.contributor-covenant.org/version/2/1/code_of_conduct/
-- Revision token: Contributor Covenant 2.1, fetched 2026-10-06 (Code of conduct, 2026-10-06)
+Both texts are templates: the adopter fills in the reporting contact (and, in 3.0, its own enforcement process) before publishing. Adopt 3.0 for new projects; keep 2.1 only where a community has already adopted it and has not agreed to move.
 
 ## Upgrading
 
-### contributor-covenant-2.1 to contributor-covenant-3.0
-
-1. Treat documents that cite Contributor Covenant 2.1 (Contributor Covenant 2.1, fetched 2026-10-06 (Code of conduct, 2026-10-06)) as input.
-2. Re-read Contributor Covenant 3.0 at https://www.contributor-covenant.org/version/3/0/code_of_conduct/.
-3. Keep behavior that Contributor Covenant 3.0 still requires, and replace behavior that only Contributor Covenant 2.1 required.
-4. Record the target revision on the artifact.
-
-## Preview
-
-No preview line is listed. The pinned current text is the newest line this skill tracks.
+From 2.1 to 3.0: replace the file with the 3.0 text, fill in the 3.0 reporting placeholder (Reporting an Issue) and review the enforcement placeholder (Addressing and Repairing Harm). 3.0 replaces "Our Standards" with Encouraged Behaviors and Restricted Behaviors, and the 2.1 Community Impact Guidelines (Correction, Warning, Temporary Ban, Permanent Ban) with an enforcement ladder (Warning, Temporarily Limited Activities, Temporary Suspension, Permanent Ban) where each rung has an event, a consequence and a repair. Update the attribution to version 3.0.

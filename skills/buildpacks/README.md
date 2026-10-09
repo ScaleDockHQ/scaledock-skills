@@ -1,6 +1,6 @@
 # buildpacks
 
-An agent skill for Cloud Native Buildpacks.
+An agent skill for Cloud Native Buildpacks: implementing buildpacks, lifecycles and platforms.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Cloud Native Buildpacks.
 npx skills add ScaleDockHQ/scaledock-skills --skill buildpacks
 ```
 
-Then ask the agent to apply Cloud Native Buildpacks.
+Then ask your agent to apply Cloud Native Buildpacks.
 
 ## What it covers
 
-- when implementing a buildpack or platform
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The Cloud Native Buildpacks specifications from the Buildpacks project (CNCF): the Platform Interface Specification and the Buildpack Interface Specification, read from the buildpacks/spec repository.
 
 ## Versions
 
@@ -28,8 +27,8 @@ Then ask the agent to apply Cloud Native Buildpacks.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Buildpacks platform API](https://raw.githubusercontent.com/buildpacks/spec/main/platform.md): Specification, Buildpacks platform specification, fetched 2026-10-06 (Specification, 2026-10-06).
-- [Buildpack API](https://raw.githubusercontent.com/buildpacks/spec/main/buildpack.md): Specification, Buildpack specification, fetched 2026-10-06 (Specification, 2026-10-06).
+- [Platform Interface Specification](https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/platform.md): Specification, Platform API 0.15 (main at commit b745fcf, 2025-12-11).
+- [Buildpack Interface Specification](https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/buildpack.md): Specification, Buildpack API 0.12 (main at commit b745fcf, 2025-12-11).
 
 ## License
 

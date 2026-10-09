@@ -1,33 +1,37 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published text, quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with the nearest section, clause or article in the published document.
 
-## Buildpacks platform API
+## Buildpack Interface Specification (Buildpack API 0.12)
 
-Source: https://raw.githubusercontent.com/buildpacks/spec/main/platform.md
+Source: https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/buildpack.md
 
-A platform orchestrates a lifecycle to make buildpack functionality available to end-users such as application developers.
+- **Buildpack Interface.** The lifecycle MUST invoke executables in component buildpacks as described in the Phase sections.
+- **Execution Environments.** When the `CNB_EXEC_ENV` environment variable is not set, buildpacks MUST assume the default value of `production`.
+- **Layer Types.** The lifecycle MUST treat a layer with unset `types` as a `launch = false`, `build = false`, `cache = false` layer.
+- **Launch Layers.** The lifecycle MUST include each launch layer in the built OCI image.
+- **Phase #1: Detection, Process.** Image extensions MUST always be optional during detection.
+- **Phase #1: Detection, Process.** The selected group MUST be filtered to only include extensions and buildpacks with exit status zero.
+- **Phase #1: Detection, Process.** In order to make contributions to the Build Plan, a `/bin/detect` executable MUST write entries to `<plan>` in two sections: `requires` and `provides`.
+- **Phase #1: Detection, Order Resolution.** Order definitions for image extensions MUST NOT contain nested orders.
+- **Phase #3: Generation, Purpose.** The generation phase MUST NOT be run for Windows builds.
+- **Phase #5: Build, Process.** For each buildpack in the group in order, the lifecycle MUST execute `/bin/build`.
+- **Unmet Buildpack Plan Entries.** The lifecycle SHALL assume that all entries in the Buildpack Plan were satisfied by the buildpack unless the buildpack writes an entry with the given name to the `unmet` section of `build.toml`.
+- **Reusing Layers.** If the buildpack does not set `launch`, `build`, or `cache` under `[types]` in the restored `<layers>/<layer>.toml` the layer SHALL be ignored.
+- **buildpack.toml (TOML).** Buildpack authors MUST choose a globally unique ID, for example: "io.buildpacks.ruby".
+- **buildpack.toml (TOML), Order.** A buildpack reference inside of a `group` MUST contain an `id` and `version`. The `order` MUST include only buildpacks and MUST NOT include image extensions.
 
-- **document.** Platform API versions: - MUST be in form ` .
-- **document.** `or` `, where ` `is equivalent to` .0`- When` `is greater than`0`increments to` ` SHALL exclusively indicate additive changes ## Terminology #### CNB Terminology A **buildpack** refers to software compliant with the [Buildpack Interface Specification](buildpack.md).
-- **document.** The value MUST NOT contain the character `/` as it is reserved for future use.
-- **document.** The platform MUST ensure that: - The image config's `User` field is set to a non-root user with a writable home directory.
-- **document.** The platform SHOULD ensure that: - The image config's `Label` field has the label `io.buildpacks.base.maintainer` set to the name of the image maintainer.
-- **document.** The platform MUST ensure that: - The image config's `Env` field has the environment variable `PATH` set to a valid set of paths or explicitly set to empty (`PATH=`).
-- **document.** The platform SHOULD ensure that: - The image config's `User` field is set to a user with a **DIFFERENT** user [†](README.md#operating-system-conventions)UID/[‡](README.md#operating-system-conventions)SID as the build image.
-- **document.** ### Target Data For run images, the platform SHOULD ensure that: - The image config's `Label` field has the label `io.buildpacks.base.id` set to the target ID of the run image.
+## Platform Interface Specification (Platform API 0.15)
 
-## Buildpack API
+Source: https://raw.githubusercontent.com/buildpacks/spec/b745fcfd90d7139d6a04cca2878b47ec402be943/platform.md
 
-Source: https://raw.githubusercontent.com/buildpacks/spec/main/buildpack.md
-
-This document specifies the interface between a lifecycle program and one or more buildpacks.
-
-- **document.** - [build.toml (TOML) `bom` Array](#buildtoml-toml-bom-array) - [Build Plan (TOML) `requires.version` Key](#build-plan-toml-requiresversion-key) ## Buildpack API Version This document specifies Buildpack API version `0.12` Buildpack API versions: - MUST be in form ` .
-- **document.** `or` `, where ` `is equivalent to` .0`-` `and` `MUST only contain numbers (unsigned 64 bit integer) - When` `is greater than`0`increments to` `SHALL exclusively indicate additive changes ## Terminology ### CNB Terminology A **buildpack** is a directory containing a`buildpack.toml`.
-- **document.** They MUST be [resolvable](#order-resolution) into a collection of component buildpacks.
-- **document.** The lifecycle MUST invoke executables in component buildpacks as described in the Phase sections.
-- **document.** Buildpacks SHOULD adapt their behavior based on the `CNB_EXEC_ENV` environment variable during detection and build phases.
-- **document.** - A buildpack MAY mark processes as applicable only to specific execution environments - A buildpack MAY create layers that are specific to certain execution environments - A buildpack MAY use different build strategies depending on the execution environment When the `CNB_EXEC_ENV` environment variable is not set, buildpacks MUST assume the default value of `production`.
-- **document.** The value of `CNB_EXEC_ENV` MUST NOT contain the character `/` as it is reserved for future use.
-- **document.** When a platform builds an application with a different execution environment than was used in a previous build, the platform SHOULD NOT restore layers from the previous build's image.
+- **Rebase.** When layers are rebased, any app image metadata referencing to the original run image MUST be updated to reference to the new run image.
+- **Rebase.** To rebase an app image a platform MUST execute the `/cnb/lifecycle/rebaser` or perform an equivalent operation.
+- **restorer, Layer Restoration.** The lifecycle MUST use the provided `cache-dir` or `cache-image` to retrieve cache contents.
+- **creator, Inputs.** Running `creator` SHALL be equivalent to running `detector`, `analyzer`, `restorer`, `builder` and `exporter` in order with identical inputs where they are accepted, with the following exceptions.
+- **launcher, Execution.** The launcher MUST set the working directory for the start command to `<working-dir>`, or to `<app>` if `<working-dir>` is not specified.
+- **Registry Authentication.** The lifecycle MUST attempt to authenticate anonymously if no matching credentials are found.
+- **User-Provided Variables.** User-provided environment variables MUST be supplied by the platform as files in the `<platform>/env/` directory.
+- **User-Provided Variables.** Each file SHALL define a single environment variable, where the file name defines the key and the file contents define the value.
+- **Operator-Defined Variables.** Operator-provided environment variables MUST be supplied by the platform as files in the `<build-config>/env/` directory.
+- **`group.toml` (TOML).** `id`, `version`, and `api` MUST be present for each buildpack object in a group.

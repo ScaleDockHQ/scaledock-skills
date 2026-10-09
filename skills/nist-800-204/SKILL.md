@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST SP 800-204
 
-Walter Copan, NIST Director and Under Secretary of Commerce for Standards and Technology
+The NIST SP 800-204 series on microservices security: SP 800-204 security strategies (MS-SS-1 to MS-SS-13), SP 800-204A service mesh recommendations (SM-DR1 to SM-DR23), SP 800-204B ABAC for service meshes, SP 800-204C DevSecOps and SP 800-204D software supply chain security in CI/CD pipelines.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when securing microservices.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: architect or platform team securing a microservices application, its service mesh or its CI/CD pipelines.
 - Target version: SP 800-204 (default); SP 800-204A (default); SP 800-204B (default); SP 800-204C (default); SP 800-204D (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Nothing in this publication should be taken to contradict the standards and guidelines made mandatory and binding on federal agencies by the Secretary of Commerce under statutory authority."
-2. **document.** "Nor should these guidelines be interpreted as altering or superseding the existing authorities of the Secretary of Commerce, Director of the OMB, or any other federal official."
-3. **document.** "2.2 Microservices: Design Principles The design of a microservice is based on the following drivers [4]: • Each microservice must be managed, replicated, scaled, upgraded, and deployed independently of other microservices."
-4. **document.** "• Each microservice must have a single function and operate in a bounded context (i.e., have limited responsibility and dependence on other services)."
-5. **document.** "• All microservices should be designed for constant failure and recovery and must therefore be as stateless as possible."
-6. **document.** "NIST SP 800-204 SECURITY STRATEGIES FOR MICROSERVICES-BASED APPLICATION SYSTEMS 4 This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-204 • One should reuse existing trusted services (e.g., databases, caches, directories) for state"
-7. **document.** "• Scalability: applications must be highly scalable to maintain availability in the face of an increasing number of users and/or increased rate of usage from the existing user base."
-8. **document.** "• The microservice making the request must ensure that the request has been successfully delivered to the target microservice."
+1. **MS-SS-1.** "Authentication to microservices APIs that have access to sensitive data should not be done simply by using API keys."
+2. **MS-SS-4.** "Client to API gateway as well as Service to Service communication should take place after mutual authentication and be encrypted (e.g., using mutual TLS (mTLS) protocol)."
+3. **SM-DR2.** "The set of services that a service proxy can reach must be limited."
+4. **SM-DR15.** "Certificates used to identify microservices should not be signing certificates."
+5. **§ 5.1.1.** "The attestations must be cryptographically signed using a secure key."
 
 ## Workflow
 

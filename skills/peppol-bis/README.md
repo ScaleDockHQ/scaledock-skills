@@ -1,6 +1,6 @@
 # peppol-bis
 
-An agent skill for Peppol BIS Billing.
+An agent skill for Peppol BIS Billing: sending, receiving and validating Peppol invoices and credit notes.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for Peppol BIS Billing.
 npx skills add ScaleDockHQ/scaledock-skills --skill peppol-bis
 ```
 
-Then ask the agent to apply Peppol BIS Billing.
+Then ask your agent to apply Peppol BIS Billing.
 
 ## What it covers
 
-- when sending a Peppol invoice
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- Peppol BIS Billing 3.0 from OpenPeppol: the Core Invoice Usage Specification of EN 16931 that Peppol uses for invoices and credit notes in UBL, with its semantic data types, VAT and rounding rules and the PEPPOL-EN16931 transaction business rules, read from the published BIS document on docs.peppol.eu.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply Peppol BIS Billing.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [Peppol BIS Billing 3.0](https://docs.peppol.eu/poacc/billing/3.0/): Specification, Peppol BIS Billing 3.0, May 2026 release (Specification, 2026-10-06).
+- [Peppol BIS Billing 3.0](https://docs.peppol.eu/poacc/billing/3.0/bis/): Specification, Peppol BIS Billing 3.0, May 2026 release.
 
 ## License
 

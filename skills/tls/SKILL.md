@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.1.0"
+  version: "1.2.0"
   kind: standard
 ---
 
@@ -26,14 +26,16 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Conventions and Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [ RFC2119 ] [ RFC8174 ] when, and only when, they appear in all capitals, as shown here."
-2. **document.** "If (EC)DHE key establishment is in use, then the ServerHello contains a "key_share" extension with the server's ephemeral Diffie-Hellman share; the server's share MUST be in the same group as one of the client's shares."
-3. **document.** "Application Data MUST NOT be sent prior to sending the Finished message, except as specified in Section 2.3 ."
-4. **document.** "If no common cryptographic parameters can be negotiated, the server MUST abort the handshake with an appropriate alert."
-5. **document.** "When a client offers resumption via a PSK, it SHOULD also supply a "key_share" extension to the server to allow the server to decline resumption and fall back to a full handshake, if needed."
-6. **document.** "Rescorla Standards Track [Page 16] RFC 8446 TLS August 2018 When PSKs are provisioned out of band, the PSK identity and the KDF hash algorithm to be used with the PSK MUST also be provisioned."
-7. **document.** "A peer which receives a handshake message in an unexpected order MUST abort the handshake with an "unexpected_message" alert."
-8. **document.** "If there is no overlap between the received "supported_groups" and the groups supported by the server, then the server MUST abort the handshake with a "handshake_failure" or an "insufficient_security" alert."
+1. **RFC 9846 § 4.2.3.** "TLS 1.3 servers which negotiate TLS 1.2 or below in response to a ClientHello MUST set the last 8 bytes of their Random value specially in their ServerHello."
+2. **RFC 9846 § 4.3.8.** "Clients and Servers MUST NOT reuse a key share for multiple connections."
+3. **RFC 9846 § 4.5.2.** "The receiver of a CertificateVerify message MUST verify the signature field."
+4. **RFC 9846 § 4.5.3.** "Recipients of Finished messages MUST verify that the contents are correct and if incorrect MUST terminate the connection with a "decrypt_error" alert."
+5. **RFC 9846 § 6.** "Upon receiving an error alert, the TLS implementation SHOULD indicate an error to the application and MUST NOT allow any further data to be sent or received on the connection."
+6. **RFC 9846 § 8.** "The server MUST ensure that any instance of it (be it a machine, a thread, or any other entity within the relevant serving infrastructure) would accept 0-RTT for the same 0-RTT handshake at most once; this limits the number of replays to the number of server instances in the deployment."
+7. **RFC 9846 § 9.3.** "A server receiving a ClientHello MUST correctly ignore all unrecognized cipher suites, extensions, and other parameters."
+8. **RFC 9325 § 3.1.1.** "Implementations MUST NOT negotiate TLS version 1.1 [RFC4346]."
+9. **RFC 9325 § 4.1.** "Implementations MUST support and prefer to negotiate cipher suites offering forward secrecy."
+10. **RFC 8705 § 3.** "The protected resource MUST obtain, from its TLS implementation layer, the client certificate used for mutual TLS and MUST verify that the certificate matches the certificate associated with the access token."
 
 ## Workflow
 
@@ -42,7 +44,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

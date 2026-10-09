@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
 # ADA Title II
 
-28 CFR Part 35, Nondiscrimination on the Basis of Disability in State and Local Government Services, as served by the eCFR renderer for the current title 28 text.
+Title II of the Americans with Disabilities Act as implemented by the U.S. Department of Justice in 28 CFR Part 35: nondiscrimination by state and local governments in their services, programs and activities, including program accessibility, new construction, effective communication, and the web content and mobile app requirements of subpart H.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text when applying ADA Title II to a state or local government service.
 
@@ -19,16 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: a public entity.
+- Role: a public entity (state or local government, or one of its departments or instrumentalities), or a contractor building web content, mobile apps or facilities for one.
 - Target version: 28 CFR Part 35 (current) — default. See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher for a newer revision or version line.
 
 ## Invariants
 
-1. **§ 35.101.** "Consistent with the ADA Amendments Act's purpose of reinstating a broad scope of protection under the ADA, the definition of “disability” in this part shall be construed broadly in favor of expansive coverage to the maximum extent permitted by the terms of the ADA."
-2. **4.1.6.** "Departures from particular requirements of either standard by the use of other methods shall be permitted when it is clearly evident that equivalent access to the facility or part of the facility is thereby provided."
-3. **§ 35.130.** "Modified participation for persons with disabilities must be a choice, not a requirement."
+1. **§ 35.130(a).** "No qualified individual with a disability shall, on the basis of disability, be excluded from participation in or be denied the benefits of the services, programs, or activities of a public entity, or be subjected to discrimination by any public entity."
+2. **§ 35.130(b)(7)(i).** "A public entity shall make reasonable modifications in policies, practices, or procedures when the modifications are necessary to avoid discrimination on the basis of disability, unless the public entity can demonstrate that making the modifications would fundamentally alter the nature of the service, program, or activity."
+3. **§ 35.160(a)(1).** "A public entity shall take appropriate steps to ensure that communications with applicants, participants, members of the public, and companions with disabilities are as effective as communications with others."
+4. **§ 35.200(a).** "A public entity shall ensure that the following are readily accessible to and usable by individuals with disabilities: (1) Web content that a public entity provides or makes available, directly or through contractual, licensing, or other arrangements; and (2) Mobile apps that a public entity provides or makes available, directly or through contractual, licensing, or other arrangements."
+5. **§ 35.200(b)(1).** "Beginning April 26, 2027, a public entity, other than a special district government, with a total population of 50,000 or more shall ensure that the web content and mobile apps that the public entity provides or makes available, directly or through contractual, licensing, or other arrangements, comply with Level A and Level AA success criteria and conformance requirements specified in WCAG 2.1, unless the public entity can demonstrate that compliance with this section would result in a fundamental alteration in the nature of a service, program, or activity or in undue financial and administrative burdens."
 
 ## Workflow
 
@@ -46,6 +48,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] For web content and mobile apps, the § 35.200(b) compliance date that applies to the entity's population and type was recorded.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index

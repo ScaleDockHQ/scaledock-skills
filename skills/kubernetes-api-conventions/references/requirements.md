@@ -1,18 +1,30 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are normative sentences from the published text, quoted as written (only line breaks and hyphenation from PDF layout were joined). Apply the ones that match the role. Each is labelled with the nearest section, clause or article in the published document.
 
-## Kubernetes API conventions
+## API Conventions
 
-Source: https://raw.githubusercontent.com/kubernetes/community/master/contributors/devel/sig-architecture/api-conventions.md
+Source: https://raw.githubusercontent.com/kubernetes/community/3bc2da62f72a7a05b8838014be60566668edc3e3/contributors/devel/sig-architecture/api-conventions.md
 
-An introduction to using resources with kubectl can be found in [the object management overview](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/).*
-
-- **document.** The standard REST verbs (defined below) MUST return singular JSON objects.
-- **document.** ### Resources All JSON objects returned by an API MUST have the following fields: * kind: a string that identifies the schema this object should have * apiVersion: a string that identifies the version of the schema the object should have These fields are required for proper decoding of the object.
-- **document.** ### Objects #### Metadata Every object kind MUST have the following metadata in a nested object field called "metadata": * namespace: a namespace is a DNS compatible label that objects are subdivided into.
-- **document.** * uid: a unique in time and space value (typically an RFC 4122 generated identifier, see [the identifiers docs](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/)) used to distinguish between objects with the same name that have been deleted and recreated Every object SHOULD have the following metadata in a nested object field called
-- **document.** This value MUST be treated as opaque by clients and passed unmodified back to the server.
-- **document.** The PUT and POST verbs on objects MUST ignore the `status` values, to avoid accidentally overwriting the `status` in read-modify-write scenarios.
-- **document.** A `/status` subresource MUST be provided to enable system components to update statuses of resources they manage.
-- **document.** All objects that represent a physical resource whose state may vary from the user's desired intent SHOULD have a `spec` and a `status`.
+- **API Conventions (introduction).** Group names must be lower case and be valid DNS subdomains.
+- **Types (Kinds).** The name of a list kind must end with "List".
+- **Types (Kinds).** The standard REST verbs (defined below) MUST return singular JSON objects.
+- **Metadata.** Every object kind MUST have the following metadata in a nested object field called "metadata":
+- **Metadata.** This value MUST be treated as opaque by clients and passed unmodified back to the server.
+- **Spec and Status.** The PUT and POST verbs on objects MUST ignore the `status` values, to avoid accidentally overwriting the `status` in read-modify-write scenarios.
+- **Spec and Status.** A `/status` subresource MUST be provided to enable system components to update statuses of resources they manage.
+- **Typical status properties.** Condition types should be named in PascalCase.
+- **Typical status properties.** The absence of a condition should be interpreted the same as `Unknown`.
+- **Primitive types.** All public integer fields MUST use the Go `int32` or Go `int64` types, not `int` (which is ambiguously sized, depending on target platform).
+- **Idempotency.** All compatible Kubernetes APIs MUST support "name idempotency" and respond with an HTTP status code 409 when a request is made to POST an object that has the same name as an existing object in the system.
+- **Optional vs. Required.** Fields must be either optional or required.
+- **Static Defaults.** Static defaulting must not consider any state except the object being operated upon (and the complexity of Service API stands as an example of why).
+- **Admission Controlled Defaults.** As such, fields which are initialized this way must be strictly optional.
+- **Serialization Format.** APIs may return alternative representations of any resource in response to an Accept header or under alternative endpoints, but the default serialization for input and output of API responses MUST be JSON.
+- **Units.** Units must either be explicit in the field name (e.g., `timeoutSeconds`), or must be specified as part of the value (e.g., `resource.Quantity`).
+- **Units.** Duration fields must be represented as integer fields with units being part of the field name (e.g. `leaseDurationSeconds`).
+- **Naming conventions.** Go field names must be PascalCase. JSON field names must be camelCase.
+- **Label, selector, and annotation conventions.** Third-party components must use prefixed keys.
+- **Label, selector, and annotation conventions.** Key prefixes under the "kubernetes.io" and "k8s.io" domains are reserved for use by the kubernetes project and must not be used by third-parties.
+- **Representing Allocated Values.** The common theme among all of these is that the system should not trust users with such fields, and must verify or otherwise confirm such requests before using them.
+- **Sequencing operations.** Controllers must take care to consider how a `status` field will be handled in the case of interrupted control loops (e.g. controller crash and restart), and must act idempotently and consistently.

@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ metadata:
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when writing or consuming a source map.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,14 +26,17 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **Software License.** "SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS."
-2. **Software License.** "IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…"
-3. **2 Conformance.** "A conforming source map generator should generate documents which are conforming source map documents, and can be decoded by the algorithms in this specification without reporting any errors (even those which are specified as optional)."
-4. **2 Conformance.** "A conforming source map consumer should implement the algorithms specified in this specification for retrieving (where applicable) and decoding source map documents."
-5. **9 Source map format.** "Entries may be null if some original sources should be retrieved by name."
-6. **9 Source map format.** "The ignoreList field is an optional list of indices of files that should be considered third party code, such as framework code or bundler- generated code ."
-7. **9.2.1 Mappings grammar.** "The mappings String must adhere to the following grammar: MappingsField : LineList LineList : Line Line ; LineList Line : MappingList opt MappingList : Mapping Mapping , MappingList Mapping : GeneratedColumn GeneratedColumn OriginalSource OriginalLine OriginalColumn Name opt GeneratedColumn : Vlq OriginalSource : Vlq OriginalLine : Vlq OriginalColumn : Vlq Name : Vlq A Decode Mapping State Record…"
-8. **9.2.4 Names for generated JavaScript code.** "Source map generators should create a mapping entry with a [[Name]] field for a JavaScript token, if: The original source language construct maps semantically to the generated JavaScript code."
+1. **§ 2.** "A conforming source map generator should generate documents which are conforming source map documents, and can be decoded by the algorithms in this specification without reporting any errors (even those which are specified as optional)."
+2. **§ 9.** "The version field shall always be the number 3 as an integer."
+3. **§ 9.1.2.** "If mappingsField is not a String, throw an error."
+4. **§ 9.1.2.** "If JSONObjectGet(json, "sources") is not a JSON array, throw an error."
+5. **§ 9.3.** "If the sources are not absolute URLs after prepending the sourceRoot, the sources are resolved relative to the source map (like resolving the script src attribute in an HTML document)."
+6. **§ 9.4.** "Source map consumers shall ignore any additional unrecognized properties, rather than causing the source map to be rejected, so that additional features can be added to this format without breaking existing users."
+7. **§ 10.** "The sections shall be sorted by starting position and the represented sections shall not overlap."
+8. **§ 11.1.** "Source maps are linked through URLs as defined in WHATWG URL; in particular, characters outside the set permitted to appear in URIs shall be percent-encoded and it may be a data URI."
+9. **§ 11.1.** "The HTTP sourcemap header has precedence over a source annotation, and if both are present, the header URL should be used to resolve the source map file."
+10. **§ 11.1.2.** "If a tool consumes one or more source files that unambiguously links to a source map and it produces an output file that links to a source map, it shall do so unambiguously."
+11. **§ 11.1.2.1.1.** "Source map generators shall only emit //#, while source map consumers shall accept both //@ and //#."
 
 ## Workflow
 
@@ -42,7 +45,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -1,63 +1,32 @@
 # Requirements from the pinned text
 
-These sentences were read from the pinned sources on 2026-10-06. They are the normative or conformance sentences the extractor found (MUST, SHOULD, or REQUIRED). Apply the ones that match the role. Section headings are the nearest heading in the published document.
+These sentences were read from the pinned sources on 2026-10-06. They are the normative prose and algorithm steps from the published text, quoted as written (only line breaks were joined), labelled by clause. Apply the ones that match the role. Each is labelled with the section it comes from in the published document. They come from the 2026 edition; check the pinned 2025 or 2024 edition when targeting an older line.
 
-## ECMA-402 2026
+## ECMA-402 2026 (ECMAScript 2026 Internationalization API Specification)
 
 Source: https://tc39.es/ecma402/2026/
 
-- 6 Identification of Locales, Currencies, Time Zones, Measurement Units, Numbering Systems, Collations, and Calendars 6.1 Case Sensitivity and Case Mapping
-
-* **Software License.** SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.
-* **Software License.** IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…
-* **2 Conformance.** A conforming implementation of this specification must conform to ECMA-262 , and must provide and support all the objects, properties, functions, and program semantics described in this specification.
-* **2 Conformance.** Nothing in this specification is intended to allow behaviour that is otherwise prohibited by ECMA-262 , and any such conflict should be considered an editorial error rather than an override of constraints from ECMA-262 .
-* **4.3 API Conventions.** Every Intl constructor should behave as if defined by a class, throwing a TypeError exception when called as a function (without NewTarget).
-* **4.4 Implementation Dependencies.** In browser implementations the initial set of locales, currencies, calendars, numbering systems, and other enumerable items visible to a particular origin must be the same for all users sharing the same user agent string (engine and platform version).
-* **4.4 Implementation Dependencies.** Furthermore, dynamic changes to these sets must not result in users becoming distinguishable from each other.
-* **4.4 Implementation Dependencies.** As a result of this constraint, the first time a browser implementation that allows on-demand locale installation receives a request from a particular origin that could require installing a new locale, it must not reveal whether or not that locale is already installed.
-
-## ECMA-402 2025
-
-Source: https://tc39.es/ecma402/2025/
-
-- 6 Identification of Locales, Currencies, Time Zones, Measurement Units, Numbering Systems, Collations, and Calendars 6.1 Case Sensitivity and Case Mapping
-
-* **Software License.** SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.
-* **Software License.** IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…
-* **2 Conformance.** A conforming implementation of this specification must conform to the ECMAScript 2025 Language Specification (ECMA-262 16 th Edition, or successor), and must provide and support all the objects, properties, functions, and program semantics described in this specification.
-* **2 Conformance.** Nothing in this specification is intended to allow behaviour that is otherwise prohibited by ECMA-262, and any such conflict should be considered an editorial error rather than an override of constraints from ECMA-262.
-* **4.3 API Conventions.** Every Intl constructor should behave as if defined by a class, throwing a TypeError exception when called as a function (without NewTarget).
-* **5 Notational Conventions.** An implementation of the API must behave as if it produced and operated upon internal slots in the manner described here.
-* **5 Notational Conventions.** As an extension to the Record Specification Type, the notation “[[< name >]]” denotes a field whose name is given by the variable name , which must have a String value.
-* **6.1 Case Sensitivity and Case Mapping.** Note For example, "ß" (U+00DF) must not match or be mapped to "SS" (U+0053, U+0053).
-
-## ECMA-402 2024
-
-Source: https://tc39.es/ecma402/2024/
-
-- 6 Identification of Locales, Currencies, Time Zones, Measurement Units, Numbering Systems, Collations, and Calendars 6.1 Case Sensitivity and Case Mapping
-
-* **Software License.** SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.
-* **Software License.** IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…
-* **2 Conformance.** A conforming implementation of this specification must conform to the ECMAScript 2024 Language Specification (ECMA-262 15 th Edition, or successor), and must provide and support all the objects, properties, functions, and program semantics described in this specification.
-* **2 Conformance.** Nothing in this specification is intended to allow behaviour that is otherwise prohibited by ECMA-262, and any such conflict should be considered an editorial error rather than an override of constraints from ECMA-262.
-* **4.3 API Conventions.** Every Intl constructor should behave as if defined by a class, throwing a TypeError exception when called as a function (without NewTarget).
-* **5 Notational Conventions.** An implementation of the API must behave as if it produced and operated upon internal slots in the manner described here.
-* **5 Notational Conventions.** As an extension to the Record Specification Type, the notation “[[< name >]]” denotes a field whose name is given by the variable name , which must have a String value.
-* **6.1 Case Sensitivity and Case Mapping.** Note For example, "ß" (U+00DF) must not match or be mapped to "SS" (U+0053, U+0053).
-
-## ECMA-402 draft
-
-Source: https://tc39.es/ecma402/
-
-- 6 Identification of Locales, Currencies, Time Zones, Measurement Units, Numbering Systems, Collations, and Calendars 6.1 Case Sensitivity and Case Mapping
-
-* **Software License.** SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT https://ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.
-* **Software License.** IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)…
-* **2 Conformance.** A conforming implementation of this specification must conform to ECMA-262 , and must provide and support all the objects, properties, functions, and program semantics described in this specification.
-* **2 Conformance.** Nothing in this specification is intended to allow behaviour that is otherwise prohibited by ECMA-262 , and any such conflict should be considered an editorial error rather than an override of constraints from ECMA-262 .
-* **4.3 API Conventions.** Every Intl constructor should behave as if defined by a class, throwing a TypeError exception when called as a function (without NewTarget).
-* **4.4 Implementation Dependencies.** In browser implementations the initial set of locales, currencies, calendars, numbering systems, and other enumerable items visible to a particular origin must be the same for all users sharing the same user agent string (engine and platform version).
-* **4.4 Implementation Dependencies.** Furthermore, dynamic changes to these sets must not result in users becoming distinguishable from each other.
-* **4.4 Implementation Dependencies.** As a result of this constraint, the first time a browser implementation that allows on-demand locale installation receives a request from a particular origin that could require installing a new locale, it must not reveal whether or not that locale is already installed.
+- **§ 2.** A conforming implementation of this specification must conform to ECMA-262, and must provide and support all the objects, properties, functions, and program semantics described in this specification.
+- **§ 2.** A conforming implementation is not permitted to add optional arguments to the functions defined in this specification.
+- **§ 4.4.** In browser implementations the initial set of locales, currencies, calendars, numbering systems, and other enumerable items visible to a particular origin must be the same for all users sharing the same user agent string (engine and platform version).
+- **§ 4.4.** Furthermore, dynamic changes to these sets must not result in users becoming distinguishable from each other.
+- **§ 4.4.** As a result of this constraint, the first time a browser implementation that allows on-demand locale installation receives a request from a particular origin that could require installing a new locale, it must not reveal whether or not that locale is already installed.
+- **§ 5.** An implementation of the API must behave as if it produced and operated upon internal slots in the manner described here.
+- **§ 6.1.** No other case folding equivalences are applied.
+- **§ 6.1.** For example, "ß" (U+00DF) must not match or be mapped to "SS" (U+0053, U+0053).
+- **§ 6.2.3.** It must not contain a Unicode locale extension sequence.
+- **§ 6.3.** This specification identifies currencies using 3-letter currency codes as defined by ISO 4217. Their canonical form is uppercase.
+- **§ 6.3.1.** If the length of currency is not 3, return false.
+- **§ 6.5.** Implementations that adopt this specification must be time zone aware: they must use the IANA Time Zone Database https://www.iana.org/time-zones/ to supply available named time zone identifiers and data used in ECMAScript calculations and formatting.
+- **§ 6.5.** Available named time zone identifiers returned by ECMAScript built-in objects must use the casing found in the IANA Time Zone Database.
+- **§ 6.5.** For historical reasons, "UTC" must be a primary time zone identifier.
+- **§ 6.5.** "Etc/UTC", "Etc/GMT", and "GMT", as well as all Link names that resolve to any of them, must be non-primary time identifiers that resolve to "UTC".
+- **§ 9.1.** It must include the value returned by DefaultLocale.
+- **§ 9.1.** Additionally, for each element with more than one subtag, it must also include a less narrow language tag with the same language subtag and a strict subset of the same following subtags (i.e., omitting one or more) to serve as a potential fallback from ResolveLocale.
+- **§ 9.2.1.** If IsWellFormedLanguageTag(tag) is false, throw a RangeError exception.
+- **§ 9.2.1.** If seen does not contain canonicalizedTag, append canonicalizedTag to seen.
+- **§ 10.3.3.2.** String values must be interpreted as UTF-16 code unit sequences as described in ECMA-262, 6.1.4, and a surrogate pair (a code unit in the range 0xD800 to 0xDBFF followed by a code unit in the range 0xDC00 to 0xDFFF) within a string must be interpreted as the corresponding code point.
+- **§ 11.2.3.** [[LocaleData]].[[`<locale>`]].[[hourCycle]] must be one of the String values "h11", "h12", "h23", or "h24".
+- **§ 14.2.3.** Each template string must contain the substrings "{0}" and "{1}" exactly once.
+- **§ 16.1.3.** If IsWellFormedCurrencyCode(currency) is false, throw a RangeError exception.
+- **§ 16.2.3.** The List that is the value of the "nu" field of any locale field of [[LocaleData]] must not include the values "native", "traditio", or "finance".

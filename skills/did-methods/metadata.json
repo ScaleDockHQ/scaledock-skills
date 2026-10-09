@@ -1,66 +1,73 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers DID methods. did:web is current; did:key is current; did:jwk is current; did:webvh is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the did:web, did:key, did:jwk and did:webvh v1.0 methods. Requirements are quotes from the pinned method specifications.",
   "versions": [
     {
       "id": "did-web",
       "label": "did:web",
       "status": "current",
-      "revision": "did:web method, fetched 2026-10-06 (Unofficial draft, 2026-10-06)",
+      "revision": "Unofficial draft, w3c-ccg/did-method-web commit ea423c1, 2026-05-08",
       "family": "did-web"
     },
     {
       "id": "did-key",
       "label": "did:key",
       "status": "current",
-      "revision": "did:key method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "revision": "v0.9 draft, w3c-ccg/did-method-key commit 2cc490c, 2025-11-02",
       "family": "did-key"
     },
     {
       "id": "did-jwk",
       "label": "did:jwk",
       "status": "current",
-      "revision": "did:jwk method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "revision": "quartzjer/did-jwk spec.md commit 44e186c, 2023-08-19",
       "family": "did-jwk"
     },
     {
       "id": "did-webvh",
       "label": "did:webvh",
       "status": "current",
-      "revision": "did:webvh v1.0, fetched 2026-10-06 (DIF specification, 2026-10-06)",
+      "revision": "v1.0, decentralized-identity/didwebvh spec-v1.0 commit 7e39c70, 2026-09-25",
       "family": "did-webvh"
     }
   ],
   "sources": [
     {
-      "title": "did:web",
-      "url": "https://w3c-ccg.github.io/did-method-web/",
+      "title": "did:web Method Specification",
+      "url": "https://raw.githubusercontent.com/w3c-ccg/did-method-web/ea423c114e6f2537498ee6f94e8d794c64f60c18/index.html",
       "status": "Unofficial draft",
-      "revision": "did:web method, fetched 2026-10-06 (Unofficial draft, 2026-10-06)",
+      "revision": "W3C CCG, commit ea423c1, 2026-05-08",
       "checked": "2026-10-06"
     },
     {
-      "title": "did:key",
-      "url": "https://raw.githubusercontent.com/w3c-ccg/did-method-key/main/README.md",
+      "title": "The did:key Method v0.9",
+      "url": "https://raw.githubusercontent.com/w3c-ccg/did-method-key/2cc490c38c5aacf58497a87fc0cf8794668bf716/index.html",
+      "status": "Unofficial draft",
+      "revision": "W3C CCG, commit 2cc490c, 2025-11-02",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "did:jwk Method Specification",
+      "url": "https://raw.githubusercontent.com/quartzjer/did-jwk/44e186cf4cc215fc726afeecad1727cc9f9a66e8/spec.md",
       "status": "Community draft",
-      "revision": "did:key method, fetched 2026-10-06 (Community draft, 2026-10-06)",
+      "revision": "commit 44e186c, 2023-08-19",
       "checked": "2026-10-06"
     },
     {
-      "title": "did:jwk",
-      "url": "https://raw.githubusercontent.com/quartzjer/did-jwk/main/spec.md",
-      "status": "Community draft",
-      "revision": "did:jwk method, fetched 2026-10-06 (Community draft, 2026-10-06)",
-      "checked": "2026-10-06"
-    },
-    {
-      "title": "did:webvh",
-      "url": "https://identity.foundation/didwebvh/v1.0/",
+      "title": "The did:webvh DID Method v1.0: Specification",
+      "url": "https://raw.githubusercontent.com/decentralized-identity/didwebvh/7e39c700fd565ee47badf95c1eda11067dbcf2b7/spec-v1.0/specification.md",
       "status": "DIF specification",
-      "revision": "did:webvh v1.0, fetched 2026-10-06 (DIF specification, 2026-10-06)",
+      "revision": "v1.0, commit 7e39c70, 2026-09-25",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "The did:webvh DID Method v1.0: Security and Privacy Considerations",
+      "url": "https://raw.githubusercontent.com/decentralized-identity/didwebvh/7e39c700fd565ee47badf95c1eda11067dbcf2b7/spec-v1.0/security_and_privacy.md",
+      "status": "DIF specification",
+      "revision": "v1.0, commit 7e39c70, 2026-09-25",
       "checked": "2026-10-06"
     }
   ]

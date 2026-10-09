@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -26,14 +26,15 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **document.** "Terminology The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [ RFC2119 ]."
-2. **document.** "There SHALL be a single lead individual and at least one backup individual for this function."
-3. **document.** "The TZ Coordinator is empowered to decide, as the designated expert, appropriate changes, but SHOULD take into account views expressed on the mailing list."
-4. **document.** "Moving forward, the TZ database, supporting code, and any appropriate supporting information SHOULD be cryptographically signed prior to release using well known public keys, along with any appropriate supporting information and distributed from < http://www.iana.org/time-zones >."
-5. **document.** "Changes to existing entries SHALL reflect the consensus on the ground in the region covered by that entry."
-6. **document.** "To be clear, the TZ Coordinator SHALL NOT set time zone policy for a region but use judgment and whatever available sources exist to assess what the average person on street would think the time actually is, or in case of historical corrections, was."
-7. **document.** "Where they exist, licenses SHALL NOT be changed."
-8. **document.** "The TZ Coordinator SHALL be named by the IESG as described above, and will act as the maintainer of the database and code, as described above."
+1. **RFC 6557 § 3.** "The TZ Coordinator is empowered to decide, as the designated expert, appropriate changes, but SHOULD take into account views expressed on the mailing list."
+2. **RFC 6557 § 3.** "Moving forward, the TZ database, supporting code, and any appropriate supporting information SHOULD be cryptographically signed prior to release using well known public keys, along with any appropriate supporting information and distributed from <http://www.iana.org/time-zones>."
+3. **RFC 6557 § 3.** "New TZ names (e.g., locations) are only to be created when the scope of the region a name was envisioned to cover is no longer accurate."
+4. **RFC 6557 § 3.** "In order to correct historical inaccuracies, a new TZ name MAY be added when it is necessary to indicate what was the consensus view at a given time and location."
+5. **RFC 6557 § 3.** "Changes to existing entries SHALL reflect the consensus on the ground in the region covered by that entry."
+6. **RFC 6557 § 3.** "To be clear, the TZ Coordinator SHALL NOT set time zone policy for a region but use judgment and whatever available sources exist to assess what the average person on street would think the time actually is, or in case of historical corrections, was."
+7. **RFC 6557 § 6.** "The reference implementation shall be distributed along with an associated cryptographic signature verifiable by a public key."
+8. **RFC 6557 § 7.** "The TZ database itself is not an IETF Contribution or an IETF document."
+9. **RFC 6557 § 9.** "This memo states that the TZ database SHOULD be distributed with a valid cryptographic signature moving forward."
 
 ## Workflow
 
@@ -42,7 +43,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

@@ -4,9 +4,9 @@ Read this when choosing a target version, reading a document written for an olde
 
 ## Version lines
 
-| Id           | Line            | Status  | Revision                                                                                                  | Posture | Publisher                   |
-| ------------ | --------------- | ------- | --------------------------------------------------------------------------------------------------------- | ------- | --------------------------- |
-| `coppa-2025` | COPPA Rule 2025 | current | Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06) |         | Federal Register 2026-10-06 |
+| Id           | Line            | Status  | Revision                                                                                       | Posture | Publisher       |
+| ------------ | --------------- | ------- | ---------------------------------------------------------------------------------------------- | ------- | --------------- |
+| `coppa-2025` | COPPA Rule 2025 | current | current title 16 part 312, as amended at 90 FR 16977 (2025-04-22), up to date as of 2026-10-02 |         | eCFR 2026-10-02 |
 
 Statuses: **current** is the default target; **supported** is released and still a valid target when a consumer needs it; **legacy** is superseded, read and upgraded from but never authored; **preview** is a draft of the next line, used only as its posture allows. A line whose only publication is itself a draft is **current** and carries a posture.
 
@@ -21,9 +21,9 @@ Statuses: **current** is the default target; **supported** is released and still
 
 ### COPPA Rule 2025
 
-- Publisher status on 2026-10-06: Federal Register (2026-10-06).
-- Pinned text: https://www.govinfo.gov/content/pkg/FR-2025-04-22/html/2025-05904.htm
-- Revision token: Children's Online Privacy Protection Rule, 90 FR 16918, fetched 2026-10-06 (Federal Register, 2026-10-06)
+- Publisher status on 2026-10-06: the eCFR text of 16 CFR Part 312 is up to date as of 2026-10-02 and includes the amendments published at 90 FR 16977 on 2025-04-22.
+- Pinned text: https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?chapter=I&subchapter=C&part=312
+- Revision token: current title 16 part 312, as amended at 90 FR 16977 (2025-04-22), up to date as of 2026-10-02
 
 ## Upgrading
 

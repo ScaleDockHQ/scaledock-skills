@@ -5,35 +5,30 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # gittuf
 
-[attacks targeting Git metadata](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias).
+gittuf, an OpenSSF security layer for Git: root of trust and rule file policy metadata in `refs/gittuf/policy`, the Reference State Log (RSL) that records every ref change, and the verification and recovery workflows, read from the gittuf design document at release v0.16.0.
 
-The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when verifying Git repository policy.
-
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
-- Target version: gittuf (default). See [`references/versions.md`](references/versions.md).
+- Role: Repository owner who writes gittuf policy, developer who pushes through gittuf, or verifier that checks a repository against its policy.
+- Target version: gittuf (current). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
-- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
+- Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "All changes to the main branch's state MUST have a corresponding entry in the repository's RSL signed by either Alice or Bob."
-2. **document.** "This is done by verifying the digital signature attached to the action, which must match the trusted public key associated with the actor who is supposed to have made the change."
-3. **document.** "#### Root of Trust gittuf's policy metadata includes root of trust metadata, which establishes why the policy must be trusted."
-4. **document.** "The root of trust metadata is signed by a threshold of root keys, and the initial set of root keys for a repository must be distributed using out-of-band mechanisms or rely on trust-on-first-use (TOFU)."
-5. **document.** "This new version must be signed by a threshold of root keys trusted in the previous version."
-6. **document.** "In this rule file, they can add the actors who must be trusted for the same (or a subset) of namespaces."
-7. **document.** "All repositories must contain a primary rule file (typically called "targets.json" to match TUF's behavior)."
-8. **document.** "The primary rule file derives its trust directly from the root of trust metadata; it must be signed by a threshold of actors trusted to manage the repository's primary rule file."
+1. **Root of Trust.** "This new version must be signed by a threshold of root keys trusted in the previous version."
+2. **Rule Files.** "The primary rule file derives its trust directly from the root of trust metadata; it must be signed by a threshold of actors trusted to manage the repository's primary rule file."
+3. **RSL Annotation Entries.** "Since the RSL history cannot be overwritten, an annotation entry must be used to communicate to gittuf clients to skip the corresponding entries."
+4. **Regular Pushes.** "When an actor pushes a change to a remote repository, this update to the corresponding ref (or refs) must be recorded in the RSL."
+5. **Identifying Authorized Signers for Protected Namespaces.** "During this process, a principal must only be counted once even if they sign multiple times using different keys."
 
 ## Workflow
 
@@ -42,7 +37,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.
@@ -51,19 +46,20 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] Every change to a protected branch or file has an RSL entry signed by a threshold of principals that the policy in force at that entry authorizes.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index
 
 - **`references/versions.md`**: every version line, which one to use, and how to upgrade. Load for steps 1 and 3.
-- **`references/requirements.md`**: quotes taken from the pinned specification. Load for step 2.
+- **`references/requirements.md`**: quotes taken from the pinned specification, grouped by source. Load for step 2.
 
 ## Related skills
 
-Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`.
+Install related spec skills by name with `npx skills add ScaleDockHQ/scaledock-skills --skill <name>`: `tuf`, `in-toto`, `slsa`, `sigstore`.
 
 ## Sources
 
 Status uses the publishing body's own maturity term. Checked is the date the source was last read.
 
-- [gittuf](https://raw.githubusercontent.com/gittuf/gittuf/main/docs/design-document.md): Design document, gittuf design document, fetched 2026-10-06 (Design document, 2026-10-06), checked 2026-10-06.
+- [gittuf Design Document](https://raw.githubusercontent.com/gittuf/gittuf/v0.16.0/docs/design-document.md): Design document, Release v0.16.0 (2026-09-04), checked 2026-10-06.

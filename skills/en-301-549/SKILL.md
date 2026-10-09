@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.2"
+  version: "1.1.0"
   kind: standard
 ---
 
 # EN 301 549
 
-B-1040 Brussels - BELGIUM B-1040 Brussels - BELGIUM F-06921 Sophia Antipolis Cedex - FRANCE
+EN 301 549, the harmonised European standard published by ETSI, CEN and CENELEC that sets accessibility requirements for ICT products and services: functional performance criteria, hardware, two-way communication, video, web content (by reference to WCAG), non-web documents and software, documentation and support services.
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when applying European ICT accessibility requirements.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: supplier designing or evaluating ICT for conformance, or a buyer writing ICT procurement requirements.
 - Target version: EN 301 549 V4.1.1 (default); EN 301 549 V3.2.1 (supported). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Users should be aware that the present document may be revised or have its status changed, this information is available in the Milestones listing."
-2. **document.** "No recommendation as to products and services or vendors is made or should be implied."
-3. **document.** "National transposition dates Date of adoption of this EN: 24 August 2026 Date of latest announcement of this EN (doa): 30 November 2026 Date of latest publication of new National Standard or endorsement of this EN (dop/e): 31 May 2027 Date of withdrawal of any conflicting National Standard (dow): 31 May 2028 Modal verbs terminology In the present document "shall", "shall not", "should", "should…"
-4. **document.** ""must" and "must not" are NOT allowed in ETSI deliverables except when used in direct citation."
-5. **document.** "When the present document is used for most purposes, including when used in ICT procurement, all of the technical requirements in clauses 5 to 13, as well as the functional performance criteria in clause 4 should be considered."
-6. **document.** "This is the smallest font size - not the recommended font size for body text which should be larger ."
-7. **document.** "NOTE 6: For handheld devices D should be assumed as 400 mm."
-8. **document.** "The relationship between viewing distance and physical x-height for a font with an x-height of 16 CSSpx is as follows: Table 5.1 Viewing distance (mm) x-height (mm) for 16CSSpx 400 2,38 500 2,98 700 4,17 1 000 5,95 2 000 11,90 3 000 17,86 5 000 29,76 10 000 59,52 NOTE 2: This is the smallest font size - not the recommended font size for body text which should be larger."
+1. **§ 14.1.** "Conformance to the present document is achieved by meeting all the applicable requirements."
+2. **§ 14.1.** "Applicable requirements are requirements whose preconditions are true for an ICT."
+3. **§ 4.2.1.** "Where ICT provides visual modes of operation, the ICT shall provide at least one mode of operation that does not require vision."
+4. **§ 9.1.1.1.** "Where ICT is, or includes, a web page, the web page shall satisfy WCAG 2.2 Success Criterion 1.1.1 Non-text content."
+5. **§ 11.6.2.** "Where ICT is, or includes, non-web software, the non-web software shall not disrupt documented platform accessibility features except when requested to do so by the user during the operation of the software."
 
 ## Workflow
 
@@ -51,6 +48,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 - [ ] The artifact cites the target line's revision from [Sources](#sources).
 - [ ] Every applicable quoted requirement in [`references/requirements.md`](references/requirements.md) holds.
+- [ ] The precondition ("Where ICT ...") of each clause was checked before the clause was treated as applicable.
 - [ ] Nothing from a preview line is emitted unless its posture is build and the user opted in.
 
 ## Reference index

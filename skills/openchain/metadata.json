@@ -1,38 +1,38 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers OpenChain. OpenChain ISO 5230 is current; OpenChain ISO 18974 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers ISO/IEC 5230:2020 (OpenChain 2.1) and ISO/IEC 18974:2023 from the OpenChain Project's public texts. Requirements quote the shall sentences with their clause numbers.",
   "versions": [
     {
       "id": "openchain-iso-5230",
       "label": "OpenChain ISO 5230",
       "status": "current",
-      "revision": "OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "revision": "ISO/IEC 5230:2020 (OpenChain 2.1), commit 968092c97da8 (2025-01-08)",
       "family": "license"
     },
     {
       "id": "openchain-iso-18974",
       "label": "OpenChain ISO 18974",
       "status": "current",
-      "revision": "OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "revision": "ISO/IEC 18974:2023, commit 5bb0a024ce96 (2024-11-08)",
       "family": "security"
     }
   ],
   "sources": [
     {
-      "title": "OpenChain ISO 5230",
-      "url": "https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/ISO-5230-2020/en/ISO-5230-2020.md",
-      "status": "Public text",
-      "revision": "OpenChain ISO 5230 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "title": "ISO/IEC 5230:2020, OpenChain Specification 2.1 (public text)",
+      "url": "https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/968092c97da81a750f03c7b1becbd25bd088b2cb/ISO-5230-2020/en/ISO-5230-2020.md",
+      "status": "International Standard (ISO/IEC 5230:2020)",
+      "revision": "ISO/IEC 5230:2020 (OpenChain 2.1), commit 968092c97da8 (2025-01-08)",
       "checked": "2026-10-06"
     },
     {
-      "title": "OpenChain ISO 18974",
-      "url": "https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/main/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md",
-      "status": "Public text",
-      "revision": "OpenChain ISO 18974 public text, fetched 2026-10-06 (Public text, 2026-10-06)",
+      "title": "ISO/IEC 18974:2023, OpenChain security assurance specification (public text)",
+      "url": "https://raw.githubusercontent.com/OpenChain-Project/Security-Assurance-Specification/5bb0a024ce967720301bfa0e1d4d9e834690066d/Security-Assurance-Specification/ISO-18974/en/ISO-18974.md",
+      "status": "International Standard (ISO/IEC 18974:2023)",
+      "revision": "ISO/IEC 18974:2023, commit 5bb0a024ce96 (2024-11-08)",
       "checked": "2026-10-06"
     }
   ]

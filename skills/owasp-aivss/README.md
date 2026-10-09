@@ -1,6 +1,6 @@
 # owasp-aivss
 
-An agent skill for OWASP AIVSS.
+An agent skill for OWASP AIVSS: scoring the severity of vulnerabilities in agentic AI systems with OWASP AIVSS.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for OWASP AIVSS.
 npx skills add ScaleDockHQ/scaledock-skills --skill owasp-aivss
 ```
 
-Then ask the agent to apply OWASP AIVSS.
+Then ask your agent to apply OWASP AIVSS.
 
 ## What it covers
 
-- when scoring AI vulnerability severity
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The OWASP AI Vulnerability Scoring System (AIVSS) v0.8: it takes a vulnerability's CVSS v4.0 base score, adds an Agentic Uplift (AARS) computed from ten risk amplification factors and a threat multiplier, and scales the sum by a mitigation factor. Read from the project's published PDF, pinned at a commit of its GitHub repository.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply OWASP AIVSS.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [OWASP AIVSS](https://aivss.owasp.org/): Guide, OWASP AIVSS, fetched 2026-10-06 (Guide, 2026-10-06).
+- [AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.8](https://raw.githubusercontent.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system/84856b290f62f2327f70eb0027be64351dd2e6de/assets/publications/AIVSS%20Scoring%20System%20For%20OWASP%20Agentic%20AI%20Core%20Security%20Risks%20v0.8.pdf): OWASP Project document (draft), v0.8, commit 84856b290f62 (2026-09-09).
 
 ## License
 

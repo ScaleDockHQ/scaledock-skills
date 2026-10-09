@@ -1,23 +1,23 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers JSON5. JSON5 is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers JSON5 1.0.0 (Ecmarkup source at commit d77331d). Requirements are quotes from the specification.",
   "versions": [
     {
       "id": "json5",
       "label": "JSON5",
       "status": "current",
-      "revision": "JSON5, fetched 2026-10-06 (Specification, 2026-10-06)"
+      "revision": "Version 1.0.0 (json5-spec commit d77331d, 2023-05-15)"
     }
   ],
   "sources": [
     {
-      "title": "JSON5",
-      "url": "https://json5.org/",
+      "title": "The JSON5 Data Interchange Format (src/index.html)",
+      "url": "https://raw.githubusercontent.com/json5/json5-spec/d77331d96bc6b74622703e5d009d6124072f04dd/src/index.html",
       "status": "Specification",
-      "revision": "JSON5, fetched 2026-10-06 (Specification, 2026-10-06)",
+      "revision": "Version 1.0.0 (json5-spec commit d77331d, 2023-05-15)",
       "checked": "2026-10-06"
     }
   ]

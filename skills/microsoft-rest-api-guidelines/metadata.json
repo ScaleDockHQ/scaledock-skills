@@ -1,23 +1,30 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers Microsoft REST API Guidelines. Microsoft REST API Guidelines is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the Microsoft Azure REST API Guidelines and the Microsoft Graph REST API Guidelines from microsoft/api-guidelines. Requirements are quotes from those texts.",
   "versions": [
     {
       "id": "rest-guidelines",
       "label": "Microsoft REST API Guidelines",
       "status": "current",
-      "revision": "Microsoft REST API Guidelines, fetched 2026-10-06 (Guidelines, 2026-10-06)"
+      "revision": "vNext at commit a7022a2, 2026-08-05"
     }
   ],
   "sources": [
     {
-      "title": "Microsoft REST API Guidelines",
-      "url": "https://raw.githubusercontent.com/microsoft/api-guidelines/vNext/Guidelines.md",
+      "title": "Microsoft Azure REST API Guidelines",
+      "url": "https://raw.githubusercontent.com/microsoft/api-guidelines/a7022a299442a8352431874e63ec4dff548a1b81/azure/Guidelines.md",
       "status": "Guidelines",
-      "revision": "Microsoft REST API Guidelines, fetched 2026-10-06 (Guidelines, 2026-10-06)",
+      "revision": "vNext at commit a7022a2, 2026-08-05",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "Microsoft Graph REST API Guidelines",
+      "url": "https://raw.githubusercontent.com/microsoft/api-guidelines/a7022a299442a8352431874e63ec4dff548a1b81/graph/GuidelinesGraph.md",
+      "status": "Guidelines",
+      "revision": "vNext at commit a7022a2, 2026-08-05",
       "checked": "2026-10-06"
     }
   ]

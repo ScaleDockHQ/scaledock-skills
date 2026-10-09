@@ -5,13 +5,13 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.1"
+  version: "1.1.0"
   kind: standard
 ---
 
 # NIST PQC
 
-Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology
+NIST post-quantum cryptography standards: FIPS 203 (ML-KEM key encapsulation), FIPS 204 (ML-DSA signatures), FIPS 205 (SLH-DSA stateless hash-based signatures) and SP 800-227 (recommendations for using key-encapsulation mechanisms).
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when implementing NIST post-quantum cryptography.
 
@@ -19,21 +19,18 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Inputs (fill in, or ask before starting)
 
-- Role: producer or consumer of this specification.
+- Role: implementer of ML-KEM, ML-DSA or SLH-DSA, or an application or protocol designer using a KEM for key establishment.
 - Target version: FIPS 203 (default); FIPS 204 (default); FIPS 205 (default); SP 800-227 (default). See [`references/versions.md`](references/versions.md).
 - Revision: the pinned revision in [Sources](#sources), unless the user names another.
 - Sources: when refreshing this skill, re-read every URL in [Sources](#sources) and check the publisher index for a newer revision or version line.
 
 ## Invariants
 
-1. **document.** "Comments concerning this Federal Information Processing Standard publication are welcomed and should be submitted using the contact information in the “Inquiries and Comments” clause of the announcement section."
-2. **document.** "Exports of cryptographic modules that implement this standard and technical data regarding them must comply with all federal laws and regulations and be licensed by the Bureau of Industry and Security of the U.S."
-3. **document.** "The decapsulation key must be kept private and must be destroyed after it is no longer needed."
-4. **document.** "The decryption key must be kept private and must be destroyed after it is no longer needed."
-5. **document.** "A set of two keys with the property that one key can be made public while the other key must be kept private."
-6. **document.** "The shared secret key must be kept private and must be destroyed when no longer needed."
-7. **document.** "should Used to indicate a strong recommendation but not a requirement of this standard."
-8. **document.** "The bytes must be freshly generated using randomness from an approved RBG."
+1. **§ 3.3.** "The public-key encryption scheme K-PKE described in Section 5 shall not be used as a stand-alone cryptographic scheme."
+2. **§ 7.1.** "While the encapsulation key can be made public, the decapsulation key shall remain private."
+3. **§ 7.2.** "ML-KEM.Encaps shall not be run with an encapsulation key that has not been checked as above."
+4. **§ 7.3.** "Ciphertext checking shall be performed with every execution of ML-KEM.Decaps."
+5. **RM5.** "The key-establishment process that takes place over the channel used by Alice and Bob must satisfy an application-appropriate notion of integrity."
 
 ## Workflow
 

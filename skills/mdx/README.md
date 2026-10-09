@@ -1,6 +1,6 @@
 # mdx
 
-An agent skill for MDX.
+An agent skill for MDX: writing MDX documents that combine Markdown with JSX components.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for MDX.
 npx skills add ScaleDockHQ/scaledock-skills --skill mdx
 ```
 
-Then ask the agent to apply MDX.
+Then ask your agent to apply MDX.
 
 ## What it covers
 
-- when writing MDX
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- MDX 3 from the mdx-js project: the MDX syntax (Markdown, JSX, expressions, ESM and interleaving) and how MDX is compiled and used, read from the "What is MDX?" and "Using MDX" documentation sources at the 3.1.1 release tag.
 
 ## Versions
 
@@ -27,7 +26,8 @@ Then ask the agent to apply MDX.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [MDX](https://mdxjs.com/docs/): Documentation, MDX, fetched 2026-10-06 (Documentation, 2026-10-06).
+- [What is MDX?](https://raw.githubusercontent.com/mdx-js/mdx/50aa8df0b027c893dec9f97a2b7c51539e9f1a4b/docs/docs/what-is-mdx.mdx): Documentation, MDX 3.1.1 (commit 50aa8df, released 2025-08-29).
+- [Using MDX](https://raw.githubusercontent.com/mdx-js/mdx/50aa8df0b027c893dec9f97a2b7c51539e9f1a4b/docs/docs/using-mdx.mdx): Documentation, MDX 3.1.1 (commit 50aa8df, released 2025-08-29).
 
 ## License
 

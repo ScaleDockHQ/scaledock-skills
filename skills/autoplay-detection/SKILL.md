@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.0.0"
+  version: "1.1.0"
   kind: standard
 ---
 
@@ -15,7 +15,7 @@ This specification provides web developers the ability to detect if automaticall
 
 The publisher of the pinned text is named in [Sources](#sources). With this skill the agent applies that text: when detecting whether autoplay is allowed.
 
-**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
+**Follow the workflow below step by step.** Every rule here comes from a source in [Sources](#sources). Quoted requirements are sentences taken from the pinned text, labelled with the section they come from. When a rule and the pinned source disagree, the source wins; when the source has a newer revision than the pin, follow the refresh steps.
 
 ## Inputs (fill in, or ask before starting)
 
@@ -26,10 +26,11 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
 
 ## Invariants
 
-1. **2.2.1. Query by a Media Type.** "When getAutoplayPolicy(type) method is called, the user agent MUST run the following steps: If type is mediaelement , return a result that represents the current status for HTMLMediaElement and its extensions, such as HTMLVideoElement and HTMLAudioElement , which exist in the document contained in the Window object associated with the queried Navigator object."
-2. **Document conventions.** "The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in the normative parts of this document are to be interpreted as described in RFC 2119."
-3. **2.2.2. Query by an Element.** "If the result of querying by a media type is different from the result of querying by an element, authors should take the latter one as the correct result."
-4. **Conformant Algorithms.** "Requirements phrased in the imperative as part of algorithms (such as "strip any leading space characters" or "return false and abort these steps") are to be interpreted with the meaning of the key word ("must", "should", "may", etc) used in introducing the algorithm."
+1. **§ 2.2.1.** "When getAutoplayPolicy(type) method is called, the user agent MUST run the following steps:"
+2. **§ 2.2.1.** "If type is mediaelement, return a result that represents the current status for HTMLMediaElement and its extensions, such as HTMLVideoElement and HTMLAudioElement, which exist in the document contained in the Window object associated with the queried Navigator object."
+3. **§ 2.2.1.** "If type is audiocontext, return a result that represents the current status for AudioContext, which exist in the document contained in the Window object associated with the queried Navigator object."
+4. **§ 2.2.2.** "In addition, if authors make an inaudible media element audible right after it starts playing, then it is recommended for a user agent to pause that media element immediately because it’s no longer inaudible."
+5. **§ 2.2.2.** "If the result of querying by a media type is different from the result of querying by an element, authors should take the latter one as the correct result."
 
 ## Workflow
 
@@ -38,7 +39,7 @@ The publisher of the pinned text is named in [Sources](#sources). With this skil
    ✓ The target version is recorded, and it is not a legacy line.
 2. **Apply the pinned requirements.** Walk the quotes in [`references/requirements.md`](references/requirements.md) and implement each one that applies to the role.
    -> [`references/requirements.md`](references/requirements.md)
-   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the heading it came from.
+   ✓ Each applicable quote is either implemented or recorded as out of scope for the role, with the section it came from.
 3. **Upgrade** (only when asked). Follow the upgrade section from the source line to the target.
    -> [`references/versions.md`](references/versions.md)
    ✓ The result cites the target line and no longer depends on a requirement that only the old line stated.

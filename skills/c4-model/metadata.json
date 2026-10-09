@@ -1,23 +1,58 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "kind": "standard",
   "organization": "ScaleDock",
   "date": "October 2026",
-  "abstract": "Covers C4 model. C4 model is current. Requirements are quotes from the pinned text. SKILL.md holds the workflow; references split versions and the quoted requirements.",
+  "abstract": "Covers the C4 model as published on c4model.com (source commit 10c4493). Requirements are quotes from its abstraction, diagram and notation pages.",
   "versions": [
     {
       "id": "c4-model",
       "label": "C4 model",
       "status": "current",
-      "revision": "C4 model, fetched 2026-10-06 (Model, 2026-10-06)"
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)"
     }
   ],
   "sources": [
     {
-      "title": "C4 model",
-      "url": "https://c4model.com/",
-      "status": "Model",
-      "revision": "C4 model, fetched 2026-10-06 (Model, 2026-10-06)",
+      "title": "C4 model, Abstractions: Software system",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/abstractions/01-software-system.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4 model, Abstractions: Container",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/abstractions/02-container.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4 model, Abstractions: Component",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/abstractions/03-component.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4 model, Diagrams: System context diagram",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/diagrams/01-system-context.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4 model, Diagrams: Container diagram",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/diagrams/02-container.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
+      "checked": "2026-10-06"
+    },
+    {
+      "title": "C4 model, Diagrams: Notation",
+      "url": "https://raw.githubusercontent.com/simonbrowndotje/c4model/10c44932ac3be0afa1ead165d581868222f60170/diagrams/11-notation.md",
+      "status": "Website source",
+      "revision": "c4model.com source, commit 10c4493 (2026-09-15)",
       "checked": "2026-10-06"
     }
   ]

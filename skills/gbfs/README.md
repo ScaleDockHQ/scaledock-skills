@@ -1,6 +1,6 @@
 # gbfs
 
-An agent skill for GBFS.
+An agent skill for GBFS: publishing or consuming shared mobility feeds.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for GBFS.
 npx skills add ScaleDockHQ/scaledock-skills --skill gbfs
 ```
 
-Then ask the agent to apply GBFS.
+Then ask your agent to apply GBFS.
 
 ## What it covers
 
-- when publishing bike-share data
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The General Bikeshare Feed Specification from MobilityData: the JSON files a shared mobility system publishes (gbfs.json, system_information.json, station and vehicle status and the rest), how they are distributed and versioned, and the field types they use, read from gbfs.md at the v3.0 tag.
 
 ## Versions
 
@@ -27,7 +26,7 @@ Then ask the agent to apply GBFS.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [GBFS 3.0](https://raw.githubusercontent.com/MobilityData/gbfs/v3.0/gbfs.md): Specification, GBFS 3.0, fetched 2026-10-06 (Specification, 2026-10-06).
+- [GBFS 3.0](https://raw.githubusercontent.com/MobilityData/gbfs/v3.0/gbfs.md): Specification, GBFS v3.0 (git tag v3.0).
 
 ## License
 

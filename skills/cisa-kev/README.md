@@ -1,6 +1,6 @@
 # cisa-kev
 
-An agent skill for CISA KEV.
+An agent skill for CISA KEV: prioritizing vulnerability fixes with the CISA Known Exploited Vulnerabilities catalog and reading its JSON feed.
 
 ## Install
 
@@ -8,12 +8,11 @@ An agent skill for CISA KEV.
 npx skills add ScaleDockHQ/scaledock-skills --skill cisa-kev
 ```
 
-Then ask the agent to apply CISA KEV.
+Then ask your agent to apply CISA KEV.
 
 ## What it covers
 
-- when checking the Known Exploited Vulnerabilities catalog
-- The version lines in the table below, pinned to the revisions in `metadata.json`.
+- The CISA Known Exploited Vulnerabilities (KEV) catalog: the fields of each catalog entry from the KEV JSON schema in the cisagov/kev-data repository at a pinned commit, the remediation requirements of Binding Operational Directive 26-04, which now governs the catalog, and the catalog's inclusion and removal criteria.
 
 ## Versions
 
@@ -27,7 +26,9 @@ Then ask the agent to apply CISA KEV.
 
 The skill was written from these sources, pinned in `metadata.json`:
 
-- [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog): Catalog, CISA KEV catalog, fetched 2026-10-06 (Catalog, 2026-10-06).
+- [KEV catalog JSON schema (cisagov/kev-data)](https://raw.githubusercontent.com/cisagov/kev-data/b244ed1a640323565afba92100d7308d51c6614e/known_exploited_vulnerabilities_schema.json): CISA data schema, Commit b244ed1a6403 (2026-10-04).
+- [BOD 26-04: Prioritizing Security Updates Based on Risk](https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk): Binding Operational Directive, Issued June 10, 2026.
+- [BOD 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities (Revoked)](https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities): Binding Operational Directive (revoked), Issued November 3, 2021; revoked June 10, 2026.
 
 ## License
 
