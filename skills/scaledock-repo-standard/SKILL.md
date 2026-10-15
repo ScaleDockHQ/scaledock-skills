@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.9.0"
+  version: "1.10.0"
 ---
 
 # Repo standard
@@ -42,7 +42,7 @@ Resolve the placeholders listed in [`references/audit.md`](references/audit.md) 
    - **Exceptions.** Stay on the current major only when the pre-release fails `minimumReleaseAge` or breaks a peer with no compatible release. Record the blocker in the gap table.
    - **Tracking.** List every pre-release pin under "Pre-release pins" in AGENTS.md (package, version, why), and move it to stable when the major ships.
    - Pin exactly in the catalog. Never bypass `minimumReleaseAge`; use the newest release that passes, and add a commented exclude only when a fix needs it.
-3. **Read installed docs before configuring.** For Next.js, ask the running dev server's `/_next/mcp` first, then read the bundled `node_modules/next/dist/docs`. Read `node_modules/turbo/docs`, the Expo, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
+3. **Read installed docs before configuring.** For Next.js, ask the running dev server's `/_next/mcp` first, then read the bundled `node_modules/next/dist/docs`. Read `node_modules/turbo/docs`, the Expo, Ultracite, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
 4. **Done means `pnpm verify` passes.** Report with [`assets/report.md`](assets/report.md).
 5. **One branch and one PR for this whole run.** Follow the agent workflow in [`references/git-workflow.md`](references/git-workflow.md).
 
@@ -96,7 +96,9 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] [workspaces] Every workspace has a Turbo boundary tag, apps never import each other, and `pnpm boundaries` passes.
 - [ ] No Zod in our code, no `@radix-ui/*` or vaul, and each concern uses its one library.
 - [ ] Dates use `Temporal` through the one `temporal.ts` module; no other date library is installed.
-- [ ] Every tsgolint type-aware rule is on, or listed as off with a reason.
+- [ ] Lint and format run on Ultracite: a root `oxlint.config.ts` on the Ultracite presets with type-aware linting and `denyWarnings`, `oxfmt.config.ts` spreading `ultracite/oxfmt`, and `pnpm check` running `ultracite check`.
+- [ ] Every disabled lint rule carries a reason and a finding count.
+- [ ] GitHub-owned actions use major tags, third-party actions use a commit SHA with a `# vX.Y.Z` comment, same-repo actions use `$/...`, and public repos run zizmor.
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
@@ -115,11 +117,11 @@ The tag in brackets names the input that switches an item on; untagged items alw
 ## Reference index
 
 - **Run:** [`audit.md`](references/audit.md) (placeholders, repo kinds, gap checklist), [`report.md`](assets/report.md) (final report, manual steps), [`adr-template.md`](assets/adr-template.md).
-- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (oxlint, anti-slop, oxfmt).
+- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop).
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
 - **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps and Temporal, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
 - **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
 - **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK through AI Gateway).
-- **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).
+- **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, the direct-to-develop variant, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, pins, `$/` actions, zizmor, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).

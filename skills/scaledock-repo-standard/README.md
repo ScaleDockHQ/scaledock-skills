@@ -27,7 +27,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Audit first.** Upgrade and align modes fill a gap table from a fixed checklist before changing anything. Deliberate deviations live in ADRs and are kept, never changed silently.
 - **Always the latest.** The skill names no versions. Every runtime, package, SDK, action and spec is looked up at run time, and new majors in pre-release are adopted early and tracked in AGENTS.md.
 - **Read installed docs first.** Flag and option names are checked against the installed versions before configuring, starting with the Next.js dev server's `/_next/mcp` and bundled docs.
-- **Strict and typed.** The stable native TypeScript compiler, every type-aware oxlint rule at error, Valibot for every schema, and `Temporal` as the one date library.
+- **Strict and typed.** The stable native TypeScript compiler, Ultracite on Oxlint and Oxfmt with every type-aware rule at error, Valibot for every schema, and `Temporal` as the one date library.
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
 - **Unit and integration first.** Tests focus on the unit and integration layers. e2e and UI tests are slow and add little, so they are an opt-in for a few critical journeys.
@@ -51,7 +51,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
 - [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters.
 - [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
-- [`references/lint-format.md`](references/lint-format.md): oxlint presets, anti-slop, oxfmt.
+- [`references/lint-format.md`](references/lint-format.md): Ultracite presets on Oxlint and Oxfmt, anti-slop, house rules.
 - [`references/vercel.md`](references/vercel.md): Vercel first, Services, Turborepo, Remote Cache.
 - [`references/local-dev-env.md`](references/local-dev-env.md): Portless, the native dev loop, env and secrets.
 
@@ -74,8 +74,8 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 **Delivery:**
 
-- [`references/git-workflow.md`](references/git-workflow.md): branches, the agent workflow, commitlint, lefthook, Changesets, releases.
-- [`references/ci.md`](references/ci.md): GitHub Actions on release tags, EAS builds and Dependabot.
+- [`references/git-workflow.md`](references/git-workflow.md): branches, the agent workflow, the direct-to-develop variant, commitlint, lefthook, Changesets, releases.
+- [`references/ci.md`](references/ci.md): GitHub Actions pins, `$/` same-repo actions, zizmor, EAS builds and Dependabot.
 - [`references/tests.md`](references/tests.md): Vitest, jest-expo, pgTAP, optional Playwright, test rules.
 - [`references/agent-files.md`](references/agent-files.md): AGENTS.md, rules, the "also update" table, writing rules.
 - [`references/repo-files.md`](references/repo-files.md): README, standard files, `.github`, VS Code.

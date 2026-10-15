@@ -1,13 +1,28 @@
 # GitHub Actions and Dependabot
 
-Action versions, the shared setup action, the workflows, EAS builds, and Dependabot.
+Action pins, same-repo `uses`, zizmor and actionlint, the shared setup action, the workflows, EAS builds, and Dependabot.
 
 Applies to every repo kind. Each workflow below runs only the gates the repo has.
 
-- **Versions.** Every action targets its latest release by tag, never by commit SHA.
-  - Use the latest major tag (`@vN`) when the action publishes one, otherwise its latest release tag (`@vX.Y.Z`).
-  - zizmor's `unpinned-uses` rule is set to `"*": ref-pin` in `.github/zizmor.yml`, so tags pass and branch refs fail.
-  - Dependabot keeps the tags current.
+- **Pins.**
+  - GitHub-owned actions (`actions/*`, `github/*`) use their latest major tag (`@vN`).
+  - Every third-party action is pinned to a full commit SHA with a `# vX.Y.Z` comment naming its latest release, for example `uses: pnpm/action-setup@<40-char sha> # v5.0.0`.
+  - `.github/zizmor.yml` encodes this: `unpinned-uses` with `actions/*` and `github/*` set to `ref-pin` and `"*"` set to `hash-pin`.
+  - Dependabot moves both the tags and the SHAs, and rewrites the version comment.
+- **Same-repo `uses`.** Local actions and reusable workflows use GitHub's self-repository syntax, `$/.github/actions/setup` and `$/.github/workflows/verify.yml`, never `./...`.
+  - actionlint 1.7.12 does not parse `$/` yet ([rhysd/actionlint#711](https://github.com/rhysd/actionlint/issues/711)). `.github/actionlint.yaml` ignores those two messages instead of reverting to `./`:
+
+    ```yaml
+    # actionlint 1.7.12 rejects `$/` (rhysd/actionlint#711). Same-repo `uses` stays `$/` so zizmor's self-repository audit passes.
+    paths:
+      .github/workflows/**/*.{yml,yaml}:
+        ignore:
+          - 'reusable workflow call "\$/.+" at "uses" is not following the format'
+          - 'specifying action "\$/.+" in invalid format because ref is missing'
+    ```
+
+  - Remove the ignore once an actionlint release parses `$/`.
+- **zizmor** is required on public repos and optional on private ones. When it runs, keep every audit on, `self-repository` included; fix a finding or suppress that one line with a comment saying why.
 - **`.github/actions/setup`:** Remote Cache OIDC, then `pnpm/setup` with the Node major from `.node-version`, caching and `require-lockfile`.
 - **`ci.yml`:**
   - Runs on PRs and on pushes to the working branch and `main`.
@@ -22,7 +37,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 
   Next builds run with `--concurrency=1`. A job that runs `next build` restores `.next/cache` with `actions/cache`, keyed on the lockfile and the app's sources, so the Turbopack build cache survives between runs. Affected runs on PRs combine `--affected` with the job's `--filter`. A reusable `workflow_call`, so `release.yml` runs the same gate on the release commit.
 
-- **`security.yml`:** zizmor on workflow changes, and `dependency-review-action` on PRs.
+- **`security.yml`:** `dependency-review-action` on PRs, and on public repos zizmor and actionlint on workflow changes.
 - **`database.yml`:** on `supabase/**` changes, start the stack (native processes, no Docker service), run `supabase db schema declarative sync --no-apply --strict-coverage` and fail if it errors or leaves a new file in `supabase/migrations/` (schema files and migrations have drifted), then run pgTAP and lint the SQL.
 - **`powersync.yml`** (Offline: yes): on `packages/sync/powersync/**` changes, validate the sync config against the local stack.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md).

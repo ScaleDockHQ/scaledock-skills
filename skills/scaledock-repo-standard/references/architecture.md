@@ -27,7 +27,6 @@ packages/
   ui-native/   Uniwind primitives for apps/mobile, when ui stays on shadcn
   sync/        PowerSync schema, connector, sync streams and local stack, when Offline is yes
   next-config/ createNextConfig(), security headers, monorepo env loader
-  ox-config/   ONE package: oxlint presets, oxfmt config, ignores, anti-slop plugin
   typescript-config/  base.json, library.json, react-library.json, next.json, expo.json (with Expo)
   cli/         library CLI (@{{SCOPE}}/cli), when CLI kind is "library"
 tests/         integration, fixtures, optional e2e (Playwright + axe + @next/playwright)
@@ -44,7 +43,7 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
 
 - **Thin apps.** Apps are thin adapters over `services` with one typed context, and they never import each other.
 - **Turbo boundaries.** Every workspace has a tag:
-  - `typescript-config` and `ox-config` carry the `tooling` tag. Every workspace may import `tooling` as a dev dependency, and the rules below list only runtime imports.
+  - `typescript-config` carries the `tooling` tag. Lint and format config lives at the root (`oxlint.config.ts`, `oxfmt.config.ts`), not in a workspace. Every workspace may import `tooling` as a dev dependency, and the rules below list only runtime imports.
   - `domain` imports nothing internal.
   - `contract` imports `domain`.
   - `services` imports `supabase`, `policy`, `ai`, `email` and `domain`.

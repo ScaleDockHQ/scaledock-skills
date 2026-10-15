@@ -14,7 +14,8 @@ Applies to every repo kind. A tooling repo without TypeScript skips the tsconfig
 - **pnpm:** the latest release, as an exact version in `packageManager`, `engines` and `devEngines.packageManager` (`onFail: "error"`), never a range.
 - **Root `package.json`:** `"private": true`, `"type": "module"`, `"license": "MIT"`.
 - **TypeScript:** the latest `typescript` release, which is the native Go compiler from 7.0 on.
-  - Never install `@typescript/native-preview` (retired) or `@typescript/typescript6`. Nothing in the standard needs the JS compiler API: Knip parses with oxc, Next runs the project-local `tsc`, and oxlint type-checks through tsgolint.
+  - Never install `@typescript/native-preview` (retired). Nothing in the standard needs the JS compiler API: Knip parses with oxc, Next runs the project-local `tsc`, and oxlint type-checks through tsgolint.
+  - `@typescript/typescript6` is allowed only for a library that calls the JS compiler API or ships a classic-compiler fallback for consumers on TypeScript 5.9 or 6. Add it as a catalog alias (`typescript-classic: npm:@typescript/typescript6@<exact>`), depend on it only from that package, and record it in an ADR.
   - `typecheck` is `tsc --noEmit`. Leave `--checkers` and `--builders` at their defaults; use `--singleThreaded` only on a memory-constrained runner, with a comment.
   - `typescript` and `oxlint-tsgolint` move together, because tsgolint tracks the TypeScript version.
 
