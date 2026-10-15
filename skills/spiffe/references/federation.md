@@ -76,7 +76,8 @@ interface FederationConfig {
   trustDomain: string; // configured, never derived from the URL
   url: string;
   profile:
-    { kind: "https_web" } | { kind: "https_spiffe"; endpointSpiffeId: string };
+    | { kind: "https_web" }
+    | { kind: "https_spiffe"; endpointSpiffeId: string };
 }
 
 interface StoredBundle {

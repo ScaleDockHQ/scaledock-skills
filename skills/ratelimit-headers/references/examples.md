@@ -163,7 +163,11 @@ A small parser for the subset of RFC 9651 Lists these fields use. It returns `un
 
 ```ts
 type BareItem =
-  string | number | boolean | { token: string } | { bytes: string };
+  | string
+  | number
+  | boolean
+  | { token: string }
+  | { bytes: string };
 
 interface Item {
   value: BareItem;

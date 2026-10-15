@@ -96,7 +96,8 @@ Check the keys against the installed docs:
     ],
     "inputs": [
       "packages/typescript-config/**",
-      "packages/ox-config/**",
+      "oxlint.config.ts",
+      "oxfmt.config.ts",
       "pnpm-workspace.yaml",
     ],
   },
