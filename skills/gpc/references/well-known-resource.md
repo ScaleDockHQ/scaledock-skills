@@ -50,7 +50,8 @@ A consumer (crawler, auditor, browser feature) follows redirects, then decides:
 
 ```ts
 type GpcSupport =
-  { kind: "unknown" } | { kind: "known"; gpc: boolean; lastUpdate?: string };
+  | { kind: "unknown" }
+  | { kind: "known"; gpc: boolean; lastUpdate?: string };
 
 const RFC3339_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const RFC3339_DATE_TIME =

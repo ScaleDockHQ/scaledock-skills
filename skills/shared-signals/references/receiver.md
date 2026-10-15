@@ -150,7 +150,8 @@ export function validateSet(
     return { ok: false, err: "invalid_request" };
   }
   const events = payload.events as
-    Record<string, Record<string, unknown>> | undefined;
+    | Record<string, Record<string, unknown>>
+    | undefined;
   const types = events ? Object.keys(events) : [];
   if (types.length !== 1) return { ok: false, err: "invalid_request" };
   const [type] = types;

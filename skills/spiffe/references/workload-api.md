@@ -23,7 +23,8 @@ Clients may be configured with the socket address. If not, they MUST fall back t
 export function parseEndpointSocket(
   value: string,
 ):
-  { kind: "unix"; path: string } | { kind: "tcp"; host: string; port: number } {
+  | { kind: "unix"; path: string }
+  | { kind: "tcp"; host: string; port: number } {
   const url = new URL(value);
   if (url.search || url.hash || url.username || url.password)
     throw new Error("no other URI components allowed");

@@ -59,9 +59,10 @@ The usage snippets on the site, for example:
 
 ```ts
 import type { StandardJSONSchemaV1 } from "@standard-schema/spec";
-import * as z from "zod";
-import * as v from "valibot";
+
 import { toStandardJsonSchema } from "@valibot/to-json-schema";
+import * as v from "valibot";
+import * as z from "zod";
 
 z.string() satisfies StandardJSONSchemaV1;
 toStandardJsonSchema(v.string()) satisfies StandardJSONSchemaV1;
