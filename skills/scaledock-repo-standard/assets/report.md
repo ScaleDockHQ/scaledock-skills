@@ -40,8 +40,9 @@ Steps an agent cannot do. Tick the ones already done.
 
 - [ ] `vercel link`
 - [ ] Marketplace installs and Connect connectors
-- [ ] `REUI_LICENSE_KEY` and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as team Shared Environment Variables
-- [ ] The `TURBO_TEAM` variable
+- [ ] `pnpm self-update <version>` on every machine, after a pnpm bump
+- [ ] `REUI_LICENSE_KEY` and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as team Shared Environment Variables, and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as a GitHub secret
+- [ ] The `TURBO_TEAM` variable, then a CI run whose Remote Cache step is not `outcome=skipped`
 - [ ] Web Analytics and Speed Insights
 - [ ] Branch protection (PR required, required checks, squash only) and the Supabase GitHub integration
 - [ ] Stripe Data Pipeline connected to each Supabase project from the Stripe Dashboard

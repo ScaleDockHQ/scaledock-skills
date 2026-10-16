@@ -32,9 +32,12 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   ```
 
   - The last ignore also hides a genuinely empty step, and actionlint does not lint the steps inside a `parallel` group. zizmor covers both.
+  - Workflows with parallel steps, `$/` actions, `cache-mode` and `concurrency.queue` pass with exactly this list.
   - Remove each ignore once an actionlint release parses the feature. If actionlint stays unmaintained, zizmor is the only required workflow linter.
 
 - **zizmor** is required on public repos and optional on private ones. Run the latest release (`zizmorcore/zizmor-action` defaults to it); older releases do not parse parallel steps. Keep every audit on, `self-repository` included; fix a finding or suppress that one line with a comment saying why.
+  - zizmor 1.31 warns that parallel-step support is experimental. The warning does not fail the run.
+- **Running both locally.** Download the zizmor and actionlint release binaries into a temporary directory (`mktemp -d`) and run them from there. The pnpm runtime ships Node without npm, so `npx` is not an option.
 
 ## Speed
 
@@ -42,6 +45,20 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - A separate job gets its own machine and its own check. Use one for CPU-heavy gates (`test`, `next build`) and for anything that must report on its own.
   - `parallel` steps share one machine and one install. Use them for cheap, I/O-bound or waiting work, so a job pays checkout and install once.
   - Private-repo standard Linux runners have fewer cores than public ones, so CPU-bound gates gain less from `parallel` there.
+  - Timing-sensitive gates (a type-check time ceiling, benchmarks, CLI startup budgets) each get their own job. Never put them in the shared `parallel` group, where CPU contention makes them flake.
+- **Build first.** A `build` job runs `turbo run build`, uploads `dist` with `actions/upload-artifact`, and fills the Remote Cache. `verify` and the heavy suites declare `needs: build`, so every later job gets Turbo cache hits instead of rebuilding.
+  - Add `needs: build` only when the longest chain already runs behind `build`; otherwise it lengthens the run. Measure that first with `gh run view <id> --json jobs`.
+  - The Remote Cache must be active ([Caching](#caching)); without it every later job rebuilds.
+  - _Verified in ScaleDockHQ/permdock PR #162: the shape is green; the saving is unmeasured until that repo's Remote Cache is on._
+- **Skip unaffected heavy suites** (integration, runtimes, e2e).
+  - The `build` job checks out with `fetch-depth: 0` and `filter: blob:none`, runs `turbo query affected --packages <suite> --exit-code` once per suite, and writes the result to `$GITHUB_OUTPUT`, exposed as a job output. The heavy job sets `if: needs.build.outputs.<suite> == 'true'`.
+  - Exit code 0 means nothing is affected, so the suite is skipped; 1 means affected; 2 means a query error. Treat 2 as affected, so an error fails open and runs the suite.
+  - Pushes to the default branch run every suite.
+  - Affected detection follows the dependency graph: a library change marks its dependent test workspaces as affected.
+  - A skipped job counts as passing for a required status check, so the gated jobs can stay required.
+- **Strict task entrypoints.** With the `strictTaskEntrypointSelection` future flag ([`vercel.md`](vercel.md)), `turbo run test` and the static task set stop pulling in Next.js builds for workspaces that have no such task. In PermDock, `test` dropped from about 50 `build` tasks to 17, and the static set kept one Next build.
+  - Check with `turbo run <tasks> --dry=json` and count the tasks whose `task` is `build`.
+  - Once each job builds at most one Next app, drop the serial `--concurrency=1` Next pre-build step.
 - **Parallel steps.**
   - `parallel:` takes a self-contained group of steps, runs them at once with separate logs, and waits for all of them.
   - `background: true` with an `id` starts one step and moves on. `wait: <id>` (or a list), or `wait-all:`, blocks until it finishes; `cancel: <id>` stops it with SIGTERM. Use these for long-running services.
@@ -56,15 +73,24 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - `ubuntu-latest`. It moves to Ubuntu 26.04 between October 19 and November 19, 2026; pin `ubuntu-24.04` only as a temporary hold-back with a comment saying why.
   - arm64 (`ubuntu-24.04-arm`, `ubuntu-26.04-arm`) is optional for JavaScript-only jobs once they pass there. `database.yml` stays on x64 until the Supabase native runtime is confirmed on arm.
   - No `macos-14`; it is retired.
+  - Standard runners are free on public repos, so moving a job to a smaller or larger runner changes no cost there.
 - **Every job sets `timeout-minutes`**, sized to about three times its normal run (around 10 for static gates, 20 for test and build, 30 for e2e), so a hung job does not run for the 6-hour default.
 - **Sharding.** Split Vitest or Playwright across matrix jobs (`--shard=i/n`) only once a suite passes about 5 minutes. Playwright shards upload blob reports and a final job merges them.
+  - pnpm appends extra arguments after `pnpm run <script>` to the end of the script's command, so `pnpm run test:integration --shard=1/3` reaches Vitest.
+  - `vitest list --shard` ignores the shard. To confirm the split, run `vitest run --shard=i/n -t <pattern that matches nothing> --reporter=json` and count `testResults`.
+  - In PermDock, a 299-second integration suite became 3 shards of 34, 34 and 33 files.
 
 ## Caching
 
-- **pnpm store.** `pnpm/setup` with `cache: true`. Only the default branch saves it: `save-cache: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}`. PRs and the other matrix jobs restore that entry, so they do not upload near-identical stores against the 10 GB per-repo limit, which evicts the least recently used entries.
+- **pnpm store.** `pnpm/setup` with `cache: true`. Only the default branch saves it: the setup action's `save-cache` input defaults to `${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}`. Composite action input defaults may use the `github` context, so callers never repeat the expression. PRs and the other matrix jobs restore that entry, so they do not upload near-identical stores against the 10 GB per-repo limit, which evicts the least recently used entries.
+  - A setup post step that takes 13 to 20 seconds on a PR job means the store is still being saved there.
+  - _Verified in ScaleDockHQ/permdock PR #162: the post step took 0 to 1 seconds on every PR job._
 - **`install: false`** on jobs that need only pnpm, such as `pnpm audit signatures`.
 - **Task outputs** come from the Turborepo Remote Cache ([`vercel.md`](vercel.md)). Never also put Turbo outputs in `actions/cache`.
+  - The audit confirms the Remote Cache is active. An unset `vars.TURBO_TEAM` makes the setup action skip the Remote Cache step silently, and Turbo logs "Remote caching disabled". Check `gh variable list`, and look for `outcome=skipped` on the Remote Cache step in `gh run view <id> --log`.
+  - The report lists the `TURBO_TEAM` variable and the `TURBO_REMOTE_CACHE_SIGNATURE_KEY` secret as manual steps.
 - **`.next/cache`.** `actions/cache/restore` in every job that runs `next build`, and `actions/cache/save` only on the default branch, keyed on the lockfile hash and the app's sources, so the Turbopack build cache survives between runs.
+  - First confirm the Turbopack build cache is on. If `next.config` turns `turbopackFileSystemCacheForBuild` off in CI, the restore does nothing: remove the step, or record an ADR for keeping the cache off.
 - **Playwright browsers.** Cache `~/.cache/ms-playwright` keyed on the resolved `@playwright/test` version; on a hit, run only `playwright install-deps`.
 - **`cache-mode`** applies least privilege to the cache, per workflow or per job, and a called workflow never gets more than its caller:
   - `read` on any workflow triggered by `pull_request_target`, `issue_comment` or `workflow_run` (GitHub's default for those, made explicit).
@@ -84,15 +110,15 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 
 ## Workflows
 
-- **`.github/actions/setup`:** Remote Cache OIDC, then `pnpm/setup` with the Node major from `.node-version`, `require-lockfile`, and `cache: true` with a `save-cache` input that defaults to the default branch only.
+- **`.github/actions/setup`:** Remote Cache OIDC, then `pnpm/setup` with the Node major from `.node-version`, `require-lockfile`, and `cache: true`. Two inputs pass through to `pnpm/setup`: `save-cache`, which defaults to the default branch only, and `install`, which defaults to `"true"`.
 - **`ci.yml`:**
   - Runs on PRs and on pushes to the working branch and `main`.
   - Minimal permissions plus `id-token: write`, cancelling concurrency and `CI: true`.
   - A `pr-title` job runs commitlint on the PR title.
-  - Calls `verify.yml` (affected-only on PRs), then e2e if the repo has it.
+  - With build first, a `build` job that also computes the affected heavy suites. Then it calls `verify.yml` (affected-only on PRs), then the gated heavy suites and e2e if the repo has them.
 - **`verify.yml`:** a reusable `workflow_call`, so `release.yml` runs the same gate on the release commit. It runs every `pnpm verify` gate and nothing else, so local and CI results agree, in two parts:
-  - A `static` job: one checkout and setup, then one `parallel` group with a single Turbo step for the workspace tasks (lint, typecheck, knip, `openapi:check`, `i18n:check`, `docs:drift`) and one step per root-only check (`format:check`, `lint:root`, `boundaries`).
-  - A `fail-fast: false` matrix with one job each for `test`, `build`, `audit:high` and `doctor`. Next builds run with `--concurrency=1` and restore `.next/cache`.
+  - A `static` job: one checkout and setup, then one `parallel` group with a single Turbo step for the workspace tasks (lint, typecheck, knip, `openapi:check`, `i18n:check`, `docs:drift`) and one step per root-only check (`format:check`, `lint:root`, `boundaries`). _Verified in ScaleDockHQ/permdock PR #162: the `parallel` group took 22 seconds._
+  - A `fail-fast: false` matrix with one job each for `test`, `build`, `audit:high` and `doctor`, plus one per timing-sensitive gate. Next builds restore `.next/cache`. A job that still builds several Next apps runs them with `--concurrency=1` until strict task entrypoints cut it to one.
   - Affected runs on PRs combine `--affected` with the job's `--filter`.
 
   ```yaml
@@ -117,7 +143,8 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
             run: pnpm boundaries
   ```
 
-- **`security.yml`:** `dependency-review-action` on PRs, `pnpm audit signatures` as a non-blocking step (`continue-on-error: true`, `install: false`) on lockfile changes, and on public repos zizmor and actionlint on workflow changes.
+- **`security.yml`:** `dependency-review-action` on PRs, `pnpm audit signatures` as a non-blocking job on lockfile changes, and on public repos zizmor and actionlint on workflow changes.
+  - Workflow `paths` filters cannot scope a single job. The signatures job sets `continue-on-error: true`, checks out with `fetch-depth: 0` and `filter: blob:none`, runs `git diff --quiet "origin/$BASE...HEAD" -- pnpm-lock.yaml` (with `BASE` from `github.base_ref`), and gates its later steps on the result.
 - **`database.yml`:** on `supabase/**` changes, on an x64 Ubuntu runner (no Docker service):
   - Start the project with `supabase start --runtime native` as a background step while dependencies install, then `wait` for it.
   - Run `supabase db schema declarative sync --no-apply --strict-coverage` and fail if it errors or leaves a new file in `supabase/migrations/` (schema files and migrations have drifted).

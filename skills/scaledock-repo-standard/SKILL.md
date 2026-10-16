@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.12.0"
+  version: "1.13.0"
 ---
 
 # Repo standard
@@ -99,7 +99,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] Lint and format run on Ultracite: a root `oxlint.config.ts` on the Ultracite presets with type-aware linting and `denyWarnings`, `oxfmt.config.ts` spreading `ultracite/oxfmt`, and `pnpm check` running `ultracite check`.
 - [ ] Every disabled lint rule carries a reason and a finding count.
 - [ ] GitHub-owned actions use major tags, third-party actions use a commit SHA with a `# vX.Y.Z` comment, same-repo actions use `$/...`, and public repos run zizmor.
-- [ ] `verify.yml` runs the static gates in one job with a `parallel` group, services run as `background` steps, only the default branch saves caches, and every job sets `timeout-minutes`.
+- [ ] `verify.yml` runs the static gates in one job with a `parallel` group, services run as `background` steps, only the default branch saves caches, the Remote Cache step is not skipped in CI, and every job sets `timeout-minutes`.
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
