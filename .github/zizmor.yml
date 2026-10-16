@@ -2,8 +2,10 @@ rules:
   unpinned-uses:
     config:
       policies:
-        # The standard targets each action's latest release tag instead of a commit SHA; Dependabot keeps the tags current.
-        "*": ref-pin
+        # GitHub-owned actions use major tags; third-party actions use a commit SHA with a version comment. Dependabot moves both.
+        "actions/*": ref-pin
+        "github/*": ref-pin
+        "*": hash-pin
   dependabot-cooldown:
     config:
       # Matches cooldown.default-days in dependabot.yml, which the standard sets to 2.
