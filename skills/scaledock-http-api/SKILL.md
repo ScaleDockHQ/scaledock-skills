@@ -4,7 +4,7 @@ description: Build or review a ScaleDock HTTP API that follows HTTP Semantics (R
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # ScaleDock HTTP API
