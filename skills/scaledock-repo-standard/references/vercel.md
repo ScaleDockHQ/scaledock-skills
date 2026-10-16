@@ -137,6 +137,7 @@ Check the keys against the installed docs:
 - **Boundaries:** every workspace has `boundaries` tags.
 - **Generated inputs:** a task that reads files another task generates (the `supabase:types` output, Uniwind artifacts) excludes them from its static `inputs` and adds `{ "mode": "jit", "globs": [...] }`, so the hash reflects the generated content.
 - **Scoped runs:** with `affectedUsingTaskInputs` and `filterUsingTasks`, `--affected` and `--filter` both select by task `inputs` and combine. CI and agents pass `--json` or `--log-file` where the installed version supports them, and read the structured output instead of scraping logs.
+- **Strict entrypoints:** with `strictTaskEntrypointSelection`, a requested task starts only in packages that define a command for it, so `turbo run test` no longer builds Next.js apps that have no `test` script. Count the `build` tasks in `turbo run <tasks> --dry=json` before and after ([`ci.md`](ci.md)).
 - **Pruned images:** `turbo prune <app> --production` for a Docker build leaves dev dependencies out.
 - **Not adopted:** the experimental Cargo, Python and setup flags. Turn one on only with an ADR.
 
@@ -144,3 +145,4 @@ Check the keys against the installed docs:
 
 - **Locally:** `turbo login` and `turbo link`.
 - **In CI:** OIDC with the `TURBO_TEAM` variable and signed artifacts. `TURBO_REMOTE_CACHE_SIGNATURE_KEY` is a team Shared Environment Variable and a GitHub secret.
+  - An unset `vars.TURBO_TEAM` makes the setup action skip the Remote Cache step silently; Turbo then logs "Remote caching disabled" and every job rebuilds.

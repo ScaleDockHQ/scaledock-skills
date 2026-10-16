@@ -92,6 +92,8 @@ export default config;
 
 With an issue prefix, add only `parserPreset.parserOpts.issuePrefixes` and `"references-empty": [1, "never"]`.
 
+The config-conventional preset limits body and footer lines to 100 characters, so commit bodies that record before-and-after numbers wrap.
+
 ## `lefthook.yml`
 
 Use the `jobs` syntax:
