@@ -35,6 +35,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExcludePrune: true # drop excludes the lockfile no longer resolves
 trustPolicy: no-downgrade
 trustPolicyExcludePrune: true # same for trustPolicyExclude
+blockExoticSubdeps: true # transitive deps resolve only from the registry, never git or tarball URLs
 allowBuilds: { lefthook: true, supabase: true, esbuild: true } # each entry reviewed and commented
 nodeOptions: "${NODE_OPTIONS:- } --disable-warning=MODULE_TYPELESS_PACKAGE_JSON"
 overrides:
@@ -49,6 +50,7 @@ overrides:
 Every workspace dependency is `catalog:` or `workspace:*`. Every override, `minimumReleaseAgeExclude` entry, `allowBuilds` entry and patch has a comment explaining why.
 
 - pnpm fails on a key it does not recognize when the pinned version is running, so check every key against the installed `pnpm-workspace.yaml` docs.
+- `blockExoticSubdeps` is set explicitly even where pnpm defaults it on, so the policy survives a default change.
 - An explicit `minimumReleaseAge` makes `minimumReleaseAgeStrict` true, so a too-young version stops with an approval prompt instead of being excluded silently. Never approve it to get around the policy.
 
 With Expo (see [`expo.md`](expo.md)):

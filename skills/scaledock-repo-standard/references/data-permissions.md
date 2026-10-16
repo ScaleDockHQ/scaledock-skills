@@ -6,8 +6,11 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 
 ## Which package owns what
 
-- **`@supabase/server`** verifies bearer tokens over JWKS and builds the request context: `createRequestSupabaseContext(request, { env, auth: "user" })`. Nothing else verifies tokens.
-- **`@supabase/ssr`** owns web session cookies, and only the proxy refreshes them.
+- **`@supabase/server`** (1.x) verifies bearer tokens over JWKS and builds the request context: `withSupabase({ auth: "user" }, handler)`, or `createSupabaseContext(request, { auth: "user" })` where the caller shapes the error response. Nothing else verifies tokens.
+  - Composable steps use `pipeline` from `@supabase/middleware` with the `@supabase/server/middleware/*` entries; the primitives (`verifyCredentials`, `createContextClient`, `createAdminClient`) live in `@supabase/server/core`.
+  - It reads `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEYS`, `SUPABASE_SECRET_KEYS` and `SUPABASE_JWKS` (or `SUPABASE_JWKS_URL`). Use the plural, named-key forms; the singular ones are fallbacks.
+  - Code written against 0.x follows its `MIGRATION.md` (`allow` became `auth`, `"public"` became `"publishable"`, `claims` became `jwtClaims`).
+- **`@supabase/ssr`** owns web session cookies, and only the proxy refreshes them. Server code hands the refreshed access token to `verifyCredentials` from `@supabase/server/core`; never trust `getSession()` on the server.
 - **better-supabase** wraps those contexts with the generated types and `Result` repositories through its framework subpaths. Apps import the subpath, not `@supabase/server` directly.
   - The definition is named `betterSupabase`, and every runtime instance an adapter creates is named `bs`, in code and docs alike. Adapter factories return `Better<Thing>` (`BetterNext`, `BetterClient`, `BetterPostgres`), and the `./client` subpath exports `createClient`.
   - Each app keeps its instances in `lib/supabase/` as described in the naming rules in [`architecture.md`](architecture.md).
@@ -44,6 +47,8 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 - **Config in code.** Auth, API and storage settings live in `config.toml`. `pnpm supabase:pull` (`supabase config pull`) brings a dashboard change back into the file; no setting lives only in the dashboard.
 - `[remotes.main]` and `[remotes.develop]`. The GitHub integration applies migrations; never `db push` from CI.
 - ES256 signing key from `pnpm supabase:signing-key`, gitignored. Legacy HS256 tokens are rejected by `@supabase/server`.
+- **Realtime.** Postgres Changes subscriptions set `select` to the columns the UI needs, and filter on the server with AND filters across columns (`status=eq.open,team=eq.billing`) or `postgresChangesFilter()`. Delivery is best effort, so never copy data with Postgres Changes. Replication goes through Supabase Pipelines, whose publications use row filters and column lists because Pipelines bypasses RLS.
+- **Storage.** Remove objects through the Storage API, never with `delete from storage.objects`, and never set `storage.allow_delete_query`. List with `listV2`.
 - RLS on every table, with pgTAP tests.
 - Regenerate the types for `public` and `graphql_public` together.
 

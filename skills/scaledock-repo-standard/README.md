@@ -63,7 +63,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/app-shell.md`](references/app-shell.md): auth pages, shell, page templates, standard screens.
 - [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web.
 - [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native.
-- [`references/data-permissions.md`](references/data-permissions.md): multi-tenancy, Supabase (a local project per worktree or agent on the native runtime, declarative schemas on `pg-delta`, config in code), Stripe data through Data Pipeline, better-supabase, audit log, PermDock.
+- [`references/data-permissions.md`](references/data-permissions.md): multi-tenancy, Supabase (a local project per worktree or agent on the native runtime, declarative schemas on `pg-delta`, config in code, `@supabase/server` 1.x, Realtime and Storage rules), Stripe data through Data Pipeline, better-supabase, audit log, PermDock.
 - [`references/data-conventions.md`](references/data-conventions.md): UTC timestamps and Temporal types, integer money, UUID and integer IDs, naming, standard codes, pagination, deletion.
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface, and the OAuth Consent block.
 - [`references/api.md`](references/api.md): Hono, oRPC, Scalar.
