@@ -4,7 +4,7 @@ description: Build or harden a ScaleDock MCP server that follows the MCP base pr
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # ScaleDock MCP server
@@ -45,7 +45,7 @@ Optional: `mcp-apps` (`npx skills add ScaleDockHQ/scaledock-skills --skill mcp-a
 
 1. **Set the inputs and read the docs.** Read the installed `@modelcontextprotocol/server` docs, the `permdock/mcp` page through the PermDock docs MCP (`https://permdock.dev/mcp`), and the `mcp` and `mcp-authorization` skills' Invariants.
    ✓ You can name the spec revision the SDK serves and the PermDock options you will set.
-2. **Resource server.** Serve Protected Resource Metadata, return 401 with the `resource_metadata` challenge, and verify every bearer token (signature, issuer, expiry, audience) as `mcp-authorization` and `jwt` require. With Supabase, wrap the handler in `withOAuthProtectedResource` and `withSupabase({ auth: "user" })` from `@supabase/server` (the nested form), and serve the OAuth Consent block at `/oauth/consent` in the app.
+2. **Resource server.** Serve Protected Resource Metadata, return 401 with the `resource_metadata` challenge, and verify every bearer token (signature, issuer, expiry, audience) as `mcp-authorization` and `jwt` require. With Supabase, compose `withOAuthProtectedResource` and then `withSupabase({ auth: "user" })` from `@supabase/server` in a `pipeline` from `@supabase/middleware`, and serve the OAuth Consent block at `/oauth/consent` in the app.
    -> [`references/stack.md`](references/stack.md) (how each requirement maps to the ScaleDock stack)
    ✓ An unauthenticated request gets 401 with the metadata URL, a token for another resource is rejected, and a signed-out user reaching `/oauth/consent` signs in and returns to the consent screen.
 3. **Permissions.** Define one permission per tool in `permissions.ts`, grant them in `policy.ts`, and register tools with `protectServer`. Follow `wire-permdock` from `ScaleDockHQ/PermDock`. With `mcp-apps`, link each UI tool to its `ui://` resource and keep its text result; a view's `tools/call` goes through the same PermDock decision.

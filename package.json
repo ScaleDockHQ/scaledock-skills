@@ -14,7 +14,8 @@
     "sources:check": "node scripts/check-sources.mjs",
     "validate": "node scripts/validate-skills.mjs",
     "verify": "pnpm check",
-    "versions:check": "node scripts/check-version-lines.mjs"
+    "versions:check": "node scripts/check-version-lines.mjs",
+    "watch:check": "node scripts/check-watch.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",

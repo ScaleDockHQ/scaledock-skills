@@ -17,7 +17,7 @@ The `scaledock-http-api` skill builds on this reference, and the `openapi`, `ope
   - `OpenAPIReferenceHandlerPlugin` serves Scalar at `/api/docs` and the spec at `/api/openapi.json`. Improve Scalar through contract meta, not Scalar config.
   - The document's `info`, `tags`, `servers` and security schemes live in `@{{SCOPE}}/contract/openapi`. Use the newest OpenAPI version the installed oRPC emits.
   - The snapshot `apps/api/openapi.json` is committed, and CI fails on drift.
-- **Request context.** One `createRequestSupabaseContext(request, { env, auth: "user" })` per request, plus one PermDock instance, handed to `services`.
+- **Request context.** One `createSupabaseContext(request, { auth: "user" })` per request, plus one PermDock instance, handed to `services`.
 - **Other routes:**
   - Crons at `/api/cron/<name>`, protected by `CRON_SECRET`.
   - Webhooks at `/api/webhooks/<provider>`, with the signature verified and idempotency keyed on the provider event ID.

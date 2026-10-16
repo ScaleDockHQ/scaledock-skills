@@ -56,3 +56,7 @@ jobs:
         run: pnpm sources:check
       - name: Check version lines
         run: pnpm versions:check
+      - name: Check release watch lists
+        run: pnpm watch:check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

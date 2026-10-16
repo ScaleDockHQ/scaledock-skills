@@ -44,6 +44,7 @@ Steps an agent cannot do. Tick the ones already done.
 - [ ] The `TURBO_TEAM` variable
 - [ ] Web Analytics and Speed Insights
 - [ ] Branch protection (PR required, required checks, squash only) and the Supabase GitHub integration
+- [ ] Stripe Data Pipeline connected to each Supabase project from the Stripe Dashboard
 - [ ] The Google OAuth client
 - [ ] The OAuth server settings, plus the Scalar and CLI clients for each environment
 - [ ] npm trusted publishing

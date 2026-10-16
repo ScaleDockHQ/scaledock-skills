@@ -17,6 +17,9 @@ const VERSION_FIELDS = ["id", "label", "status", "revision"];
 const VERSION_STATUSES = new Set(["current", "supported", "legacy", "preview"]);
 const POSTURES = new Set(["build", "name", "track"]);
 const PREVIEW_SUFFIX = "-preview";
+const WATCH_KEYS = { npm: "name", github: "repo", feed: "url" };
+const SEMVER = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/;
+const GITHUB_REPO = /^[\w.-]+\/[\w.-]+$/;
 // Spec skills stay neutral; only the author field and the install source may name us.
 const ALLOWED_MENTIONS = [
   /^\s*author:\s*ScaleDockHQ\s*$/gm,
@@ -134,6 +137,52 @@ function validateSources(skillDir, skillContent, json) {
       );
     }
   }
+  return errors;
+}
+
+function validateWatch(json) {
+  if (json.watch === undefined) return [];
+  if (!Array.isArray(json.watch))
+    return ["metadata.json `watch` must be an array"];
+  const errors = [];
+  const seen = new Set();
+  json.watch.forEach((entry, index) => {
+    const key = WATCH_KEYS[entry?.type];
+    if (!key) {
+      errors.push(
+        `watch[${index}] type "${entry?.type}" is not one of ${Object.keys(WATCH_KEYS).join(", ")}`,
+      );
+      return;
+    }
+    const target = entry[key];
+    if (typeof target !== "string" || !target) {
+      errors.push(`watch[${index}] (${entry.type}) is missing \`${key}\``);
+      return;
+    }
+    if (entry.type === "github" && !GITHUB_REPO.test(target)) {
+      errors.push(`watch[${index}] repo "${target}" is not owner/name`);
+    }
+    if (entry.type === "feed" && !/^https?:\/\//.test(target)) {
+      errors.push(`watch[${index}] url "${target}" is not http(s)`);
+    }
+    if (entry.type === "npm" && !SEMVER.test(entry.seen ?? "")) {
+      errors.push(`watch[${index}] (${target}) needs a semver \`seen\``);
+    }
+    if (
+      entry.tag !== undefined &&
+      (entry.type !== "npm" || typeof entry.tag !== "string" || !entry.tag)
+    ) {
+      errors.push(
+        `watch[${index}] (${target}) \`tag\` is only for npm entries and must be a dist-tag name`,
+      );
+    }
+    if (!ISO_DATE.test(entry.checked ?? "")) {
+      errors.push(`watch[${index}] (${target}) checked is not YYYY-MM-DD`);
+    }
+    const id = `${entry.type}:${target}`;
+    if (seen.has(id)) errors.push(`watch lists ${id} twice`);
+    seen.add(id);
+  });
   return errors;
 }
 
@@ -280,6 +329,7 @@ function validateSkill(folder, rootReadme) {
         `metadata.json version "${json.version}" does not match SKILL.md metadata.version "${frontmatterVersion}"`,
       );
     }
+    if (json) errors.push(...validateWatch(json));
     if (json && isStandard) {
       errors.push(...validateSources(skillDir, skillContent, json));
       errors.push(...validateVersions(skillDir, skillContent, json));

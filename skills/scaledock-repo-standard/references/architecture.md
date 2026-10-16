@@ -86,10 +86,11 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
 - **Env.** Each app has one `env.ts` (t3-env with Valibot), the only file that reads `process.env`. Read `NEXT_PUBLIC_*` and `EXPO_PUBLIC_*` literally. Derive every public URL from `NEXT_PUBLIC_SITE_URL`.
 - **Standard services**, each behind one wrapper so features never import a vendor SDK:
   - Sentry behind `lib/monitoring` (`@sentry/nextjs`, `@sentry/react-native` on Expo, or Sentry's Hono or Node SDK in services).
+  - Supabase trace propagation: each entry point imports `@supabase/supabase-js/tracing` once, and every client is created with `tracePropagation: true` (needs `@opentelemetry/api`), so spans link to the Supabase API gateway and Edge Function logs.
   - Push notifications on Expo: the app registers an `expo-notifications` token through the API, and `apps/api` sends through `expo-server-sdk`.
   - Vercel Web Analytics and Speed Insights in the root layouts.
   - Resend through `packages/email`.
-  - Stripe per organization: price IDs in the database, webhooks verified in `apps/api`, operational settings in `platform_settings`.
+  - Stripe per organization: price IDs in the database and operational settings in `platform_settings`. Stripe Data Pipeline syncs Stripe data into the `stripe_sdp` schema, and reads come from there; webhooks, verified in `apps/api`, only trigger side effects. See [`data-permissions.md`](data-permissions.md).
 - **Code rules.** Imports at the top. Exhaustive `switch` with a `never` default. Only erasable syntax. Every `as T` has a `SAFETY:` comment; prefer a guard or a schema parse. Comments state constraints only.
   - **Lazy imports.** A dynamic `import()` is allowed only for a measured startup cost (a CLI command, a client panel) or an optional peer. It carries a comment that names the reason. An optional peer's import catches the missing-module error and falls back, or fails with a message that names the package to install.
   - No `Date` in `domain`, `contract` or `services`. A `Date` appears only where a third-party API demands one, converted from or to `Temporal` on that line, with a comment naming the API.
