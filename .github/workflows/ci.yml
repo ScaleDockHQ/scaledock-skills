@@ -22,6 +22,7 @@ jobs:
   pr-title:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v7
         with:
@@ -34,6 +35,7 @@ jobs:
 
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
         with:
@@ -52,11 +54,12 @@ jobs:
         with:
           persist-credentials: false
       - uses: $/.github/actions/setup
-      - name: Check spec sources
-        run: pnpm sources:check
-      - name: Check version lines
-        run: pnpm versions:check
-      - name: Check release watch lists
-        run: pnpm watch:check
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - parallel:
+          - name: Check spec sources
+            run: pnpm sources:check
+          - name: Check version lines
+            run: pnpm versions:check
+          - name: Check release watch lists
+            run: pnpm watch:check
+            env:
+              GITHUB_TOKEN: ${{ github.token }}
