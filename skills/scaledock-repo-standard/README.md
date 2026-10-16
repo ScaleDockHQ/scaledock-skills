@@ -52,14 +52,14 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters.
 - [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
 - [`references/lint-format.md`](references/lint-format.md): Ultracite presets on Oxlint and Oxfmt, anti-slop, house rules.
-- [`references/vercel.md`](references/vercel.md): Vercel first, Services, Turborepo, Remote Cache.
+- [`references/vercel.md`](references/vercel.md): Vercel first (Flags, Workflow, Run SDK, Sandbox and Drives, Connect), Services and bindings, Turborepo, Remote Cache.
 - [`references/local-dev-env.md`](references/local-dev-env.md): Portless, the native dev loop, env and secrets.
 
 **Surfaces:**
 
 - [`references/nextjs.md`](references/nextjs.md): shared Next config, app architecture, and the agent loop.
 - [`references/i18n.md`](references/i18n.md): next-intl with root params, and i18next on Expo.
-- [`references/ui.md`](references/ui.md): shadcn, ReUI Pro, responsive rules.
+- [`references/ui.md`](references/ui.md): shadcn (with `cn` and AI Elements), ReUI Pro, `DESIGN.md`, responsive rules.
 - [`references/app-shell.md`](references/app-shell.md): auth pages, shell, page templates, standard screens.
 - [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web.
 - [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native.
@@ -70,7 +70,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/mcp.md`](references/mcp.md): MCP server, tools from the contract, docs MCP.
 - [`references/cli.md`](references/cli.md): product, library and tooling CLIs, and their startup budget.
 - [`references/docs-site.md`](references/docs-site.md): Fumadocs for people and agents.
-- [`references/ai.md`](references/ai.md): AI SDK through AI Gateway.
+- [`references/ai.md`](references/ai.md): AI SDK 7 through AI Gateway, tool approvals and context, `WorkflowAgent`, the Run SDK, telemetry.
 
 **Delivery:**
 

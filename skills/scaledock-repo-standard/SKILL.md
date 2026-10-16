@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.11.0"
+  version: "1.12.0"
 ---
 
 # Repo standard
@@ -123,5 +123,5 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
 - **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps and Temporal, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
 - **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
-- **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK through AI Gateway).
+- **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK 7 through AI Gateway, approvals, `WorkflowAgent`, Run SDK).
 - **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, the direct-to-develop variant, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, pins, `$/` actions, zizmor, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).
