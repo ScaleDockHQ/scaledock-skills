@@ -5,6 +5,9 @@ The component stack, ReUI Pro, lint rules, `DESIGN.md`, and the responsive and a
 Applies to a Next.js `app`. Expo UI is in [`expo.md`](expo.md); the `DESIGN.md`, responsive and accessibility rules here apply to it too.
 
 - **shadcn** on Base UI (a `base-*` style) with Tailwind v4 and CSS-first tokens. Components live in `packages/ui`. Every `components.json` aliases `@{{SCOPE}}/ui` and sets `iconLibrary: "hugeicons"`.
+  - Class merging comes from the `cn` package, and `lib/utils.ts` only re-exports it. In upgrade mode, run `pnpm dlx shadcn@latest migrate cn` to drop `clsx` and `tailwind-merge`.
+  - Private registries on GitHub install with `shadcn add <owner>/<repo>/<item>`, using `gh` credentials locally and `GH_TOKEN` in CI.
+  - Agent interfaces use Message, Bubble, Trace, Code Block, Attachment and Questionnaire, and the shadcn AI Elements patterns copied on top of them. AI SDK Elements (`vercel/ai-elements`) is being deprecated; in upgrade mode, migrate each wrapper with the prompt on its pattern page.
 - **ReUI Pro:**
   - Register the `@reui` registry with the `REUI_LICENSE_KEY` header, and add the ReUI MCP to `.cursor/mcp.json` and `.mcp.json`.
   - Install with `pnpm dlx shadcn@latest add @reui/<name> --yes`.
@@ -16,10 +19,11 @@ Applies to a Next.js `app`. Expo UI is in [`expo.md`](expo.md); the `DESIGN.md`,
   - tokens and type roles
   - component ownership: `packages/ui`, then `components/`, then `features/`
   - the overlay table, the shell, and the page templates
-  - a "Reject these" list
+  - a "Reject these" list that names each recurring generated-design pattern
+  - Each rule is something a reviewer can observe and check ("evidence tables use the full available width", not "less cramped"). A correction that keeps coming back moves to the narrowest place that enforces it: `DESIGN.md` prose, a token or class in `packages/ui`, or a lint or e2e check.
 - **Server first:**
   - Static sections (an FAQ, a feature grid, a pricing table) stay Server Components, with no `"use client"`.
-  - Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so tailwind-merge, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md`.
+  - Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so `cn`, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md`.
 - **Create and edit** happen on routes. Dialogs are only for destructive confirmation or short tasks.
 - **Responsive:**
   - From 360px up, with the same routes on every device.

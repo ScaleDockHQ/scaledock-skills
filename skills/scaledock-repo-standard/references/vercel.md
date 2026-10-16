@@ -15,32 +15,39 @@ When Supabase (database, auth, RLS-bound files, realtime) does not cover a need,
 
 Record any exception in an ADR.
 
-| Need                                     | Use                                                                                                                  |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| LLM calls, embeddings, images            | AI SDK through Vercel AI Gateway                                                                                     |
-| Durable jobs, long-running agents        | Workflow SDK (`DurableAgent`)                                                                                        |
-| Schedules                                | Vercel Cron Jobs to `apps/api` routes, verified with a `CRON_SECRET` of at least 32 characters                       |
-| Fan-out, event streaming                 | Vercel Queues                                                                                                        |
-| Untrusted or generated code              | Vercel Sandbox                                                                                                       |
-| Public or private assets not tied to RLS | Vercel Blob; RLS-bound files stay in Supabase Storage                                                                |
-| Config and kill switches                 | Edge Config                                                                                                          |
-| Feature flags                            | Flags SDK with Edge Config                                                                                           |
-| Cross-invocation function cache          | Runtime Cache (`getCache` from `@vercel/functions`)                                                                  |
-| Work after the response                  | `after()` in Next, `waitUntil` elsewhere                                                                             |
-| Bot protection                           | BotID on sign-in, sign-up and public forms                                                                           |
-| Rate limits and WAF                      | Vercel Firewall (`@vercel/firewall` in code)                                                                         |
-| Analytics, Core Web Vitals               | Web Analytics, Speed Insights                                                                                        |
-| Logs, traces                             | Vercel Observability, `@vercel/otel`, Sentry through the Marketplace; Supabase clients with `tracePropagation: true` |
-| Gradual rollouts                         | Rolling Releases                                                                                                     |
-| Chat bots                                | Chat SDK, with the platform app created through Vercel Connect                                                       |
-| New agent products                       | Propose eve first; do not install it without asking                                                                  |
-| Agents on deployments and logs           | Vercel MCP server in `.mcp.json`                                                                                     |
+| Need                                      | Use                                                                                                                                                                             |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LLM calls, embeddings, images             | AI SDK through Vercel AI Gateway                                                                                                                                                |
+| Durable jobs                              | Workflow SDK 5 (`workflow`)                                                                                                                                                     |
+| Long-running agents                       | `WorkflowAgent` from `@ai-sdk/workflow`, on the Workflow SDK                                                                                                                    |
+| Schedules                                 | Vercel Cron Jobs to `apps/api` routes, verified with a `CRON_SECRET` of at least 32 characters                                                                                  |
+| Fan-out, event streaming                  | Vercel Queues                                                                                                                                                                   |
+| Generated JS or TS against app operations | Run SDK (`run`): QuickJS with narrow `hostFunctions` that authorize every call                                                                                                  |
+| Untrusted code that needs an OS           | Vercel Sandbox                                                                                                                                                                  |
+| Agent workspaces that outlive a sandbox   | Vercel Drives mounted into Sandbox (`Drive.getOrCreate`, `mounts`)                                                                                                              |
+| Always-on pull workers                    | Prefer Queues and Workflow; Vercel Daemons (beta) only with an ADR                                                                                                              |
+| A service that needs system libraries     | A container (`Dockerfile.vercel`, listening on `$PORT`), only with an ADR                                                                                                       |
+| Public or private assets not tied to RLS  | Vercel Blob; RLS-bound files stay in Supabase Storage                                                                                                                           |
+| Config                                    | Edge Config                                                                                                                                                                     |
+| Feature flags, kill switches              | Vercel Flags through the Flags SDK (`flags/next`, `vercelAdapter()` from `@flags-sdk/vercel`), managed with `vercel flags`; precompute in `proxy.ts` keeps flagged pages static |
+| Cross-invocation function cache           | Runtime Cache (`getCache` from `@vercel/functions`)                                                                                                                             |
+| Work after the response                   | `after()` in Next, `waitUntil` elsewhere                                                                                                                                        |
+| Bot protection                            | BotID on sign-in, sign-up and public forms                                                                                                                                      |
+| Rate limits and WAF                       | Vercel Firewall (`@vercel/firewall` in code)                                                                                                                                    |
+| Analytics, Core Web Vitals                | Web Analytics, Speed Insights                                                                                                                                                   |
+| Logs, traces                              | Vercel Observability, `@vercel/otel`, Sentry through the Marketplace; Supabase clients with `tracePropagation: true`                                                            |
+| Gradual deployment rollouts               | Rolling Releases; per-feature rollouts use Vercel Flags                                                                                                                         |
+| Chat bots                                 | Chat SDK, with the platform app created through Vercel Connect                                                                                                                  |
+| New agent products                        | Propose eve first; do not install it without asking                                                                                                                             |
+| Generative UI from model output           | Propose json-render (`@json-render/react`) first; do not install it without asking                                                                                              |
+| Agents on deployments and logs            | Vercel MCP server in `.mcp.json`                                                                                                                                                |
 
 ## Platform defaults
 
-- Fluid Compute on Node.js; never `runtime = "edge"`.
+- Fluid Compute on Node.js; never `runtime = "edge"`. Containers and Daemons also run on Fluid, so they never justify leaving Node for a service Node can serve.
 - Function region `fra1` unless the user names another.
-- Only `apps/api` starts workflows. Each service sets its own `WORKFLOW_QUEUE_NAMESPACE`.
+- Only `apps/api` starts workflows; a workflow may start child workflows with `start()`. Each service sets its own `WORKFLOW_QUEUE_NAMESPACE`.
+- Workflow 5 traces each invocation as its own root (`WORKFLOW_TRACE_MODE=linked`, the default). Dashboards and alerts query the `workflow.execute <fn>` and `step.execute <fn>` spans.
 - An `apps/api` without workflows runs its Hono app through `@hono/node-server` `getRequestListener(app.fetch)` in `server.ts`. An `apps/api` with workflows hosts the same Hono app on Nitro with the `workflow/nitro` module, because the Workflow SDK needs a build integration.
 
 ## Vercel project
@@ -55,7 +62,8 @@ One project with Services.
   - `/app` and `/app/(.*)`. A universal Expo app is a Node service whose `server.mts` serves the `expo export --platform web` output and `expo-server` SSR; never add a catch-all rewrite to it. A native-only `apps/mobile` has no service.
 - **`git.deploymentEnabled`:** deny `*`, `**` and `changeset-release/**`. Allow `main`, and `develop` once it exists.
 - **`crons`** for `apps/api`.
-- **Config file:** `vercel.ts`, typed with `VercelConfig` from `@vercel/config/v1`. Write rewrites with the `routes` helpers, and Services under `experimentalServices` (`type`, `root`, `entrypoint`). That key is marked private, so when a deploy rejects it, fall back to `vercel.json` with `$schema` and record a `gap` row.
+- **Config file:** `vercel.ts`, typed with `VercelConfig` from `@vercel/config/v1`. Write rewrites with the `routes` helpers, and Services under `experimentalServices` (`type`, `root`, `entrypoint`). That key is marked private, so when a deploy rejects it, fall back to `vercel.json` with `$schema` and record a `gap` row. Vercel's docs show the public `services` key (`root`, `framework` or `entrypoint`, `bindings`, routed with `destination: { service }`) in `vercel.json`; switch `vercel.ts` to it once the installed `@vercel/config` types it.
+- **Service-to-service calls** use a service binding (`{ "type": "service", "service": "<name>", "format": "url", "env": "<NAME>_INTERNAL_URL" }`), never a public URL, and a service without a rewrite stays internal. While `@vercel/config` has no `bindings`, record a `gap` row instead of hard-coding URLs.
 
 ## Runtime and toolchain choices
 
@@ -68,7 +76,7 @@ Check the keys against the installed docs:
 
 ```jsonc
 {
-  "$schema": "https://turborepo.com/schema.json",
+  "$schema": "https://turborepo.dev/schema.json",
   "agentGuidance": true,
   "futureFlags": {
     "globalConfiguration": true,
@@ -79,6 +87,7 @@ Check the keys against the installed docs:
     "githubActionsRemoteBaseRefFallback": true,
     "errorsOnlyShowHash": true,
     "longerSignatureKey": true,
+    "strictTaskEntrypointSelection": true,
   },
   "global": {
     "envMode": "strict",
@@ -128,6 +137,8 @@ Check the keys against the installed docs:
 - **Boundaries:** every workspace has `boundaries` tags.
 - **Generated inputs:** a task that reads files another task generates (the `supabase:types` output, Uniwind artifacts) excludes them from its static `inputs` and adds `{ "mode": "jit", "globs": [...] }`, so the hash reflects the generated content.
 - **Scoped runs:** with `affectedUsingTaskInputs` and `filterUsingTasks`, `--affected` and `--filter` both select by task `inputs` and combine. CI and agents pass `--json` or `--log-file` where the installed version supports them, and read the structured output instead of scraping logs.
+- **Pruned images:** `turbo prune <app> --production` for a Docker build leaves dev dependencies out.
+- **Not adopted:** the experimental Cargo, Python and setup flags. Turn one on only with an ADR.
 
 ## Remote Cache
 
