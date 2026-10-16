@@ -323,6 +323,371 @@
       "type": "feed",
       "url": "https://github.blog/changelog/label/collaboration-tools/feed/",
       "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "oxlint",
+      "seen": "1.88.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "oxfmt",
+      "seen": "0.73.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "oxlint-tsgolint",
+      "seen": "7.0.2004",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "typescript",
+      "seen": "7.0.2",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "knip",
+      "seen": "6.41.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "tsdown",
+      "seen": "0.23.1",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "lefthook",
+      "seen": "2.2.2",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@commitlint/cli",
+      "seen": "21.2.3",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@changesets/cli",
+      "seen": "3.0.3",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "vitest",
+      "seen": "5.0.5",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@playwright/test",
+      "seen": "1.64.1",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "publint",
+      "seen": "0.3.25",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@arethetypeswrong/cli",
+      "seen": "0.18.5",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "citty",
+      "seen": "0.2.2",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@clack/prompts",
+      "seen": "1.8.1",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "react",
+      "seen": "19.3.1",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "tailwindcss",
+      "seen": "4.3.3",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "uniwind",
+      "seen": "1.12.2",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "i18next",
+      "seen": "26.4.7",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "react-i18next",
+      "seen": "17.0.19",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@sentry/nextjs",
+      "seen": "11.8.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@sentry/react-native",
+      "seen": "8.31.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@vercel/otel",
+      "seen": "2.1.3",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "portless",
+      "seen": "0.15.8",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "mcp-handler",
+      "seen": "2.3.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "next-devtools-mcp",
+      "seen": "0.4.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "valibot",
+      "seen": "1.5.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@orpc/valibot",
+      "seen": "1.15.7",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "hono",
+      "seen": "4.13.13",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@t3-oss/env-core",
+      "seen": "0.13.11",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "eas-cli",
+      "seen": "25.0.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@expo/ui",
+      "seen": "58.0.19",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "react-native",
+      "seen": "0.88.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@powersync/react",
+      "seen": "2.0.2",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@powersync/tanstack-react-query",
+      "seen": "0.3.5",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@powersync/op-sqlite",
+      "seen": "0.9.16",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@op-engineering/op-sqlite",
+      "seen": "18.2.5",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "powersync",
+      "seen": "0.10.2",
+      "checked": "2026-10-16"
+    },
+    { "type": "github", "repo": "pnpm/pnpm", "checked": "2026-10-16" },
+    { "type": "github", "repo": "oxc-project/oxc", "checked": "2026-10-16" },
+    {
+      "type": "github",
+      "repo": "oxc-project/tsgolint",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "haydenbleasel/ultracite",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "microsoft/TypeScript",
+      "checked": "2026-10-16"
+    },
+    { "type": "github", "repo": "webpro-nl/knip", "checked": "2026-10-16" },
+    { "type": "github", "repo": "rolldown/tsdown", "checked": "2026-10-16" },
+    {
+      "type": "github",
+      "repo": "evilmartians/lefthook",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "conventional-changelog/commitlint",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "changesets/changesets",
+      "checked": "2026-10-16"
+    },
+    { "type": "github", "repo": "vitest-dev/vitest", "checked": "2026-10-16" },
+    {
+      "type": "github",
+      "repo": "microsoft/playwright",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "tailwindlabs/tailwindcss",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "getsentry/sentry-javascript",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "getsentry/sentry-react-native",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "open-circle/valibot",
+      "checked": "2026-10-16"
+    },
+    { "type": "github", "repo": "fuma-nama/fumadocs", "checked": "2026-10-16" },
+    { "type": "github", "repo": "expo/eas-cli", "checked": "2026-10-16" },
+    {
+      "type": "github",
+      "repo": "expo/expo-github-action",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "facebook/react-native",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "powersync-ja/powersync-js",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "powersync-ja/powersync-service",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "powersync-ja/powersync-cli",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "OP-Engineering/op-sqlite",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://pnpm.io/blog/rss.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://voidzero.dev/feed.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://devblogs.microsoft.com/typescript/feed/",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://nodejs.org/en/feed/blog.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://react.dev/rss.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://tailwindcss.com/feeds/feed.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://expo.dev/blog/rss.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://reactnative.dev/blog/rss.xml",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "feed",
+      "url": "https://www.powersync.com/blog/rss.xml",
+      "checked": "2026-10-16"
     }
   ]
 }
