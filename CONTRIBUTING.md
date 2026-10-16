@@ -95,6 +95,18 @@ A spec skill covers every major version line of its specification, so an agent k
 5. Bump the version: patch when only pins or dates change, minor for new guidance, major when invariants change.
 6. Run `pnpm verify`.
 
+## Keeping opinionated skills current
+
+An opinionated skill lists the releases it depends on in `metadata.json` `watch`, so new defaults are adopted on purpose rather than discovered by accident. See [ADR 0007](docs/decisions/0007-release-watch-lists.md).
+
+- Each entry has a `type` and a `checked` date (`YYYY-MM-DD`):
+  - `npm`: `name` and `seen` (the version the skill was last checked against). Optional `tag` tracks a dist-tag other than `latest`, for packages published only as `alpha` or similar.
+  - `github`: `repo` (`owner/name`); its releases are watched.
+  - `feed`: `url` of an RSS or Atom feed, such as a vendor blog or changelog.
+- `pnpm watch:check` (or `pnpm watch:check <skill>`) prints, per skill, npm tags newer than `seen` (other tags only when they preview a new major), GitHub releases and feed items newer than `checked`. It needs the network, so it is not part of `pnpm verify`; set `GITHUB_TOKEN` to avoid GitHub's rate limit.
+- For each item, decide whether the skill should adopt it. Update the skill and bump its version, then set `checked` to today and `seen` to the version you checked against, even when nothing needed to change.
+- `pnpm validate` checks the shape of every `watch` entry.
+
 ## Testing a skill locally
 
 List what the picker would show, without installing anything:

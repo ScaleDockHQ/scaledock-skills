@@ -3,5 +3,6 @@
   "organization": "ScaleDock",
   "date": "Month YYYY",
   "abstract": "Two or three sentences on what the skill produces and how its references are split.",
-  "references": []
+  "references": [],
+  "watch": []
 }

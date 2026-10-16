@@ -6,17 +6,18 @@ This repo publishes agent skills: opinionated `scaledock-*` skills for ScaleDock
 
 The package manager is pnpm, pinned in `package.json`. Node is the major in `.node-version`.
 
-| Command               | What it does                                                                 |
-| --------------------- | ---------------------------------------------------------------------------- |
-| `pnpm install`        | Installs the dev tooling and the git hooks.                                  |
-| `pnpm validate`       | Checks every skill's frontmatter, versions, links, sources and README entry. |
-| `pnpm format`         | Formats the repo with oxfmt.                                                 |
-| `pnpm check`          | Runs `format:check` and `validate`.                                          |
-| `pnpm verify`         | The full gate. CI and the pre-push hook run it. Done means it passes.        |
-| `pnpm sources:check`  | Fetches every spec skill source; lists dead links and stale `checked` dates. |
-| `pnpm inventory`      | Pulls publisher indexes and writes `docs/standards-inventory.md`.            |
-| `pnpm versions:check` | Compares publisher levels with each spec skill's `versions`.                 |
-| `pnpm dlx skills …`   | Runs the skills CLI, for example `pnpm dlx skills add . --list`.             |
+| Command               | What it does                                                                  |
+| --------------------- | ----------------------------------------------------------------------------- |
+| `pnpm install`        | Installs the dev tooling and the git hooks.                                   |
+| `pnpm validate`       | Checks every skill's frontmatter, versions, links, sources and README entry.  |
+| `pnpm format`         | Formats the repo with oxfmt.                                                  |
+| `pnpm check`          | Runs `format:check` and `validate`.                                           |
+| `pnpm verify`         | The full gate. CI and the pre-push hook run it. Done means it passes.         |
+| `pnpm sources:check`  | Fetches every spec skill source; lists dead links and stale `checked` dates.  |
+| `pnpm inventory`      | Pulls publisher indexes and writes `docs/standards-inventory.md`.             |
+| `pnpm versions:check` | Compares publisher levels with each spec skill's `versions`.                  |
+| `pnpm watch:check`    | Lists releases and posts newer than each opinionated skill's `watch` entries. |
+| `pnpm dlx skills …`   | Runs the skills CLI, for example `pnpm dlx skills add . --list`.              |
 
 ## Layout
 
@@ -49,15 +50,17 @@ One branch and one PR per chat or plan.
 
 ## When you change X, also update Y
 
-| Change                         | Also update                                                                     |
-| ------------------------------ | ------------------------------------------------------------------------------- |
-| A skill's content              | Its `metadata.version` and `metadata.json` version, and its `README.md`         |
-| A new skill                    | The matching skills table in `README.md`                                        |
-| A skill's description          | Its row in the `README.md` skills table                                         |
-| A spec skill's source          | `metadata.json` `sources` and `## Sources` in `SKILL.md`, with a new `checked`  |
-| A spec's version line          | `metadata.json` `versions`, `references/versions.md`, description, both READMEs |
-| A dependency or action version | The catalog in `pnpm-workspace.yaml`, and the pre-release pins list below       |
-| A workflow                     | Keep `.github/zizmor.yml` passing; use each action's latest release tag         |
+| Change                                   | Also update                                                                     |
+| ---------------------------------------- | ------------------------------------------------------------------------------- |
+| A skill's content                        | Its `metadata.version` and `metadata.json` version, and its `README.md`         |
+| A new skill                              | The matching skills table in `README.md`                                        |
+| A skill's description                    | Its row in the `README.md` skills table                                         |
+| A spec skill's source                    | `metadata.json` `sources` and `## Sources` in `SKILL.md`, with a new `checked`  |
+| A spec's version line                    | `metadata.json` `versions`, `references/versions.md`, description, both READMEs |
+| A reviewed `watch:check` item            | The skill if it adopts it, then `checked` (and `seen` for npm) in its `watch`   |
+| A dependency a `scaledock-*` skill names | An entry in that skill's `metadata.json` `watch`                                |
+| A dependency or action version           | The catalog in `pnpm-workspace.yaml`, and the pre-release pins list below       |
+| A workflow                               | Keep `.github/zizmor.yml` passing; use each action's latest release tag         |
 
 ## Hard rules
 

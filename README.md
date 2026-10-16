@@ -634,6 +634,7 @@ pnpm verify
 | `pnpm format:check`         | Fails when a file isn't formatted.                                  |
 | `pnpm check`, `pnpm verify` | Runs `format:check` and `validate`. CI runs `pnpm verify`.          |
 | `pnpm sources:check`        | Fetches every spec skill source; lists dead links and stale dates.  |
+| `pnpm watch:check`          | Lists releases and posts newer than each skill's `watch` entries.   |
 
 ## Contributing
 
