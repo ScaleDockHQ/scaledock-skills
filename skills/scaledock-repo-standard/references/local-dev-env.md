@@ -40,7 +40,7 @@ Applies to product repos, and to library repos that run a docs site.
 **Sources, in order of preference:**
 
 1. A Marketplace integration (Supabase, Sentry, Resend, Stripe).
-2. Vercel Connect for third parties without an integration: `vercel connect create`, then `attach`. Tokens are fetched at runtime through `@vercel/connect`. Never print connector tokens or trigger URLs.
+2. Vercel Connect for third parties without an integration: `vercel connect create <provider> --name <name>`, then `attach`, with one connector per environment. Code reads tokens at runtime with `getToken("<provider>/<name>", { subject })` from `@vercel/connect`; locally the OIDC identity comes from `vercel link` and `pnpm env:pull`. Revoke a leaked token with `vercel connect revoke-tokens`. Never print connector tokens or trigger URLs.
 3. Vercel OIDC for Vercel services.
 4. Only then `vercel env add <KEY> <env> --sensitive`, in all three environments. Team-wide values are Shared Environment Variables.
 
@@ -56,3 +56,4 @@ Applies to product repos, and to library repos that run a docs site.
 - Adding a key updates the t3-env schema, all three Vercel environments, `turbo.json` and `.env.example`. A key an EAS build reads also goes into the matching EAS environment.
 - Expo apps load the root `.env*` files from `app.config.ts` before Metro runs, so `EXPO_PUBLIC_*` inlining sees the same values. Never keep a second `.env` in the app folder.
 - Secrets never go in `NEXT_PUBLIC_*` variables or in git.
+- `FLAGS_SECRET` (Flags precompute and Flags Explorer) is 32 random bytes in Base64, with a different value in each environment, and Sensitive in Preview and Production.

@@ -25,7 +25,6 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
     prefetchInlining: true,
     useOffline: true,
     globalNotFound: true,
-    appNewScrollHandler: true,
     requestInsights: true, // dev-only spans for /_next/mcp audits
     authInterrupts: true, typedEnv: true,
     turbopackRustReactCompiler: true,
@@ -38,13 +37,15 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
 ```
 
 - Do not set `experimental.instantInsights`: instant validation already defaults to `"warning"`. Opt a route out only with `export const instant = false` and a comment saying why.
-- Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Keep `.next/cache/**` out of Turbo outputs; Vercel and the CI cache restore it.
+- Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`), the shared browser runtime (`turbopackSharedRuntime`), `experimental.agentUpgrade` (`"security"`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Remove `appNewScrollHandler`; 16.4 dropped it.
+- Leave `experimental.agentFeedback` off: it needs telemetry and adds AGENTS.md instructions for sending feedback to Vercel. Keep `.next/cache/**` out of Turbo outputs; Vercel and the CI cache restore it.
 - Do not set `useTypeScriptCli`: `next build` type-checks with the project-local TypeScript.
 - Do not set `supportsImmutableAssets`. The Vercel adapter turns immutable static assets on; the option exists only to opt out while debugging an adapter.
 - Measured opt-ins, never in the default block:
-  - `experimental.generateComponentChunks`, `turbopackSharedRuntime` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
+  - `experimental.generateComponentChunks` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
   - `experimental.taint` and `blockingSSR`. Both pull in `react@experimental`, so turn one on only when code calls the API (`taintUniqueValue`, `taintObjectReference`), with a `next analyze` comparison in the commit.
   - `webVitalsAttribution`, only while someone reads the attribution data.
+  - `turbopackGc` and `turbopackLazyDynamicImports`, dev-only, when a large app's dev cache or cold compiles are measurably slow.
   - `optimizePackageImports`, only for a package that is not already in the Next default list. Most icon packages are in it.
 - **Markdown negotiation** (`Accept: text/markdown`) goes through `rewrites().beforeFiles` with a `has` condition on the `accept` header, and a `headers()` rule that sets `Vary: Accept` on the same paths. A `proxy.ts` is the fallback when a rewrite cannot express the rule, and it always exports a `matcher`. A proxy without a matcher runs on every request, including static assets, and is a gap.
 - Keep `gestureTransition` and `transitionIndicator` off; they break back and forward. Use `<ViewTransition>` and `addTransitionType` (both stable), and respect reduced motion.
@@ -87,7 +88,8 @@ The installed skill is the source of truth. Where it differs from this list, fol
   - Pass normalized primitives into cached functions; never default or clamp values inside them.
 - **Request-time work.**
   - Prefer `await io()` over `connection()`. A `connection()` call needs a comment that names the user-request wait.
-  - When the installed Next exports `unstable_prefetch()` or `unstable_navigation()`, await them in the component before the query, never inside a cache scope.
+  - Await `prefetch()` or `navigation()` from `next/cache` in the component before a request-specific query, never inside a cache scope, to keep that subtree out of the shell or the per-link prefetch.
+  - `export const ensureStatic = "navigation"` on the root layouts of `docs` and `marketing`, so a later change cannot add request-time rendering. Product routes that must keep a static shell use `"shell"`. `ensureStatic` checks static output; `instant` checks that navigation shows UI at once, and routes keep both.
 - **Prefetch tiers:**
   - Default `Link` prefetch for ordinary routes.
   - `IntentPrefetchLink` (hover, focus or touch) for unbounded lists.
@@ -98,6 +100,7 @@ The installed skill is the source of truth. Where it differs from this list, fol
 
 ## Agent loop
 
+- In upgrade mode, start a Next.js upgrade with `next upgrade --agent` (policy `latest`), then follow the agent upgrade guide in the bundled docs.
 - Before running `next build`, ask the dev server's `/_next/mcp` endpoint (`get_compilation_issues`, `compile_route`). It answers in seconds and covers the same errors.
 - Verify every UI edit with the `next-dev-loop` skill and `agent-browser` with `--enable react-devtools`.
 - Error IDs link to `nextjs.org/docs/messages/<id>`, and those pages are written for agents. Read the page before guessing a fix.

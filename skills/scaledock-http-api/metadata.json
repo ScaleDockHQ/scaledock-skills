@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "organization": "ScaleDock",
   "date": "October 2026",
   "abstract": "Build or review a ScaleDock HTTP API on Hono and oRPC whose contract, OpenAPI document, errors and limits follow HTTP Semantics (RFC 9110 and RFC 9111), OpenAPI 3.2, JSON Schema 2020-12, OpenAPI Overlay, RFC 9457, the RateLimit header fields and Standard Schema, with PermDock guarding every procedure and writing the document's security. It installs the matching spec skills, lists Standard Webhooks, HTTP Message Signatures, HTTP cookies, the OWASP API Security Top 10 and OWASP ASVS as optional companions, and defers to them on format details; references/stack.md maps each requirement onto the ScaleDock stack.",
@@ -12,5 +12,37 @@
     "https://permdock.dev/docs/adapters/orpc",
     "https://orpc.dev/docs/openapi/getting-started",
     "https://github.com/ScaleDockHQ/PermDock"
+  ],
+  "watch": [
+    {
+      "type": "npm",
+      "name": "@orpc/server",
+      "seen": "1.15.7",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "@orpc/valibot",
+      "seen": "1.15.7",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "valibot",
+      "seen": "1.5.0",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "npm",
+      "name": "hono",
+      "seen": "4.13.13",
+      "checked": "2026-10-16"
+    },
+    {
+      "type": "github",
+      "repo": "open-circle/valibot",
+      "checked": "2026-10-16"
+    },
+    { "type": "github", "repo": "honojs/hono", "checked": "2026-10-16" }
   ]
 }

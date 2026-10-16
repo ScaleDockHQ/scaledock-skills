@@ -25,7 +25,7 @@ A change that moves a baseline names the before and after numbers in its commit.
 ## Client bundle
 
 - Static marketing and docs sections stay Server Components. An FAQ, a feature grid or a pricing table never carries `"use client"`.
-- Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so tailwind-merge, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md` (see [`ui.md`](ui.md)).
+- Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so `cn`, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md` (see [`ui.md`](ui.md)).
 - Heavy client features (chat panels, editors, command palettes) load through `next/dynamic` when opened, and prefetch on pointer enter.
 
 ## Library runtime
