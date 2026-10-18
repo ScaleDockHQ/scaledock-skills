@@ -2,14 +2,14 @@
 
 The docs app setup, the formats it serves, agent features, the API reference, required pages, SEO, content rules and drift checks.
 
-Applies to product repos with the `docs` surface and to every library repo. Docs always run on Next.js, including when `app` is on Expo.
+Applies to product repos with the `docs` surface and to every library repo. Docs always run on Next.js, including when `app` is on Expo. The docs app follows the `nextjs-app-architecture` skill like every other surface (see [`nextjs.md`](nextjs.md)), and shares its chrome, copy buttons, sidebars, URL state and `DESIGN.md` layout with the other surfaces through [`web-design.md`](web-design.md).
 
 - **Setup:** Fumadocs on Next.js with Base UI, served at `/docs` through Services. `fumadocs-ui` is installed as `npm:@fumadocs/base-ui`, at the same version as `fumadocs-core`.
 - **Formats:**
   - `/llms.txt` and `/llms-full.txt`.
   - Per-page `.md` or `.mdx` routes.
   - `Accept: text/markdown` negotiation, with `Vary: Accept`, through `beforeFiles` rewrites with a `has` header condition and a `headers()` rule, as in [`nextjs.md`](nextjs.md). A `proxy.ts` is the fallback only, and it always has a `matcher`.
-- **Every page** has a copy-as-Markdown button, view options and a last-updated date.
+- **Every page** has a copy-as-Markdown button, view options and a last-updated date. A page that offers an AI prompt puts the same prompt in its `.md` mirror.
 - **Agent features:**
   - The docs MCP (see [`mcp.md`](mcp.md)).
   - Ask AI at `/docs/api/chat`: the AI SDK through the Gateway, with a search tool.

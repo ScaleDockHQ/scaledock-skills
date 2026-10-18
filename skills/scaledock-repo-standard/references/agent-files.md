@@ -52,6 +52,7 @@ At least these rows:
 | i18n copy                | every `.po` catalog                                                                                            |
 | Route                    | `lib/navigation.ts`, docs page, axe coverage                                                                   |
 | UI primitive             | `DESIGN.md`                                                                                                    |
+| Entity or integration    | the icon map, `lib/integrations.ts`, its docs page, the completeness tests                                     |
 | Package version          | `server.json`                                                                                                  |
 | Dependency bump          | catalog, the "Pre-release pins" list, a note on the absorbed API changes, an ADR if a one-library line changes |
 | `typescript` bump        | `oxlint-tsgolint` in the same commit                                                                           |
@@ -75,7 +76,7 @@ With Expo, add these rows and extend the matching rows above:
 
 - `CLAUDE.md` contains only `@AGENTS.md`.
 - `PRODUCT.md`: the promise, users, scope, voice, and what we never claim.
-- `DESIGN.md`: tokens, shell, templates and overlays.
+- `DESIGN.md`: the shared tokens, type roles and "Reject these" list at the root, plus one `DESIGN.md` per web app for its layouts, shared components and exceptions to the `reui` rules (see [`web-design.md`](web-design.md)).
 - `docs/decisions/`: the ADRs.
 - MCP config in `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: the product MCP, the docs MCP, the Vercel MCP, shadcn, ReUI, and `next-devtools-mcp` with Next.js.
 
