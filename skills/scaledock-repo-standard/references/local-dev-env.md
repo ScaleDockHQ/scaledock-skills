@@ -17,6 +17,7 @@ Applies to product repos, and to library repos that run a docs site.
   - Supabase stays on `127.0.0.1`, on the API port the CLI picked for this checkout. Its `site_url` is the Portless app, and the redirect list includes every Portless callback (app, Scalar) and the CLI loopback.
   - Each worktree or agent sandbox starts its own Supabase project on the native runtime (see [`data-permissions.md`](data-permissions.md)). Read its URLs and keys from `supabase start --output-format json`, as `pnpm env:local` does; never assume port `54321`, Docker, or a project shared with another checkout.
   - `allowedDevOrigins` includes the Portless hosts.
+- **Worktrees.** A new git worktree has none of the gitignored local secrets, such as the Supabase signing key. Generate them in each checkout with the repo's scripts (`pnpm supabase:signing-key`, `pnpm env:local`); never copy them between checkouts. Each worktree runs its own Supabase project and Portless names, so two branches never share ports.
 - **Google OAuth (`dev:oauth`):**
   - A separate proxy on `localtest.me`: `PORTLESS_STATE_DIR` in a temp dir, `PORTLESS_PORT=1355`, `portless proxy start --tld me`.
   - `portless alias supabase.localtest <api port> --force`, with the port from `supabase start --output-format json`.

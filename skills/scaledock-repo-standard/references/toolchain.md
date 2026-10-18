@@ -18,7 +18,8 @@ Applies to every repo kind. A tooling repo without TypeScript skips the tsconfig
 - **TypeScript:** the latest `typescript` release, which is the native Go compiler from 7.0 on.
   - Never install `@typescript/native-preview` (retired). Nothing in the standard needs the JS compiler API: Knip parses with oxc, Next runs the project-local `tsc`, and oxlint type-checks through tsgolint.
   - `@typescript/typescript6` is allowed only for a library that calls the JS compiler API or ships a classic-compiler fallback for consumers on TypeScript 5.9 or 6. Add it as a catalog alias (`typescript-classic: npm:@typescript/typescript6@<exact>`), depend on it only from that package, and record it in an ADR.
-  - `typecheck` is `tsc --noEmit`. Leave `--checkers` and `--builders` at their defaults; use `--singleThreaded` only on a memory-constrained runner, with a comment.
+  - `typecheck` is `tsc --noEmit`, and `next typegen && tsc --noEmit` in a Next app, so `PageProps`, typed routes and root params exist on a clean checkout. Leave `--checkers` and `--builders` at their defaults; use `--singleThreaded` only on a memory-constrained runner, with a comment.
+  - Run the compiler through pnpm (`pnpm typecheck` or `pnpm exec tsc`), never `npx tsc`, which can resolve an unrelated package named `tsc` or a global TypeScript.
   - `typescript` and `oxlint-tsgolint` move together, because tsgolint tracks the TypeScript version.
 
 ## `pnpm-workspace.yaml`
@@ -54,6 +55,8 @@ Every workspace dependency is `catalog:` or `workspace:*`. Every override, `mini
 - pnpm fails on a key it does not recognize when the pinned version is running, so check every key against the installed `pnpm-workspace.yaml` docs.
 - `blockExoticSubdeps` is set explicitly even where pnpm defaults it on, so the policy survives a default change.
 - An explicit `minimumReleaseAge` makes `minimumReleaseAgeStrict` true, so a too-young version stops with an approval prompt instead of being excluded silently. Never approve it to get around the policy.
+- Before adding or bumping a dependency, run `pnpm view <pkg> time` and pick the newest version older than `minimumReleaseAge`.
+- When several agents share one working tree, only one of them runs `pnpm install` or changes `pnpm-lock.yaml`. The others wait for it, then pull its lockfile.
 
 With Expo (see [`expo.md`](expo.md)):
 
@@ -88,6 +91,8 @@ Also:
 
 `knip.mts` lists workspaces explicitly and sets `treatConfigHintsAsErrors: true`, `tags: ["-internal"]`, `ignoreExportsUsedInFile` for types, and `ignoreBinaries: ["vercel"]`.
 
+When Knip flags an export that a refactor left unused, remove the export. Never add it to an ignore list.
+
 ## Root script names (exact)
 
 - **Dev:** `dev`, `dev:<app>`, `dev:portless`, `dev:oauth`, `dev:hosted`, `dev:cleanup`, `email:dev`.
@@ -105,4 +110,5 @@ Also:
 - **Releases:** `changeset`, `version-packages`, `release`.
 - **Env:** `env:pull`, `env:pull:production`, `env:local`.
 - **Database:** `supabase:start` (`supabase start --runtime native`), `supabase:stop`, `supabase:reset`, `supabase:diff` (`supabase db schema declarative sync --no-apply`), `supabase:pull` (`supabase config pull`), `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
+- **Generated web data:** one script per generated catalog file (`catalog`, `recipes`, or the repo's names), each with a `--check` mode that `gen:check` runs. Screenshots of an example app run through `screenshots:<name>` (see [`web-design.md`](web-design.md)); they are never part of `verify`.
 - **Other:** `openapi:generate`, `prepare`.

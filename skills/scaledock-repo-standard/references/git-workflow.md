@@ -145,6 +145,7 @@ Never release-please. `.changeset/config.json`:
 - Libraries set `privatePackages` to `false` and `false`.
 - Apps share one `fixed` group, together with a product CLI and any Expo app. A library CLI joins its library's group. An Expo app's `app.config.ts` reads `version` from its `package.json`, so the store version follows the group.
 - Each PR carries its own changesets.
+  - When `privatePackages` is off (libraries), a change that touches only a private app, such as a dependency added to the docs or marketing site, gets no changeset. Say so in the commit body instead.
 - `pnpm version-packages` runs three steps:
   1. `changeset version`.
   2. `scripts/root-changelog.ts`, built on `@changesets/read` and `@changesets/assemble-release-plan`, which prepends a dated `## <version>` section to the root `CHANGELOG.md`.

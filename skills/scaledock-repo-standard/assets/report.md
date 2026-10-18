@@ -44,6 +44,7 @@ Steps an agent cannot do. Tick the ones already done.
 - [ ] `REUI_LICENSE_KEY` and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as team Shared Environment Variables, and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as a GitHub secret
 - [ ] The `TURBO_TEAM` variable, then a CI run whose Remote Cache step is not `outcome=skipped`
 - [ ] Web Analytics and Speed Insights
+- [ ] After the first production deploy, `curl -I` an optimized image URL (`/_next/image?...`) on each web surface behind Services, and expect a `200`
 - [ ] Branch protection (PR required, required checks, squash only) and the Supabase GitHub integration
 - [ ] Stripe Data Pipeline connected to each Supabase project from the Stripe Dashboard
 - [ ] The Google OAuth client
