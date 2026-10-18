@@ -1,6 +1,6 @@
 # Next.js
 
-The shared Next config every web surface spreads, and the app architecture rules. The installed `nextjs-app-architecture` skill is the source of truth for architecture.
+The shared Next config every web surface spreads, what ScaleDock adds to the `nextjs-app-architecture` skill, and the Next.js pitfalls we hit. The installed `nextjs-app-architecture` skill is the required architecture for every Next.js surface.
 
 Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `marketing` always.
 
@@ -52,40 +52,35 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
 
 ## Architecture (`nextjs-app-architecture`, latest)
 
-The installed skill is the source of truth. Where it differs from this list, follow the skill and update this list.
+Every Next.js surface follows the installed `nextjs-app-architecture` skill: the product `app`, `docs` and `marketing` alike. Install it with `pnpm dlx skills add aurorascharff/nextjs-app-architecture-skill --skill nextjs-app-architecture -y`. Read its references for the rules and the reasons; this section lists only what ScaleDock adds. Where the skill and this section disagree, follow the skill and update this section.
 
-- **Pages compose and never fetch.** Pages are synchronous. They resolve `params` and `searchParams` with `.then(...)` and pass IDs and normalized filters into features. Features receive IDs, not data, and their props are never named `params` or `searchParams`. Pages never import queries or create services.
-- **Async server components by default.**
-  - Each component fetches its own data through `cache()`-wrapped queries (deduped per request), so composition never builds prop chains.
-  - When a client component needs server data, split it into an async server half and a client leaf that receives plain props.
-- **Suspense.**
-  - The page owns `<Suspense>`, and the feature owns its skeleton, exported from the same file at the end (`CustomerList` and `CustomerListSkeleton`).
-  - Independent fetches get sibling boundaries, and each section that can fail on its own gets a `catchError` boundary from `next/error` whose fallback offers `retry()`. It re-renders the failed Server Components and leaves `notFound()` and `redirect()` alone.
-  - Prefer page boundaries over `loading.tsx`. Keep `loading.tsx` only as the fallback for cold hard navigations, reusing the feature skeleton.
-  - Never `fallback={null}` for visible UI (gates that render nothing are fine). Layouts never `await` an auth gate. Never add a `template.tsx`.
-- **Feature folders** (`features/<domain>/`):
-  - `<domain>-queries.ts`: `import "server-only"`, wrapped in `cache()`.
-  - `<domain>-actions.ts`: `"use server"`, validated and permission-checked.
-  - `<domain>-cache.ts`: pure tag and key helpers with no I/O, safe to import from client code.
-  - `<domain>-query-options.ts`: TanStack Query options for client islands that poll.
-  - `components/`, `hooks/`, `types/` and `providers/`.
-- **Mutations.**
-  - Client leaves import their feature's actions directly; actions are never drilled through server components.
-  - An action validates with Valibot, checks the permission, writes, calls `updateTag` for every affected tag, and returns a discriminated union: `{ ok: true, ... } | { ok: false, code, fieldErrors, values }`.
-  - Actions never show toasts. They never call `redirect()` when the caller shows feedback; the client navigates.
-  - A rejected form keeps the user's draft.
-- **Interaction state.** `useOptimistic` for instant feedback, `useTransition` or `useActionState` for pending state, and nuqs for shareable state. Filter forms read defaults from the URL, push inside `startTransition`, and mark stale results with `data-pending`.
+These invariants hold on every surface, including a marketing page whose only data is generated JSON:
+
+| Invariant                                                              | Skill reference                    |
+| ---------------------------------------------------------------------- | ---------------------------------- |
+| Pages are synchronous and only compose sections.                       | `references/pages-suspense.md`     |
+| Feature components own their reads.                                    | `references/components.md`         |
+| Features receive plain ids, never `params` or `searchParams`.          | `references/pages-suspense.md`     |
+| The page owns the `<Suspense>` boundary.                               | `references/pages-suspense.md`     |
+| Each skeleton sits in the same file as its component.                  | `references/components.md`         |
+| Reads go in `<domain>-queries.ts`, mutations in `<domain>-actions.ts`. | `references/queries-actions.md`    |
+| `'use client'` goes only on leaf components.                           | `references/components.md`         |
+| Feature folders follow product ownership.                              | `references/feature-folders.md`    |
+| Which reads to cache, and how to invalidate them.                      | `references/cache-components.md`   |
+| Which links prefetch, and what a navigation shows first.               | `references/instant-navigation.md` |
+
+On docs and marketing, a read is often a pure function over generated JSON or content in `lib/`. A feature component still calls it, never the page. The folder layout for those surfaces is in [`web-design.md`](web-design.md).
+
+ScaleDock adds:
+
+- **Actions** validate with Valibot, check the PermDock permission, write, call `updateTag` for every affected tag, and return `{ ok: true, ... } | { ok: false, code, fieldErrors, values }`. Actions never show toasts, and never call `redirect()` when the caller shows feedback.
+- **Error boundaries.** Each section that can fail on its own gets a `catchError` boundary from `next/error` whose fallback offers `retry()`. Never add a `template.tsx`, and layouts never `await` an auth gate.
+- **Interaction state.** nuqs owns shareable state. [`web-design.md`](web-design.md) covers URL tabs on prerendered pages.
 - **Three scopes:**
   1. One persistent `AppShell` in the app layout.
   2. Tenant gates in Suspense islands that render nothing while pending.
   3. Page islands.
-- **Caching.**
-  - `"use cache: private"` for cookie-derived data, with `cacheTag` and `cacheLife`.
-  - Use `cacheLife("max")` when every write path calls `updateTag`. Use `minutes` or `seconds` when something outside Server Actions writes the data (webhooks, workflows, other services).
-  - Tag by write frequency: one list tag (`organization-customers`) and one record tag (`organization-customer:{id}`), both scoped by organization.
-  - Public `"use cache"` only for URL-keyed public data. `"use cache: remote"` only when the hit rate justifies it.
-  - Webhooks and workflows use `revalidateTag(tag, "max")`. `refresh()` only re-runs uncached dynamic reads.
-  - Pass normalized primitives into cached functions; never default or clamp values inside them.
+- **Cache tags.** One list tag (`organization-customers`) and one record tag (`organization-customer:{id}`), both scoped by organization. Webhooks and workflows use `revalidateTag(tag, "max")`. `"use cache: remote"` only when the hit rate justifies it.
 - **Request-time work.**
   - Prefer `await io()` over `connection()`. A `connection()` call needs a comment that names the user-request wait.
   - Await `prefetch()` or `navigation()` from `next/cache` in the component before a request-specific query, never inside a cache scope, to keep that subtree out of the shell or the per-link prefetch.
@@ -97,6 +92,17 @@ The installed skill is the source of truth. Where it differs from this list, fol
 - **Routing details.** Route aliases are `redirects()` in `next.config`. Omit `export const runtime`. Read root-level params such as `[locale]` with `next/root-params` instead of passing them down.
 - **React.** `<Activity>` keeps hidden UI mounted with its state (side panels, inactive tabs). Fragment refs replace wrapper `div`s that exist only to hold a ref. The React Compiler memoizes, so code never adds `useMemo`, `useCallback` or `memo` by hand.
 - **Tests.** `@next/playwright` `instant()` covers key navigations. A route-table test asserts every route ships a prerendered shell.
+
+## Pitfalls
+
+Record each one that applies, and why, in the repo's `docs/agents/nextjs.md`.
+
+- **`usePathname` in a root layout.** Under `cacheComponents` it lives in a small client leaf (`NavLink`, the sidebar's active link), never in the layout. A production build confirms it; `next dev` hides the failure.
+- **Images behind Vercel Services.** When a Service rewrite puts an app under another app's host, `/_next/image` can return 404. Give that app its own domain, or set `images.unoptimized` with a comment. See [`vercel.md`](vercel.md), and add the image check to the report's manual steps.
+- **Clock and randomness.** `Date.now()`, `new Date()` and `Math.random()` outside a cached function fail the prerender, including skeleton widths. Shiki reads the clock, so highlight inside a `"use cache"` function.
+- **Ids on mount.** A client hook that creates an id on mount (`useChat`) fails the prerender. Mount it after user interaction, loaded through `next/dynamic` with `ssr: false`.
+- **Link buttons.** A Base UI `Button` with `render={<Link />}` gives the link `role="button"`. Style the link with `buttonVariants()` instead.
+- **Typed routes.** `typedRoutes` rejects a plain `string` href. Narrow it with a type guard that returns `href is Route`.
 
 ## Agent loop
 

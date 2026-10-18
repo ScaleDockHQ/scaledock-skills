@@ -60,6 +60,7 @@ One project with Services.
   - `/mcp`, plus both `/.well-known/oauth-protected-resource` paths.
   - `/docs`.
   - `/app` and `/app/(.*)`. A universal Expo app is a Node service whose `server.mts` serves the `expo export --platform web` output and `expo-server` SSR; never add a catch-all rewrite to it. A native-only `apps/mobile` has no service.
+- **Images under Services.** A Next app served under another service's host through a rewrite (docs under `/docs`, with `assetPrefix`) can get a 404 from `/_next/image`, because the request reaches the host app instead. Give that app its own domain, or set `images.unoptimized` on it with a comment. Record the choice and the reason in `docs/agents/nextjs.md`. The report's manual steps include a `curl -I` of a production image after deploy.
 - **`git.deploymentEnabled`:** deny `*`, `**` and `changeset-release/**`. Allow `main`, and `develop` once it exists.
 - **`crons`** for `apps/api`.
 - **Config file:** `vercel.ts`, typed with `VercelConfig` from `@vercel/config/v1`. Write rewrites with the `routes` helpers, and Services under `experimentalServices` (`type`, `root`, `entrypoint`). That key is marked private, so when a deploy rejects it, fall back to `vercel.json` with `$schema` and record a `gap` row. Vercel's docs show the public `services` key (`root`, `framework` or `entrypoint`, `bindings`, routed with `destination: { service }`) in `vercel.json`; switch `vercel.ts` to it once the installed `@vercel/config` types it.

@@ -1,6 +1,6 @@
 # Standard shell and screens
 
-The auth pages, the app shell, the top bar, the page templates, and the standard multi-tenant screens. The component stack they use is in [`ui.md`](ui.md).
+The auth pages, the app shell, the top bar, the page templates, and the standard multi-tenant screens. The component stack they use is in [`ui.md`](ui.md). The chrome the app shares with `docs` and `marketing` (`CopyButton`, the D theme shortcut, `NavLink`, sidebar scrolling, URL state) is in [`web-design.md`](web-design.md); the app uses those same components.
 
 Applies to a Next.js `app`. An Expo app keeps the same screens, page templates and interaction contracts, built from the native components in [`expo.md`](expo.md).
 
@@ -120,5 +120,6 @@ lib/app-chrome.ts   header class recipes
   - `Drawer`.
 - **Command palette:** opens with `⌘K`, groups results into Go to, Actions and Records, and loads through `next/dynamic`.
 - **Accessibility and motion:**
-  - A skip link, a theme hotkey, a visible focus ring, and named icon buttons.
+  - A skip link, the D theme shortcut from [`web-design.md`](web-design.md), a visible focus ring, and named icon buttons.
+  - The sidebar scrolls as [`web-design.md`](web-design.md) describes: `ScrollArea`, contained overscroll, and the active item scrolled into view.
   - View transitions only for list to detail and between sibling tabs. Chrome never animates.

@@ -20,6 +20,13 @@ Applies to every repo kind that has code.
 - **Playwright** (optional): add it only for a few critical journeys that lower layers cannot cover, such as sign-in or checkout across the real stack, and keep it out of `pnpm verify`.
   - When present, it runs with `@axe-core/playwright` at mobile and desktop viewports, and `@next/playwright` `instant()` for Next apps.
   - A universal Expo app runs Playwright against its exported web build.
+  - On docs and marketing, URL-backed tabs, the copy button and dialogs count as critical journeys, because no lower layer runs them on a prerendered page.
+- **Web surface e2e** (docs, marketing and app, when Playwright is present). Run against `next build` and `next start`, never `next dev`:
+  - axe in light and dark mode, and no horizontal scroll at a 360px viewport (`document.documentElement.scrollWidth <= innerWidth`).
+  - Clipboard: wait for hydration before clicking, grant clipboard permissions, and assert on the clipboard contents and the "Copied" status. Never locate by text that also appears in the copied value, or the locator matches the code block.
+  - URL state on a prerendered page: open a URL with `?tab=` (or `?platform=`, `&package=`), check the selected tab, switch tabs, and check both the URL and the panel.
+  - Dialogs: the "Get code" dialog opens from the keyboard, and axe passes while it is open.
+- **`lib/` unit tests.** Every helper in a web app's `lib/` has a Vitest test: parsers (a SQL schema parser runs against rendered fixtures, never a live database), graph layouts, prompt builders, the entity icon map, and the integration list's completeness against the docs content (see [`web-design.md`](web-design.md)).
 - **pgTAP** for RLS, grants and the audit triggers.
 - **In-process tests** for MCP and the CLI (see [`mcp.md`](mcp.md) and [`cli.md`](cli.md)). An OpenAPI snapshot test for the API.
 - **Rules:**

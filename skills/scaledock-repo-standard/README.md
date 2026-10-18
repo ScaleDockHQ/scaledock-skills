@@ -29,6 +29,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Read installed docs first.** Flag and option names are checked against the installed versions before configuring, starting with the Next.js dev server's `/_next/mcp` and bundled docs.
 - **Strict and typed.** The stable native TypeScript compiler, Ultracite on Oxlint and Oxfmt with every type-aware rule at error, Valibot for every schema, and `Temporal` as the one date library.
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
+- **One web product.** The app, docs and marketing sites share one architecture (`nextjs-app-architecture`) and one design reference, so they look and behave alike.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
 - **Unit and integration first.** Tests focus on the unit and integration layers. e2e and UI tests are slow and add little, so they are an opt-in for a few critical journeys.
 - **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
@@ -57,7 +58,8 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 **Surfaces:**
 
-- [`references/nextjs.md`](references/nextjs.md): shared Next config, app architecture, and the agent loop.
+- [`references/nextjs.md`](references/nextjs.md): shared Next config, what ScaleDock adds to `nextjs-app-architecture` (required on app, docs and marketing), the agent loop, and Next.js pitfalls.
+- [`references/web-design.md`](references/web-design.md): the layout, sidebar shell, shared chrome, URL state, graphics and content patterns that app, docs and marketing share.
 - [`references/i18n.md`](references/i18n.md): next-intl with root params, and i18next on Expo.
 - [`references/ui.md`](references/ui.md): shadcn (with `cn` and AI Elements), ReUI Pro, `DESIGN.md`, responsive rules.
 - [`references/app-shell.md`](references/app-shell.md): auth pages, shell, page templates, standard screens.
@@ -84,7 +86,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 The skill installs these and defers to them for their areas:
 
-- [`nextjs-app-architecture`](https://github.com/aurorascharff/nextjs-app-architecture-skill): the source of truth for Next.js app architecture.
+- [`nextjs-app-architecture`](https://github.com/aurorascharff/nextjs-app-architecture-skill): the required architecture for every Next.js surface (app, docs and marketing).
 - [`expo/skills`](https://github.com/expo/skills): Expo Router, Expo UI, the dev client and SDK upgrades.
 - [better-supabase](https://github.com/ScaleDockHQ/better-supabase): typed Supabase access.
 - [PermDock](https://github.com/ScaleDockHQ/PermDock): roles and permissions.
