@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.13.0"
+  version: "1.14.0"
 ---
 
 # Repo standard
@@ -66,13 +66,13 @@ Run these steps in order. Each step names the references to load and the check i
    -> [`references/vercel.md`](references/vercel.md), [`references/local-dev-env.md`](references/local-dev-env.md).
    ✓ Each need maps to the Vercel-first table or an ADR, `turbo.json` uses strict env mode, and every web app has a `dev:portless` script.
 5. **Surfaces.** Build or upgrade only the selected ones.
-   - Web (Next.js): [`references/nextjs.md`](references/nextjs.md), [`references/i18n.md`](references/i18n.md), [`references/ui.md`](references/ui.md), [`references/app-shell.md`](references/app-shell.md).
+   - Web (Next.js `app`, `docs`, `marketing`): the `nextjs-app-architecture` skill (required), [`references/nextjs.md`](references/nextjs.md), [`references/web-design.md`](references/web-design.md), [`references/i18n.md`](references/i18n.md), [`references/ui.md`](references/ui.md), and [`references/app-shell.md`](references/app-shell.md) for `app`.
    - Expo (`mobile`, or `app` on Expo): [`references/expo.md`](references/expo.md), [`references/i18n.md`](references/i18n.md), and [`references/offline-sync.md`](references/offline-sync.md) when Offline is yes.
    - Data and identity: [`references/data-permissions.md`](references/data-permissions.md), [`references/data-conventions.md`](references/data-conventions.md), [`references/auth.md`](references/auth.md).
    - Programmatic: [`references/api.md`](references/api.md), [`references/mcp.md`](references/mcp.md), [`references/cli.md`](references/cli.md).
    - Docs and AI: [`references/docs-site.md`](references/docs-site.md), [`references/ai.md`](references/ai.md).
    - Performance, for every kind that ships code: [`references/performance.md`](references/performance.md).
-     ✓ Apps stay thin adapters over `services`, every procedure is contract first, every surface acts as the signed-in user, and names follow the naming rules.
+     ✓ Apps stay thin adapters over `services`, every procedure is contract first, every surface acts as the signed-in user, every Next.js page passes the `nextjs-app-architecture` checklist, and names follow the naming rules.
 6. **Repo hygiene.** Write the AI files, repo files, VS Code settings, CI, Dependabot and tests.
    -> [`references/agent-files.md`](references/agent-files.md), [`references/repo-files.md`](references/repo-files.md), [`references/ci.md`](references/ci.md), [`references/tests.md`](references/tests.md).
    ✓ AGENTS.md is at most 12 KB and lists the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.
@@ -104,6 +104,9 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
 - [ ] [docs, web] Agent routes send `Cache-Control`, no `proxy.ts` lacks a `matcher`, and no experimental flag or twoslash is installed without a use.
+- [ ] [web] Every Next.js surface passes the `nextjs-app-architecture` checklist and has its own `DESIGN.md`.
+- [ ] [web] The `[web]` rows of the Shared web surfaces checklist in `audit.md` are `done` or `kept`: layout, shared chrome, URL state, lazy client code, images behind Services.
+- [ ] [docs, marketing] The `[docs]` and `[marketing]` rows are `done` or `kept`: "Get code", icon and integration maps, server SVG, highlighting, generated data, `.md` mirrors.
 - [ ] [api] Every procedure lives in `packages/contract` with `openapi()` meta, and the committed OpenAPI snapshot matches.
 - [ ] [api, mcp, cli] Errors are RFC 9457 Problem Details on every surface.
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
@@ -120,7 +123,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - **Run:** [`audit.md`](references/audit.md) (placeholders, repo kinds, gap checklist), [`report.md`](assets/report.md) (final report, manual steps), [`adr-template.md`](assets/adr-template.md).
 - **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop).
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
-- **Web:** [`nextjs.md`](references/nextjs.md), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
+- **Web:** [`nextjs.md`](references/nextjs.md) (config, additions to `nextjs-app-architecture`, pitfalls), [`web-design.md`](references/web-design.md) (patterns app, docs and marketing share), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
 - **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps and Temporal, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
 - **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
