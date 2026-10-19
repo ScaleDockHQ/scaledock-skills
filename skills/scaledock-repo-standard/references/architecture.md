@@ -52,7 +52,7 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
   - `cli` imports only `contract` and `domain`.
   - Every app has an explicit allow list. Expo apps may import `services` only for the shared read functions, never `services/commands`, which need secrets.
 - **Contract first.** Every API procedure lives in `packages/contract` with `openapi()` meta, and models carry Valibot `title`, `description` and `examples`. MCP tools are opt-in through `packages/contract/src/mcp.ts` and never mirror REST one-to-one. Hono is only the HTTP shell.
-- **Errors.** RFC 9457 Problem Details everywhere (`type`, `title`, `status`, `detail`, `instance` and a stable `code`). The API returns `application/problem+json`. MCP tool errors return `isError: true` with the same problem as text and `structuredContent`. The CLI prints the problem's `detail`, or the whole problem with `--json`.
+- **Errors.** RFC 9457 Problem Details everywhere (`type`, `title`, `status`, `detail`, `instance` and a stable `code`). The API returns `application/problem+json`. MCP tool errors return `isError: true` with the same problem as text and `structuredContent`. The CLI prints the problem's `detail` on stderr, or the `cli-result-v1` envelope with the problem in `error` under `--json` (see [`cli.md`](cli.md)).
 - **Valibot everywhere** (env, domain, contract, forms, MCP tool schemas, AI output, CLI config). No Zod in our code; a dependency's own Zod is fine.
 - **One library per concern**, enforced with `no-restricted-imports`:
 
@@ -74,7 +74,7 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
   | Email                 | react-email                                                                   | n/a                       |
   | LLMs                  | AI SDK                                                                        | Same, through `apps/api`  |
   | MCP                   | `@modelcontextprotocol/server` and `/client`, latest major                    | n/a                       |
-  | CLI                   | citty, @clack/prompts, c12, tinyexec (latest of each)                         | n/a                       |
+  | CLI                   | Own resolver over a static manifest, @clack/prompts, c12, tinyexec            | n/a                       |
 
   Never add `@radix-ui/*` or vaul. On Expo, never add JS stacks, JS tab bars, JS bottom sheets or `TouchableOpacity`.
 

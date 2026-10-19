@@ -31,6 +31,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
 - **One web product.** The app, docs and marketing sites share one architecture (`nextjs-app-architecture`) and one design reference, so they look and behave alike.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
+- **One CLI contract.** Every ScaleDock CLI prints the same JSON envelope, exit codes and problem codes, switches to agent mode for coding agents, and asks for consent before it rewrites files or publishes.
 - **Unit and integration first.** Tests focus on the unit and integration layers. e2e and UI tests are slow and add little, so they are an opt-in for a few critical journeys.
 - **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
 - **Done means `pnpm verify` passes.** The run ends with a report of what changed, the deviations kept, the pre-release pins, and the manual steps left.
@@ -70,7 +71,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface, and the OAuth Consent block.
 - [`references/api.md`](references/api.md): Hono, oRPC, Scalar.
 - [`references/mcp.md`](references/mcp.md): MCP server, tools from the contract, docs MCP.
-- [`references/cli.md`](references/cli.md): product, library and tooling CLIs, and their startup budget.
+- [`references/cli.md`](references/cli.md): product, library and tooling CLIs on the contract better-supabase and PermDock share (manifest, `cli-result-v1` envelope, exit codes, agent mode and consent, file writes, flag vocabulary), scaffolding with `init` and a web builder, and the startup budget.
 - [`references/docs-site.md`](references/docs-site.md): Fumadocs for people and agents.
 - [`references/ai.md`](references/ai.md): AI SDK 7 through AI Gateway, tool approvals and context, `WorkflowAgent`, the Run SDK, telemetry.
 

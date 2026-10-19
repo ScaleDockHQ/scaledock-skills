@@ -25,6 +25,10 @@ Applies to a Next.js `app`, and its component stack, lint, `DESIGN.md`, responsi
 - **Server first:**
   - Static sections (an FAQ, a feature grid, a pricing table) stay Server Components, with no `"use client"`.
   - Link-styled buttons render `<a className={buttonVariants(...)}>` from a server-only component, so `cn`, cva and the headless Button never reach the client. Record each such primitive in `DESIGN.md`.
+- **Web builders** (a `/create` page that writes a preset code for `init`):
+  - Each step is a filtered view of the preset catalogue by `kind`, never a hand-written list, and starts from the catalogue's defaults. The parity rules are in [`cli.md`](cli.md).
+  - Follow the repo's design-system skill: its ReUI plan before building and its self-check after.
+  - Take screenshots at 390px and 1440px for the review.
 - **Create and edit** happen on routes. Dialogs are only for destructive confirmation or short tasks.
 - **Responsive:**
   - From 360px up, with the same routes on every device.

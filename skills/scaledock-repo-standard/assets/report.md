@@ -8,7 +8,7 @@ Mode, repo kind, surfaces, framework and the other inputs, in one or two sentenc
 
 ## Gap table or created tree
 
-- `upgrade` and `align`: the gap table from `references/audit.md`, with the final status of every row.
+- `upgrade` and `align`: the gap table from `references/audit.md`, with the final status of every row, including the CLI contract and scaffolding rows when the repo has a CLI.
 - `new`: the created tree, and the packages and surfaces it contains.
 
 ## Changes
@@ -25,7 +25,7 @@ One line per pin: package, version, why, and what moves it to stable.
 
 ## Baselines
 
-One row per baseline from `references/performance.md`: what was measured, the value before the run, the value after it, and the commit that moved it.
+One row per baseline from `references/performance.md`: what was measured, the value before the run, the value after it, and the commit that moved it. A CLI gets one row each for the `--version`, `--help` and heaviest leaf `--help` medians.
 
 | Baseline | Before | After | Commit |
 | -------- | ------ | ----- | ------ |

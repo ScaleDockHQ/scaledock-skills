@@ -35,32 +35,33 @@ Every repo starts `docs/agents/` with at least these notes:
 - `.agents/rules/*.mdc` is the source. Each rule has `description`, `globs` and `alwaysApply` frontmatter for Cursor, plus `paths` for Claude Code.
 - `.cursor/rules` is a symlink to `.agents/rules`, and `.claude/rules/<name>.md` symlinks each file.
 - Always-on rules: `architecture`, `writing` and `git-workflow` (the agent workflow from [`git-workflow.md`](git-workflow.md)). Everything else is path-scoped.
+- A repo with a CLI ships a `cli` topic rule with `globs` on the CLI source and tests folders. It holds the layout, the contract (exit codes, envelope, problem codes, effects, `FilePlan`, agent mode, secrets, completion), the flag vocabulary, the renames table and the CLI tests from [`cli.md`](cli.md). The naming rule repeats the flag vocabulary.
 
 ## "When you change X, also update Y"
 
 At least these rows:
 
-| Change                   | Also update                                                                                                    |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| Domain table             | schema, migration, RLS, pgTAP, audit trigger, generated types, domain schema, permissions                      |
-| Env key                  | t3-env, all three Vercel environments, `turbo.json`, `.env.example`                                            |
-| Permission               | its feature (table, RLS, API, MCP, UI)                                                                         |
-| Contract procedure       | `openapi()` meta, router bind, OpenAPI snapshot, MCP opt-in                                                    |
-| MCP tool                 | contract `mcp.ts`, permission, MCP tests, docs MCP page                                                        |
-| CLI command or flag      | its docs page, the help snapshot, the changeset                                                                |
-| OAuth client or redirect | `config.toml`, the hosted project, `env:local`                                                                 |
-| i18n copy                | every `.po` catalog                                                                                            |
-| Route                    | `lib/navigation.ts`, docs page, axe coverage                                                                   |
-| UI primitive             | `DESIGN.md`                                                                                                    |
-| Entity or integration    | the icon map, `lib/integrations.ts`, its docs page, the completeness tests                                     |
-| Package version          | `server.json`                                                                                                  |
-| Dependency bump          | catalog, the "Pre-release pins" list, a note on the absorbed API changes, an ADR if a one-library line changes |
-| `typescript` bump        | `oxlint-tsgolint` in the same commit                                                                           |
-| Next.js bump             | run `next dev` once and commit the refreshed managed AGENTS.md block                                           |
-| User-visible change      | a changeset                                                                                                    |
-| File move                | Knip entries, the `docs:drift` paths                                                                           |
-| Rename                   | the docs Naming page, the `docs:drift` naming test, the changeset's old-to-new table                           |
-| Perf-sensitive change    | the bundle, type and CLI-startup baselines, with before and after numbers in the commit                        |
+| Change                   | Also update                                                                                                                                                                                          |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Domain table             | schema, migration, RLS, pgTAP, audit trigger, generated types, domain schema, permissions                                                                                                            |
+| Env key                  | t3-env, all three Vercel environments, `turbo.json`, `.env.example`                                                                                                                                  |
+| Permission               | its feature (table, RLS, API, MCP, UI)                                                                                                                                                               |
+| Contract procedure       | `openapi()` meta, router bind, OpenAPI snapshot, MCP opt-in                                                                                                                                          |
+| MCP tool                 | contract `mcp.ts`, permission, MCP tests, docs MCP page                                                                                                                                              |
+| CLI command or flag      | the manifest entry and its `effects`, the docs page and its Side effects table, the help snapshot, completion, a `core/renames.ts` row and codemod entry when a released name changes, the changeset |
+| OAuth client or redirect | `config.toml`, the hosted project, `env:local`                                                                                                                                                       |
+| i18n copy                | every `.po` catalog                                                                                                                                                                                  |
+| Route                    | `lib/navigation.ts`, docs page, axe coverage                                                                                                                                                         |
+| UI primitive             | `DESIGN.md`                                                                                                                                                                                          |
+| Entity or integration    | the icon map, `lib/integrations.ts`, its docs page, the completeness tests                                                                                                                           |
+| Package version          | `server.json`                                                                                                                                                                                        |
+| Dependency bump          | catalog, the "Pre-release pins" list, a note on the absorbed API changes, an ADR if a one-library line changes                                                                                       |
+| `typescript` bump        | `oxlint-tsgolint` in the same commit                                                                                                                                                                 |
+| Next.js bump             | run `next dev` once and commit the refreshed managed AGENTS.md block                                                                                                                                 |
+| User-visible change      | a changeset                                                                                                                                                                                          |
+| File move                | Knip entries, the `docs:drift` paths                                                                                                                                                                 |
+| Rename                   | the docs Naming page, the `docs:drift` naming test, the changeset's old-to-new table                                                                                                                 |
+| Perf-sensitive change    | the bundle, type and CLI-startup baselines, with before and after numbers in the commit                                                                                                              |
 
 With Expo, add these rows and extend the matching rows above:
 
