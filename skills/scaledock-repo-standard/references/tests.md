@@ -29,6 +29,21 @@ Applies to every repo kind that has code.
 - **`lib/` unit tests.** Every helper in a web app's `lib/` has a Vitest test: parsers (a SQL schema parser runs against rendered fixtures, never a live database), graph layouts, prompt builders, the entity icon map, and the integration list's completeness against the docs content (see [`web-design.md`](web-design.md)).
 - **pgTAP** for RLS, grants and the audit triggers.
 - **In-process tests** for MCP and the CLI (see [`mcp.md`](mcp.md) and [`cli.md`](cli.md)). An OpenAPI snapshot test for the API.
+- **CLI tests:**
+  - Call `run()` in-process with fake IO: stdout, stderr, env, `readStdin` and `fetch`.
+  - Snapshot every leaf's help (`tests/cli/__snapshots__/help/<leaf>.txt`), and the completion scripts.
+  - Validate real envelopes and `--help --json` output against `schemas/cli-result-v1.json` and `cli-commands-v1.json`.
+  - Keep one smoke test that spawns the built bin and checks the usage line and an envelope error.
+  - A startup-imports test fails when `--help` or `--version` reaches a command module.
+  - **Docs drift from the manifest** (`tests/cli/docs-flags.test.ts`): every global flag is on the CLI index page, every leaf flag is on its command's page, no table lists a flag the command does not take (whole-word match), and each page's `## Side effects` table equals `entry.effects` (`None` when empty).
+  - Integration tests that read CLI JSON run in CI, because a local `verify` skips them. That is where an envelope change breaks a redirected `--json` consumer.
+- **CLI coverage.** Aim high on the CLI folder (PermDock: 96% branches and 98% statements on `src/cli/**`). Unreachable defensive branches are what make that expensive, so write code without them:
+  - Type AST nodes from the parser with required `type` and `start`.
+  - Use `for (const [i, x] of xs.entries())` when the loop does not skip.
+  - Use `beforeFirst(text, sep)` instead of `split(sep)[0] ?? x`.
+  - Use one shared `byCodeUnit` or `byKey` comparator instead of inline ternaries.
+  - Leave no guards for flags the strict parser already rejects.
+  - Read a required positional once.
 - **Rules:**
   - Mock at the feature hook or service boundary, never the transport.
   - No `.only` or `.skip`.

@@ -10,7 +10,8 @@ Record these before changing anything, and again at the end of the run. Put both
 
 - The bundle baseline (`size`, or the library bundle gate below).
 - The type-instantiation benchmark (`typecheck:perf`), when the repo has one.
-- `time <bin> --help` and `time <bin> --version`, for every CLI.
+  - It gates on instantiation counts. Wall-time ceilings flake under a fully parallel local `verify`: PermDock's tests project measured 8.5 to 9.8 s against an 8 s ceiling there, and 2.2 s alone. Treat wall time as advisory locally, or run the check serially.
+- CLI startup for every CLI: the medians of `--version`, `--help` and the heaviest leaves' `--help` from `scripts/cli-startup.ts` (see [`cli.md`](cli.md)).
 - `next analyze` per Next app. Check the command name against the installed Next.
 - With docs or marketing, the gzipped size of each lazy client chunk and the HTML size of the largest prerendered page.
 

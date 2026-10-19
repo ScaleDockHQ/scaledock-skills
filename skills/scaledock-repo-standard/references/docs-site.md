@@ -22,7 +22,10 @@ Applies to product repos with the `docs` surface and to every library repo. Docs
   - Add `fumadocs-twoslash` only when pages contain twoslash code blocks, and then configure it with `typesCache: createFileSystemTypesCache()`. Unused twoslash still constrains the docs app's TypeScript version.
 - **Required pages:**
   - Every public API.
-  - Every CLI command.
+  - Every CLI command, with a `## Side effects` table that lists the manifest's `effects` (`None` when empty). A command's JSON is described as "With `--json`, `data` is …", never "`--json` prints …".
+  - A CLI index page with every global flag, the exit codes, the `cli-result-v1` envelope and the effects vocabulary.
+  - A CLI agent-mode page: detection, what changes, exit `3`, and consent tokens.
+  - A naming page whose CLI table of renamed flags and moved commands comes from `core/renames.ts`.
   - "Connecting tools": MCP install links and OAuth consent, OpenAPI with Scalar auth, and CLI `login`.
 - **SEO:** OG images, `sitemap.ts` and `robots.ts`.
 - **Content rules:**
@@ -32,6 +35,6 @@ Applies to product repos with the `docs` surface and to every library repo. Docs
   - Fenced code has a language and a `title`.
   - No bare `{`, `}` or `<` in prose.
   - Unbuilt features get a "Coming soon" callout.
-- **Drift:** `docs:drift` checks commands, doctor codes, entries and `meta.json` against the code, plus the naming rules in [`architecture.md`](architecture.md).
+- **Drift:** `docs:drift` checks commands, doctor codes, entries and `meta.json` against the code, plus the naming rules in [`architecture.md`](architecture.md). The CLI flags and side effects are checked from the manifest (see [`tests.md`](tests.md)).
   - `doctor` or `docs:drift` reports a gap when `fumadocs-twoslash` is installed and no page contains a twoslash block.
   - It also reports a gap for a `proxy.ts` without a `matcher`.
