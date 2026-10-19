@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.14.0"
+  version: "1.15.0"
 ---
 
 # Repo standard
@@ -82,7 +82,7 @@ Run these steps in order. Each step names the references to load and the check i
 
 ## Verify before done
 
-The tag in brackets names the input that switches an item on; untagged items always apply.
+The tag in brackets names the input that switches an item on; untagged items always apply. `scaffolding` means the CLI has an `init` command that writes a generated config.
 
 - [ ] `pnpm verify` passes locally (rule 4).
 - [ ] [Turbo] `verify` is one cached, parallel `turbo run` of tasks with `inputs`, and no check runs twice.
@@ -109,6 +109,15 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] [docs, marketing] The `[docs]` and `[marketing]` rows are `done` or `kept`: "Get code", icon and integration maps, server SVG, highlighting, generated data, `.md` mirrors.
 - [ ] [api] Every procedure lives in `packages/contract` with `openapi()` meta, and the committed OpenAPI snapshot matches.
 - [ ] [api, mcp, cli] Errors are RFC 9457 Problem Details on every surface.
+- [ ] [cli] A static manifest lists every command with its `effects`, and `--help` and `--version` load no command module.
+- [ ] [cli] `--json` prints the `cli-result-v1` envelope and `--help --json` prints `cli-commands-v1`, with both schemas shipped and tested.
+- [ ] [cli] Exit codes are `0`, `1`, `2`, `3`, `130` and `143`, and missing input exits `3`.
+- [ ] [cli] Agent mode is on for agents, and `rewrite`, `cloud:write` and `--force` need a `--confirm` token.
+- [ ] [cli] Every writing command goes through the `FilePlan`, and every secret flag has a `--<name>-stdin` form.
+- [ ] [cli] Completion comes from the manifest, the docs-flags and side-effects drift test passes, and startup is within budget.
+- [ ] [cli, scaffolding] One catalogue with defaults drives the builder, `init` and help; every preset key is an `init` flag, with a parity and a round-trip test.
+- [ ] [cli, scaffolding] The builder, CLI, preset JSON and docs use the same names, and no option generates nothing.
+- [ ] [cli, scaffolding] `init` always writes the config, and every generated case is type-checked.
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
 - [ ] [Database] Timestamps are `timestamptz`, money is integer minor units plus a currency, and public IDs are UUIDs (v7 when the Postgres major provides it).
 - [ ] [Database] Every foreign key is indexed and has an explicit `on delete`.
@@ -126,6 +135,6 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - **Web:** [`nextjs.md`](references/nextjs.md) (config, additions to `nextjs-app-architecture`, pitfalls), [`web-design.md`](references/web-design.md) (patterns app, docs and marketing share), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
 - **Data and identity:** [`data-permissions.md`](references/data-permissions.md) (tenancy, Supabase, better-supabase, audit log, PermDock), [`data-conventions.md`](references/data-conventions.md) (UTC timestamps and Temporal, money, IDs, naming, pagination, deletion), [`auth.md`](references/auth.md) (OAuth 2.1 server, sign-in per surface).
-- **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, OAuth login).
+- **Programmatic:** [`api.md`](references/api.md) (Hono, oRPC, Scalar), [`mcp.md`](references/mcp.md) (MCP SDK, tools from the contract, docs MCP), [`cli.md`](references/cli.md) (CLI kinds, the contract shared with better-supabase and PermDock, agent mode, scaffolding and presets, OAuth login).
 - **Docs and AI:** [`docs-site.md`](references/docs-site.md) (Fumadocs for people and agents), [`ai.md`](references/ai.md) (AI SDK 7 through AI Gateway, approvals, `WorkflowAgent`, Run SDK).
 - **Delivery:** [`git-workflow.md`](references/git-workflow.md) (branches, agent workflow, the direct-to-develop variant, commitlint, lefthook, Changesets), [`ci.md`](references/ci.md) (Actions, pins, `$/` actions, linters, parallel steps, caching, security, EAS builds, Dependabot), [`tests.md`](references/tests.md), [`agent-files.md`](references/agent-files.md) (AGENTS.md, rules, "also update" table), [`repo-files.md`](references/repo-files.md) (README, standard files, VS Code).
