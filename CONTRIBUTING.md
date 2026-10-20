@@ -8,7 +8,7 @@ You need the Node major in `.node-version` and the pnpm version in `package.json
 pnpm install
 ```
 
-This also installs the git hooks: oxfmt formats staged files, commitlint checks the commit message, and `pnpm verify` runs before every push. Commit messages and PR titles are conventional commit headers of at most 72 characters, such as `feat: add scaledock-auth skill`.
+This also installs the git hooks: oxfmt formats staged files, commitlint checks the commit message, and `pnpm verify` runs before every push. Commit messages and PR titles are conventional commit headers, with no length limit, such as `feat: add scaledock-auth skill`.
 
 ## Naming
 

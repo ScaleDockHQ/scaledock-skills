@@ -44,7 +44,7 @@ One branch and one PR per chat or plan.
 
 1. Run `git status` first. If there are uncommitted changes you did not make, stop and ask.
 2. From `main`, run `git fetch` and create `<type>/<short-topic>` from `origin/main`. If you are already on this work's branch, keep using it.
-3. Make small conventional commits and push. commitlint enforces the header, with a limit of 72 characters.
+3. Make small conventional commits and push. commitlint checks the header format; there is no length limit.
 4. After the first push, open one draft PR with `gh pr create --base main`, and mark it ready once `pnpm verify` passes. The PR title is a conventional commit header.
 5. Every later request in the same chat or plan goes on the same branch and PR. Never open a second PR, never stack PRs, and never merge or push to `main` unless asked.
 

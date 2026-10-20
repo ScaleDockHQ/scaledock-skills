@@ -24,7 +24,7 @@ const config = {
       ],
     ],
     "subject-case": [2, "never", ["pascal-case", "start-case", "upper-case"]],
-    "header-max-length": [2, "always", 72],
+    "header-max-length": [0],
   },
 } satisfies UserConfig;
 
