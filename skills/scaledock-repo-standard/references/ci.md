@@ -7,12 +7,12 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 ## Pins and linters
 
 - **Pins.**
-  - GitHub-owned actions (`actions/*`, `github/*`) use their latest major tag (`@vN`).
-  - Every third-party action is pinned to a full commit SHA with a `# vX.Y.Z` comment naming its latest release, for example `uses: pnpm/setup@<40-char sha> # v3.1.1`.
-  - `.github/zizmor.yml` encodes this: `unpinned-uses` with `actions/*` and `github/*` set to `ref-pin` and `"*"` set to `hash-pin`.
-  - Dependabot moves both the tags and the SHAs, and rewrites the version comment.
+  - Every action, GitHub-owned or third-party, uses its latest major tag (`@vN`), for example `uses: pnpm/setup@v3`. Never a commit SHA, a minor or a patch tag.
+  - This is a decision, not an oversight (scaledock-skills ADR 0008). The repos take fixes inside a major without a PR, and Dependabot opens the PR for the next major. Supply-chain risk is handled by the 7-day Dependabot cooldown, `minimumReleaseAge` for npm, the `permissions` defaults and zizmor. Do not switch back to SHA pins without a new ADR.
+  - `.github/zizmor.yml` encodes this: `unpinned-uses` with `"*"` set to `ref-pin`.
+  - Dependabot moves the major tags.
   - Every JavaScript action runs on `node24`; runners no longer ship Node 20. A third-party action without a `node24` release is replaced. Local actions stay composite.
-- **Workflow lockfiles** (public preview): `gh actions-lock` writes `.github/workflows/actions.lock` with the commit of every action, transitive action and reusable workflow, and Dependabot regenerates it in the same PR. Optional on public repos, on top of the SHA pins, with a CI step that fails on a stale lockfile. Write down why it is held back until it is generally available; adopt it then.
+- **Workflow lockfiles** (public preview): `gh actions-lock` writes `.github/workflows/actions.lock` with the commit of every action, transitive action and reusable workflow, and Dependabot regenerates it in the same PR. Optional on public repos, on top of the tag pins, with a CI step that fails on a stale lockfile. Write down why it is held back until it is generally available; adopt it then.
 - **Same-repo `uses`.** Local actions and reusable workflows use GitHub's self-repository syntax, `$/.github/actions/setup` and `$/.github/workflows/verify.yml`, never `./...`.
 - **actionlint** 1.7.12 parses neither `$/` ([rhysd/actionlint#711](https://github.com/rhysd/actionlint/issues/711)), parallel steps ([#693](https://github.com/rhysd/actionlint/issues/693)), `cache-mode`, `concurrency.queue` nor the `ubuntu-26.04` labels ([#682](https://github.com/rhysd/actionlint/issues/682)). `.github/actionlint.yaml` ignores those messages instead of avoiding the features:
 
@@ -46,6 +46,8 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - `parallel` steps share one machine and one install. Use them for cheap, I/O-bound or waiting work, so a job pays checkout and install once.
   - Private-repo standard Linux runners have fewer cores than public ones, so CPU-bound gates gain less from `parallel` there.
   - Timing-sensitive gates (a type-check time ceiling, benchmarks, CLI startup budgets) each get their own job. Never put them in the shared `parallel` group, where CPU contention makes them flake.
+  - `typecheck` gets its own job once it measures as the slowest step of the `parallel` group, run with `turbo run typecheck --concurrency=1` on 2 vCPU private runners (CentraKit ADR 0024).
+  - Never cache `tsconfig.tsbuildinfo` with `actions/cache`. A stale file makes tsgo hang or report false errors; delete it before trusting a tsgo error locally.
 - **Build first.** A `build` job runs `turbo run build`, uploads `dist` with `actions/upload-artifact`, and fills the Remote Cache. `verify` and the heavy suites declare `needs: build`, so every later job gets Turbo cache hits instead of rebuilding.
   - Add `needs: build` only when the longest chain already runs behind `build`; otherwise it lengthens the run. Measure that first with `gh run view <id> --json jobs`.
   - The Remote Cache must be active ([Caching](#caching)); without it every later job rebuilds.
@@ -89,8 +91,9 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 - **Task outputs** come from the Turborepo Remote Cache ([`vercel.md`](vercel.md)). Never also put Turbo outputs in `actions/cache`.
   - The audit confirms the Remote Cache is active. An unset `vars.TURBO_TEAM` makes the setup action skip the Remote Cache step silently, and Turbo logs "Remote caching disabled". Check `gh variable list`, and look for `outcome=skipped` on the Remote Cache step in `gh run view <id> --log`.
   - The report lists the `TURBO_TEAM` variable and the `TURBO_REMOTE_CACHE_SIGNATURE_KEY` secret as manual steps.
-- **`.next/cache`.** `actions/cache/restore` in every job that runs `next build`, and `actions/cache/save` only on the default branch, keyed on the lockfile hash and the app's sources, so the Turbopack build cache survives between runs.
-  - First confirm the Turbopack build cache is on. If `next.config` turns `turbopackFileSystemCacheForBuild` off in CI, the restore does nothing: remove the step, or record an ADR for keeping the cache off.
+- **Turbopack build cache in CI: off by default.** `next.config` sets `turbopackFileSystemCacheForBuild: !process.env.GITHUB_ACTIONS`, and CI has no `.next/cache` step.
+  - On a 2 vCPU private runner, a cold build that restored `.next/cache` used 7.8 of 7.9 GB of RAM plus 3 GB of swap and was killed (CentraKit ADR 0016). Parallel builds with the cache on hung on GitHub-hosted runners (PermDock ADR 0029).
+  - Turn it on only on a larger runner, after measuring a cold and a warm build. Then `actions/cache/restore` runs in every job that runs `next build`, and `actions/cache/save` runs only on the default branch, keyed on the lockfile hash and the app's sources.
 - **Playwright browsers.** Cache `~/.cache/ms-playwright` keyed on the resolved `@playwright/test` version; on a hit, run only `playwright install-deps`.
 - **`cache-mode`** applies least privilege to the cache, per workflow or per job, and a called workflow never gets more than its caller:
   - `read` on any workflow triggered by `pull_request_target`, `issue_comment` or `workflow_run` (GitHub's default for those, made explicit).
@@ -118,7 +121,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - With build first, a `build` job that also computes the affected heavy suites. Then it calls `verify.yml` (affected-only on PRs), then the gated heavy suites and e2e if the repo has them.
 - **`verify.yml`:** a reusable `workflow_call`, so `release.yml` runs the same gate on the release commit. It runs every `pnpm verify` gate and nothing else, so local and CI results agree, in two parts:
   - A `static` job: one checkout and setup, then one `parallel` group with a single Turbo step for the workspace tasks (lint, typecheck, knip, `openapi:check`, `i18n:check`, `docs:drift`) and one step per root-only check (`format:check`, `lint:root`, `boundaries`). _Verified in ScaleDockHQ/permdock PR #162: the `parallel` group took 22 seconds._
-  - A `fail-fast: false` matrix with one job each for `test`, `build`, `audit:high` and `doctor`, plus one per timing-sensitive gate. Next builds restore `.next/cache`. A job that still builds several Next apps runs them with `--concurrency=1` until strict task entrypoints cut it to one.
+  - A `fail-fast: false` matrix with one job each for `test`, `build`, `audit:high` and `doctor`, plus one per timing-sensitive gate. The `build` job builds every deployed app (docs and marketing included), not only the published package: better-supabase shipped an MDX error to production because CI built only the library. A job that still builds several Next apps runs them with `--concurrency=1` until strict task entrypoints cut it to one.
   - Affected runs on PRs combine `--affected` with the job's `--filter`.
 
   ```yaml
@@ -144,6 +147,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   ```
 
 - **`security.yml`:** `dependency-review-action` on PRs, `pnpm audit signatures` as a non-blocking job on lockfile changes, and on public repos zizmor and actionlint on workflow changes.
+  - `dependency-review-action` fails with "Dependency review is not supported on this repository" while the repo's Dependency graph is off. The report lists turning it on (Settings, then Code security) as a manual step for private repos.
   - Workflow `paths` filters cannot scope a single job. The signatures job sets `continue-on-error: true`, checks out with `fetch-depth: 0` and `filter: blob:none`, runs `git diff --quiet "origin/$BASE...HEAD" -- pnpm-lock.yaml` (with `BASE` from `github.base_ref`), and gates its later steps on the result.
 - **`database.yml`:** on `supabase/**` changes, on an x64 Ubuntu runner (no Docker service):
   - Start the project with `supabase start --runtime native` as a background step while dependencies install, then `wait` for it.
@@ -163,7 +167,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 
 - **`dependabot.yml`:**
   - npm (limit 10) and github-actions (limit 5).
-  - Weekly on Monday, one grouped PR per ecosystem, `cooldown.default-days: 2`.
+  - Weekly on Monday, one grouped PR per ecosystem, `cooldown.default-days: 7`. zizmor's `dependabot-cooldown` audit flags anything shorter (PermDock ADR 0027).
   - Pre-releases are allowed, so pre-release pins move forward.
   - `target-branch` is the working branch.
   - With workflow lockfiles, Dependabot updates `actions.lock` in the same PR.

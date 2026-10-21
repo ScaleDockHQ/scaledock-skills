@@ -147,8 +147,8 @@ Never release-please. `.changeset/config.json`:
 - Each PR carries its own changesets.
   - When `privatePackages` is off (libraries), a change that touches only a private app, such as a dependency added to the docs or marketing site, gets no changeset. Say so in the commit body instead.
 - `pnpm version-packages` runs three steps:
-  1. `changeset version`.
-  2. `scripts/root-changelog.ts`, built on `@changesets/read` and `@changesets/assemble-release-plan`, which prepends a dated `## <version>` section to the root `CHANGELOG.md`.
+  1. `scripts/root-changelog.ts`, built on `@changesets/read` and `@changesets/assemble-release-plan`, which prepends a dated `## <version>` section to the root `CHANGELOG.md`. It runs first because `changeset version` deletes the changeset files it reads (PermDock ADR 0024).
+  2. `changeset version`.
   3. `oxfmt`.
 
   The docs site renders the root changelog.

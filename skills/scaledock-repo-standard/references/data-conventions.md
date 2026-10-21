@@ -7,7 +7,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 ## Timestamps
 
 - Columns are always `timestamptz`, never `timestamp`. The database, the Vercel functions and CI run in UTC.
-- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`). The domain schema transforms them to `Temporal.Instant`.
+- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`). Contract schemas keep the ISO string type, so the OpenAPI document, MCP tool schemas and clients see a plain string; only internal domain code parses it to `Temporal.Instant` (CentraKit ADR 0029). A contract schema with a transform to `Temporal` cannot be converted to JSON Schema.
 - Convert to the user's time zone only at display: `instant.toZonedDateTimeISO(zone)`, formatted through the next-intl or i18next formatters, which use `Intl`. Never store local time.
 - Durations are `Temporal.Duration`, sent as ISO 8601 durations (`PT15M`).
 

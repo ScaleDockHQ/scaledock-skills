@@ -46,7 +46,7 @@ Record any exception in an ADR.
 
 - Fluid Compute on Node.js; never `runtime = "edge"`. Containers and Daemons also run on Fluid, so they never justify leaving Node for a service Node can serve.
 - Function region `fra1` unless the user names another.
-- Only `apps/api` starts workflows; a workflow may start child workflows with `start()`. Each service sets its own `WORKFLOW_QUEUE_NAMESPACE`.
+- `apps/api` starts workflows; a workflow may start child workflows with `start()`. The one exception is a streaming chat surface, which may start its workflow from a runtime package the app imports, so a chat turn skips a network hop (CentraKit ADR 0026); record it in an ADR. Each service sets its own `WORKFLOW_QUEUE_NAMESPACE`.
 - Workflow 5 traces each invocation as its own root (`WORKFLOW_TRACE_MODE=linked`, the default). Dashboards and alerts query the `workflow.execute <fn>` and `step.execute <fn>` spans.
 - An `apps/api` without workflows runs its Hono app through `@hono/node-server` `getRequestListener(app.fetch)` in `server.ts`. An `apps/api` with workflows hosts the same Hono app on Nitro with the `workflow/nitro` module, because the Workflow SDK needs a build integration.
 
@@ -54,7 +54,10 @@ Record any exception in an ADR.
 
 One project with Services.
 
-- **Each service** has a `root`, an `installCommand` of `pnpm install --frozen-lockfile --filter '{.}...'`, a `buildCommand` and `turbo-ignore`.
+- **Each service** has a `root`, an `installCommand` that installs the whole workspace from the repo root (`cd ../.. && pnpm install --frozen-lockfile`), a `buildCommand`, and an `ignoreCommand` of `npx -y turbo@<pin> query affected --packages <name> --exit-code`.
+  - Never `--filter '{.}...'` per service: the filtered installs failed with an ENOENT on the shared store in SignalDock.
+  - `turbo query affected --exit-code` replaces `turbo-ignore`, matching [`ci.md`](ci.md).
+  - pnpm comes from `devEngines` with `onFail: "download"` ([`toolchain.md`](toolchain.md)), not Corepack.
 - **Rewrites:**
   - `/api`.
   - `/mcp`, plus both `/.well-known/oauth-protected-resource` paths.
@@ -63,7 +66,7 @@ One project with Services.
 - **Images under Services.** A Next app served under another service's host through a rewrite (docs under `/docs`, with `assetPrefix`) can get a 404 from `/_next/image`, because the request reaches the host app instead. Give that app its own domain, or set `images.unoptimized` on it with a comment. Record the choice and the reason in `docs/agents/nextjs.md`. The report's manual steps include a `curl -I` of a production image after deploy.
 - **`git.deploymentEnabled`:** deny `*`, `**` and `changeset-release/**`. Allow `main`, and `develop` once it exists.
 - **`crons`** for `apps/api`.
-- **Config file:** `vercel.ts`, typed with `VercelConfig` from `@vercel/config/v1`. Write rewrites with the `routes` helpers, and Services under `experimentalServices` (`type`, `root`, `entrypoint`). That key is marked private, so when a deploy rejects it, fall back to `vercel.json` with `$schema` and record a `gap` row. Vercel's docs show the public `services` key (`root`, `framework` or `entrypoint`, `bindings`, routed with `destination: { service }`) in `vercel.json`; switch `vercel.ts` to it once the installed `@vercel/config` types it.
+- **Config file:** `vercel.ts`, typed with `VercelConfig` from `@vercel/config/v1`. Write rewrites with the `routes` helpers, and Services under `experimentalServices` (`type`, `root`, `entrypoint`). That key is marked private, so when a deploy rejects it, fall back to `vercel.json` with `$schema` and record a `gap` row. The public `services` key (`root`, `framework` or `entrypoint`, `ignoreCommand`, `bindings`, routed with `destination: { service }`) in `vercel.json` deploys today (SignalDock), so `vercel.json` with `services` is an accepted form, not a gap. Switch to `vercel.ts` once the installed `@vercel/config` types every key the repo uses.
 - **Service-to-service calls** use a service binding (`{ "type": "service", "service": "<name>", "format": "url", "env": "<NAME>_INTERNAL_URL" }`), never a public URL, and a service without a rewrite stays internal. While `@vercel/config` has no `bindings`, record a `gap` row instead of hard-coding URLs.
 
 ## Runtime and toolchain choices
@@ -80,7 +83,6 @@ Check the keys against the installed docs:
   "$schema": "https://turborepo.dev/schema.json",
   "agentGuidance": true,
   "futureFlags": {
-    "globalConfiguration": true,
     "affectedUsingTaskInputs": true,
     "filterUsingTasks": true,
     "watchUsingTaskInputs": true,
@@ -90,27 +92,23 @@ Check the keys against the installed docs:
     "longerSignatureKey": true,
     "strictTaskEntrypointSelection": true,
   },
-  "global": {
-    "envMode": "strict",
-    "cacheMaxAge": "14d",
-    "cacheMaxSize": "10GB",
-    "remoteCache": { "enabled": true, "signature": true },
-    "env": ["CI", "NODE_ENV"],
-    "passThroughEnv": [
-      "SUPABASE_*",
-      "VERCEL_*",
-      "PORTLESS*",
-      "REUI_LICENSE_KEY",
-      "GITHUB_ACTIONS",
-      "TURBO_REMOTE_CACHE_SIGNATURE_KEY",
-    ],
-    "inputs": [
-      "packages/typescript-config/**",
-      "oxlint.config.ts",
-      "oxfmt.config.ts",
-      "pnpm-workspace.yaml",
-    ],
-  },
+  "envMode": "strict",
+  "remoteCache": { "enabled": true, "signature": true },
+  "globalEnv": ["CI", "NODE_ENV"],
+  "globalPassThroughEnv": [
+    "SUPABASE_*",
+    "VERCEL_*",
+    "PORTLESS*",
+    "REUI_LICENSE_KEY",
+    "GITHUB_ACTIONS",
+    "TURBO_REMOTE_CACHE_SIGNATURE_KEY",
+  ],
+  "globalDependencies": [
+    "packages/typescript-config/**",
+    "oxlint.config.ts",
+    "oxfmt.config.ts",
+    "pnpm-workspace.yaml",
+  ],
   "tasks": {
     "transit": { "dependsOn": ["^transit"] },
     "build": {
@@ -133,7 +131,12 @@ Check the keys against the installed docs:
 }
 ```
 
+- **Top-level keys, no `global` block.** Keep `globalEnv`, `globalPassThroughEnv`, `globalDependencies`, `envMode` and `remoteCache` at the top level, and leave the `globalConfiguration` future flag and its `global` block off. `turbo/no-undeclared-env-vars` (`eslint-plugin-turbo`, run through oxlint) reads only the top-level keys, so the `global` block reports every declared variable as undeclared (CentraKit, better-supabase, Lienlink). Revisit when the plugin reads `global`.
+- **Marketplace env.** A Marketplace integration adds variables to every Vercel environment. For each one, either list it (or its prefix) in `globalPassThroughEnv` or a task's `env` with the code that reads it, or delete it from the project. Never leave a variable that nothing declares.
+- **Signed Remote Cache** (`"signature": true`) only once `TURBO_REMOTE_CACHE_SIGNATURE_KEY` exists in CI and on Vercel. Create the key first, then turn on signing in the same PR that uses it.
 - **`transit`** is a no-op script (`"transit": "true"`) in every package. Tasks that read source from dependencies depend on it, so they rerun when a dependency changes without waiting for its build.
+  - When a package's `exports` point at `dist/`, its consumers read the build, not the source: their tasks depend on `^build` instead of `transit` (PermDock ADR 0021).
+  - A task that reads generated code (Supabase types, the OpenAPI document, typed routes) depends on the task that generates it.
 - **Workspace `turbo.json` files** extend `//` with `"extends": ["//"]`, add their `tags`, and list per-task `env` keys and `inputs` exclusions. Expo apps exclude `ios/**`, `android/**` and `assets/**` from `lint`, `typecheck` and `test` inputs, and add `test:components`.
 - **Boundaries:** every workspace has `boundaries` tags.
 - **Generated inputs:** a task that reads files another task generates (the `supabase:types` output, Uniwind artifacts) excludes them from its static `inputs` and adds `{ "mode": "jit", "globs": [...] }`, so the hash reflects the generated content.

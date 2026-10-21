@@ -12,8 +12,10 @@ Applies to every repo kind. A tooling repo without TypeScript skips the tsconfig
   - `@types/node` is the latest release on that major.
   - Going from `@types/node` 25 or later down to 24 drops the global `CryptoKey` type. In runtime code, derive it with `Awaited<ReturnType<typeof crypto.subtle.importKey>>` rather than importing it from `node:crypto`.
   - Node strips TypeScript types natively, so never pass `--experimental-strip-types`.
-- **pnpm:** the latest release, as an exact version in `packageManager`, `engines` and `devEngines.packageManager` (`onFail: "error"`), never a range.
-  - With `onFail: "error"`, a bump locks out every local pnpm below the new version, git hooks included. The report lists `pnpm self-update <version>` as a manual step.
+- **pnpm:** the latest release, as an exact version in `packageManager`, `engines` and `devEngines.packageManager` (`onFail: "download"`), never a range.
+  - `onFail: "download"`, not `"error"`: Vercel's build image ships an older pnpm 12, and `"error"` failed the install with `ERR_PNPM_BAD_PM_VERSION` in CentraKit and SignalDock. `"download"` fetches the pinned version, and the lockfile records its integrity hash.
+  - Never turn on Corepack (`ENABLE_EXPERIMENTAL_COREPACK`) on Vercel or in CI. Vercel marks it experimental, Node no longer bundles it after 24, and `devEngines` already selects pnpm. A repo that added the env var removes it in the Vercel dashboard by hand.
+  - macOS Gatekeeper blocks the ad-hoc signed pnpm binary when a GUI git client (Cursor, SourceTree) runs the hooks. The report lists the fix as a manual step: add the client to Developer Tools in System Settings, Privacy and Security. `pnpm self-update` brings the block back.
 - **Root `package.json`:** `"private": true`, `"type": "module"`, `"license": "MIT"`.
 - **TypeScript:** the latest `typescript` release, which is the native Go compiler from 7.0 on.
   - Never install `@typescript/native-preview` (retired). Nothing in the standard needs the JS compiler API: Knip parses with oxc, Next runs the project-local `tsc`, and oxlint type-checks through tsgolint.
@@ -77,6 +79,11 @@ Every workspace dependency is `catalog:` or `workspace:*`. Every override, `mini
 - An explicit `minimumReleaseAge` makes `minimumReleaseAgeStrict` true, so a too-young version stops with an approval prompt instead of being excluded silently. Never approve it to get around the policy.
 - Before adding or bumping a dependency, run `pnpm view <pkg> time` and pick the newest version older than `minimumReleaseAge`.
 - When several agents share one working tree, only one of them runs `pnpm install` or changes `pnpm-lock.yaml`. The others wait for it, then pull its lockfile.
+- **Own-org packages too young for `minimumReleaseAge`.** When a repo needs a release of a sibling ScaleDock package (better-supabase, permdock) that is younger than the window, add one `minimumReleaseAgeExclude` entry for that exact version (`better-supabase@0.12.0`, never the bare name), with a comment naming the reason and a removal date at the end of the window. Remove the entry on that date. Never link a sibling checkout (`link:../better-supabase`) in a commit, and never add a CI read token to fetch an unpublished build.
+  - A temporary `link:` for local testing needs `pnpm_config_strict_peer_dependencies=false` and `pnpm_config_verify_deps_before_run=false` in the shell, and is reverted before the commit.
+- **Scoped overrides.** When one consumer needs a different version of a shared dependency, override it for that parent only (`"parent>dep": "1.2.3"`), never globally, so the other consumers keep theirs.
+- **`trustPolicy: no-downgrade`** can silently drop an optional platform binary, and the build then fails only on the platform that needs it (Linux on Vercel). Add one commented `trustPolicyExclude` entry for that exact version.
+- **`pnpm add` in a catalog repo** can write `workspace:*` into the catalog or prune catalog entries. Read the `pnpm-workspace.yaml` diff after every add.
 
 With Expo (see [`expo.md`](expo.md)):
 
@@ -102,7 +109,7 @@ Also:
 
 - `library.json` adds `isolatedDeclarations`. Published packages build with tsdown.
 - `react-library.json` extends `library.json` and adds `jsx: "react-jsx"` and the `DOM` and `DOM.Iterable` libs, for `packages/ui` and other React packages.
-- `next.json` extends `base.json` and adds `jsx: "preserve"`, the `DOM` libs, `allowJs` with `checkJs` and the `next` TypeScript plugin, for every Next app.
+- `next.json` extends `base.json` and adds `jsx: "react-jsx"` (Next 16.4 rewrites `preserve` on every run), the `DOM` libs, `allowJs` with `checkJs` and the `next` TypeScript plugin, for every Next app.
 - `Temporal` types come from `temporal-polyfill` until the `lib` of the installed TypeScript declares them (see [`architecture.md`](architecture.md)).
 - `expo.json` (with Expo) extends `expo/tsconfig.base` and adds this repo's strictness options, for Expo apps. `packages/ui` uses it instead of `react-library.json` when it targets React Native.
 - The root `tsconfig.json` covers tooling files through `typecheck:tooling`.
@@ -112,6 +119,10 @@ Also:
 `knip.mts` lists workspaces explicitly and sets `treatConfigHintsAsErrors: true`, `tags: ["-internal"]`, `ignoreExportsUsedInFile` for types, and `ignoreBinaries: ["vercel"]`.
 
 When Knip flags an export that a refactor left unused, remove the export. Never add it to an ignore list.
+
+Knip does not see oxlint `jsPlugins` loaded by name in `oxlint.config.ts`; list those packages under `ignoreDependencies` with a comment. Plugins that Ultracite loads are not affected.
+
+Never run `next build` and `typecheck` of the same app at once, by hand or as two agents: both write `.next/types`, and the loser reports missing route types.
 
 ## Root script names (exact)
 

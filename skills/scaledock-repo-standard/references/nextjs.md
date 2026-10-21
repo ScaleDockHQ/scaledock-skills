@@ -37,8 +37,8 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
 ```
 
 - Do not set `experimental.instantInsights`: instant validation already defaults to `"warning"`. Opt a route out only with `export const instant = false` and a comment saying why.
-- Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`), the shared browser runtime (`turbopackSharedRuntime`), `experimental.agentUpgrade` (`"security"`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Remove `appNewScrollHandler`; 16.4 dropped it.
-- Leave `experimental.agentFeedback` off: it needs telemetry and adds AGENTS.md instructions for sending feedback to Vercel. Keep `.next/cache/**` out of Turbo outputs; Vercel and the CI cache restore it.
+- Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`, except `!process.env.GITHUB_ACTIONS` to turn it off in CI, see [`ci.md`](ci.md)), the shared browser runtime (`turbopackSharedRuntime`), `experimental.agentUpgrade` (`"security"`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Remove `appNewScrollHandler`; 16.4 dropped it.
+- Leave `experimental.agentFeedback` off: it needs telemetry and adds AGENTS.md instructions for sending feedback to Vercel. Keep `.next/cache/**` out of Turbo outputs; Vercel restores it.
 - Do not set `useTypeScriptCli`: `next build` type-checks with the project-local TypeScript.
 - Do not set `supportsImmutableAssets`. The Vercel adapter turns immutable static assets on; the option exists only to opt out while debugging an adapter.
 - Measured opt-ins, never in the default block:
@@ -47,7 +47,7 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
   - `webVitalsAttribution`, only while someone reads the attribution data.
   - `turbopackGc` and `turbopackLazyDynamicImports`, dev-only, when a large app's dev cache or cold compiles are measurably slow.
   - `optimizePackageImports`, only for a package that is not already in the Next default list. Most icon packages are in it.
-- **Markdown negotiation** (`Accept: text/markdown`) goes through `rewrites().beforeFiles` with a `has` condition on the `accept` header, and a `headers()` rule that sets `Vary: Accept` on the same paths. A `proxy.ts` is the fallback when a rewrite cannot express the rule, and it always exports a `matcher`. A proxy without a matcher runs on every request, including static assets, and is a gap.
+- **Markdown negotiation** (`Accept: text/markdown`) goes through `rewrites().beforeFiles` with a `has` condition on the `accept` header to a Markdown route handler. The route handler sets `Vary: Accept` on its own response; a `headers()` rule for `Vary` on the HTML paths is not needed (PermDock ADR 0030). A `proxy.ts` is the fallback when a rewrite cannot express the rule, and it always exports a `matcher`. A proxy without a matcher runs on every request, including static assets, and is a gap.
 - Keep `gestureTransition` and `transitionIndicator` off; they break back and forward. Use `<ViewTransition>` and `addTransitionType` (both stable), and respect reduced motion.
 
 ## Architecture (`nextjs-app-architecture`, latest)
@@ -90,7 +90,7 @@ ScaleDock adds:
   - `IntentPrefetchLink` (hover, focus or touch) for unbounded lists.
   - `prefetch={true}` only for a bounded, tested set.
 - **Routing details.** Route aliases are `redirects()` in `next.config`. Omit `export const runtime`. Read root-level params such as `[locale]` with `next/root-params` instead of passing them down.
-- **React.** `<Activity>` keeps hidden UI mounted with its state (side panels, inactive tabs). Fragment refs replace wrapper `div`s that exist only to hold a ref. The React Compiler memoizes, so code never adds `useMemo`, `useCallback` or `memo` by hand.
+- **React.** `<Activity>` keeps hidden UI mounted with its state (side panels, inactive tabs). Fragment refs replace wrapper `div`s that exist only to hold a ref. The React Compiler memoizes, so code never adds `useMemo`, `useCallback` or `memo` by hand. The exception is a library that requires a stable reference: TanStack Table column definitions stay in `useMemo` (CentraKit ADR 0027).
 - **Tests.** `@next/playwright` `instant()` covers key navigations. A route-table test asserts every route ships a prerendered shell.
 
 ## Pitfalls

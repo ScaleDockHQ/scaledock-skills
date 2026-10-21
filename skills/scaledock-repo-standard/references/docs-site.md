@@ -8,7 +8,7 @@ Applies to product repos with the `docs` surface and to every library repo. Docs
 - **Formats:**
   - `/llms.txt` and `/llms-full.txt`.
   - Per-page `.md` or `.mdx` routes.
-  - `Accept: text/markdown` negotiation, with `Vary: Accept`, through `beforeFiles` rewrites with a `has` header condition and a `headers()` rule, as in [`nextjs.md`](nextjs.md). A `proxy.ts` is the fallback only, and it always has a `matcher`.
+  - `Accept: text/markdown` negotiation through `beforeFiles` rewrites with a `has` header condition, to a route handler that sets `Vary: Accept` on its own response, as in [`nextjs.md`](nextjs.md). A `proxy.ts` is the fallback only, and it always has a `matcher`.
 - **Every page** has a copy-as-Markdown button, view options and a last-updated date. A page that offers an AI prompt puts the same prompt in its `.md` mirror.
 - **Agent features:**
   - The docs MCP (see [`mcp.md`](mcp.md)).

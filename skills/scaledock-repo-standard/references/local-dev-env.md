@@ -6,17 +6,19 @@ Applies to product repos, and to library repos that run a docs site.
 
 ## Portless
 
-- **Per app:** `"dev:portless": "portless run --force --name <name> <dev command>"`. Names: `app`, `api`, `mcp`, `docs`, and `www` for marketing, each at `https://<name>.localhost`.
+- **Per app:** the app's own `package.json` holds a `"portless": { "name": "<name>" }` key, and its script is `"dev:portless": "portless"`, which runs the app's `dev` script under that name. Names: `app`, `api`, `mcp`, `docs`, and `www` for marketing, each at `https://<name>.localhost`.
+  - The `dev` script reads the port Portless assigns: `next dev -p ${PORT:-3001}`, with a different fallback per app so a plain `pnpm dev` of two apps does not collide.
+  - `portless run --force --name <name> <dev command>` is the older form; replace it in upgrade mode.
 - **Root scripts:**
   - `dev:portless` runs `dotenv -e .env.development.local -e .env.local -- turbo run dev:portless`.
   - `dev:<app>` for each app.
   - `dev:cleanup` runs `portless prune`.
-- **`portless.json`** lists every app with `"proxy": false`.
+- **No root `portless.json`.** The names live in each app's `package.json`, so a moved or added app carries its own.
 - **URLs:**
   - `NEXT_PUBLIC_SITE_URL=https://localhost`.
   - Supabase stays on `127.0.0.1`, on the API port the CLI picked for this checkout. Its `site_url` is the Portless app, and the redirect list includes every Portless callback (app, Scalar) and the CLI loopback.
   - Each worktree or agent sandbox starts its own Supabase project on the native runtime (see [`data-permissions.md`](data-permissions.md)). Read its URLs and keys from `supabase start --output-format json`, as `pnpm env:local` does; never assume port `54321`, Docker, or a project shared with another checkout.
-  - `allowedDevOrigins` includes the Portless hosts.
+  - `allowedDevOrigins` is `["127.0.0.1", "localhost", "**.localhost"]` in the shared Next config, so every Portless name and worktree prefix passes without a list per app.
 - **Worktrees.** A new git worktree has none of the gitignored local secrets, such as the Supabase signing key. Generate them in each checkout with the repo's scripts (`pnpm supabase:signing-key`, `pnpm env:local`); never copy them between checkouts. Each worktree runs its own Supabase project and Portless names, so two branches never share ports.
 - **Google OAuth (`dev:oauth`):**
   - A separate proxy on `localtest.me`: `PORTLESS_STATE_DIR` in a temp dir, `PORTLESS_PORT=1355`, `portless proxy start --tld me`.

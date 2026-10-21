@@ -39,9 +39,9 @@ Resolve the placeholders listed in [`references/audit.md`](references/audit.md) 
 2. **Always the latest, including new majors in pre-release.**
    - This skill names no versions. Look up the latest release of every runtime, package, SDK, action, skill and spec when you run (`pnpm view <pkg> dist-tags`, GitHub releases, vendor docs), never from memory or another repo.
    - **New majors first.** When a newer major is in alpha, beta or rc, adopt it now, absorb its migration guide, and note the API changes in the commit. Otherwise use the latest stable; never a pre-release of a minor or patch.
-   - **Exceptions.** Stay on the current major only when the pre-release fails `minimumReleaseAge` or breaks a peer with no compatible release. Record the blocker in the gap table.
-   - **Tracking.** List every pre-release pin under "Pre-release pins" in AGENTS.md (package, version, why), and move it to stable when the major ships.
-   - Pin exactly in the catalog. Never bypass `minimumReleaseAge`; use the newest release that passes, and add a commented exclude only when a fix needs it.
+   - **Exceptions.** Stay on the current major (status `held`) when the pre-release fails `minimumReleaseAge`, breaks a peer with no compatible release, cannot be found or installed (a version the vendor announced but does not publish), or has stalled (no release in about three months, or a daily `next` line with no rc). Record the blocker in the gap table.
+   - **Tracking.** List every pre-release and held pin under "Pre-release pins" in AGENTS.md: package, version, status (`pre-release` or `held`), why, and the trigger to revisit it (the rc, the stable, the peer release). Move it when the trigger fires.
+   - Pin exactly in the catalog. Never bypass `minimumReleaseAge`; use the newest release that passes, and add a commented exclude only when a fix needs it. A sibling ScaleDock package younger than the window gets one exclude at that exact version with a removal date ([`references/toolchain.md`](references/toolchain.md)); never a sibling `link:` or a read token.
 3. **Read installed docs before configuring.** For Next.js, ask the running dev server's `/_next/mcp` first, then read the bundled `node_modules/next/dist/docs`. Read `node_modules/turbo/docs`, the Expo, Ultracite, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
 4. **Done means `pnpm verify` passes.** Report with [`assets/report.md`](assets/report.md).
 5. **One branch and one PR for this whole run.** Follow the agent workflow in [`references/git-workflow.md`](references/git-workflow.md).
@@ -90,7 +90,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] The naming rules hold, and the `docs:drift` naming check passes.
 - [ ] The baselines from before and after the run are in the report.
 - [ ] Every dependency is `catalog:` or `workspace:*` at the latest release that passes `minimumReleaseAge`; every override, exclude, `allowBuilds` entry and patch has a comment.
-- [ ] Every pre-release pin is in AGENTS.md (rule 2).
+- [ ] Every pre-release and held pin is in AGENTS.md with its status and revisit trigger, and every own-org release-age exclude names one exact version and a removal date that has not passed (rule 2).
 - [ ] `pnpm-workspace.yaml` has no key the installed pnpm rejects, and TypeScript is the stable native compiler with no preview package.
 - [ ] Every deviation has an ADR in `docs/decisions/` and a line in the AGENTS.md "Deviations" list.
 - [ ] [workspaces] Every workspace has a Turbo boundary tag, apps never import each other, and `pnpm boundaries` passes.
@@ -100,7 +100,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] Every disabled lint rule carries a reason and a re-measured finding count, and no rule is left half-enabled.
 - [ ] A TypeScript minor in pre-release is prepared for, never installed, and tracked in the AGENTS.md pending upgrade checklist.
 - [ ] An oxfmt or oxlint bump is its own commit, with the reformat listed in `.git-blame-ignore-revs`.
-- [ ] GitHub-owned actions use major tags, third-party actions use a commit SHA with a `# vX.Y.Z` comment, same-repo actions use `$/...`, and public repos run zizmor.
+- [ ] Every action uses its latest major tag with zizmor `ref-pin` (scaledock-skills ADR 0008), same-repo actions use `$/...`, public repos run zizmor, and Dependabot has a 7-day cooldown.
 - [ ] `verify.yml` runs the static gates in one job with a `parallel` group, services run as `background` steps, only the default branch saves caches, the Remote Cache step is not skipped in CI, and every job sets `timeout-minutes`.
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.

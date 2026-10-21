@@ -53,6 +53,7 @@ Every repo starts `docs/agents/` with at least these notes:
 - `.agents/rules/*.mdc` is the source. Each rule has `description`, `globs` and `alwaysApply` frontmatter for Cursor, plus `paths` for Claude Code.
 - `.cursor/rules` is a symlink to `.agents/rules`, and `.claude/rules/<name>.md` symlinks each file.
 - Always-on rules: `architecture`, `writing` and `git-workflow` (the agent workflow from [`git-workflow.md`](git-workflow.md)). Everything else is path-scoped.
+  - Once the `architecture` rule passes about 10 KB, path-scope it to the source files (`**/*.ts`, `**/*.tsx`) and keep the AGENTS.md invariants as the always-on summary (CentraKit ADR 0028). Every always-on byte loads in every session, including docs-only and SQL-only work.
 - A repo with a CLI ships a `cli` topic rule with `globs` on the CLI source and tests folders. It holds the layout, the contract (exit codes, envelope, problem codes, effects, `FilePlan`, agent mode, secrets, completion), the flag vocabulary, the renames table and the CLI tests from [`cli.md`](cli.md). The naming rule repeats the flag vocabulary.
 
 ## "When you change X, also update Y"
