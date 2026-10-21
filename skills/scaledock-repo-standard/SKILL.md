@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.16.0"
+  version: "1.17.0"
 ---
 
 # Repo standard
@@ -60,7 +60,7 @@ Run these steps in order. Each step names the references to load and the check i
      -> [`references/audit.md`](references/audit.md), [`references/architecture.md`](references/architecture.md) for the target tree, and the Baselines section of [`references/performance.md`](references/performance.md) when the repo ships code.
      ✓ Every row has an `audit.md` status, every dependency behind latest is listed, and the starting baselines are recorded.
 3. **Foundation.** Install the skills, set up the toolchain, workspace, TypeScript, Knip, lint and format, and lay out the folders and boundaries.
-   -> [`references/skills.md`](references/skills.md), [`references/toolchain.md`](references/toolchain.md), [`references/lint-format.md`](references/lint-format.md), [`references/architecture.md`](references/architecture.md).
+   -> [`references/skills.md`](references/skills.md), [`references/toolchain.md`](references/toolchain.md), [`references/lint-format.md`](references/lint-format.md), [`references/lint-tightening.md`](references/lint-tightening.md) when the repo has disabled rules, [`references/architecture.md`](references/architecture.md).
    ✓ `pnpm install` passes under the strict workspace settings, every workspace has a boundary tag, and `pnpm check` runs.
 4. **Platform.** Configure Vercel, Turborepo, Remote Cache, local dev with Portless, and env and secrets.
    -> [`references/vercel.md`](references/vercel.md), [`references/local-dev-env.md`](references/local-dev-env.md).
@@ -97,7 +97,9 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] No Zod in our code, no `@radix-ui/*` or vaul, and each concern uses its one library.
 - [ ] Dates use `Temporal` through the one `temporal.ts` module; no other date library is installed.
 - [ ] Lint and format run on Ultracite: a root `oxlint.config.ts` on the Ultracite presets with type-aware linting and `denyWarnings`, `oxfmt.config.ts` spreading `ultracite/oxfmt`, and `pnpm check` running `ultracite check`.
-- [ ] Every disabled lint rule carries a reason and a finding count.
+- [ ] Every disabled lint rule carries a reason and a re-measured finding count, and no rule is left half-enabled.
+- [ ] A TypeScript minor in pre-release is prepared for, never installed, and tracked in the AGENTS.md pending upgrade checklist.
+- [ ] An oxfmt or oxlint bump is its own commit, with the reformat listed in `.git-blame-ignore-revs`.
 - [ ] GitHub-owned actions use major tags, third-party actions use a commit SHA with a `# vX.Y.Z` comment, same-repo actions use `$/...`, and public repos run zizmor.
 - [ ] `verify.yml` runs the static gates in one job with a `parallel` group, services run as `background` steps, only the default branch saves caches, the Remote Cache step is not skipped in CI, and every job sets `timeout-minutes`.
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
@@ -130,7 +132,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 ## Reference index
 
 - **Run:** [`audit.md`](references/audit.md) (placeholders, repo kinds, gap checklist), [`report.md`](assets/report.md) (final report, manual steps), [`adr-template.md`](assets/adr-template.md).
-- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop).
+- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop, toolchain bumps), [`lint-tightening.md`](references/lint-tightening.md) (turning disabled rules back on, group order, the keep-off list).
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md) (config, additions to `nextjs-app-architecture`, pitfalls), [`web-design.md`](references/web-design.md) (patterns app, docs and marketing share), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).
