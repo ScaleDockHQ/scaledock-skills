@@ -41,6 +41,8 @@ Per-file exports, no barrel:
 - Lists render local rows as soon as they exist, without waiting for the first full sync, and show the sync state from `pending`.
 - Writes are optimistic in SQLite and queued for `uploadData`. A rejected upload surfaces as a sync problem the user can see and resolve; it is never dropped silently.
 - Sign-out disconnects and clears the local database.
+- A column a Postgres trigger computes is stale in the local mirror until the upload round trip. Native code computes it from the synced inputs (and sorts on that expression) instead of reading the column for a row the device may have edited.
+- **Attachments** use PowerSync's `AttachmentQueue`, one per database. The row and the local file are written in one SQLite transaction, and the queue uploads to a private bucket while syncing. Attachment rows are insert and delete only, so the connector inserts and treats `23505` as already applied. Storage policies accept a file only after its row exists and remove one only after its row is gone, so uploads and deletes retry until the row lands.
 
 ## Local stack
 
@@ -48,6 +50,8 @@ Per-file exports, no barrel:
 - The compose file inlines every local value with a default; there is no PowerSync `.env`.
 - Locally, auth uses the Supabase JWKS URI with `audience: [authenticated]`. Hosted PowerSync uses the Supabase auth integration.
 - `supabase:reset` also runs `sync:reset`, so sync storage never outlives the database it mirrors.
+- The native Supabase stack binds `127.0.0.1`, so the PowerSync container reaches it through `host.docker.internal` on macOS and the host network on Linux. The start script reads the stack's URLs from `.env.development.local` and rewrites the host; each checkout gets its own compose project and ports derived from its path.
+- Simulators and the Android emulator reach loopback URLs, a physical device does not. The app rewrites loopback URLs at runtime to the host that served the Metro bundle (`10.0.2.2` only for a loopback Metro on Android), so no `adb reverse`.
 - CI validates the sync config on changes under `packages/sync/powersync/**`.
 
 ## Hosted

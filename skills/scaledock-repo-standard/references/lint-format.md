@@ -83,6 +83,14 @@ These go in the root `rules` after the presets, so they win:
 
 A rule that is turned off carries a comment with the reason and the measured finding count. [`lint-tightening.md`](lint-tightening.md) is how a run turns those rules back on. Fix the code when a rule fires. A disable comment is only for a case the code cannot change, and it names the rule and the reason. Every `as T` carries a `SAFETY:` comment.
 
+Override traps:
+
+- An `overrides` entry sets only the rules of the plugins it lists. An override that turns off a `vitest/*`, `jest/*` or `playwright/*` rule also names that plugin in `plugins` (and `jsPlugins` for a JS plugin), or oxlint ignores the line.
+- `no-restricted-imports` options in an override replace the root's options instead of merging with them, so spread the exported path and pattern arrays.
+- A framework rule override goes after the Ultracite `react` or `next` preset in the workspace `extends`, or the preset turns the rule back on.
+- An `oxlint-disable-next-line` covers one line. A type-aware rule can report a multi-line expression on a line other than the one under the comment; put the disable above the line the finding names, and let `reportUnusedDisableDirectives` show a misplaced one.
+- A warning from a tool the repo cannot fix (an Xcode build phase, a vendor deprecation) stays visible. Pin it with a test assertion that fails when the cause changes, instead of a setting that hides it (Lienlink `tests/app-config.test.ts`).
+
 Bump `typescript` and `oxlint-tsgolint` in the same commit; tsgolint runs the type-aware rules.
 
 ## `react-native` and `expo`
@@ -93,6 +101,7 @@ Expo apps extend the root and `react`, then add:
 - `no-restricted-imports` bans: `TouchableOpacity` and the other `Touchable*` components, `StyleSheet.create`, core `Image`, JS stack and tab navigators, and JS bottom-sheet libraries.
 - `process.env.EXPO_OS` and `EXPO_PUBLIC_*` reads allowed only in `env.ts` and platform-branching modules, and no imports of `@/app/*` from features.
 - Uniwind generates its types before `lint` and `typecheck` (`uniwind generate-artifacts`), so class names are checked.
+- Hermes-unsafe APIs. Hermes lacks `Array.prototype.toSorted`, `toReversed` and `toSpliced`, and `Intl.RelativeTimeFormat`, and Node and web tests do not catch it. Ban them with `no-restricted-syntax` or `no-restricted-properties` in code Hermes runs, and keep `unicorn/no-array-sort` off there with its count, since a copy then `.sort()` is the Hermes-safe form ([`expo.md`](expo.md)).
 
 ## `anti-slop`
 

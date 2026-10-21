@@ -22,7 +22,7 @@ Before the first commit, ask the user about any group that conflicts with an ADR
 
 ## Groups, in order
 
-1. **Small, mostly autofix.** Every rule with fewer than about 150 findings and an autofix.
+1. **Small, mostly autofix.** Every rule with fewer than about 150 findings and an autofix. In better-supabase this group was `no-eq-null`, `no-plusplus`, `no-bitwise` (with a file-level disable in hashing, CRC-32, TOTP and UUID code), `unicorn/no-array-for-each`, `no-array-sort`, `no-array-reverse`, and the Vitest family `prefer-to-be`, `prefer-to-have-length`, `prefer-called-once`, `prefer-called-with`, `prefer-to-contain`, `prefer-each`, `prefer-hooks-in-order`, `prefer-mock-return-shorthand`, `prefer-mock-promise-shorthand` and `consistent-test-it`. Read the `prefer-called-with` autofix: an empty `toHaveBeenCalledWith()` must assert the real arguments. `no-shadow` (147, each a rename by hand) needs its own commits.
 2. **Medium, and rules that need reading.** These include `require-unicode-regexp` (the `u` or `v` flag changes what some patterns match, so read each one) and `typescript/no-base-to-string`.
 3. **Stricter types.** `typescript/method-signature-style` and `vitest/prefer-strict-equal`. Fix the real failures that `toStrictEqual` surfaces (`undefined` properties, class instances, sparse arrays); never go back to `toEqual`.
 4. **Bug finders.** `no-accumulating-spread`, `no-map-spread`, the `promise/*` rules, `no-useless-spread`, `prefer-add-event-listener`, and `typescript/no-floating-promises` and `typescript/no-misused-promises` in test overrides.
@@ -46,14 +46,20 @@ Before the first commit, ask the user about any group that conflicts with an ADR
 
 These stay off, each with its reason in the comment beside the `off` line:
 
-| Rule                                                      | Reason                                                                                                                                                          |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `consistent-return`, `no-useless-return`                  | Conflict with `noImplicitReturns`, which the compiler already enforces.                                                                                         |
-| `no-conditional-empty-object-spread`                      | Conflicts with `exactOptionalPropertyTypes`, where `...(x ? { key } : {})` is how an optional key is left out.                                                  |
-| `typescript/promise-function-async`                       | Making a function `async` turns its synchronous throws into rejections, so it changes when errors throw.                                                        |
-| `typescript/prefer-readonly-parameter-types`              | Fires on almost every library type, with no fix the code can apply.                                                                                             |
-| `no-await-in-loop`, `unicorn/consistent-function-scoping` | Off only where the code does it on purpose (ordered writes, rate limits, closures over scope), with an inline disable per site, or an override for that folder. |
-| `vitest/prefer-to-be-truthy`, `vitest/prefer-to-be-falsy` | Weaken assertions: `toBe(true)` checks the exact value.                                                                                                         |
+| Rule                                                        | Reason                                                                                                                                                                     |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consistent-return`, `no-useless-return`                    | Conflict with `noImplicitReturns`, which the compiler already enforces.                                                                                                    |
+| `no-conditional-empty-object-spread`                        | Conflicts with `exactOptionalPropertyTypes`, where `...(x ? { key } : {})` is how an optional key is left out.                                                             |
+| `typescript/promise-function-async`                         | Making a function `async` turns its synchronous throws into rejections, so it changes when errors throw.                                                                   |
+| `typescript/prefer-readonly-parameter-types`                | Fires on almost every library type, with no fix the code can apply.                                                                                                        |
+| `no-await-in-loop`, `unicorn/consistent-function-scoping`   | Off only where the code does it on purpose (ordered writes, rate limits, closures over scope), with an inline disable per site, or an override for that folder.            |
+| `vitest/prefer-to-be-truthy`, `vitest/prefer-to-be-falsy`   | Weaken assertions: `toBe(true)` checks the exact value.                                                                                                                    |
+| `eslint/require-await`                                      | Duplicates `typescript/require-await`, which is type-aware and reports the same sites. Review the type-aware fix: it strips `async` along with a `Promise<T>` return type. |
+| `eslint/no-redeclare`                                       | Flags a Valibot schema and its inferred type sharing one name, which TypeScript resolves by declaration space.                                                             |
+| `vitest/prefer-each` in Playwright specs                    | Playwright has no `test.each`; a loop is how a spec parametrises.                                                                                                          |
+| `vitest/prefer-comparison-matcher` where values are strings | `toBeLessThan` takes only numbers, so it cannot compare string rank keys.                                                                                                  |
+| `unicorn/no-array-sort` in code Hermes runs                 | Hermes has no `toSorted`; copy then `.sort()` is the safe form.                                                                                                            |
+| `typescript/ban-types` for `string & {}`                    | `string & {}` keeps literal autocomplete, and `{}` is the empty default of generic arguments.                                                                              |
 
 Rules that an ADR marks as off by design, or ties to an architectural backlog, stay off until the user agrees to take them on.
 

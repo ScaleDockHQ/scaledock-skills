@@ -17,6 +17,8 @@ Record these before changing anything, and again at the end of the run. Put both
 
 A change that moves a baseline names the before and after numbers in its commit.
 
+When a feature needs a few hundred bytes or a few milliseconds more, raise the budget in the same commit and record why. Do not contort the code (inlined helpers, dropped error messages, hand-rolled parsing) to stay under a number; a small, recorded raise is the better trade, and a large one is a design question for the PR.
+
 ## Web routes for agents
 
 - `/llms.txt`, `/llms-full.txt`, the per-page `.md` routes and the search route set `Cache-Control: public, max-age=<seconds>, stale-while-revalidate=<seconds>`.

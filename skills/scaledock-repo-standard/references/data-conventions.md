@@ -7,7 +7,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 ## Timestamps
 
 - Columns are always `timestamptz`, never `timestamp`. The database, the Vercel functions and CI run in UTC.
-- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`). The domain schema transforms them to `Temporal.Instant`.
+- On the wire, timestamps are ISO 8601 in UTC with a `Z` suffix (Valibot `isoTimestamp`). Contract schemas keep the ISO string type, so the OpenAPI document, MCP tool schemas and clients see a plain string; only internal domain code parses it to `Temporal.Instant` (CentraKit ADR 0029). A contract schema with a transform to `Temporal` cannot be converted to JSON Schema.
 - Convert to the user's time zone only at display: `instant.toZonedDateTimeISO(zone)`, formatted through the next-intl or i18next formatters, which use `Intl`. Never store local time.
 - Durations are `Temporal.Duration`, sent as ISO 8601 durations (`PT15M`).
 
@@ -41,6 +41,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 
 - SQL is snake_case: plural table names, `<singular>_id` foreign keys, `_at` for timestamps, `_on` for dates, and `is_` or `has_` for booleans.
 - JSON on the wire is camelCase. `services` maps rows to domain types, so `contract` never exposes the row shape.
+- A versioned wire format carries its version inside the payload (`v: 1`, or `version: 1` in a catalog document) and in the JWT `typ` where it is signed. Type names stay unversioned (`ApprovalRequest`, never `ApprovalRequestV2`); a reader rejects a version it does not know instead of translating it (PermDock, permdock-cloud invariant 6).
 - Every table has `created_at timestamptz not null default now()` and `updated_at timestamptz not null default now()`, kept current by one shared `set_updated_at()` trigger, with a pgTAP case per table.
 
 ## Standard codes
@@ -57,6 +58,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 
 - List procedures page with keyset cursors on `(created_at, id)`, or on `id` alone with UUIDv7, and return an opaque `nextCursor`. Never offset.
 - The contract has one shared cursor input and page output schema.
+- Every ordered query ends with a unique tiebreaker compared in the column's own type. Ordering a `bigint` id as `id::text` sorts `10` before `9`, so rows with tied timestamps come back in the wrong order (a flaky audit test in better-supabase).
 
 ## Deletion
 

@@ -45,7 +45,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 **Run:**
 
-- [`references/audit.md`](references/audit.md): placeholders, which references apply to each repo kind, the gap table and its checklist.
+- [`references/audit.md`](references/audit.md): placeholders, which references apply to each repo kind, the `skills` sub-profile of `tooling`, the gap table and its checklist.
 - [`assets/report.md`](assets/report.md): the final report and the manual steps.
 - [`assets/adr-template.md`](assets/adr-template.md): the ADR shape for deviations.
 
@@ -53,10 +53,10 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - [`references/skills.md`](references/skills.md): agent skills to install, commit and manage through `skills-lock.json`, in every repo kind.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
-- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters.
+- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters, and the library profile (structural `Instant`, Standard Schema only, peer floors, the TypeScript matrix).
 - [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
 - [`references/lint-format.md`](references/lint-format.md): Ultracite presets on Oxlint and Oxfmt, anti-slop, house rules, toolchain bumps.
-- [`references/lint-tightening.md`](references/lint-tightening.md): turning disabled rules back on, the group order, the keep-off list and the per-rule counts.
+- [`references/lint-tightening.md`](references/lint-tightening.md): turning disabled rules back on, the group order, the keep-off list the per-rule counts, and the measured rules each repo turned on.
 - [`references/vercel.md`](references/vercel.md): Vercel first (Flags, Workflow, Run SDK, Sandbox and Drives, Connect), Services and bindings, Turborepo, Remote Cache.
 - [`references/local-dev-env.md`](references/local-dev-env.md): Portless, the native dev loop, env and secrets.
 
@@ -67,8 +67,8 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/i18n.md`](references/i18n.md): next-intl with root params, and i18next on Expo.
 - [`references/ui.md`](references/ui.md): shadcn (with `cn` and AI Elements), ReUI Pro, `DESIGN.md`, responsive rules.
 - [`references/app-shell.md`](references/app-shell.md): auth pages, shell, page templates, standard screens.
-- [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web.
-- [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native.
+- [`references/expo.md`](references/expo.md): Expo shapes, app config, EAS, native UI, Uniwind, push, universal web, Expo Router 58 quirks, Metro and Gradle traps, and Hermes gaps.
+- [`references/offline-sync.md`](references/offline-sync.md): PowerSync on native, attachments, stale trigger columns and device loopback URLs.
 - [`references/data-permissions.md`](references/data-permissions.md): multi-tenancy, Supabase (a local project per worktree or agent on the native runtime, declarative schemas on `pg-delta`, config in code, `@supabase/server` 1.x, Realtime and Storage rules), Stripe data through Data Pipeline, better-supabase, audit log, PermDock.
 - [`references/data-conventions.md`](references/data-conventions.md): UTC timestamps and Temporal types, integer money, UUID and integer IDs, naming, standard codes, pagination, deletion.
 - [`references/auth.md`](references/auth.md): Supabase Auth as the OAuth 2.1 server for every surface, and the OAuth Consent block.
@@ -81,9 +81,9 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 **Delivery:**
 
 - [`references/git-workflow.md`](references/git-workflow.md): branches, the agent workflow, the direct-to-develop variant, commitlint, lefthook, Changesets, releases.
-- [`references/ci.md`](references/ci.md): GitHub Actions pins and lockfiles, `$/` same-repo actions, zizmor and actionlint, speed (job shape, build first, affected-gated heavy suites, strict task entrypoints, parallel and background steps, sharding, timeouts, runners), caching (pnpm store, Remote Cache checks, `.next/cache`, `cache-mode`), security defaults, the workflows, EAS builds and Dependabot.
+- [`references/ci.md`](references/ci.md): GitHub Actions on major tags with zizmor `ref-pin`, lockfiles, `$/` same-repo actions, zizmor and actionlint, speed (job shape, build first, affected-gated heavy suites, strict task entrypoints, parallel and background steps, sharding, timeouts, runners), caching (pnpm store, Remote Cache checks, the Turbopack build cache off in CI, `cache-mode`), security defaults, the workflows, EAS builds and Dependabot.
 - [`references/tests.md`](references/tests.md): Vitest, jest-expo, pgTAP, optional Playwright, test rules.
-- [`references/agent-files.md`](references/agent-files.md): AGENTS.md, rules, the "also update" table, writing rules.
+- [`references/agent-files.md`](references/agent-files.md): AGENTS.md, rules, the "also update" table, writing rules, rejected audit findings, sibling-library prompts and vendor rule frontmatter.
 - [`references/repo-files.md`](references/repo-files.md): README, standard files, `.github`, VS Code.
 
 ## Companion skills

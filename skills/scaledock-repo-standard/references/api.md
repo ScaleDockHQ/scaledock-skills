@@ -6,7 +6,7 @@ Applies to product repos with the `api` surface. Expo apps send every command th
 
 The `scaledock-http-api` skill builds on this reference, and the `openapi`, `openapi-overlay`, `problem-details`, `ratelimit-headers` and `standard-schema` spec skills own the format rules (see [`skills.md`](skills.md)). PermDock's `permdock openapi emit` writes the document's security schemes and per-operation `security`.
 
-- **Shell.** A Hono app in `src/app.ts`:
+- **Shell.** A Hono app in `src/app.ts`, on the newest Hono major. While Hono 5 is in rc, rule 2 applies: adopt it, or mark it `held` in the Pre-release pins with the blocker and the trigger (a peer such as `@hono/node-server` with no compatible release, or the stable).
   - `secureHeaders` and a request ID.
   - A CORS allow list. In production it is same-origin through the Services rewrites.
   - A JSON 404, and a Problem Details `onError` that reports to Sentry.
@@ -21,4 +21,5 @@ The `scaledock-http-api` skill builds on this reference, and the `openapi`, `ope
 - **Other routes:**
   - Crons at `/api/cron/<name>`, protected by `CRON_SECRET`.
   - Webhooks at `/api/webhooks/<provider>`, with the signature verified and idempotency keyed on the provider event ID.
-  - Workflows start only here.
+  - Workflows start only here, except a streaming chat surface ([`ai.md`](ai.md)).
+- **Standards-shaped endpoints stay on the Hono shell.** OAuth and OIDC endpoints, `/.well-known/*`, AuthZEN, SCIM, the MCP transport and crons have request and response shapes a standard fixes, so they are plain Hono routes with conformance tests, not contract procedures (permdock-cloud ADR 0004). Everything else is a contract procedure.
