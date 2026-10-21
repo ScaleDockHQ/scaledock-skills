@@ -53,7 +53,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 
 - [`references/skills.md`](references/skills.md): agent skills to install, commit and manage through `skills-lock.json`, in every repo kind.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
-- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters, and the library profile (structural `Instant`, Standard Schema only, peer floors, the TypeScript matrix).
+- [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters, and the library profile (structural `Instant`, Standard Schema only, open peer floors, the TypeScript matrix).
 - [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
 - [`references/lint-format.md`](references/lint-format.md): Ultracite presets on Oxlint and Oxfmt, anti-slop, house rules, toolchain bumps.
 - [`references/lint-tightening.md`](references/lint-tightening.md): turning disabled rules back on, the group order, the keep-off list the per-rule counts, and the measured rules each repo turned on.

@@ -74,6 +74,8 @@ overrides:
 
 Every workspace dependency is `catalog:` or `workspace:*`. Every override, `minimumReleaseAgeExclude` entry, `allowBuilds` entry and patch has a comment explaining why.
 
+A published package's `peerDependencies` ranges are open floors such as `>=19`, never `^19` or `>=0.11.0 <0.13.0`. The catalog pins the version the repo installs; the peer range only states the oldest version the package supports ([peer ranges](architecture.md#library-profile)).
+
 - pnpm fails on a key it does not recognize when the pinned version is running, so check every key against the installed `pnpm-workspace.yaml` docs.
 - `blockExoticSubdeps` is set explicitly even where pnpm defaults it on, so the policy survives a default change.
 - An explicit `minimumReleaseAge` makes `minimumReleaseAgeStrict` true, so a too-young version stops with an approval prompt instead of being excluded silently. Never approve it to get around the policy.
