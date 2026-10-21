@@ -96,6 +96,18 @@ Files are kebab-case. Tests live in each workspace's `tests/` folder, never besi
   - No `Date` in `domain`, `contract` or `services`. A `Date` appears only where a third-party API demands one, converted from or to `Temporal` on that line, with a comment naming the API.
   - No hand-written `useMemo`, `useCallback` or `memo`; the React Compiler memoizes.
 
+## Library profile
+
+A `library` repo publishes packages that other repos install, so a few rules change. Each line below is the standard for that kind; it needs no ADR.
+
+- **Dates.** A published runtime entry never imports `temporal-polyfill`: it would force the polyfill on every consumer. Type the public API with a structural `Instant` (an object with `epochMilliseconds`, or the subset of `Temporal.Instant` the library reads), so a consumer passes the global, a polyfill or a plain object. Temporal stays the only date library in the repo's own code and tests (PermDock ADR 0034).
+- **Schemas.** The runtime depends on `@standard-schema/spec` only, never on a schema library. Tests and examples may use Zod or ArkType alongside Valibot, to prove the Standard Schema surface works with each (PermDock ADR 0003).
+- **Engines.** `engines.node` is a floor such as `">=24"`, not an exact major, so consumers on a newer Node install without a warning. `devEngines` still pins the repo's own Node and pnpm (PermDock ADR 0004).
+- **Peer ranges.** Every optional peer has a range in a `peers` named catalog. The floor is the first entry of the CI matrix that tests that peer, and the upper bound, when there is one, is the minor after the catalog pin. A `<pkg>-floor` catalog alias installs the floor for the matrix job, and a test checks that the floor, the matrix and the pin agree (PermDock ADRs 0040 and 0043).
+- **TypeScript matrix.** The published types compile on every TypeScript major the library supports. Named catalogs (`ts59`, `ts6`) pin the older compilers, and one `tests/types/<version>` workspace per catalog runs the type tests with it; the default catalog stays on the native TypeScript 7 compiler ([`toolchain.md`](toolchain.md)).
+- **Build before checks.** A package whose `exports` point at `dist/` is consumed the way a user installs it: tasks that read it depend on `^build`, not on a `transit` task (PermDock ADR 0021).
+- **File size.** A library source file stays under 1,000 code lines, blank lines and comments excluded, enforced with `eslint/max-lines` in the library lint preset.
+
 ## Naming and layout
 
 Applies to every repo kind. Database names are in [`data-conventions.md`](data-conventions.md).
