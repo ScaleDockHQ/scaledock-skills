@@ -140,6 +140,6 @@ Never run `next build` and `typecheck` of the same app at once, by hand or as tw
 - **Offline:** `sync:start`, `sync:stop`, `sync:reset`, `sync:logs`.
 - **Releases:** `changeset`, `version-packages`, `release`.
 - **Env:** `env:pull`, `env:pull:production`, `env:local`.
-- **Database:** `supabase:start` (`supabase start --runtime native`), `supabase:stop`, `supabase:reset`, `supabase:diff` (`supabase db schema declarative sync --no-apply`), `supabase:pull` (`supabase config pull`), `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
+- **Database:** `supabase:start` (`supabase start --runtime native`, with no fallback to `--runtime auto`), `supabase:stop`, `supabase:reset`, `supabase:diff` (`supabase db schema declarative sync --no-apply`), `supabase:pull` (`supabase config pull`), `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
 - **Generated web data:** one script per generated catalog file (`catalog`, `recipes`, or the repo's names), each with a `--check` mode that `gen:check` runs. Screenshots of an example app run through `screenshots:<name>` (see [`web-design.md`](web-design.md)); they are never part of `verify`.
 - **Other:** `openapi:generate`, `prepare`.

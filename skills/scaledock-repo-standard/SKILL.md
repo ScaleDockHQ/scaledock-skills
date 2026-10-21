@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.18.0"
+  version: "1.19.0"
 ---
 
 # Repo standard
@@ -124,6 +124,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] [cli, scaffolding] One catalogue with defaults drives the builder, `init` and help; every preset key is an `init` flag, with a parity and a round-trip test.
 - [ ] [cli, scaffolding] The builder, CLI, preset JSON and docs use the same names, and no option generates nothing.
 - [ ] [cli, scaffolding] `init` always writes the config, and every generated case is type-checked.
+- [ ] [Database] Local development and `pnpm verify` run without a container engine: `supabase:start` passes `--runtime native` with no `auto` fallback, no stack for the checkout is on `docker`, and tests use the native stack instead of Testcontainers (PowerSync's `sync:*` scripts excepted).
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
 - [ ] [Database] Timestamps are `timestamptz`, money is integer minor units plus a currency, and public IDs are UUIDs (v7 when the Postgres major provides it).
 - [ ] [Database] Every foreign key is indexed and has an explicit `on delete`.
