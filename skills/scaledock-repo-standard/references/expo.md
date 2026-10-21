@@ -27,6 +27,7 @@ Applies to product repos with the `mobile` surface or with Framework `expo`.
 `app.config.ts`, typed with `ExpoConfig` and checked with `satisfies`:
 
 - **Variants.** `APP_VARIANT` is `development` (default) or `production`. Each has its own `name`, bundle ID, Android package and `scheme` (`{{app}}-dev` and `{{app}}`), so both install side by side. An unknown variant throws.
+  - An `assertVariantEnv` check stops a production-variant build whose `EXPO_PUBLIC_*` URLs are empty or relative. A local `APP_VARIANT=production` build reads `.env.production.local`, which `vercel env pull` fills with empty origins for a same-origin web app, and every native command then fails.
 - **Version** comes from the app's `package.json`. EAS owns build numbers (`appVersionSource: "remote"`).
 - **Env.** The config loads the root `.env*` files, validates the client env, and checks that the variant's URLs point where that variant should before EAS uploads anything.
 - **Experiments:** `typedRoutes` and `reactCompiler`. A universal app adds `baseUrl: "/app"`.
@@ -50,7 +51,24 @@ Applies to product repos with the `mobile` surface or with Framework `expo`.
 - Rebuild the dev client only after adding a native module or config plugin, and run `expo prebuild -p <platform>` first so an existing native folder picks the plugin up.
 - `native:prepare` (`expo prebuild --clean`) is for a stale generated project only, never a routine step.
 - Patches to native packages are pnpm patches with a test that fails when the upstream fix lands. After patching a native module, run `pod install` before trusting an iOS build.
+- After an Expo, Reanimated or worklets bump, restart Metro. A Metro still serving the previous JS crashes on first layout (`undefined is not a function` in `NativeWorklets`), which is not an app bug. After a Metro, Babel or linker change, start with `expo start --clear`.
+- Metro watches the workspace root. Every generated output directory (`.next`, `dist`, `.turbo`, `ios/`, `android/`, `supabase/`) goes in `resolver.blockList`, or the write flood drops Fast Refresh. A block pattern is a workspace-relative prefix, not a path segment: `supabase` alone also hides `packages/supabase`.
+- Keep `org.gradle.configuration-cache` off on SDK 58: Gradle 9.4 then fails the stock `execute()` lookups and the Sentry copy tasks. The task output cache (`org.gradle.caching`) stays on.
+- Keep the Android dev-client network inspector off (`android.networkInspector` in `expo-build-properties`). Its OkHttp interceptor buffers up to 1 MiB of each response, so a streaming response that never ends (PowerSync `/sync/stream`, server-sent events) never resolves on debug builds. An app config test asserts the option.
+- Signing. `expo run:ios` needs an Apple Development certificate even for the Simulator once the app has the Sign in with Apple or associated-domains entitlement. A device build signs against the team in the gitignored `ios/` project, so `expo prebuild --clean` drops it; set it once in Xcode, and never override `PRODUCT_BUNDLE_IDENTIFIER` on the command line, because it applies to every Pod target too.
+- `@expo/agent-cli` (experimental) runs through `pnpm dlx @expo/agent-cli@latest` from the app folder, never as a dependency or a script. Its `status` says whether a change needs a dev client rebuild. Never run its `agents:setup` or `skills:sync`; skills come from the lock ([`skills.md`](skills.md)).
 - Toolchain and agent rules are in [`local-dev-env.md`](local-dev-env.md).
+
+## Hermes
+
+Node and web tests run on V8, so they never catch a Hermes gap. Hermes lacks:
+
+- `globalThis.crypto`. Install a Web Crypto polyfill (`expo-crypto` through a `.native.ts` twin) in the app's entry file, before anything imports supabase-js, so PKCE works. Patching only the session storage does not cover it.
+- `Array.prototype.toSorted`, `toReversed` and `toSpliced`. Copy, then `.sort()`, and ban the methods with a lint rule ([`lint-format.md`](lint-format.md)).
+- `Intl.RelativeTimeFormat`. Relative times are catalog plurals.
+- `require` in the polyfill prelude. Never put an ES module in Metro `getPolyfills`; install polyfills from the entry file.
+
+The app config test or a smoke test on a dev build is the gate for these.
 
 ## Layout
 
@@ -70,7 +88,10 @@ Features never import `@/app/*`. A feature scaffold script keeps the shape the s
 The platform's own components are the base, and brand tokens paint them:
 
 - **Navigation:** Expo Router native stack and `NativeTabs`. A universal app renders headless `expo-router/ui` tabs with a sidebar on web.
+  - Expo Router 58 seeds each navigator from the route tree, shortest route name first, so screen order does not pick the first screen. Every layout with more than one child exports `unstable_settings = { anchor: "<overview route>" }` in both platform twins, and a test enforces it.
+  - A bottom `Stack.Toolbar` and the native tab bar share one place, so hide the tab bar on iOS while the toolbar shows. On Android a hidden Compose tab bar still swallows touches, so keep it and place the bar above it. Android drops SF Symbol names and label-less toolbar buttons; give each item a Material icon and a visible label.
 - **Controls:** `@expo/ui` first for sheets, menus, switches, pickers, segmented controls and grouped settings rows. Route-level sheets use `presentation: "formSheet"`.
+  - Render an `@expo/ui` bottom sheet at the screen root, next to the list, never inside a list header or a row of siblings: its host is absolutely positioned and its content stays mounted over the siblings. Never unmount it while presented, and never present an RN `Modal` from inside it.
 - **Motion and input:** Reanimated, gesture-handler and keyboard-controller.
 - **Media and icons:** `expo-image` and `expo-symbols`.
 - **Lists:** Legend List.
@@ -80,6 +101,7 @@ The platform's own components are the base, and brand tokens paint them:
 ## Styling and platform twins
 
 - **Uniwind** compiles Tailwind v4 classes at build time. Tokens live once in `global.css`: every color is a full value and every radius a px value, in light and dark.
+  - The `*-safe` classes start at 0 on native. The root layout feeds `Uniwind.updateInsets` from `useSafeAreaInsets`, or bars sit on the home indicator.
 - **Class names** are literal strings, composed with `tv()` and `cn()`; never build them dynamically. Web-only utilities go behind `web:`. Shared primitives never use `grid`, because Yoga has none.
 - **`packages/ui`** (or `ui-native`) has per-file exports and no barrel. A primitive that differs by platform has a `react-native` and a `default` export condition, pointing at `<name>.tsx` and `<name>.web.tsx`. The web twin may use Base UI.
 - **Twins** share one props type from `types.ts`, so both compile against one contract.

@@ -26,7 +26,7 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
   - Every tenant table has `organization_id` and an `*_organization_idx` index.
   - RLS uses `organization_id in (select public.org_ids_with_permission('key'))`.
   - Cache tags are scoped by `organizationId`.
-- **Roles** are tenant-scoped in PermDock. JWT claims stay compact and are hints only.
+- **Roles** are tenant-scoped in PermDock. JWT claims stay compact and are hints only. The access token travels in a cookie and on every request, so the claims a custom access token hook adds have a byte budget, and a pgTAP test asserts the hook's output for the largest seeded member stays under it (3,000 bytes in CentraKit's `claims.test.sql`).
 - **Lifecycle:** create, switch, delete, invite and transfer ownership. An optional portal lives at `/{orgSlug}/portal`.
 
 ## Supabase
@@ -37,6 +37,10 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
   - **Native runtime first.** `supabase start --runtime native` runs every service as a plain process on macOS 14 or later on Apple silicon and on Linux (amd64 or arm64, glibc 2.35 or later). Docker or Podman is the fallback only where native is unsupported.
   - Services other than Postgres sleep until their first request. Pass `--eager` only when a task needs everything up front.
   - The experimental engine keeps its data apart from a legacy local project, so the first start after switching begins from migrations and seeds.
+  - Each running stack holds a shared memory segment, and macOS allows 32 on the machine (`kern.sysv.shmmni`), so `supabase start` fails once a few dozen worktrees have run a stack. `ipcs -m` counts them. A `supabase:prune` script stops the stacks of branches merged into `main` in the checkout and its worktrees, keeping their data, with `--dry-run` to list them (better-supabase).
+  - On the native runtime, `pg_net` reaches the host at `127.0.0.1`, not `host.docker.internal`.
+  - The stack engine's Realtime denies private-channel joins. Tests that join a private channel skip when `SUPABASE_RUNTIME` names a stack-engine runtime, and one CI job runs them on the legacy engine (`SUPABASE_EXPERIMENTAL_STACK=0`).
+  - A new worktree has no gitignored signing key; generate it before the first start.
 - **Declarative schemas on `pg-delta`.** `config.toml` sets `[experimental.pgdelta] enabled = true`. Postgres 14 to 18 only. With `stack = true`, the two shadow databases run on the native runtime too.
   - The files in `supabase/schemas/` are the source of truth, in the per-schema layout (`schemas/public/tables/<table>.sql`). `pg-delta` orders statements by their dependencies, so files are not numbered and `[db.migrations] schema_paths` is not set.
   - Migrations come from `pnpm supabase:diff` (`supabase db schema declarative sync -f <name> --no-apply`) and are reviewed before `supabase migration up`. Never `supabase db diff`, and never change the schema in Studio, the SQL editor or `psql`; sync reads only the files.
@@ -44,6 +48,9 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
   - When a change is already live on the linked project, run `supabase db pull` to record it in the migration history, then `supabase db pull --declarative` to refresh the files. Otherwise the next sync generates it again and `db push` fails.
   - `pg_cron` jobs and `pgmq` queues are schema: `pg-delta` changes them through the extension's own functions, and flags drops as destructive.
   - Data changes (including storage buckets) go in seeds or hand-written migrations. Objects `pg-delta` does not track go in `supabase/schemas/_custom/`, delivered by a versioned migration that sorts before the migration that depends on them.
+  - When `supabase:diff` writes the same migration after every reset, look for an expression Postgres rewrites. `x between a and b` inside an `and` chain comes back from the catalog as nested comparisons, so the diff never converges; write `x >= a and x <= b` (better-supabase and Lienlink both hit it).
+  - Never write `grant ... on all tables` or `on all routines in schema public`. `pg-delta` cannot order it after the per-file revokes, and in CentraKit it re-widened 229 functions and two secret tables to `anon` and `authenticated`. Default privileges give `anon` and `authenticated` their own `EXECUTE` on every new function, so revoke from `public, anon, authenticated` and then grant only the roles that call it.
+  - Refresh a committed schema snapshot from a freshly reset stack, never after the integration tests, which leave extra objects behind.
 - **Config in code.** Auth, API and storage settings live in `config.toml`. `pnpm supabase:pull` (`supabase config pull`) brings a dashboard change back into the file; no setting lives only in the dashboard.
 - `[remotes.main]` and `[remotes.develop]`. The GitHub integration applies migrations; never `db push` from CI.
 - ES256 signing key from `pnpm supabase:signing-key`, gitignored. Legacy HS256 tokens are rejected by `@supabase/server`.

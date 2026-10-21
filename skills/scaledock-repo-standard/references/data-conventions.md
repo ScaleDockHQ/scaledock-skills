@@ -57,6 +57,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 
 - List procedures page with keyset cursors on `(created_at, id)`, or on `id` alone with UUIDv7, and return an opaque `nextCursor`. Never offset.
 - The contract has one shared cursor input and page output schema.
+- Every ordered query ends with a unique tiebreaker compared in the column's own type. Ordering a `bigint` id as `id::text` sorts `10` before `9`, so rows with tied timestamps come back in the wrong order (a flaky audit test in better-supabase).
 
 ## Deletion
 
