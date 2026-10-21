@@ -48,6 +48,9 @@ Steps an agent cannot do. Tick the ones already done.
 - [ ] `vercel link`
 - [ ] Marketplace installs and Connect connectors
 - [ ] `pnpm self-update <version>` on every machine, after a pnpm bump
+- [ ] macOS: add each GUI git client (Cursor, SourceTree) to Developer Tools in System Settings, Privacy and Security, so Gatekeeper lets the hooks run pnpm; repeat after `pnpm self-update`
+- [ ] Remove `ENABLE_EXPERIMENTAL_COREPACK` from the Vercel project, when it was set
+- [ ] Turn on the Dependency graph (Settings, then Code security) so `dependency-review-action` runs on a private repo
 - [ ] `REUI_LICENSE_KEY` and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as team Shared Environment Variables, and `TURBO_REMOTE_CACHE_SIGNATURE_KEY` as a GitHub secret
 - [ ] The `TURBO_TEAM` variable, then a CI run whose Remote Cache step is not `outcome=skipped`
 - [ ] Web Analytics and Speed Insights

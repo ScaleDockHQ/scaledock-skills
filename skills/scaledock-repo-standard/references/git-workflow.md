@@ -24,16 +24,23 @@ This applies to agents and people alike.
 2. **Branch.**
    - If you are on the working branch or `main`, run `git fetch` and create `<type>/<short-topic>` from `origin/<working branch>`, for example `feat/org-switcher` or `fix/mcp-401`. `<type>` is a commitlint type.
    - If you are already on this work's branch, keep using it.
-3. **Commit.** Make small conventional commits as you go, and push.
+   - Start from the latest `origin/<working branch>`, never a stale local copy. When the user's checkout has uncommitted work or another agent is using it, create a git worktree (`git worktree add ../<repo>-<topic> -b <branch> origin/<working branch>`) instead of switching their branch.
+   - Contributing to an upstream project from a fork: branch from `upstream/main`, never from the fork's `main`.
+3. **Commit.** Make conventional commits as you go, one per coherent batch of changes, and push.
+   - In a plan, keep each to-do's status current (in progress, done) and continue through every to-do without stopping to ask, unless a decision belongs to the user.
+   - An orchestrating agent waits for every subagent it started and reviews their work before it reports done.
 4. **Open one PR.**
    - After the first push, run `gh pr create --base <working branch>` and open it as a draft until `pnpm verify` passes, then mark it ready.
    - The PR title is a conventional commit header. It becomes the squash commit, and CI checks it with commitlint.
    - The body follows the template, including the verify result and the changeset.
 5. **Keep everything on that PR.** Every later request in the same chat or plan goes onto the same branch and PR: follow-ups, review fixes, extra todos. Update the PR body to match.
    - Never open a second PR.
-   - Never stack PRs. GitHub's stacked PRs are generally available, but agent work still goes into one PR per chat or plan.
+   - Never stack PRs. GitHub's stacked PRs are generally available, but agent work still goes into one PR per chat or plan. A stacked PR merges into its parent branch, not `main`, so its work silently misses `main` when the parent merges first.
+   - After a push, wait for CI. When it fails or the PR falls behind its base, rebase on the latest base and fix the failing checks until the PR can merge.
+   - After a rebase, regenerate committed generated files (snapshots, OpenAPI, typed clients, migrations from the declared schema) from a fresh state, such as a database reset, instead of resolving their conflicts by hand.
    - Never split a plan into one PR per todo.
 6. **New work, new branch.** Start a new branch and PR only when the user starts a new chat or plan, or asks for a separate PR.
+   - After a PR merges, remove its worktree and delete the local and remote branch (`git worktree remove`, `git branch -d`, `git push origin --delete`).
 7. **Never merge without being asked.** Don't merge the PR unless the user asks. Never push to `main` or directly to the working branch, unless the repo records the direct-to-develop variant below.
    - Even when the user asks to merge, wait until the required checks pass, and confirm that the base branch has required status checks at all (`gh api repos/{owner}/{repo}/branches/<branch>/protection`). With none configured, a PR merges at once and CI first fails on `main`. Report that as a gap instead of merging.
    - Automations that merge PRs use GitHub's async merge API (submit with `PUT`, then poll the request with `GET`), not the synchronous merge endpoint.
@@ -48,7 +55,9 @@ A small team may commit straight to `develop` instead of opening one branch and 
 2. **Stay on `develop`.** Don't open a topic branch or a PR into `develop`. Never commit to `main`.
 3. **Commit small.** Conventional commits, explicit paths with `git add <path>`, never the whole tree.
 4. **Never skip hooks.** No `--no-verify`. The pre-push hook is the only gate before CI, so fix what it reports.
-5. **Verify, then push.** Run `pnpm verify`, then `git push origin develop`.
+   - The hooks run `pnpm verify:affected`: format, lint, typecheck and unit tests for the affected packages. The live-database suites (integration, pgTAP) stay in CI, so a commit never waits on a local stack (CentraKit ADR 0022).
+5. **Verify, then push.** Run `pnpm verify`, then `git push origin develop`, and only when the user asked for a push in this task.
+6. **`.github/` changes go through a PR into `develop`.** Workflow changes need the PR checks (actionlint, zizmor) before they run on `develop`.
 
 `main` moves only through one `develop` to `main` PR, which runs the full CI and the Changesets release. Branch protection with required checks applies to `main`; `develop` takes direct pushes from maintainers.
 
@@ -170,3 +179,8 @@ npm trusted publishing:
 - Publish only from `push`, `release` or `workflow_dispatch`. npm rejects trusted-publishing tokens from `pull_request_target` and `issue_comment` runs.
 - A new package is created with `npm stage publish` from a stage-only granular token; a maintainer promotes that first version. No manual first publish from a laptop.
 - Then add the trusted-publishing configuration and release through `release.yml` within 48 hours. A configuration with no successful publish expires after 48 hours and must be recreated; changing its repository or workflow starts a new window.
+
+Published packages:
+
+- `files` in `package.json` includes `CHANGELOG.md`, so the changelog ships in the tarball. When the full changelog is large, publish a trimmed copy (the current major's sections) generated in `prepack`.
+- The GitHub Release attaches the packed tarball (`pnpm pack`) and a build provenance attestation (`actions/attest-build-provenance`), so a consumer can verify the exact file without npm.
