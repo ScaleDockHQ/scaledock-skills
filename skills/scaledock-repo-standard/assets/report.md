@@ -30,6 +30,13 @@ One row per baseline from `references/performance.md`: what was measured, the va
 | Baseline | Before | After | Commit |
 | -------- | ------ | ----- | ------ |
 
+## Lint rules
+
+One row per rule the run measured or turned on (see `references/lint-tightening.md`): the finding count before, the count after, and whether it is now on.
+
+| Rule | Before | After | On  |
+| ---- | ------ | ----- | --- |
+
 ## Verify
 
 The `pnpm verify` result, and any check that cannot run locally.
