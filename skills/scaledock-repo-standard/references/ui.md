@@ -6,6 +6,7 @@ Applies to a Next.js `app`, and its component stack, lint, `DESIGN.md`, responsi
 
 - **shadcn** on Base UI (a `base-*` style) with Tailwind v4 and CSS-first tokens. Components live in `packages/ui`. Every `components.json` aliases `@{{SCOPE}}/ui` and sets `iconLibrary: "hugeicons"`.
   - Class merging comes from the `cn` package, and `lib/utils.ts` only re-exports it. In upgrade mode, run `pnpm dlx shadcn@latest migrate cn` to drop `clsx` and `tailwind-merge`.
+  - Vendored registry code (shadcn, ReUI, AI Elements) stays as published, so a registry update is a re-add, not a merge. `packages/ui/tsconfig.json` turns off the strict flags it does not compile under (`exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`, `noUnusedLocals`, `noUnusedParameters`, `isolatedDeclarations`, `noPropertyAccessFromIndexSignature`, `declaration`), recorded in an ADR (PermDock 0006). App code that calls it keeps the strict preset.
   - Private registries on GitHub install with `shadcn add <owner>/<repo>/<item>`, using `gh` credentials locally and `GH_TOKEN` in CI.
   - Agent interfaces use Message, Bubble, Trace, Code Block, Attachment and Questionnaire, and the shadcn AI Elements patterns copied on top of them. AI SDK Elements (`vercel/ai-elements`) is being deprecated; in upgrade mode, migrate each wrapper with the prompt on its pattern page.
 - **ReUI Pro:**

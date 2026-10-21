@@ -41,6 +41,7 @@ Applies to product repos with Database set to yes. The wire-format rules also ap
 
 - SQL is snake_case: plural table names, `<singular>_id` foreign keys, `_at` for timestamps, `_on` for dates, and `is_` or `has_` for booleans.
 - JSON on the wire is camelCase. `services` maps rows to domain types, so `contract` never exposes the row shape.
+- A versioned wire format carries its version inside the payload (`v: 1`, or `version: 1` in a catalog document) and in the JWT `typ` where it is signed. Type names stay unversioned (`ApprovalRequest`, never `ApprovalRequestV2`); a reader rejects a version it does not know instead of translating it (PermDock, permdock-cloud invariant 6).
 - Every table has `created_at timestamptz not null default now()` and `updated_at timestamptz not null default now()`, kept current by one shared `set_updated_at()` trigger, with a pgTAP case per table.
 
 ## Standard codes

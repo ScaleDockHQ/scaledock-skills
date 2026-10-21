@@ -47,6 +47,8 @@ Resolve these from the inputs before you write any file.
 | `agent-files.md`      | yes                  | yes                        | yes                                                       |
 | `repo-files.md`       | yes                  | yes                        | yes                                                       |
 
+**`skills` sub-profile of `tooling`.** A repo that only publishes agent skills (markdown, `metadata.json`, a validator script) applies the toolchain, formatting, git hooks, CI, action pinning and repo files. It skips Turborepo and boundary tags, TypeScript and Knip unless it has TypeScript code, oxlint, every product surface, Vercel, Changesets unless it publishes to npm, `.agents/rules` while AGENTS.md holds every rule, a `develop` branch, and the standard skill set (it keeps `find-skills`). These are `n/a`, not `kept`, and need no ADR; record only what differs from this list (scaledock-skills ADR 0001).
+
 ## Gap table
 
 One row per checklist item below. In align mode, repeat the Status and Current columns once per repo.

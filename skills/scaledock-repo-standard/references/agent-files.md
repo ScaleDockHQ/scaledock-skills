@@ -47,6 +47,13 @@ Every repo starts `docs/agents/` with at least these notes:
 - **`formatting.md`:**
   - A formatter reflow after a rename can move the line that an `oxlint-disable-next-line` or `@ts-expect-error` directive must sit above. Put the directive directly above the exact property or expression line it covers, and check it again after `pnpm format`.
   - Revert unrelated regenerated output, such as a version header that a generator rewrote, instead of committing it.
+- **`audit-rejected-findings.md`:** findings an audit raised and rejected after checking the code, one line each with the reason. Audits read it first so they do not reopen them (PermDock).
+
+Further notes for every repo:
+
+- **Open-source repos never name customers or private adopters** in code, tests, docs, changesets or commit messages. Describe the shape ("an adopter with a bigint id") instead.
+- **Gaps in a sibling library.** When work in one repo hits a bug or missing feature in a library the org owns (better-supabase, PermDock), collect it into a prompt for that repo instead of working around it silently, and link the workaround to it.
+- **Vendor rules after a reinstall.** An installer can rewrite a rule's frontmatter. An argent reinstall writes `.claude/rules/argent.md` with `alwaysApply: true`, which Claude Code ignores, so the 17 KB rule loads every session; restore its `paths:` (Lienlink `native.md`). Diff `.claude/rules` and `.agents/rules` after any installer run.
 
 ## Rules
 

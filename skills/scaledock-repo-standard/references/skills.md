@@ -25,7 +25,7 @@ Location applies to every repo kind. The install list applies to product repos; 
   - `delexw/claude-code-misc`: oxlint
   - `brianlovin/agent-config`: knip
   - `vercel-labs/portless`: portless
-  - `vercel-labs/agent-browser`: agent-browser (the CLI at 0.38 or later, for `--enable react-devtools` and `snapshot --delta`)
+  - `vercel-labs/agent-browser`: agent-browser (the CLI at 0.38 or later, for `--enable react-devtools` and `snapshot --delta`). The vendored skill is a stub: the repo's agent-browser note tells agents to run `agent-browser skills get core` first, which prints the workflow for the installed CLI.
   - `currents-dev/playwright-best-practices-skill`: playwright-best-practices
   - `open-circle/agent-skills`: valibot
   - `wshobson/agents`: typescript-advanced-types
@@ -41,6 +41,7 @@ Location applies to every repo kind. The install list applies to product repos; 
   - `uni-stack/uniwind`: uniwind
   - `vercel-labs/agent-skills`: vercel-react-native-skills
 - **UI:** `shadcn/ui` shadcn; ReUI (ReUI MCP `get_agent_skill`); `emilkowalski/skills` emil-design-eng.
+  - The ReUI installer writes `.agents/skills/reui` without a `skills-lock.json` entry. In a repo that publishes skills, that copy is offered to consumers (`skills add ScaleDockHQ/better-supabase --list` lists `reui` under General). There, keep the ReUI rule and load the skill through the ReUI MCP `get_agent_skill`, and remove the vendored folder after each installer run; `skills add . --list` is the check.
 - **AI:** `vercel/ai` ai-sdk, plus migrate-ai-sdk-v6-to-v7 while a repo is on AI SDK 6; `vercel/workflow` workflow; `vercel/chat` chat-sdk (only with a bot). AI Elements now come from the shadcn skill; remove `vercel/ai-elements` ai-elements in upgrade mode.
 - **Database:** `supabase/agent-skills` supabase and supabase-postgres-best-practices; `supabase/server` supabase-server; the better-supabase skills (`npx skills add ScaleDockHQ/better-supabase`).
 - **Permissions:** `npx skills add ScaleDockHQ/PermDock`.
