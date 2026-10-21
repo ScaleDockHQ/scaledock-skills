@@ -32,6 +32,7 @@ Applies to every repo kind that has code.
   - Dialogs: the "Get code" dialog opens from the keyboard, and axe passes while it is open.
 - **`lib/` unit tests.** Every helper in a web app's `lib/` has a Vitest test: parsers (a SQL schema parser runs against rendered fixtures, never a live database), graph layouts, prompt builders, the entity icon map, and the integration list's completeness against the docs content (see [`web-design.md`](web-design.md)).
 - **pgTAP** for RLS, grants and the audit triggers.
+- **No containers in tests.** Integration suites and e2e servers that need Postgres use the checkout's native Supabase stack, and a suite that needs a clean database creates and drops one there. Testcontainers and `docker` calls are not used, so `pnpm verify` runs without a container engine (see [`data-permissions.md`](data-permissions.md)).
 - **Conformance suites.** Every standard the repo claims to follow (in docs, AGENTS.md or a standards page) has a conformance suite in `tests/conformance/` of the workspace that serves it, and a row that links the suite. A claim without a suite is removed. When a suite fails, fix the server, not the assertion.
 - **In-process tests** for MCP and the CLI (see [`mcp.md`](mcp.md) and [`cli.md`](cli.md)). An OpenAPI snapshot test for the API.
 - **CLI tests:**

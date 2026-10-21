@@ -34,6 +34,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **One web product.** The app, docs and marketing sites share one architecture (`nextjs-app-architecture`) and one design reference, so they look and behave alike.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
 - **One CLI contract.** Every ScaleDock CLI prints the same JSON envelope, exit codes and problem codes, switches to agent mode for coding agents, and asks for consent before it rewrites files or publishes.
+- **No container engine locally.** Each worktree or agent runs its own Supabase project on the native runtime, with declarative schemas on pg-delta, and tests use that stack instead of Testcontainers. Only PowerSync's local service runs in Docker.
 - **Unit and integration first.** Tests focus on the unit and integration layers. e2e and UI tests are slow and add little, so they are an opt-in for a few critical journeys.
 - **Tool-managed agent files.** The blocks that Next.js and Turborepo write into AGENTS.md are committed as written and never edited by hand.
 - **Done means `pnpm verify` passes.** The run ends with a report of what changed, the deviations kept, the pre-release pins, and the manual steps left.

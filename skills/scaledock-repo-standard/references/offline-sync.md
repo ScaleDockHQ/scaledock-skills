@@ -46,10 +46,10 @@ Per-file exports, no barrel:
 
 ## Local stack
 
-- `sync:start`, `sync:stop`, `sync:reset` and `sync:logs` drive the local docker compose service.
+- `sync:start`, `sync:stop`, `sync:reset` and `sync:logs` drive the local docker compose service. PowerSync is the only part of the standard that runs in a container, and only while someone works on native sync: no other script, test or `pnpm verify` step starts it.
 - The compose file inlines every local value with a default; there is no PowerSync `.env`.
 - Locally, auth uses the Supabase JWKS URI with `audience: [authenticated]`. Hosted PowerSync uses the Supabase auth integration.
-- `supabase:reset` also runs `sync:reset`, so sync storage never outlives the database it mirrors.
+- `supabase:reset` also runs `sync:reset`, so sync storage never outlives the database it mirrors. `sync:reset` exits cleanly when no container engine is running or the compose project does not exist, so a reset works without Docker.
 - The native Supabase stack binds `127.0.0.1`, so the PowerSync container reaches it through `host.docker.internal` on macOS and the host network on Linux. The start script reads the stack's URLs from `.env.development.local` and rewrites the host; each checkout gets its own compose project and ports derived from its path.
 - Simulators and the Android emulator reach loopback URLs, a physical device does not. The app rewrites loopback URLs at runtime to the host that served the Metro bundle (`10.0.2.2` only for a loopback Metro on Android), so no `adb reverse`.
 - CI validates the sync config on changes under `packages/sync/powersync/**`.
