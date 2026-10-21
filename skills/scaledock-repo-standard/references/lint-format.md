@@ -81,7 +81,7 @@ These go in the root `rules` after the presets, so they win:
 - Playwright and Testing Library rules scoped to test files with `overrides`.
 - `switch-exhaustiveness-check` and the other type-aware `typescript/` rules stay at error. Ultracite's `core` turns them on; never turn one off to get a green run.
 
-A rule that is turned off carries a comment with the reason and the measured finding count. Fix the code when a rule fires. A disable comment is only for a case the code cannot change, and it names the rule and the reason. Every `as T` carries a `SAFETY:` comment.
+A rule that is turned off carries a comment with the reason and the measured finding count. [`lint-tightening.md`](lint-tightening.md) is how a run turns those rules back on. Fix the code when a rule fires. A disable comment is only for a case the code cannot change, and it names the rule and the reason. Every `as T` carries a `SAFETY:` comment.
 
 Bump `typescript` and `oxlint-tsgolint` in the same commit; tsgolint runs the type-aware rules.
 
@@ -115,16 +115,30 @@ import root from "./oxlint.config.ts";
 export default {
   ...ultracite,
   ignorePatterns: root.ignorePatterns,
+  jsdoc: true,
+  objectWrap: "collapse",
   // sortImports, sortPackageJson, sortTailwindcss
 } satisfies OxfmtConfig;
 ```
 
 - Keep Ultracite's defaults: `printWidth: 80`, double quotes, semicolons, `trailingComma: "all"`.
+- `jsdoc: true` formats JSDoc and TSDoc comments, and `objectWrap: "collapse"` joins an object onto one line when it fits. Turn them on in a commit after the oxfmt bump, never in it. Review the JSDoc diff: `@example` blocks and the TSDoc that docs or API snapshots read must keep their meaning. Then refresh the generator snapshots and review them too.
 - `sortImports` with type imports first and an `internalPattern` for `@/` and `@{{SCOPE}}/`.
 - `sortPackageJson` with `sortScripts`.
 - `sortTailwindcss` with `functions: ["cn", "cva", "tv"]` and the app stylesheet.
-- oxfmt formats JS, TS, JSON, CSS and TOML natively, and Markdown, MDX and YAML through its bundled Prettier. Never install Prettier or Biome alongside it.
+- oxfmt formats JS, TS, JSON, CSS, Markdown and TOML with its own formatters, and the rest through its bundled Prettier. Each release moves more languages to native formatters, so check the release notes for the current list. Never install Prettier or Biome alongside it.
 - oxfmt reuses the lint ignores, so agent folders and generated files stay byte-identical to upstream. This is a formatter ignore only; they are still committed.
+
+## Toolchain bumps
+
+oxlint, oxfmt, `oxlint-tsgolint`, Ultracite and each lint or format plugin (react-doctor, tsdoc, turbo, testing-library, playwright) are bumped together, before any rule or format option changes:
+
+1. For each package, compare `pnpm view <pkg> dist-tags.latest` with `pnpm view <pkg> time`. Take the newest release older than `minimumReleaseAge`. `oxlint-tsgolint` stays on the build for the installed `typescript`.
+2. Read the release notes for every version between the pinned one and the target (`gh release view oxlint_v<version> -R oxc-project/oxc`, and the same for `oxfmt_v<version>`). Note the widened rules, the rules newly marked recommended (they switch on without a config change), the new options, and any language that moved to a native formatter.
+3. Fix the new lint findings in the bump commit. Turning a rule off to absorb a bump is not allowed.
+4. When a generator formats its output with oxfmt (`supabase:types` writing `database.types.ts`, OpenAPI snapshots, generated catalogs), run its check and make sure the output still matches what it is compared against. If it doesn't and the generator can't follow, hold the bump back with a comment.
+5. Commit the reformat alone (`style: reformat with oxfmt <version>`), and add its SHA to `.git-blame-ignore-revs` in the next commit.
+6. With Ultracite, run `ultracite doctor`, and for published packages consider the opt-in tsdoc plugin. A repo still on `packages/ox-config` keeps it during a bump. Check whether its presets should pick up the new rules and plugins, and do the Ultracite migration below as a separate run.
 
 ## Migrating from `packages/ox-config`
 

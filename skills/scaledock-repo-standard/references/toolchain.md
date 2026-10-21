@@ -22,6 +22,26 @@ Applies to every repo kind. A tooling repo without TypeScript skips the tsconfig
   - Run the compiler through pnpm (`pnpm typecheck` or `pnpm exec tsc`), never `npx tsc`, which can resolve an unrelated package named `tsc` or a global TypeScript.
   - `typescript` and `oxlint-tsgolint` move together, because tsgolint tracks the TypeScript version.
 
+### A TypeScript minor in pre-release
+
+Ground rule 2 adopts new majors early, but never a pre-release of a minor. While a minor is in beta or rc, the repo stays on the latest stable `typescript` and the `oxlint-tsgolint` built for it, and gets ready for the minor instead:
+
+- Never install, run or test the pre-release, not even in a throwaway worktree. The bump waits for the stable release and a matching tsgolint build, and both land in one commit.
+- Read the announcement's "Notable Behavioral Changes" and apply each fix in a form that compiles on the current version and on every version in `typecheck:matrix`.
+- Add the pending upgrade checklist to AGENTS.md (see [`agent-files.md`](agent-files.md)).
+- New `target` and `lib` years, new module features and new compiler APIs are separate decisions, made when the minor ships. The `target` year follows the runtime (see the TypeScript config below).
+
+**Distributed conditional types (TypeScript 7.1).** Inside a branch of a distributive conditional type (`T extends X ? A : B`), `T` stands for one member of the union, not the original type parameter. 7.1 rejects passing a type constrained to the original `T` to a generic whose constraint names `T`:
+
+```text
+Type 'B' does not satisfy the constraint 'A'.
+  'B' is only assignable to the non-distributed 'A', but 'A' has been distributed here.
+```
+
+- An older compiler cannot report this, so read every conditional type in published packages and app sources.
+- Rewrite each risky one: drop the constraint where nothing needs it, or add a nested `extends` check that proves the constraint inside the branch.
+- Add an `expectTypeOf` case for each rewritten type in its mirrored test file, and a changeset when a published declaration changes.
+
 ## `pnpm-workspace.yaml`
 
 ```yaml
@@ -75,7 +95,7 @@ With Expo (see [`expo.md`](expo.md)):
   - `types: []`, so each package lists its own `types` (`["node"]` for anything that touches Node globals).
   - Never `baseUrl`; it is removed. Write the full prefix into each `paths` entry.
 - **Defaults to keep explicit.** TypeScript 7 already defaults to `strict`, `types: []`, `noUncheckedSideEffectImports`, `libReplacement: false` and `rootDir: "./"`, and `stableTypeOrdering` is always on. List the strictness options anyway, so the preset reads the same to people and agents and a default change cannot loosen it.
-- **Strictness:** `strict`, `noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns`, `allowUnreachableCode: false`, `allowUnusedLabels: false`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noImplicitOverride`, `noFallthroughCasesInSwitch`, `noPropertyAccessFromIndexSignature`, `useUnknownInCatchVariables`, `noUncheckedSideEffectImports`.
+- **Strictness**, all listed, and checked against the installed compiler's options on every TypeScript bump: `strict`, `noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns`, `allowUnreachableCode: false`, `allowUnusedLabels: false`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noImplicitOverride`, `noFallthroughCasesInSwitch`, `noPropertyAccessFromIndexSignature`, `useUnknownInCatchVariables`, `noUncheckedSideEffectImports`.
 - **Modules and syntax:** `verbatimModuleSyntax`, `allowImportingTsExtensions`, `isolatedModules`, `erasableSyntaxOnly`, `resolveJsonModule`, `forceConsistentCasingInFileNames`, `skipLibCheck`.
 
 Also:
