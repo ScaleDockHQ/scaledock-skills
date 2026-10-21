@@ -8,6 +8,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 
 - **Pins.**
   - Every action, GitHub-owned or third-party, uses its latest major tag (`@vN`), for example `uses: pnpm/setup@v3`. Never a commit SHA, a minor or a patch tag.
+  - An action that publishes no major tag, usually a 0.x action such as `zizmorcore/zizmor-action`, uses its latest release tag (`@v0.7.1`). Check with `gh api repos/<owner>/<repo>/git/refs/tags`.
   - This is a decision, not an oversight (scaledock-skills ADR 0008). The repos take fixes inside a major without a PR, and Dependabot opens the PR for the next major. Supply-chain risk is handled by the 7-day Dependabot cooldown, `minimumReleaseAge` for npm, the `permissions` defaults and zizmor. Do not switch back to SHA pins without a new ADR.
   - `.github/zizmor.yml` encodes this: `unpinned-uses` with `"*"` set to `ref-pin`.
   - Dependabot moves the major tags.

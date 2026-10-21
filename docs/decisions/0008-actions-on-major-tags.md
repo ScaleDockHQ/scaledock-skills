@@ -11,7 +11,7 @@ The user decided to pin every action, GitHub-owned or third-party, to its latest
 
 ## Decision
 
-- Every `uses:` points at the action's latest major tag (`@v3`), never a commit SHA, a minor or a patch tag.
+- Every `uses:` points at the action's latest major tag (`@v3`), never a commit SHA, a minor or a patch tag. An action that publishes no major tag (a 0.x action such as `zizmorcore/zizmor-action`) uses its latest release tag.
 - `.github/zizmor.yml` sets `unpinned-uses` to `ref-pin` for `"*"`, so zizmor still rejects a branch ref or a missing ref.
 - Dependabot opens the PR for each new major, with a 7-day cooldown. zizmor's `dependabot-cooldown` audit flags anything shorter.
 - Supply-chain risk is handled by that cooldown, `minimumReleaseAge` for npm, least-privilege `permissions` on every workflow, and zizmor.
