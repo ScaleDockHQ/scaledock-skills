@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.17.0"
+  version: "1.18.0"
 ---
 
 # Repo standard
@@ -102,6 +102,10 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] An oxfmt or oxlint bump is its own commit, with the reformat listed in `.git-blame-ignore-revs`.
 - [ ] Every action uses its latest major tag with zizmor `ref-pin` (scaledock-skills ADR 0008), same-repo actions use `$/...`, public repos run zizmor, and Dependabot has a 7-day cooldown.
 - [ ] `verify.yml` runs the static gates in one job with a `parallel` group, services run as `background` steps, only the default branch saves caches, the Remote Cache step is not skipped in CI, and every job sets `timeout-minutes`.
+- [ ] [web] `next.config` turns the Turbopack build cache off in CI, and no workflow restores `.next/cache`.
+- [ ] [Turbo] `globalEnv` and the other global keys sit at the top level of `turbo.json`, with no `global` block, so `turbo/no-undeclared-env-vars` reads them.
+- [ ] [Vercel] Every service installs the whole workspace from the repo root, `devEngines` selects pnpm, and no project sets `ENABLE_EXPERIMENTAL_COREPACK`.
+- [ ] [library] The Library profile rows in `audit.md` are `done` or `kept`: structural `Instant`, Standard Schema only, the peer floors and their test, the TypeScript matrix, `^build`, `max-lines`.
 - [ ] The managed AGENTS.md blocks (Next.js, Turborepo) are committed as the tools wrote them.
 - [ ] Installed skills and `skills-lock.json` are committed, and the lock tracks every skill in `.agents/skills`; in a repo that publishes skills, `pnpm dlx skills add . --list` offers only its own.
 - [ ] [apps] Each app has one `env.ts`, the only file that reads `process.env`; every env key is in t3-env, `turbo.json`, `.env.example` and all three Vercel environments.
