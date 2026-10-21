@@ -90,6 +90,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] The naming rules hold, and the `docs:drift` naming check passes.
 - [ ] The baselines from before and after the run are in the report.
 - [ ] Every dependency is `catalog:` or `workspace:*` at the latest release that passes `minimumReleaseAge`; every override, exclude, `allowBuilds` entry and patch has a comment.
+- [ ] Every `peerDependencies` range of a published package is a floor with no upper bound: no `<`, `^` or `~`.
 - [ ] Every pre-release and held pin is in AGENTS.md with its status and revisit trigger, and every own-org release-age exclude names one exact version and a removal date that has not passed (rule 2).
 - [ ] `pnpm-workspace.yaml` has no key the installed pnpm rejects, and TypeScript is the stable native compiler with no preview package.
 - [ ] Every deviation has an ADR in `docs/decisions/` and a line in the AGENTS.md "Deviations" list.
