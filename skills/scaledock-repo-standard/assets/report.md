@@ -25,10 +25,11 @@ One line per pin: package, version, why, and what moves it to stable.
 
 ## Baselines
 
-One row per baseline from `references/performance.md`: what was measured, the value before the run, the value after it, and the commit that moved it. A CLI gets one row each for the `--version`, `--help` and heaviest leaf `--help` medians.
+One row per baseline from `references/performance.md`: what was measured, the value before the run, the value after it, and the commit that moved it. A CLI gets one row each for the `--version`, `--help` and heaviest leaf `--help` medians. An `app` with a database gets authenticated page cost rows for the sign-in action, the dashboard and two list pages, warm, locally and on the preview: render and idle time, Data API requests, permission version RPC calls, Postgres time and session verifications, with the app and database regions.
 
-| Baseline | Before | After | Commit |
-| -------- | ------ | ----- | ------ |
+| Baseline                                   | Before | After | Commit |
+| ------------------------------------------ | ------ | ----- | ------ |
+| Authenticated page cost: `<page>`, `<env>` |        |       |        |
 
 ## Lint rules
 

@@ -1,6 +1,6 @@
 # Performance and caching
 
-Baselines, caching for agent routes, the client bundle, library runtime cost, and generated code. CLI startup rules are in [`cli.md`](cli.md).
+Baselines and budgets, the cost of an authenticated request, caching for agent routes, the client bundle, library runtime cost, and generated code. CLI startup rules are in [`cli.md`](cli.md).
 
 Applies to every repo kind that ships code. A tooling repo applies only the baselines and the CLI startup rules.
 
@@ -14,10 +14,53 @@ Record these before changing anything, and again at the end of the run. Put both
 - CLI startup for every CLI: the medians of `--version`, `--help` and the heaviest leaves' `--help` from `scripts/cli-startup.ts` (see [`cli.md`](cli.md)).
 - `next analyze` per Next app. Check the command name against the installed Next.
 - With docs or marketing, the gzipped size of each lazy client chunk and the HTML size of the largest prerendered page.
+- With an `app` surface and a database, the [authenticated page cost](#authenticated-page-cost) below.
 
 A change that moves a baseline names the before and after numbers in its commit.
 
 When a feature needs a few hundred bytes or a few milliseconds more, raise the budget in the same commit and record why. Do not contort the code (inlined helpers, dropped error messages, hand-rolled parsing) to stay under a number; a small, recorded raise is the better trade, and a large one is a design question for the PR.
+
+### Authenticated page cost
+
+Record it for every product with an `app` surface and a database. Measure the sign-in action, the dashboard and two list pages, warm, both locally and on the deployed preview. For each one, record:
+
+- The server render time, and the time until the page is idle.
+- Data API requests per render, counted from the Supabase API logs or the local gateway logs.
+- Permission version RPC calls per render, counted the same way.
+- Total Postgres time per render, from `pg_stat_statements` reset before each run.
+- Session verifications per request, from a dev-only counter or span around the verify call.
+- The names of the sign-in round trips (see [Authenticated request cost](#authenticated-request-cost)) and each background reconcile with its reason.
+
+Also record the app region and the database region, so a later reader can tell distance from fan-out.
+
+Measure cold loads separately, and keep compile time and file-watcher pauses out of the warm numbers. Keep test caches and other generated folders outside the dev server's watched tree, or have the dev server ignore them. In CentraKit the first local load spent 10 s compiling, and a test cache inside the watched tree made Turbopack pause until the filesystem settled, so the early local numbers measured the tooling rather than the page.
+
+### Authenticated page budgets
+
+Every measured page starts with these budgets, and they are its pass line:
+
+- 1 session verification per request.
+- At most 1 permission version read per request.
+- No duplicate list reads between islands.
+- A recorded Data API request count, so a later jump is visible.
+
+A budget changes only under the rule above: raise it in the same commit with the reason, and treat a large raise as a design question for the PR.
+
+## Authenticated request cost
+
+Applies to every product with an `app` surface and a database. A fast database does not make a fast page when every island repeats the same work. In CentraKit, Postgres spent about 46 ms per dashboard render, yet one warm render made about 66 Data API requests and 12 permission version RPC calls, its server render took 780 to 850 ms, and the page stayed busy for 2.5 s before it went idle. The [budgets](#authenticated-page-budgets) above are the pass line for these rules.
+
+- **One session verification per request.** The proxy, the page and every island share one verified result.
+  - A `use cache` boundary never repeats the cookie session read, the JWT verification or the claims setup. Inside a private cache scope, auth comes from a snapshot that the library keeps per request, or from serializable arguments such as the organization ID and slug.
+  - `React.cache` runs in its own isolated scope inside each `use cache` boundary, so a per-request memo built on it starts empty there. Values reach a cache scope only as arguments. A `"use cache: private"` function is the other way to share: matching calls to it within one request reuse one result.
+  - In CentraKit every `"use cache: private"` island called the request context factory again, repeating the session read, the JWT verification and the PermDock claims setup, and the proxy's verification was repeated by every island as well.
+- **At most one permission version read per request.** Every cache scope that checks permissions reads through a version cache that lives for the whole request or longer, never one per instance. PermDock's claims-first freshness and PostgREST sources memoized per instance, and each cache scope built a new instance, so each scope called the version RPC again: 12 calls on one dashboard render.
+- **One read per list per page.** Islands that need the same data await one shared cached loader and pick the fields they need. Never give each island its own copy of the same reads. Two CentraKit islands loaded the same task, quote, invoice, customer and inbox lists through separate cached loaders.
+- **No auth or tenant reads in the static shell.** The static shell is prerendered, so Partial Prefetching and instant navigation can serve it at once.
+  - Personal data stays in private islands inside `<Suspense>`, with a fallback shaped like the content it replaces.
+  - Session content can still travel in the route's per-session App Shell. It joins the App Shell when its `stale` time is at least 5 minutes, and drops out of prefetching below 30 seconds. Check both numbers against the installed `cacheLife` docs.
+- **Background reconciles run after paint.** A realtime first-subscribe refresh or any other catch-up request starts only after the page has painted, and each one is listed in the baseline with its reason. In CentraKit two realtime subscriptions each sent a `POST` after paint to bring cached data up to date.
+- **Sign-in finishes in a fixed number of round trips.** Name each round trip in the baseline. The redirect target does not repeat a check that sign-in just did, such as verifying the new session again or reloading the memberships sign-in already read.
 
 ## Web routes for agents
 
@@ -50,7 +93,7 @@ Applies to library repos and to shared runtime packages in product repos. better
 - **Network.**
   - Every network call passes `AbortSignal.timeout(<ms>)`.
   - In-flight dedupe maps delete their entry in `finally`, so a failure never pins a rejected promise.
-- **Auth** resolves once per request scope (`cache()` in React), and the memo stores the state after validation, so later reads in the same scope skip the check.
+- **Auth** resolves once per request scope (`cache()` in React), and the memo stores the state after validation, so later reads in the same scope skip the check. That memo does not reach into `use cache` boundaries, so the library also keeps a per-request session snapshot and a shared permission version cache for them ([Authenticated request cost](#authenticated-request-cost)).
 - **Optional executors.** A heavy executor that few adapters use is injected through a subpath factory, never statically imported by every adapter.
 - **Tree shaking.**
   - tsdown sets `treeshake.moduleSideEffects` so unused modules drop.

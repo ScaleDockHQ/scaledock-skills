@@ -31,6 +31,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - **Stable compiler, ready for the next one.** A TypeScript minor in pre-release is never installed. The repo fixes the minor's known breaks ahead of time in a form that compiles today, and tracks the bump in an AGENTS.md checklist.
 - **Lint only gets stricter.** Toolchain bumps land as their own reformat commit. Disabled rules come back group by group with re-measured counts, and the few that stay off have a written reason.
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
+- **Cheap authenticated pages.** An app with a database records what each signed-in page costs: Data API requests, permission version reads, Postgres time and session verifications. Each request verifies the session once and reads the permission version at most once, islands share one loader per list, and the static shell does no auth reads.
 - **One web product.** The app, docs and marketing sites share one architecture (`nextjs-app-architecture`) and one design reference, so they look and behave alike.
 - **One name per concept.** Every adapter and doc uses the same names for the same things, and a drift test fails on old ones.
 - **One CLI contract.** Every ScaleDock CLI prints the same JSON envelope, exit codes and problem codes, switches to agent mode for coding agents, and asks for consent before it rewrites files or publishes.
@@ -55,7 +56,7 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 - [`references/skills.md`](references/skills.md): agent skills to install, commit and manage through `skills-lock.json`, in every repo kind.
 - [`references/toolchain.md`](references/toolchain.md): Node, pnpm, TypeScript, workspace, Knip, root scripts.
 - [`references/architecture.md`](references/architecture.md): folder tree, boundaries, one library per concern (including Temporal for dates), env, code rules, naming and layout across adapters, and the library profile (structural `Instant`, Standard Schema only, open peer floors, the TypeScript matrix).
-- [`references/performance.md`](references/performance.md): baselines, caching for agent routes, the client bundle, library runtime cost, generated code.
+- [`references/performance.md`](references/performance.md): baselines and budgets, the authenticated page cost and the rules for one session verification, one permission version read and one read per list per request, caching for agent routes, the client bundle, library runtime cost, generated code.
 - [`references/lint-format.md`](references/lint-format.md): Ultracite presets on Oxlint and Oxfmt, anti-slop, house rules, toolchain bumps.
 - [`references/lint-tightening.md`](references/lint-tightening.md): turning disabled rules back on, the group order, the keep-off list the per-rule counts, and the measured rules each repo turned on.
 - [`references/vercel.md`](references/vercel.md): Vercel first (Flags, Workflow, Run SDK, Sandbox and Drives, Connect), Services and bindings, Turborepo, Remote Cache.
