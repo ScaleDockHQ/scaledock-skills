@@ -99,6 +99,7 @@ Record each one that applies, and why, in the repo's `docs/agents/nextjs.md`.
 
 - **`usePathname` in a root layout.** Under `cacheComponents` it lives in a small client leaf (`NavLink`, the sidebar's active link), never in the layout. A production build confirms it; `next dev` hides the failure.
 - **Images behind Vercel Services.** When a Service rewrite puts an app under another app's host, `/_next/image` can return 404. Give that app its own domain, or set `images.unoptimized` with a comment. See [`vercel.md`](vercel.md), and add the image check to the report's manual steps.
+- **`React.cache` inside `use cache`.** `React.cache` runs in its own isolated scope inside every `use cache` boundary, so a per-request memo from outside never reaches a cached island. Pass values in as arguments, and follow [Authenticated request cost](performance.md#authenticated-request-cost) for sessions and permissions.
 - **Clock and randomness.** `Date.now()`, `new Date()` and `Math.random()` outside a cached function fail the prerender, including skeleton widths. Shiki reads the clock, so highlight inside a `"use cache"` function.
 - **Ids on mount.** A client hook that creates an id on mount (`useChat`) fails the prerender. Mount it after user interaction, loaded through `next/dynamic` with `ssr: false`.
 - **Link buttons.** A Base UI `Button` with `render={<Link />}` gives the link `role="button"`. Style the link with `buttonVariants()` instead.

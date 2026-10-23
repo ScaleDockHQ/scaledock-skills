@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.19.0"
+  version: "1.20.0"
 ---
 
 # Repo standard
@@ -57,7 +57,7 @@ Run these steps in order. Each step names the references to load and the check i
    - **New:** sketch the tree from the selected surfaces and packages.
    - **Upgrade:** walk the `audit.md` checklist row by row, opening a row's reference only to judge that row.
    - **Align:** audit each repo the same way, one column per repo.
-     -> [`references/audit.md`](references/audit.md), [`references/architecture.md`](references/architecture.md) for the target tree, and the Baselines section of [`references/performance.md`](references/performance.md) when the repo ships code.
+     -> [`references/audit.md`](references/audit.md), [`references/architecture.md`](references/architecture.md) for the target tree, and the Baselines section of [`references/performance.md`](references/performance.md) when the repo ships code (with the authenticated page cost).
      ✓ Every row has an `audit.md` status, every dependency behind latest is listed, and the starting baselines are recorded.
 3. **Foundation.** Install the skills, set up the toolchain, workspace, TypeScript, Knip, lint and format, and lay out the folders and boundaries.
    -> [`references/skills.md`](references/skills.md), [`references/toolchain.md`](references/toolchain.md), [`references/lint-format.md`](references/lint-format.md), [`references/lint-tightening.md`](references/lint-tightening.md) when the repo has disabled rules, [`references/architecture.md`](references/architecture.md).
@@ -77,7 +77,7 @@ Run these steps in order. Each step names the references to load and the check i
    -> [`references/agent-files.md`](references/agent-files.md), [`references/repo-files.md`](references/repo-files.md), [`references/ci.md`](references/ci.md), [`references/tests.md`](references/tests.md).
    ✓ AGENTS.md is at most 12 KB and lists the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.
 7. **Verify and finish.** Run `pnpm install`, `pnpm format` and `pnpm verify`; fix code, not tests. Add a changeset, push, mark the one PR ready, and put the report in its body.
-   -> [`assets/report.md`](assets/report.md), [`references/git-workflow.md`](references/git-workflow.md) (Changesets, PR), the Baselines section of [`references/performance.md`](references/performance.md), the checklist below.
+   -> [`assets/report.md`](assets/report.md), [`references/git-workflow.md`](references/git-workflow.md) (Changesets, PR), the Baselines section of [`references/performance.md`](references/performance.md) (with the authenticated page cost), the checklist below.
    ✓ `pnpm verify` passes, the final baselines are recorded, and the report is complete.
 
 ## Verify before done
@@ -126,6 +126,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] [cli, scaffolding] The builder, CLI, preset JSON and docs use the same names, and no option generates nothing.
 - [ ] [cli, scaffolding] `init` always writes the config, and every generated case is type-checked.
 - [ ] [Database] Local development and `pnpm verify` run without a container engine: `supabase:start` passes `--runtime native` with no `auto` fallback, no stack for the checkout is on `docker`, and tests use the native stack instead of Testcontainers (PowerSync's `sync:*` scripts excepted).
+- [ ] [app, Database] Authenticated page cost is recorded before and after, within budget, with one session verification and at most one permission version read per request.
 - [ ] [Database] Every table has RLS and pgTAP tests; every domain table has the audit trigger.
 - [ ] [Database] Timestamps are `timestamptz`, money is integer minor units plus a currency, and public IDs are UUIDs (v7 when the Postgres major provides it).
 - [ ] [Database] Every foreign key is indexed and has an explicit `on delete`.
@@ -138,7 +139,7 @@ The tag in brackets names the input that switches an item on; untagged items alw
 ## Reference index
 
 - **Run:** [`audit.md`](references/audit.md) (placeholders, repo kinds, gap checklist), [`report.md`](assets/report.md) (final report, manual steps), [`adr-template.md`](assets/adr-template.md).
-- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop, toolchain bumps), [`lint-tightening.md`](references/lint-tightening.md) (turning disabled rules back on, group order, the keep-off list).
+- **Foundation:** [`skills.md`](references/skills.md) (agent skills), [`toolchain.md`](references/toolchain.md) (Node, pnpm, TypeScript, workspace, Knip, root scripts), [`architecture.md`](references/architecture.md) (tree, boundaries, contract, errors, one library per concern, env, naming and layout), [`performance.md`](references/performance.md) (baselines, authenticated request cost, agent-route caching, client bundle, library runtime, generated code), [`lint-format.md`](references/lint-format.md) (Ultracite on Oxlint and Oxfmt, anti-slop, toolchain bumps), [`lint-tightening.md`](references/lint-tightening.md) (turning disabled rules back on, group order, the keep-off list).
 - **Platform:** [`vercel.md`](references/vercel.md) (Vercel first, Services, `turbo.json`, Remote Cache), [`local-dev-env.md`](references/local-dev-env.md) (Portless, native toolchain, env and secrets).
 - **Web:** [`nextjs.md`](references/nextjs.md) (config, additions to `nextjs-app-architecture`, pitfalls), [`web-design.md`](references/web-design.md) (patterns app, docs and marketing share), [`i18n.md`](references/i18n.md) (next-intl, and i18next for Expo), [`ui.md`](references/ui.md) (shadcn, ReUI Pro), [`app-shell.md`](references/app-shell.md) (auth pages, shell, page templates, screens).
 - **Expo:** [`expo.md`](references/expo.md) (shapes, app config, EAS, dev client, native UI, Uniwind, push, universal web), [`offline-sync.md`](references/offline-sync.md) (PowerSync).

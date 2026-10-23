@@ -77,6 +77,7 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 - Repositories return a `Result`, never throw, and run as the caller.
 - Use the framework subpaths (`/next`, `/hono`, `/orpc`, `/mcp`, `/query`, `/server`, `/env`, `/storage`, `/realtime`).
 - `better-supabase doctor` runs in `verify`.
+- It exposes a per-request session snapshot that `use cache` scopes read, so no island repeats the session read or the JWT verification, and apps use it instead of creating a request context per island ([`performance.md`](performance.md#authenticated-request-cost)).
 
 ## Audit log
 
@@ -89,5 +90,6 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
 - `packages/policy` holds `definePermissions`, `resource` and `definePolicy`.
 - One frozen instance per request through `permdock/next`, `/hono`, `/orpc` or `/mcp`. The UI uses `permdock/react`.
 - Memberships come from the verified subject.
+- Every instance reads permission versions through one shared version cache, created once at module scope (`memoryVersionCache()`, passed to `claimsFirst(source, { versions })`), never through a per-instance memo. Apps pass it to every instance, so a request reads the version at most once ([`performance.md`](performance.md#authenticated-request-cost)).
 - `permdock rls generate`, `permdock collect --check` and `permdock doctor` run in `verify`.
 - Never add a permission without its feature.
