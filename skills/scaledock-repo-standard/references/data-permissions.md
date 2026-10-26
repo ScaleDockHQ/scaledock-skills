@@ -42,6 +42,7 @@ Applies to product repos with Database or Roles and permissions set to yes. Offl
   - Services other than Postgres sleep until their first request. Pass `--eager` only when a task needs everything up front.
   - The experimental engine keeps its data apart from a legacy local project, so the first start after switching begins from migrations and seeds.
   - Each running stack holds a shared memory segment, and macOS allows 32 on the machine (`kern.sysv.shmmni`), so `supabase start` fails once a few dozen worktrees have run a stack. `ipcs -m` counts them. A `supabase:prune` script stops the stacks of branches merged into `main` in the checkout and its worktrees, keeping their data, with `--dry-run` to list them (better-supabase).
+  - Read stack state with `supabase stack list`. Never parse the state files under `~/.supabase/stacks`, whose format changes between CLI versions.
   - On the native runtime, `pg_net` reaches the host at `127.0.0.1`, not `host.docker.internal`.
   - The stack engine's Realtime denies private-channel joins. Tests that join a private channel skip when `SUPABASE_RUNTIME` names a stack-engine runtime, and one CI job runs them on the legacy engine (`SUPABASE_EXPERIMENTAL_STACK=0`). That CI job is the only place the legacy engine runs; locally they stay skipped.
   - A new worktree has no gitignored signing key; generate it before the first start.
