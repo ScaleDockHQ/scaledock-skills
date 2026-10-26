@@ -122,10 +122,13 @@ pre-push:
   jobs:
     - name: affected
       env: { TURBO_SCM_BASE: origin/<working branch> }
-      run: pnpm exec turbo run lint lint:root typecheck test --affected
+      run: pnpm exec turbo run lint lint:root typecheck test --affected --cache=local:rw,remote:r --continue=dependencies-successful
 ```
 
 The pre-commit hook formats and fixes only the staged files with Ultracite (Oxfmt, then `oxlint --fix`) and restages them. The type-aware lint, typecheck and tests run once per push on the affected workspaces.
+
+- `--cache=local:rw,remote:r` reads the Remote Cache but never writes to it from a laptop. `--continue=dependencies-successful` reports every failing package in one run and skips only the dependents of a failed one.
+- Merge and rebase commits skip pre-commit, so the pre-push hook is the gate for them. After resolving a conflict where both sides fixed the same lint finding differently, keep the simpler version and run `oxlint` on the file with the merged config before committing.
 
 `prepare` runs `scripts/prepare.ts`, which skips lefthook when `CI` or `VERCEL` is set.
 

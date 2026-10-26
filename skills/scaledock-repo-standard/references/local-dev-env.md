@@ -20,6 +20,8 @@ Applies to product repos, and to library repos that run a docs site.
   - Each worktree or agent sandbox starts its own Supabase project on the native runtime (see [`data-permissions.md`](data-permissions.md)). Read its URLs and keys from `supabase start --output-format json`, as `pnpm env:local` does; never assume port `54321`, Docker, or a project shared with another checkout.
   - `allowedDevOrigins` is `["127.0.0.1", "localhost", "**.localhost"]` in the shared Next config, so every Portless name and worktree prefix passes without a list per app.
 - **Worktrees.** A new git worktree has none of the gitignored local secrets, such as the Supabase signing key. Generate them in each checkout with the repo's scripts (`pnpm supabase:signing-key`, `pnpm env:local`); never copy them between checkouts. Each worktree runs its own Supabase project and Portless names, so two branches never share ports.
+  - Portless prefixes a worktree's hosts with its branch name (`my-branch.app.localhost`); a detached HEAD gets no prefix. Scripts that register extra aliases use the same prefix, and host-based code (brand or tenant lookup from the host) accepts prefixed `.localhost` hosts.
+  - Never pass `--force` to `portless alias` inside a worktree. It takes over another worktree's hosts.
 - **Google OAuth (`dev:oauth`):**
   - A separate proxy on `localtest.me`: `PORTLESS_STATE_DIR` in a temp dir, `PORTLESS_PORT=1355`, `portless proxy start --tld me`.
   - `portless alias supabase.localtest <api port> --force`, with the port from `supabase start --output-format json`.

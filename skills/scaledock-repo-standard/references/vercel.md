@@ -94,8 +94,9 @@ Check the keys against the installed docs:
   },
   "envMode": "strict",
   "remoteCache": { "enabled": true, "signature": true },
-  "globalEnv": ["CI", "NODE_ENV"],
   "globalPassThroughEnv": [
+    "CI",
+    "NODE_ENV",
     "SUPABASE_*",
     "VERCEL_*",
     "PORTLESS*",
@@ -110,9 +111,19 @@ Check the keys against the installed docs:
     "pnpm-workspace.yaml",
   ],
   "tasks": {
-    "transit": { "dependsOn": ["^transit"] },
+    "transit": {
+      "dependsOn": ["^transit"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!**/*.md",
+        "!**/*.mdx",
+        "!**/*.test.*",
+        "!tests/**",
+      ],
+    },
     "build": {
       "dependsOn": ["^build"],
+      "env": ["NODE_ENV"],
       "outputs": [
         ".next/**",
         "!.next/cache/**",
@@ -123,8 +134,14 @@ Check the keys against the installed docs:
     },
     "lint": { "dependsOn": ["transit"] },
     "//#lint:root": {},
-    "typecheck": { "dependsOn": ["transit"] },
-    "test": { "dependsOn": ["transit"] },
+    "typecheck": {
+      "dependsOn": ["transit"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.md", "!**/*.mdx"],
+    },
+    "test": {
+      "dependsOn": ["transit"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.md", "!**/*.mdx"],
+    },
     "dev": { "cache": false, "persistent": true },
     "dev:portless": { "cache": false, "persistent": true },
   },
@@ -134,10 +151,15 @@ Check the keys against the installed docs:
 - **Top-level keys, no `global` block.** Keep `globalEnv`, `globalPassThroughEnv`, `globalDependencies`, `envMode` and `remoteCache` at the top level, and leave the `globalConfiguration` future flag and its `global` block off. `turbo/no-undeclared-env-vars` (`eslint-plugin-turbo`, run through oxlint) reads only the top-level keys, so the `global` block reports every declared variable as undeclared (CentraKit, better-supabase, Lienlink). Revisit when the plugin reads `global`.
 - **Marketplace env.** A Marketplace integration adds variables to every Vercel environment. For each one, either list it (or its prefix) in `globalPassThroughEnv` or a task's `env` with the code that reads it, or delete it from the project. Never leave a variable that nothing declares.
 - **Signed Remote Cache** (`"signature": true`) only once `TURBO_REMOTE_CACHE_SIGNATURE_KEY` exists in CI and on Vercel. Create the key first, then turn on signing in the same PR that uses it.
-- **`transit`** is a no-op script (`"transit": "true"`) in every package. Tasks that read source from dependencies depend on it, so they rerun when a dependency changes without waiting for its build.
+- **`CI` and `NODE_ENV` pass through.** Keep them in `globalPassThroughEnv`, not `globalEnv`, so they do not split every task hash between CI and local runs. `NODE_ENV` is hashed only where it changes the output, in `build.env`.
+- **`transit`** is a task with no script. Turbo keeps scriptless nodes in the graph, so packages need no `"transit": "true"` script. Tasks that read source from dependencies depend on it, so they rerun when a dependency changes without waiting for its build.
   - When a package's `exports` point at `dist/`, its consumers read the build, not the source: their tasks depend on `^build` instead of `transit` (PermDock ADR 0021).
-  - A task that reads generated code (Supabase types, the OpenAPI document, typed routes) depends on the task that generates it.
+  - A task that reads generated code (Supabase types, the OpenAPI document, typed routes) depends on the task that generates it. Name that edge explicitly, such as `@workspace/api-client#generate`, instead of a blanket `^generate` that runs the task in every dependency.
 - **Workspace `turbo.json` files** extend `//` with `"extends": ["//"]`, add their `tags`, and list per-task `env` keys and `inputs` exclusions. Expo apps exclude `ios/**`, `android/**` and `assets/**` from `lint`, `typecheck` and `test` inputs, and add `test:components`.
+  - Start an overridden `dependsOn` or `inputs` list with `"$TURBO_EXTENDS$"`. It appends to the inherited list; without it the workspace list replaces the root one.
+- **Narrow inputs.** `transit`, `typecheck` and the test tasks leave out docs (`!**/*.md`, `!**/*.mdx`), and `transit` also leaves out tests. A test task that reads files outside its package, such as `supabase/` schemas and seeds, lists those folders with `$TURBO_ROOT$/...` instead of widening to the repo. After changing inputs, run `turbo run <task> --dry=json` and count the inputs; a SaaS `test:unit` dropped from 15,695 to 4,021 (CentraKit).
+- **Local cache across worktrees.** Linked git worktrees share the main worktree's local cache when `turbo.json` sets no `cacheDir`. Do not set `cacheDir` or `TURBO_CACHE_DIR`.
+- **Stale lint results.** A cached lint result can hide new errors after a dependency bump. Run the lint gate once with `--force` after an oxlint or Ultracite bump.
 - **Boundaries:** every workspace has `boundaries` tags.
 - **Generated inputs:** a task that reads files another task generates (the `supabase:types` output, Uniwind artifacts) excludes them from its static `inputs` and adds `{ "mode": "jit", "globs": [...] }`, so the hash reflects the generated content.
 - **Scoped runs:** with `affectedUsingTaskInputs` and `filterUsingTasks`, `--affected` and `--filter` both select by task `inputs` and combine. CI and agents pass `--json` or `--log-file` where the installed version supports them, and read the structured output instead of scraping logs.

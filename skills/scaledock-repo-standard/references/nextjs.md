@@ -105,6 +105,8 @@ Record each one that applies, and why, in the repo's `docs/agents/nextjs.md`.
 - **Link buttons.** A Base UI `Button` with `render={<Link />}` gives the link `role="button"`. Style the link with `buttonVariants()` instead.
 - **Typed routes.** `typedRoutes` rejects a plain `string` href. Narrow it with a type guard that returns `href is Route`.
   - With many dynamic segments (`[locale]/[brand]/[orgSlug]`), inferring the route type from a variable already typed `Route` can take minutes per call site. Write literal and template hrefs inline, and pass `<string>` for a variable: `<Link<string> href={href}>`, `router.push<string>(href)`, `redirect<string>(href)`. Time `typecheck` after adding a call site (CentraKit `tenancy-and-routing.md`).
+- **`process.env` writes in config.** When `@next/env` reloads with `forceReload`, it resets `process.env` to its startup snapshot (`initialEnv`) and deletes every key that is not in it. A plain `process.env.X = ...` in `next.config.ts` or the env loader can vanish and never reaches the build workers. Read shell values from `initialEnv`, and set values with `updateInitialEnv` so they survive reloads (CentraKit `readShellEnv` and `pinEnv`).
+- **`VERCEL` in local builds.** `vercel env pull` writes `VERCEL`, `VERCEL_ENV` and similar system variables into the `.env*` files, so `process.env.VERCEL` is set locally too. Detect a real Vercel build from the shell env (`initialEnv`) only.
 - **Cold navigation into a dynamic segment.** Page-level Suspense does not cover a cold hard navigation that waits on the layout. Keep a `loading.tsx` per route group that renders the same skeleton component as the page's Suspense fallback, never a spinner, until Partial Prefetching covers it (CentraKit ADR 0021).
 
 ## Agent loop
