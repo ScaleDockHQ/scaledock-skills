@@ -83,6 +83,14 @@ A published package's `peerDependencies` ranges are open floors such as `>=19`, 
 - When several agents share one working tree, only one of them runs `pnpm install` or changes `pnpm-lock.yaml`. The others wait for it, then pull its lockfile.
 - **Own-org packages too young for `minimumReleaseAge`.** When a repo needs a release of a sibling ScaleDock package (better-supabase, permdock) that is younger than the window, add one `minimumReleaseAgeExclude` entry for that exact version (`better-supabase@0.12.0`, never the bare name), with a comment naming the reason and a removal date at the end of the window. Remove the entry on that date. Never link a sibling checkout (`link:../better-supabase`) in a commit, and never add a CI read token to fetch an unpublished build.
   - A temporary `link:` for local testing needs `pnpm_config_strict_peer_dependencies=false` and `pnpm_config_verify_deps_before_run=false` in the shell, and is reverted before the commit.
+- **Release-age excludes for a tool's platform binaries.** Adopting a tool such as turbo before the window ends needs an exact-version exclude for the main package, its ESLint plugin and each `@turbo/<platform>` package. `minimumReleaseAgeExcludePrune` removes them once they age out.
+- **`trustPolicyIgnoreAfter: 43200`** (30 days) trusts a release once it ages out, so each `trustPolicyExclude` entry carries a "trusted after <UTC date>" comment. A pre-release's pinned transitive dependencies need their own exact-version excludes, listed as a table in one ADR.
+- **`catalogPrune: true`** drops catalog entries that nothing uses.
+- **`auditConfig.ignoreGhsas`** entries each carry the advisory ID, why it cannot be patched, and the condition that removes the entry.
+- **Drop unused optional peers.** Check `pnpm why` for large auto-installed optional peers and remove them with a commented `"-"` override (`nuxt: "-"`, `"@swc/cli": "-"`). PermDock's `node_modules/.pnpm` went from 6.6 GB to 3.7 GB after `pnpm prune`; record the size as a baseline.
+- **`peerDependencyRules.allowedVersions`** entries each carry a comment with the reason, like every other exception.
+- **`enableGlobalVirtualStore: false`.** It breaks Turbopack and Next.js file tracing (CentraKit tried and reverted it).
+- **Library profile: no global `typescript` override.** An override would force the TypeScript matrix workspaces onto one version; use the named catalogs instead.
 - **Scoped overrides.** When one consumer needs a different version of a shared dependency, override it for that parent only (`"parent>dep": "1.2.3"`), never globally, so the other consumers keep theirs.
 - **`trustPolicy: no-downgrade`** can silently drop an optional platform binary, and the build then fails only on the platform that needs it (Linux on Vercel). Add one commented `trustPolicyExclude` entry for that exact version.
 - **`pnpm add` in a catalog repo** can write `workspace:*` into the catalog or prune catalog entries. Read the `pnpm-workspace.yaml` diff after every add.
@@ -120,6 +128,8 @@ Also:
 
 `knip.mts` lists workspaces explicitly and sets `treatConfigHintsAsErrors: true`, `tags: ["-internal"]`, `ignoreExportsUsedInFile` for types, and `ignoreBinaries: ["vercel"]`.
 
+Internal packages that are imported only through their entry set `includeEntryExports: true`, so unused exports in entry files are reported. Files loaded by path or child process (bench runners, config fixtures) go under `entry`, and the `//#knip` Turbo task depends on the examples' `typegen`. Each exclusion carries a comment.
+
 When Knip flags an export that a refactor left unused, remove the export. Never add it to an ignore list.
 
 Knip does not see oxlint `jsPlugins` loaded by name in `oxlint.config.ts`; list those packages under `ignoreDependencies` with a comment. Plugins that Ultracite loads are not affected.
@@ -131,7 +141,13 @@ Never run `next build` and `typecheck` of the same app at once, by hand or as tw
 - **Dev:** `dev`, `dev:<app>`, `dev:portless`, `dev:oauth`, `dev:hosted`, `dev:cleanup`, `email:dev`.
 - **Quality:**
   - `build`, `format`, `format:check`, `lint`, `lint:root`, `typecheck`, `typecheck:tooling`, `knip`, `boundaries`, `audit:high`, `docs:drift`, `openapi:check`, `i18n:check`, `doctor`, `check:publish` (libraries only), and `analyze` (`next analyze`, with Next apps; not part of `verify`).
-  - `check` is `format:check`, `lint` and `typecheck`: the fast gate.
+  - `check` is `format:check`, `lint` and `typecheck`: the fast gate. `gate` (alias `check:affected`) is the same checks on the affected workspaces, and the pre-push hook runs it.
+  - `test` never collects coverage locally; `test:coverage` does, and CI sets `coverage.enabled` from `process.env.CI`.
+  - `ci:wait` wraps `gh pr checks --watch` and prints the failed jobs. `check:agent-docs`, `check:adrs` and `check:empty-translations` (with i18n) are repo checks. A new `check:*` goes in `package.json`, `verify` and the `verify.yml` list, with a parity test.
+  - A library's TypeScript matrix script is `typecheck:matrix`, or `typecheck:compat` when it runs only in CI and `verify`; pick one name per repo.
+  - Every script runs on Windows, macOS and Linux: `cross-env` for env prefixes, and ports and hosts resolved in Node scripts, not `${PORT:-3000}`.
+  - `docs:drift` checks: every `pnpm <script>` and `--filter` named in docs exists; a retired-names table (old script, flag, package, column and problem-code names); mentioned paths and `meta.json` pages exist; duplicate rules; pins in the pins file and `versions.md` match the catalog; the AGENTS.md domain index covers every package; every SQL `raise` carries a hint code.
+  - Ratchets: allowlists (`naming.json`, app-architecture and pgTAP allowlists) and doctor baselines only shrink. The check fails when a listed item stops violating or a new violation appears; `--update` rewrites the list after a fix and never adds an entry, and an accepted code needs a reason.
   - `verify` covers `check`, `knip`, `test`, `boundaries`, `audit:high`, `openapi:check`, `i18n:check`, `docs:drift` and `doctor`, plus `check:prose`, `gen:check`, `typecheck:matrix`, `typecheck:perf` and `size` where the repo has them. It runs every gate CI runs, so a green `verify` means a green CI.
   - In a Turbo workspace, `verify` is never a serial `&&` chain. Every check is a Turbo task with `inputs`, so `verify` is one cached, parallel `turbo run <tasks>` plus the few steps that only run at the root (`format:check`, `lint:root`, `boundaries`).
   - No check runs twice. A check that `verify` runs as its own task is never also called from inside `test` or another task.
@@ -144,4 +160,5 @@ Never run `next build` and `typecheck` of the same app at once, by hand or as tw
 - **Env:** `env:pull`, `env:pull:production`, `env:local`.
 - **Database:** `supabase:start` (`supabase start --runtime native`, with no fallback to `--runtime auto`), `supabase:stop`, `supabase:reset`, `supabase:diff` (`supabase db schema declarative sync --no-apply`), `supabase:pull` (`supabase config pull`), `supabase:types`, `supabase:test`, `supabase:signing-key`, `db:gen`.
 - **Generated web data:** one script per generated catalog file (`catalog`, `recipes`, or the repo's names), each with a `--check` mode that `gen:check` runs. Screenshots of an example app run through `screenshots:<name>` (see [`web-design.md`](web-design.md)); they are never part of `verify`.
+- **Worktrees:** `worktree:setup`, `supabase:prune`, `supabase:destroy`, and `supabase:start:full` when `supabase:start` excludes Studio.
 - **Other:** `openapi:generate`, `prepare`.

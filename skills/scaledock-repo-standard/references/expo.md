@@ -121,6 +121,11 @@ The platform's own components are the base, and brand tokens paint them:
 - **Monitoring.** `@sentry/react-native` behind `src/lib/monitoring`, with source maps uploaded by the EAS build. A universal app's web build uploads its own source maps.
 - **Analytics** stays behind `src/lib/analytics` and identifies users by `sub` only.
 
+## Doctor
+
+- CI runs `pnpm --filter <app> run doctor` (with `run`, because `pnpm doctor` is pnpm's own command), plus an advisory `doctor:latest` step with `continue-on-error: true` that lists newer Expo patches: `minimumReleaseAge` holds patches for a day while expo-doctor's online manifest expects them at once.
+- `doctor` passes `PATH`, `GEM_HOME` and `GEM_PATH` through Turbo so expo-doctor sees CocoaPods. pnpm's runtime download ships no `npm`, so expo-doctor's `npm explain` checks need `npm` installed once (`pnpm add -g npm`).
+
 ## Env
 
 - `src/lib/env.ts` uses t3-env core with Valibot for `EXPO_PUBLIC_*` keys, read literally so Metro inlines them. Server-only keys never get an `EXPO_PUBLIC_` copy.

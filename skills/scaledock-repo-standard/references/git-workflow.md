@@ -30,13 +30,13 @@ This applies to agents and people alike.
    - In a plan, keep each to-do's status current (in progress, done) and continue through every to-do without stopping to ask, unless a decision belongs to the user.
    - An orchestrating agent waits for every subagent it started and reviews their work before it reports done.
 4. **Open one PR.**
-   - After the first push, run `gh pr create --base <working branch>` and open it as a draft until `pnpm verify` passes, then mark it ready.
+   - After the first push, run `gh pr create --base <working branch>` and open it ready for review, not as a draft. Run `pnpm verify` once before the first push, so the PR opens green.
    - The PR title is a conventional commit header. It becomes the squash commit, and CI checks it with commitlint.
    - The body follows the template, including the verify result and the changeset.
 5. **Keep everything on that PR.** Every later request in the same chat or plan goes onto the same branch and PR: follow-ups, review fixes, extra todos. Update the PR body to match.
    - Never open a second PR.
    - Never stack PRs. GitHub's stacked PRs are generally available, but agent work still goes into one PR per chat or plan. A stacked PR merges into its parent branch, not `main`, so its work silently misses `main` when the parent merges first.
-   - After a push, wait for CI. When it fails or the PR falls behind its base, rebase on the latest base and fix the failing checks until the PR can merge.
+   - After a push, wait for CI once with `gh pr checks --watch --fail-fast` (or a `ci:wait` script that wraps it and prints the failed jobs) in a backgrounded shell, and read its output once. Never redirect it to a log file and `sleep` on it. When it fails or the PR falls behind its base, rebase on the latest base and fix the failing checks until the PR can merge.
    - After a rebase, regenerate committed generated files (snapshots, OpenAPI, typed clients, migrations from the declared schema) from a fresh state, such as a database reset, instead of resolving their conflicts by hand.
    - Never split a plan into one PR per todo.
 6. **New work, new branch.** Start a new branch and PR only when the user starts a new chat or plan, or asks for a separate PR.
@@ -49,13 +49,13 @@ Bot PRs (Dependabot, the Changesets version PR) are the only other PRs.
 
 ## Direct-to-develop variant
 
-A small team may commit straight to `develop` instead of opening one branch and PR per chat. Record the choice in `AGENTS.md` (agent workflow and Deviations) and in an ADR; without both, the default flow above applies.
+A small team may commit straight to `develop` instead of opening one branch and PR per chat. Record the choice in `AGENTS.md` (agent workflow) and in an ADR listed in the ADR index; without both, the default flow above applies.
 
 1. **Check the tree.** Run `git status` first. Leave out changes you did not make, and ask when they overlap your work.
 2. **Stay on `develop`.** Don't open a topic branch or a PR into `develop`. Never commit to `main`.
 3. **Commit small.** Conventional commits, explicit paths with `git add <path>`, never the whole tree.
-4. **Never skip hooks.** No `--no-verify`. The pre-push hook is the only gate before CI, so fix what it reports.
-   - The hooks run `pnpm verify:affected`: format, lint, typecheck and unit tests for the affected packages. The live-database suites (integration, pgTAP) stay in CI, so a commit never waits on a local stack (CentraKit ADR 0022).
+4. **Never skip hooks.** No `--no-verify`. Fix what the hooks report.
+   - The hooks lint the staged files and, on push, the affected packages (below). Tests and the live-database suites stay in CI, so a commit never waits on a local stack.
 5. **Verify, then push.** Run `pnpm verify`, then `git push origin develop`, and only when the user asked for a push in this task.
 6. **`.github/` changes go through a PR into `develop`.** Workflow changes need the PR checks (actionlint, zizmor) before they run on `develop`.
 
@@ -108,29 +108,50 @@ The config-conventional preset limits body and footer lines to 100 characters, s
 Use the `jobs` syntax:
 
 ```yaml
+output: [summary, failure]
 pre-commit:
+  piped: true
   jobs:
     - name: fix
+      timeout: 120s
       glob: "*.{ts,tsx,mts,js,mjs,json,jsonc,md,mdx,css,yml,yaml}"
-      run: pnpm exec ultracite fix {staged_files}
+      exclude: [<generated files>, ".agents/skills/**"]
+      run: node_modules/.bin/ultracite fix {staged_files}
       stage_fixed: true
+    - name: lint-staged
+      timeout: 60s
+      run: node scripts/lint-staged.ts
 commit-msg:
   jobs:
     - name: commitlint
-      run: pnpm exec commitlint --edit {1}
+      run: node_modules/.bin/commitlint --edit {1}
+    - name: no-attribution
+      run: node scripts/no-attribution.ts {1}
 pre-push:
   jobs:
     - name: affected
+      timeout: 300s
       env: { TURBO_SCM_BASE: origin/<working branch> }
-      run: pnpm exec turbo run lint lint:root typecheck test --affected --cache=local:rw,remote:r --continue=dependencies-successful
+      run: pnpm gate
+post-merge:
+  jobs:
+    - name: install-on-lockfile-change
+      run: node scripts/install-on-lockfile-change.ts ORIG_HEAD HEAD
+post-rewrite:
+  jobs:
+    - name: install-on-lockfile-change
+      run: node scripts/install-on-lockfile-change.ts ORIG_HEAD HEAD {1}
 ```
 
-The pre-commit hook formats and fixes only the staged files with Ultracite (Oxfmt, then `oxlint --fix`) and restages them. The type-aware lint, typecheck and tests run once per push on the affected workspaces.
+The pre-commit hook formats and fixes only the staged files with Ultracite (Oxfmt, then `oxlint --fix`), restages them, and then `scripts/lint-staged.ts` groups the staged files by owning workspace and runs that workspace's type-aware `oxlint` on them, skipping files the workspace ignores. Typecheck and the affected lint run once per push. Tests are not a hook: the full `pnpm verify` runs in CI.
 
-- `--cache=local:rw,remote:r` reads the Remote Cache but never writes to it from a laptop. `--continue=dependencies-successful` reports every failing package in one run and skips only the dependents of a failed one.
+- The root script `gate` (also reachable as `check:affected`) is `env -u TURBO_CACHE_DIR turbo run lint lint:root typecheck --affected --cache=local:rw,remote:r --output-logs=errors-only --continue=dependencies-successful`. `--cache=local:rw,remote:r` reads the Remote Cache but never writes to it from a laptop. `--continue=dependencies-successful` reports every failing package in one run and skips only the dependents of a failed one.
+- Hooks call `node_modules/.bin/<tool>`, not `pnpm exec`, which adds 70 to 260 ms to every call. The `timeout` on every job fails a hung linter instead of stalling the commit. Lefthook 2.2.1 is the floor because of a Git 2.54 partial-stage bug.
+- `no-attribution` rejects `Co-authored-by:` lines naming an AI tool, `Claude-Session:` trailers and "Generated with" lines. The agent rule forbids them too.
+- `post-merge` and `post-rewrite` run `pnpm install --frozen-lockfile` only when `pnpm-lock.yaml` changed between `ORIG_HEAD` and `HEAD`, and skip on amend. There is deliberately no `post-checkout` hook: its exit code fails `git worktree add`, and a new worktree has no lefthook binary yet.
 - Merge and rebase commits skip pre-commit, so the pre-push hook is the gate for them. After resolving a conflict where both sides fixed the same lint finding differently, keep the simpler version and run `oxlint` on the file with the merged config before committing.
 
-`prepare` runs `scripts/prepare.ts`, which skips lefthook when `CI` or `VERCEL` is set.
+`prepare` runs `scripts/prepare.mjs`, which skips lefthook when `CI` or `VERCEL` is set and runs lefthook's own Node entrypoint with `process.execPath`, not `pnpm` (Windows only has a `pnpm.cmd` shim, which fails with `EINVAL`).
 
 ## Changesets
 
@@ -158,18 +179,20 @@ Never release-please. `.changeset/config.json`:
 - Apps share one `fixed` group, together with a product CLI and any Expo app. A library CLI joins its library's group. An Expo app's `app.config.ts` reads `version` from its `package.json`, so the store version follows the group.
 - Each PR carries its own changesets.
   - When `privatePackages` is off (libraries), a change that touches only a private app, such as a dependency added to the docs or marketing site, gets no changeset. Say so in the commit body instead.
-- `pnpm version-packages` runs three steps:
+- `pnpm version-packages` runs these steps:
   1. `scripts/root-changelog.ts`, built on `@changesets/read` and `@changesets/assemble-release-plan`, which prepends a dated `## <version>` section to the root `CHANGELOG.md`. It runs first because `changeset version` deletes the changeset files it reads (PermDock ADR 0024).
   2. `changeset version`.
-  3. `oxfmt`.
+  3. `scripts/sync-server-version.ts`, which writes the new version into `server.json` and any plugin manifests.
+  4. `scripts/sync-generated-version.ts`, in a repo that commits generated output carrying a version (such as `generated by <tool>@<version>` headers). It rewrites those headers with `git grep`, so the version PR passes the generated-file checks and snapshot tests.
+  5. `oxfmt`.
 
   The docs site renders the root changelog.
 
 ## `release.yml`
 
-Runs on push to `main`:
+Runs when CI completes on `main`, through `workflow_run`, so the gate does not run twice for the same commit (PermDock ADR 0065 measured about 11 runner-minutes saved per push):
 
-1. Run `check`, `build` and `test`.
+1. Guard the trigger: the CI run was a `push` from this repo, and the default branch `HEAD` equals `workflow_run.head_sha`. Set `cache-mode: read` on the workflow and `none` on the publish job. Ignore zizmor's `dangerous-triggers` finding on the trigger line only, with the reason. A repo that does not publish runs `check`, `build` and `test` on push to `main` instead.
 2. `changesets/action` opens the `chore: version packages` PR.
 3. Merging that PR runs `changeset tag`, or `changeset publish` with npm trusted publishing (OIDC and provenance, gated by the `NPM_PUBLISH` variable), and creates GitHub Releases.
 4. With Expo, a new release tag calls `eas-build.yml` with the `production` profile (see [`ci.md`](ci.md)).
@@ -186,4 +209,15 @@ npm trusted publishing:
 Published packages:
 
 - `files` in `package.json` includes `CHANGELOG.md`, so the changelog ships in the tarball. When the full changelog is large, publish a trimmed copy (the current major's sections) generated in `prepack`.
-- The GitHub Release attaches the packed tarball (`pnpm pack`) and a build provenance attestation (`actions/attest-build-provenance`), so a consumer can verify the exact file without npm.
+- The GitHub Release attaches the packed tarball (`pnpm pack`) and a build provenance attestation (`actions/attest-build-provenance`), so a consumer can verify the exact file without npm. It also attaches a CycloneDX SBOM (`pnpm sbom --sbom-format cyclonedx --prod`).
+
+## Parallel program
+
+A planned cleanup too large for one PR, such as an audit across many areas, may run as lanes. This is a recorded exception to the one-PR rule, written into a tracker document, never done ad hoc.
+
+- Each lane has its own branch, worktree and PR, and the PR body names the program and lane.
+- `docs/agents/<program>.md` is the tracker. It has a "Progress" section with one subsection per lane (scope, status `planned`, `in progress` or `merged`, branch, PR, findings, log), separated by blank lines so parallel branches do not conflict, and a "Lane ownership" table that reserves ADR number ranges, migration slots and owned folders per lane.
+- Cut a lane into slices of about 80 files at most. A slice is an ADR, a migration and a pgTAP file.
+- A findings register lists one row per finding with an id, a state (`fixed`, `closed`, `open`, `deferred (needs: ...)`) and a validator that fails on duplicate ids, a lane named for an unknown row, or a lane marked `merged` while a row it owns is open.
+- `check:migration-order` fails when a branch adds a migration that sorts before the newest one on `origin/<working branch>`. The fix is to rename it to a newer timestamp.
+- `check:adrs` fails on two ADR files with one number, an ADR the index does not link, and merge-conflict markers. Parallel branches renumber on rebase.

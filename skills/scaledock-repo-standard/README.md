@@ -25,11 +25,12 @@ The repo kind decides which parts of the standard apply. A `product` repo gets e
 ## Rules
 
 - **Audit first.** Upgrade and align modes fill a gap table from a fixed checklist before changing anything. Deliberate deviations live in ADRs and are kept, never changed silently.
-- **Always the latest.** The skill names no versions. Every runtime, package, SDK, action and spec is looked up at run time, and new majors in pre-release are adopted early and tracked in AGENTS.md.
+- **Always the latest.** The skill names no versions. Every runtime, package, SDK, action and spec is looked up at run time, and new majors in pre-release are adopted early and tracked in `docs/agents/pnpm-catalog.md`.
 - **Read installed docs first.** Flag and option names are checked against the installed versions before configuring, starting with the Next.js dev server's `/_next/mcp` and bundled docs.
 - **Strict and typed.** The stable native TypeScript compiler, Ultracite on Oxlint and Oxfmt with every type-aware rule at error, Valibot for every schema, and `Temporal` as the one date library.
 - **Stable compiler, ready for the next one.** A TypeScript minor in pre-release is never installed. The repo fixes the minor's known breaks ahead of time in a form that compiles today, and tracks the bump in an AGENTS.md checklist.
 - **Lint only gets stricter.** Toolchain bumps land as their own reformat commit. Disabled rules come back group by group with re-measured counts, and the few that stay off have a written reason.
+- **Cheap local gates.** Hooks lint staged files on commit and the affected packages on push; tests and the full `verify` run in CI. Vercel builds are skipped by one project-wide ignore script, and each CI job saves caches only when it should.
 - **Lean task hashes.** Turbo task inputs leave out docs and tests where they cannot change the result, `CI` and `NODE_ENV` pass through instead of splitting every hash, and linked worktrees share one local cache.
 - **Measured performance.** Every run records bundle, type and CLI-startup baselines before and after, experimental flags are opt-ins backed by a measurement, and agent routes are cached.
 - **Cheap authenticated pages.** An app with a database records what each signed-in page costs: Data API requests, permission version reads, Postgres time and session verifications. Each request verifies the session once and reads the permission version at most once, islands share one loader per list, and the static shell does no auth reads.

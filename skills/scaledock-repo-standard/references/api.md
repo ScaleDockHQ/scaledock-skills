@@ -19,7 +19,7 @@ The `scaledock-http-api` skill builds on this reference, and the `openapi`, `ope
   - The snapshot `apps/api/openapi.json` is committed, and CI fails on drift.
 - **Request context.** One `createSupabaseContext(request, { auth: "user" })` per request, plus one PermDock instance, handed to `services`.
 - **Other routes:**
-  - Crons at `/api/cron/<name>`, protected by `CRON_SECRET`.
+  - Scheduled jobs are private Vercel Schedules (beta) function targets with no public URL, so they need no bearer secret ([`vercel.md`](vercel.md)). A repo on Cron Jobs serves `/api/cron/<name>` behind `CRON_SECRET`.
   - Webhooks at `/api/webhooks/<provider>`, with the signature verified and idempotency keyed on the provider event ID.
   - Workflows start only here, except a streaming chat surface ([`ai.md`](ai.md)).
 - **Standards-shaped endpoints stay on the Hono shell.** OAuth and OIDC endpoints, `/.well-known/*`, AuthZEN, SCIM, the MCP transport and crons have request and response shapes a standard fixes, so they are plain Hono routes with conformance tests, not contract procedures (permdock-cloud ADR 0004). Everything else is a contract procedure.

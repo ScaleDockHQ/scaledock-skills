@@ -18,6 +18,12 @@ Record these before changing anything, and again at the end of the run. Put both
 
 A change that moves a baseline names the before and after numbers in its commit.
 
+- **Take baselines from CI.** Local macOS numbers differ from CI. Commit the value CI measured (copy it from the diff output, then re-check it), keep one baseline file per route with raw, gzip and brotli sizes, and give every new route an entry. Raw bytes never rise; compressed bytes may move by a small slack, and sizes inside it keep their committed numbers.
+- **Compare against the last green run.** `baseline:payload` writes an artifact; CI downloads the last successful base-branch artifact and runs `payload:compare` with `--mode warn|enforce`, limited to routes the diff changed. A separate first-load budget (`bundle:budget`, written with about 5% headroom) guards the JS per route.
+- **Timing gates are platform-keyed.** A timing fails only when the record's platform and Node major match the machine; a deterministic number (snapshot bytes) always fails. Run timing-sensitive gates alone with `--concurrency=1`, after the rest of `verify`.
+- **Measure at scale.** Keep a scale fixture (seed and remove SQL or a script) and a `scripts/perf/measure.ts` that records bundle size, query counts and Postgres time per run.
+- **Keep shared chunks light.** Move heavy or rarely used code to a leaf module so the shared chunk stays small, state the before and after gzip numbers, and keep each entry within 1% of its record.
+
 When a feature needs a few hundred bytes or a few milliseconds more, raise the budget in the same commit and record why. Do not contort the code (inlined helpers, dropped error messages, hand-rolled parsing) to stay under a number; a small, recorded raise is the better trade, and a large one is a design question for the PR.
 
 ### Authenticated page cost

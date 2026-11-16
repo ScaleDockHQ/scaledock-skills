@@ -56,7 +56,11 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 - **Skip unaffected heavy suites** (integration, runtimes, e2e).
   - The `build` job checks out with `fetch-depth: 0` and `filter: blob:none`, runs `turbo query affected --packages <suite> --exit-code` once per suite, and writes the result to `$GITHUB_OUTPUT`, exposed as a job output. The heavy job sets `if: needs.build.outputs.<suite> == 'true'`.
   - Exit code 0 means nothing is affected, so the suite is skipped; 1 means affected; 2 means a query error. Treat 2 as affected, so an error fails open and runs the suite.
-  - Pushes to the default branch run every suite.
+  - Pushes to the default branch run every suite, and so does a nightly schedule and every PR into `main`.
+  - Prefer a `changes` job that skips `pnpm install` and runs `pnpm dlx turbo@<pin> query affected --packages <suite> --exit-code` once per suite, with the pin read from the catalog by `sed`. Heavy suites build what they need, and a separate `build` job builds the apps (PermDock: the old build job took 71 s, 3 s of it building).
+  - Choose the comparison base in order: the PR base, the last green push run of `ci.yml` on the branch, then `github.event.before`, so a cancelled run never leaves commits untested. A missing or non-ancestor base marks everything affected.
+  - On pushes to the working branch, skip build jobs that the Vercel deployment of the same push already runs, and use one integration shard instead of three on affected runs.
+  - `ci.yml` sets `paths-ignore` for `.agents`, `.cursor` and `.claude`, and the docs build runs on PRs only when docs changed.
   - Affected detection follows the dependency graph: a library change marks its dependent test workspaces as affected.
   - A skipped job counts as passing for a required status check, so the gated jobs can stay required.
 - **Strict task entrypoints.** With the `strictTaskEntrypointSelection` future flag ([`vercel.md`](vercel.md)), `turbo run test` and the static task set stop pulling in Next.js builds for workspaces that have no such task. In PermDock, `test` dropped from about 50 `build` tasks to 17, and the static set kept one Next build.
@@ -82,10 +86,15 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - pnpm appends extra arguments after `pnpm run <script>` to the end of the script's command, so `pnpm run test:integration --shard=1/3` reaches Vitest.
   - `vitest list --shard` ignores the shard. To confirm the split, run `vitest run --shard=i/n -t <pattern that matches nothing> --reporter=json` and count `testResults`.
   - In PermDock, a 299-second integration suite became 3 shards of 34, 34 and 33 files.
+  - Pack unit shards by recorded duration (`tests/unit-durations.json`, refreshed by a script) with a custom sequencer. Shards run `--reporter=blob`; a `coverage` job merges the blobs, fails when the blob count is wrong and prints the slowest files. A shard prints no failures, so replay its report with `--merge-reports`. Keep the `build` step free of shard arguments so it keeps its cache hit.
+  - Measure worker counts per runner. On 2 vCPUs, two unit workers were slower than one (264 s against 179 s) and disabling isolation leaked mocks; two integration workers helped shards 2 and 3 but not 1, so the bench project moved to the `perf` job (PermDock).
+  - A job that runs only a subset of tests (a peer-matrix cell) passes `--coverage.enabled=false`.
 
 ## Caching
 
 - **pnpm store.** `pnpm/setup` with `cache: true`. Only the default branch saves it: the setup action's `save-cache` input defaults to `${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}`. Composite action input defaults may use the `github` context, so callers never repeat the expression. PRs and the other matrix jobs restore that entry, so they do not upload near-identical stores against the 10 GB per-repo limit, which evicts the least recently used entries.
+  - Only one job (`static`) passes the default-branch expression; every other job leaves `save-cache` at `false`, so one run uploads the store once (PermDock ADR 0066 saved about 3 runner-minutes per push, and a Lienlink run stays under the 10 GB cap). A job that rewrites the catalog pin sets it to `false` explicitly.
+  - `--allow-build` rewrites `pnpm-workspace.yaml`, a Turbo global input, so restore it with `git checkout -- pnpm-workspace.yaml` after install.
   - A setup post step that takes 13 to 20 seconds on a PR job means the store is still being saved there.
   - _Verified in ScaleDockHQ/permdock PR #162: the post step took 0 to 1 seconds on every PR job._
 - **`install: false`** on jobs that need only pnpm, such as `pnpm audit signatures`.
@@ -100,6 +109,10 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - `read` on any workflow triggered by `pull_request_target`, `issue_comment` or `workflow_run` (GitHub's default for those, made explicit).
   - `none` on release and publish jobs, so a poisoned cache never reaches a publish.
   - Never `write` or `write-only` on a low-trust trigger.
+- **Turbo output in CI.** Set `TURBO_UI: stream`, because the TUI swallows output on non-TTY runners. Run turbo with `--log-file` and upload `.turbo/logs/` on failure with `retention-days: 7`.
+- **Runner tools.** A script test that shells out to `rg` or another tool needs it installed on the runner (`apt-get install ripgrep`, with a comment saying why).
+- **Placeholder env.** Set public placeholder values (`EXPO_PUBLIC_SUPABASE_URL`, the publishable key) at workflow level when Knip loads `metro.config.ts` or expo-doctor loads `app.config.ts`, which assert client env at import. Without them Knip loses `.web` and `.native` resolution and reports every twin unused.
+- **Doctor SARIF.** Make `doctor:sarif` a Turbo task with the same inputs as `doctor`, so a cache hit restores the file, and upload it to code scanning (`security-events: write`, `continue-on-error`).
 - **Artifacts.** `actions/upload-artifact` sets `retention-days`, and `archive: false` for a single-file report that should open in the browser.
 
 ## Security
@@ -120,7 +133,7 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
   - Minimal permissions plus `id-token: write`, cancelling concurrency and `CI: true`.
   - A `pr-title` job runs commitlint on the PR title.
   - With build first, a `build` job that also computes the affected heavy suites. Then it calls `verify.yml` (affected-only on PRs), then the gated heavy suites and e2e if the repo has them.
-- **`verify.yml`:** a reusable `workflow_call`, so `release.yml` runs the same gate on the release commit. It runs every `pnpm verify` gate and nothing else, so local and CI results agree, in two parts:
+- **`verify.yml`:** a reusable `workflow_call`, so a repo that does not release from `workflow_run` still runs the same gate on the release commit. A new `check:*` script goes in three places: `package.json`, the `verify` script and the task list here, guarded by a parity test. It runs every `pnpm verify` gate and nothing else, so local and CI results agree, in two parts:
   - A `static` job: one checkout and setup, then one `parallel` group with a single Turbo step for the workspace tasks (lint, typecheck, knip, `openapi:check`, `i18n:check`, `docs:drift`) and one step per root-only check (`format:check`, `lint:root`, `boundaries`). _Verified in ScaleDockHQ/permdock PR #162: the `parallel` group took 22 seconds._
   - A `fail-fast: false` matrix with one job each for `test`, `build`, `audit:high` and `doctor`, plus one per timing-sensitive gate. The `build` job builds every deployed app (docs and marketing included), not only the published package: better-supabase shipped an MDX error to production because CI built only the library. A job that still builds several Next apps runs them with `--concurrency=1` until strict task entrypoints cut it to one.
   - Affected runs on PRs combine `--affected` with the job's `--filter`.
@@ -153,7 +166,9 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 - **`database.yml`:** on `supabase/**` changes, on an x64 Ubuntu runner (no Docker service):
   - Start the project with `supabase start --runtime native` as a background step while dependencies install, then `wait` for it.
   - Run `supabase db schema declarative sync --no-apply --strict-coverage` and fail if it errors or leaves a new file in `supabase/migrations/` (schema files and migrations have drifted).
-  - Run pgTAP and lint the SQL.
+  - Cache the native stack (`~/.supabase/cache/stack`, keyed on OS, architecture and CLI version): the default branch saves it, other jobs restore it. Start with `--exclude studio,...` (keep mail where sign-up suites read it) and stop with `supabase stack destroy --yes`.
+  - Check that the snapshot matches the stack (`gen --save-snapshot --check`), run `supabase db lint --fail-on error` and `supabase db advisors --fail-on warn`.
+  - Run pgTAP with `pg_prove` directly against the stack database when long tests drop over `supabase test db`'s HTTP stream, and lint the SQL.
 - **e2e** (with Playwright): start the built app as a background step, run Playwright against it, then `cancel` the server.
 - **`powersync.yml`** (Offline: yes): on `packages/sync/powersync/**` changes, validate the sync config against the local stack.
 - **`release.yml`:** see [`git-workflow.md`](git-workflow.md). Its publish job sets `cache-mode: none`.
@@ -168,7 +183,10 @@ Applies to every repo kind. Each workflow below runs only the gates the repo has
 
 - **`dependabot.yml`:**
   - npm (limit 10) and github-actions (limit 5).
-  - Weekly on Monday, one grouped PR per ecosystem, `cooldown.default-days: 7`. zizmor's `dependabot-cooldown` audit flags anything shorter (PermDock ADR 0027).
+  - Weekly on Monday, one grouped PR per ecosystem, `cooldown.default-days: 7`. zizmor's `dependabot-cooldown` audit flags anything shorter (PermDock ADR 0027). A repo on 2 days is behind the standard, not a variant.
+  - github-actions lists `directories: [/, /.github/actions/*]`, because `/` covers only workflows and composite actions need their own entry.
+  - `commit-message` uses `prefix: chore` with `include: scope`, so grouped titles pass commitlint's bot-header exemption.
+  - Every `ignore` entry carries a comment, such as the Expo and react-native family held together, and is removed as soon as its cause is gone. Expo repos ignore `expo*`, `@expo/*`, `babel-preset-expo` majors and `react-native` minors.
   - Pre-releases are allowed, so pre-release pins move forward.
   - `target-branch` is the working branch.
   - With workflow lockfiles, Dependabot updates `actions.lock` in the same PR.
