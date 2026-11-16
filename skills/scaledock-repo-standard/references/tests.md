@@ -9,6 +9,7 @@ Applies to every repo kind that has code.
   - `test.projects` references each workspace's `vitest.config.ts`. A referenced config may declare its own nested projects, for example `unit` and `integration`.
   - Inline projects inherit the root config and share one Vite server, so shared options live once in the root. Set `extends: false` only for a project that must not inherit, with a comment saying why.
   - Vitest no longer looks for configs in parent folders, so always run from the root (`pnpm test`, or `vitest -p <project>` for one project).
+  - `test` runs without coverage; `test:coverage` runs with it, and CI sets `coverage.enabled = process.env.CI !== undefined` (35 s against 49 s locally in PermDock). A CI job that runs a subset passes `--coverage.enabled=false`, because it can never reach the global thresholds.
   - Coverage thresholds use `autoUpdate: !process.env.CI && <condition>`, so CI never rewrites them. Raise thresholds only from a run of the same test set CI runs; a local run that adds integration tests raises them past what CI reaches, and `main` fails after the merge.
   - Keep the threshold about one point under the measured number. V8 coverage on Linux CI and on macOS differs by a fraction of a point, so a threshold set to the exact local value fails in CI.
   - A floor only goes up. Never lower a threshold or add a coverage exclude to get a green run: add the test, or extract the logic so it can be tested. An exclude is for an entry point that only wires process state, or UI, and needs an ADR (Lienlink ADR 0012). A file no test imports still counts: a `load-sources` test imports every source file.
@@ -43,6 +44,9 @@ Applies to every repo kind that has code.
   - A startup-imports test fails when `--help` or `--version` reaches a command module.
   - **Docs drift from the manifest** (`tests/cli/docs-flags.test.ts`): every global flag is on the CLI index page, every leaf flag is on its command's page, no table lists a flag the command does not take (whole-word match), and each page's `## Side effects` table equals `entry.effects` (`None` when empty).
   - Integration tests that read CLI JSON run in CI, because a local `verify` skips them. That is where an envelope change breaks a redirected `--json` consumer.
+- **Toolchain tests.** `tests/integration/cross-package/toolchain/` asserts repo conventions (every workspace resolves the catalog pin, dev scripts use no POSIX-only syntax). Live-database suites need explicit env gates (`REQUIRE_LOCAL_SUPABASE=true`) and fail instead of skipping in CI. Shared fixtures live in `@workspace/test-fixtures` with no internal dependencies.
+- **Quiet runs.** Test setup mutes known noise, and agents run `vitest related` or `--reporter=dot`.
+- **Library `tests/` taxonomy.** `bundle`, `next-build`, `types/<version>`, `adapter-templates`, `init-fixture`, `standards` (vendored schemas with SHA-256 in `SOURCES.md`).
 - **CLI coverage.** Aim high on the CLI folder (PermDock: 96% branches and 98% statements on `src/cli/**`). Unreachable defensive branches are what make that expensive, so write code without them:
   - Type AST nodes from the parser with required `type` and `start`.
   - Use `for (const [i, x] of xs.entries())` when the loop does not skip.

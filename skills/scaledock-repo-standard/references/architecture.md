@@ -106,7 +106,10 @@ A `library` repo publishes packages that other repos install, so a few rules cha
 - **Peer ranges.** Every optional peer has a range in a `peers` named catalog. The range is a floor with no upper bound (`>=0.13.0`, or floors joined by `||`), never `<`, `^` or `~`: a cap makes pnpm and npm refuse the next release in every consumer until the library ships again. The floor is the first entry of the CI matrix that tests that peer, and a scheduled job tests the newest release instead. A `<pkg>-floor` catalog alias installs the floor for the matrix job, and a test checks that every range is open and that the floor, the matrix and the pin agree (PermDock ADR 0045).
 - **TypeScript matrix.** The published types compile on every TypeScript major the library supports. Named catalogs (`ts59`, `ts6`) pin the older compilers, and one `tests/types/<version>` workspace per catalog runs the type tests with it; the default catalog stays on the native TypeScript 7 compiler ([`toolchain.md`](toolchain.md)).
 - **Build before checks.** A package whose `exports` point at `dist/` is consumed the way a user installs it: tasks that read it depend on `^build`, not on a `transit` task (PermDock ADR 0021).
-- **File size.** A library source file stays under 1,000 code lines, blank lines and comments excluded, enforced with `eslint/max-lines` in the library lint preset.
+- **File size.** A library source file stays under 1,000 code lines, blank lines and comments excluded, enforced with `eslint/max-lines` in the library lint preset. Split an oversized file into area files behind the same exports, and let Knip drop the re-exports nothing uses.
+- **Example apps.** Examples live in `apps/examples/*`, are tagged `example` (`dependents: allow []`), and their generated files (SQL, catalogs, manifests) are regenerated with the library's `gen` after every library change, in a `chore(example-...)` commit. `gen:check` guards them, and the Expo example follows the Expo SDK.
+- **Peer-matrix job.** When a matrix entry equals the catalog pin (floor equals pin), the job skips itself with a "Catalog pin" step that reads the pin, so it does not repeat the unit and integration tests. A nightly job tests the newest release old enough for `minimumReleaseAge`.
+- **Floor bumps.** A peer floor bump moves the floor, the `-floor` alias, the catalog pin, the matrix and the `peers` catalog in one commit, with an exact-version release-age exclude (with a removal time), a superseding ADR, a breaking changeset and a regenerated example. Bounded ranges (`>=x <8`) are a deviation and need an ADR.
 
 ## Naming and layout
 
@@ -131,4 +134,6 @@ Applies to every repo kind. Database names are in [`data-conventions.md`](data-c
 - **Enforcement.**
   - `docs:drift` fails on old instance names, old file paths, and API members that are not in `api/exports.json` (or the repo's exported API list).
   - It walks files with `fs.glob`, excludes `node_modules` and `.next`, and skips the Naming page.
+  - A `naming.json` manifest lists finished renames (kind, old, new, `since`), banned type suffixes and the env prefix rule, and a `check:naming` script reads it.
+  - Problem and hint codes are UPPER_SNAKE with a domain prefix (`CHAT_NOT_FOUND`); shared reasons are `_NOT_FOUND`, `_FORBIDDEN`, `_INVALID` and `_CONFLICT`. Every SQL `raise exception` in hand-written schema carries `hint = '<CODE>'`, and `docs:drift` fails on one without.
   - A breaking rename ships a docs "Naming" page and a changeset, each ending in a table from the old name to the new one.

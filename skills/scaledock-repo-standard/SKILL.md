@@ -4,7 +4,7 @@ description: Create a new repo or bring an existing one up to the ScaleDock stan
 license: MIT
 metadata:
   author: ScaleDockHQ
-  version: "1.21.0"
+  version: "1.22.0"
 ---
 
 # Repo standard
@@ -35,12 +35,12 @@ Resolve the placeholders listed in [`references/audit.md`](references/audit.md) 
 1. **Upgrade and align modes audit first.**
    - Fill the gap table from [`references/audit.md`](references/audit.md), then apply the changes as small conventional commits on one branch (rule 5).
    - Never discard uncommitted work. For unshipped code, prefer one breaking cutover over shims.
-   - A deliberate deviation is an ADR in `docs/decisions/` ([`assets/adr-template.md`](assets/adr-template.md)) plus a line in the AGENTS.md "Deviations" list. Never change a deviation silently, and never add one without asking.
+   - A deliberate deviation is an ADR in `docs/decisions/` ([`assets/adr-template.md`](assets/adr-template.md)) plus a line in the ADR index's Deviations list (linked from AGENTS.md). Never change a deviation silently, and never add one without asking.
 2. **Always the latest, including new majors in pre-release.**
    - This skill names no versions. Look up the latest release of every runtime, package, SDK, action, skill and spec when you run (`pnpm view <pkg> dist-tags`, GitHub releases, vendor docs), never from memory or another repo.
    - **New majors first.** When a newer major is in alpha, beta or rc, adopt it now, absorb its migration guide, and note the API changes in the commit. Otherwise use the latest stable; never a pre-release of a minor or patch.
    - **Exceptions.** Stay on the current major (status `held`) when the pre-release fails `minimumReleaseAge`, breaks a peer with no compatible release, cannot be found or installed (a version the vendor announced but does not publish), or has stalled (no release in about three months, or a daily `next` line with no rc). Record the blocker in the gap table.
-   - **Tracking.** List every pre-release and held pin under "Pre-release pins" in AGENTS.md: package, version, status (`pre-release` or `held`), why, and the trigger to revisit it (the rc, the stable, the peer release). Move it when the trigger fires.
+   - **Tracking.** List every pre-release and held pin in `docs/agents/pnpm-catalog.md` (linked from AGENTS.md): package, version, status (`pre-release` or `held`), why, and the trigger to revisit it (the rc, the stable, the peer release). Move it when the trigger fires.
    - Pin exactly in the catalog. Never bypass `minimumReleaseAge`; use the newest release that passes, and add a commented exclude only when a fix needs it. A sibling ScaleDock package younger than the window gets one exclude at that exact version with a removal date ([`references/toolchain.md`](references/toolchain.md)); never a sibling `link:` or a read token.
 3. **Read installed docs before configuring.** For Next.js, ask the running dev server's `/_next/mcp` first, then read the bundled `node_modules/next/dist/docs`. Read `node_modules/turbo/docs`, the Expo, Ultracite, oxlint, oxfmt, Fumadocs, AI SDK and MCP SDK docs, and the matching skill. Flag and option names in the references drift; check each against the installed version.
 4. **Done means `pnpm verify` passes.** Report with [`assets/report.md`](assets/report.md).
@@ -75,7 +75,7 @@ Run these steps in order. Each step names the references to load and the check i
      ✓ Apps stay thin adapters over `services`, every procedure is contract first, every surface acts as the signed-in user, every Next.js page passes the `nextjs-app-architecture` checklist, and names follow the naming rules.
 6. **Repo hygiene.** Write the AI files, repo files, VS Code settings, CI, Dependabot and tests.
    -> [`references/agent-files.md`](references/agent-files.md), [`references/repo-files.md`](references/repo-files.md), [`references/ci.md`](references/ci.md), [`references/tests.md`](references/tests.md).
-   ✓ AGENTS.md is at most 12 KB and lists the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.
+   ✓ AGENTS.md is at most 16 KB (`check:agent-docs`) and links the deviations and pre-release pins, and CI runs the same gates as `pnpm verify`.
 7. **Verify and finish.** Run `pnpm install`, `pnpm format` and `pnpm verify`; fix code, not tests. Add a changeset, push, mark the one PR ready, and put the report in its body.
    -> [`assets/report.md`](assets/report.md), [`references/git-workflow.md`](references/git-workflow.md) (Changesets, PR), the Baselines section of [`references/performance.md`](references/performance.md) (with the authenticated page cost), the checklist below.
    ✓ `pnpm verify` passes, the final baselines are recorded, and the report is complete.
@@ -91,9 +91,9 @@ The tag in brackets names the input that switches an item on; untagged items alw
 - [ ] The baselines from before and after the run are in the report.
 - [ ] Every dependency is `catalog:` or `workspace:*` at the latest release that passes `minimumReleaseAge`; every override, exclude, `allowBuilds` entry and patch has a comment.
 - [ ] Every `peerDependencies` range of a published package is a floor with no upper bound: no `<`, `^` or `~`.
-- [ ] Every pre-release and held pin is in AGENTS.md with its status and revisit trigger, and every own-org release-age exclude names one exact version and a removal date that has not passed (rule 2).
+- [ ] Every pre-release and held pin is in `docs/agents/pnpm-catalog.md` with its status and revisit trigger, and every own-org release-age exclude names one exact version and a removal date that has not passed (rule 2).
 - [ ] `pnpm-workspace.yaml` has no key the installed pnpm rejects, and TypeScript is the stable native compiler with no preview package.
-- [ ] Every deviation has an ADR in `docs/decisions/` and a line in the AGENTS.md "Deviations" list.
+- [ ] Every deviation has an ADR in `docs/decisions/` and a line in the ADR index's Deviations list.
 - [ ] [workspaces] Every workspace has a Turbo boundary tag, apps never import each other, and `pnpm boundaries` passes.
 - [ ] No Zod in our code, no `@radix-ui/*` or vaul, and each concern uses its one library.
 - [ ] Dates use `Temporal` through the one `temporal.ts` module; no other date library is installed.

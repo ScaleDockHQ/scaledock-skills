@@ -16,7 +16,7 @@ import { jsPluginSettings, selectJsPlugins } from "ultracite/oxlint/js-plugins";
 import shadcn from "ultracite/oxlint/shadcn";
 import vitest from "ultracite/oxlint/vitest";
 
-const jsPlugins = selectJsPlugins(["react-doctor", "tsdoc"]);
+const jsPlugins = selectJsPlugins(["react-doctor", "tsdoc"]); // tsdoc only in repos that publish libraries
 
 export default defineConfig({
   extends: [core, vitest, shadcn, antiSlop, jsPlugins],
@@ -158,3 +158,8 @@ Repos on 1.9 or earlier have a `packages/ox-config` workspace with their own pre
 3. Point each workspace config at the root and the Ultracite framework presets, and `oxfmt.config.ts` at `ultracite/oxfmt`.
 4. Delete `packages/ox-config`, remove it from every `package.json`, and drop its Turbo boundary tag.
 5. Run `pnpm check`, fix what it reports, and record the move in the changeset or commit note.
+
+## Generated files and react-doctor
+
+- List generated files once and reuse the list in the lefthook `exclude`, Knip and oxlint ignores: `ultracite fix` can alter generated output.
+- A `doctor.config.json` (`{ "projects": ["apps/app", "packages/ui"] }`) names the projects react-doctor checks, with a PR workflow that posts one sticky comment. A library repo drops the tsdoc and testing-library plugins when it publishes nothing.

@@ -36,11 +36,18 @@ Applies to every Next.js surface: `app` when Framework is `next`, `docs` and `ma
 }
 ```
 
-- Do not set `experimental.instantInsights`: instant validation already defaults to `"warning"`. Opt a route out only with `export const instant = false` and a comment saying why.
+- Do not set `experimental.instantInsights` unless you need a level other than the default `"warning"` (CentraKit sets it explicitly; treat that as a measured exception). Opt a route out only with `export const instant = false` and a comment saying why.
 - Do not set flags that are now defaults: the Turbopack build cache (`turbopackFileSystemCacheForBuild`, except `!process.env.GITHUB_ACTIONS` to turn it off in CI, see [`ci.md`](ci.md)), the shared browser runtime (`turbopackSharedRuntime`), `experimental.agentUpgrade` (`"security"`), and `cachedNavigations` and `appShells`, which `cacheComponents` turns on. Remove `appNewScrollHandler`; 16.4 dropped it.
 - Leave `experimental.agentFeedback` off: it needs telemetry and adds AGENTS.md instructions for sending feedback to Vercel. Keep `.next/cache/**` out of Turbo outputs; Vercel restores it.
 - Do not set `useTypeScriptCli`: `next build` type-checks with the project-local TypeScript.
 - Do not set `supportsImmutableAssets`. The Vercel adapter turns immutable static assets on; the option exists only to opt out while debugging an adapter.
+- Build and dev settings measured in CentraKit, each verified against the installed version first:
+  - `turbopackInputSourceMaps` and `enablePrerenderSourceMaps` off on GitHub Actions.
+  - `turbopackPluginRuntimeStrategy: "childProcesses"`. Never `forceWorkerThreads`: Node 24.13.1 and later can abort on worker teardown.
+  - `turbopackSeedCacheFromWorktree: true`, so a new worktree starts from the main checkout's cache.
+  - `turbopackMemoryEviction: "full"` in local dev, where Turbopack memory reached 10 to 12 GB.
+  - Keep `experimental.gestureTransition` and `transitionIndicator` off: they broke back and forward navigation.
+  - A prerender scope env value (for example `<APP>_PRERENDER_SCOPE`): production prerenders every locale and brand shell, previews the default locale, and CI and local builds a `minimal` set. Add it to `turbo.json` `build.env`, and add `VERCEL` and `VERCEL_ENV` to the build hash so a preview build is never restored for production (CentraKit: 7,959 pages down to 3,699, static generation from 51 s to 25-30 s).
 - Measured opt-ins, never in the default block:
   - `experimental.generateComponentChunks` and `turbopackCjsTreeShaking`. Turn one on only with a `next analyze` comparison on a real navigation path, and record the numbers in the commit.
   - `experimental.taint` and `blockingSSR`. Both pull in `react@experimental`, so turn one on only when code calls the API (`taintUniqueValue`, `taintObjectReference`), with a `next analyze` comparison in the commit.
@@ -73,8 +80,10 @@ On docs and marketing, a read is often a pure function over generated JSON or co
 
 ScaleDock adds:
 
-- **Actions** validate with Valibot, check the PermDock permission, write, call `updateTag` for every affected tag, and return `{ ok: true, ... } | { ok: false, code, fieldErrors, values }`. Actions never show toasts, and never call `redirect()` when the caller shows feedback.
+- **Actions** validate with Valibot, check the PermDock permission, write, call `updateTag` for every affected tag (declare the tags on the action wrapper, such as `tenantAction(permission, schema, handler, { tags })`, which updates them only when the action succeeded), and return `{ ok: true, ... } | { ok: false, code, fieldErrors, values }`. Actions never show toasts, and never call `redirect()` when the caller shows feedback.
 - **Error boundaries.** Each section that can fail on its own gets a `catchError` boundary from `next/error` whose fallback offers `retry()`. Never add a `template.tsx`, and layouts never `await` an auth gate.
+- **One payload per page.** Read through one RPC payload cached as one private cache with the tags of every table it reads. Never nest private caches, and pass `life` to the cache helper instead of stacking `cacheLife`.
+- **Architecture check.** A `check:app-architecture` script can enforce the `nextjs-app-architecture` rules (synchronous pages, plain-id features, a sibling skeleton for each async component) with a shrinking allowlist.
 - **Interaction state.** nuqs owns shareable state. [`web-design.md`](web-design.md) covers URL tabs on prerendered pages.
 - **Three scopes:**
   1. One persistent `AppShell` in the app layout.
